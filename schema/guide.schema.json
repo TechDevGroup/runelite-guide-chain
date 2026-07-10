@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/TechDevGroup/runelite-guide-chain/main/schema/guide.schema.json",
+  "title": "Guide Chain — Guide",
+  "description": "An ordered list of steps that together describe one discrete chunk of OSRS account progression.",
+  "type": "object",
+  "required": ["id", "name", "steps"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable identifier matching the filename (without .json extension)."
+    },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "steps": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/step" },
+      "minItems": 1
+    }
+  },
+  "definitions": {
+    "step": {
+      "type": "object",
+      "required": ["id", "instruction"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique id within this guide. Used by the override system."
+        },
+        "instruction": {
+          "type": "string",
+          "description": "Short imperative instruction shown in the panel. Author's own words only — do not copy wiki or game dialogue text."
+        },
+        "detail": {
+          "type": "string",
+          "description": "Optional longer context shown below the instruction."
+        },
+        "highlights": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/highlightTarget" }
+        },
+        "mapMarkers": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/mapMarker" }
+        },
+        "completionConditions": {
+          "type": "array",
+          "description": "All conditions must be simultaneously true for auto-advance. Empty = step never auto-advances (requires Skip).",
+          "items": { "$ref": "#/definitions/condition" }
+        }
+      }
+    },
+    "highlightTarget": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": { "enum": ["OBJECT", "NPC", "ITEM", "WIDGET", "TILE"] },
+        "id":        { "type": "integer", "description": "Object/NPC/item id." },
+        "worldX":    { "type": "integer" },
+        "worldY":    { "type": "integer" },
+        "plane":     { "type": "integer", "default": 0 },
+        "container": { "enum": ["INVENTORY", "BANK", "EQUIPMENT"] },
+        "group":     { "type": "integer", "description": "Widget group id (WIDGET type)." },
+        "child":     { "type": "integer", "description": "Widget child id (WIDGET type)." }
+      }
+    },
+    "mapMarker": {
+      "type": "object",
+      "required": ["x", "y"],
+      "properties": {
+        "x":     { "type": "integer" },
+        "y":     { "type": "integer" },
+        "plane": { "type": "integer", "default": 0 },
+        "label": { "type": "string" }
+      }
+    },
+    "condition": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": { "enum": ["QUEST", "VARBIT", "SKILL", "ITEM_HELD", "REGION", "MANUAL"] },
+        "questName": { "type": "string", "description": "Exact net.runelite.api.Quest enum constant name." },
+        "state":     { "enum": ["NOT_STARTED", "IN_PROGRESS", "FINISHED"] },
+        "varbitId":  { "type": "integer" },
+        "op":        { "enum": ["EQ", "NEQ", "GTE", "LTE", "GT", "LT"] },
+        "value":     { "type": "integer" },
+        "skill":     { "type": "string", "description": "Exact net.runelite.api.Skill enum constant name." },
+        "level":     { "type": "integer", "minimum": 1, "maximum": 99 },
+        "itemId":    { "type": "integer" },
+        "qty":       { "type": "integer", "minimum": 1 },
+        "regionId":  { "type": "integer" }
+      }
+    }
+  }
+}

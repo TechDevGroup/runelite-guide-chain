@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/TechDevGroup/runelite-guide-chain/main/schema/override.schema.json",
+  "title": "Guide Chain — Step Override",
+  "description": "Partial patch for one step. Place at ~/.runelite/guide-chain/overrides/<guideId>/<stepId>.json. Only present fields are applied; absent fields keep the upstream value.",
+  "type": "object",
+  "required": ["guideId", "stepId"],
+  "properties": {
+    "guideId":   { "type": "string" },
+    "stepId":    { "type": "string" },
+    "instruction":          { "type": "string" },
+    "detail":               { "type": "string" },
+    "highlights":           { "type": "array" },
+    "completionConditions": { "type": "array" },
+    "mapMarkers":           { "type": "array" }
+  }
+}

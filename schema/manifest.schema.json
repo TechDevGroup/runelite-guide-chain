@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/TechDevGroup/runelite-guide-chain/main/schema/manifest.schema.json",
+  "title": "Guide Chain — Manifest",
+  "description": "Top-level index listing all available guide chains from a data source.",
+  "type": "object",
+  "required": ["chains"],
+  "properties": {
+    "chains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "guides"],
+        "properties": {
+          "id":          { "type": "string" },
+          "name":        { "type": "string" },
+          "description": { "type": "string" },
+          "guides": {
+            "type": "array",
+            "items": { "type": "string", "description": "Filename (e.g. f2p-early-game.json)." },
+            "minItems": 1
+          }
+        }
+      }
+    }
+  }
+}
