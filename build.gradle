@@ -9,12 +9,37 @@ dependencies {
     compileOnly group: 'net.runelite', name: 'client', version: runeLiteVersion
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
-    compileOnly 'com.google.code.gson:gson:2.10.1'
+    // implementation (not compileOnly) so the standalone web server can run
+    // outside RuneLite; inside the client, RuneLite's own Gson is injected.
+    implementation 'com.google.code.gson:gson:2.10.1'
 }
 group = 'com.techdevgroup'
-version = '0.1.0'
+version = '0.2.0'
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
+}
+
+// ── Standalone web view (portability proof) ────────────────────────────────
+// Self-contained jar: GuideStore + embedded web server + fixture guides,
+// bootable with no RuneLite anywhere on the classpath.
+tasks.register('standaloneJar', Jar) {
+    group = 'build'
+    description = 'Builds a self-contained jar that serves the guide web view outside RuneLite.'
+    archiveClassifier = 'standalone'
+    manifest { attributes 'Main-Class': 'com.techdevgroup.guidechain.standalone.GuideWebMain' }
+    from sourceSets.main.output
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA'
+}
+
+tasks.register('runWeb', JavaExec) {
+    group = 'application'
+    description = 'Runs the standalone guide web view (no RuneLite client).'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.techdevgroup.guidechain.standalone.GuideWebMain'
+    // pass e.g. -Pport=7788: ./gradlew runWeb -Pport=7788
+    if (project.hasProperty('port')) args '--port', project.property('port')
 }

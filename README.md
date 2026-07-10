@@ -83,12 +83,102 @@ An empty conditions list means the step never auto-advances.
 File paths summary:
 ```
 ~/.runelite/guide-chain/
+  state.json     ← shared GuideStore state (position, marks, snapshot, metrics)
   guides/        ← local guide files (override remote)
   overrides/
     <guideId>/
       <stepId>.json  ← per-step patches
   cache/         ← remote fetch cache
 ```
+
+---
+
+## Architecture: one store, three surfaces (v0.2.0)
+
+All mutable state — active chain, current position, per-step done/skip marks,
+manual-condition acks, last-known character snapshot, session metrics — lives in a
+single shared **`GuideStore`** (`com.techdevgroup.guidechain.store`). The store is
+**plain Java with zero RuneLite imports** and persists atomically to:
+
+```
+~/.runelite/guide-chain/state.json      (write-to-temp + atomic move)
+```
+
+Three surfaces read and mutate through that one instance — never parallel copies:
+
+1. **In-game overlays** — render `GuideStore.currentStep()`; auto-advance marks steps done in the store.
+2. **Plugin config actions** — chain selection etc. delegate to the store (and stay in sync with web picks).
+3. **Embedded web view** — an htmx UI served by the JDK built-in `com.sun.net.httpserver` (no extra dependencies).
+
+The store fires change listeners, so a click in the browser reflects in-game
+immediately. The plugin pushes a character snapshot (skills + tracked quest states)
+and live condition values into the store each game tick — cheap, and persisted only
+when the snapshot actually changes. Guide content and local overrides are *pushed
+into* the store from their own sources of truth (guides source / overrides dir);
+they are not duplicated inside `state.json`.
+
+**Hard rule unchanged:** every surface is overlay/annotate-only. Nothing automates
+game input.
+
+---
+
+## Web view
+
+Enable **Web View → Enable Web View Server** in the plugin config, then open
+`http://127.0.0.1:7780/` (port configurable; binds 127.0.0.1 only).
+
+| Route | Method | Purpose |
+|---|---|---|
+| `/` | GET | app shell |
+| `/fragments/chains` | GET | chain picker partial |
+| `/fragments/plan` | GET | ordered task list (current step highlighted, done/pending states) |
+| `/fragments/step/current` | GET | detail partial following the current step |
+| `/fragments/step/{guideId}/{stepId}` | GET | detail partial for one step (live condition values when the client is connected) |
+| `/actions/select-chain` | POST | form `chain=<chainId>` |
+| `/actions/step/{guideId}/{stepId}/done` | POST | mark done (advances if current) |
+| `/actions/step/{guideId}/{stepId}/skip` | POST | mark skipped (advances if current) |
+| `/actions/step/{guideId}/{stepId}/back` | POST | move back one step |
+| `/actions/refresh-guides` | POST | re-fetch guide content |
+| `/api/state.json` | GET | full machine-readable state for external tools/agents |
+
+Fragments are small HTML partials (htmx swap targets); one step-row partial is
+reused for both the plan list and the detail card. Action responses set
+`HX-Trigger: guide-store-changed` so every fragment refreshes together.
+
+### Responsive notes
+
+The UI is mobile-first and stays readable from **380px through 1600px**:
+fluid containers (`max-width` + padding, no fixed pixel widths), CSS grid that
+collapses to one column under 900px, wrapping flex rows, and `min-width: 0` on
+flex/grid children so long instructions wrap instead of clipping at container
+edges. Verified headless at 380×800 and 1400×900 with
+`document.scrollingElement.scrollWidth <= window.innerWidth`.
+
+### Standalone mode (portability proof)
+
+The store + web server boot outside RuneLite against the bundled
+`f2p-early-game` fixture. With no client attached, live condition values show
+as *client offline* — everything else (plan, navigation, marks, persistence,
+state API) works identically:
+
+```bash
+./gradlew standaloneJar
+java -jar build/libs/runelite-guide-chain-0.2.0-standalone.jar --port 7780 --dir ~/.runelite/guide-chain-standalone
+# or, without building a jar:
+./gradlew runWeb -Pport=7780
+```
+
+Standalone state defaults to `~/.runelite/guide-chain-standalone/state.json`
+so it never fights the plugin over one file (point `--dir` at
+`~/.runelite/guide-chain` deliberately if you want to drive the plugin's state
+while the client is closed).
+
+### htmx attribution
+
+The web UI vendors [htmx](https://htmx.org) 1.9.12 (`src/main/resources/web/htmx.min.js`),
+licensed under the **Zero-Clause BSD** license — see
+[`src/main/resources/web/HTMX-LICENSE`](src/main/resources/web/HTMX-LICENSE),
+also served at `/static/HTMX-LICENSE`.
 
 ---
 
@@ -134,6 +224,8 @@ by dropping an override JSON into `~/.runelite/guide-chain/overrides/`.
 | Show Panel      | ✓                                         | Sidebar instruction panel                           |
 | Highlight Color | cyan                                      | Color for all highlight types                       |
 | Show Debug      | ✗                                         | Debug condition/target overlay                      |
+| Enable Web View Server | ✗                                  | Localhost web view of the shared guide state        |
+| Web View Port   | `7780`                                    | Port for the web view (127.0.0.1 only)              |
 
 ---
 
@@ -164,7 +256,8 @@ Requires Temurin JDK 11 and uses Gradle 8.10 (via wrapper).
 ```bash
 export JAVA_HOME=/path/to/jdk-11
 ./gradlew build
-# jar → build/libs/runelite-guide-chain-0.1.0.jar
+# jar → build/libs/runelite-guide-chain-0.2.0.jar
+# standalone web view jar → ./gradlew standaloneJar
 ```
 
 ---

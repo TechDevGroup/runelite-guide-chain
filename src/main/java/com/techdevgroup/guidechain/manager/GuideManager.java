@@ -3,14 +3,11 @@ package com.techdevgroup.guidechain.manager;
 import com.google.gson.Gson;
 import com.techdevgroup.guidechain.GuideChainConfig;
 import com.techdevgroup.guidechain.data.ChainEntry;
-import com.techdevgroup.guidechain.data.CompletionCondition;
 import com.techdevgroup.guidechain.data.Guide;
 import com.techdevgroup.guidechain.data.GuideStep;
-import com.techdevgroup.guidechain.data.HighlightTarget;
-import com.techdevgroup.guidechain.data.MapMarker;
 import com.techdevgroup.guidechain.data.Manifest;
 import com.techdevgroup.guidechain.data.StepOverride;
-import lombok.Getter;
+import com.techdevgroup.guidechain.store.GuideStore;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.client.RuneLite;
 
@@ -26,15 +23,18 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * Loads guides and manages the current chain/step position.
+ * Loads guide content (manifest, guides, local overrides) and pushes it into
+ * the shared {@link GuideStore}. Since v0.2.0 all position/mark state lives
+ * in the store — this class is the RuneLite-side <em>loader + facade</em>;
+ * the overlays, config actions, and the embedded web view all read and
+ * mutate through the same store instance.
  *
  * <h3>Data source override chain (highest wins)</h3>
  * <ol>
@@ -57,226 +57,92 @@ public class GuideManager
 
     @Inject private GuideChainConfig config;
     @Inject private Gson gson;
+    @Inject private GuideStore store;
 
-    // ── Loaded data ──────────────────────────────────────────────────────────
+    // ── Public API (delegates state to the shared store) ─────────────────────
 
-    @Getter private Manifest manifest;
-    /** guideId → loaded Guide */
-    private final Map<String, Guide> loadedGuides = new HashMap<>();
-
-    // ── Current position ─────────────────────────────────────────────────────
-
-    /** Index into manifest.chains for the active chain. */
-    @Getter private int chainIndex = 0;
-    /** Index into active chain's guide list. */
-    @Getter private int guideIndex = 0;
-    /** Index into the active guide's step list. */
-    @Getter private int stepIndex  = 0;
-
-    // ── Public API ────────────────────────────────────────────────────────────
-
-    /** (Re-)fetch the manifest and pre-load the first chain's guides. */
+    /** (Re-)fetch the manifest, pre-load all chains' guides, push to store. */
     public void refresh()
     {
-        manifest = null;
-        loadedGuides.clear();
-        chainIndex = 0;
-        guideIndex = 0;
-        stepIndex  = 0;
-        manifest = loadManifest();
+        Manifest manifest = loadManifest();
         if (manifest == null) manifest = new Manifest();
-        ensureChainLoaded();
+
+        Map<String, Guide> loaded = new LinkedHashMap<>();
+        for (ChainEntry chain : manifest.chains())
+        {
+            for (String filename : chain.guides())
+            {
+                String id = filenameToId(filename);
+                if (!loaded.containsKey(id))
+                {
+                    Guide g = loadGuide(filename);
+                    if (g != null) loaded.put(id, g);
+                }
+            }
+        }
+
+        store.setOverrides(loadOverrides());
+        store.setPlan(manifest, loaded);
     }
 
-    /** Call after the user selects a chain from the dropdown. */
+    /** Call after the user selects a chain in the config panel. */
     public void selectChain(int index)
     {
-        if (manifest == null) return;
-        int max = manifest.chains().size();
-        if (max == 0) return;
-        chainIndex = Math.max(0, Math.min(index, max - 1));
-        guideIndex = 0;
-        stepIndex  = 0;
-        ensureChainLoaded();
+        store.selectChainByIndex(index);
     }
 
-    /** Names of all available chains for the dropdown. */
+    /** Names of all available chains for display. */
     public List<String> chainNames()
     {
-        if (manifest == null) return Collections.emptyList();
         List<String> names = new ArrayList<>();
-        for (ChainEntry e : manifest.chains())
+        for (ChainEntry e : store.chains())
         {
             names.add(e.name != null ? e.name : e.id);
         }
         return names;
     }
 
-    /**
-     * Returns the current step with any local overrides applied, or
-     * {@code null} if the chain is complete or no data is loaded.
-     */
-    public GuideStep currentStep()
-    {
-        Guide g = currentGuide();
-        if (g == null) return null;
-        List<GuideStep> steps = g.steps();
-        if (stepIndex >= steps.size()) return null;
-        GuideStep step = steps.get(stepIndex);
-        return applyOverride(step, g.id);
-    }
+    public int getChainIndex()         { return store.chainIndex(); }
+    public int getGuideIndex()         { return store.guideIndex(); }
+    public int getStepIndex()          { return store.stepIndex(); }
+    public GuideStep currentStep()     { return store.currentStep(); }
+    public Guide currentGuide()        { return store.currentGuide(); }
+    public int totalSteps()            { return store.totalSteps(); }
+    public int globalStepNumber()      { return store.globalStepNumber(); }
+    public boolean advance()           { return store.advance(); }
+    public void back()                 { store.back(); }
+    public boolean isChainComplete()   { return store.isChainComplete(); }
 
-    /** Current guide for display purposes (name, step count). */
-    public Guide currentGuide()
-    {
-        ChainEntry chain = currentChain();
-        if (chain == null) return null;
-        List<String> guideFiles = chain.guides();
-        if (guideIndex >= guideFiles.size()) return null;
-        String filename = guideFiles.get(guideIndex);
-        String guideId = filenameToId(filename);
-        return loadedGuides.get(guideId);
-    }
+    // ── Override loading (pushed into the store) ─────────────────────────────
 
-    /** Total step count across all guides in the current chain. */
-    public int totalSteps()
+    /** Scan {@code overrides/&lt;guideId&gt;/&lt;stepId&gt;.json} into a keyed map. */
+    private Map<String, StepOverride> loadOverrides()
     {
-        ChainEntry chain = currentChain();
-        if (chain == null) return 0;
-        int total = 0;
-        for (String f : chain.guides())
+        Map<String, StepOverride> map = new HashMap<>();
+        File[] guideDirs = OVERRIDES_DIR.listFiles(File::isDirectory);
+        if (guideDirs == null) return map;
+        for (File dir : guideDirs)
         {
-            Guide g = loadedGuides.get(filenameToId(f));
-            if (g != null) total += g.steps().size();
-        }
-        return total;
-    }
-
-    /** 1-based index of the current step across the whole chain. */
-    public int globalStepNumber()
-    {
-        ChainEntry chain = currentChain();
-        if (chain == null) return 0;
-        int base = 0;
-        for (int i = 0; i < guideIndex; i++)
-        {
-            if (i < chain.guides().size())
+            File[] files = dir.listFiles((d, n) -> n.endsWith(".json"));
+            if (files == null) continue;
+            for (File f : files)
             {
-                Guide g = loadedGuides.get(filenameToId(chain.guides().get(i)));
-                if (g != null) base += g.steps().size();
+                try (Reader r = new FileReader(f, StandardCharsets.UTF_8))
+                {
+                    StepOverride ov = gson.fromJson(r, StepOverride.class);
+                    if (ov != null)
+                    {
+                        String stepId = f.getName().substring(0, f.getName().length() - 5);
+                        map.put(GuideStore.key(dir.getName(), stepId), ov);
+                    }
+                }
+                catch (IOException | RuntimeException e)
+                {
+                    log.warn("Failed to read step override {}", f, e);
+                }
             }
         }
-        return base + stepIndex + 1;
-    }
-
-    /** Move forward one step; crosses guide boundaries if needed. */
-    public boolean advance()
-    {
-        Guide g = currentGuide();
-        if (g == null) return false;
-        stepIndex++;
-        if (stepIndex >= g.steps().size())
-        {
-            ChainEntry chain = currentChain();
-            if (chain != null && guideIndex + 1 < chain.guides().size())
-            {
-                guideIndex++;
-                stepIndex = 0;
-                ensureGuideLoaded(chain.guides().get(guideIndex));
-                return true;
-            }
-            stepIndex = g.steps().size(); // cap at end (chain complete)
-            return false;
-        }
-        return true;
-    }
-
-    /** Move backward one step; crosses guide boundaries if needed. */
-    public void back()
-    {
-        if (stepIndex > 0)
-        {
-            stepIndex--;
-            return;
-        }
-        if (guideIndex > 0)
-        {
-            ChainEntry chain = currentChain();
-            if (chain != null)
-            {
-                guideIndex--;
-                Guide g = loadedGuides.get(filenameToId(chain.guides().get(guideIndex)));
-                stepIndex = g != null && !g.steps().isEmpty() ? g.steps().size() - 1 : 0;
-            }
-        }
-    }
-
-    /** {@code true} when the last step of the chain has been completed. */
-    public boolean isChainComplete()
-    {
-        ChainEntry chain = currentChain();
-        if (chain == null) return true;
-        Guide g = currentGuide();
-        if (g == null) return true;
-        boolean lastGuide = (guideIndex == chain.guides().size() - 1);
-        boolean lastStep  = (stepIndex >= g.steps().size());
-        return lastGuide && lastStep;
-    }
-
-    // ── Private helpers ───────────────────────────────────────────────────────
-
-    private ChainEntry currentChain()
-    {
-        if (manifest == null) return null;
-        List<ChainEntry> chains = manifest.chains();
-        if (chainIndex >= chains.size()) return null;
-        return chains.get(chainIndex);
-    }
-
-    private void ensureChainLoaded()
-    {
-        ChainEntry chain = currentChain();
-        if (chain == null) return;
-        for (String f : chain.guides())
-        {
-            ensureGuideLoaded(f);
-        }
-    }
-
-    private void ensureGuideLoaded(String filename)
-    {
-        String id = filenameToId(filename);
-        if (loadedGuides.containsKey(id)) return;
-        Guide g = loadGuide(filename);
-        if (g != null) loadedGuides.put(id, g);
-    }
-
-    // ── Override application ──────────────────────────────────────────────────
-
-    private GuideStep applyOverride(GuideStep step, String guideId)
-    {
-        if (step == null) return null;
-        File overrideFile = new File(new File(OVERRIDES_DIR, guideId), step.id + ".json");
-        if (!overrideFile.exists()) return step;
-        try (Reader r = new FileReader(overrideFile, StandardCharsets.UTF_8))
-        {
-            StepOverride ov = gson.fromJson(r, StepOverride.class);
-            if (ov == null) return step;
-            // Deep-copy step fields and patch
-            GuideStep patched = new GuideStep();
-            patched.id                  = step.id;
-            patched.instruction         = ov.instruction         != null ? ov.instruction         : step.instruction;
-            patched.detail              = ov.detail              != null ? ov.detail              : step.detail;
-            patched.highlights          = ov.highlights          != null ? ov.highlights          : step.highlights;
-            patched.completionConditions= ov.completionConditions!= null ? ov.completionConditions: step.completionConditions;
-            patched.mapMarkers          = ov.mapMarkers          != null ? ov.mapMarkers          : step.mapMarkers;
-            return patched;
-        }
-        catch (IOException e)
-        {
-            log.warn("Failed to read step override {}", overrideFile, e);
-            return step;
-        }
+        return map;
     }
 
     // ── Guide loading ─────────────────────────────────────────────────────────
@@ -408,7 +274,7 @@ public class GuideManager
         URLConnection conn = url.openConnection();
         conn.setConnectTimeout(FETCH_TIMEOUT_MS);
         conn.setReadTimeout(FETCH_TIMEOUT_MS);
-        conn.setRequestProperty("User-Agent", "runelite-guide-chain/0.1.0");
+        conn.setRequestProperty("User-Agent", "runelite-guide-chain/0.2.0");
         try (InputStream is = conn.getInputStream();
              InputStreamReader isr = new InputStreamReader(is, StandardCharsets.UTF_8))
         {

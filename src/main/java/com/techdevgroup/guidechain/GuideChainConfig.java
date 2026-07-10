@@ -6,6 +6,7 @@ import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 import net.runelite.client.config.ConfigSection;
+import net.runelite.client.config.Range;
 
 @ConfigGroup("guidechain")
 public interface GuideChainConfig extends Config
@@ -82,6 +83,43 @@ public interface GuideChainConfig extends Config
         position    = 22
     )
     default Color highlightColor() { return new Color(0, 200, 255, 200); }
+
+    // ── Web view ──────────────────────────────────────────────────────────────
+
+    @ConfigSection(
+        name = "Web View",
+        description = "Embedded localhost web view of the guide state (never automates input).",
+        position = 25
+    )
+    String webSection = "web";
+
+    @ConfigItem(
+        keyName     = "webServerEnabled",
+        name        = "Enable Web View Server",
+        description = "Serve the guide plan on localhost (127.0.0.1 only). All actions go through the same shared state as the in-game overlay.",
+        section     = "web",
+        position    = 26
+    )
+    default boolean webServerEnabled() { return false; }
+
+    @ConfigItem(
+        keyName     = "webServerPort",
+        name        = "Web View Port",
+        description = "TCP port for the localhost web view.",
+        section     = "web",
+        position    = 27
+    )
+    @Range(min = 1024, max = 65535)
+    default int webServerPort() { return 7780; }
+
+    @ConfigItem(
+        keyName     = "webViewUrl",
+        name        = "Open Web View",
+        description = "With the server enabled, open this address in your browser (adjust if you changed the port).",
+        section     = "web",
+        position    = 28
+    )
+    default String webViewUrl() { return "http://127.0.0.1:7780/"; }
 
     // ── Debug ─────────────────────────────────────────────────────────────────
 
