@@ -25,7 +25,7 @@
       ],
       "mapMarkers": [],
       "completionConditions": [
-        { "type": "ITEM", "itemId": 1277, "qty": 1 },
+        { "type": "ITEM_HELD", "itemId": 1277, "qty": 1 },
         { "type": "MANUAL" }
       ]
     },
