@@ -1,0 +1,295 @@
+{
+  "id": "f2p-early-game",
+  "name": "F2P Early Game",
+  "description": "Demonstration seed: Lumbridge start → Cook's Assistant → basic skill milestones → Doric's Quest → Imp Catcher. Facts sourced from game constants; prose is original.",
+  "steps": [
+    {
+      "id": "lumbridge-start",
+      "instruction": "Open your inventory and check your starting items — you should have bronze equipment, some food, and a few coins.",
+      "detail": "You begin in the Lumbridge courtyard on the ground floor of Lumbridge Castle. Use this moment to orient yourself.",
+      "highlights": [],
+      "mapMarkers": [
+        { "x": 3222, "y": 3218, "plane": 0, "label": "Lumbridge start" }
+      ],
+      "completionConditions": [
+        { "type": "REGION", "regionId": 12850 }
+      ]
+    },
+    {
+      "id": "equip-bronze",
+      "instruction": "Equip your starting bronze sword and wooden shield — right-click each in your inventory and choose Wield.",
+      "detail": "Starting with basic equipment means any early combat encounter won't catch you empty-handed.",
+      "highlights": [
+        { "type": "ITEM", "id": 1277, "container": "INVENTORY" },
+        { "type": "ITEM", "id": 1171, "container": "INVENTORY" }
+      ],
+      "mapMarkers": [],
+      "completionConditions": [
+        { "type": "ITEM", "itemId": 1277, "qty": 1 },
+        { "type": "MANUAL" }
+      ]
+    },
+    {
+      "id": "find-cook",
+      "instruction": "Go up the stairs inside Lumbridge Castle and find the Cook on the first floor. He is in the kitchen area.",
+      "detail": "The Cook stands near the range and cooking pots on the first floor (ground+1) of Lumbridge Castle.",
+      "highlights": [
+        { "type": "NPC", "id": 1027 }
+      ],
+      "mapMarkers": [
+        { "x": 3209, "y": 3215, "plane": 0, "label": "Lumbridge Castle kitchen" }
+      ],
+      "completionConditions": [
+        { "type": "MANUAL" }
+      ]
+    },
+    {
+      "id": "start-cooks-assistant",
+      "instruction": "Talk to the Cook to begin Cook's Assistant. He needs an egg, a pot of flour, and a bucket of milk.",
+      "detail": "Cook's Assistant is one of the six quests available to free players from the very start. Starting it here lines up your objectives.",
+      "highlights": [
+        { "type": "NPC", "id": 1027 }
+      ],
+      "mapMarkers": [
+        { "x": 3209, "y": 3215, "plane": 0, "label": "The Cook" }
+      ],
+      "completionConditions": [
+        { "type": "QUEST", "questName": "COOKS_ASSISTANT", "state": "IN_PROGRESS" }
+      ]
+    },
+    {
+      "id": "collect-egg",
+      "instruction": "Head east of Lumbridge Castle to the chicken farm and pick up an egg from the ground near the henhouse.",
+      "detail": "Eggs spawn on the ground north of the cow field, near the small farm at roughly world coordinates (3179, 3295). They respawn quickly.",
+      "highlights": [
+        { "type": "OBJECT", "id": 1436 },
+        { "type": "TILE", "worldX": 3179, "worldY": 3295, "plane": 0 }
+      ],
+      "mapMarkers": [
+        { "x": 3179, "y": 3295, "plane": 0, "label": "Egg spawn" }
+      ],
+      "completionConditions": [
+        { "type": "ITEM_HELD", "itemId": 1944, "qty": 1 }
+      ]
+    },
+    {
+      "id": "collect-milk",
+      "instruction": "Use an empty bucket on one of the cows in the Lumbridge cow field to obtain a bucket of milk.",
+      "detail": "There is an empty bucket spawn inside the cow field. Cows are in the field east of Lumbridge, roughly at (3254, 3265).",
+      "highlights": [
+        { "type": "NPC", "id": 81 }
+      ],
+      "mapMarkers": [
+        { "x": 3254, "y": 3265, "plane": 0, "label": "Cow field" }
+      ],
+      "completionConditions": [
+        { "type": "ITEM_HELD", "itemId": 1927, "qty": 1 }
+      ]
+    },
+    {
+      "id": "get-flour",
+      "instruction": "Pick up wheat from the wheat field north of Lumbridge, take it to the windmill north of Draynor, and use the hopper to grind it into a pot of flour.",
+      "detail": "Wheat field: (3164, 3291). Lumbridge windmill: (3166, 3310) — use the stairs to reach the top floor, add wheat to the hopper, use the hopper controls, then collect flour from the flour bin on the ground floor.",
+      "highlights": [
+        { "type": "OBJECT", "id": 36965 },
+        { "type": "TILE", "worldX": 3165, "worldY": 3291, "plane": 0 }
+      ],
+      "mapMarkers": [
+        { "x": 3165, "y": 3291, "plane": 0, "label": "Wheat field" },
+        { "x": 3166, "y": 3310, "plane": 0, "label": "Lumbridge windmill" }
+      ],
+      "completionConditions": [
+        { "type": "ITEM_HELD", "itemId": 1933, "qty": 1 }
+      ]
+    },
+    {
+      "id": "complete-cooks-assistant",
+      "instruction": "Return to the Cook in Lumbridge Castle with the egg, bucket of milk, and pot of flour. Hand them over to finish the quest.",
+      "detail": "The Cook will take all three items and reward you with access to his oven plus a small amount of coins and Cooking experience.",
+      "highlights": [
+        { "type": "NPC", "id": 1027 },
+        { "type": "ITEM", "id": 1944, "container": "INVENTORY" },
+        { "type": "ITEM", "id": 1927, "container": "INVENTORY" },
+        { "type": "ITEM", "id": 1933, "container": "INVENTORY" }
+      ],
+      "mapMarkers": [
+        { "x": 3209, "y": 3215, "plane": 0, "label": "The Cook" }
+      ],
+      "completionConditions": [
+        { "type": "QUEST", "questName": "COOKS_ASSISTANT", "state": "FINISHED" }
+      ]
+    },
+    {
+      "id": "train-cooking-15",
+      "instruction": "Use the range in Lumbridge Castle kitchen to cook shrimp or anchovies until you reach Cooking level 15.",
+      "detail": "Shrimp (item 317) cook on the range at (3208, 3215, 0). You can buy raw shrimp from the Lumbridge general store or fish them south of Draynor Village. Level 15 Cooking unlocks anchovies.",
+      "highlights": [
+        { "type": "OBJECT", "id": 114 },
+        { "type": "TILE", "worldX": 3208, "worldY": 3215, "plane": 0 }
+      ],
+      "mapMarkers": [
+        { "x": 3208, "y": 3215, "plane": 0, "label": "Lumbridge kitchen range" }
+      ],
+      "completionConditions": [
+        { "type": "SKILL", "skill": "COOKING", "level": 15 }
+      ]
+    },
+    {
+      "id": "chop-trees-wc15",
+      "instruction": "Chop regular trees near Lumbridge with your bronze axe until you reach Woodcutting level 15.",
+      "detail": "Trees are everywhere around Lumbridge. Each log grants 25 Woodcutting experience. Level 15 unlocks oak trees, which give 37.5 XP per log.",
+      "highlights": [
+        { "type": "OBJECT", "id": 1276 }
+      ],
+      "mapMarkers": [
+        { "x": 3205, "y": 3198, "plane": 0, "label": "Lumbridge trees" }
+      ],
+      "completionConditions": [
+        { "type": "SKILL", "skill": "WOODCUTTING", "level": 15 }
+      ]
+    },
+    {
+      "id": "burn-logs-fm15",
+      "instruction": "Use your tinderbox on the normal logs in your inventory to light fires and reach Firemaking level 15.",
+      "detail": "You need a tinderbox (item 590). Light fires on a flat ground tile — use the tinderbox on a log in your inventory. Level 15 Firemaking opens up oak log burning.",
+      "highlights": [
+        { "type": "ITEM", "id": 1511, "container": "INVENTORY" },
+        { "type": "ITEM", "id": 590, "container": "INVENTORY" }
+      ],
+      "mapMarkers": [
+        { "x": 3205, "y": 3198, "plane": 0, "label": "Good spot to light fires" }
+      ],
+      "completionConditions": [
+        { "type": "SKILL", "skill": "FIREMAKING", "level": 15 }
+      ]
+    },
+    {
+      "id": "fish-shrimp-fm15",
+      "instruction": "Head to the fishing spots south of Draynor Village and use a small fishing net to catch shrimp until Fishing level 15.",
+      "detail": "Small net fishing spots are at roughly (3086, 3228). You need a small fishing net (item 303), available from the Draynor or Lumbridge general stores. Level 15 unlocks anchovies.",
+      "highlights": [
+        { "type": "TILE", "worldX": 3086, "worldY": 3228, "plane": 0 }
+      ],
+      "mapMarkers": [
+        { "x": 3086, "y": 3228, "plane": 0, "label": "Draynor fishing spots" }
+      ],
+      "completionConditions": [
+        { "type": "SKILL", "skill": "FISHING", "level": 15 }
+      ]
+    },
+    {
+      "id": "mine-copper-10",
+      "instruction": "Mine copper ore from the rocks in the Lumbridge Swamp mine until you reach Mining level 10.",
+      "detail": "The Lumbridge Swamp mine is south-east of Lumbridge at (3227, 3144). Copper rocks give 17.5 XP each. You need a bronze pickaxe — you should have started with one.",
+      "highlights": [
+        { "type": "OBJECT", "id": 10943 },
+        { "type": "TILE", "worldX": 3227, "worldY": 3144, "plane": 0 }
+      ],
+      "mapMarkers": [
+        { "x": 3227, "y": 3144, "plane": 0, "label": "Lumbridge Swamp mine" }
+      ],
+      "completionConditions": [
+        { "type": "SKILL", "skill": "MINING", "level": 10 }
+      ]
+    },
+    {
+      "id": "start-dorics-quest",
+      "instruction": "Travel north along the road from Falador to find Doric's hut, then speak to Doric to start Doric's Quest.",
+      "detail": "Doric's hut is north of Falador at roughly (2951, 3449). He needs 6 clay, 4 copper ore, and 2 iron ore to let you use his anvils.",
+      "highlights": [
+        { "type": "NPC", "id": 447 }
+      ],
+      "mapMarkers": [
+        { "x": 2951, "y": 3449, "plane": 0, "label": "Doric's hut" }
+      ],
+      "completionConditions": [
+        { "type": "QUEST", "questName": "DORICS_QUEST", "state": "IN_PROGRESS" }
+      ]
+    },
+    {
+      "id": "dorics-quest-materials",
+      "instruction": "Gather 6 clay, 4 copper ore, and 2 iron ore from the Dwarven Mine south of Doric's hut and return to Doric.",
+      "detail": "The Dwarven Mine entrance is just south of Doric at (2979, 3339). Clay, copper, and iron rocks are all inside. Iron rocks give 35 XP; you need Mining level 15 for iron — mine clay and copper for now and return for iron when you hit level 15.",
+      "highlights": [
+        { "type": "OBJECT", "id": 11363 },
+        { "type": "TILE", "worldX": 2979, "worldY": 3339, "plane": 0 }
+      ],
+      "mapMarkers": [
+        { "x": 2979, "y": 3339, "plane": 0, "label": "Dwarven Mine entrance" }
+      ],
+      "completionConditions": [
+        { "type": "ITEM_HELD", "itemId": 1761, "qty": 6 }
+      ]
+    },
+    {
+      "id": "complete-dorics-quest",
+      "instruction": "Return to Doric with the clay, copper ore, and iron ore. Hand them over to complete Doric's Quest.",
+      "detail": "Doric will reward you with 1300 Mining experience and some coins. This is one of the fastest Mining XP sources for new accounts.",
+      "highlights": [
+        { "type": "NPC", "id": 447 },
+        { "type": "ITEM", "id": 1761, "container": "INVENTORY" },
+        { "type": "ITEM", "id": 436, "container": "INVENTORY" },
+        { "type": "ITEM", "id": 440, "container": "INVENTORY" }
+      ],
+      "mapMarkers": [
+        { "x": 2951, "y": 3449, "plane": 0, "label": "Doric's hut" }
+      ],
+      "completionConditions": [
+        { "type": "QUEST", "questName": "DORICS_QUEST", "state": "FINISHED" }
+      ]
+    },
+    {
+      "id": "start-imp-catcher",
+      "instruction": "Travel to the Wizard's Tower south of Draynor Village and speak to Wizard Mizgog on the top floor to start Imp Catcher.",
+      "detail": "The Wizard's Tower is on an island at (3104, 3160). Speak to Mizgog on the top floor. He wants four coloured imp beads: black, red, white, and yellow.",
+      "highlights": [
+        { "type": "NPC", "id": 317 }
+      ],
+      "mapMarkers": [
+        { "x": 3104, "y": 3160, "plane": 0, "label": "Wizard's Tower" }
+      ],
+      "completionConditions": [
+        { "type": "QUEST", "questName": "IMP_CATCHER", "state": "IN_PROGRESS" }
+      ]
+    },
+    {
+      "id": "collect-imp-beads",
+      "instruction": "Kill imps across Gielinor to collect the four imp beads — black, red, white, and yellow. Imps are common near Falador and Karamja.",
+      "detail": "Imps (NPC id 26) roam freely; try the area just north of Falador (around 2963, 3390) or the volcano area on Karamja. Each imp has a chance to drop any of the four beads. Collect all four, then return to Wizard Mizgog.",
+      "highlights": [
+        { "type": "NPC", "id": 26 },
+        { "type": "ITEM", "id": 1635, "container": "INVENTORY" },
+        { "type": "ITEM", "id": 1634, "container": "INVENTORY" },
+        { "type": "ITEM", "id": 1633, "container": "INVENTORY" },
+        { "type": "ITEM", "id": 1632, "container": "INVENTORY" }
+      ],
+      "mapMarkers": [
+        { "x": 2963, "y": 3390, "plane": 0, "label": "Imps near Falador" }
+      ],
+      "completionConditions": [
+        { "type": "ITEM_HELD", "itemId": 1635, "qty": 1 },
+        { "type": "ITEM_HELD", "itemId": 1634, "qty": 1 },
+        { "type": "ITEM_HELD", "itemId": 1633, "qty": 1 },
+        { "type": "ITEM_HELD", "itemId": 1632, "qty": 1 }
+      ]
+    },
+    {
+      "id": "complete-imp-catcher",
+      "instruction": "Return to Wizard Mizgog at the top of the Wizard's Tower and give him all four imp beads to complete Imp Catcher.",
+      "detail": "Your reward is an Amulet of Accuracy — a free-to-play item that boosts your attack bonus — and a decent chunk of Magic experience.",
+      "highlights": [
+        { "type": "NPC", "id": 317 },
+        { "type": "ITEM", "id": 1635, "container": "INVENTORY" },
+        { "type": "ITEM", "id": 1634, "container": "INVENTORY" },
+        { "type": "ITEM", "id": 1633, "container": "INVENTORY" },
+        { "type": "ITEM", "id": 1632, "container": "INVENTORY" }
+      ],
+      "mapMarkers": [
+        { "x": 3104, "y": 3160, "plane": 0, "label": "Wizard's Tower" }
+      ],
+      "completionConditions": [
+        { "type": "QUEST", "questName": "IMP_CATCHER", "state": "FINISHED" }
+      ]
+    }
+  ]
+}
