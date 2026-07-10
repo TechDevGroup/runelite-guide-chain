@@ -1,0 +1,298 @@
+/* Guide Chain web view — mobile-first, fluid from 380px through 1600px.
+   Rules of the house:
+   - no fixed pixel widths on content containers (fluid + max-width caps)
+   - flex children get min-width:0 so long text wraps instead of clipping
+   - rows wrap (flex-wrap) rather than overflow horizontally            */
+
+:root {
+  --bg: #14171c;
+  --pane: #1d2129;
+  --pane-2: #232834;
+  --ink: #e8e6e3;
+  --ink-dim: #9aa3b2;
+  --accent: #35b5ff;
+  --ok: #4caf7d;
+  --warn: #e0a33d;
+  --line: #313847;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ── Shell layout: fluid container, capped width, safe edge padding ── */
+
+.topbar, .layout, .foot {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.5rem clamp(0.75rem, 3vw, 2rem);
+}
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar h1 {
+  font-size: 1.15rem;
+  margin: 0.25rem 0;
+  white-space: nowrap;
+}
+
+.chains { min-width: 0; flex: 1 1 12rem; }
+
+.chain-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ink-dim);
+  min-width: 0;
+}
+
+.chain-label select {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  background: var(--pane-2);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+  font: inherit;
+}
+
+/* ── Main: single column on mobile, two panes from 900px up ── */
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+}
+
+.pane {
+  background: var(--pane);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.9rem;
+  min-width: 0;               /* grid children may not overflow the track */
+  overflow-wrap: anywhere;
+}
+
+/* ── Plan header ── */
+
+.plan-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.75rem;
+  min-width: 0;
+}
+
+.plan-head h2, .detail-head h2 { font-size: 1.05rem; margin: 0; }
+
+.plan-progress-text { color: var(--ink-dim); font-size: 0.85rem; }
+
+.badge {
+  font-size: 0.72rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  white-space: nowrap;
+}
+.badge-on  { color: var(--ok);   border-color: var(--ok); }
+.badge-off { color: var(--warn); border-color: var(--warn); }
+
+.progress {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--pane-2);
+  margin: 0.6rem 0 0.9rem;
+  overflow: hidden;
+}
+.progress-fill { height: 100%; background: var(--accent); transition: width 0.4s; }
+
+/* ── Step rows: wrapping flex, reused in list and detail ── */
+
+.plan-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.guide-divider {
+  color: var(--ink-dim);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.7rem 0 0.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.step-row {
+  display: flex;
+  flex-wrap: wrap;            /* rows wrap rather than overflow */
+  align-items: flex-start;
+  gap: 0.4rem 0.6rem;
+  padding: 0.5rem 0.4rem;
+  border-bottom: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.step-row > * { min-width: 0; }   /* flex children must be shrinkable */
+
+.step-num {
+  flex: 0 0 auto;
+  color: var(--ink-dim);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+  padding-top: 0.1rem;
+  white-space: nowrap;
+}
+
+.step-main {
+  flex: 1 1 14rem;            /* grows, but happily wraps under 380px */
+  min-width: 0;
+}
+
+.step-instruction {
+  color: var(--ink);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  display: block;
+}
+a.step-instruction:hover { color: var(--accent); }
+
+.step-conds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.cond-badge {
+  font-size: 0.72rem;
+  color: var(--ink-dim);
+  background: var(--pane-2);
+  border-radius: 4px;
+  padding: 0.05rem 0.4rem;
+  overflow-wrap: anywhere;
+}
+
+.step-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-left: auto;
+}
+
+/* row states */
+.st-current { background: rgba(53, 181, 255, 0.10); border-left: 3px solid var(--accent); }
+.st-done    .step-instruction { color: var(--ink-dim); text-decoration: line-through; }
+.st-done    .step-num { color: var(--ok); }
+.st-skipped .step-instruction { color: var(--ink-dim); font-style: italic; }
+.st-skipped .step-num { color: var(--warn); }
+
+/* ── Buttons ── */
+
+.btn {
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--ink);
+  background: var(--pane-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn:hover { border-color: var(--accent); }
+.btn-done:hover { border-color: var(--ok); color: var(--ok); }
+.btn-skip:hover { border-color: var(--warn); color: var(--warn); }
+.btn-ghost { background: transparent; color: var(--ink-dim); }
+
+/* ── Detail card ── */
+
+.detail-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.follow-link { color: var(--accent); font-size: 0.8rem; }
+
+.detail-guide { color: var(--ink-dim); font-size: 0.85rem; margin: 0.3rem 0; }
+
+.detail-row .step-row { border-bottom: none; }
+
+.detail-text {
+  color: var(--ink);
+  background: var(--pane-2);
+  border-radius: 6px;
+  padding: 0.6rem 0.7rem;
+  overflow-wrap: anywhere;
+}
+
+.detail-card h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-dim);
+  margin: 0.9rem 0 0.3rem;
+}
+
+.cond-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  table-layout: fixed;        /* columns share the fluid width, text wraps */
+}
+.cond-table th, .cond-table td {
+  text-align: left;
+  padding: 0.25rem 0.4rem;
+  border-bottom: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+.cond-table th { color: var(--ink-dim); font-weight: 500; }
+.cond-met  td { color: var(--ok); }
+.offline { color: var(--warn); font-style: italic; }
+
+.tiny-list { margin: 0.2rem 0; padding-left: 1.2rem; font-size: 0.85rem; color: var(--ink-dim); }
+
+.detail-actions { margin-top: 0.9rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+/* ── Footer / misc ── */
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: var(--ink-dim);
+  font-size: 0.78rem;
+  padding-top: 1rem;
+  padding-bottom: 1.2rem;
+}
+.foot a { color: var(--ink-dim); }
+.foot-links { min-width: 0; }
+
+.empty { color: var(--ink-dim); font-style: italic; }
+.chain-complete { color: var(--ok); font-weight: 600; }
