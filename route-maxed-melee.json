@@ -1,0 +1,1531 @@
+{
+  "id": "route-maxed-melee",
+  "name": "Maxed Melee (99 Att/Str/Def) \u2014 Scheduled Route",
+  "description": "Streamlined then round-robin-paced route from the progression-router planner + anti-monotony scheduler.",
+  "steps": [
+    {
+      "id": "attack-1-64",
+      "instruction": "Train Attack to 64 (~27.13h).",
+      "detail": "Focused grind while the levels are still fast.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 64
+        }
+      ]
+    },
+    {
+      "id": "strength-1-64",
+      "instruction": "Train Strength to 64 (~27.13h).",
+      "detail": "Focused grind while the levels are still fast.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 64
+        }
+      ]
+    },
+    {
+      "id": "defence-1-64",
+      "instruction": "Train Defence to 64 (~27.13h).",
+      "detail": "Focused grind while the levels are still fast.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 64
+        }
+      ]
+    },
+    {
+      "id": "attack-64-65",
+      "instruction": "Train Attack to 65 (~1.06h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 65
+        }
+      ]
+    },
+    {
+      "id": "strength-64-65",
+      "instruction": "Train Strength to 65 (~1.06h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 65
+        }
+      ]
+    },
+    {
+      "id": "defence-64-65",
+      "instruction": "Train Defence to 65 (~1.06h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 65
+        }
+      ]
+    },
+    {
+      "id": "attack-65-66",
+      "instruction": "Train Attack to 66 (~1.17h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 66
+        }
+      ]
+    },
+    {
+      "id": "strength-65-66",
+      "instruction": "Train Strength to 66 (~1.17h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 66
+        }
+      ]
+    },
+    {
+      "id": "defence-65-66",
+      "instruction": "Train Defence to 66 (~1.17h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 66
+        }
+      ]
+    },
+    {
+      "id": "attack-66-67",
+      "instruction": "Train Attack to 67 (~1.29h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 67
+        }
+      ]
+    },
+    {
+      "id": "strength-66-67",
+      "instruction": "Train Strength to 67 (~1.29h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 67
+        }
+      ]
+    },
+    {
+      "id": "defence-66-67",
+      "instruction": "Train Defence to 67 (~1.29h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 67
+        }
+      ]
+    },
+    {
+      "id": "attack-67-68",
+      "instruction": "Train Attack to 68 (~1.43h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 68
+        }
+      ]
+    },
+    {
+      "id": "strength-67-68",
+      "instruction": "Train Strength to 68 (~1.43h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 68
+        }
+      ]
+    },
+    {
+      "id": "defence-67-68",
+      "instruction": "Train Defence to 68 (~1.43h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 68
+        }
+      ]
+    },
+    {
+      "id": "attack-68-69",
+      "instruction": "Train Attack to 69 (~1.58h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 69
+        }
+      ]
+    },
+    {
+      "id": "strength-68-69",
+      "instruction": "Train Strength to 69 (~1.58h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 69
+        }
+      ]
+    },
+    {
+      "id": "defence-68-69",
+      "instruction": "Train Defence to 69 (~1.58h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 69
+        }
+      ]
+    },
+    {
+      "id": "attack-69-70",
+      "instruction": "Train Attack to 70 (~1.74h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "strength-69-70",
+      "instruction": "Train Strength to 70 (~1.74h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "defence-69-70",
+      "instruction": "Train Defence to 70 (~1.74h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "attack-70-71",
+      "instruction": "Train Attack to 71 (~1.18h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 71
+        }
+      ]
+    },
+    {
+      "id": "strength-70-71",
+      "instruction": "Train Strength to 71 (~1.18h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 71
+        }
+      ]
+    },
+    {
+      "id": "defence-70-71",
+      "instruction": "Train Defence to 71 (~1.18h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 71
+        }
+      ]
+    },
+    {
+      "id": "attack-71-72",
+      "instruction": "Train Attack to 72 (~1.3h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 72
+        }
+      ]
+    },
+    {
+      "id": "strength-71-72",
+      "instruction": "Train Strength to 72 (~1.3h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 72
+        }
+      ]
+    },
+    {
+      "id": "defence-71-72",
+      "instruction": "Train Defence to 72 (~1.3h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 72
+        }
+      ]
+    },
+    {
+      "id": "attack-72-73",
+      "instruction": "Train Attack to 73 (~1.44h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 73
+        }
+      ]
+    },
+    {
+      "id": "strength-72-73",
+      "instruction": "Train Strength to 73 (~1.44h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 73
+        }
+      ]
+    },
+    {
+      "id": "defence-72-73",
+      "instruction": "Train Defence to 73 (~1.44h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 73
+        }
+      ]
+    },
+    {
+      "id": "attack-73-74",
+      "instruction": "Train Attack to 74 (~1.59h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 74
+        }
+      ]
+    },
+    {
+      "id": "strength-73-74",
+      "instruction": "Train Strength to 74 (~1.59h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 74
+        }
+      ]
+    },
+    {
+      "id": "defence-73-74",
+      "instruction": "Train Defence to 74 (~1.59h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 74
+        }
+      ]
+    },
+    {
+      "id": "attack-74-75",
+      "instruction": "Train Attack to 75 (~1.76h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "id": "strength-74-75",
+      "instruction": "Train Strength to 75 (~1.76h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "id": "defence-74-75",
+      "instruction": "Train Defence to 75 (~1.76h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "id": "attack-75-76",
+      "instruction": "Train Attack to 76 (~1.94h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 76
+        }
+      ]
+    },
+    {
+      "id": "strength-75-76",
+      "instruction": "Train Strength to 76 (~1.94h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 76
+        }
+      ]
+    },
+    {
+      "id": "defence-75-76",
+      "instruction": "Train Defence to 76 (~1.94h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 76
+        }
+      ]
+    },
+    {
+      "id": "attack-76-77",
+      "instruction": "Train Attack to 77 (~2.14h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 77
+        }
+      ]
+    },
+    {
+      "id": "strength-76-77",
+      "instruction": "Train Strength to 77 (~2.14h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 77
+        }
+      ]
+    },
+    {
+      "id": "defence-76-77",
+      "instruction": "Train Defence to 77 (~2.14h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 77
+        }
+      ]
+    },
+    {
+      "id": "attack-77-78",
+      "instruction": "Train Attack to 78 (~2.36h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 78
+        }
+      ]
+    },
+    {
+      "id": "strength-77-78",
+      "instruction": "Train Strength to 78 (~2.36h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 78
+        }
+      ]
+    },
+    {
+      "id": "defence-77-78",
+      "instruction": "Train Defence to 78 (~2.36h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 78
+        }
+      ]
+    },
+    {
+      "id": "attack-78-79",
+      "instruction": "Train Attack to 79 (~2.61h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 79
+        }
+      ]
+    },
+    {
+      "id": "strength-78-79",
+      "instruction": "Train Strength to 79 (~2.61h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 79
+        }
+      ]
+    },
+    {
+      "id": "defence-78-79",
+      "instruction": "Train Defence to 79 (~2.61h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 79
+        }
+      ]
+    },
+    {
+      "id": "attack-79-80",
+      "instruction": "Train Attack to 80 (~2.88h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 80
+        }
+      ]
+    },
+    {
+      "id": "strength-79-80",
+      "instruction": "Train Strength to 80 (~2.88h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 80
+        }
+      ]
+    },
+    {
+      "id": "defence-79-80",
+      "instruction": "Train Defence to 80 (~2.88h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 80
+        }
+      ]
+    },
+    {
+      "id": "attack-80-81",
+      "instruction": "Train Attack to 81 (~3.18h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 81
+        }
+      ]
+    },
+    {
+      "id": "strength-80-81",
+      "instruction": "Train Strength to 81 (~3.18h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 81
+        }
+      ]
+    },
+    {
+      "id": "defence-80-81",
+      "instruction": "Train Defence to 81 (~3.18h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 81
+        }
+      ]
+    },
+    {
+      "id": "attack-81-82",
+      "instruction": "Train Attack to 82 (~3.51h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 82
+        }
+      ]
+    },
+    {
+      "id": "strength-81-82",
+      "instruction": "Train Strength to 82 (~3.51h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 82
+        }
+      ]
+    },
+    {
+      "id": "defence-81-82",
+      "instruction": "Train Defence to 82 (~3.51h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 82
+        }
+      ]
+    },
+    {
+      "id": "attack-82-83",
+      "instruction": "Train Attack to 83 (~3.88h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 83
+        }
+      ]
+    },
+    {
+      "id": "strength-82-83",
+      "instruction": "Train Strength to 83 (~3.88h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 83
+        }
+      ]
+    },
+    {
+      "id": "defence-82-83",
+      "instruction": "Train Defence to 83 (~3.88h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 83
+        }
+      ]
+    },
+    {
+      "id": "attack-83-84",
+      "instruction": "Train Attack to 84 (~4.28h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 84
+        }
+      ]
+    },
+    {
+      "id": "strength-83-84",
+      "instruction": "Train Strength to 84 (~4.28h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 84
+        }
+      ]
+    },
+    {
+      "id": "defence-83-84",
+      "instruction": "Train Defence to 84 (~4.28h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 84
+        }
+      ]
+    },
+    {
+      "id": "attack-84-85",
+      "instruction": "Train Attack to 85 (~4.73h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 85
+        }
+      ]
+    },
+    {
+      "id": "strength-84-85",
+      "instruction": "Train Strength to 85 (~4.73h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 85
+        }
+      ]
+    },
+    {
+      "id": "defence-84-85",
+      "instruction": "Train Defence to 85 (~4.73h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 85
+        }
+      ]
+    },
+    {
+      "id": "attack-85-86",
+      "instruction": "Train Attack to 86 (~5.22h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 86
+        }
+      ]
+    },
+    {
+      "id": "strength-85-86",
+      "instruction": "Train Strength to 86 (~5.22h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 86
+        }
+      ]
+    },
+    {
+      "id": "defence-85-86",
+      "instruction": "Train Defence to 86 (~5.22h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 86
+        }
+      ]
+    },
+    {
+      "id": "attack-86-87",
+      "instruction": "Train Attack to 87 (~5.76h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 87
+        }
+      ]
+    },
+    {
+      "id": "strength-86-87",
+      "instruction": "Train Strength to 87 (~5.76h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 87
+        }
+      ]
+    },
+    {
+      "id": "defence-86-87",
+      "instruction": "Train Defence to 87 (~5.76h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 87
+        }
+      ]
+    },
+    {
+      "id": "attack-87-88",
+      "instruction": "Train Attack to 88 (~6.36h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 88
+        }
+      ]
+    },
+    {
+      "id": "strength-87-88",
+      "instruction": "Train Strength to 88 (~6.36h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 88
+        }
+      ]
+    },
+    {
+      "id": "defence-87-88",
+      "instruction": "Train Defence to 88 (~6.36h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 88
+        }
+      ]
+    },
+    {
+      "id": "attack-88-89",
+      "instruction": "Train Attack to 89 (~7.02h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 89
+        }
+      ]
+    },
+    {
+      "id": "strength-88-89",
+      "instruction": "Train Strength to 89 (~7.02h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 89
+        }
+      ]
+    },
+    {
+      "id": "defence-88-89",
+      "instruction": "Train Defence to 89 (~7.02h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 89
+        }
+      ]
+    },
+    {
+      "id": "attack-89-90",
+      "instruction": "Train Attack to 90 (~7.75h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 90
+        }
+      ]
+    },
+    {
+      "id": "strength-89-90",
+      "instruction": "Train Strength to 90 (~7.75h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 90
+        }
+      ]
+    },
+    {
+      "id": "defence-89-90",
+      "instruction": "Train Defence to 90 (~7.75h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 90
+        }
+      ]
+    },
+    {
+      "id": "attack-90-91",
+      "instruction": "Train Attack to 91 (~8.56h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 91
+        }
+      ]
+    },
+    {
+      "id": "strength-90-91",
+      "instruction": "Train Strength to 91 (~8.56h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 91
+        }
+      ]
+    },
+    {
+      "id": "defence-90-91",
+      "instruction": "Train Defence to 91 (~8.56h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 91
+        }
+      ]
+    },
+    {
+      "id": "attack-91-92",
+      "instruction": "Train Attack to 92 (~9.45h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 92
+        }
+      ]
+    },
+    {
+      "id": "strength-91-92",
+      "instruction": "Train Strength to 92 (~9.45h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 92
+        }
+      ]
+    },
+    {
+      "id": "defence-91-92",
+      "instruction": "Train Defence to 92 (~9.45h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 92
+        }
+      ]
+    },
+    {
+      "id": "attack-92-93",
+      "instruction": "Train Attack to 93 (~10.44h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 93
+        }
+      ]
+    },
+    {
+      "id": "strength-92-93",
+      "instruction": "Train Strength to 93 (~10.44h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 93
+        }
+      ]
+    },
+    {
+      "id": "defence-92-93",
+      "instruction": "Train Defence to 93 (~10.44h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 93
+        }
+      ]
+    },
+    {
+      "id": "attack-93-94",
+      "instruction": "Train Attack to 94 (~11.52h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 94
+        }
+      ]
+    },
+    {
+      "id": "strength-93-94",
+      "instruction": "Train Strength to 94 (~11.52h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 94
+        }
+      ]
+    },
+    {
+      "id": "defence-93-94",
+      "instruction": "Train Defence to 94 (~11.52h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 94
+        }
+      ]
+    },
+    {
+      "id": "attack-94-95",
+      "instruction": "Train Attack to 95 (~12.72h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 95
+        }
+      ]
+    },
+    {
+      "id": "strength-94-95",
+      "instruction": "Train Strength to 95 (~12.72h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 95
+        }
+      ]
+    },
+    {
+      "id": "defence-94-95",
+      "instruction": "Train Defence to 95 (~12.72h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 95
+        }
+      ]
+    },
+    {
+      "id": "attack-95-96",
+      "instruction": "Train Attack to 96 (~14.05h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 96
+        }
+      ]
+    },
+    {
+      "id": "strength-95-96",
+      "instruction": "Train Strength to 96 (~14.05h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 96
+        }
+      ]
+    },
+    {
+      "id": "defence-95-96",
+      "instruction": "Train Defence to 96 (~14.05h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 96
+        }
+      ]
+    },
+    {
+      "id": "attack-96-97",
+      "instruction": "Train Attack to 97 (~15.51h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 97
+        }
+      ]
+    },
+    {
+      "id": "strength-96-97",
+      "instruction": "Train Strength to 97 (~15.51h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 97
+        }
+      ]
+    },
+    {
+      "id": "defence-96-97",
+      "instruction": "Train Defence to 97 (~15.51h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 97
+        }
+      ]
+    },
+    {
+      "id": "attack-97-98",
+      "instruction": "Train Attack to 98 (~17.12h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 98
+        }
+      ]
+    },
+    {
+      "id": "strength-97-98",
+      "instruction": "Train Strength to 98 (~17.12h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 98
+        }
+      ]
+    },
+    {
+      "id": "defence-97-98",
+      "instruction": "Train Defence to 98 (~17.12h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 98
+        }
+      ]
+    },
+    {
+      "id": "attack-98-99",
+      "instruction": "Train Attack to 99 (~18.91h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "strength-98-99",
+      "instruction": "Train Strength to 99 (~18.91h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "defence-98-99",
+      "instruction": "Train Defence to 99 (~18.91h).",
+      "detail": "Rotation block \u2014 swapped in at ~1h to break the abysmal grind (see progression-philosophy).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "steer-maxed-melee",
+      "instruction": "Steer point \u2014 Maxed Melee (99 Att/Str/Def) reached.",
+      "detail": "A milestone/unlock moment: re-decide your next goal from here.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    }
+  ]
+}

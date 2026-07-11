@@ -15,6 +15,14 @@
       "guides": [
         "route-quest-mm.json"
       ]
+    },
+    {
+      "id": "route-maxed-melee",
+      "name": "Maxed Melee \u2014 Scheduled Route",
+      "description": "Streamlined then ~1h round-robin pacing (anti-monotony scheduler).",
+      "guides": [
+        "route-maxed-melee.json"
+      ]
     }
   ]
 }
