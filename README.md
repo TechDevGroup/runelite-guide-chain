@@ -15,6 +15,8 @@ chain of them) and it shows you exactly what to do, one step at a time:
 - **Sidebar panel** (RuneLite toolbar icon) — chain picker, step instruction + detail,
   progress counter (n / total), and a Mark Done button for MANUAL-condition steps
 - Clickbox outline on the target object, NPC, or tile in the game scene
+- **Bobbing world arrow** floating above the current step's on-screen world target,
+  persistent until the step's completion condition is met (see below)
 - Item highlight in your inventory, bank, or equipment
 - World-map pin at the destination point
 - Directional arrow at the edge of the viewport when the destination is off-screen
@@ -147,6 +149,42 @@ Navigation back or explicit skip is still available through the web view
 
 ---
 
+### Bobbing world arrow (v0.3.1+)
+
+A downward-pointing arrow bobs above the current step's on-screen world target so
+you always know exactly which object / NPC / tile the step refers to — and, just as
+importantly, so you never mistake an unfinished step for a finished one. The arrow
+is **persistent**: it keeps bobbing every frame for as long as the step is active,
+and disappears only when the step's completion condition (`QUEST` / `VARBIT` /
+`SKILL` / `ITEM_HELD` / `REGION`) auto-satisfies on a game tick, or when you press
+**Mark Done**. Both paths advance the current step in the shared `GuideStore`, and
+the arrow follows the store's current step — there is no separate timer or dismiss.
+
+It resolves the target to a scene `LocalPoint`:
+
+- `OBJECT` — the scene game object matching `id` (and `worldX/worldY/plane` if set)
+- `NPC` — the live location of the first scene NPC matching `id`
+- `TILE` — `LocalPoint.fromWorld` on `worldX/worldY/plane`
+
+and projects a point a fixed height above it with
+`net.runelite.api.Perspective.localToCanvas(client, localPoint, plane, zHeight)`.
+The vertical bob is `Math.sin(client.getGameCycle() / period) * amplitude`. When the
+target tile is off-screen the arrow simply does not project; the world-map pin and
+edge directional hint cover that case.
+
+Toggle with **Show World Arrow** (default on) and recolor with **World Arrow Color**.
+
+> **Technique credit:** the world-arrow approach — an `ABOVE_SCENE` overlay that
+> resolves the target to a `LocalPoint`, projects it above the tile via `Perspective`,
+> applies a game-cycle sinusoidal bob, and draws a black-outlined filled arrowhead — is
+> modelled on quest-helper's `DirectionArrow.drawWorldArrow` /
+> `QuestHelperWorldArrowOverlay`
+> ([Zoinkwiz/quest-helper](https://github.com/Zoinkwiz/quest-helper), BSD-2-Clause).
+> Guide Chain's `WorldArrowOverlay` is an original re-implementation of that technique;
+> no code was copied.
+
+---
+
 ## Web view
 
 Enable **Web View → Enable Web View Server** in the plugin config, then open
@@ -188,7 +226,7 @@ state API) works identically:
 
 ```bash
 ./gradlew standaloneJar
-java -jar build/libs/runelite-guide-chain-0.3.0-standalone.jar --port 7780 --dir ~/.runelite/guide-chain-standalone
+java -jar build/libs/runelite-guide-chain-0.3.1-standalone.jar --port 7780 --dir ~/.runelite/guide-chain-standalone
 # or, without building a jar:
 ./gradlew runWeb -Pport=7780
 ```
@@ -248,6 +286,8 @@ by dropping an override JSON into `~/.runelite/guide-chain/overrides/`.
 | Selected Chain  | `0`                                       | Index into manifest chains list                     |
 | Show Panel      | ✓                                         | Legacy toggle (unused since v0.3.0 — panel is always accessible via the toolbar icon) |
 | Highlight Color | cyan                                      | Color for all highlight types                       |
+| Show World Arrow | ✓                                        | Bobbing arrow above the current step's on-screen world target |
+| World Arrow Color | gold                                    | Fill color of the bobbing world arrow               |
 | Show Debug      | ✗                                         | Debug condition/target overlay                      |
 | Enable Web View Server | ✗                                  | Localhost web view of the shared guide state        |
 | Web View Port   | `7780`                                    | Port for the web view (127.0.0.1 only)              |
@@ -281,7 +321,7 @@ Requires Temurin JDK 11 and uses Gradle 8.10 (via wrapper).
 ```bash
 export JAVA_HOME=/path/to/jdk-11
 ./gradlew build
-# jar → build/libs/runelite-guide-chain-0.3.0.jar
+# jar → build/libs/runelite-guide-chain-0.3.1.jar
 # standalone web view jar → ./gradlew standaloneJar
 ```
 

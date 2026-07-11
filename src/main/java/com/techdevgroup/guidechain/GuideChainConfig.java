@@ -84,6 +84,25 @@ public interface GuideChainConfig extends Config
     )
     default Color highlightColor() { return new Color(0, 200, 255, 200); }
 
+    @ConfigItem(
+        keyName     = "showWorldArrow",
+        name        = "Show World Arrow",
+        description = "Show a bobbing arrow above the current step's on-screen world target. Persists until the step's completion condition is met.",
+        section     = "display",
+        position    = 23
+    )
+    default boolean showWorldArrow() { return true; }
+
+    @Alpha
+    @ConfigItem(
+        keyName     = "worldArrowColor",
+        name        = "World Arrow Color",
+        description = "Fill color of the bobbing world arrow.",
+        section     = "display",
+        position    = 24
+    )
+    default Color worldArrowColor() { return new Color(255, 215, 0, 230); }
+
     // ── Web view ──────────────────────────────────────────────────────────────
 
     @ConfigSection(

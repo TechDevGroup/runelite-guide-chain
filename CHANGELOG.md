@@ -1,5 +1,42 @@
 # Changelog
 
+## v0.3.1
+
+### Added — persistent bobbing world arrow
+
+A Quest-Helper-style downward arrow now bobs above the current step's on-screen
+world target, so the player never mistakes an unfinished step for a finished one.
+
+- New `overlay/WorldArrowOverlay.java` on `OverlayLayer.ABOVE_SCENE`.
+- Resolves the current step's first world-locatable highlight target to a
+  scene `LocalPoint`:
+  - `OBJECT` — scene game object matching `id` (+ `worldX/worldY/plane` if set),
+    via `GameObject.getLocalLocation()`
+  - `NPC` — the live location of the first scene NPC matching `id`, via
+    `NPC.getLocalLocation()`
+  - `TILE` — `LocalPoint.fromWorld(client, worldPoint)`
+- Projects a point a fixed height above the tile with
+  `Perspective.localToCanvas(client, localPoint, plane, zHeight)`.
+- Vertical bob: `Math.sin(client.getGameCycle() / period) * amplitude` per frame.
+- Draws a black-outlined, color-filled downward arrowhead + stem (original drawing).
+- **Persistence:** the arrow renders every frame while the current step is active
+  and disappears only when that step changes — which happens when its completion
+  condition (`QUEST` / `VARBIT` / `SKILL` / `ITEM_HELD` / `REGION`) auto-satisfies
+  on a game tick, or the user presses Mark Done. It is driven entirely by
+  `GuideStore.currentStep()`; there is no separate timer or dismiss.
+- Off-screen targets don't project — the existing world-map pin + edge directional
+  hint (`WorldMapOverlay`) still cover that case.
+- New config: `showWorldArrow` (default true) and `worldArrowColor` (default gold).
+
+**Technique credit:** modelled on quest-helper's `DirectionArrow.drawWorldArrow` /
+`QuestHelperWorldArrowOverlay`
+([Zoinkwiz/quest-helper](https://github.com/Zoinkwiz/quest-helper), BSD-2-Clause) —
+original re-implementation, no code copied.
+
+**Unchanged:** sidebar panel, scene/item/widget highlights, world-map markers, and
+the web view all remain driven by the one shared `GuideStore`. Hard rule intact:
+overlay/highlight-only, never automates input.
+
 ## v0.3.0
 
 ### Changed — interactive guide surface moved to sidebar panel

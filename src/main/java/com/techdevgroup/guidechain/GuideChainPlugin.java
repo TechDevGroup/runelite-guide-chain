@@ -11,6 +11,7 @@ import com.techdevgroup.guidechain.overlay.DebugOverlay;
 import com.techdevgroup.guidechain.overlay.ItemOverlay;
 import com.techdevgroup.guidechain.overlay.SceneOverlay;
 import com.techdevgroup.guidechain.overlay.WidgetHighlightOverlay;
+import com.techdevgroup.guidechain.overlay.WorldArrowOverlay;
 import com.techdevgroup.guidechain.overlay.WorldMapOverlay;
 import com.techdevgroup.guidechain.panel.GuidePanel;
 import com.techdevgroup.guidechain.store.CharacterSnapshot;
@@ -93,6 +94,7 @@ public class GuideChainPlugin extends Plugin
     @Inject private WidgetHighlightOverlay  widgetHighlightOverlay;
     @Inject private DebugOverlay            debugOverlay;
     @Inject private WorldMapOverlay         worldMapOverlay;
+    @Inject private WorldArrowOverlay       worldArrowOverlay;
     @Inject private GuidePanel              guidePanel;
     @Inject private Gson                    gson;
 
@@ -135,6 +137,7 @@ public class GuideChainPlugin extends Plugin
         overlayManager.add(widgetHighlightOverlay);
         overlayManager.add(debugOverlay);
         overlayManager.add(worldMapOverlay);
+        overlayManager.add(worldArrowOverlay);
 
         // Sidebar panel — the interactive surface
         navButton = buildNavButton();
@@ -161,6 +164,7 @@ public class GuideChainPlugin extends Plugin
         overlayManager.remove(widgetHighlightOverlay);
         overlayManager.remove(debugOverlay);
         overlayManager.remove(worldMapOverlay);
+        overlayManager.remove(worldArrowOverlay);
         worldMapOverlay.clearAll();
 
         clientToolbar.removeNavigation(navButton);
