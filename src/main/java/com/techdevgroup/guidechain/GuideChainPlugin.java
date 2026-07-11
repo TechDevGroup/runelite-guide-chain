@@ -9,10 +9,10 @@ import com.techdevgroup.guidechain.manager.ConditionEvaluator;
 import com.techdevgroup.guidechain.manager.GuideManager;
 import com.techdevgroup.guidechain.overlay.DebugOverlay;
 import com.techdevgroup.guidechain.overlay.ItemOverlay;
-import com.techdevgroup.guidechain.overlay.PanelOverlay;
 import com.techdevgroup.guidechain.overlay.SceneOverlay;
 import com.techdevgroup.guidechain.overlay.WidgetHighlightOverlay;
 import com.techdevgroup.guidechain.overlay.WorldMapOverlay;
+import com.techdevgroup.guidechain.panel.GuidePanel;
 import com.techdevgroup.guidechain.store.CharacterSnapshot;
 import com.techdevgroup.guidechain.store.ConditionStatus;
 import com.techdevgroup.guidechain.store.GuideStore;
@@ -33,10 +33,15 @@ import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.events.ConfigChanged;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
+import net.runelite.client.ui.ClientToolbar;
+import net.runelite.client.ui.NavigationButton;
 import net.runelite.client.ui.overlay.OverlayManager;
+import net.runelite.client.util.ImageUtil;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
+import javax.swing.SwingUtilities;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -55,10 +60,17 @@ import java.util.Set;
  *
  * <p>Since v0.2.0 all mutable state (position, marks, character snapshot,
  * metrics) lives in the shared {@link GuideStore} — ONE state instance
- * behind THREE surfaces: overlays, config actions, and the localhost web
- * view. The plugin pushes a character snapshot + live condition values into
- * the store each game tick and consumes store mutations on the next render,
- * so a click in the browser reflects in-game immediately.
+ * behind THREE surfaces: the sidebar panel, the canvas highlights, and the
+ * localhost web view. The plugin pushes a character snapshot + live condition
+ * values into the store each game tick and consumes store mutations on the
+ * next render, so a click in the browser or sidebar panel reflects in-game
+ * immediately.
+ *
+ * <p>Since v0.3.0 the interactive guide UI lives in a RuneLite
+ * {@link GuidePanel} (Swing sidebar panel opened via a toolbar
+ * {@link NavigationButton}). The game canvas retains only purely visual,
+ * non-interactive guidance: object/NPC/tile clickbox highlights, item
+ * highlights, and world-map markers. Nothing on the canvas requires a click.
  */
 @Slf4j
 @PluginDescriptor(
@@ -68,22 +80,24 @@ import java.util.Set;
 )
 public class GuideChainPlugin extends Plugin
 {
-    @Inject private Client                client;
-    @Inject private OverlayManager        overlayManager;
-    @Inject private GuideChainConfig      config;
-    @Inject private ConfigManager         configManager;
-    @Inject @Getter private GuideManager  guideManager;
-    @Inject @Getter private GuideStore    guideStore;
-    @Inject private ConditionEvaluator    conditionEvaluator;
-    @Inject private SceneOverlay          sceneOverlay;
-    @Inject private ItemOverlay           itemOverlay;
-    @Inject private WidgetHighlightOverlay widgetHighlightOverlay;
-    @Inject private PanelOverlay          panelOverlay;
-    @Inject private DebugOverlay          debugOverlay;
-    @Inject private WorldMapOverlay       worldMapOverlay;
-    @Inject private Gson                  gson;
+    @Inject private Client                  client;
+    @Inject private OverlayManager          overlayManager;
+    @Inject private ClientToolbar           clientToolbar;
+    @Inject private GuideChainConfig        config;
+    @Inject private ConfigManager           configManager;
+    @Inject @Getter private GuideManager    guideManager;
+    @Inject @Getter private GuideStore      guideStore;
+    @Inject private ConditionEvaluator      conditionEvaluator;
+    @Inject private SceneOverlay            sceneOverlay;
+    @Inject private ItemOverlay             itemOverlay;
+    @Inject private WidgetHighlightOverlay  widgetHighlightOverlay;
+    @Inject private DebugOverlay            debugOverlay;
+    @Inject private WorldMapOverlay         worldMapOverlay;
+    @Inject private GuidePanel              guidePanel;
+    @Inject private Gson                    gson;
 
-    private GuideWebServer webServer;
+    private NavigationButton navButton;
+    private GuideWebServer   webServer;
 
     /** Quest enum names referenced by the active chain; refreshed on plan changes. */
     private volatile Set<String> trackedQuests = new LinkedHashSet<>();
@@ -97,8 +111,16 @@ public class GuideChainPlugin extends Plugin
         }
         if ("chain".equals(what))
         {
-            // keep the config panel's selected chain in sync with web-view picks
+            // Keep the config panel's selected chain in sync with web-view / panel picks.
             configManager.setConfiguration("guidechain", "selectedChain", store.chainIndex());
+        }
+        // Refresh the sidebar panel on structural changes.
+        // Skip "character" and liveConditions — they fire every tick.
+        if ("plan".equals(what)   || "chain".equals(what)
+            || "overrides".equals(what) || "marks".equals(what)
+            || "position".equals(what))
+        {
+            SwingUtilities.invokeLater(guidePanel::refresh);
         }
     };
 
@@ -107,12 +129,16 @@ public class GuideChainPlugin extends Plugin
     @Override
     protected void startUp()
     {
+        // Canvas overlays — display-only, no click targets
         overlayManager.add(sceneOverlay);
         overlayManager.add(itemOverlay);
         overlayManager.add(widgetHighlightOverlay);
-        overlayManager.add(panelOverlay);
         overlayManager.add(debugOverlay);
         overlayManager.add(worldMapOverlay);
+
+        // Sidebar panel — the interactive surface
+        navButton = buildNavButton();
+        clientToolbar.addNavigation(navButton);
 
         guideStore.addListener(storeListener);
 
@@ -133,10 +159,13 @@ public class GuideChainPlugin extends Plugin
         overlayManager.remove(sceneOverlay);
         overlayManager.remove(itemOverlay);
         overlayManager.remove(widgetHighlightOverlay);
-        overlayManager.remove(panelOverlay);
         overlayManager.remove(debugOverlay);
         overlayManager.remove(worldMapOverlay);
         worldMapOverlay.clearAll();
+
+        clientToolbar.removeNavigation(navButton);
+        navButton = null;
+
         stopWebServer();
         guideStore.setClientConnected(false);
         guideStore.removeListener(storeListener);
@@ -157,6 +186,33 @@ public class GuideChainPlugin extends Plugin
     GuideStore provideGuideStore(Gson gson)
     {
         return new GuideStore(new File(RuneLite.RUNELITE_DIR, "guide-chain"), gson);
+    }
+
+    // ── Navigation button ─────────────────────────────────────────────────────
+
+    private NavigationButton buildNavButton()
+    {
+        BufferedImage icon;
+        try
+        {
+            icon = ImageUtil.loadImageResource(GuideChainPlugin.class, "icon.png");
+        }
+        catch (RuntimeException e)
+        {
+            log.warn("Guide Chain: could not load toolbar icon", e);
+            // Fallback: solid cyan 16x16 square
+            icon = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
+            java.awt.Graphics2D g = icon.createGraphics();
+            g.setColor(new java.awt.Color(0, 200, 255));
+            g.fillRect(0, 0, 16, 16);
+            g.dispose();
+        }
+        return NavigationButton.builder()
+            .tooltip("Guide Chain")
+            .icon(icon)
+            .priority(7)
+            .panel(guidePanel)
+            .build();
     }
 
     // ── Web server lifecycle ──────────────────────────────────────────────────
@@ -196,21 +252,6 @@ public class GuideChainPlugin extends Plugin
     public GuideStep getCurrentStep()
     {
         return guideStore.currentStep();
-    }
-
-    /**
-     * Manually skip the current step (used by Skip button and by the panel
-     * overlay's click handler). Recorded as a skip mark in the store.
-     */
-    public void skipStep()
-    {
-        guideStore.markSkipped(guideStore.currentStepKey());
-    }
-
-    /** Navigate back to the previous step. */
-    public void backStep()
-    {
-        guideStore.back();
     }
 
     // ── Events ────────────────────────────────────────────────────────────────

@@ -274,7 +274,7 @@ public class GuideManager
         URLConnection conn = url.openConnection();
         conn.setConnectTimeout(FETCH_TIMEOUT_MS);
         conn.setReadTimeout(FETCH_TIMEOUT_MS);
-        conn.setRequestProperty("User-Agent", "runelite-guide-chain/0.2.0");
+        conn.setRequestProperty("User-Agent", "runelite-guide-chain/0.3.0");
         try (InputStream is = conn.getInputStream();
              InputStreamReader isr = new InputStreamReader(is, StandardCharsets.UTF_8))
         {

@@ -12,13 +12,14 @@ Plays back declarative, chained account-progression guides as quest-helper-style
 Guide Chain is a *renderer* of guide data. You point it at a JSON guide file (or a
 chain of them) and it shows you exactly what to do, one step at a time:
 
-- Step instruction + optional detail in a sidebar panel
+- **Sidebar panel** (RuneLite toolbar icon) — chain picker, step instruction + detail,
+  progress counter (n / total), and a Mark Done button for MANUAL-condition steps
 - Clickbox outline on the target object, NPC, or tile in the game scene
 - Item highlight in your inventory, bank, or equipment
 - World-map pin at the destination point
 - Directional arrow at the edge of the viewport when the destination is off-screen
 - Auto-advances when the configured completion condition fires on a game tick;
-  fallback to manual Skip/Back buttons
+  MANUAL-condition steps wait for the Mark Done button in the sidebar panel
 
 ---
 
@@ -60,7 +61,7 @@ guide.json
 | `SKILL`     | `skill` (Skill enum name), `level`            |
 | `ITEM_HELD` | `itemId`, `qty`                               |
 | `REGION`    | `regionId`                                    |
-| `MANUAL`    | *(no extra fields — user clicks Skip/Done)*   |
+| `MANUAL`    | *(no extra fields — user clicks Mark Done in the sidebar panel)*   |
 
 All conditions in a step's list must be simultaneously true for auto-advance.
 An empty conditions list means the step never auto-advances.
@@ -93,7 +94,7 @@ File paths summary:
 
 ---
 
-## Architecture: one store, three surfaces (v0.2.0)
+## Architecture: one store, three surfaces
 
 All mutable state — active chain, current position, per-step done/skip marks,
 manual-condition acks, last-known character snapshot, session metrics — lives in a
@@ -106,19 +107,43 @@ single shared **`GuideStore`** (`com.techdevgroup.guidechain.store`). The store 
 
 Three surfaces read and mutate through that one instance — never parallel copies:
 
-1. **In-game overlays** — render `GuideStore.currentStep()`; auto-advance marks steps done in the store.
-2. **Plugin config actions** — chain selection etc. delegate to the store (and stay in sync with web picks).
-3. **Embedded web view** — an htmx UI served by the JDK built-in `com.sun.net.httpserver` (no extra dependencies).
+1. **Sidebar panel** (`GuidePanel`) — a RuneLite `PluginPanel` opened via the toolbar
+   `NavigationButton`. Contains the chain picker, step instruction + detail, progress
+   counter, and the Mark Done button for MANUAL steps. This is the interactive guide
+   surface; all clicks land on real Swing components.
+2. **Canvas overlays** (display-only) — `SceneOverlay`, `ItemOverlay`,
+   `WidgetHighlightOverlay`, `WorldMapOverlay` render in-world highlights and
+   world-map markers for the current step. Nothing on the canvas requires a click;
+   mouse events pass through to the game as normal.
+3. **Embedded web view** — an htmx UI served by the JDK built-in
+   `com.sun.net.httpserver` (no extra dependencies). Back/skip/done actions go through
+   the same store, so they are reflected immediately in the sidebar panel and overlays.
 
-The store fires change listeners, so a click in the browser reflects in-game
-immediately. The plugin pushes a character snapshot (skills + tracked quest states)
-and live condition values into the store each game tick — cheap, and persisted only
-when the snapshot actually changes. Guide content and local overrides are *pushed
+The store fires change listeners, so a click in the browser or sidebar panel reflects
+in-game immediately. The plugin pushes a character snapshot (skills + tracked quest
+states) and live condition values into the store each game tick — cheap, and persisted
+only when the snapshot actually changes. Guide content and local overrides are *pushed
 into* the store from their own sources of truth (guides source / overrides dir);
 they are not duplicated inside `state.json`.
 
 **Hard rule unchanged:** every surface is overlay/annotate-only. Nothing automates
 game input.
+
+### Sidebar panel (v0.3.0+)
+
+Click the **Guide Chain** toolbar icon (cyan icon, priority 7) to open the panel.
+
+| Control | What it does |
+|---------|--------------|
+| Chain picker | Switch chains; immediately moves to the first pending step of the new chain |
+| Progress counter | Shows guide name and current/total step number across the whole chain |
+| Instruction text | Current step instruction |
+| Detail text | Optional longer context (hidden when absent) |
+| Mark Done button | Marks the current step complete and advances; visible only for MANUAL-condition steps or steps with no auto-conditions |
+
+The on-canvas Back / Skip arrow controls that existed in v0.2.0 have been removed.
+Navigation back or explicit skip is still available through the web view
+(`/actions/step/{guideId}/{stepId}/back` and `.../skip`).
 
 ---
 
@@ -163,7 +188,7 @@ state API) works identically:
 
 ```bash
 ./gradlew standaloneJar
-java -jar build/libs/runelite-guide-chain-0.2.0-standalone.jar --port 7780 --dir ~/.runelite/guide-chain-standalone
+java -jar build/libs/runelite-guide-chain-0.3.0-standalone.jar --port 7780 --dir ~/.runelite/guide-chain-standalone
 # or, without building a jar:
 ./gradlew runWeb -Pport=7780
 ```
@@ -221,7 +246,7 @@ by dropping an override JSON into `~/.runelite/guide-chain/overrides/`.
 | Guides Repo     | `TechDevGroup/runelite-guide-chain`       | GitHub `owner/repo` for guide data                  |
 | Guides Branch   | `guides`                                  | Branch on that repo with manifest.json + guide files |
 | Selected Chain  | `0`                                       | Index into manifest chains list                     |
-| Show Panel      | ✓                                         | Sidebar instruction panel                           |
+| Show Panel      | ✓                                         | Legacy toggle (unused since v0.3.0 — panel is always accessible via the toolbar icon) |
 | Highlight Color | cyan                                      | Color for all highlight types                       |
 | Show Debug      | ✗                                         | Debug condition/target overlay                      |
 | Enable Web View Server | ✗                                  | Localhost web view of the shared guide state        |
@@ -256,7 +281,7 @@ Requires Temurin JDK 11 and uses Gradle 8.10 (via wrapper).
 ```bash
 export JAVA_HOME=/path/to/jdk-11
 ./gradlew build
-# jar → build/libs/runelite-guide-chain-0.2.0.jar
+# jar → build/libs/runelite-guide-chain-0.3.0.jar
 # standalone web view jar → ./gradlew standaloneJar
 ```
 
