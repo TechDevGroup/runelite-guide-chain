@@ -115,6 +115,36 @@ public class GuideStep
     /** Steer-point kind for badge decoration; null on regular steps. */
     public String steerKind;
 
+    /**
+     * Optional 1:many training methods for a skill band (skill-methods
+     * normalizer). When present the step renders a method PICKER — several
+     * activity options with their own location / xp-hr / reqs / wiki
+     * breadcrumbs — instead of a single cited {@link #detail} line (the
+     * "no sloppy detail-text" contract). Null/empty = plain step.
+     * Additive-nullable, plugin-safe (same pattern as {@link #refs}).
+     */
+    public List<TrainMethod> methods;
+
+    /** One activity option for a training band; xp_hr/members are "??" when the wiki never stated them. */
+    public static final class TrainMethod
+    {
+        public String method;
+        public String location;
+        public String level_band;
+        /** Boolean, or the string "??" when unknown. */
+        public Object members;
+        /** Number, or the string "??" when the page never stated a rate. */
+        public Object xp_hr;
+        /** Raw {skills:{}, quests:[], items:[]} gate, summarized for display like reqs elsewhere. */
+        public Object reqs;
+        public List<GuideRef> refs;
+
+        public List<GuideRef> refs()
+        {
+            return refs != null ? refs : Collections.emptyList();
+        }
+    }
+
     // ── Convenience helpers ────────────────────────────────────────────────────
 
     public List<HighlightTarget> highlights()

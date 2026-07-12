@@ -347,7 +347,15 @@ final class WebFragments
 
         sb.append("<ol class=\"plan-list detail-row\">").append(stepRow(row, false)).append("</ol>\n");
 
-        if (step.detail != null && !step.detail.isEmpty())
+        // A method PICKER supersedes a single prose detail line: when the step
+        // carries 1:many training methods, the band's options are the content,
+        // not a cited sentence. Fall back to detail only when no methods exist.
+        List<GuideStep.TrainMethod> methods = step.methods != null ? step.methods : java.util.Collections.emptyList();
+        if (!methods.isEmpty())
+        {
+            appendMethodPicker(sb, methods);
+        }
+        else if (step.detail != null && !step.detail.isEmpty())
         {
             sb.append("<p class=\"detail-text\">").append(esc(step.detail)).append("</p>\n");
         }
@@ -698,20 +706,7 @@ final class WebFragments
         {
             sb.append("<p class=\"lib-desc ref-notes\">").append(esc(truncate(e.notes, 220))).append("</p>\n");
         }
-        List<GuideRef> refs = Dedupe.refs(e.refs());
-        if (!refs.isEmpty())
-        {
-            sb.append("<div class=\"ref-chips\">\n");
-            for (GuideRef ref : refs)
-            {
-                if (ref.title == null) continue;
-                sb.append("<a class=\"ref-chip\" href=\"#\"")
-                  .append(" data-wiki-title=\"").append(esc(ref.title)).append("\"")
-                  .append(" data-wiki-url=\"").append(esc(ref.url != null ? ref.url : "")).append("\"")
-                  .append(">&#128214; ").append(esc(ref.title)).append("</a>\n");
-            }
-            sb.append("</div>\n");
-        }
+        appendRefChips(sb, Dedupe.refs(e.refs()));
         sb.append("</article>\n");
         return sb.toString();
     }
@@ -845,6 +840,93 @@ final class WebFragments
     private static String notesOrEmpty(ReferenceEntry e)
     {
         return e.notes != null ? e.notes : "";
+    }
+
+    /**
+     * Renders the 1:many training methods as a pick-one list — each option a
+     * card with its band, a meta line (location · xp/hr · members) and its own
+     * wiki breadcrumbs. Replaces the single sloppy cited detail line: the
+     * player chooses a method, every option is wiki-grounded. "??" values are
+     * shown verbatim, never guessed.
+     */
+    private void appendMethodPicker(StringBuilder sb, List<GuideStep.TrainMethod> methods)
+    {
+        sb.append("<h3>Training methods <span class=\"pick-hint\">— pick one</span></h3>\n");
+        sb.append("<ul class=\"train-methods\">\n");
+        for (GuideStep.TrainMethod m : methods)
+        {
+            if (m == null || m.method == null || m.method.isEmpty()) continue;
+            sb.append("<li class=\"train-method\">\n");
+            sb.append("<div class=\"tm-head\"><span class=\"tm-name\">").append(esc(m.method)).append("</span>");
+            if (m.level_band != null && !m.level_band.isEmpty())
+            {
+                sb.append(" <span class=\"tm-band\">lv ").append(esc(m.level_band)).append("</span>");
+            }
+            sb.append("</div>\n");
+            String meta = methodMeta(m);
+            if (!meta.isEmpty()) sb.append("<div class=\"tm-meta\">").append(meta).append("</div>\n");
+            String reqs = summarizeRefJson(m.reqs);
+            if (!reqs.isEmpty())
+            {
+                sb.append("<div class=\"tm-reqs\"><span class=\"ref-line-label\">reqs</span> ")
+                  .append(esc(reqs)).append("</div>\n");
+            }
+            appendRefChips(sb, Dedupe.refs(m.refs()));
+            sb.append("</li>\n");
+        }
+        sb.append("</ul>\n");
+    }
+
+    /** location · xp/hr · members chips for one training method. */
+    private static String methodMeta(GuideStep.TrainMethod m)
+    {
+        List<String> parts = new ArrayList<>();
+        if (m.location != null && !m.location.isEmpty())
+        {
+            parts.add("<span class=\"tm-loc\">" + esc(m.location) + "</span>");
+        }
+        String xp = methodXpHr(m.xp_hr);
+        if (!xp.isEmpty()) parts.add("<span class=\"tm-xp\">" + esc(xp) + "</span>");
+        String members = methodMembers(m.members);
+        if (!members.isEmpty()) parts.add("<span class=\"tm-mem\">" + esc(members) + "</span>");
+        return String.join(" <span class=\"tm-sep\">·</span> ", parts);
+    }
+
+    private static String methodXpHr(Object xpHr)
+    {
+        if (xpHr == null) return "";
+        if (xpHr instanceof Number)
+        {
+            long xp = ((Number) xpHr).longValue();
+            if (xp <= 0) return "";
+            return xp >= 1000 ? (xp / 1000) + "k xp/hr" : xp + " xp/hr";
+        }
+        String s = xpHr.toString().trim();
+        return s.isEmpty() ? "" : "xp/hr " + s; // "??"
+    }
+
+    private static String methodMembers(Object members)
+    {
+        if (members == null) return "";
+        if (members instanceof Boolean) return ((Boolean) members) ? "members" : "F2P";
+        String s = members.toString().trim();
+        return s.isEmpty() ? "" : "members " + s; // "??"
+    }
+
+    /** Shared wiki ref-chip render (step detail + method picker). */
+    private void appendRefChips(StringBuilder sb, List<GuideRef> refs)
+    {
+        if (refs.isEmpty()) return;
+        sb.append("<div class=\"ref-chips\">\n");
+        for (GuideRef ref : refs)
+        {
+            if (ref.title == null) continue;
+            sb.append("<a class=\"ref-chip\" href=\"#\"")
+              .append(" data-wiki-title=\"").append(esc(ref.title)).append("\"")
+              .append(" data-wiki-url=\"").append(esc(ref.url != null ? ref.url : "")).append("\"")
+              .append(">&#128214; ").append(esc(ref.title)).append("</a>\n");
+        }
+        sb.append("</div>\n");
     }
 
     private static String truncate(String s, int max)
