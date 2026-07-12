@@ -7315,6 +7315,30 @@
           "url": "https://oldschool.runescape.wiki/w/Man"
         }
       ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/64a57b/arrive.png",
+          "url": null,
+          "caption": "Edgeville, near the bank (train-thieving-20: pickpocket Men/Women 1\u219220)",
+          "state": {
+            "scenario": "train_thieving_edgeville",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/fccad0/observe.gif",
+          "url": null,
+          "caption": "Player beside the Man spawn cluster; pickpocket here to train Thieving",
+          "state": {
+            "scenario": "train_thieving_edgeville",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        }
+      ],
       "methods": [
         {
           "method": "Pickpocket Men/Women (Lumbridge or Edgeville)",
@@ -10122,6 +10146,30 @@
           "slug": "Cook's_Assistant.s9",
           "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/4f492e/arrive.png",
+          "url": null,
+          "caption": "Lumbridge Castle kitchen: the Cook (quest-cooks-assistant start)",
+          "state": {
+            "scenario": "quest_cooks_assistant",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/8c5aea/observe.gif",
+          "url": null,
+          "caption": "Player beside the Cook; he needs ingredients for the Duke's birthday cake",
+          "state": {
+            "scenario": "quest_cooks_assistant",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        }
       ]
     },
     {
@@ -10645,6 +10693,30 @@
           "title": "Druidic Ritual",
           "slug": "Druidic_Ritual.s6",
           "url": "https://oldschool.runescape.wiki/w/Druidic_Ritual"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/f3edbf/arrive.png",
+          "url": null,
+          "caption": "Druid's stone circle, north of Taverley: Kaqemeex (quest-druidic-ritual start)",
+          "state": {
+            "scenario": "quest_druidic_ritual",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/bfb0be/observe.gif",
+          "url": null,
+          "caption": "Player beside Kaqemeex; talk to him to unlock Herblore training",
+          "state": {
+            "scenario": "quest_druidic_ritual",
+            "rev": 236,
+            "oracle": "PASS"
+          }
         }
       ]
     },

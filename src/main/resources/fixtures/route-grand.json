@@ -3699,6 +3699,30 @@
           "url": "https://oldschool.runescape.wiki/w/Druidic_Ritual"
         }
       ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/f3edbf/arrive.png",
+          "url": null,
+          "caption": "Druid's stone circle, north of Taverley: Kaqemeex (quest-druidic-ritual start)",
+          "state": {
+            "scenario": "quest_druidic_ritual",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/bfb0be/observe.gif",
+          "url": null,
+          "caption": "Player beside Kaqemeex; talk to him to unlock Herblore training",
+          "state": {
+            "scenario": "quest_druidic_ritual",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        }
+      ],
       "subChecklist": {
         "atoms": [
           {
@@ -4098,6 +4122,30 @@
           "title": "Cook's Assistant",
           "slug": "Cook's_Assistant.s9",
           "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/4f492e/arrive.png",
+          "url": null,
+          "caption": "Lumbridge Castle kitchen: the Cook (quest-cooks-assistant start)",
+          "state": {
+            "scenario": "quest_cooks_assistant",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/8c5aea/observe.gif",
+          "url": null,
+          "caption": "Player beside the Cook; he needs ingredients for the Duke's birthday cake",
+          "state": {
+            "scenario": "quest_cooks_assistant",
+            "rev": 236,
+            "oracle": "PASS"
+          }
         }
       ],
       "subChecklist": {
@@ -5320,6 +5368,30 @@
         {
           "title": "The Restless Ghost/Quick guide",
           "url": "https://oldschool.runescape.wiki/w/The_Restless_Ghost/Quick_guide"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/e5162b/arrive.png",
+          "url": null,
+          "caption": "Lumbridge church: Father Aereck (quest-the-restless-ghost start)",
+          "state": {
+            "scenario": "quest_restless_ghost",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/2cd208/observe.gif",
+          "url": null,
+          "caption": "Player beside Father Aereck; ask him about the haunted graveyard to start the quest",
+          "state": {
+            "scenario": "quest_restless_ghost",
+            "rev": 236,
+            "oracle": "PASS"
+          }
         }
       ],
       "hints": [
