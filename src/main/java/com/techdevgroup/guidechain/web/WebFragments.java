@@ -2,6 +2,7 @@ package com.techdevgroup.guidechain.web;
 
 import com.techdevgroup.guidechain.data.ChainEntry;
 import com.techdevgroup.guidechain.data.CompletionCondition;
+import com.techdevgroup.guidechain.data.GuideHint;
 import com.techdevgroup.guidechain.data.GuideStep;
 import com.techdevgroup.guidechain.data.ConditionType;
 import com.techdevgroup.guidechain.data.HighlightTarget;
@@ -126,7 +127,7 @@ final class WebFragments
         }
 
         sb.append("<ol class=\"plan-list\">\n");
-        String lastGuide = null, lastPhase = null;
+        String lastGuide = null, lastPhase = null, lastCheckpoint = null;
         for (PlanRow r : rows)
         {
             if (!r.guideId.equals(lastGuide))
@@ -134,12 +135,27 @@ final class WebFragments
                 sb.append("<li class=\"guide-divider\">").append(esc(r.guideName)).append("</li>\n");
                 lastGuide = r.guideId;
                 lastPhase = null;
+                lastCheckpoint = null;
             }
             String phase = r.step.phase;
             if (phase != null && !phase.equals(lastPhase))
             {
                 sb.append("<li class=\"phase-divider\">").append(esc(phase)).append("</li>\n");
                 lastPhase = phase;
+                lastCheckpoint = null;  // reset checkpoint context on phase boundary
+            }
+            // Checkpoint sub-header: checkpoint header records emit a .checkpoint-divider
+            // list item and are NOT rendered as step-rows (they carry the instruction inline).
+            String cp = r.step.checkpoint;
+            if (cp != null && !cp.equals(lastCheckpoint))
+            {
+                sb.append("<li class=\"checkpoint-divider\">").append(esc(cp)).append("</li>\n");
+                lastCheckpoint = cp;
+            }
+            // Checkpoint header records (id prefix "chkpt-") are rendered as dividers only.
+            if (r.step.id != null && r.step.id.startsWith("chkpt-"))
+            {
+                continue;  // divider already emitted above; skip the step-row
             }
             sb.append(stepRow(r, true));
         }
@@ -183,7 +199,22 @@ final class WebFragments
         {
             sb.append("<span class=\"cond-badge\">").append(esc(conditionSummary(c))).append("</span>\n");
         }
-        sb.append("</div>\n</div>\n");
+        sb.append("</div>\n");
+        // Hint chips (GRANULARITY §4): rendered below conditions; advisory only.
+        if (!r.step.hints().isEmpty())
+        {
+            sb.append("<div class=\"hint-chips\">\n");
+            for (GuideHint h : r.step.hints())
+            {
+                sb.append("<span class=\"hint-chip\" title=\"")
+                  .append(esc(h.note != null ? h.note : ""))
+                  .append("\">")
+                  .append(esc(hintChipLabel(h)))
+                  .append("</span>\n");
+            }
+            sb.append("</div>\n");
+        }
+        sb.append("</div>\n");
         sb.append("<div class=\"step-actions\">\n");
         sb.append(actionButton(r.key, "done", "Done"));
         sb.append(actionButton(r.key, "skip", "Skip"));
@@ -509,6 +540,15 @@ final class WebFragments
             case TILE:   return "tile (" + h.worldX + ", " + h.worldY + ", " + h.plane + ")";
             default:     return h.type.name();
         }
+    }
+
+    /** Short label for a hint chip: type + optional value. */
+    private static String hintChipLabel(GuideHint h)
+    {
+        if (h == null || h.type == null) return "hint";
+        String label = h.type;
+        if (h.value != null && !h.value.isEmpty()) label += ": " + h.value;
+        return label;
     }
 
     private static String statusIcon(PlanRow.Status s)

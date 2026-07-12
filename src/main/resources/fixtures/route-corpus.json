@@ -1,101 +1,11 @@
 {
   "id": "route-corpus",
-  "name": "OSRS Corpus \u2014 Milestone Route",
-  "description": "Prerequisite route for OSRS Corpus, segmented into milestone episodes by the progression-router planner. Each phase closes on a quest/unlock capstone rather than an arbitrary skill number.",
+  "name": "Full Corpus Appendix \u2014 Milestone Route",
+  "description": "Prerequisite route for Full Corpus Appendix, segmented into milestone episodes by the progression-router planner. Each phase closes on a quest/unlock capstone rather than an arbitrary skill number.",
   "steps": [
     {
-      "id": "quest-priest-in-peril",
-      "phase": "Toward Ardougne Easy Diary",
-      "instruction": "Complete Priest in Peril",
-      "detail": "Unlocks Morytania region access. Required before Barrows and Slayer tasks there.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3218,
-          "y": 3415,
-          "plane": 0,
-          "label": "Varrock rooftop course"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "train-cooking-20",
-      "phase": "Toward Ardougne Easy Diary",
-      "instruction": "Train Cooking to 20",
-      "detail": "Cook shrimps and anchovies. Use range to avoid burning.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 397
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3259,
-          "y": 3266,
-          "plane": 0,
-          "label": "Lumbridge cows"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "COOKING",
-          "level": 20
-        }
-      ]
-    },
-    {
-      "id": "train-fishing-20",
-      "phase": "Toward Ardougne Easy Diary",
-      "instruction": "Train Fishing to 20",
-      "detail": "Shrimps and anchovies at Draynor or Lumbridge Swamp.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3088,
-          "y": 3255,
-          "plane": 0,
-          "label": "Draynor Village"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "FISHING",
-          "level": 20
-        }
-      ]
-    },
-    {
-      "id": "steer-ardougne-easy-diary",
-      "phase": "Toward Ardougne Easy Diary",
-      "steerKind": "progress_metric",
-      "instruction": "\u2605 Ardougne Easy Diary",
-      "detail": "Cloak 1 teleport to Ardougne; Kandarin efficiency stacks with Fairy Rings + Graceful.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "FISHING",
-          "level": 15
-        },
-        {
-          "type": "SKILL",
-          "skill": "COOKING",
-          "level": 15
-        }
-      ]
-    },
-    {
       "id": "train-attack-10",
-      "phase": "Toward Monkey Madness I",
+      "phase": "Region: Misthalin",
       "instruction": "Train Attack to 10",
       "detail": "Chickens in Lumbridge. No food needed, fast kills.",
       "highlights": [
@@ -121,35 +31,8 @@
       ]
     },
     {
-      "id": "train-defence-10",
-      "phase": "Toward Monkey Madness I",
-      "instruction": "Train Defence to 10",
-      "detail": "Chickens or crabs. Passive Defence XP from combat.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 1173
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3235,
-          "y": 3295,
-          "plane": 0,
-          "label": "Lumbridge chickens"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "DEFENCE",
-          "level": 10
-        }
-      ]
-    },
-    {
       "id": "train-attack-30",
-      "phase": "Toward Monkey Madness I",
+      "phase": "Region: Misthalin",
       "instruction": "Train Attack to 30",
       "detail": "Cows east of Lumbridge or goblins. Drop bones for Prayer XP.",
       "highlights": [
@@ -175,35 +58,8 @@
       ]
     },
     {
-      "id": "train-defence-30",
-      "phase": "Toward Monkey Madness I",
-      "instruction": "Train Defence to 30",
-      "detail": "Goblins or cows.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 397
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3259,
-          "y": 3266,
-          "plane": 0,
-          "label": "Lumbridge cows"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "DEFENCE",
-          "level": 30
-        }
-      ]
-    },
-    {
       "id": "train-attack-40",
-      "phase": "Toward Monkey Madness I",
+      "phase": "Region: Misthalin",
       "instruction": "Train Attack to 40",
       "detail": "Barbarians south of Edgeville. Equips steel weapons.",
       "highlights": [
@@ -229,289 +85,45 @@
       ]
     },
     {
-      "id": "train-defence-40",
-      "phase": "Toward Monkey Madness I",
-      "instruction": "Train Defence to 40",
-      "detail": "Barbarians or Stronghold. Unlocks rune armour.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 3103
-        }
-      ],
+      "id": "train-attack-60",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Attack to 60",
+      "detail": "Hill Giants or Flesh Crawlers (Stronghold). Equips dragon weapons.",
+      "highlights": [],
       "mapMarkers": [
         {
-          "x": 3081,
-          "y": 3420,
+          "x": 3090,
+          "y": 3494,
           "plane": 0,
-          "label": "Barbarian Village"
+          "label": "Edgeville"
         }
       ],
       "completionConditions": [
         {
           "type": "SKILL",
-          "skill": "DEFENCE",
-          "level": 40
+          "skill": "ATTACK",
+          "level": 60
         }
       ]
     },
     {
-      "id": "synth-attack-43-4",
-      "phase": "Toward Monkey Madness I",
-      "instruction": "Train Attack to 43",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "id": "train-attack-70",
+      "phase": "Region: Global",
+      "instruction": "Train Attack to 70",
+      "detail": "Moss Giants, Blue Dragons, or Slayer tasks. Equips whip.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
         {
           "type": "SKILL",
           "skill": "ATTACK",
-          "level": 43
-        }
-      ]
-    },
-    {
-      "id": "synth-defence-43-5",
-      "phase": "Toward Monkey Madness I",
-      "instruction": "Train Defence to 43",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "DEFENCE",
-          "level": 43
-        }
-      ]
-    },
-    {
-      "id": "milestone-quest-mm",
-      "phase": "Toward Monkey Madness I",
-      "instruction": "\u2605 Monkey Madness I",
-      "detail": "Monkey Madness I \u2014 unlocks the dragon scimitar and a major combat step up.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "ATTACK",
-          "level": 43
-        },
-        {
-          "type": "SKILL",
-          "skill": "DEFENCE",
-          "level": 43
-        }
-      ]
-    },
-    {
-      "id": "synth-slayer-10-3",
-      "phase": "Toward Desert Treasure",
-      "instruction": "Train Slayer to 10",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "SLAYER",
-          "level": 10
-        }
-      ]
-    },
-    {
-      "id": "train-magic-25",
-      "phase": "Toward Desert Treasure",
-      "instruction": "Train Magic to 25",
-      "detail": "Air Bolt and low alchemy. Unlocks Camelot Teleport.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 25
-        }
-      ]
-    },
-    {
-      "id": "train-firemaking-15",
-      "phase": "Toward Desert Treasure",
-      "instruction": "Train Firemaking to 15",
-      "detail": "Normal logs from any tree. Light fires in a row.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "FIREMAKING",
-          "level": 15
-        }
-      ]
-    },
-    {
-      "id": "train-thieving-20",
-      "phase": "Toward Desert Treasure",
-      "instruction": "Train Thieving to 20",
-      "detail": "Pickpocket men and women in Lumbridge or Edgeville.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 397
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3259,
-          "y": 3266,
-          "plane": 0,
-          "label": "Lumbridge cows"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "THIEVING",
-          "level": 20
-        }
-      ]
-    },
-    {
-      "id": "train-firemaking-30",
-      "phase": "Toward Desert Treasure",
-      "instruction": "Train Firemaking to 30",
-      "detail": "Oak logs from GE or Draynor oaks.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "FIREMAKING",
-          "level": 30
-        }
-      ]
-    },
-    {
-      "id": "train-thieving-38",
-      "phase": "Toward Desert Treasure",
-      "instruction": "Train Thieving to 38",
-      "detail": "Pickpocket HAM members in Lumbridge. Gems and clue scrolls.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 2540
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3149,
-          "y": 9624,
-          "plane": 0,
-          "label": "H.A.M. hideout"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "THIEVING",
-          "level": 38
-        }
-      ]
-    },
-    {
-      "id": "train-magic-43",
-      "phase": "Toward Desert Treasure",
-      "instruction": "Train Magic to 43",
-      "detail": "Superheat or Curse spells. Unlocks Superheat for Smithing XP.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 43
-        }
-      ]
-    },
-    {
-      "id": "train-firemaking-50",
-      "phase": "Toward Desert Treasure",
-      "instruction": "Train Firemaking to 50",
-      "detail": "Maple logs \u2014 good balance of XP/cost. Required for Desert Treasure.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "FIREMAKING",
-          "level": 50
-        }
-      ]
-    },
-    {
-      "id": "synth-thieving-53-2",
-      "phase": "Toward Desert Treasure",
-      "instruction": "Train Thieving to 53",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "THIEVING",
-          "level": 53
-        }
-      ]
-    },
-    {
-      "id": "synth-magic-50-1",
-      "phase": "Toward Desert Treasure",
-      "instruction": "Train Magic to 50",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 50
-        }
-      ]
-    },
-    {
-      "id": "milestone-quest-dt",
-      "phase": "Toward Desert Treasure",
-      "instruction": "\u2605 Desert Treasure",
-      "detail": "Desert Treasure \u2014 unlocks the Ancient Magicks spellbook.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 50
-        },
-        {
-          "type": "SKILL",
-          "skill": "THIEVING",
-          "level": 53
-        },
-        {
-          "type": "SKILL",
-          "skill": "SLAYER",
-          "level": 10
-        },
-        {
-          "type": "SKILL",
-          "skill": "FIREMAKING",
-          "level": 50
+          "level": 70
         }
       ]
     },
     {
       "id": "train-strength-10",
-      "phase": "Toward God Wars Dungeon",
+      "phase": "Region: Misthalin",
       "instruction": "Train Strength to 10",
       "detail": "Chickens in Lumbridge.",
       "highlights": [
@@ -537,23 +149,8 @@
       ]
     },
     {
-      "id": "train-prayer-22",
-      "phase": "Toward God Wars Dungeon",
-      "instruction": "Train Prayer to 22",
-      "detail": "Bury regular bones. Unlocks Protect Item prayer.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "PRAYER",
-          "level": 22
-        }
-      ]
-    },
-    {
       "id": "train-strength-30",
-      "phase": "Toward God Wars Dungeon",
+      "phase": "Region: Misthalin",
       "instruction": "Train Strength to 30",
       "detail": "Cows or goblins near Lumbridge.",
       "highlights": [
@@ -579,23 +176,8 @@
       ]
     },
     {
-      "id": "train-prayer-43",
-      "phase": "Toward God Wars Dungeon",
-      "instruction": "Train Prayer to 43",
-      "detail": "Bury big bones or use guilded altar. Unlocks Protect from Melee.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "PRAYER",
-          "level": 43
-        }
-      ]
-    },
-    {
       "id": "train-strength-40",
-      "phase": "Toward God Wars Dungeon",
+      "phase": "Region: Misthalin",
       "instruction": "Train Strength to 40",
       "detail": "Barbarians. Significant damage boost.",
       "highlights": [
@@ -622,7 +204,7 @@
     },
     {
       "id": "train-strength-60",
-      "phase": "Toward God Wars Dungeon",
+      "phase": "Region: Misthalin",
       "instruction": "Train Strength to 60",
       "detail": "Hill Giants or Flesh Crawlers. Unlocks rune scimitar use.",
       "highlights": [],
@@ -643,311 +225,25 @@
       ]
     },
     {
-      "id": "steer-graceful",
-      "phase": "Toward God Wars Dungeon",
-      "steerKind": "qol_gear",
-      "instruction": "\u2605 Graceful outfit",
-      "detail": "~67% run-energy retention at zero weight; compresses all future travel.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "AGILITY",
-          "level": 60
-        }
-      ]
-    },
-    {
-      "id": "milestone-gwd",
-      "phase": "Toward God Wars Dungeon",
-      "instruction": "\u2605 God Wars Dungeon",
-      "detail": "God Wars Dungeon \u2014 access to the four god bosses and their unique drops.",
+      "id": "train-strength-70",
+      "phase": "Region: Global",
+      "instruction": "Train Strength to 70",
+      "detail": "Moss Giants or Slayer. Unlocks barrows equipment access stat-wise.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
         {
           "type": "SKILL",
           "skill": "STRENGTH",
-          "level": 60
-        },
-        {
-          "type": "SKILL",
-          "skill": "PRAYER",
-          "level": 43
+          "level": 70
         }
       ]
     },
     {
-      "id": "bootstrap-gather-guam_weed-prayer-pot-supply",
-      "phase": "Supply: Prayer Potion Supply Chain",
-      "instruction": "Gather guam weed (bootstrap \u2014 one-time)",
-      "detail": "One-time low-tier gather before the prayer-pot-supply supply loop is established. Use drops (Hill Giants, slayer tasks) or NPC spawns. No rates known \u2014 \"??\" until measured.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "source-pineapples-charter",
-      "phase": "Supply: Prayer Potion Supply Chain",
-      "instruction": "Buy pineapples from Catherby charter ship",
-      "detail": "Purchase pineapples from the charter ship NPC at Catherby docks. Non-GE source. ~100 per visit depending on stock.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 2834,
-          "y": 3445,
-          "plane": 0,
-          "label": "Catherby"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "setup-ultracompost",
-      "phase": "Supply: Prayer Potion Supply Chain",
-      "instruction": "Produce ultracompost (pineapples + volcanic ash)",
-      "detail": "Fill compost bins with 30 pineapples then add 15 volcanic ash per bin to produce ultracompost. Ahead-of-time stockpile before herb runs.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "gather-volcanic-ash",
-      "phase": "Supply: Prayer Potion Supply Chain",
-      "instruction": "Mine volcanic ash at Fossil Island",
-      "detail": "Mine volcanic ash from the ash piles on Fossil Island. Used to make ultracompost. Loop during farm-run downtime.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "farm-ranarr-patch",
-      "phase": "Supply: Prayer Potion Supply Chain",
-      "instruction": "Farm ranarr herb patches",
-      "detail": "Plant ranarr seeds in herb patches with ultracompost; harvest ranarr weed. ~6.5 ranarr per run at 32 Farming with ultracompost. Loop every ~80 minutes.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "farm-herb-patch-guam",
-      "phase": "Supply: Prayer Potion Supply Chain",
-      "instruction": "Farm guam herb patches",
-      "detail": "Plant guam seeds in herb patches; harvest guam weed. Provides early herblore training materials before ranarr is available. Loop every ~80 minutes.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "gather-snape-grass",
-      "phase": "Supply: Prayer Potion Supply Chain",
-      "instruction": "Gather snape grass at Waterbirth Island",
-      "detail": "Pick snape grass spawns on Waterbirth Island. No quest gate. JIT batch just before a brewing session.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "cook-monkfish",
-      "phase": "Supply: Monkfish Food Supply Chain",
-      "instruction": "Cook monkfish (Cooking 62)",
-      "detail": "Cook raw monkfish on a range. Stop burning at 92 (68 with cooking gauntlets). Terminal step of the monkfish food supply chain.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 2834,
-          "y": 3445,
-          "plane": 0,
-          "label": "Catherby"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "gather-monkfish",
-      "phase": "Supply: Monkfish Food Supply Chain",
-      "instruction": "Fish monkfish at Piscatoris",
-      "detail": "Fish monkfish at the Piscatoris Fishing Colony. Requires Swan Song and Fishing 62. Cook for Barrows food supply.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 2344,
-          "y": 3667,
-          "plane": 0,
-          "label": "Piscatoris Hunter area"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "bg-farm-allotment-setup",
-      "phase": "Toward Barrows runs",
-      "slotType": "background",
-      "cadenceMinutes": null,
-      "lifecycleState": "idle->active",
-      "instruction": "Set up: Check allotment patches",
-      "detail": "Plant potato, onion, or cabbage allotments; collect produce. Check at natural banking breaks \u2014 do not interrupt active training.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "train-woodcutting-15",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Woodcutting to 15",
-      "detail": "Regular trees near Lumbridge or Varrock. Use iron axe.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 397
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3259,
-          "y": 3266,
-          "plane": 0,
-          "label": "Lumbridge cows"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "WOODCUTTING",
-          "level": 15
-        }
-      ]
-    },
-    {
-      "id": "train-crafting-20",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Crafting to 20",
-      "detail": "Leather gloves and boots. Buy hides from GE.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "CRAFTING",
-          "level": 20
-        }
-      ]
-    },
-    {
-      "id": "train-smithing-15",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Smithing to 15",
-      "detail": "Bronze bars at Lumbridge furnace. Smelt then smith.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 397
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3259,
-          "y": 3266,
-          "plane": 0,
-          "label": "Lumbridge cows"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "SMITHING",
-          "level": 15
-        }
-      ]
-    },
-    {
-      "id": "train-mining-15",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Mining to 15",
-      "detail": "Copper and tin in Lumbridge mines.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 397
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3259,
-          "y": 3266,
-          "plane": 0,
-          "label": "Lumbridge cows"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "MINING",
-          "level": 15
-        }
-      ]
-    },
-    {
-      "id": "train-herblore-10",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Herblore to 10",
-      "detail": "Clean grimy guam leaves. Requires Druidic Ritual quest.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "HERBLORE",
-          "level": 10
-        }
-      ]
-    },
-    {
-      "id": "train-farming-17",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Farming to 17",
-      "detail": "Plant potato, onion, and cabbage allotments. Use compost.",
+      "id": "train-defence-10",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Defence to 10",
+      "detail": "Chickens or crabs. Passive Defence XP from combat.",
       "highlights": [
         {
           "type": "NPC",
@@ -965,105 +261,43 @@
       "completionConditions": [
         {
           "type": "SKILL",
-          "skill": "FARMING",
-          "level": 17
+          "skill": "DEFENCE",
+          "level": 10
         }
       ]
     },
     {
-      "id": "train-herblore-38",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Herblore to 38",
-      "detail": "Make attack, strength, or stat-restore potions. Buy secondaries from GE.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
+      "id": "train-defence-30",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Defence to 30",
+      "detail": "Goblins or cows.",
+      "highlights": [
         {
-          "type": "SKILL",
-          "skill": "HERBLORE",
-          "level": 38
+          "type": "NPC",
+          "id": 397
         }
-      ]
-    },
-    {
-      "id": "train-woodcutting-30",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Woodcutting to 30",
-      "detail": "Oak trees. Bank in Draynor or drop logs.",
-      "highlights": [],
+      ],
       "mapMarkers": [
         {
-          "x": 3088,
-          "y": 3255,
+          "x": 3259,
+          "y": 3266,
           "plane": 0,
-          "label": "Draynor Village"
+          "label": "Lumbridge cows"
         }
       ],
       "completionConditions": [
         {
           "type": "SKILL",
-          "skill": "WOODCUTTING",
+          "skill": "DEFENCE",
           "level": 30
         }
       ]
     },
     {
-      "id": "train-smithing-30",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Smithing to 30",
-      "detail": "Iron bars. Buy from GE or mine in Al-Kharid mines.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3288,
-          "y": 3190,
-          "plane": 0,
-          "label": "Al Kharid"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "SMITHING",
-          "level": 30
-        }
-      ]
-    },
-    {
-      "id": "synth-mining-22-8",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Mining to 22",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "MINING",
-          "level": 22
-        }
-      ]
-    },
-    {
-      "id": "synth-farming-32-7",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Farming to 32",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "FARMING",
-          "level": 32
-        }
-      ]
-    },
-    {
-      "id": "train-cooking-40",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Cooking to 40",
-      "detail": "Cook trout and salmon from Barbarian Village fishing spots.",
+      "id": "train-defence-40",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Defence to 40",
+      "detail": "Barbarians or Stronghold. Unlocks rune armour.",
       "highlights": [
         {
           "type": "NPC",
@@ -1081,123 +315,14 @@
       "completionConditions": [
         {
           "type": "SKILL",
-          "skill": "COOKING",
+          "skill": "DEFENCE",
           "level": 40
-        }
-      ]
-    },
-    {
-      "id": "train-fishing-40",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Fishing to 40",
-      "detail": "Trout and salmon at Barbarian Village. Bank nearby.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 3103
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3081,
-          "y": 3420,
-          "plane": 0,
-          "label": "Barbarian Village"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "FISHING",
-          "level": 40
-        }
-      ]
-    },
-    {
-      "id": "train-crafting-40",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Crafting to 40",
-      "detail": "Gold amulets (u) or sapphire rings for decent XP.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "CRAFTING",
-          "level": 40
-        }
-      ]
-    },
-    {
-      "id": "train-smithing-40",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Smithing to 40",
-      "detail": "Steel bars. Consider Superheat for simultaneous Magic XP.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "SMITHING",
-          "level": 40
-        }
-      ]
-    },
-    {
-      "id": "synth-woodcutting-36-6",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Woodcutting to 36",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "WOODCUTTING",
-          "level": 36
-        }
-      ]
-    },
-    {
-      "id": "synth-herblore-52-9",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Herblore to 52",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "HERBLORE",
-          "level": 52
-        }
-      ]
-    },
-    {
-      "id": "train-attack-60",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Attack to 60",
-      "detail": "Hill Giants or Flesh Crawlers (Stronghold). Equips dragon weapons.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3090,
-          "y": 3494,
-          "plane": 0,
-          "label": "Edgeville"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "ATTACK",
-          "level": 60
         }
       ]
     },
     {
       "id": "train-defence-60",
-      "phase": "Toward Barrows runs",
+      "phase": "Region: Global",
       "instruction": "Train Defence to 60",
       "detail": "Flesh Crawlers or Slayer tasks. Unlocks dragon and barrows armour.",
       "highlights": [],
@@ -1211,200 +336,80 @@
       ]
     },
     {
-      "id": "train-cooking-58",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Cooking to 58",
-      "detail": "Cook lobsters. Stop burning at 74 with cooking gauntlets.",
+      "id": "train-defence-70",
+      "phase": "Region: Global",
+      "instruction": "Train Defence to 70",
+      "detail": "Slayer or NMZ.",
       "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "train-defence-80",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Defence to 80",
+      "detail": "NMZ AFK.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1120
+        }
+      ],
       "mapMarkers": [
         {
-          "x": 2834,
-          "y": 3445,
+          "x": 2608,
+          "y": 3116,
           "plane": 0,
-          "label": "Catherby"
+          "label": "Nightmare Zone (Yanille)"
         }
       ],
       "completionConditions": [
         {
           "type": "SKILL",
-          "skill": "COOKING",
-          "level": 58
-        }
-      ]
-    },
-    {
-      "id": "train-fishing-58",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Fishing to 58",
-      "detail": "Lobsters at Karamja or Catherby. Stocking food for combat.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "FISHING",
-          "level": 58
-        }
-      ]
-    },
-    {
-      "id": "synth-smithing-45-13",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Smithing to 45",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "SMITHING",
-          "level": 45
-        }
-      ]
-    },
-    {
-      "id": "train-magic-55",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Magic to 55",
-      "detail": "High Alchemy on stackable items. Core money maker.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 55
-        }
-      ]
-    },
-    {
-      "id": "synth-magic-66-10",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Magic to 66",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 66
-        }
-      ]
-    },
-    {
-      "id": "synth-cooking-62-11",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Cooking to 62",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "COOKING",
-          "level": 62
-        }
-      ]
-    },
-    {
-      "id": "synth-fishing-62-12",
-      "phase": "Toward Barrows runs",
-      "instruction": "Train Fishing to 62",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "FISHING",
-          "level": 62
-        }
-      ]
-    },
-    {
-      "id": "milestone-barrows",
-      "phase": "Toward Barrows runs",
-      "instruction": "\u2605 Barrows runs",
-      "detail": "Barrows \u2014 a repeatable brothers run for Barrows gear and steady mid-game money.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "ATTACK",
-          "level": 60
-        },
-        {
-          "type": "SKILL",
-          "skill": "STRENGTH",
-          "level": 60
-        },
-        {
-          "type": "SKILL",
           "skill": "DEFENCE",
-          "level": 60
-        },
+          "level": 80
+        }
+      ]
+    },
+    {
+      "id": "train-hitpoints-20",
+      "phase": "Region: Global",
+      "instruction": "Hitpoints 1\u219220 (passive)",
+      "detail": "Hitpoints trains passively during combat. 1.33 XP per damage dealt.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
         {
           "type": "SKILL",
-          "skill": "PRAYER",
-          "level": 43
-        },
+          "skill": "HITPOINTS",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "id": "train-hitpoints-50",
+      "phase": "Region: Global",
+      "instruction": "Hitpoints 20\u219250 (passive)",
+      "detail": "Accumulates during all combat training milestones.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
         {
           "type": "SKILL",
-          "skill": "CRAFTING",
-          "level": 40
-        },
-        {
-          "type": "SKILL",
-          "skill": "WOODCUTTING",
-          "level": 36
-        },
-        {
-          "type": "SKILL",
-          "skill": "FARMING",
-          "level": 32
-        },
-        {
-          "type": "SKILL",
-          "skill": "MINING",
-          "level": 22
-        },
-        {
-          "type": "SKILL",
-          "skill": "HERBLORE",
-          "level": 52
-        },
-        {
-          "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 66
-        },
-        {
-          "type": "SKILL",
-          "skill": "COOKING",
-          "level": 62
-        },
-        {
-          "type": "SKILL",
-          "skill": "FISHING",
-          "level": 62
-        },
-        {
-          "type": "SKILL",
-          "skill": "FIREMAKING",
-          "level": 42
-        },
-        {
-          "type": "SKILL",
-          "skill": "SMITHING",
-          "level": 45
+          "skill": "HITPOINTS",
+          "level": 50
         }
       ]
     },
     {
       "id": "train-ranged-30",
-      "phase": "Toward Chambers of Xeric",
+      "phase": "Region: Misthalin",
       "instruction": "Train Ranged to 30",
       "detail": "Chickens and cows with shortbow. Cheap feathered arrows.",
       "highlights": [
@@ -1431,7 +436,7 @@
     },
     {
       "id": "train-ranged-40",
-      "phase": "Toward Chambers of Xeric",
+      "phase": "Region: Global",
       "instruction": "Train Ranged to 40",
       "detail": "Ogresses or Experiments. Equips green dragonhide.",
       "highlights": [],
@@ -1446,7 +451,7 @@
     },
     {
       "id": "train-ranged-55",
-      "phase": "Toward Chambers of Xeric",
+      "phase": "Region: Global",
       "instruction": "Train Ranged to 55",
       "detail": "Seagulls at Port Sarim or Chinchompas. Equips maple shortbow.",
       "highlights": [],
@@ -1460,23 +465,8 @@
       ]
     },
     {
-      "id": "train-prayer-52",
-      "phase": "Toward Chambers of Xeric",
-      "instruction": "Train Prayer to 52",
-      "detail": "Dragon bones on guilded altar. Unlocks Protect from Missiles.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "PRAYER",
-          "level": 52
-        }
-      ]
-    },
-    {
       "id": "train-ranged-70",
-      "phase": "Toward Chambers of Xeric",
+      "phase": "Region: Global",
       "instruction": "Train Ranged to 70",
       "detail": "Cannon tasks for fast Ranged XP. Unlocks black dragonhide.",
       "highlights": [],
@@ -1490,143 +480,80 @@
       ]
     },
     {
-      "id": "train-magic-70",
-      "phase": "Toward Chambers of Xeric",
-      "instruction": "Train Magic to 70",
-      "detail": "Alching or Bursting at Crabs. Unlocks Ice Barrage prerequisite path.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
+      "id": "train-ranged-99",
+      "phase": "Region: Ape Atoll",
+      "instruction": "Train Ranged to 99",
+      "detail": "Chinchompas at Ape Atoll or MM2 tunnels for best XP rate.",
+      "highlights": [
         {
-          "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 70
+          "type": "NPC",
+          "id": 7118
         }
-      ]
-    },
-    {
-      "id": "train-attack-70",
-      "phase": "Toward Chambers of Xeric",
-      "instruction": "Train Attack to 70",
-      "detail": "Moss Giants, Blue Dragons, or Slayer tasks. Equips whip.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
+      ],
+      "mapMarkers": [
         {
-          "type": "SKILL",
-          "skill": "ATTACK",
-          "level": 70
+          "x": 2629,
+          "y": 9252,
+          "plane": 0,
+          "label": "Ape Atoll (Maniacal Monkeys)"
         }
-      ]
-    },
-    {
-      "id": "train-strength-70",
-      "phase": "Toward Chambers of Xeric",
-      "instruction": "Train Strength to 70",
-      "detail": "Moss Giants or Slayer. Unlocks barrows equipment access stat-wise.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "STRENGTH",
-          "level": 70
-        }
-      ]
-    },
-    {
-      "id": "train-defence-70",
-      "phase": "Toward Chambers of Xeric",
-      "instruction": "Train Defence to 70",
-      "detail": "Slayer or NMZ.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "DEFENCE",
-          "level": 70
-        }
-      ]
-    },
-    {
-      "id": "synth-attack-75-16",
-      "phase": "Toward Chambers of Xeric",
-      "instruction": "Train Attack to 75",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "ATTACK",
-          "level": 75
-        }
-      ]
-    },
-    {
-      "id": "synth-strength-75-17",
-      "phase": "Toward Chambers of Xeric",
-      "instruction": "Train Strength to 75",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "STRENGTH",
-          "level": 75
-        }
-      ]
-    },
-    {
-      "id": "synth-defence-75-18",
-      "phase": "Toward Chambers of Xeric",
-      "instruction": "Train Defence to 75",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "DEFENCE",
-          "level": 75
-        }
-      ]
-    },
-    {
-      "id": "synth-ranged-75-19",
-      "phase": "Toward Chambers of Xeric",
-      "instruction": "Train Ranged to 75",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
+      ],
       "completionConditions": [
         {
           "type": "SKILL",
           "skill": "RANGED",
-          "level": 75
+          "level": 99
         }
       ]
     },
     {
-      "id": "synth-magic-75-20",
-      "phase": "Toward Chambers of Xeric",
-      "instruction": "Train Magic to 75",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "id": "train-prayer-22",
+      "phase": "Region: Global",
+      "instruction": "Train Prayer to 22",
+      "detail": "Bury regular bones. Unlocks Protect Item prayer.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
         {
           "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 75
+          "skill": "PRAYER",
+          "level": 22
+        }
+      ]
+    },
+    {
+      "id": "train-prayer-43",
+      "phase": "Region: Global",
+      "instruction": "Train Prayer to 43",
+      "detail": "Bury big bones or use guilded altar. Unlocks Protect from Melee.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "PRAYER",
+          "level": 43
+        }
+      ]
+    },
+    {
+      "id": "train-prayer-52",
+      "phase": "Region: Global",
+      "instruction": "Train Prayer to 52",
+      "detail": "Dragon bones on guilded altar. Unlocks Protect from Missiles.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "PRAYER",
+          "level": 52
         }
       ]
     },
     {
       "id": "train-prayer-74",
-      "phase": "Toward Chambers of Xeric",
+      "phase": "Region: Global",
       "instruction": "Train Prayer to 74",
       "detail": "Wyvern/Dragon bones on altar. Unlocks Piety (requires quests).",
       "highlights": [],
@@ -1640,50 +567,1870 @@
       ]
     },
     {
-      "id": "milestone-raids-cox",
-      "phase": "Toward Chambers of Xeric",
-      "instruction": "\u2605 Chambers of Xeric",
-      "detail": "Chambers of Xeric \u2014 the first raid; endgame gear like the twisted bow.",
+      "id": "train-magic-25",
+      "phase": "Region: Global",
+      "instruction": "Train Magic to 25",
+      "detail": "Air Bolt and low alchemy. Unlocks Camelot Teleport.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
         {
           "type": "SKILL",
-          "skill": "ATTACK",
-          "level": 75
-        },
-        {
-          "type": "SKILL",
-          "skill": "STRENGTH",
-          "level": 75
-        },
-        {
-          "type": "SKILL",
-          "skill": "DEFENCE",
-          "level": 75
-        },
-        {
-          "type": "SKILL",
-          "skill": "RANGED",
-          "level": 75
-        },
+          "skill": "MAGIC",
+          "level": 25
+        }
+      ]
+    },
+    {
+      "id": "train-magic-43",
+      "phase": "Region: Global",
+      "instruction": "Train Magic to 43",
+      "detail": "Superheat or Curse spells. Unlocks Superheat for Smithing XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
         {
           "type": "SKILL",
           "skill": "MAGIC",
-          "level": 75
-        },
+          "level": 43
+        }
+      ]
+    },
+    {
+      "id": "train-magic-55",
+      "phase": "Region: Global",
+      "instruction": "Train Magic to 55",
+      "detail": "High Alchemy on stackable items. Core money maker.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
         {
           "type": "SKILL",
-          "skill": "PRAYER",
+          "skill": "MAGIC",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "id": "train-magic-70",
+      "phase": "Region: Global",
+      "instruction": "Train Magic to 70",
+      "detail": "Alching or Bursting at Crabs. Unlocks Ice Barrage prerequisite path.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "train-magic-94",
+      "phase": "Region: Global",
+      "instruction": "Train Magic to 94",
+      "detail": "Ancient Magicks Bursting/Barraging. Requires Desert Treasure.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 94
+        }
+      ]
+    },
+    {
+      "id": "train-cooking-20",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Cooking to 20",
+      "detail": "Cook shrimps and anchovies. Use range to avoid burning.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "COOKING",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "id": "train-cooking-40",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Cooking to 40",
+      "detail": "Cook trout and salmon from Barbarian Village fishing spots.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 3103
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3081,
+          "y": 3420,
+          "plane": 0,
+          "label": "Barbarian Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "COOKING",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "train-cooking-58",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Cooking to 58",
+      "detail": "Cook lobsters. Stop burning at 74 with cooking gauntlets.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2834,
+          "y": 3445,
+          "plane": 0,
+          "label": "Catherby"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "COOKING",
+          "level": 58
+        }
+      ]
+    },
+    {
+      "id": "train-cooking-74",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Cooking to 74",
+      "detail": "Swordfish or sharks. Use cooking gauntlets for faster success rate.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2834,
+          "y": 3445,
+          "plane": 0,
+          "label": "Catherby"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "COOKING",
           "level": 74
         }
       ]
     },
     {
-      "id": "quest-bone-voyage",
-      "phase": "Endgame & extras",
-      "instruction": "Complete Bone Voyage",
-      "detail": "Unlocks Fossil Island. Required to mine volcanic ash for ultracompost.",
+      "id": "train-cooking-99",
+      "phase": "Region: Karamja",
+      "instruction": "Train Cooking to 99",
+      "detail": "Karambwans (1-tick) or wines for fastest XP. Karambwans require Tai Bwo Wannai Trio.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "COOKING",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-woodcutting-15",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Woodcutting to 15",
+      "detail": "Regular trees near Lumbridge or Varrock. Use iron axe.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "WOODCUTTING",
+          "level": 15
+        }
+      ]
+    },
+    {
+      "id": "train-woodcutting-30",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Woodcutting to 30",
+      "detail": "Oak trees. Bank in Draynor or drop logs.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3088,
+          "y": 3255,
+          "plane": 0,
+          "label": "Draynor Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "WOODCUTTING",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "id": "train-woodcutting-45",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Woodcutting to 45",
+      "detail": "Willow trees at Draynor Village. Near bank for convenient banking.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3088,
+          "y": 3255,
+          "plane": 0,
+          "label": "Draynor Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "WOODCUTTING",
+          "level": 45
+        }
+      ]
+    },
+    {
+      "id": "train-woodcutting-60",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Woodcutting to 60",
+      "detail": "Maple trees at Seers' Village or Corsair Cove. Higher XP rate.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2729,
+          "y": 3496,
+          "plane": 0,
+          "label": "Seers' Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "WOODCUTTING",
+          "level": 60
+        }
+      ]
+    },
+    {
+      "id": "train-woodcutting-75",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Woodcutting to 75",
+      "detail": "Yew trees in Woodcutting Guild or Edgeville. Profitable logs.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3090,
+          "y": 3494,
+          "plane": 0,
+          "label": "Edgeville"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "WOODCUTTING",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "id": "train-woodcutting-99",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Woodcutting to 99",
+      "detail": "Redwood in Woodcutting Guild (requires 90) or Magic trees for profit.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 1594,
+          "y": 3489,
+          "plane": 0,
+          "label": "Woodcutting Guild"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "WOODCUTTING",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-fletching-20",
+      "phase": "Region: Global",
+      "instruction": "Train Fletching to 20",
+      "detail": "Whittle and fletch arrow shafts from logs.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FLETCHING",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "id": "train-fletching-40",
+      "phase": "Region: Global",
+      "instruction": "Train Fletching to 40",
+      "detail": "Fletch oak shortbows (u). Buy logs from GE.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FLETCHING",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "train-fletching-55",
+      "phase": "Region: Global",
+      "instruction": "Train Fletching to 55",
+      "detail": "Maple logs into maple longbows. String for additional XP and profit.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FLETCHING",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "id": "train-fletching-70",
+      "phase": "Region: Global",
+      "instruction": "Train Fletching to 70",
+      "detail": "Yew shortbows (u). Fast XP, low cost per action.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FLETCHING",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "train-fletching-99",
+      "phase": "Region: Global",
+      "instruction": "Train Fletching to 99",
+      "detail": "Dragon darts or Magic longbow strings for fast XP. Dragon darts require RFD subquest.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FLETCHING",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-fishing-20",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Fishing to 20",
+      "detail": "Shrimps and anchovies at Draynor or Lumbridge Swamp.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3088,
+          "y": 3255,
+          "plane": 0,
+          "label": "Draynor Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FISHING",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "id": "train-fishing-40",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Fishing to 40",
+      "detail": "Trout and salmon at Barbarian Village. Bank nearby.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 3103
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3081,
+          "y": 3420,
+          "plane": 0,
+          "label": "Barbarian Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FISHING",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "train-fishing-58",
+      "phase": "Region: Karamja",
+      "instruction": "Train Fishing to 58",
+      "detail": "Lobsters at Karamja or Catherby. Stocking food for combat.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FISHING",
+          "level": 58
+        }
+      ]
+    },
+    {
+      "id": "train-fishing-70",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Fishing to 70",
+      "detail": "Swordfish at Catherby or AFK Barb Fishing for simultaneous Str/Agil XP.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2834,
+          "y": 3445,
+          "plane": 0,
+          "label": "Catherby"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FISHING",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "train-firemaking-15",
+      "phase": "Region: Global",
+      "instruction": "Train Firemaking to 15",
+      "detail": "Normal logs from any tree. Light fires in a row.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FIREMAKING",
+          "level": 15
+        }
+      ]
+    },
+    {
+      "id": "train-firemaking-30",
+      "phase": "Region: Global",
+      "instruction": "Train Firemaking to 30",
+      "detail": "Oak logs from GE or Draynor oaks.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FIREMAKING",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "id": "train-firemaking-50",
+      "phase": "Region: Global",
+      "instruction": "Train Firemaking to 50",
+      "detail": "Maple logs \u2014 good balance of XP/cost. Required for Desert Treasure.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FIREMAKING",
+          "level": 50
+        }
+      ]
+    },
+    {
+      "id": "train-firemaking-75",
+      "phase": "Region: Zeah",
+      "instruction": "Train Firemaking to 75",
+      "detail": "Yew or magic logs. Unlocks Wintertodt minigame at 50 FM threshold.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 7374
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 1634,
+          "y": 3948,
+          "plane": 0,
+          "label": "Wintertodt"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FIREMAKING",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "id": "train-firemaking-99",
+      "phase": "Region: Zeah",
+      "instruction": "Train Firemaking to 99",
+      "detail": "Wintertodt \u2014 best XP/hr, fire-making supply crates, smithing/herblore/farming/fletching crate rewards.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 7374
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 1634,
+          "y": 3948,
+          "plane": 0,
+          "label": "Wintertodt"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FIREMAKING",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-crafting-20",
+      "phase": "Region: Global",
+      "instruction": "Train Crafting to 20",
+      "detail": "Leather gloves and boots. Buy hides from GE.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CRAFTING",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "id": "train-crafting-40",
+      "phase": "Region: Global",
+      "instruction": "Train Crafting to 40",
+      "detail": "Gold amulets (u) or sapphire rings for decent XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CRAFTING",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "train-crafting-54",
+      "phase": "Region: Global",
+      "instruction": "Train Crafting to 54",
+      "detail": "Green dragonhide bodies for fast XP. Buy from GE.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CRAFTING",
+          "level": 54
+        }
+      ]
+    },
+    {
+      "id": "train-crafting-70",
+      "phase": "Region: Global",
+      "instruction": "Train Crafting to 70",
+      "detail": "Blue/red dragonhide bodies for faster XP, higher material cost.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CRAFTING",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "train-crafting-99",
+      "phase": "Region: Global",
+      "instruction": "Train Crafting to 99",
+      "detail": "Black dragonhide bodies (best BIS XP/gp ratio) or unpowered orbs via glassblowing.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CRAFTING",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-smithing-15",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Smithing to 15",
+      "detail": "Bronze bars at Lumbridge furnace. Smelt then smith.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SMITHING",
+          "level": 15
+        }
+      ]
+    },
+    {
+      "id": "train-smithing-30",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Train Smithing to 30",
+      "detail": "Iron bars. Buy from GE or mine in Al-Kharid mines.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3288,
+          "y": 3190,
+          "plane": 0,
+          "label": "Al Kharid"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SMITHING",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "id": "train-smithing-40",
+      "phase": "Region: Global",
+      "instruction": "Train Smithing to 40",
+      "detail": "Steel bars. Consider Superheat for simultaneous Magic XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SMITHING",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "train-smithing-60",
+      "phase": "Region: Global",
+      "instruction": "Train Smithing to 60",
+      "detail": "Gold bars with Goldsmith gauntlets (Family Crest quest) for fast XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SMITHING",
+          "level": 60
+        }
+      ]
+    },
+    {
+      "id": "train-smithing-70",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Smithing to 70",
+      "detail": "Blast Furnace mithril/adamant for best XP/gp ratio.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SMITHING",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "train-smithing-99",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Smithing to 99",
+      "detail": "Blast Furnace rune bars \u2014 profit while training. Best GP/hr smithing method.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SMITHING",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-mining-15",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Mining to 15",
+      "detail": "Copper and tin in Lumbridge mines.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MINING",
+          "level": 15
+        }
+      ]
+    },
+    {
+      "id": "train-mining-30",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Train Mining to 30",
+      "detail": "Iron ore in Al-Kharid mine or Dwarven Mine. Drop ore for fast XP.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3288,
+          "y": 3190,
+          "plane": 0,
+          "label": "Al Kharid"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MINING",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "id": "train-mining-45",
+      "phase": "Region: Global",
+      "instruction": "Train Mining to 45",
+      "detail": "Iron ore 3-tick Granite once unlocked, or regular iron ore drop-mining.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MINING",
+          "level": 45
+        }
+      ]
+    },
+    {
+      "id": "train-mining-60",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Train Mining to 60",
+      "detail": "3-tick Granite in Kharidian Desert quarry for fast XP (requires waterskins/humidify).",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3182,
+          "y": 3156,
+          "plane": 0,
+          "label": "Desert Quarry"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MINING",
+          "level": 60
+        }
+      ]
+    },
+    {
+      "id": "train-mining-75",
+      "phase": "Region: Asgarnia",
+      "instruction": "Train Mining to 75",
+      "detail": "Motherload Mine for passive gold nugget accumulation and equipment upgrades.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3752,
+          "y": 5677,
+          "plane": 0,
+          "label": "Motherlode Mine"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MINING",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "id": "train-mining-99",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Train Mining to 99",
+      "detail": "3-tick Granite for fastest XP or Blast Mine for profit.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3182,
+          "y": 3156,
+          "plane": 0,
+          "label": "Desert Quarry"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MINING",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-herblore-10",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Herblore to 10",
+      "detail": "Clean grimy guam leaves. Requires Druidic Ritual quest.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HERBLORE",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "id": "train-herblore-38",
+      "phase": "Region: Global",
+      "instruction": "Train Herblore to 38",
+      "detail": "Make attack, strength, or stat-restore potions. Buy secondaries from GE.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HERBLORE",
+          "level": 38
+        }
+      ]
+    },
+    {
+      "id": "train-herblore-55",
+      "phase": "Region: Global",
+      "instruction": "Train Herblore to 55",
+      "detail": "Super restore or prayer potions. Used heavily in bossing.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HERBLORE",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "id": "train-herblore-70",
+      "phase": "Region: Global",
+      "instruction": "Train Herblore to 70",
+      "detail": "Super combat potions at 90 or anti-fire potions at 69.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HERBLORE",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "train-herblore-99",
+      "phase": "Region: Global",
+      "instruction": "Train Herblore to 99",
+      "detail": "Stamina potions, ranging potions, or divine potions for end-game. GP intensive.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HERBLORE",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-agility-10",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Agility to 10",
+      "detail": "Gnome Stronghold course. No fail rate, steady XP.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2384,
+          "y": 3488,
+          "plane": 0,
+          "label": "Gnome Stronghold agility"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "AGILITY",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "id": "train-agility-30",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Agility to 30",
+      "detail": "Gnome Stronghold then Draynor Village Agility course.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3088,
+          "y": 3255,
+          "plane": 0,
+          "label": "Draynor Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "AGILITY",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "id": "train-agility-40",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Agility to 40",
+      "detail": "Varrock Agility course. Unlocks graceful shortcut uses.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3218,
+          "y": 3415,
+          "plane": 0,
+          "label": "Varrock rooftop course"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "AGILITY",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "train-agility-52",
+      "phase": "Region: Morytania",
+      "instruction": "Train Agility to 52",
+      "detail": "Canifis Rooftop Course. Highest marks/hr early-mid game.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3493,
+          "y": 3471,
+          "plane": 0,
+          "label": "Canifis rooftop course"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "AGILITY",
+          "level": 52
+        }
+      ]
+    },
+    {
+      "id": "train-agility-60",
+      "phase": "Region: Asgarnia",
+      "instruction": "Train Agility to 60",
+      "detail": "Falador or Seers' Rooftop. Unlock shortcut network for efficient traversal.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3045,
+          "y": 3339,
+          "plane": 0,
+          "label": "Falador rooftop course"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "AGILITY",
+          "level": 60
+        }
+      ]
+    },
+    {
+      "id": "train-agility-90",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Agility to 90",
+      "detail": "Ardougne Rooftop (best marks) or Werewolf Course. Graceful recolor at 260 marks.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2669,
+          "y": 3298,
+          "plane": 0,
+          "label": "Ardougne rooftop course"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "AGILITY",
+          "level": 90
+        }
+      ]
+    },
+    {
+      "id": "train-agility-99",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Agility to 99",
+      "detail": "Ardougne Rooftop or Hallowed Sepulchre for best XP and loot.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2669,
+          "y": 3298,
+          "plane": 0,
+          "label": "Ardougne rooftop course"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "AGILITY",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-thieving-20",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Thieving to 20",
+      "detail": "Pickpocket men and women in Lumbridge or Edgeville.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "THIEVING",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "id": "train-thieving-38",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Thieving to 38",
+      "detail": "Pickpocket HAM members in Lumbridge. Gems and clue scrolls.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 2540
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3149,
+          "y": 9624,
+          "plane": 0,
+          "label": "H.A.M. hideout"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "THIEVING",
+          "level": 38
+        }
+      ]
+    },
+    {
+      "id": "train-thieving-55",
+      "phase": "Region: Zeah",
+      "instruction": "Train Thieving to 55",
+      "detail": "Fruit stalls on Zeah or Guards in Ardougne.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 1744,
+          "y": 3564,
+          "plane": 0,
+          "label": "Hosidius"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "THIEVING",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "id": "train-thieving-65",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Train Thieving to 65",
+      "detail": "Blackjack Menaphite thugs in Pollnivneach. Best XP/hr method, requires Desert Treasure area access.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 6138
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3333,
+          "y": 2952,
+          "plane": 0,
+          "label": "Pollnivneach"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "THIEVING",
+          "level": 65
+        }
+      ]
+    },
+    {
+      "id": "train-thieving-99",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Train Thieving to 99",
+      "detail": "Blackjack Menaphite thugs or Master Farmers at 38+ for seeds.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 6138
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3333,
+          "y": 2952,
+          "plane": 0,
+          "label": "Pollnivneach"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "THIEVING",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-slayer-20",
+      "phase": "Region: Asgarnia",
+      "instruction": "Train Slayer to 20",
+      "detail": "Slayer tasks from Turael (Burthorpe). Low-level monsters, easy tasks.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 401
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 2931,
+          "y": 3536,
+          "plane": 0,
+          "label": "Burthorpe (Turael)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SLAYER",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "id": "train-slayer-50",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Slayer to 50",
+      "detail": "Tasks from Mazchna (Morytania requires Priest in Peril) or Vannaka.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3090,
+          "y": 3494,
+          "plane": 0,
+          "label": "Edgeville"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SLAYER",
+          "level": 50
+        }
+      ]
+    },
+    {
+      "id": "train-slayer-task-desert",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Slayer tasks in Kharidian Desert",
+      "detail": "Desert-region Slayer monsters. Kalphites, desert lizards, etc.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SLAYER",
+          "level": 50
+        }
+      ]
+    },
+    {
+      "id": "train-slayer-75",
+      "phase": "Region: Global",
+      "instruction": "Train Slayer to 75",
+      "detail": "Duradel or Nieve assignments. Abyssal demons, blue dragons, fire giants.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SLAYER",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "id": "train-slayer-task-morytania",
+      "phase": "Region: Morytania",
+      "instruction": "Slayer tasks in Morytania",
+      "detail": "Bloodvelds, gargoyles, abyssal demons. Excellent GP + XP combination.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SLAYER",
+          "level": 85
+        }
+      ]
+    },
+    {
+      "id": "train-slayer-99",
+      "phase": "Region: Global",
+      "instruction": "Train Slayer to 99",
+      "detail": "High-value tasks: Hydra (82), Cerberus (91), Thermonuclear Smoke Devil (93).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SLAYER",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-farming-17",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Farming to 17",
+      "detail": "Plant potato, onion, and cabbage allotments. Use compost.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1173
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3235,
+          "y": 3295,
+          "plane": 0,
+          "label": "Lumbridge chickens"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FARMING",
+          "level": 17
+        }
+      ]
+    },
+    {
+      "id": "train-farming-35",
+      "phase": "Region: Global",
+      "instruction": "Train Farming to 35",
+      "detail": "Oak and willow saplings for tree patches. Trees give large XP dumps.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FARMING",
+          "level": 35
+        }
+      ]
+    },
+    {
+      "id": "train-farming-50",
+      "phase": "Region: Global",
+      "instruction": "Train Farming to 50",
+      "detail": "Maple trees, watermelons, herb patches every 80 minutes.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FARMING",
+          "level": 50
+        }
+      ]
+    },
+    {
+      "id": "train-farming-70",
+      "phase": "Region: Global",
+      "instruction": "Train Farming to 70",
+      "detail": "Yew trees and ranarr/snapdragon herbs. Significant profit.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FARMING",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "train-farming-99",
+      "phase": "Region: Global",
+      "instruction": "Train Farming to 99",
+      "detail": "Magic/elder trees and dragonfruit/torstol herbs. Highly profitable, 2hr cycle.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FARMING",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-runecraft-27",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Runecraft to 27",
+      "detail": "Air runes via Lumbridge Swamp altar. Unlocks lava runes method.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3209,
+          "y": 3165,
+          "plane": 0,
+          "label": "Lumbridge Swamp"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RUNECRAFT",
+          "level": 27
+        }
+      ]
+    },
+    {
+      "id": "train-runecraft-44",
+      "phase": "Region: Zanaris",
+      "instruction": "Train Runecraft to 44",
+      "detail": "Cosmic runes on Zanaris (requires Lost City quest). Unlocks double cosmic runes.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RUNECRAFT",
+          "level": 44
+        }
+      ]
+    },
+    {
+      "id": "train-runecraft-59",
+      "phase": "Region: Karamja",
+      "instruction": "Train Runecraft to 59",
+      "detail": "Nature runes on Karamja. Unlocks double nats at 91.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2868,
+          "y": 3017,
+          "plane": 0,
+          "label": "Nature altar"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RUNECRAFT",
+          "level": 59
+        }
+      ]
+    },
+    {
+      "id": "train-runecraft-75",
+      "phase": "Region: Asgarnia",
+      "instruction": "Train Runecraft to 75",
+      "detail": "Lava runes with Ring of Dueling. Best XP/hr for Runecraft, low profit.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3319,
+          "y": 3250,
+          "plane": 0,
+          "label": "Fire altar"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RUNECRAFT",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "id": "train-runecraft-99",
+      "phase": "Region: Global",
+      "instruction": "Train Runecraft to 99",
+      "detail": "Wrath runes (90+) or Lava runes with lunar spell. Raiments of the Eye for bonus output.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RUNECRAFT",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-hunter-9",
+      "phase": "Region: Feldip Hills",
+      "instruction": "Train Hunter to 9",
+      "detail": "Crimson Swifts at Feldip Hills with bird snares.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HUNTER",
+          "level": 9
+        }
+      ]
+    },
+    {
+      "id": "train-hunter-29",
+      "phase": "Region: Feldip Hills",
+      "instruction": "Train Hunter to 29",
+      "detail": "Tropical Wagtails at Feldip Hills. Two traps at level 20.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HUNTER",
+          "level": 29
+        }
+      ]
+    },
+    {
+      "id": "train-hunter-43",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Hunter to 43",
+      "detail": "Swamp Lizards or Barb-tailed Kebbits. Shift to box traps.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3209,
+          "y": 3165,
+          "plane": 0,
+          "label": "Lumbridge Swamp"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HUNTER",
+          "level": 43
+        }
+      ]
+    },
+    {
+      "id": "train-hunter-60",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Hunter to 60",
+      "detail": "Chinchompas at the Piscatoris Hunter Area. Good XP and GP.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2344,
+          "y": 3667,
+          "plane": 0,
+          "label": "Piscatoris Hunter area"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HUNTER",
+          "level": 60
+        }
+      ]
+    },
+    {
+      "id": "train-hunter-99",
+      "phase": "Region: Feldip Hills",
+      "instruction": "Train Hunter to 99",
+      "detail": "Red chinchompas at Feldip Hills or Maniacal Monkeys post-MM2 for best XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HUNTER",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-construction-20",
+      "phase": "Region: Global",
+      "instruction": "Train Construction to 20",
+      "detail": "Crude wooden chairs and rugs. Buy planks from GE.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CONSTRUCTION",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "id": "train-construction-40",
+      "phase": "Region: Global",
+      "instruction": "Train Construction to 40",
+      "detail": "Oak chairs or larder. Oak planks give best XP/plank ratio at this tier.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CONSTRUCTION",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "train-construction-55",
+      "phase": "Region: Global",
+      "instruction": "Train Construction to 55",
+      "detail": "Oak dungeon doors or oak larder. Each action ~56 XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CONSTRUCTION",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "id": "train-construction-70",
+      "phase": "Region: Global",
+      "instruction": "Train Construction to 70",
+      "detail": "Teak or mahogany furniture. Mahogany tables at 52 for fast AFK XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CONSTRUCTION",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "train-construction-99",
+      "phase": "Region: Global",
+      "instruction": "Train Construction to 99",
+      "detail": "Mahogany homes or mahogany tables for best XP. GP intensive.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CONSTRUCTION",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-att-str-stronghold",
+      "phase": "Region: Misthalin",
+      "instruction": "Train Attack/Strength at Stronghold of Security",
+      "detail": "Flesh Crawlers and Zombies offer fast melee XP with no food cost at mid levels.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 2500
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 1988,
+          "y": 5235,
+          "plane": 0,
+          "label": "Stronghold of Security"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 50
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 50
+        }
+      ]
+    },
+    {
+      "id": "train-mm-tunnels",
+      "phase": "Region: Ape Atoll",
+      "instruction": "Train at Ape Atoll (Maniacal Monkeys)",
+      "detail": "Best melee XP in the game until very high levels. Requires Monkey Madness I completion.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 7118
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 2629,
+          "y": 9252,
+          "plane": 0,
+          "label": "Ape Atoll (Maniacal Monkeys)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 99
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-nmz",
+      "phase": "Region: Kandarin",
+      "instruction": "Train at Nightmare Zone",
+      "detail": "AFK melee training using quest bosses. Requires several quests completed.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1120
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 2608,
+          "y": 3116,
+          "plane": 0,
+          "label": "Nightmare Zone (Yanille)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 80
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 80
+        },
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 80
+        }
+      ]
+    },
+    {
+      "id": "quest-rfd-start",
+      "phase": "Region: Misthalin",
+      "instruction": "Complete Recipe for Disaster (partial)",
+      "detail": "Sub-quest completion grants access to Barrows gloves and NMZ bosses.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-mm",
+      "phase": "Region: Ape Atoll",
+      "instruction": "Complete Monkey Madness I",
+      "detail": "Grants access to Ape Atoll and Maniacal Monkey tunnels.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2752,
+          "y": 2782,
+          "plane": 0,
+          "label": "Ape Atoll"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-dt",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Complete Desert Treasure",
+      "detail": "Unlocks Ancient Magicks spellbook. Required for many late-game routes.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -1693,10 +2440,110 @@
       ]
     },
     {
-      "id": "quest-nature-spirit",
-      "phase": "Endgame & extras",
-      "instruction": "Complete Nature Spirit",
-      "detail": "Unlocks the Mort Myre Swamp and nature grotto. Required for Fairytale I - Growing Pains.",
+      "id": "unlock-barrows",
+      "phase": "Region: Morytania",
+      "instruction": "Barrows runs (starter)",
+      "detail": "Semi-consistent GP and gear. Entry-level bossing in Morytania.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3564,
+          "y": 3288,
+          "plane": 0,
+          "label": "Barrows mounds"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-priest-in-peril",
+      "phase": "Region: Misthalin",
+      "instruction": "Complete Priest in Peril",
+      "detail": "Unlocks Morytania region access. Required before Barrows and Slayer tasks there.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3218,
+          "y": 3415,
+          "plane": 0,
+          "label": "Varrock rooftop course"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "unlock-gwd",
+      "phase": "Region: Troll Country",
+      "instruction": "God Wars Dungeon access",
+      "detail": "Requires 60 Strength to enter. High-tier drops including Godswords.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2897,
+          "y": 5269,
+          "plane": 0,
+          "label": "God Wars Dungeon"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "unlock-cox",
+      "phase": "Region: Zeah",
+      "instruction": "Chambers of Xeric (entry)",
+      "detail": "Requires strong all-round stats. Most valuable loot table in the game.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 1234,
+          "y": 3568,
+          "plane": 0,
+          "label": "Chambers of Xeric"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-tale-of-arrav",
+      "phase": "Region: Zeah",
+      "instruction": "Complete Tale of the Righteous (Zeah intro)",
+      "detail": "One of several quests enabling full Zeah access and CoX entry.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 1519,
+          "y": 3591,
+          "plane": 0,
+          "label": "Shayzien"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-family-crest",
+      "phase": "Region: Kandarin",
+      "instruction": "Complete Family Crest",
+      "detail": "Grants Cooking gauntlets (stop burning food) and Goldsmith gauntlets (Smithing XP boost).",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -1707,7 +2554,7 @@
     },
     {
       "id": "quest-druidic-ritual",
-      "phase": "Endgame & extras",
+      "phase": "Region: Kandarin",
       "instruction": "Complete Druidic Ritual",
       "detail": "Required to train Herblore. Short quest, no stat requirements.",
       "highlights": [
@@ -1731,100 +2578,8 @@
       ]
     },
     {
-      "id": "synth-tag-supply-prayer-pot-supply-14",
-      "phase": "Endgame & extras",
-      "instruction": "Obtain supply-prayer-pot-supply",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "synth-tag-supply-food-monkfish-supply-15",
-      "phase": "Endgame & extras",
-      "instruction": "Obtain supply-food-monkfish-supply",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "quest-fairytale-1",
-      "phase": "Endgame & extras",
-      "instruction": "Complete Fairytale I - Growing Pains",
-      "detail": "Unlocks herb patches worldwide. Critical prerequisite for the herb farming supply chain.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "quest-tale-of-arrav",
-      "phase": "Endgame & extras",
-      "instruction": "Complete Tale of the Righteous (Zeah intro)",
-      "detail": "One of several quests enabling full Zeah access and CoX entry.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 1519,
-          "y": 3591,
-          "plane": 0,
-          "label": "Shayzien"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "unlock-barrows",
-      "phase": "Endgame & extras",
-      "instruction": "Barrows runs (starter)",
-      "detail": "Semi-consistent GP and gear. Entry-level bossing in Morytania.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3564,
-          "y": 3288,
-          "plane": 0,
-          "label": "Barrows mounds"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
-      "id": "brew-prayer-potion",
-      "phase": "Endgame & extras",
-      "instruction": "Brew prayer potions (Herblore 52)",
-      "detail": "Combine ranarr weed + snape grass \u2192 prayer potion (4). Requires Druidic Ritual and Herblore 52. Terminal step of the prayer-pot supply chain.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ]
-    },
-    {
       "id": "quest-lost-city",
-      "phase": "Endgame & extras",
+      "phase": "Region: Misthalin",
       "instruction": "Complete Lost City",
       "detail": "Unlocks Zanaris and cosmic rune altar. Grants access to dragon weaponry.",
       "highlights": [],
@@ -1843,8 +2598,100 @@
       ]
     },
     {
+      "id": "quest-the-feud",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Complete The Feud",
+      "detail": "Unlocks blackjacking in Pollnivneach for fast Thieving XP.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 6138
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3333,
+          "y": 2952,
+          "plane": 0,
+          "label": "Pollnivneach"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-tai-bwo",
+      "phase": "Region: Karamja",
+      "instruction": "Complete Tai Bwo Wannai Trio",
+      "detail": "Unlocks 1-tick Karambwan cooking for fast Cooking XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "bg-farm-allotment",
+      "phase": "Region: Global",
+      "instruction": "Check allotment patches",
+      "detail": "Plant potato, onion, or cabbage allotments; collect produce. Check at natural banking breaks \u2014 do not interrupt active training.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FARMING",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": "quest-nature-spirit",
+      "phase": "Region: Morytania",
+      "instruction": "Complete Nature Spirit",
+      "detail": "Unlocks the Mort Myre Swamp and nature grotto. Required for Fairytale I - Growing Pains.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-bone-voyage",
+      "phase": "Region: Misthalin",
+      "instruction": "Complete Bone Voyage",
+      "detail": "Unlocks Fossil Island. Required to mine volcanic ash for ultracompost.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-fairytale-1",
+      "phase": "Region: Zanaris",
+      "instruction": "Complete Fairytale I - Growing Pains",
+      "detail": "Unlocks herb patches worldwide. Critical prerequisite for the herb farming supply chain.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
       "id": "quest-swan-song",
-      "phase": "Endgame & extras",
+      "phase": "Region: Kandarin",
       "instruction": "Complete Swan Song",
       "detail": "Unlocks Piscatoris Fishing Colony monkfish spot. Required for the monkfish food supply chain.",
       "highlights": [],
@@ -1863,19 +2710,1283 @@
       ]
     },
     {
-      "id": "unlock-gwd",
-      "phase": "Endgame & extras",
-      "instruction": "God Wars Dungeon access",
-      "detail": "Requires 60 Strength to enter. High-tier drops including Godswords.",
+      "id": "source-pineapples-charter",
+      "phase": "Region: Kandarin",
+      "instruction": "Buy pineapples from Catherby charter ship",
+      "detail": "Purchase pineapples from the charter ship NPC at Catherby docks. Non-GE source. ~100 per visit depending on stock.",
       "highlights": [],
       "mapMarkers": [
         {
-          "x": 2897,
-          "y": 5269,
+          "x": 2834,
+          "y": 3445,
           "plane": 0,
-          "label": "God Wars Dungeon"
+          "label": "Catherby"
         }
       ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Ultracompost stock (ahead-of-time)"
+    },
+    {
+      "id": "gather-volcanic-ash",
+      "phase": "Region: Fossil Island",
+      "instruction": "Mine volcanic ash at Fossil Island",
+      "detail": "Mine volcanic ash from the ash piles on Fossil Island. Used to make ultracompost. Loop during farm-run downtime.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Ultracompost stock (ahead-of-time)"
+    },
+    {
+      "id": "setup-ultracompost",
+      "phase": "Region: Morytania",
+      "instruction": "Produce ultracompost (pineapples + volcanic ash)",
+      "detail": "Fill compost bins with 30 pineapples then add 15 volcanic ash per bin to produce ultracompost. Ahead-of-time stockpile before herb runs.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Ultracompost stock (ahead-of-time)"
+    },
+    {
+      "id": "farm-ranarr-patch",
+      "phase": "Region: Global",
+      "instruction": "Farm ranarr herb patches",
+      "detail": "Plant ranarr seeds in herb patches with ultracompost; harvest ranarr weed. ~6.5 ranarr per run at 32 Farming with ultracompost. Loop every ~80 minutes.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Herb-run loop (background, RECURRING)"
+    },
+    {
+      "id": "gather-snape-grass",
+      "phase": "Region: Fremennik",
+      "instruction": "Gather snape grass at Waterbirth Island",
+      "detail": "Pick snape grass spawns on Waterbirth Island. No quest gate. JIT batch just before a brewing session.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
+      "id": "brew-prayer-potion",
+      "phase": "Region: Global",
+      "instruction": "Brew prayer potions (Herblore 52)",
+      "detail": "Combine ranarr weed + snape grass \u2192 prayer potion (4). Requires Druidic Ritual and Herblore 52. Terminal step of the prayer-pot supply chain.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
+      "id": "gather-monkfish",
+      "phase": "Region: Kandarin",
+      "instruction": "Fish monkfish at Piscatoris",
+      "detail": "Fish monkfish at the Piscatoris Fishing Colony. Requires Swan Song and Fishing 62. Cook for Barrows food supply.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2344,
+          "y": 3667,
+          "plane": 0,
+          "label": "Piscatoris Hunter area"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "cook-monkfish",
+      "phase": "Region: Kandarin",
+      "instruction": "Cook monkfish (Cooking 62)",
+      "detail": "Cook raw monkfish on a range. Stop burning at 92 (68 with cooking gauntlets). Terminal step of the monkfish food supply chain.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2834,
+          "y": 3445,
+          "plane": 0,
+          "label": "Catherby"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "rfd-intro",
+      "phase": "Region: Misthalin",
+      "instruction": "RFD: Rescue the Cook's Assistant",
+      "detail": "Speak to the Lumbridge Cook to begin Recipe for Disaster. Unlock the 10-person banquet table.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-cooks-assistant",
+      "phase": "Region: Misthalin",
+      "instruction": "Complete Cook's Assistant",
+      "detail": "Lumbridge Cook needs ingredients for the Duke's birthday party. Starter quest, no reqs.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "rfd-goblins",
+      "phase": "Region: Misthalin",
+      "instruction": "RFD: Wartface and Bentnoze (Goblins)",
+      "detail": "Obtain orange and blue goblin mail armour for the goblin generals. Craft dyes from berries/onions via Aggie in Draynor.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "rfd-mountain-dwarf",
+      "phase": "Region: Misthalin",
+      "instruction": "RFD: Rohak the Mountain Dwarf",
+      "detail": "Prepare a Kelda stew using spiced stew with brown spice boosts. RNG: avg ~5 attempts. Rate: ??",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "rfd-pirate-pete",
+      "phase": "Region: Misthalin",
+      "instruction": "RFD: Pirate Pete (minigame)",
+      "detail": "Fish and cook a fishcake INSIDE the Mogre Camp minigame area. No ahead-of-time staging \u2014 all gathering is minigame-locked.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-rum-deal",
+      "phase": "Region: Morytania",
+      "instruction": "Complete Rum Deal",
+      "detail": "Required for RFD Pirate Pete. Moderate quest on Braindeath Island.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "rfd-evil-dave",
+      "phase": "Region: Misthalin",
+      "instruction": "RFD: Evil Dave's Spicy Stew",
+      "detail": "Prepare a special stew using brown/orange/red/yellow spices in the Stronghold of Security dungeon. RNG: rate ??",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-shadow-storm",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Complete Shadow of the Storm",
+      "detail": "Required for RFD Evil Dave. Requires Demon Slayer and The Golem.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "rfd-skrach",
+      "phase": "Region: Feldip Hills",
+      "instruction": "RFD: Skrach Uglogwee (Jubbly Bird)",
+      "detail": "Hunt and cook a jubbly bird near Rantz in Feldip Hills. Hunter 41 + Cooking 41 required.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-big-chompy",
+      "phase": "Region: Feldip Hills",
+      "instruction": "Complete Big Chompy Bird Hunting",
+      "detail": "Required for RFD Skrach. Learn to hunt chompy birds with ogre bows.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "rfd-sir-amik",
+      "phase": "Region: Misthalin",
+      "instruction": "RFD: Sir Amik Varze (Creme Brulee)",
+      "detail": "Prepare a creme brulee supreme. Requires Cooking 70. Ice gloves needed during boss fight (from Ice Queen).",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "rfd-awowogei",
+      "phase": "Region: Ape Atoll",
+      "instruction": "RFD: Awowogei (Snake on a Plinth)",
+      "detail": "Cook a snake on a plinth for Awowogei on Ape Atoll. Requires Monkey Madness I completion.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2752,
+          "y": 2782,
+          "plane": 0,
+          "label": "Ape Atoll"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "rfd-finale",
+      "phase": "Region: Misthalin",
+      "instruction": "RFD: Free the Cook (Finale)",
+      "detail": "Defeat 6 Culinaromancer minions with boosted combat stats. Rewards: Barrows gloves (best-in-slot). Attack/Strength/Defence 65 required.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "chkpt-prayer-pot-supply-coarse-0",
+      "phase": "Region: Global",
+      "instruction": "\u29c6 Ultracompost stock (ahead-of-time)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Ultracompost stock (ahead-of-time)"
+    },
+    {
+      "id": "pps-01-withdraw-compost-run",
+      "phase": "Region: Global",
+      "instruction": "Bank: withdraw compost-run loadout",
+      "detail": "Withdraw: coins (charter fare + 30 pineapples, total ??), Digsite pendant or Fossil Island transport (??). No other inventory needed \u2014 pineapples and ash fill en route.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "withdraw",
+        "target": "compost-run-loadout",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "teleport-choice",
+          "target": "fossil-island",
+          "value": "digsite-pendant,barge",
+          "note": "Keep a charged pendant banked separately for repeat runs."
+        }
+      ],
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Ultracompost stock (ahead-of-time)"
+    },
+    {
+      "id": "chkpt-prayer-pot-supply-coarse-1",
+      "phase": "Region: Misthalin",
+      "instruction": "\u29c6 Ranarr seeds (gather, N+)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Ranarr seeds (gather, N+)"
+    },
+    {
+      "id": "pps-02-steal-ranarr-seeds",
+      "phase": "Region: Misthalin",
+      "instruction": "Pickpocket Master Farmers until ranarr seeds banked",
+      "detail": "Master Farmer at Draynor market. Keep herb seeds, drop junk seeds. Need one ranarr seed per patch per planned run (patches: Falador, Catherby, Ardougne, Hosidius + Farming Guild if unlocked). Seed rate: ??",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3088,
+          "y": 3255,
+          "plane": 0,
+          "label": "Draynor Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "gather",
+        "target": "ranarr_seed",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "ranarr_seed": "??"
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "ranarr_seed",
+          "value": "??",
+          "note": "Seed table is random; bank each ranarr immediately (HC habit)."
+        },
+        {
+          "type": "keep-drop",
+          "target": null,
+          "value": "keep:herb-seeds;drop:junk-seeds",
+          "note": null
+        }
+      ],
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Ranarr seeds (gather, N+)"
+    },
+    {
+      "id": "chkpt-prayer-pot-supply-coarse-2",
+      "phase": "Region: Global",
+      "instruction": "\u29c6 Herb-run loop (background, RECURRING)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Herb-run loop (background, RECURRING)"
+    },
+    {
+      "id": "pps-03-withdraw-herb-run",
+      "phase": "Region: Global",
+      "instruction": "Bank: withdraw herb-run loadout",
+      "detail": "Withdraw: seed dibber, spade, rake, magic secateurs if owned (optional), N ranarr seeds + N ultracompost (N = patch count), run teleports (Explorer's ring \u2192 Falador patch ??, Camelot \u2192 Catherby, Ardougne cloak/tele, Xeric's talisman \u2192 Hosidius ??).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "withdraw",
+        "target": "herb-run-loadout",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "teleport-choice",
+          "target": "herb-patches",
+          "value": "explorers-ring,camelot,ardougne-cloak,xerics-talisman",
+          "note": "Route order = list order; skip any patch whose teleport is locked."
+        }
+      ],
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Herb-run loop (background, RECURRING)"
+    },
+    {
+      "id": "chkpt-prayer-pot-supply-coarse-3",
+      "phase": "Region: Global",
+      "instruction": "\u29c6 Secondaries + brew (JIT)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
+      "id": "pps-04-source-vials",
+      "phase": "Region: Global",
+      "instruction": "Stock vials of water (non-GE)",
+      "detail": "Buy vial-of-water packs from a herblore shop vendor (vendor ?? \u2014 verify non-GE source) OR blow vials from molten glass (Crafting 33) and fill at a fountain. One vial per potion.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "buy",
+        "target": "vial_of_water",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "vial_of_water": "??"
+          }
+        }
+      },
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
+      "id": "pps-05-withdraw-brew",
+      "phase": "Region: Global",
+      "instruction": "Bank: withdraw brewing loadout",
+      "detail": "Withdraw: 14 grimy ranarr + 14 vials of water (clean-then-unf in one sitting; two half-inventories per load). Snape grass stays banked until the unf potions are made.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "withdraw",
+        "target": "brew-loadout",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "batch-size",
+          "target": "herb-cleaning",
+          "value": "14",
+          "note": "Clean while walking to the bank \u2014 zero-time embed."
+        },
+        {
+          "type": "do-while",
+          "target": "walking",
+          "value": null,
+          "note": "Herb cleaning and unf-mixing are click-paced; pair with bank-adjacent idle."
+        }
+      ],
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
+      "id": "pps-06-deposit-potions",
+      "phase": "Region: Global",
+      "instruction": "Bank: deposit prayer potions (stock check)",
+      "detail": "Deposit all prayer potions. Chain is 'done' for now when banked stock meets the active goal's demand (e.g., barrows: 20\u00d7 prayer_potion_4 per SYNTHESIS goals example); otherwise the RECURRING herb-run loop keeps firing.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "deposit",
+        "target": "prayer_potion_4",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "prayer_potion_4": "??"
+          }
+        }
+      },
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
+      "id": "chkpt-combat-training-routing-0",
+      "phase": "Region: Misthalin",
+      "instruction": "\u29c6 Bootstrap: chickens \u2192 cows (no bank)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)"
+    },
+    {
+      "id": "ctr-01-kill-chickens",
+      "phase": "Region: Misthalin",
+      "instruction": "Kill chickens until Attack 10 (Lumbridge farm)",
+      "detail": "No food needed. Rotate style per level chunk if desired (see toggle hint). Keep feathers (stack), bury every bone on the spot.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1173
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3235,
+          "y": 3295,
+          "plane": 0,
+          "label": "Lumbridge chickens"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 10
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "chicken",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 10
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "toggle-state",
+          "target": "attack-style",
+          "value": "accurate",
+          "note": "Set style to match the stat being trained; revisit each checkpoint."
+        },
+        {
+          "type": "keep-drop",
+          "target": null,
+          "value": "keep:feather,bones;drop:raw-chicken",
+          "note": "Bury bones as they drop \u2014 free Prayer toward 22 Protect Item."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)"
+    },
+    {
+      "id": "ctr-02-kill-cows",
+      "phase": "Region: Misthalin",
+      "instruction": "Kill cows until Strength 20 (east Lumbridge)",
+      "detail": "Loot coins from nearby goblins/men opportunistically for the scimitar fund (amount ??). Cowhides optional: bank a stack for early Crafting if passing Al Kharid bank anyway.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 20
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "cow",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "strength": 20
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "toggle-state",
+          "target": "attack-style",
+          "value": "aggressive",
+          "note": null
+        },
+        {
+          "type": "keep-drop",
+          "target": null,
+          "value": "keep:cowhide,bones;drop:raw-beef",
+          "note": "Cowhide branch is optional \u2014 skip if inventory churn slows kills."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)"
+    },
+    {
+      "id": "chkpt-combat-training-routing-1",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "\u29c6 Gear stop: Al Kharid scimitar",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Gear stop: Al Kharid scimitar"
+    },
+    {
+      "id": "ctr-03-buy-scimitar",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Buy best available scimitar (Zeke, Al Kharid)",
+      "detail": "Al Kharid gate toll 10 coins (free after Prince Ali Rescue). Buy the best scimitar your Attack level allows from Zeke's shop (stock tiers ?? \u2014 verify top tier). Re-visit at each Attack breakpoint.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3288,
+          "y": 3190,
+          "plane": 0,
+          "label": "Al Kharid"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "buy",
+        "target": "scimitar_best_tier",
+        "count": 1,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "al-kharid-gate",
+          "value": "pay-toll",
+          "note": "10-coin toll; Prince Ali Rescue removes it permanently if already done."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "Gear stop: Al Kharid scimitar"
+    },
+    {
+      "id": "ctr-04-equip-scimitar",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Equip scimitar",
+      "detail": "Wield the new scimitar before returning to training.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3288,
+          "y": 3190,
+          "plane": 0,
+          "label": "Al Kharid"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "equip",
+        "target": "scimitar_best_tier",
+        "count": 1,
+        "cmp": "eq",
+        "until": null
+      },
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "Gear stop: Al Kharid scimitar"
+    },
+    {
+      "id": "chkpt-combat-training-routing-2",
+      "phase": "Region: Misthalin",
+      "instruction": "\u29c6 30s \u2192 40s: barbarians + Stronghold",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "30s \u2192 40s: barbarians + Stronghold"
+    },
+    {
+      "id": "ctr-05-kill-barbarians",
+      "phase": "Region: Misthalin",
+      "instruction": "Kill barbarians until Att/Str/Def 30 (Barbarian Village)",
+      "detail": "Rotate styles: Attack \u219230, then Strength \u219230, then Defence \u219230. Light food from Barbarian Village fishing spot + range if needed (count ??).",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 3103
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3081,
+          "y": 3420,
+          "plane": 0,
+          "label": "Barbarian Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 30
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 30
+        },
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 30
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "barbarian",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 30,
+            "strength": 30,
+            "defence": 30
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "toggle-state",
+          "target": "attack-style",
+          "value": "rotate-per-30",
+          "note": "One style toggle per sub-goal; the chip stays until changed."
+        },
+        {
+          "type": "do-while",
+          "target": "fishing",
+          "value": null,
+          "note": "Trout/salmon spot + range are adjacent \u2014 restock food between kill sets."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "30s \u2192 40s: barbarians + Stronghold"
+    },
+    {
+      "id": "ctr-06-stronghold-crawlers",
+      "phase": "Region: Misthalin",
+      "instruction": "Kill Flesh Crawlers until 40/40/40 (Stronghold level 2)",
+      "detail": "Enter Stronghold of Security (Barbarian Village hole), answer security-question doors, descend to level 2. Crawlers aggro and hit low \u2014 near-AFK, no food cost at these stats. Claim the coin rewards on each floor while passing.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 2500
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 1988,
+          "y": 5235,
+          "plane": 0,
+          "label": "Stronghold of Security"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 40
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 40
+        },
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 40
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "flesh_crawler",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 40,
+            "strength": 40,
+            "defence": 40
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "security-doors",
+          "value": "answer-questions",
+          "note": "Doors ask account-security questions; any correct answer opens."
+        },
+        {
+          "type": "safespot",
+          "target": "flesh-crawlers",
+          "value": "stand-in-pack",
+          "note": "Let aggro stack; re-aggro resets on floor exit/re-entry."
+        },
+        {
+          "type": "contested-fallback",
+          "target": null,
+          "value": "hop-worlds",
+          "note": "Room contested \u2192 hop; spawn clusters are identical across worlds."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "30s \u2192 40s: barbarians + Stronghold"
+    },
+    {
+      "id": "chkpt-combat-training-routing-3",
+      "phase": "Region: Zeah",
+      "instruction": "\u29c6 Routing branch: crabs vs slayer (pick one)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Routing branch: crabs vs slayer (pick one)"
+    },
+    {
+      "id": "ctr-07a-sand-crabs",
+      "phase": "Region: Zeah",
+      "instruction": "Kill Sand Crabs until 50/50/50 (Hosidius shore)",
+      "detail": "Routing branch A (default when Zeah access is open): AFK crab spots on the Hosidius coast. Reset aggro by running two spots away and back (~10s). Minimal food (??).",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 1744,
+          "y": 3564,
+          "plane": 0,
+          "label": "Hosidius"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 50
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 50
+        },
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 50
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "sand_crab",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 50,
+            "strength": 50,
+            "defence": 50
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "contested-fallback",
+          "target": "crab-spots",
+          "value": "hop-or-walk-west",
+          "note": "Crab spots are the classic contested hotspot \u2014 hop before walking."
+        },
+        {
+          "type": "do-while",
+          "target": "afk",
+          "value": null,
+          "note": "Aggro window ~10 min then reset run \u2014 pair with low-attention tasks."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "Routing branch: crabs vs slayer (pick one)"
+    },
+    {
+      "id": "ctr-07b-early-slayer",
+      "phase": "Region: Asgarnia",
+      "instruction": "Slayer tasks until 50/50/50 (Turael \u2192 Mazchna)",
+      "detail": "Routing branch B (pick when you want Slayer progress banked with the same hours): tasks from Turael at Burthorpe, graduate to Mazchna at combat 20. Same melee endpoint as branch A, plus Slayer levels toward later gear/tasks.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 401
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 2931,
+          "y": 3536,
+          "plane": 0,
+          "label": "Burthorpe (Turael)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 50
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 50
+        },
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 50
+        },
+        {
+          "type": "SKILL",
+          "skill": "SLAYER",
+          "level": 20
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "slayer_task",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 50,
+            "strength": 50,
+            "defence": 50
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "task-assignment",
+          "value": "??",
+          "note": "Task rolls vary; skip-cost is zero at Turael tier \u2014 reroll bad tasks by re-asking."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "Routing branch: crabs vs slayer (pick one)"
+    },
+    {
+      "id": "train-attack-80",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Attack to 80",
+      "detail": "Slayer tasks or Nightmare Zone AFK. Major accuracy gain.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1120
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 2608,
+          "y": 3116,
+          "plane": 0,
+          "label": "Nightmare Zone (Yanille)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 80
+        }
+      ]
+    },
+    {
+      "id": "train-attack-99",
+      "phase": "Region: Global",
+      "instruction": "Train Attack to 99",
+      "detail": "Nightmare Zone or Maniacal Monkeys for max melee.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-strength-80",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Strength to 80",
+      "detail": "NMZ AFK for efficient Str gains.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1120
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 2608,
+          "y": 3116,
+          "plane": 0,
+          "label": "Nightmare Zone (Yanille)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 80
+        }
+      ]
+    },
+    {
+      "id": "train-strength-99",
+      "phase": "Region: Ape Atoll",
+      "instruction": "Train Strength to 99",
+      "detail": "Maniacal Monkeys best-in-game Str XP.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 7118
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 2629,
+          "y": 9252,
+          "plane": 0,
+          "label": "Ape Atoll (Maniacal Monkeys)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "train-fishing-99",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Fishing to 99",
+      "detail": "Barbarian Fishing 3-tick for best XP or Infernal Harpoon anglerfish.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 2914
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 2501,
+          "y": 3487,
+          "plane": 0,
+          "label": "Otto's Grotto"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FISHING",
+          "level": 99
+        }
+      ]
+    },
+    {
+      "id": "farm-herb-patch-guam",
+      "phase": "Region: Global",
+      "instruction": "Farm guam herb patches",
+      "detail": "Plant guam seeds in herb patches; harvest guam weed. Provides early herblore training materials before ranarr is available. Loop every ~80 minutes.",
+      "highlights": [],
+      "mapMarkers": [],
       "completionConditions": [
         {
           "type": "MANUAL"

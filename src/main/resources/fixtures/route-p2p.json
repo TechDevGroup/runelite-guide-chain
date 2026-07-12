@@ -709,7 +709,8 @@
         {
           "type": "MANUAL"
         }
-      ]
+      ],
+      "checkpoint": "Ultracompost stock (ahead-of-time)"
     },
     {
       "id": "setup-ultracompost",
@@ -722,7 +723,157 @@
         {
           "type": "MANUAL"
         }
-      ]
+      ],
+      "checkpoint": "Ultracompost stock (ahead-of-time)"
+    },
+    {
+      "id": "chkpt-prayer-pot-supply-coarse-0",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "\u29c6 Ultracompost stock (ahead-of-time)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Ultracompost stock (ahead-of-time)"
+    },
+    {
+      "id": "pps-01-withdraw-compost-run",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Bank: withdraw compost-run loadout",
+      "detail": "Withdraw: coins (charter fare + 30 pineapples, total ??), Digsite pendant or Fossil Island transport (??). No other inventory needed \u2014 pineapples and ash fill en route.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "withdraw",
+        "target": "compost-run-loadout",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "teleport-choice",
+          "target": "fossil-island",
+          "value": "digsite-pendant,barge",
+          "note": "Keep a charged pendant banked separately for repeat runs."
+        }
+      ],
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Ultracompost stock (ahead-of-time)"
+    },
+    {
+      "id": "chkpt-prayer-pot-supply-coarse-1",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "\u29c6 Herb-run loop (background, RECURRING)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Herb-run loop (background, RECURRING)"
+    },
+    {
+      "id": "pps-03-withdraw-herb-run",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Bank: withdraw herb-run loadout",
+      "detail": "Withdraw: seed dibber, spade, rake, magic secateurs if owned (optional), N ranarr seeds + N ultracompost (N = patch count), run teleports (Explorer's ring \u2192 Falador patch ??, Camelot \u2192 Catherby, Ardougne cloak/tele, Xeric's talisman \u2192 Hosidius ??).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "withdraw",
+        "target": "herb-run-loadout",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "teleport-choice",
+          "target": "herb-patches",
+          "value": "explorers-ring,camelot,ardougne-cloak,xerics-talisman",
+          "note": "Route order = list order; skip any patch whose teleport is locked."
+        }
+      ],
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Herb-run loop (background, RECURRING)"
+    },
+    {
+      "id": "chkpt-prayer-pot-supply-coarse-2",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "\u29c6 Ranarr seeds (gather, N+)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Ranarr seeds (gather, N+)"
+    },
+    {
+      "id": "pps-02-steal-ranarr-seeds",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Pickpocket Master Farmers until ranarr seeds banked",
+      "detail": "Master Farmer at Draynor market. Keep herb seeds, drop junk seeds. Need one ranarr seed per patch per planned run (patches: Falador, Catherby, Ardougne, Hosidius + Farming Guild if unlocked). Seed rate: ??",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3088,
+          "y": 3255,
+          "plane": 0,
+          "label": "Draynor Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "gather",
+        "target": "ranarr_seed",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "ranarr_seed": "??"
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "ranarr_seed",
+          "value": "??",
+          "note": "Seed table is random; bank each ranarr immediately (HC habit)."
+        },
+        {
+          "type": "keep-drop",
+          "target": null,
+          "value": "keep:herb-seeds;drop:junk-seeds",
+          "note": null
+        }
+      ],
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Ranarr seeds (gather, N+)"
     },
     {
       "id": "gather-volcanic-ash",
@@ -735,7 +886,8 @@
         {
           "type": "MANUAL"
         }
-      ]
+      ],
+      "checkpoint": "Ultracompost stock (ahead-of-time)"
     },
     {
       "id": "farm-ranarr-patch",
@@ -748,7 +900,8 @@
         {
           "type": "MANUAL"
         }
-      ]
+      ],
+      "checkpoint": "Herb-run loop (background, RECURRING)"
     },
     {
       "id": "farm-herb-patch-guam",
@@ -774,7 +927,110 @@
         {
           "type": "MANUAL"
         }
-      ]
+      ],
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
+      "id": "chkpt-prayer-pot-supply-coarse-3",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "\u29c6 Secondaries + brew (JIT)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
+      "id": "pps-04-source-vials",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Stock vials of water (non-GE)",
+      "detail": "Buy vial-of-water packs from a herblore shop vendor (vendor ?? \u2014 verify non-GE source) OR blow vials from molten glass (Crafting 33) and fill at a fountain. One vial per potion.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "buy",
+        "target": "vial_of_water",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "vial_of_water": "??"
+          }
+        }
+      },
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
+      "id": "pps-05-withdraw-brew",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Bank: withdraw brewing loadout",
+      "detail": "Withdraw: 14 grimy ranarr + 14 vials of water (clean-then-unf in one sitting; two half-inventories per load). Snape grass stays banked until the unf potions are made.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "withdraw",
+        "target": "brew-loadout",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "batch-size",
+          "target": "herb-cleaning",
+          "value": "14",
+          "note": "Clean while walking to the bank \u2014 zero-time embed."
+        },
+        {
+          "type": "do-while",
+          "target": "walking",
+          "value": null,
+          "note": "Herb cleaning and unf-mixing are click-paced; pair with bank-adjacent idle."
+        }
+      ],
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
+      "id": "pps-06-deposit-potions",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Bank: deposit prayer potions (stock check)",
+      "detail": "Deposit all prayer potions. Chain is 'done' for now when banked stock meets the active goal's demand (e.g., barrows: 20\u00d7 prayer_potion_4 per SYNTHESIS goals example); otherwise the RECURRING herb-run loop keeps firing.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "deposit",
+        "target": "prayer_potion_4",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "prayer_potion_4": "??"
+          }
+        }
+      },
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Secondaries + brew (JIT)"
     },
     {
       "id": "cook-monkfish",
@@ -1367,6 +1623,11 @@
         },
         {
           "type": "SKILL",
+          "skill": "THIEVING",
+          "level": 38
+        },
+        {
+          "type": "SKILL",
           "skill": "MINING",
           "level": 22
         },
@@ -1820,7 +2081,8 @@
         {
           "type": "MANUAL"
         }
-      ]
+      ],
+      "checkpoint": "Secondaries + brew (JIT)"
     },
     {
       "id": "quest-lost-city",
@@ -1881,6 +2143,500 @@
           "type": "MANUAL"
         }
       ]
+    },
+    {
+      "id": "chkpt-combat-training-routing-0",
+      "phase": "Endgame & extras",
+      "instruction": "\u29c6 Bootstrap: chickens \u2192 cows (no bank)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)"
+    },
+    {
+      "id": "ctr-01-kill-chickens",
+      "phase": "Endgame & extras",
+      "instruction": "Kill chickens until Attack 10 (Lumbridge farm)",
+      "detail": "No food needed. Rotate style per level chunk if desired (see toggle hint). Keep feathers (stack), bury every bone on the spot.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1173
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3235,
+          "y": 3295,
+          "plane": 0,
+          "label": "Lumbridge chickens"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 10
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "chicken",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 10
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "toggle-state",
+          "target": "attack-style",
+          "value": "accurate",
+          "note": "Set style to match the stat being trained; revisit each checkpoint."
+        },
+        {
+          "type": "keep-drop",
+          "target": null,
+          "value": "keep:feather,bones;drop:raw-chicken",
+          "note": "Bury bones as they drop \u2014 free Prayer toward 22 Protect Item."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)"
+    },
+    {
+      "id": "ctr-02-kill-cows",
+      "phase": "Endgame & extras",
+      "instruction": "Kill cows until Strength 20 (east Lumbridge)",
+      "detail": "Loot coins from nearby goblins/men opportunistically for the scimitar fund (amount ??). Cowhides optional: bank a stack for early Crafting if passing Al Kharid bank anyway.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 20
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "cow",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "strength": 20
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "toggle-state",
+          "target": "attack-style",
+          "value": "aggressive",
+          "note": null
+        },
+        {
+          "type": "keep-drop",
+          "target": null,
+          "value": "keep:cowhide,bones;drop:raw-beef",
+          "note": "Cowhide branch is optional \u2014 skip if inventory churn slows kills."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)"
+    },
+    {
+      "id": "chkpt-combat-training-routing-1",
+      "phase": "Endgame & extras",
+      "instruction": "\u29c6 Gear stop: Al Kharid scimitar",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Gear stop: Al Kharid scimitar"
+    },
+    {
+      "id": "ctr-03-buy-scimitar",
+      "phase": "Endgame & extras",
+      "instruction": "Buy best available scimitar (Zeke, Al Kharid)",
+      "detail": "Al Kharid gate toll 10 coins (free after Prince Ali Rescue). Buy the best scimitar your Attack level allows from Zeke's shop (stock tiers ?? \u2014 verify top tier). Re-visit at each Attack breakpoint.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3288,
+          "y": 3190,
+          "plane": 0,
+          "label": "Al Kharid"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "buy",
+        "target": "scimitar_best_tier",
+        "count": 1,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "al-kharid-gate",
+          "value": "pay-toll",
+          "note": "10-coin toll; Prince Ali Rescue removes it permanently if already done."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "Gear stop: Al Kharid scimitar"
+    },
+    {
+      "id": "ctr-04-equip-scimitar",
+      "phase": "Endgame & extras",
+      "instruction": "Equip scimitar",
+      "detail": "Wield the new scimitar before returning to training.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3288,
+          "y": 3190,
+          "plane": 0,
+          "label": "Al Kharid"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "equip",
+        "target": "scimitar_best_tier",
+        "count": 1,
+        "cmp": "eq",
+        "until": null
+      },
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "Gear stop: Al Kharid scimitar"
+    },
+    {
+      "id": "chkpt-combat-training-routing-2",
+      "phase": "Endgame & extras",
+      "instruction": "\u29c6 30s \u2192 40s: barbarians + Stronghold",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "30s \u2192 40s: barbarians + Stronghold"
+    },
+    {
+      "id": "ctr-05-kill-barbarians",
+      "phase": "Endgame & extras",
+      "instruction": "Kill barbarians until Att/Str/Def 30 (Barbarian Village)",
+      "detail": "Rotate styles: Attack \u219230, then Strength \u219230, then Defence \u219230. Light food from Barbarian Village fishing spot + range if needed (count ??).",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 3103
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3081,
+          "y": 3420,
+          "plane": 0,
+          "label": "Barbarian Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 30
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 30
+        },
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 30
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "barbarian",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 30,
+            "strength": 30,
+            "defence": 30
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "toggle-state",
+          "target": "attack-style",
+          "value": "rotate-per-30",
+          "note": "One style toggle per sub-goal; the chip stays until changed."
+        },
+        {
+          "type": "do-while",
+          "target": "fishing",
+          "value": null,
+          "note": "Trout/salmon spot + range are adjacent \u2014 restock food between kill sets."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "30s \u2192 40s: barbarians + Stronghold"
+    },
+    {
+      "id": "ctr-06-stronghold-crawlers",
+      "phase": "Endgame & extras",
+      "instruction": "Kill Flesh Crawlers until 40/40/40 (Stronghold level 2)",
+      "detail": "Enter Stronghold of Security (Barbarian Village hole), answer security-question doors, descend to level 2. Crawlers aggro and hit low \u2014 near-AFK, no food cost at these stats. Claim the coin rewards on each floor while passing.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 2500
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 1988,
+          "y": 5235,
+          "plane": 0,
+          "label": "Stronghold of Security"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 40
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 40
+        },
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 40
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "flesh_crawler",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 40,
+            "strength": 40,
+            "defence": 40
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "security-doors",
+          "value": "answer-questions",
+          "note": "Doors ask account-security questions; any correct answer opens."
+        },
+        {
+          "type": "safespot",
+          "target": "flesh-crawlers",
+          "value": "stand-in-pack",
+          "note": "Let aggro stack; re-aggro resets on floor exit/re-entry."
+        },
+        {
+          "type": "contested-fallback",
+          "target": null,
+          "value": "hop-worlds",
+          "note": "Room contested \u2192 hop; spawn clusters are identical across worlds."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "30s \u2192 40s: barbarians + Stronghold"
+    },
+    {
+      "id": "chkpt-combat-training-routing-3",
+      "phase": "Endgame & extras",
+      "instruction": "\u29c6 Routing branch: crabs vs slayer (pick one)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Routing branch: crabs vs slayer (pick one)"
+    },
+    {
+      "id": "ctr-07a-sand-crabs",
+      "phase": "Endgame & extras",
+      "instruction": "Kill Sand Crabs until 50/50/50 (Hosidius shore)",
+      "detail": "Routing branch A (default when Zeah access is open): AFK crab spots on the Hosidius coast. Reset aggro by running two spots away and back (~10s). Minimal food (??).",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 1744,
+          "y": 3564,
+          "plane": 0,
+          "label": "Hosidius"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 50
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 50
+        },
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 50
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "sand_crab",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 50,
+            "strength": 50,
+            "defence": 50
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "contested-fallback",
+          "target": "crab-spots",
+          "value": "hop-or-walk-west",
+          "note": "Crab spots are the classic contested hotspot \u2014 hop before walking."
+        },
+        {
+          "type": "do-while",
+          "target": "afk",
+          "value": null,
+          "note": "Aggro window ~10 min then reset run \u2014 pair with low-attention tasks."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "Routing branch: crabs vs slayer (pick one)"
+    },
+    {
+      "id": "ctr-07b-early-slayer",
+      "phase": "Endgame & extras",
+      "instruction": "Slayer tasks until 50/50/50 (Turael \u2192 Mazchna)",
+      "detail": "Routing branch B (pick when you want Slayer progress banked with the same hours): tasks from Turael at Burthorpe, graduate to Mazchna at combat 20. Same melee endpoint as branch A, plus Slayer levels toward later gear/tasks.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 401
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 2931,
+          "y": 3536,
+          "plane": 0,
+          "label": "Burthorpe (Turael)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 50
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 50
+        },
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 50
+        },
+        {
+          "type": "SKILL",
+          "skill": "SLAYER",
+          "level": 20
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "slayer_task",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 50,
+            "strength": 50,
+            "defence": 50
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "task-assignment",
+          "value": "??",
+          "note": "Task rolls vary; skip-cost is zero at Turael tier \u2014 reroll bad tasks by re-asking."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "Routing branch: crabs vs slayer (pick one)"
     }
   ]
 }

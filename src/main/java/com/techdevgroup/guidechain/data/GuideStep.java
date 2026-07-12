@@ -45,6 +45,21 @@ public class GuideStep
      */
     public List<CompletionCondition> completionConditions;
 
+    /**
+     * Optional execution hints (GRANULARITY ��4). Rendered as small chips
+     * under the step card. Removing all hints must leave a still-completable
+     * step — hints are advisory only. Null/empty = no chips rendered.
+     */
+    public List<GuideHint> hints;
+
+    /**
+     * Optional checkpoint group label (GRANULARITY §3a). Non-null on the
+     * header record and all member steps of a checkpoint group. The web view
+     * renders a {@code .checkpoint-divider} before the first step whose
+     * checkpoint value differs from the previous step's. Null = ungrouped.
+     */
+    public String checkpoint;
+
     // ── Convenience helpers ────────────────────────────────────────────────────
 
     public List<HighlightTarget> highlights()
@@ -60,5 +75,10 @@ public class GuideStep
     public List<CompletionCondition> completionConditions()
     {
         return completionConditions != null ? completionConditions : Collections.emptyList();
+    }
+
+    public List<GuideHint> hints()
+    {
+        return hints != null ? hints : Collections.emptyList();
     }
 }

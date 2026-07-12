@@ -333,6 +333,39 @@ a.step-instruction:hover { color: var(--accent); }
   background: var(--pane, #f8fafc);
 }
 
+/* ── Checkpoint sub-headers (atom-group dividers, GRANULARITY §3a) ── */
+.checkpoint-divider {
+  list-style: none;
+  margin: 0.5rem 0 0.15rem 1.2rem;
+  padding: 0.18rem 0.45rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--ok, #4caf7d);
+  border-left: 2px solid var(--ok, #4caf7d);
+  background: rgba(76, 175, 125, 0.07);
+  border-radius: 0 4px 4px 0;
+}
+
+/* ── Hint chips (GRANULARITY §4 execution advice) ── */
+.hint-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.hint-chip {
+  font-size: 0.66rem;
+  color: var(--warn, #e0a33d);
+  background: rgba(224, 163, 61, 0.10);
+  border: 1px solid rgba(224, 163, 61, 0.35);
+  border-radius: 3px;
+  padding: 0.03rem 0.35rem;
+  cursor: default;
+  white-space: nowrap;
+  overflow-wrap: anywhere;
+}
+
 /* ── Coverage index (semantic scoping ledger) ── */
 .plan-cov { margin: 0.3rem 0 0.6rem; font-size: 0.8rem; }
 .plan-cov a { color: var(--accent, #2563eb); text-decoration: none; }
