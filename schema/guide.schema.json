@@ -47,6 +47,33 @@
           "type": "array",
           "description": "All conditions must be simultaneously true for auto-advance. Empty = step never auto-advances (requires Skip).",
           "items": { "$ref": "#/definitions/condition" }
+        },
+        "media": {
+          "type": "array",
+          "description": "Captured frames/gifs (FRAMES_GALLERY §1). Additive-nullable; order is display order, entry 0 is the step's thumbnail.",
+          "items": { "$ref": "#/definitions/media" }
+        }
+      }
+    },
+    "media": {
+      "type": "object",
+      "required": ["kind", "state"],
+      "properties": {
+        "kind": { "enum": ["png", "gif"] },
+        "path": { "type": "string", "description": "Guide-source-relative, content-addressed path: media/<sha256[0:6]>/<name>. Exclusive with url." },
+        "url":  { "type": "string", "description": "Absolute URL (rare; loopback/pages only). Exclusive with path." },
+        "caption": { "type": "string" },
+        "state": {
+          "type": "object",
+          "description": "The state that produced this frame. Mandatory on every entry; unknown members are \"??\" or null, but the object itself must exist.",
+          "properties": {
+            "harness":  { "type": "string", "description": "Producing script / run id, e.g. spike/run.sh." },
+            "rev":      { "type": "integer", "description": "Content revision pin." },
+            "scenario": { "type": "string" },
+            "tile":     { "type": ["array", "null"], "description": "[x, y, plane] player pos, or null (login screen / interface-only)." },
+            "varbits":  { "type": "object" },
+            "captured": { "type": "string", "description": "ISO 8601 timestamp." }
+          }
         }
       }
     },
