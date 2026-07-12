@@ -3,6 +3,7 @@ package com.techdevgroup.guidechain.web;
 import com.techdevgroup.guidechain.data.ChainEntry;
 import com.techdevgroup.guidechain.data.CompletionCondition;
 import com.techdevgroup.guidechain.data.GuideHint;
+import com.techdevgroup.guidechain.data.GuideRef;
 import com.techdevgroup.guidechain.data.GuideStep;
 import com.techdevgroup.guidechain.data.ConditionType;
 import com.techdevgroup.guidechain.data.HighlightTarget;
@@ -63,6 +64,14 @@ final class WebFragments
             + "  <aside id=\"detail\" class=\"pane\" hx-get=\"/fragments/step/current\""
             + " hx-trigger=\"load\"></aside>\n"
             + "</main>\n"
+            + "<aside id=\"wikibox\" class=\"wikibox\" hidden>\n"
+            + "  <header class=\"wikibox-header\">\n"
+            + "    <span id=\"wikibox-title\" class=\"wikibox-title\"></span>\n"
+            + "    <a id=\"wikibox-ext\" class=\"wikibox-ext\" target=\"_blank\" rel=\"noopener\">open on wiki &#8599;</a>\n"
+            + "    <button id=\"wikibox-close\" class=\"wikibox-close\">&#x2715;</button>\n"
+            + "  </header>\n"
+            + "  <iframe id=\"wikibox-frame\" src=\"about:blank\" title=\"Wiki article\"></iframe>\n"
+            + "</aside>\n"
             + "<footer class=\"foot\">\n"
             + "  <span id=\"metrics\"></span>\n"
             + "  <span class=\"foot-links\"><a href=\"/api/state.json\">state.json</a>"
@@ -181,6 +190,12 @@ final class WebFragments
         sb.append("<li class=\"step-row st-").append(status).append("\"");
         if (r.status == PlanRow.Status.CURRENT) sb.append(" data-current=\"1\"");
         sb.append(">\n");
+        boolean checked = r.status == PlanRow.Status.DONE || r.status == PlanRow.Status.SKIPPED;
+        sb.append("<input type=\"checkbox\" class=\"step-check\"")
+          .append(" hx-post=\"/actions/step/").append(esc(r.key)).append("/toggle\"")
+          .append(" hx-target=\"#plan\"")
+          .append(checked ? " checked" : "")
+          .append(">\n");
         sb.append("<span class=\"step-num\" title=\"").append(status).append("\">")
           .append(statusIcon(r.status)).append(' ').append(r.globalIndex).append("</span>\n");
         sb.append("<div class=\"step-main\">\n");
@@ -211,6 +226,20 @@ final class WebFragments
                   .append("\">")
                   .append(esc(hintChipLabel(h)))
                   .append("</span>\n");
+            }
+            sb.append("</div>\n");
+        }
+        // Ref chips: wiki citation links that survive all htmx swaps via delegated handler.
+        if (!r.step.refs().isEmpty())
+        {
+            sb.append("<div class=\"ref-chips\">\n");
+            for (GuideRef ref : r.step.refs())
+            {
+                if (ref.title == null) continue;
+                sb.append("<a class=\"ref-chip\" href=\"#\"")
+                  .append(" data-wiki-title=\"").append(esc(ref.title)).append("\"")
+                  .append(" data-wiki-url=\"").append(esc(ref.url != null ? ref.url : "")).append("\"")
+                  .append(">&#128214; ").append(esc(ref.title)).append("</a>\n");
             }
             sb.append("</div>\n");
         }

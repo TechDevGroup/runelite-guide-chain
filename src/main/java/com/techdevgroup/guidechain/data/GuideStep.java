@@ -2,6 +2,7 @@ package com.techdevgroup.guidechain.data;
 
 import java.util.Collections;
 import java.util.List;
+import com.techdevgroup.guidechain.data.GuideRef;
 
 /**
  * One atomic step within a {@link Guide}.
@@ -60,6 +61,12 @@ public class GuideStep
      */
     public String checkpoint;
 
+    /**
+     * Optional wiki citations shown as chip links in the web view.
+     * Null/empty = no chips rendered. Additive-nullable: plugin-safe.
+     */
+    public List<GuideRef> refs;
+
     // ── Convenience helpers ────────────────────────────────────────────────────
 
     public List<HighlightTarget> highlights()
@@ -80,5 +87,10 @@ public class GuideStep
     public List<GuideHint> hints()
     {
         return hints != null ? hints : Collections.emptyList();
+    }
+
+    public List<GuideRef> refs()
+    {
+        return refs != null ? refs : Collections.emptyList();
     }
 }

@@ -31,4 +31,39 @@
       scrolled = true;
     }
   });
+
+  // ── Wiki lightbox ──────────────────────────────────────────────────────────
+  // ONE delegated handler on document survives all htmx swaps.
+  function openWikibox(title, extUrl) {
+    var box   = document.getElementById('wikibox');
+    var frame = document.getElementById('wikibox-frame');
+    var lbl   = document.getElementById('wikibox-title');
+    var ext   = document.getElementById('wikibox-ext');
+    if (!box || !frame) return;
+    frame.src = '/wiki/page?title=' + encodeURIComponent(title);
+    if (lbl) lbl.textContent = title;
+    if (ext) ext.href = extUrl || ('https://oldschool.runescape.wiki/w/' + encodeURIComponent(title));
+    box.hidden = false;
+  }
+
+  function closeWikibox() {
+    var box = document.getElementById('wikibox');
+    if (box) box.hidden = true;
+    // intentionally do NOT clear iframe src — reopening is instant from cache
+  }
+
+  document.addEventListener('click', function (e) {
+    var chip = e.target.closest('.ref-chip');
+    if (!chip) return;
+    e.preventDefault();
+    openWikibox(chip.dataset.wikiTitle || '', chip.dataset.wikiUrl || '');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (e.target.id === 'wikibox-close') closeWikibox();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeWikibox();
+  });
 })();

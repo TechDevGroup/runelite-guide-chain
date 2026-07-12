@@ -82,6 +82,8 @@ public final class GuideStore
         Set<String> doneSteps    = new LinkedHashSet<>();
         Set<String> skippedSteps = new LinkedHashSet<>();
         Set<String> manualAcks   = new LinkedHashSet<>();
+        /** Manually checked steps that are not pointer-done (persist across restarts). */
+        Set<String> manualDone   = new LinkedHashSet<>();
         CharacterSnapshot character;
         SessionMetrics metrics = new SessionMetrics();
     }
@@ -130,6 +132,7 @@ public final class GuideStore
                 if (loaded.doneSteps == null)    loaded.doneSteps    = new LinkedHashSet<>();
                 if (loaded.skippedSteps == null) loaded.skippedSteps = new LinkedHashSet<>();
                 if (loaded.manualAcks == null)   loaded.manualAcks   = new LinkedHashSet<>();
+                if (loaded.manualDone == null)   loaded.manualDone   = new LinkedHashSet<>();
                 if (loaded.metrics == null)      loaded.metrics      = new SessionMetrics();
                 state = loaded;
             }
@@ -385,6 +388,65 @@ public final class GuideStore
         notify("marks");
     }
 
+    /**
+     * Two-way checklist toggle.
+     * <ul>
+     *   <li>If the key is in {@code manualDone}: remove (uncheck).</li>
+     *   <li>If the step is pointer-done (before the current position): rewind
+     *       the position pointer to that step (accidental-check undo).</li>
+     *   <li>Otherwise: add to {@code manualDone} (check).</li>
+     * </ul>
+     */
+    public synchronized void toggle(String stepKey)
+    {
+        if (stepKey == null) return;
+        if (state.manualDone.contains(stepKey))
+        {
+            state.manualDone.remove(stepKey);
+            save();
+            notify("marks");
+            return;
+        }
+        int[] pos = findStepPosition(stepKey);
+        if (pos != null && isBeforeCurrent(pos))
+        {
+            // Rewind pointer — the checkbox was accidentally ticked for an already-done step
+            state.guideIndex = pos[0];
+            state.stepIndex  = pos[1];
+            save();
+            notify("position");
+            return;
+        }
+        state.manualDone.add(stepKey);
+        save();
+        notify("marks");
+    }
+
+    /** Find [guideIndex, stepIndex] of a step by key, or null if not found. */
+    private int[] findStepPosition(String stepKey)
+    {
+        ChainEntry chain = activeChain();
+        if (chain == null) return null;
+        List<String> files = chain.guides();
+        for (int gi = 0; gi < files.size(); gi++)
+        {
+            Guide g = guides.get(filenameToId(files.get(gi)));
+            if (g == null) continue;
+            List<GuideStep> steps = g.steps();
+            for (int si = 0; si < steps.size(); si++)
+            {
+                if (stepKey.equals(key(g.id, steps.get(si).id))) return new int[]{gi, si};
+            }
+        }
+        return null;
+    }
+
+    private boolean isBeforeCurrent(int[] pos)
+    {
+        if (pos[0] < state.guideIndex) return true;
+        return pos[0] == state.guideIndex && pos[1] < state.stepIndex;
+    }
+
     public synchronized boolean isDone(String stepKey)    { return state.doneSteps.contains(stepKey); }
     public synchronized boolean isSkipped(String stepKey) { return state.skippedSteps.contains(stepKey); }
 
@@ -428,9 +490,11 @@ public final class GuideStore
                 {
                     row.status = PlanRow.Status.SKIPPED;
                 }
-                else if (state.doneSteps.contains(row.key) || !seenCurrent && curKey != null)
+                else if (state.doneSteps.contains(row.key) || state.manualDone.contains(row.key)
+                        || !seenCurrent && curKey != null)
                 {
-                    // anything before the current position counts as done
+                    // anything before the current position counts as done;
+                    // manualDone covers checkbox-only marks
                     row.status = PlanRow.Status.DONE;
                 }
                 else
@@ -544,6 +608,7 @@ public final class GuideStore
     public synchronized Set<String> doneSteps()    { return new LinkedHashSet<>(state.doneSteps); }
     public synchronized Set<String> skippedSteps() { return new LinkedHashSet<>(state.skippedSteps); }
     public synchronized Set<String> manualAcks()   { return new LinkedHashSet<>(state.manualAcks); }
+    public synchronized Set<String> manualDone()   { return new LinkedHashSet<>(state.manualDone); }
 
     // ── Machine-readable full state (GET /api/state.json) ────────────────────
 
@@ -682,6 +747,9 @@ public final class GuideStore
         patched.highlights           = ov.highlights           != null ? ov.highlights           : step.highlights;
         patched.completionConditions = ov.completionConditions != null ? ov.completionConditions : step.completionConditions;
         patched.mapMarkers           = ov.mapMarkers           != null ? ov.mapMarkers           : step.mapMarkers;
+        patched.hints                = step.hints;    // additive pass-through; overrides cannot clear hints
+        patched.checkpoint           = step.checkpoint;
+        patched.refs                 = step.refs;     // additive pass-through; overrides cannot clear refs
         return patched;
     }
 

@@ -1651,7 +1651,14 @@
         }
       ],
       "coarse_of": "combat-training-routing",
-      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)"
+      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)",
+      "refs": [
+        {
+          "title": "Chicken",
+          "url": "https://oldschool.runescape.wiki/w/Chicken",
+          "kind": "npc"
+        }
+      ]
     },
     {
       "id": "ctr-02-kill-cows",
@@ -2003,7 +2010,14 @@
         }
       ],
       "coarse_of": "combat-training-routing",
-      "checkpoint": "Gear stop: Al Kharid scimitar"
+      "checkpoint": "Gear stop: Al Kharid scimitar",
+      "refs": [
+        {
+          "title": "Zeke's Superior Scimitars",
+          "url": "https://oldschool.runescape.wiki/w/Zeke%27s_Superior_Scimitars",
+          "kind": "npc"
+        }
+      ]
     },
     {
       "id": "ctr-04-equip-scimitar",
@@ -2572,7 +2586,19 @@
         }
       ],
       "coarse_of": "prayer-pot-supply-coarse",
-      "checkpoint": "Ranarr seeds (gather, N+)"
+      "checkpoint": "Ranarr seeds (gather, N+)",
+      "refs": [
+        {
+          "title": "Master Farmer",
+          "url": "https://oldschool.runescape.wiki/w/Master_Farmer",
+          "kind": "npc"
+        },
+        {
+          "title": "Ranarr seed",
+          "url": "https://oldschool.runescape.wiki/w/Ranarr_seed",
+          "kind": "item"
+        }
+      ]
     },
     {
       "id": "farm-herb-patch-guam",

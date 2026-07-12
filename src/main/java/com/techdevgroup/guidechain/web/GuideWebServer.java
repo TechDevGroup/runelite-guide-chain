@@ -6,6 +6,7 @@ import com.sun.net.httpserver.HttpServer;
 import com.techdevgroup.guidechain.icons.IconStore;
 import com.techdevgroup.guidechain.icons.RepoIconSource;
 import com.techdevgroup.guidechain.store.GuideStore;
+import com.techdevgroup.guidechain.wiki.WikiPageStore;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -66,6 +67,7 @@ public final class GuideWebServer
     private final HttpServer server;
     private final ExecutorService executor;
     private final IconStore icons;
+    private final WikiPageStore wikiPages;
 
     /**
      * @param refreshAction invoked by POST /actions/refresh-guides; inside the
@@ -79,6 +81,7 @@ public final class GuideWebServer
         this.refreshAction = refreshAction;
         this.fragments = new WebFragments(store);
         this.icons = new IconStore(new File(store.stateFile().getParentFile(), "icons"), new RepoIconSource());
+        this.wikiPages = new WikiPageStore(new File(store.stateFile().getParentFile(), "wiki"));
         this.executor = Executors.newFixedThreadPool(2, r ->
         {
             Thread t = new Thread(r, "guide-chain-web");
@@ -138,6 +141,11 @@ public final class GuideWebServer
                     sendHtml(ex, fragments.stepFragment(key));
                     return;
                 }
+                if ("/wiki/page".equals(path))
+                {
+                    serveWikiPage(ex);
+                    return;
+                }
                 if ("/api/state.json".equals(path))
                 {
                     send(ex, 200, "application/json; charset=utf-8", gson.toJson(store.stateJson()));
@@ -188,9 +196,10 @@ public final class GuideWebServer
                         store.recordWebAction();
                         switch (action)
                         {
-                            case "done": store.markDone(key);    sendPlanAfterAction(ex); return;
-                            case "skip": store.markSkipped(key); sendPlanAfterAction(ex); return;
-                            case "back": store.back();           sendPlanAfterAction(ex); return;
+                            case "done":   store.markDone(key);    sendPlanAfterAction(ex); return;
+                            case "skip":   store.markSkipped(key); sendPlanAfterAction(ex); return;
+                            case "back":   store.back();           sendPlanAfterAction(ex); return;
+                            case "toggle": store.toggle(key);      sendPlanAfterAction(ex); return;
                             default: break;
                         }
                     }
@@ -224,6 +233,30 @@ public final class GuideWebServer
     }
 
     // ── Static resources (vendored from the jar) ─────────────────────────────
+
+    /** Lazy wiki page: disk-cached HTML blob from the MediaWiki parse API. */
+    private void serveWikiPage(HttpExchange ex) throws IOException
+    {
+        String title = queryParams(ex).get("title");
+        if (title == null || title.isEmpty())
+        {
+            send(ex, 400, "text/plain; charset=utf-8", "missing title");
+            return;
+        }
+        byte[] html = wikiPages.page(title);
+        if (html == null)
+        {
+            send(ex, 404, "text/plain; charset=utf-8", "wiki page not found");
+            return;
+        }
+        ex.getResponseHeaders().set("Content-Type", "text/html; charset=utf-8");
+        ex.getResponseHeaders().set("Cache-Control", "public, max-age=86400");
+        ex.sendResponseHeaders(200, html.length);
+        try (OutputStream os = ex.getResponseBody())
+        {
+            os.write(html);
+        }
+    }
 
     /** Lazy item icon: disk-cached PNG blob rendered from RuneLite's cache repo. */
     private void serveItemIcon(HttpExchange ex, String name) throws IOException
@@ -310,8 +343,20 @@ public final class GuideWebServer
     private Map<String, String> formParams(HttpExchange ex) throws IOException
     {
         String body = new String(ex.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);
+        return splitParams(body);
+    }
+
+    private static Map<String, String> queryParams(HttpExchange ex)
+    {
+        String raw = ex.getRequestURI().getRawQuery();
+        return splitParams(raw != null ? raw : "");
+    }
+
+    private static Map<String, String> splitParams(String raw)
+    {
         Map<String, String> params = new HashMap<>();
-        for (String pair : body.split("&"))
+        if (raw.isEmpty()) return params;
+        for (String pair : raw.split("&"))
         {
             int eq = pair.indexOf('=');
             if (eq > 0)

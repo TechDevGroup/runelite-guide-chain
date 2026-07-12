@@ -402,3 +402,117 @@ table.cov code { font-size: 0.72rem; color: var(--ink-dim); }
   image-rendering: pixelated;
   margin-right: 0.15rem;
 }
+
+/* ── Wiki ref chips ── */
+.ref-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.ref-chip {
+  font-size: 0.68rem;
+  color: var(--accent);
+  background: rgba(53, 181, 255, 0.08);
+  border: 1px solid rgba(53, 181, 255, 0.3);
+  border-radius: 3px;
+  padding: 0.03rem 0.35rem;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.ref-chip:hover {
+  background: rgba(53, 181, 255, 0.18);
+  border-color: var(--accent);
+}
+
+/* ── Step checklist ── */
+.step-check {
+  flex: 0 0 auto;
+  accent-color: var(--accent);
+  cursor: pointer;
+  margin-top: 0.35rem;
+}
+
+/* ── Wiki lightbox (persistent sidebar / bottom-sheet) ── */
+.wikibox {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: min(46rem, 50vw);
+  z-index: 50;
+  background: var(--pane);
+  border-left: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(0);
+  transition: transform 0.2s ease;
+}
+
+.wikibox[hidden] {
+  display: none;
+}
+
+.wikibox-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+}
+
+.wikibox-title {
+  flex: 1 1 auto;
+  font-weight: 600;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wikibox-ext {
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.wikibox-ext:hover { text-decoration: underline; }
+
+.wikibox-close {
+  font: inherit;
+  font-size: 0.9rem;
+  background: none;
+  border: none;
+  color: var(--ink-dim);
+  cursor: pointer;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  flex: 0 0 auto;
+}
+
+.wikibox-close:hover { color: var(--ink); background: var(--pane-2); }
+
+#wikibox-frame {
+  flex: 1 1 auto;
+  width: 100%;
+  border: 0;
+}
+
+/* Bottom sheet on narrow screens */
+@media (max-width: 900px) {
+  .wikibox {
+    width: 100vw;
+    height: 85vh;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    border-top: 1px solid var(--line);
+    border-left: none;
+  }
+}
