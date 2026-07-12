@@ -10,14 +10,19 @@ import com.techdevgroup.guidechain.data.ConditionType;
 import com.techdevgroup.guidechain.data.HighlightTarget;
 import com.techdevgroup.guidechain.data.TargetType;
 import com.techdevgroup.guidechain.data.MapMarker;
+import com.techdevgroup.guidechain.reference.ReferenceEntry;
+import com.techdevgroup.guidechain.reference.ReferenceStore;
 import com.techdevgroup.guidechain.store.ConditionStatus;
 import com.techdevgroup.guidechain.store.GuideStore;
 import com.techdevgroup.guidechain.store.PlanRow;
 import com.techdevgroup.guidechain.store.SessionMetrics;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import static com.techdevgroup.guidechain.web.Html.esc;
 
@@ -32,10 +37,12 @@ import static com.techdevgroup.guidechain.web.Html.esc;
 final class WebFragments
 {
     private final GuideStore store;
+    private final ReferenceStore reference;
 
-    WebFragments(GuideStore store)
+    WebFragments(GuideStore store, ReferenceStore reference)
     {
         this.store = store;
+        this.reference = reference;
     }
 
     // ── App shell ─────────────────────────────────────────────────────────────
@@ -54,6 +61,8 @@ final class WebFragments
             + "  <h1>Guide Chain</h1>\n"
             + "  <a class=\"btn btn-ghost\" hx-get=\"/fragments/library\" hx-target=\"#plan\""
             + " href=\"#\" title=\"Browse all routes and reference guides\">&#9776; Library</a>\n"
+            + "  <a class=\"btn btn-ghost\" hx-get=\"/fragments/reference\" hx-target=\"#plan\""
+            + " href=\"#\" title=\"Browse quests, diaries, minigames, and unlocks\">&#128218; Reference</a>\n"
             + "  <div id=\"chains\" class=\"chains\" hx-get=\"/fragments/chains\""
             + " hx-trigger=\"load, guide-store-changed from:body\"></div>\n"
             + "  <button class=\"btn btn-ghost\" hx-post=\"/actions/refresh-guides\""
@@ -534,6 +543,182 @@ final class WebFragments
             + "<button class=\"btn\" hx-post=\"/actions/select-chain\" hx-vals='" + vals
             + "' hx-target=\"#plan\">Open route →</button>\n"
             + "</div>\n</article>\n";
+    }
+
+    // ── Reference catalog (local analogue of the wiki's Supplemental-guides index) ──
+
+    private static final List<String> REFERENCE_KINDS = Arrays.asList("quest", "diary", "minigame", "unlock");
+
+    private static final Map<String, String> REFERENCE_KIND_LABELS = referenceKindLabels();
+
+    private static Map<String, String> referenceKindLabels()
+    {
+        Map<String, String> m = new LinkedHashMap<>();
+        m.put("quest", "Quests");
+        m.put("diary", "Achievement diaries");
+        m.put("minigame", "Minigames");
+        m.put("unlock", "Unlocks");
+        return m;
+    }
+
+    /**
+     * Categorized, searchable catalog of every quest / achievement diary /
+     * minigame / one-off unlock in {@link ReferenceStore} — the local analogue
+     * of the wiki's Supplemental-guides index. {@code kindFilter} narrows to
+     * one kind ({@code quest|diary|minigame|unlock}); null/blank shows every
+     * kind, grouped. Cards reuse the same {@code .lib-card}/{@code .ref-chip}
+     * markup as {@link #libraryFragment()} and the step rows, so the existing
+     * delegated wiki-lightbox click handler in app.js catches these chips too.
+     */
+    String referenceFragment(String kindFilter)
+    {
+        List<ReferenceEntry> entries = reference.byKind(kindFilter);
+        StringBuilder sb = new StringBuilder();
+        sb.append("<div class=\"library reference\">\n");
+        sb.append("<div class=\"lib-intro\"><h2>Reference</h2>\n")
+          .append("<p>Quests, achievement diaries, minigames, and one-off unlocks pulled from the wiki ")
+          .append("research corpus — browse for requirements, rewards, and citations. ")
+          .append(entries.size()).append(" entries.</p></div>\n");
+        sb.append(referenceKindTabs(kindFilter));
+        sb.append("<div class=\"ref-search-row\"><input type=\"search\" id=\"ref-search\" class=\"ref-search\"")
+          .append(" placeholder=\"Search the reference catalog…\" autocomplete=\"off\"></div>\n");
+        if (entries.isEmpty())
+        {
+            sb.append("<p class=\"empty\">No reference entries loaded.</p>\n</div>\n");
+            return sb.toString();
+        }
+        appendReferenceGroups(sb, entries);
+        sb.append("</div>\n");
+        return sb.toString();
+    }
+
+    private String referenceKindTabs(String active)
+    {
+        StringBuilder sb = new StringBuilder("<div class=\"ref-tabs\">\n");
+        sb.append(referenceTab(null, "All", active));
+        for (String kind : REFERENCE_KINDS)
+        {
+            sb.append(referenceTab(kind, REFERENCE_KIND_LABELS.get(kind), active));
+        }
+        sb.append("</div>\n");
+        return sb.toString();
+    }
+
+    private String referenceTab(String kind, String label, String active)
+    {
+        boolean isActive = kind == null ? (active == null || active.isEmpty()) : kind.equals(active);
+        String href = kind == null ? "/fragments/reference" : "/fragments/reference?kind=" + kind;
+        return "<a class=\"ref-tab" + (isActive ? " ref-tab-active" : "") + "\" href=\"#\""
+            + " hx-get=\"" + href + "\" hx-target=\"#plan\">" + esc(label) + "</a>\n";
+    }
+
+    private void appendReferenceGroups(StringBuilder sb, List<ReferenceEntry> entries)
+    {
+        Map<String, List<ReferenceEntry>> byKind = new LinkedHashMap<>();
+        for (String kind : REFERENCE_KINDS) byKind.put(kind, new ArrayList<>());
+        for (ReferenceEntry e : entries)
+        {
+            String kind = e.kind != null ? e.kind : "other";
+            byKind.computeIfAbsent(kind, k -> new ArrayList<>()).add(e);
+        }
+        for (Map.Entry<String, List<ReferenceEntry>> group : byKind.entrySet())
+        {
+            List<ReferenceEntry> rows = group.getValue();
+            if (rows.isEmpty()) continue;
+            String label = REFERENCE_KIND_LABELS.getOrDefault(group.getKey(), group.getKey());
+            sb.append("<section class=\"lib-cat ref-cat\"><h3>").append(esc(label))
+              .append(" <span class=\"ref-count\">(").append(rows.size()).append(")</span></h3>\n")
+              .append("<div class=\"lib-grid\">\n");
+            for (ReferenceEntry e : rows) sb.append(referenceCard(e));
+            sb.append("</div>\n</section>\n");
+        }
+    }
+
+    private String referenceCard(ReferenceEntry e)
+    {
+        String name = e.name != null && !e.name.isEmpty() ? e.name : (e.id != null ? e.id : "?");
+        String reqsStr = summarizeRefJson(e.reqs);
+        String rewardsStr = summarizeRefJson(e.rewards);
+        String search = (name + " " + (e.notes != null ? e.notes : "") + " " + reqsStr + " " + rewardsStr)
+            .toLowerCase();
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("<article class=\"lib-card ref-card\" data-search=\"").append(esc(search)).append("\">\n");
+        sb.append("<h4>").append(esc(name)).append("</h4>\n");
+        if (!reqsStr.isEmpty())
+        {
+            sb.append("<p class=\"ref-line\"><span class=\"ref-line-label\">reqs</span> ")
+              .append(esc(reqsStr)).append("</p>\n");
+        }
+        if (!rewardsStr.isEmpty())
+        {
+            sb.append("<p class=\"ref-line\"><span class=\"ref-line-label\">rewards</span> ")
+              .append(esc(rewardsStr)).append("</p>\n");
+        }
+        if (e.notes != null && !e.notes.isEmpty())
+        {
+            sb.append("<p class=\"lib-desc ref-notes\">").append(esc(truncate(e.notes, 220))).append("</p>\n");
+        }
+        if (!e.refs().isEmpty())
+        {
+            sb.append("<div class=\"ref-chips\">\n");
+            for (GuideRef ref : e.refs())
+            {
+                if (ref.title == null) continue;
+                sb.append("<a class=\"ref-chip\" href=\"#\"")
+                  .append(" data-wiki-title=\"").append(esc(ref.title)).append("\"")
+                  .append(" data-wiki-url=\"").append(esc(ref.url != null ? ref.url : "")).append("\"")
+                  .append(">&#128214; ").append(esc(ref.title)).append("</a>\n");
+            }
+            sb.append("</div>\n");
+        }
+        sb.append("</article>\n");
+        return sb.toString();
+    }
+
+    /**
+     * Renders a Gson-decoded reqs/rewards value as a short inline summary.
+     * Source rows are heterogeneous (dict of skill levels, list of item
+     * strings, a plain caveat string, or nested combinations of all three) —
+     * this recurses through Map/List uniformly rather than assuming a shape,
+     * the same defensive stance {@link #stateValueStr} takes for media state.
+     */
+    private static String summarizeRefJson(Object v)
+    {
+        if (v == null) return "";
+        if (v instanceof Map)
+        {
+            Map<?, ?> map = (Map<?, ?>) v;
+            StringBuilder sb = new StringBuilder();
+            for (Map.Entry<?, ?> en : map.entrySet())
+            {
+                String vs = summarizeRefJson(en.getValue());
+                if (vs.isEmpty()) continue;
+                if (sb.length() > 0) sb.append("; ");
+                sb.append(en.getKey()).append(": ").append(vs);
+            }
+            return sb.toString();
+        }
+        if (v instanceof List)
+        {
+            List<?> list = (List<?>) v;
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < list.size(); i++)
+            {
+                String vs = summarizeRefJson(list.get(i));
+                if (vs.isEmpty()) continue;
+                if (sb.length() > 0) sb.append(", ");
+                sb.append(vs);
+            }
+            return sb.toString();
+        }
+        return stateValueStr(v);
+    }
+
+    private static String truncate(String s, int max)
+    {
+        if (s == null || s.length() <= max) return s == null ? "" : s;
+        return s.substring(0, max).trim() + "…";
     }
 
     // ── Coverage index (semantic scoping: detail we have vs. stubs) ──────────

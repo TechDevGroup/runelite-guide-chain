@@ -330,6 +330,29 @@ a.step-instruction:hover { color: var(--accent); }
 .lib-meta { font-size: 0.74rem; color: var(--ink-dim); }
 .lib-actions { display: flex; gap: 0.4rem; }
 
+/* ── Reference catalog (local analogue of the wiki's Supplemental-guides index) ── */
+.ref-tabs { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.2rem 0 0.7rem; }
+.ref-tab {
+  font-size: 0.78rem; color: var(--ink-dim); text-decoration: none;
+  border: 1px solid var(--line, #e5e7eb); border-radius: 999px;
+  padding: 0.18rem 0.65rem; background: var(--pane, #f8fafc);
+}
+.ref-tab-active { color: var(--accent, #2563eb); border-color: var(--accent, #2563eb); font-weight: 600; }
+.ref-search-row { margin: 0 0 0.9rem; }
+.ref-search {
+  width: 100%; max-width: 26rem; font: inherit; padding: 0.35rem 0.6rem;
+  border: 1px solid var(--line, #e5e7eb); border-radius: 6px; background: var(--pane, #fff);
+  color: inherit;
+}
+.ref-count { font-weight: 400; color: var(--ink-dim); }
+.ref-card { gap: 0.3rem; }
+.ref-line { margin: 0; font-size: 0.78rem; }
+.ref-line-label {
+  font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--ink-dim); margin-right: 0.3rem;
+}
+.ref-notes { font-size: 0.78rem; }
+
 /* ── Phase / episode dividers (milestone-structured route) ── */
 .phase-divider {
   list-style: none;

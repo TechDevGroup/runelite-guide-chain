@@ -7,6 +7,7 @@ import com.techdevgroup.guidechain.data.GuideMedia;
 import com.techdevgroup.guidechain.icons.IconStore;
 import com.techdevgroup.guidechain.icons.RepoIconSource;
 import com.techdevgroup.guidechain.media.MediaStore;
+import com.techdevgroup.guidechain.reference.ReferenceStore;
 import com.techdevgroup.guidechain.store.GuideStore;
 import com.techdevgroup.guidechain.store.PlanRow;
 import com.techdevgroup.guidechain.wiki.WikiPageStore;
@@ -42,6 +43,7 @@ import java.util.logging.Logger;
  * GET  /static/{file}                 vendored htmx / css / js / license
  * GET  /fragments/chains              chain picker partial
  * GET  /fragments/plan                ordered task list partial
+ * GET  /fragments/reference           reference catalog partial (quest/diary/minigame/unlock; ?kind=)
  * GET  /fragments/step/current        detail partial following the position
  * GET  /fragments/step/{gid}/{sid}    detail partial for one step
  * GET  /fragments/gallery/{gid}/{sid} media gallery partial for one step (FRAMES_GALLERY §3)
@@ -75,6 +77,7 @@ public final class GuideWebServer
     private final IconStore icons;
     private final WikiPageStore wikiPages;
     private final MediaStore media;
+    private final ReferenceStore reference;
 
     /**
      * @param refreshAction invoked by POST /actions/refresh-guides; inside the
@@ -86,7 +89,8 @@ public final class GuideWebServer
         this.store = store;
         this.gson = gson;
         this.refreshAction = refreshAction;
-        this.fragments = new WebFragments(store);
+        this.reference = new ReferenceStore(gson);
+        this.fragments = new WebFragments(store, reference);
         this.icons = new IconStore(new File(store.stateFile().getParentFile(), "icons"), new RepoIconSource());
         this.wikiPages = new WikiPageStore(new File(store.stateFile().getParentFile(), "wiki"));
         // "guides" mirrors GuideManager.GUIDES_DIR on the plugin side (stateFile's
@@ -147,6 +151,11 @@ public final class GuideWebServer
                 if ("/fragments/plan".equals(path))            { sendHtml(ex, fragments.planFragment()); return; }
                 if ("/fragments/index".equals(path))           { sendHtml(ex, fragments.indexFragment()); return; }
                 if ("/fragments/library".equals(path))         { sendHtml(ex, fragments.libraryFragment()); return; }
+                if ("/fragments/reference".equals(path))
+                {
+                    sendHtml(ex, fragments.referenceFragment(queryParams(ex).get("kind")));
+                    return;
+                }
                 if (path.startsWith("/fragments/step/"))
                 {
                     String key = decode(path.substring("/fragments/step/".length()));

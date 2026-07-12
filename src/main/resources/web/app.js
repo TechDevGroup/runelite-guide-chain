@@ -74,6 +74,23 @@
     if (e.key === 'Escape') { closeWikibox(); closeMediaLightbox(); }
   });
 
+  // ── Reference catalog search ──────────────────────────────────────────────
+  // One delegated 'input' listener (bubbles, unlike focus/blur) survives the
+  // #plan htmx swaps that replace the #ref-search box itself on every kind-tab
+  // click — filters .ref-card elements client-side against each card's own
+  // pre-lowercased data-search blob (name + notes + reqs + rewards summary).
+  document.addEventListener('input', function (e) {
+    if (e.target.id !== 'ref-search') return;
+    var q = e.target.value.trim().toLowerCase();
+    document.querySelectorAll('.ref-card').forEach(function (card) {
+      card.hidden = q !== '' && (card.dataset.search || '').indexOf(q) === -1;
+    });
+    document.querySelectorAll('.ref-cat').forEach(function (section) {
+      var visible = section.querySelector('.ref-card:not([hidden])');
+      section.hidden = q !== '' && !visible;
+    });
+  });
+
   // ── Media gallery + lightbox (FRAMES_GALLERY §3) ─────────────────────────
   // The #gallery pane lives OUTSIDE the #plan/#detail swap zones, so it is
   // refreshed here in plain JS — never via an htmx poll — on exactly two
