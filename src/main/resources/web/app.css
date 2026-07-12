@@ -41,6 +41,11 @@ html, body {
   align-items: center;
   gap: 0.5rem 1rem;
   border-bottom: 1px solid var(--line);
+  /* Pinned to the top of the viewport — the header never scrolls away. */
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--bg);
 }
 
 .topbar h1 {
@@ -88,9 +93,9 @@ html, body {
      scrolls internally when its content is taller than the screen. */
   #detail {
     position: sticky;
-    top: 0.5rem;
+    top: 3.5rem;                        /* clear the sticky header */
     align-self: start;
-    max-height: calc(100vh - 1rem);
+    max-height: calc(100vh - 4rem);
     overflow-y: auto;
   }
 }

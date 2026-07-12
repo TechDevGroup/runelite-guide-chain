@@ -49,7 +49,10 @@
     if (!planIsShowing() || typeof htmx === 'undefined') return;
     htmx.ajax('GET', '/fragments/plan', { target: '#plan', swap: 'innerHTML' });
   }
-  setInterval(refreshPlan, 2000);
+  // Refresh ONLY on real changes (a checklist action fires guide-store-changed),
+  // never on a blind timer: the old every-2s re-swap made the .pane class flicker
+  // htmx-request/settling every 1-2s and reset scroll mid-drag. A live game client,
+  // when connected, dispatches guide-store-changed on state change — event-driven.
   document.body.addEventListener('guide-store-changed', refreshPlan);
 
   // Kill the native jump from every internal action anchor (href="#"): htmx /
