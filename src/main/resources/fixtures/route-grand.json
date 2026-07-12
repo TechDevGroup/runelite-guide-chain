@@ -11833,7 +11833,7 @@
       "id": "quest-imp-catcher",
       "phase": "Toward Barrows runs",
       "instruction": "Complete Imp Catcher",
-      "detail": "No requirements. Collect the 4 coloured beads (buy on GE or kill imps -- F2P spots near Falador's south entrance or Karamja volcano top; members near Ardougne Monastery/Chasm of Fire/Charcoal furnace), then hand them to Wizard Mizgog atop the Wizards' Tower for the amulet of accuracy.",
+      "detail": "No requirements. Collect the 4 coloured beads (kill imps -- F2P spots near Falador's south entrance or Karamja volcano top; members near Ardougne Monastery/Chasm of Fire/Charcoal furnace), then hand them to Wizard Mizgog atop the Wizards' Tower for the amulet of accuracy.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -20198,7 +20198,7 @@
       "methods": [
         {
           "method": "Normal logs, burning in a row",
-          "location": "Grand Exchange (east side) or Varrock west bank",
+          "location": "Varrock west bank (chop your own logs -- never GE)",
           "level_band": "1-15",
           "members": "??",
           "xp_hr": "??",
@@ -20220,7 +20220,7 @@
         },
         {
           "method": "Coloured firelighter logs",
-          "location": "Grand Exchange (east side) or Varrock west bank",
+          "location": "Varrock west bank (chop your own logs; apply a firelighter -- never GE)",
           "level_band": "1-30",
           "members": "??",
           "xp_hr": 74250,
@@ -23410,7 +23410,7 @@
       "id": "train-firemaking-30",
       "phase": "Toward Barrows runs",
       "instruction": "Train Firemaking to 30",
-      "detail": "Pick a method: Oak logs from GE or Draynor oaks / Coloured firelighter logs / Pyre logs, 1-tick creation.",
+      "detail": "Pick a method: Oak logs (chop at Draynor) / Coloured firelighter logs / Pyre logs, 1-tick creation.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -23450,8 +23450,8 @@
       ],
       "methods": [
         {
-          "method": "Oak logs from GE or Draynor oaks",
-          "location": "Grand Exchange or Draynor Village oak trees",
+          "method": "Oak logs (chop at Draynor)",
+          "location": "Draynor Village oak trees",
           "level_band": "15-30",
           "members": "??",
           "xp_hr": "??",
@@ -23478,7 +23478,7 @@
         },
         {
           "method": "Coloured firelighter logs",
-          "location": "Grand Exchange (east side) or Varrock west bank",
+          "location": "Varrock west bank (chop your own logs; apply a firelighter -- never GE)",
           "level_band": "1-30",
           "members": "??",
           "xp_hr": 74250,
@@ -28401,7 +28401,7 @@
       "methods": [
         {
           "method": "Maple logs",
-          "location": "Grand Exchange (east side) or Varrock west bank",
+          "location": "Varrock west bank (chop your own maple logs -- never GE)",
           "level_band": "45-50",
           "members": "??",
           "xp_hr": 200475,
@@ -28423,7 +28423,7 @@
         },
         {
           "method": "Willow logs",
-          "location": "Grand Exchange (east side) or Varrock west bank",
+          "location": "Varrock west bank (chop your own willow logs -- never GE)",
           "level_band": "30-35",
           "members": "??",
           "xp_hr": 107000,
@@ -28445,7 +28445,7 @@
         },
         {
           "method": "Teak logs",
-          "location": "Grand Exchange (east side) or Varrock west bank",
+          "location": "Varrock west bank (chop your own teak logs -- never GE)",
           "level_band": "35-42",
           "members": "??",
           "xp_hr": 138000,
@@ -28467,7 +28467,7 @@
         },
         {
           "method": "Arctic pine logs",
-          "location": "Grand Exchange (east side) or Varrock west bank",
+          "location": "Varrock west bank (chop your own arctic pine logs -- never GE)",
           "level_band": "42-45",
           "members": "??",
           "xp_hr": 185625,
@@ -30757,7 +30757,7 @@
       "methods": [
         {
           "method": "High Level Alchemy",
-          "location": "Anywhere, on noted/bought items",
+          "location": "Anywhere, on noted items",
           "level_band": "43-55",
           "members": "??",
           "xp_hr": 78000,
@@ -30775,7 +30775,7 @@
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
           ],
-          "notes": "Core money-maker from level 55; up to ~78,000 xp/h stationary per the page, matching this row's own hint."
+          "notes": "Core money-maker from level 55; up to ~78,000 xp/h stationary per the page, matching this row's own hint. Per project convention, source items to alch via drops/production, not Grand Exchange purchase."
         },
         {
           "method": "Superheat Item (smelt ores into bars)",
@@ -31019,7 +31019,7 @@
         },
         {
           "method": "High Level Alchemy",
-          "location": "Anywhere, on noted/bought items",
+          "location": "Anywhere, on noted items",
           "level_band": "55-70",
           "members": "??",
           "xp_hr": 78000,
@@ -31037,7 +31037,7 @@
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
           ],
-          "notes": "The 'Alching' half of this row's label; up to ~78,000 xp/h stationary."
+          "notes": "The 'Alching' half of this row's label; up to ~78,000 xp/h stationary. Per project convention, source items to alch via drops/production, not Grand Exchange purchase."
         },
         {
           "method": "Exploiting elemental weakness on crabs (Frost Crabs, 100% Fire weakness)",
