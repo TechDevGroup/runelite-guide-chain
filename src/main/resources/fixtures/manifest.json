@@ -13,6 +13,13 @@
       "category": "Reference",
       "description": "Every step the system knows about, topo-ordered — the semantic index/appendix. Use the coverage ledger to see which steps already carry detail, highlights, map markers and auto-advance conditions versus which are still stubs to enrich.",
       "guides": ["route-corpus.json"]
+    },
+    {
+      "id": "quest-progression",
+      "name": "Quest Progression",
+      "category": "Progression routes",
+      "description": "215 of 216 routable quests and miniquests (only The Frozen Door's unboostable Hitpoints 70 requirement is out of reach of the current training bank), prereq-ordered by the progression-router planner and interleaved with the skill training each quest actually needs. Wiki-cited throughout.",
+      "guides": ["route-quests.json"]
     }
   ]
 }
