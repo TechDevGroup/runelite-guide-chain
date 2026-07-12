@@ -3468,6 +3468,25 @@
       ]
     },
     {
+      "id": "quest-observatory-quest",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Observatory Quest",
+      "detail": "Fetch-quest structure: give the professor 3 planks, a bronze bar, and molten glass (3 separate hand-ins, must fully finish each before continuing), then retrieve a stolen lens mould from the goblin-infested Observatory Dungeon below (goblin kitchen key from a chest, a sleeping guard to bypass/kill), craft the new lens from the mould + molten glass, and view the rebuilt telescope to receive your (fixed, account-locked) constellation reward. An unlit antipoison spawns near the dungeon entrance if you didn't bring one.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Observatory Quest",
+          "url": "https://oldschool.runescape.wiki/w/Observatory_Quest"
+        }
+      ]
+    },
+    {
       "id": "quest-underground-pass",
       "phase": "Toward Quest cape",
       "instruction": "Complete Underground Pass",
@@ -3495,25 +3514,6 @@
           "target": null,
           "value": "agility +3000, attack +3000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-observatory-quest",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Observatory Quest",
-      "detail": "Fetch-quest structure: give the professor 3 planks, a bronze bar, and molten glass (3 separate hand-ins, must fully finish each before continuing), then retrieve a stolen lens mould from the goblin-infested Observatory Dungeon below (goblin kitchen key from a chest, a sleeping guard to bypass/kill), craft the new lens from the mould + molten glass, and view the rebuilt telescope to receive your (fixed, account-locked) constellation reward. An unlit antipoison spawns near the dungeon entrance if you didn't bring one.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Observatory Quest",
-          "url": "https://oldschool.runescape.wiki/w/Observatory_Quest"
         }
       ]
     },
@@ -3891,1471 +3891,6 @@
       ]
     },
     {
-      "id": "train-firemaking-30",
-      "phase": "Toward Quest cape",
-      "instruction": "Train Firemaking to 30",
-      "detail": "Oak logs from GE or Draynor oaks.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "FIREMAKING",
-          "level": 30
-        }
-      ],
-      "atom": {
-        "verb": "produce",
-        "target": "ash_from_oak_logs",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "skill": {
-            "firemaking": 30
-          }
-        }
-      },
-      "refs": [
-        {
-          "title": "Experience",
-          "slug": "Experience_table.s2",
-          "url": "https://oldschool.runescape.wiki/w/Experience"
-        },
-        {
-          "title": "Pay-to-play Firemaking training",
-          "slug": "Pay-to-play_Firemaking_training.s3",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
-        },
-        {
-          "title": "Pay-to-play Woodcutting training",
-          "slug": "Pay-to-play_Woodcutting_training.s18",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
-        }
-      ]
-    },
-    {
-      "id": "quest-sea-slug",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Sea Slug",
-      "detail": "First quest in the Sea Slug series and #3 in the Temple Knight series. Give Holgart swamp paste to fix his boat and reach the Fishing Platform; find Bailey to learn sea slugs fear heat, rescue Kennith's father Kent from a nearby island, then light a torch (needs Firemaking 30, boostable) using broken glass + damp sticks, and use it to save Kennith from the platform machinery. CORRECTION to the depth:04 queue payload: its rationale text calls this quest's unlock 'Fishing Guild access' -- the quest's own Rewards section states the unlock is 'Access to the Fishing Platform', not the Fishing Guild; these are different locations and the brief's phrasing appears to be an error. Gates The Slug Menace (sequel).",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Sea Slug",
-          "url": "https://oldschool.runescape.wiki/w/Sea_Slug"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "fishing +7175",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-the-slug-menace",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete The Slug Menace",
-      "detail": "Second Temple Knight quest, a direct sequel to Wanted! (so it inherits that entire chain: Recruitment Drive, Black Knights' Fortress, Druidic Ritual, The Lost Tribe, Rune Mysteries, Goblin Diplomacy, Enter the Abyss, Priest in Peril) plus Sea Slug and 30 Crafting/Runecraft/Slayer/Thieving. Investigate odd behaviour in Witchaven by interviewing 3 townsfolk, find a hidden dungeon behind a false wall with a locked 'imposing door', scan it with the Commorb to get a torn transcription, then recover and repair 2 more page fragments (one from the mayor's desk, one solved via a sea-slug-glue matching puzzle on the Fishing Platform). Shape essence into all 5 rune types at their respective altars, use the finished runes to open the door, then melee-only kill the level 62 Slug Prince (drains Prayer, safespottable with a halberd).",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "The Slug Menace",
-          "url": "https://oldschool.runescape.wiki/w/The_Slug_Menace"
-        },
-        {
-          "title": "The Slug Menace/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/The_Slug_Menace/Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "crafting +3500, runecraft +3500, thieving +3500",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "train-construction-40",
-      "phase": "Toward Quest cape",
-      "instruction": "Train Construction to 40",
-      "detail": "Oak chairs or larder. Oak planks give best XP/plank ratio at this tier.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "CONSTRUCTION",
-          "level": 40
-        }
-      ],
-      "refs": [
-        {
-          "title": "Construction training",
-          "slug": "Construction_training",
-          "url": "https://oldschool.runescape.wiki/w/Construction_training"
-        }
-      ]
-    },
-    {
-      "id": "train-magic-43",
-      "phase": "Toward Quest cape",
-      "instruction": "Train Magic to 43",
-      "detail": "Superheat or Curse spells. Unlocks Superheat for Smithing XP.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 43
-        }
-      ],
-      "atom": {
-        "verb": "produce",
-        "target": "bar_via_superheat",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "skill": {
-            "magic": 43
-          }
-        }
-      },
-      "hints": [
-        {
-          "type": "do-while",
-          "target": "smithing",
-          "value": null,
-          "note": "Superheat Item gives passive Smithing xp on the bar produced."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Experience",
-          "slug": "Experience_table.s2",
-          "url": "https://oldschool.runescape.wiki/w/Experience"
-        },
-        {
-          "title": "Pay-to-play Magic training",
-          "slug": "Pay-to-play_Magic_training.s11",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
-        }
-      ]
-    },
-    {
-      "id": "quest-the-giant-dwarf",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete The Giant Dwarf",
-      "detail": "No formal quest prerequisites, but recreating King Alvis's battleaxe needs Thurgo (Mudskipper Point smith) which can be found either via The Knight's Sword or by asking the Keldagrim librarian then Reldo in Varrock library (no quest completion actually required). Introduces Keldagrim city. Flow: talk Dwarven Boatman, then Commander Veldaban, then Blasidar the sculptor (east Keldagrim) who needs exquisite clothes+boots+a repaired dwarven battleaxe for a statue. Clothes: get a costume book from a bookcase in the library (need <30kg weight to climb), buy coal/logs-spun cloth from Vermundi for 200gp. Boots: steal the left boot from Dromund when he's not looking, telegrab the right boot through his window. Axe: get it from Santiri's weapon shop, socket 3 sapphires, take to Thurgo at Mudskipper Point with an iron bar to repair (may need a redberry pie bribe). Deliver all 3 items to Riki (Blasidar's model) then talk Blasidar for a cutscene. Join the Consortium: pick one company (not Red Axe) upstairs in the market, run ore-delivery fetch-tasks for their secretary (hidden score, 20 points per success, need 100 to progress, wearing full H.A.M. robes gives Purple Pewter a +20 head start), then bar-delivery tasks for the director, then formally join the company and report back to Commander Veldaban to finish. Do not world-hop mid-consortium-grind or progress is lost.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "The Giant Dwarf",
-          "url": "https://oldschool.runescape.wiki/w/The_Giant_Dwarf"
-        },
-        {
-          "title": "The Giant Dwarf/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/The_Giant_Dwarf/Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "mining +2500, smithing +2500, crafting +2500, magic +1500, thieving +1500, firemaking +1500",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-another-slice-of-h-a-m",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Another Slice of H.A.M.",
-      "detail": "Archaeology-themed goblin quest: dig up 6 artefacts in a cave south of Dorgesh-Kaan's middle level and clean them on a specimen table for Tegdak, which uncovers another H.A.M. plot. Teleport to the Goblin Village with Zanik following, then fight through an ambush killing a level-30 H.A.M. Mage and level-30 H.A.M. Archer with Ranged/Magic only (a spare crossbow+bolts spawns nearby if unequipped). Sneak past goblin guards in the Lumbridge Swamp Caves via a scripted stealth sequence with a goblin-sergeant escort, then fight Sigmund (level 64) at the end -- save the ancient mace's special attack until after he activates Protect from Melee/prayer, since the special disables his prayer for the rest of the fight. Untie Zanik to finish; optionally ride the train to Keldagrim afterward for a Lumbridge & Draynor Diary hard task.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Another Slice of H.A.M.",
-          "url": "https://oldschool.runescape.wiki/w/Another_Slice_of_H.A.M."
-        },
-        {
-          "title": "Another Slice of H.A.M./Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/Another_Slice_of_H.A.M./Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "mining +3000, prayer +3000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-forgettable-tale",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Forgettable Tale...",
-      "detail": "Part 2 of the Rise of the Red Axe series (after The Giant Dwarf). Investigate the Red Axe via an extremely drunk, kebab-obsessed dwarf: ply him with beer, fetch a random item requested by a rowdy dwarf, deliver a dwarven stout to Khorvak, then grow kelda seeds in the Kelda Hops Patch (15-20 min real-time wait) and brew them into kelda ale at the East Keldagrim pub vat (another 15-20 min wait) -- plan filler activities like High Alch around the waits. Explore a closed-off minecart tunnel through 6 rooms, including 3 sliding-block cart-track puzzles and a room requiring you to read 3 Red Axe documents. Finish by drinking a beer and eating a kebab back at the eastern pub after reporting to Veldaban.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Forgettable Tale...",
-          "url": "https://oldschool.runescape.wiki/w/Forgettable_Tale..."
-        },
-        {
-          "title": "Forgettable Tale.../Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/Forgettable_Tale.../Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "cooking +5000, farming +5000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-tai-bwo",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Tai Bwo Wannai Trio",
-      "detail": "Unlocks 1-tick Karambwan cooking for fast Cooking XP.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Tai Bwo Wannai Trio",
-          "slug": "Tai_Bwo_Wannai_Trio",
-          "url": "https://oldschool.runescape.wiki/w/Tai_Bwo_Wannai_Trio"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "cooking +5000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-big-chompy",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Big Chompy Bird Hunting",
-      "detail": "Required for RFD Skrach. Learn to hunt chompy birds with ogre bows.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Big Chompy Bird Hunting",
-          "slug": "Big_Chompy_Bird_Hunting",
-          "url": "https://oldschool.runescape.wiki/w/Big_Chompy_Bird_Hunting"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "cooking +1470, fletching +262, ranged +735",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-the-garden-of-death",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete The Garden of Death",
-      "detail": "Dialogue-free, environmental-storytelling 'Twisted Tale' quest. Translate a lost lizardman/Old Ones language by finding stone tablets, wood carvings and dirty notes across four hidden dungeons in sequence (Kebos campsite, Lake Molch Island, Xeric's Shrine, Ruins of Morra); each dungeon's translated words unlock the location clue for the next. Concludes revealing the Old Ones performed soul transference before the Citizens of Arceuus ever did. Wiki lists 'Required for completing: Desert Treasure II - The Fallen Empire' (Twisted Tale companion-quest cross-reference, not a normal prerequisite chain).",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "The Garden of Death",
-          "url": "https://oldschool.runescape.wiki/w/The_Garden_of_Death"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "farming +10000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-enlightened-journey",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Enlightened Journey",
-      "detail": "Two-trip Entrana quest that unlocks the balloon transport network -- explicitly a hard prerequisite for Monkey Madness II's Gnome Stronghold route. Trip 1: gather papyrus/candle/dye/silk/sand-filled sacks around Entrana to help Auguste build a balloon frame. Trip 2 (after leaving to gather logs/willow branches, since axes can't be brought to Entrana): attach 12 willow branches and 10 regular logs to the balloon. Piloting is a 3-screen minigame of dropping sandbags, burning logs, pulling coloured ropes, and \"relaxing\" a set number of times per prompt to control altitude/direction -- crashing just costs 10 more logs and a restart from Auguste. Optionally stockpile extra noted logs (oak/willow/yew/magic) in log storage to unlock further balloon routes post-quest.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Enlightened Journey",
-          "url": "https://oldschool.runescape.wiki/w/Enlightened_Journey"
-        },
-        {
-          "title": "Enlightened Journey/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/Enlightened_Journey/Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "crafting +2000, farming +3000, woodcutting +1500, firemaking +4000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-garden-of-tranquillity",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Garden of Tranquillity",
-      "detail": "Long quest, mostly farming-timer-gated. Talk to Ellamaria then the Wise Old Man in Draynor (wearing ring of charos) to pass a quiz. Grow seeds for 5 NPCs to trade up to rarer seeds: Lyra (west of Port Phasmatys, fairy ring AJQ) grows onions for orchid seeds; Kragen (north Ardougne, fairy ring BJR) grows cabbages for snowdrop seeds; Elstan (south Falador) grows marigolds for delphinium seeds; Dantaera (Catherby) needs a cutting from the White Tree on Ice Mountain grown in a filled plant pot; Brother Althric (Edgeville monastery) needs the ring of charos(a) thrown down the well then retrieved with a fishing rod, plus rune dust used on a plant cure for diseased vines, for rose seeds; Bernald (behind Burthorpe pub) similarly needs a plant-cure/rune-dust vine cure via Alain at the Taverley tree patch, for vine seeds. Then move two statues via trolley (Lumbridge king statue east across the bridge to the garden's east plinth; Falador Saradomin statue north through the gate, cutscene, to the south plinth). Finally plant everything with compost/supercompost in the garden (10-15 min grow, cannot die), talk to Ellamaria, then King Roald (ring of charos(a) must be equipped or he won't follow) for the finishing cutscene.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Garden of Tranquillity",
-          "url": "https://oldschool.runescape.wiki/w/Garden_of_Tranquillity"
-        },
-        {
-          "title": "Garden of Tranquillity/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/Garden_of_Tranquillity/Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "farming +5000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-ratcatchers",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Ratcatchers",
-      "detail": "Requires Icthlarin's Little Helper and Gertrude's Cat complete, plus The Giant Dwarf started for Keldagrim access. Your cat catches rats through five vignettes across the map: sneak it past guards in an Ardougne mansion to nab 6 rats, poison cheese to lure rats from a Varrock warehouse's holes, smoke a rat hole in Keldagrim with a lit weed pot, meet Felkrash in Port Sarim's rat pits, then learn animal charming from Ali the Snake Charmer in Pollnivneach (an 8-note sequence: D G E F# B(+octave) C# A) to finish.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Ratcatchers",
-          "slug": "Ratcatchers.s1",
-          "url": "https://oldschool.runescape.wiki/w/Ratcatchers"
-        },
-        {
-          "title": "Ratcatchers",
-          "slug": "Ratcatchers.s11",
-          "url": "https://oldschool.runescape.wiki/w/Ratcatchers"
-        },
-        {
-          "title": "Ratcatchers/Quick guide",
-          "slug": "Ratcatchers_Quick_guide.s2",
-          "url": "https://oldschool.runescape.wiki/w/Ratcatchers/Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "thieving +4500",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-zogre-flesh-eaters",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Zogre Flesh Eaters",
-      "detail": "Grish asks you to investigate zombified ogres (zogres) infesting the ogre ceremonial grounds. Head into the cave below Jiggig, being careful of disease from zogre/skogre attacks if under 89 combat (carry super restores). Loot a ruined backpack and a torn page from a skeleton/lectern, then pry open a coffin with a knife for a black prism. Head to Yanille, use the recovered Dragon Inn tankard on the bartender there, then visit Zavistic Rarve at the Wizards' Guild. Investigate the ogres' bedridden neighbor Sithik Ints: search his room for a portraiture book, necromancy book, papyrus/charcoal and a Book of 'H.A.M.', read and use all three on him, then sketch a portrait that reads as an honest \"classic realist charcoal portrait\" (higher Crafting speeds this up) and get it signed by the Dragon Inn bartender. Bring the necromancy book, H.A.M. book, tankard and signed portrait to Zavistic Rarve for a strange potion; spike Sithik's tea with it, then question him for the secrets to Relicym's balm, curing the disease, and removing the undead ogres. Return to Grish for an ogre gate key and to learn comp ogre bow use, then fight the level-111 Slash Bash (uses Ranged+Melee \u2014 safespot with Protect from Missiles, or use Crumble Undead) in the ceremonial chamber to finish.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Zogre Flesh Eaters",
-          "url": "https://oldschool.runescape.wiki/w/Zogre_Flesh_Eaters"
-        },
-        {
-          "title": "Zogre Flesh Eaters/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/Zogre_Flesh_Eaters/Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "fletching +2000, ranged +2000, herblore +2000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-vale-totems",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Vale Totems (miniquest)",
-      "detail": "Introductory miniquest gating the Vale Totems Fletching minigame. Talk to Ranulph, who shows you a totem the local ents damaged; child NPC Isadora tells you to rebuild it. Chop a nearby tree for oak-or-better logs, click the totem site to lay the new base, then return to Ranulph/Isadora. Next, click the totem and select carving options for a set of nearby spirit animals (randomized per player) to decorate it. Return again, then fletch 4 items (bows/shields) from the same wood as the totem and use them on the totem to finish decorating it. The ents leave an offering to collect, then speak to either NPC to receive Sacraments of ent folk and complete the miniquest, unlocking the minigame proper. No combat.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Vale Totems (miniquest)",
-          "url": "https://oldschool.runescape.wiki/w/Vale_Totems_(miniquest)"
-        },
-        {
-          "title": "Vale Totems (miniquest)/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/Vale_Totems_(miniquest)/Quick_guide"
-        }
-      ]
-    },
-    {
-      "id": "quest-darkness-of-hallowvale",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Darkness of Hallowvale",
-      "detail": "Myreque chain quest 3: cross into Meiyerditch via boat, meet Old Man Ral, run the sickle-logo agility maze to reach Vertida's hideout, then a fetch-quest loop back to Burgh de Rott and Paterdomus/Varrock before returning to sneak into the castle walls under Vanstrom Klause's nose (he attacks you 5x during the sketch cutscenes -- pray melee to no-damage it), then grab the alchemy tome from the secret lab with Telekinetic Grab. No combat kills required, just surviving Vanstrom's scripted hits.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Darkness of Hallowvale",
-          "url": "https://oldschool.runescape.wiki/w/Darkness_of_Hallowvale"
-        },
-        {
-          "title": "Darkness of Hallowvale/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/Darkness_of_Hallowvale/Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "agility +7000, thieving +6000, construction +2000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "train-ranged-40",
-      "phase": "Toward Quest cape",
-      "instruction": "Train Ranged to 40",
-      "detail": "Ogresses or Experiments. Equips green dragonhide.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "RANGED",
-          "level": 40
-        }
-      ],
-      "atom": {
-        "verb": "kill",
-        "target": "crab",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "skill": {
-            "ranged": 40
-          }
-        }
-      },
-      "refs": [
-        {
-          "title": "Experience",
-          "slug": "Experience_table.s2",
-          "url": "https://oldschool.runescape.wiki/w/Experience"
-        },
-        {
-          "title": "Pay-to-play Ranged training",
-          "slug": "Pay-to-play_Ranged_training.s9",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
-        }
-      ],
-      "passiveOverlays": [
-        "Bury bones for Prayer XP"
-      ]
-    },
-    {
-      "id": "quest-spirits-of-the-elid",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Spirits of the Elid",
-      "detail": "Must beat 3 level-75 golems (white/grey/black), each weak to a different melee style (stab/slash/crush respectively) or a ranged/magic water-channel puzzle. Talk Awusah then Ghaslor the Elder for the ballad, find torn robe top+bottom in a cupboard, repair with needle+thread and equip (Robes of Elidinis), telegrab an ancestral key. Follow the river north to a waterfall cave, rope the overhanging root, use the ancestral key wearing the robes to open the door. Kill white golem (stab) then clear its water channel via Thieving; kill grey golem (slash) then clear via pickaxe; kill black golem (crush) then clear via Ranged/Magic on a target. Talk to a spirit through the north door, return to Nardah. Separately: take a genie's shoes by Awusah's door, knife them for a sole, find a crevice west of the general store, rope it, talk to and strike a deal with the Genie for a statuette, then place the statuette on the shrine plinth north of the fountain to finish. Region-opener (Nardah/desert), no known deeper dependency; useful all-purpose restoration shrine unlock.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Spirits of the Elid",
-          "url": "https://oldschool.runescape.wiki/w/Spirits_of_the_Elid"
-        },
-        {
-          "title": "Spirits of the Elid/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/Spirits_of_the_Elid/Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "prayer +8000, thieving +1000, magic +1000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-temple-of-ikov",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Temple of Ikov",
-      "detail": "Must be able to defeat a level 84 Fire Warrior of Lesarkus with Ranged. Choice quest with a good path (side with Guardians of Armadyl, kill Lucien level 14) or evil path (steal the Staff of Armadyl for Lucien, may need to kill a safespottable level 43 Guardian of Armadyl). Enter the temple dungeon south of the Ranging Guild; get boots of lightness from behind a web (needs light source+knife), equip Pendant of Lucien to pass the north gate, cross a lava bridge at -1kg or less, take a lever, cross back and attach the lever to a bracket then pull it, loot ice arrows from chests along an icy path (16 arrows enough with Ava's + 60 Ranged). Go back through the north gate, search-and-pull another lever (needs 42 Thieving), fight through to the Fire Warrior of Lesarkus (level 84, kill with ice arrows, Protect from Magic negates damage), then hand Winelda 20 unnoted limpwurt roots at once to be teleported across the lava (one-way, no going back - caution for ironmen). Optionally grab a shiny key for a dungeon shortcut. Push through to the Guardians of Armadyl room and pick a side to finish.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Temple of Ikov",
-          "url": "https://oldschool.runescape.wiki/w/Temple_of_Ikov"
-        },
-        {
-          "title": "Temple of Ikov/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/Temple_of_Ikov/Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "ranged +10500, fletching +8000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "train-firemaking-50",
-      "phase": "Toward Quest cape",
-      "instruction": "Train Firemaking to 50",
-      "detail": "Maple logs \u2014 good balance of XP/cost. Required for Desert Treasure.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "FIREMAKING",
-          "level": 50
-        }
-      ],
-      "atom": {
-        "verb": "produce",
-        "target": "ash_from_maple_logs",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "skill": {
-            "firemaking": 50
-          }
-        }
-      },
-      "refs": [
-        {
-          "title": "Experience",
-          "slug": "Experience_table.s2",
-          "url": "https://oldschool.runescape.wiki/w/Experience"
-        },
-        {
-          "title": "Pay-to-play Firemaking training",
-          "slug": "Pay-to-play_Firemaking_training.s3",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
-        }
-      ]
-    },
-    {
-      "id": "quest-tears-of-guthix",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Tears of Guthix",
-      "detail": "43 QP gate makes this a mid-game unlock, not an early one. Tell Juna stories to earn a stone bowl recipe, then use a light creature (attracted by the sapphire lantern) to cross the chasm to a rock vein, mine a magic stone, chisel it into a stone bowl, and hand it to Juna to finish. The sapphire lantern doubles as the light source needed to safely navigate the caves and is reusable later for While Guthix Sleeps. Gates While Guthix Sleeps and the Hard Lumbridge & Draynor Diary. Note: 'Tears of Guthix' the quest and 'Tears of Guthix' the repeatable minigame it unlocks are the same wiki title-root but two distinct pages -- cited both above since the depth:04 brief's long-run-value framing refers to the minigame, not the quest itself.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Tears of Guthix",
-          "url": "https://oldschool.runescape.wiki/w/Tears_of_Guthix"
-        },
-        {
-          "title": "Tears of Guthix (minigame)",
-          "url": "https://oldschool.runescape.wiki/w/Tears_of_Guthix_(minigame)"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "crafting +1000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "train-ranged-55",
-      "phase": "Toward Quest cape",
-      "instruction": "Train Ranged to 55",
-      "detail": "Seagulls at Port Sarim or Chinchompas. Equips maple shortbow.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "RANGED",
-          "level": 55
-        }
-      ],
-      "atom": {
-        "verb": "kill",
-        "target": "crab",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "skill": {
-            "ranged": 55
-          }
-        }
-      },
-      "refs": [
-        {
-          "title": "Experience",
-          "slug": "Experience_table.s2",
-          "url": "https://oldschool.runescape.wiki/w/Experience"
-        },
-        {
-          "title": "Pay-to-play Ranged training",
-          "slug": "Pay-to-play_Ranged_training.s9",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
-        }
-      ],
-      "passiveOverlays": [
-        "Bury bones for Prayer XP"
-      ]
-    },
-    {
-      "id": "train-construction-55",
-      "phase": "Toward Quest cape",
-      "instruction": "Train Construction to 55",
-      "detail": "Oak dungeon doors or oak larder. Each action ~56 XP.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "CONSTRUCTION",
-          "level": 55
-        }
-      ],
-      "refs": [
-        {
-          "title": "Construction training",
-          "slug": "Construction_training",
-          "url": "https://oldschool.runescape.wiki/w/Construction_training"
-        }
-      ]
-    },
-    {
-      "id": "train-magic-55",
-      "phase": "Toward Quest cape",
-      "instruction": "Train Magic to 55",
-      "detail": "High Alchemy on stackable items. Core money maker.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 55
-        }
-      ],
-      "atom": {
-        "verb": "produce",
-        "target": "alchemy_target_item",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "skill": {
-            "magic": 55
-          }
-        }
-      },
-      "hints": [
-        {
-          "type": "batch-size",
-          "target": "high-alch",
-          "value": "1-per-5-ticks",
-          "note": "65xp/cast, up to 78,000xp/h stationary [ref: Pay-to-play Magic training s14]."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Experience",
-          "slug": "Experience_table.s2",
-          "url": "https://oldschool.runescape.wiki/w/Experience"
-        },
-        {
-          "title": "Pay-to-play Magic training",
-          "slug": "Pay-to-play_Magic_training.s5",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
-        },
-        {
-          "title": "Pay-to-play Magic training",
-          "slug": "Pay-to-play_Magic_training.s14",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
-        }
-      ]
-    },
-    {
-      "id": "quest-the-eyes-of-glouphrie",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete The Eyes of Glouphrie",
-      "detail": "Intermediate gnome-lore quest following on from The Grand Tree. Repair Oaknock's crystal-disc exchange machine (colour x shape-sides value puzzle), then use Hazelmere's mind-link (needs 46 Magic, not boostable) to relive a flashback of the Gnome/Goblin war revealing Glouphrie's illusions and Argento's death, then hunt down and kill 6 one-HP 'evil creature' spy-constructs hidden around the Stronghold and Grand Tree. Required for: The Path of Glouphrie, Monkey Madness II, Medium Western Provinces Diary.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "The Eyes of Glouphrie",
-          "url": "https://oldschool.runescape.wiki/w/The_Eyes_of_Glouphrie"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "magic +12000, woodcutting +2500, runecraft +6000, construction +250",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-animal-magnetism",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Animal Magnetism",
-      "detail": "4-stage fetch quest for Ava's device. Stage 1: talk to Ava, travel to undead chicken farm west of Ectofuntus, talk Alice/Malcolm loop, get crone-made amulet from old crone near Slayer Tower, give to Malcolm, buy 2 undead chickens w/ ecto-tokens. Stage 2: bring chickens + iron bars + hammer to Ava, get selected iron from Witch in manor, forge at Rimmington mine (face north), return magnet to Ava. Stage 3: cut undead tree (not dead tree) outside manor w/ mithril axe, see Turael in Burthorpe for Blessed axe (needs mithril axe + holy symbol), cut undead tree again for twigs, give to Ava, solve orb puzzle (toggle off all but 2nd/5th/9th left-to-right), combine solved notes + button + leather, hand in. Core reward is the Ava's device line feeding Ranged training.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Animal Magnetism",
-          "url": "https://oldschool.runescape.wiki/w/Animal_Magnetism"
-        },
-        {
-          "title": "Animal Magnetism/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/Animal_Magnetism/Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "crafting +1000, fletching +1000, slayer +1000, woodcutting +2500",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-lost-city",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Lost City",
-      "detail": "Unlocks Zanaris and cosmic rune altar. Grants access to dragon weaponry.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3150,
-          "y": 3205,
-          "plane": 0,
-          "label": "Warrior, NW Lumbridge Swamp (start)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "talk-to",
-        "target": "warrior",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "state": "quest-varbit:??"
-        }
-      },
-      "hints": [
-        {
-          "type": "dialogue",
-          "target": "warrior",
-          "value": "1",
-          "note": "start: ask about Zanaris"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Lost City",
-          "slug": "Lost_City.s1",
-          "url": "https://oldschool.runescape.wiki/w/Lost_City"
-        },
-        {
-          "title": "Lost City",
-          "slug": "Lost_City.s6",
-          "url": "https://oldschool.runescape.wiki/w/Lost_City"
-        }
-      ]
-    },
-    {
-      "id": "quest-fairytale-1",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Fairytale I - Growing Pains",
-      "detail": "Unlocks herb patches worldwide. Critical prerequisite for the herb farming supply chain.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3077,
-          "y": 3258,
-          "plane": 0,
-          "label": "Martin the Master Gardener, Draynor Village pig pen (start)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "talk-to",
-        "target": "martin_the_master_gardener",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "state": "quest-varbit:??"
-        }
-      },
-      "hints": [
-        {
-          "type": "dialogue",
-          "target": "martin_the_master_gardener",
-          "value": "1",
-          "note": "start: ask about the failing farm patches"
-        },
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "farming +3500, magic +1000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Fairytale I - Growing Pains",
-          "slug": "Fairytale_I_-_Growing_Pains.s1",
-          "url": "https://oldschool.runescape.wiki/w/Fairytale_I_-_Growing_Pains"
-        },
-        {
-          "title": "Fairytale I - Growing Pains",
-          "slug": "Fairytale_I_-_Growing_Pains.s9",
-          "url": "https://oldschool.runescape.wiki/w/Fairytale_I_-_Growing_Pains"
-        }
-      ]
-    },
-    {
-      "id": "quest-what-lies-below",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete What Lies Below",
-      "detail": "Needs Rune Mysteries + 35 Runecraft. Recover a stranded trader's documents stolen by outlaws west of the Grand Exchange, which pulls you into a Zamorak-monk conspiracy: infuse a wand at the Chaos Altar, deliver findings to Surok Magis in Varrock Palace's library, then fight an instanced King Roald -- bring him to 2hp or less and operate the Beacon ring (chatbox prompts when it's ready) to summon an ally and finish him off. Grab the Dagon'hai history book from a nearby bookshelf before leaving to claim 5 bonus Kudos afterward.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "What Lies Below",
-          "url": "https://oldschool.runescape.wiki/w/What_Lies_Below"
-        },
-        {
-          "title": "What Lies Below/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/What_Lies_Below/Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "runecraft +8000, defence +2000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "train-firemaking-75",
-      "phase": "Toward Quest cape",
-      "instruction": "Train Firemaking to 75",
-      "detail": "Yew or magic logs. Unlocks Wintertodt minigame at 50 FM threshold.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 7374
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 1634,
-          "y": 3948,
-          "plane": 0,
-          "label": "Wintertodt"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "FIREMAKING",
-          "level": 75
-        }
-      ],
-      "refs": [
-        {
-          "title": "Pay-to-play Firemaking training",
-          "slug": "Pay-to-play_Firemaking_training.s3",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
-        }
-      ]
-    },
-    {
-      "id": "train-ranged-70",
-      "phase": "Toward Quest cape",
-      "instruction": "Train Ranged to 70",
-      "detail": "Cannon tasks for fast Ranged XP. Unlocks black dragonhide.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "RANGED",
-          "level": 70
-        }
-      ],
-      "atom": {
-        "verb": "kill",
-        "target": "crab",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "skill": {
-            "ranged": 70
-          }
-        }
-      },
-      "hints": [
-        {
-          "type": "do-while",
-          "target": "afk",
-          "value": null,
-          "note": "Crabs stay viable to level 70 per the wiki; cannon/chinning are faster but not required."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Experience",
-          "slug": "Experience_table.s2",
-          "url": "https://oldschool.runescape.wiki/w/Experience"
-        },
-        {
-          "title": "Pay-to-play Ranged training",
-          "slug": "Pay-to-play_Ranged_training.s9",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
-        }
-      ],
-      "passiveOverlays": [
-        "Bury bones for Prayer XP"
-      ]
-    },
-    {
-      "id": "train-magic-70",
-      "phase": "Toward Quest cape",
-      "instruction": "Train Magic to 70",
-      "detail": "Alching or Bursting at Crabs. Unlocks Ice Barrage prerequisite path.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 70
-        }
-      ],
-      "atom": {
-        "verb": "kill",
-        "target": "crab",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "skill": {
-            "magic": 70
-          }
-        }
-      },
-      "hints": [
-        {
-          "type": "rng-variance",
-          "target": "burst-spell-tier",
-          "value": "??",
-          "note": "Smoke Burst usable from 62; Ice Burst better from 70 \u2014 exact xp/h not sourced."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Experience",
-          "slug": "Experience_table.s2",
-          "url": "https://oldschool.runescape.wiki/w/Experience"
-        },
-        {
-          "title": "Pay-to-play Magic training",
-          "slug": "Pay-to-play_Magic_training.s17",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
-        }
-      ]
-    },
-    {
-      "id": "quest-mage-arena-i",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Mage Arena I",
-      "detail": "Solo boss-form gauntlet, not a puzzle miniquest: Kolodion shifts through 5 forms (himself -> ogre -> frost spider -> ghost -> level 112 black demon), all magic-only damage after the first form, so Protect from Magic tanks the fight. ~50-100 spell casts (fewer with Iban Blast) clears all forms at 60+ Magic. The 100-cast god-spell unlock afterward is the real time cost, not the boss fight itself. Deep Wilderness (level 53-56) throughout -- PKer risk, and 'PK Skull Prevention' setting plus hidden attack option are recommended before entering.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Mage Arena I",
-          "url": "https://oldschool.runescape.wiki/w/Mage_Arena_I"
-        }
-      ]
-    },
-    {
-      "id": "rfd-evil-dave",
-      "phase": "Toward Quest cape",
-      "instruction": "RFD: Evil Dave's Spicy Stew",
-      "detail": "Prepare a special stew using brown/orange/red/yellow spices in the Stronghold of Security dungeon. RNG: rate ??",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 397
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3259,
-          "y": 3266,
-          "plane": 0,
-          "label": "Lumbridge cows"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Recipe for Disaster/Freeing Evil Dave",
-          "slug": "Recipe_for_Disaster_Freeing_Evil_Dave",
-          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster/Freeing_Evil_Dave"
-        },
-        {
-          "title": "Recipe for Disaster",
-          "slug": "Recipe_for_Disaster.s1",
-          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "cooking +1000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "quest-scrambled",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Scrambled",
-      "detail": "Alan asks you to mind his egg-friend Humpy while he cooks a feast; gravity kills it the moment he leaves. Recruit three of King's men from The King's Inn in Tal Teklan to help rebuild the egg: Acatzin (repair blacksmith's whetstone then his axe), Nezketi (brew damiana tea: pick damiana leaves + bowl of water from fountain, boil on oven, pour into cup), Kauayotl (repair his cart with 2 planks, nails from blacksmith's workbench, hammer, saw from Archery Supplies). Back at the temple the three can't fix the original egg so you fetch three replacement eggs by killing and looting egg piles: large chicken (lvl16, chicken farm south of temple), red dragon (lvl106, Dragon Nest SE across the river, safespottable), black jaguar (lvl88, campsite east, safespot behind tropical tree/fern). None of the painted eggs survive judging (three more great falls), so you and King's men solve a sliding/rotate puzzle (hover puzzle-piece icon for the solution) to reassemble the original egg. Cutscene resolves the plot; ironically Alan himself then has a great fall. Avoid having a bonecrusher equipped if you want his bones as a keepsake instead of auto-crushed prayer xp.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Scrambled",
-          "url": "https://oldschool.runescape.wiki/w/Scrambled"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "construction +5000, cooking +5000, smithing +5000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "train-construction-70",
-      "phase": "Toward Quest cape",
-      "instruction": "Train Construction to 70",
-      "detail": "Teak or mahogany furniture. Mahogany tables at 52 for fast AFK XP.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "CONSTRUCTION",
-          "level": 70
-        }
-      ],
-      "refs": [
-        {
-          "title": "Construction training",
-          "slug": "Construction_training",
-          "url": "https://oldschool.runescape.wiki/w/Construction_training"
-        }
-      ]
-    },
-    {
-      "id": "chkpt-combat-training-routing-0",
-      "phase": "Toward Quest cape",
-      "instruction": "\u29c6 Bootstrap: chickens \u2192 cows (no bank)",
-      "detail": "",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3225,
-          "y": 3300,
-          "plane": 0,
-          "label": "Chickens, Lumbridge East Farm"
-        },
-        {
-          "x": 3254,
-          "y": 3267,
-          "plane": 0,
-          "label": "Cows, Lumbridge East Farm"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)",
-      "refs": [
-        {
-          "title": "Chicken",
-          "slug": "Chicken",
-          "url": "https://oldschool.runescape.wiki/w/Chicken"
-        },
-        {
-          "title": "Cow",
-          "slug": "Cow",
-          "url": "https://oldschool.runescape.wiki/w/Cow"
-        }
-      ]
-    },
-    {
-      "id": "ctr-01-kill-chickens",
-      "phase": "Toward Quest cape",
-      "instruction": "Kill chickens until Attack 10 (Lumbridge farm)",
-      "detail": "No food needed. Rotate style per level chunk if desired (see toggle hint). Keep feathers (stack), bury every bone on the spot.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 1173
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3225,
-          "y": 3300,
-          "plane": 0,
-          "label": "Chickens, Lumbridge East Farm coop"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "ATTACK",
-          "level": 10
-        }
-      ],
-      "atom": {
-        "verb": "kill",
-        "target": "chicken",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "skill": {
-            "attack": 10
-          }
-        }
-      },
-      "hints": [
-        {
-          "type": "toggle-state",
-          "target": "attack-style",
-          "value": "accurate",
-          "note": "Set style to match the stat being trained; revisit each checkpoint."
-        },
-        {
-          "type": "keep-drop",
-          "target": null,
-          "value": "keep:feather,bones;drop:raw-chicken",
-          "note": "Bury bones as they drop \u2014 free Prayer toward 22 Protect Item."
-        }
-      ],
-      "coarse_of": "combat-training-routing",
-      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)",
-      "refs": [
-        {
-          "title": "Chicken",
-          "slug": "Chicken",
-          "url": "https://oldschool.runescape.wiki/w/Chicken",
-          "kind": "npc"
-        }
-      ],
-      "media": [
-        {
-          "kind": "png",
-          "path": "media/67a9f7/arrive.png",
-          "url": null,
-          "caption": "Kill chickens at Lumbridge East farm \u2014 chicken 3316 rendered from the rev-236 cache (scenario capture)",
-          "state": {
-            "scenario": "lumbridge_chickens",
-            "rev": 236,
-            "harness": "spike/scenario/run_scenario.py",
-            "oracle": "PASS"
-          }
-        },
-        {
-          "kind": "gif",
-          "path": "media/e5e457/observe.gif",
-          "url": null,
-          "caption": "Chicken-training scene, animated (scenario capture, oracle PASS)",
-          "state": {
-            "scenario": "lumbridge_chickens",
-            "rev": 236,
-            "harness": "spike/scenario/run_scenario.py",
-            "oracle": "PASS"
-          }
-        }
-      ]
-    },
-    {
-      "id": "ctr-02-kill-cows",
-      "phase": "Toward Quest cape",
-      "instruction": "Kill cows until Strength 20 (east Lumbridge)",
-      "detail": "Loot coins from nearby goblins/men opportunistically for the scimitar fund (amount ??). Cowhides optional: bank a stack for early Crafting if passing Al Kharid bank anyway.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 397
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3254,
-          "y": 3267,
-          "plane": 0,
-          "label": "Cows, Lumbridge East Farm"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "STRENGTH",
-          "level": 20
-        }
-      ],
-      "atom": {
-        "verb": "kill",
-        "target": "cow",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "skill": {
-            "strength": 20
-          }
-        }
-      },
-      "hints": [
-        {
-          "type": "toggle-state",
-          "target": "attack-style",
-          "value": "aggressive",
-          "note": null
-        },
-        {
-          "type": "keep-drop",
-          "target": null,
-          "value": "keep:cowhide,bones;drop:raw-beef",
-          "note": "Cowhide branch is optional \u2014 skip if inventory churn slows kills."
-        }
-      ],
-      "coarse_of": "combat-training-routing",
-      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)",
-      "refs": [
-        {
-          "title": "Cow",
-          "slug": "Cow",
-          "url": "https://oldschool.runescape.wiki/w/Cow"
-        }
-      ],
-      "media": [
-        {
-          "kind": "png",
-          "path": "media/15e0fa/arrive.png",
-          "url": null,
-          "caption": "Kill cows east of Lumbridge \u2014 cow + herd + pen rendered from cache",
-          "state": {
-            "scenario": "ctr_02_kill_cows",
-            "rev": 236,
-            "harness": "spike/scenario/run_scenario.py",
-            "oracle": "PASS"
-          }
-        },
-        {
-          "kind": "gif",
-          "path": "media/8a847d/observe.gif",
-          "url": null,
-          "caption": "Cow-field scene, animated (scenario capture, oracle PASS)",
-          "state": {
-            "scenario": "ctr_02_kill_cows",
-            "rev": 236,
-            "harness": "spike/scenario/run_scenario.py",
-            "oracle": "PASS"
-          }
-        }
-      ]
-    },
-    {
       "id": "bg-farm-allotment-setup",
       "phase": "Toward Quest cape",
       "slotType": "background",
@@ -5500,33 +4035,6 @@
       ]
     },
     {
-      "id": "quest-cold-war",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Cold War",
-      "detail": "Only quest in the Penguin series. Zookeeper Larry is paranoid about penguins; build a bird-hide lookout on the Iceberg (oak plank + spade on a snow patch) and watch a cutscene of a unique-per-player 3-emote penguin greeting sequence (memorize it -- 8 possible emotes, needed later). Craft a Clockwork suit at a crafting table 3 (plank + silk + clockwork mechanism). Test it on zoo penguins using the memorized emote greeting (guessable if forgotten, max 24 tries) to learn they're planning to escape by flying; find more penguins disguised as sheep in Fred the Farmer's Lumbridge pasture, get a secret phrase (\"do not trust the walrus\") by trading a raw cod or wearing a ring of charos. Gather swamp tar + 5 feathers to trade black-marketeer Noodle for a fake KGP ID, then infiltrate the Iceberg outpost with the password \"cabbage\", complete the Penguin Agility Course, and steal a cowbell + craft Penguin Bongos (mahogany plank + leather) to distract the guards Ping and Pong and open the war room. Get caught by Pescaling Pax and thrown in an Icelord cage (level 51, kill 1-3, each grants 40 Attack xp) to escape, then report the penguin invasion plan back to Larry.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Cold War",
-          "url": "https://oldschool.runescape.wiki/w/Cold_War"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "crafting +2000, agility +5000, construction +1500",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
       "id": "train-herblore-38",
       "phase": "Toward Quest cape",
       "instruction": "Train Herblore to 38",
@@ -5616,37 +4124,6 @@
       ]
     },
     {
-      "id": "quest-my-arms-big-adventure",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete My Arm's Big Adventure",
-      "detail": "Teach the troll My Arm to farm goutweed: fetch a goutweedy lump from Death Plateau, prep a soil patch with dung/compost, sail with him to Tai Bwo Wannai for hardy gout tubers (needs 60%+ Cleanup favour), then hand him farming tools in the correct order and defend the growing crop by killing a level-75 Baby Roc and level-172 Giant Roc.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "My Arm's Big Adventure",
-          "url": "https://oldschool.runescape.wiki/w/My_Arm%27s_Big_Adventure"
-        },
-        {
-          "title": "My Arm's Big Adventure/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/My_Arm%27s_Big_Adventure/Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "herblore +10000, farming +5000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
       "id": "train-woodcutting-30",
       "phase": "Toward Quest cape",
       "instruction": "Train Woodcutting to 30",
@@ -5693,6 +4170,362 @@
           "title": "Pay-to-play Woodcutting training",
           "slug": "Pay-to-play_Woodcutting_training.s18",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+        }
+      ]
+    },
+    {
+      "id": "quest-lost-city",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Lost City",
+      "detail": "Unlocks Zanaris and cosmic rune altar. Grants access to dragon weaponry.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3150,
+          "y": 3205,
+          "plane": 0,
+          "label": "Warrior, NW Lumbridge Swamp (start)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "warrior",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "warrior",
+          "value": "1",
+          "note": "start: ask about Zanaris"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Lost City",
+          "slug": "Lost_City.s1",
+          "url": "https://oldschool.runescape.wiki/w/Lost_City"
+        },
+        {
+          "title": "Lost City",
+          "slug": "Lost_City.s6",
+          "url": "https://oldschool.runescape.wiki/w/Lost_City"
+        }
+      ]
+    },
+    {
+      "id": "quest-fairytale-1",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Fairytale I - Growing Pains",
+      "detail": "Unlocks herb patches worldwide. Critical prerequisite for the herb farming supply chain.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3077,
+          "y": 3258,
+          "plane": 0,
+          "label": "Martin the Master Gardener, Draynor Village pig pen (start)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "martin_the_master_gardener",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "martin_the_master_gardener",
+          "value": "1",
+          "note": "start: ask about the failing farm patches"
+        },
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "farming +3500, magic +1000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Fairytale I - Growing Pains",
+          "slug": "Fairytale_I_-_Growing_Pains.s1",
+          "url": "https://oldschool.runescape.wiki/w/Fairytale_I_-_Growing_Pains"
+        },
+        {
+          "title": "Fairytale I - Growing Pains",
+          "slug": "Fairytale_I_-_Growing_Pains.s9",
+          "url": "https://oldschool.runescape.wiki/w/Fairytale_I_-_Growing_Pains"
+        }
+      ]
+    },
+    {
+      "id": "quest-animal-magnetism",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Animal Magnetism",
+      "detail": "4-stage fetch quest for Ava's device. Stage 1: talk to Ava, travel to undead chicken farm west of Ectofuntus, talk Alice/Malcolm loop, get crone-made amulet from old crone near Slayer Tower, give to Malcolm, buy 2 undead chickens w/ ecto-tokens. Stage 2: bring chickens + iron bars + hammer to Ava, get selected iron from Witch in manor, forge at Rimmington mine (face north), return magnet to Ava. Stage 3: cut undead tree (not dead tree) outside manor w/ mithril axe, see Turael in Burthorpe for Blessed axe (needs mithril axe + holy symbol), cut undead tree again for twigs, give to Ava, solve orb puzzle (toggle off all but 2nd/5th/9th left-to-right), combine solved notes + button + leather, hand in. Core reward is the Ava's device line feeding Ranged training.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Animal Magnetism",
+          "url": "https://oldschool.runescape.wiki/w/Animal_Magnetism"
+        },
+        {
+          "title": "Animal Magnetism/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/Animal_Magnetism/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "crafting +1000, fletching +1000, slayer +1000, woodcutting +2500",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-the-garden-of-death",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete The Garden of Death",
+      "detail": "Dialogue-free, environmental-storytelling 'Twisted Tale' quest. Translate a lost lizardman/Old Ones language by finding stone tablets, wood carvings and dirty notes across four hidden dungeons in sequence (Kebos campsite, Lake Molch Island, Xeric's Shrine, Ruins of Morra); each dungeon's translated words unlock the location clue for the next. Concludes revealing the Old Ones performed soul transference before the Citizens of Arceuus ever did. Wiki lists 'Required for completing: Desert Treasure II - The Fallen Empire' (Twisted Tale companion-quest cross-reference, not a normal prerequisite chain).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "The Garden of Death",
+          "url": "https://oldschool.runescape.wiki/w/The_Garden_of_Death"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "farming +10000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-garden-of-tranquillity",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Garden of Tranquillity",
+      "detail": "Long quest, mostly farming-timer-gated. Talk to Ellamaria then the Wise Old Man in Draynor (wearing ring of charos) to pass a quiz. Grow seeds for 5 NPCs to trade up to rarer seeds: Lyra (west of Port Phasmatys, fairy ring AJQ) grows onions for orchid seeds; Kragen (north Ardougne, fairy ring BJR) grows cabbages for snowdrop seeds; Elstan (south Falador) grows marigolds for delphinium seeds; Dantaera (Catherby) needs a cutting from the White Tree on Ice Mountain grown in a filled plant pot; Brother Althric (Edgeville monastery) needs the ring of charos(a) thrown down the well then retrieved with a fishing rod, plus rune dust used on a plant cure for diseased vines, for rose seeds; Bernald (behind Burthorpe pub) similarly needs a plant-cure/rune-dust vine cure via Alain at the Taverley tree patch, for vine seeds. Then move two statues via trolley (Lumbridge king statue east across the bridge to the garden's east plinth; Falador Saradomin statue north through the gate, cutscene, to the south plinth). Finally plant everything with compost/supercompost in the garden (10-15 min grow, cannot die), talk to Ellamaria, then King Roald (ring of charos(a) must be equipped or he won't follow) for the finishing cutscene.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Garden of Tranquillity",
+          "url": "https://oldschool.runescape.wiki/w/Garden_of_Tranquillity"
+        },
+        {
+          "title": "Garden of Tranquillity/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/Garden_of_Tranquillity/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "farming +5000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-my-arms-big-adventure",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete My Arm's Big Adventure",
+      "detail": "Teach the troll My Arm to farm goutweed: fetch a goutweedy lump from Death Plateau, prep a soil patch with dung/compost, sail with him to Tai Bwo Wannai for hardy gout tubers (needs 60%+ Cleanup favour), then hand him farming tools in the correct order and defend the growing crop by killing a level-75 Baby Roc and level-172 Giant Roc.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "My Arm's Big Adventure",
+          "url": "https://oldschool.runescape.wiki/w/My_Arm%27s_Big_Adventure"
+        },
+        {
+          "title": "My Arm's Big Adventure/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/My_Arm%27s_Big_Adventure/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "herblore +10000, farming +5000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "train-firemaking-30",
+      "phase": "Toward Quest cape",
+      "instruction": "Train Firemaking to 30",
+      "detail": "Oak logs from GE or Draynor oaks.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FIREMAKING",
+          "level": 30
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "ash_from_oak_logs",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "firemaking": 30
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Firemaking training",
+          "slug": "Pay-to-play_Firemaking_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+        },
+        {
+          "title": "Pay-to-play Woodcutting training",
+          "slug": "Pay-to-play_Woodcutting_training.s18",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+        }
+      ]
+    },
+    {
+      "id": "quest-sea-slug",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Sea Slug",
+      "detail": "First quest in the Sea Slug series and #3 in the Temple Knight series. Give Holgart swamp paste to fix his boat and reach the Fishing Platform; find Bailey to learn sea slugs fear heat, rescue Kennith's father Kent from a nearby island, then light a torch (needs Firemaking 30, boostable) using broken glass + damp sticks, and use it to save Kennith from the platform machinery. CORRECTION to the depth:04 queue payload: its rationale text calls this quest's unlock 'Fishing Guild access' -- the quest's own Rewards section states the unlock is 'Access to the Fishing Platform', not the Fishing Guild; these are different locations and the brief's phrasing appears to be an error. Gates The Slug Menace (sequel).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Sea Slug",
+          "url": "https://oldschool.runescape.wiki/w/Sea_Slug"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "fishing +7175",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-enlightened-journey",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Enlightened Journey",
+      "detail": "Two-trip Entrana quest that unlocks the balloon transport network -- explicitly a hard prerequisite for Monkey Madness II's Gnome Stronghold route. Trip 1: gather papyrus/candle/dye/silk/sand-filled sacks around Entrana to help Auguste build a balloon frame. Trip 2 (after leaving to gather logs/willow branches, since axes can't be brought to Entrana): attach 12 willow branches and 10 regular logs to the balloon. Piloting is a 3-screen minigame of dropping sandbags, burning logs, pulling coloured ropes, and \"relaxing\" a set number of times per prompt to control altitude/direction -- crashing just costs 10 more logs and a restart from Auguste. Optionally stockpile extra noted logs (oak/willow/yew/magic) in log storage to unlock further balloon routes post-quest.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Enlightened Journey",
+          "url": "https://oldschool.runescape.wiki/w/Enlightened_Journey"
+        },
+        {
+          "title": "Enlightened Journey/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/Enlightened_Journey/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "crafting +2000, farming +3000, woodcutting +1500, firemaking +4000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-the-slug-menace",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete The Slug Menace",
+      "detail": "Second Temple Knight quest, a direct sequel to Wanted! (so it inherits that entire chain: Recruitment Drive, Black Knights' Fortress, Druidic Ritual, The Lost Tribe, Rune Mysteries, Goblin Diplomacy, Enter the Abyss, Priest in Peril) plus Sea Slug and 30 Crafting/Runecraft/Slayer/Thieving. Investigate odd behaviour in Witchaven by interviewing 3 townsfolk, find a hidden dungeon behind a false wall with a locked 'imposing door', scan it with the Commorb to get a torn transcription, then recover and repair 2 more page fragments (one from the mayor's desk, one solved via a sea-slug-glue matching puzzle on the Fishing Platform). Shape essence into all 5 rune types at their respective altars, use the finished runes to open the door, then melee-only kill the level 62 Slug Prince (drains Prayer, safespottable with a halberd).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "The Slug Menace",
+          "url": "https://oldschool.runescape.wiki/w/The_Slug_Menace"
+        },
+        {
+          "title": "The Slug Menace/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/The_Slug_Menace/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "crafting +3500, runecraft +3500, thieving +3500",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -5837,6 +4670,62 @@
       ]
     },
     {
+      "id": "quest-tai-bwo",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Tai Bwo Wannai Trio",
+      "detail": "Unlocks 1-tick Karambwan cooking for fast Cooking XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Tai Bwo Wannai Trio",
+          "slug": "Tai_Bwo_Wannai_Trio",
+          "url": "https://oldschool.runescape.wiki/w/Tai_Bwo_Wannai_Trio"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +5000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-big-chompy",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Big Chompy Bird Hunting",
+      "detail": "Required for RFD Skrach. Learn to hunt chompy birds with ogre bows.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Big Chompy Bird Hunting",
+          "slug": "Big_Chompy_Bird_Hunting",
+          "url": "https://oldschool.runescape.wiki/w/Big_Chompy_Bird_Hunting"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +1470, fletching +262, ranged +735",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
       "id": "quest-recipe-for-disaster-freeing-the-lumbridge-guide",
       "phase": "Toward Quest cape",
       "instruction": "Complete Freeing the Lumbridge Guide",
@@ -5859,6 +4748,222 @@
           "type": "quest-xp",
           "target": null,
           "value": "cooking +2500, magic +2500",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-the-giant-dwarf",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete The Giant Dwarf",
+      "detail": "No formal quest prerequisites, but recreating King Alvis's battleaxe needs Thurgo (Mudskipper Point smith) which can be found either via The Knight's Sword or by asking the Keldagrim librarian then Reldo in Varrock library (no quest completion actually required). Introduces Keldagrim city. Flow: talk Dwarven Boatman, then Commander Veldaban, then Blasidar the sculptor (east Keldagrim) who needs exquisite clothes+boots+a repaired dwarven battleaxe for a statue. Clothes: get a costume book from a bookcase in the library (need <30kg weight to climb), buy coal/logs-spun cloth from Vermundi for 200gp. Boots: steal the left boot from Dromund when he's not looking, telegrab the right boot through his window. Axe: get it from Santiri's weapon shop, socket 3 sapphires, take to Thurgo at Mudskipper Point with an iron bar to repair (may need a redberry pie bribe). Deliver all 3 items to Riki (Blasidar's model) then talk Blasidar for a cutscene. Join the Consortium: pick one company (not Red Axe) upstairs in the market, run ore-delivery fetch-tasks for their secretary (hidden score, 20 points per success, need 100 to progress, wearing full H.A.M. robes gives Purple Pewter a +20 head start), then bar-delivery tasks for the director, then formally join the company and report back to Commander Veldaban to finish. Do not world-hop mid-consortium-grind or progress is lost.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "The Giant Dwarf",
+          "url": "https://oldschool.runescape.wiki/w/The_Giant_Dwarf"
+        },
+        {
+          "title": "The Giant Dwarf/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/The_Giant_Dwarf/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "mining +2500, smithing +2500, crafting +2500, magic +1500, thieving +1500, firemaking +1500",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-another-slice-of-h-a-m",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Another Slice of H.A.M.",
+      "detail": "Archaeology-themed goblin quest: dig up 6 artefacts in a cave south of Dorgesh-Kaan's middle level and clean them on a specimen table for Tegdak, which uncovers another H.A.M. plot. Teleport to the Goblin Village with Zanik following, then fight through an ambush killing a level-30 H.A.M. Mage and level-30 H.A.M. Archer with Ranged/Magic only (a spare crossbow+bolts spawns nearby if unequipped). Sneak past goblin guards in the Lumbridge Swamp Caves via a scripted stealth sequence with a goblin-sergeant escort, then fight Sigmund (level 64) at the end -- save the ancient mace's special attack until after he activates Protect from Melee/prayer, since the special disables his prayer for the rest of the fight. Untie Zanik to finish; optionally ride the train to Keldagrim afterward for a Lumbridge & Draynor Diary hard task.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Another Slice of H.A.M.",
+          "url": "https://oldschool.runescape.wiki/w/Another_Slice_of_H.A.M."
+        },
+        {
+          "title": "Another Slice of H.A.M./Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/Another_Slice_of_H.A.M./Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "mining +3000, prayer +3000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-forgettable-tale",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Forgettable Tale...",
+      "detail": "Part 2 of the Rise of the Red Axe series (after The Giant Dwarf). Investigate the Red Axe via an extremely drunk, kebab-obsessed dwarf: ply him with beer, fetch a random item requested by a rowdy dwarf, deliver a dwarven stout to Khorvak, then grow kelda seeds in the Kelda Hops Patch (15-20 min real-time wait) and brew them into kelda ale at the East Keldagrim pub vat (another 15-20 min wait) -- plan filler activities like High Alch around the waits. Explore a closed-off minecart tunnel through 6 rooms, including 3 sliding-block cart-track puzzles and a room requiring you to read 3 Red Axe documents. Finish by drinking a beer and eating a kebab back at the eastern pub after reporting to Veldaban.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Forgettable Tale...",
+          "url": "https://oldschool.runescape.wiki/w/Forgettable_Tale..."
+        },
+        {
+          "title": "Forgettable Tale.../Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/Forgettable_Tale.../Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +5000, farming +5000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-ratcatchers",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Ratcatchers",
+      "detail": "Requires Icthlarin's Little Helper and Gertrude's Cat complete, plus The Giant Dwarf started for Keldagrim access. Your cat catches rats through five vignettes across the map: sneak it past guards in an Ardougne mansion to nab 6 rats, poison cheese to lure rats from a Varrock warehouse's holes, smoke a rat hole in Keldagrim with a lit weed pot, meet Felkrash in Port Sarim's rat pits, then learn animal charming from Ali the Snake Charmer in Pollnivneach (an 8-note sequence: D G E F# B(+octave) C# A) to finish.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Ratcatchers",
+          "slug": "Ratcatchers.s1",
+          "url": "https://oldschool.runescape.wiki/w/Ratcatchers"
+        },
+        {
+          "title": "Ratcatchers",
+          "slug": "Ratcatchers.s11",
+          "url": "https://oldschool.runescape.wiki/w/Ratcatchers"
+        },
+        {
+          "title": "Ratcatchers/Quick guide",
+          "slug": "Ratcatchers_Quick_guide.s2",
+          "url": "https://oldschool.runescape.wiki/w/Ratcatchers/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "thieving +4500",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-zogre-flesh-eaters",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Zogre Flesh Eaters",
+      "detail": "Grish asks you to investigate zombified ogres (zogres) infesting the ogre ceremonial grounds. Head into the cave below Jiggig, being careful of disease from zogre/skogre attacks if under 89 combat (carry super restores). Loot a ruined backpack and a torn page from a skeleton/lectern, then pry open a coffin with a knife for a black prism. Head to Yanille, use the recovered Dragon Inn tankard on the bartender there, then visit Zavistic Rarve at the Wizards' Guild. Investigate the ogres' bedridden neighbor Sithik Ints: search his room for a portraiture book, necromancy book, papyrus/charcoal and a Book of 'H.A.M.', read and use all three on him, then sketch a portrait that reads as an honest \"classic realist charcoal portrait\" (higher Crafting speeds this up) and get it signed by the Dragon Inn bartender. Bring the necromancy book, H.A.M. book, tankard and signed portrait to Zavistic Rarve for a strange potion; spike Sithik's tea with it, then question him for the secrets to Relicym's balm, curing the disease, and removing the undead ogres. Return to Grish for an ogre gate key and to learn comp ogre bow use, then fight the level-111 Slash Bash (uses Ranged+Melee \u2014 safespot with Protect from Missiles, or use Crumble Undead) in the ceremonial chamber to finish.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Zogre Flesh Eaters",
+          "url": "https://oldschool.runescape.wiki/w/Zogre_Flesh_Eaters"
+        },
+        {
+          "title": "Zogre Flesh Eaters/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/Zogre_Flesh_Eaters/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "fletching +2000, ranged +2000, herblore +2000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-vale-totems",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Vale Totems (miniquest)",
+      "detail": "Introductory miniquest gating the Vale Totems Fletching minigame. Talk to Ranulph, who shows you a totem the local ents damaged; child NPC Isadora tells you to rebuild it. Chop a nearby tree for oak-or-better logs, click the totem site to lay the new base, then return to Ranulph/Isadora. Next, click the totem and select carving options for a set of nearby spirit animals (randomized per player) to decorate it. Return again, then fletch 4 items (bows/shields) from the same wood as the totem and use them on the totem to finish decorating it. The ents leave an offering to collect, then speak to either NPC to receive Sacraments of ent folk and complete the miniquest, unlocking the minigame proper. No combat.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Vale Totems (miniquest)",
+          "url": "https://oldschool.runescape.wiki/w/Vale_Totems_(miniquest)"
+        },
+        {
+          "title": "Vale Totems (miniquest)/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/Vale_Totems_(miniquest)/Quick_guide"
+        }
+      ]
+    },
+    {
+      "id": "quest-darkness-of-hallowvale",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Darkness of Hallowvale",
+      "detail": "Myreque chain quest 3: cross into Meiyerditch via boat, meet Old Man Ral, run the sickle-logo agility maze to reach Vertida's hideout, then a fetch-quest loop back to Burgh de Rott and Paterdomus/Varrock before returning to sneak into the castle walls under Vanstrom Klause's nose (he attacks you 5x during the sketch cutscenes -- pray melee to no-damage it), then grab the alchemy tome from the secret lab with Telekinetic Grab. No combat kills required, just surviving Vanstrom's scripted hits.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Darkness of Hallowvale",
+          "url": "https://oldschool.runescape.wiki/w/Darkness_of_Hallowvale"
+        },
+        {
+          "title": "Darkness of Hallowvale/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/Darkness_of_Hallowvale/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "agility +7000, thieving +6000, construction +2000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
@@ -5960,10 +5065,32 @@
       ]
     },
     {
-      "id": "quest-the-hand-in-the-sand",
+      "id": "train-construction-40",
       "phase": "Toward Quest cape",
-      "instruction": "Complete The Hand in the Sand",
-      "detail": "Talk to Bert in Yanille (house next to the POH portal) to get a sandy hand. Buy/bring a beer and give it to the Guard Captain at the Dragon Inn pub south of Bert's house. Ring the bell outside the Wizards' Guild (or enter with 66 Magic) and give the hand to Zavistic Rarve. Get Bert's rota from Bert, travel to Brimhaven, find Sandy south of the Shrimp and Parrot restaurant, search his desk for Sandy's rota, and pickpocket him for sand. Back in Yanille, get a magic scroll from Bert, ring the bell for a magical orb from Zavistic Rarve, who then offers to teleport you to Port Sarim. At Betty's magic shop get bottled water, mix in redberries then white berries (order matters) for pink dye, dye the lantern lens for a rose-tinted lens, then use the lens on the counter from the doorway for a truth serum, and hand over sand. In Brimhaven, distract Sandy with dialogue and use the truth serum on his coffee mug, then activate the magical orb and click through every dialogue option with him. Back in Yanille, ring the bell twice more at the Wizards' Guild (getting a cutscene on the second), sail to Entrana and talk to Mazion at the sandpit for a wizard's head, then return to Yanille and ring the bell/talk to Zavistic Rarve one last time to finish.",
+      "instruction": "Train Construction to 40",
+      "detail": "Oak chairs or larder. Oak planks give best XP/plank ratio at this tier.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CONSTRUCTION",
+          "level": 40
+        }
+      ],
+      "refs": [
+        {
+          "title": "Construction training",
+          "slug": "Construction_training",
+          "url": "https://oldschool.runescape.wiki/w/Construction_training"
+        }
+      ]
+    },
+    {
+      "id": "quest-scrambled",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Scrambled",
+      "detail": "Alan asks you to mind his egg-friend Humpy while he cooks a feast; gravity kills it the moment he leaves. Recruit three of King's men from The King's Inn in Tal Teklan to help rebuild the egg: Acatzin (repair blacksmith's whetstone then his axe), Nezketi (brew damiana tea: pick damiana leaves + bowl of water from fountain, boil on oven, pour into cup), Kauayotl (repair his cart with 2 planks, nails from blacksmith's workbench, hammer, saw from Archery Supplies). Back at the temple the three can't fix the original egg so you fetch three replacement eggs by killing and looting egg piles: large chicken (lvl16, chicken farm south of temple), red dragon (lvl106, Dragon Nest SE across the river, safespottable), black jaguar (lvl88, campsite east, safespot behind tropical tree/fern). None of the painted eggs survive judging (three more great falls), so you and King's men solve a sliding/rotate puzzle (hover puzzle-piece icon for the solution) to reassemble the original egg. Cutscene resolves the plot; ironically Alan himself then has a great fall. Avoid having a bonecrusher equipped if you want his bones as a keepsake instead of auto-crushed prayer xp.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -5973,28 +5100,24 @@
       ],
       "refs": [
         {
-          "title": "The Hand in the Sand",
-          "url": "https://oldschool.runescape.wiki/w/The_Hand_in_the_Sand"
-        },
-        {
-          "title": "The Hand in the Sand/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/The_Hand_in_the_Sand/Quick_guide"
+          "title": "Scrambled",
+          "url": "https://oldschool.runescape.wiki/w/Scrambled"
         }
       ],
       "hints": [
         {
           "type": "quest-xp",
           "target": null,
-          "value": "thieving +1000, crafting +9000",
+          "value": "construction +5000, cooking +5000, smithing +5000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
     {
-      "id": "quest-enakhras-lament",
+      "id": "quest-cold-war",
       "phase": "Toward Quest cape",
-      "instruction": "Complete Enakhra's Lament",
-      "detail": "Firemaking 45 is listed as a requirement but is not actually needed in practice (only used to identify brazier fuel by inspection; trial-and-error works without it). Build a statue for Lazim from 32kg sandstone base + 20kg sandstone body (chiseled down from bigger pieces), pick a head design, carve it from a 5kg granite piece, hand it over and fall into a buried temple. Bottom floor: chisel a fallen statue for 4 limbs, collect M/R/K/Z sigils by walking the outer hallway rooms (limbs auto-consumed to open each door), place all 4 sigils in the center room. Middle floor: mold soft clay + carved 5kg granite into a new stone head for the pedestal (triggers cutscene), then solve 4 corner puzzles - feed food to Pentyn (NW), cast a wind spell on the furnace (NE), light 6 braziers with correct fuel per item (SE), cast a fire spell on the fountain (SW) - to pass the magic barrier. Top floor: cast Crumble Undead on a boneguard, then Protect-from-Melee-tank while talking to a second boneguard, patch a wall with 3 sandstone pieces (chisel each into place) to finish. Region-opener quest, no known deeper dependency; unlocks quick desert-temple teleport infrastructure via Camulet.",
+      "instruction": "Complete Cold War",
+      "detail": "Only quest in the Penguin series. Zookeeper Larry is paranoid about penguins; build a bird-hide lookout on the Iceberg (oak plank + spade on a snow patch) and watch a cutscene of a unique-per-player 3-emote penguin greeting sequence (memorize it -- 8 possible emotes, needed later). Craft a Clockwork suit at a crafting table 3 (plank + silk + clockwork mechanism). Test it on zoo penguins using the memorized emote greeting (guessable if forgotten, max 24 tries) to learn they're planning to escape by flying; find more penguins disguised as sheep in Fred the Farmer's Lumbridge pasture, get a secret phrase (\"do not trust the walrus\") by trading a raw cod or wearing a ring of charos. Gather swamp tar + 5 feathers to trade black-marketeer Noodle for a fake KGP ID, then infiltrate the Iceberg outpost with the password \"cabbage\", complete the Penguin Agility Course, and steal a cowbell + craft Penguin Bongos (mahogany plank + leather) to distract the guards Ping and Pong and open the war room. Get caught by Pescaling Pax and thrown in an Icelord cage (level 51, kill 1-3, each grants 40 Attack xp) to escape, then report the penguin invasion plan back to Larry.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -6004,19 +5127,15 @@
       ],
       "refs": [
         {
-          "title": "Enakhra's Lament",
-          "url": "https://oldschool.runescape.wiki/w/Enakhra's_Lament"
-        },
-        {
-          "title": "Enakhra's Lament/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/Enakhra's_Lament/Quick_guide"
+          "title": "Cold War",
+          "url": "https://oldschool.runescape.wiki/w/Cold_War"
         }
       ],
       "hints": [
         {
           "type": "quest-xp",
           "target": null,
-          "value": "crafting +7000, mining +7000, firemaking +7000, magic +7000",
+          "value": "crafting +2000, agility +5000, construction +1500",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
@@ -6060,6 +5179,52 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ]
+    },
+    {
+      "id": "train-magic-43",
+      "phase": "Toward Quest cape",
+      "instruction": "Train Magic to 43",
+      "detail": "Superheat or Curse spells. Unlocks Superheat for Smithing XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 43
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "bar_via_superheat",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "magic": 43
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "do-while",
+          "target": "smithing",
+          "value": null,
+          "note": "Superheat Item gives passive Smithing xp on the bar produced."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s11",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
       ]
     },
     {
@@ -6288,6 +5453,109 @@
       ]
     },
     {
+      "id": "train-ranged-40",
+      "phase": "Toward Quest cape",
+      "instruction": "Train Ranged to 40",
+      "detail": "Ogresses or Experiments. Equips green dragonhide.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RANGED",
+          "level": 40
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "crab",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "ranged": 40
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Ranged training",
+          "slug": "Pay-to-play_Ranged_training.s9",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+        }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
+      ]
+    },
+    {
+      "id": "quest-spirits-of-the-elid",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Spirits of the Elid",
+      "detail": "Must beat 3 level-75 golems (white/grey/black), each weak to a different melee style (stab/slash/crush respectively) or a ranged/magic water-channel puzzle. Talk Awusah then Ghaslor the Elder for the ballad, find torn robe top+bottom in a cupboard, repair with needle+thread and equip (Robes of Elidinis), telegrab an ancestral key. Follow the river north to a waterfall cave, rope the overhanging root, use the ancestral key wearing the robes to open the door. Kill white golem (stab) then clear its water channel via Thieving; kill grey golem (slash) then clear via pickaxe; kill black golem (crush) then clear via Ranged/Magic on a target. Talk to a spirit through the north door, return to Nardah. Separately: take a genie's shoes by Awusah's door, knife them for a sole, find a crevice west of the general store, rope it, talk to and strike a deal with the Genie for a statuette, then place the statuette on the shrine plinth north of the fountain to finish. Region-opener (Nardah/desert), no known deeper dependency; useful all-purpose restoration shrine unlock.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Spirits of the Elid",
+          "url": "https://oldschool.runescape.wiki/w/Spirits_of_the_Elid"
+        },
+        {
+          "title": "Spirits of the Elid/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/Spirits_of_the_Elid/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "prayer +8000, thieving +1000, magic +1000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-temple-of-ikov",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Temple of Ikov",
+      "detail": "Must be able to defeat a level 84 Fire Warrior of Lesarkus with Ranged. Choice quest with a good path (side with Guardians of Armadyl, kill Lucien level 14) or evil path (steal the Staff of Armadyl for Lucien, may need to kill a safespottable level 43 Guardian of Armadyl). Enter the temple dungeon south of the Ranging Guild; get boots of lightness from behind a web (needs light source+knife), equip Pendant of Lucien to pass the north gate, cross a lava bridge at -1kg or less, take a lever, cross back and attach the lever to a bracket then pull it, loot ice arrows from chests along an icy path (16 arrows enough with Ava's + 60 Ranged). Go back through the north gate, search-and-pull another lever (needs 42 Thieving), fight through to the Fire Warrior of Lesarkus (level 84, kill with ice arrows, Protect from Magic negates damage), then hand Winelda 20 unnoted limpwurt roots at once to be teleported across the lava (one-way, no going back - caution for ironmen). Optionally grab a shiny key for a dungeon shortcut. Push through to the Guardians of Armadyl room and pick a side to finish.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Temple of Ikov",
+          "url": "https://oldschool.runescape.wiki/w/Temple_of_Ikov"
+        },
+        {
+          "title": "Temple of Ikov/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/Temple_of_Ikov/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "ranged +10500, fletching +8000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
       "id": "train-woodcutting-45",
       "phase": "Toward Quest cape",
       "instruction": "Train Woodcutting to 45",
@@ -6313,6 +5581,195 @@
           "title": "Pay-to-play Woodcutting training",
           "slug": "Pay-to-play_Woodcutting_training.s17",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+        }
+      ]
+    },
+    {
+      "id": "train-firemaking-50",
+      "phase": "Toward Quest cape",
+      "instruction": "Train Firemaking to 50",
+      "detail": "Maple logs \u2014 good balance of XP/cost. Required for Desert Treasure.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FIREMAKING",
+          "level": 50
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "ash_from_maple_logs",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "firemaking": 50
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Firemaking training",
+          "slug": "Pay-to-play_Firemaking_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+        }
+      ]
+    },
+    {
+      "id": "quest-tears-of-guthix",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Tears of Guthix",
+      "detail": "43 QP gate makes this a mid-game unlock, not an early one. Tell Juna stories to earn a stone bowl recipe, then use a light creature (attracted by the sapphire lantern) to cross the chasm to a rock vein, mine a magic stone, chisel it into a stone bowl, and hand it to Juna to finish. The sapphire lantern doubles as the light source needed to safely navigate the caves and is reusable later for While Guthix Sleeps. Gates While Guthix Sleeps and the Hard Lumbridge & Draynor Diary. Note: 'Tears of Guthix' the quest and 'Tears of Guthix' the repeatable minigame it unlocks are the same wiki title-root but two distinct pages -- cited both above since the depth:04 brief's long-run-value framing refers to the minigame, not the quest itself.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Tears of Guthix",
+          "url": "https://oldschool.runescape.wiki/w/Tears_of_Guthix"
+        },
+        {
+          "title": "Tears of Guthix (minigame)",
+          "url": "https://oldschool.runescape.wiki/w/Tears_of_Guthix_(minigame)"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "crafting +1000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-the-hand-in-the-sand",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete The Hand in the Sand",
+      "detail": "Talk to Bert in Yanille (house next to the POH portal) to get a sandy hand. Buy/bring a beer and give it to the Guard Captain at the Dragon Inn pub south of Bert's house. Ring the bell outside the Wizards' Guild (or enter with 66 Magic) and give the hand to Zavistic Rarve. Get Bert's rota from Bert, travel to Brimhaven, find Sandy south of the Shrimp and Parrot restaurant, search his desk for Sandy's rota, and pickpocket him for sand. Back in Yanille, get a magic scroll from Bert, ring the bell for a magical orb from Zavistic Rarve, who then offers to teleport you to Port Sarim. At Betty's magic shop get bottled water, mix in redberries then white berries (order matters) for pink dye, dye the lantern lens for a rose-tinted lens, then use the lens on the counter from the doorway for a truth serum, and hand over sand. In Brimhaven, distract Sandy with dialogue and use the truth serum on his coffee mug, then activate the magical orb and click through every dialogue option with him. Back in Yanille, ring the bell twice more at the Wizards' Guild (getting a cutscene on the second), sail to Entrana and talk to Mazion at the sandpit for a wizard's head, then return to Yanille and ring the bell/talk to Zavistic Rarve one last time to finish.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "The Hand in the Sand",
+          "url": "https://oldschool.runescape.wiki/w/The_Hand_in_the_Sand"
+        },
+        {
+          "title": "The Hand in the Sand/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/The_Hand_in_the_Sand/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "thieving +1000, crafting +9000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-enakhras-lament",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Enakhra's Lament",
+      "detail": "Firemaking 45 is listed as a requirement but is not actually needed in practice (only used to identify brazier fuel by inspection; trial-and-error works without it). Build a statue for Lazim from 32kg sandstone base + 20kg sandstone body (chiseled down from bigger pieces), pick a head design, carve it from a 5kg granite piece, hand it over and fall into a buried temple. Bottom floor: chisel a fallen statue for 4 limbs, collect M/R/K/Z sigils by walking the outer hallway rooms (limbs auto-consumed to open each door), place all 4 sigils in the center room. Middle floor: mold soft clay + carved 5kg granite into a new stone head for the pedestal (triggers cutscene), then solve 4 corner puzzles - feed food to Pentyn (NW), cast a wind spell on the furnace (NE), light 6 braziers with correct fuel per item (SE), cast a fire spell on the fountain (SW) - to pass the magic barrier. Top floor: cast Crumble Undead on a boneguard, then Protect-from-Melee-tank while talking to a second boneguard, patch a wall with 3 sandstone pieces (chisel each into place) to finish. Region-opener quest, no known deeper dependency; unlocks quick desert-temple teleport infrastructure via Camulet.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Enakhra's Lament",
+          "url": "https://oldschool.runescape.wiki/w/Enakhra's_Lament"
+        },
+        {
+          "title": "Enakhra's Lament/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/Enakhra's_Lament/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "crafting +7000, mining +7000, firemaking +7000, magic +7000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-the-eyes-of-glouphrie",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete The Eyes of Glouphrie",
+      "detail": "Intermediate gnome-lore quest following on from The Grand Tree. Repair Oaknock's crystal-disc exchange machine (colour x shape-sides value puzzle), then use Hazelmere's mind-link (needs 46 Magic, not boostable) to relive a flashback of the Gnome/Goblin war revealing Glouphrie's illusions and Argento's death, then hunt down and kill 6 one-HP 'evil creature' spy-constructs hidden around the Stronghold and Grand Tree. Required for: The Path of Glouphrie, Monkey Madness II, Medium Western Provinces Diary.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "The Eyes of Glouphrie",
+          "url": "https://oldschool.runescape.wiki/w/The_Eyes_of_Glouphrie"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "magic +12000, woodcutting +2500, runecraft +6000, construction +250",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-what-lies-below",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete What Lies Below",
+      "detail": "Needs Rune Mysteries + 35 Runecraft. Recover a stranded trader's documents stolen by outlaws west of the Grand Exchange, which pulls you into a Zamorak-monk conspiracy: infuse a wand at the Chaos Altar, deliver findings to Surok Magis in Varrock Palace's library, then fight an instanced King Roald -- bring him to 2hp or less and operate the Beacon ring (chatbox prompts when it's ready) to summon an ally and finish him off. Grab the Dagon'hai history book from a nearby bookshelf before leaving to claim 5 bonus Kudos afterward.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "What Lies Below",
+          "url": "https://oldschool.runescape.wiki/w/What_Lies_Below"
+        },
+        {
+          "title": "What Lies Below/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/What_Lies_Below/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "runecraft +8000, defence +2000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -6438,45 +5895,6 @@
       ]
     },
     {
-      "id": "quest-family-crest",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Family Crest",
-      "detail": "Grants Cooking gauntlets (stop burning food) and Goldsmith gauntlets (Smithing XP boost).",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Family Crest",
-          "slug": "Family_Crest",
-          "url": "https://oldschool.runescape.wiki/w/Family_Crest"
-        }
-      ]
-    },
-    {
-      "id": "quest-family-pest",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Family Pest",
-      "detail": "Pure dialogue miniquest, no combat/skilling: visit Dimintheis's three sons in any order (Avan at Al Kharid mine, Caleb in Catherby, Johnathon at the Jolly Boar Inn) who each turn down help with a comic non-problem, then return to Dimintheis, who reveals the family isn't actually rich and asks for 500,000gp instead. Hand over the coins to finish. The real payoff is the gauntlet-duplication unlock, since normally only one gauntlet type can be held/enchanted at a time.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Family Pest",
-          "url": "https://oldschool.runescape.wiki/w/Family_Pest"
-        }
-      ]
-    },
-    {
       "id": "train-agility-40",
       "phase": "Toward Quest cape",
       "instruction": "Train Agility to 40",
@@ -6584,111 +6002,6 @@
           "title": "Thieving training",
           "slug": "Blackjacking.s1",
           "url": "https://oldschool.runescape.wiki/w/Thieving_training"
-        }
-      ]
-    },
-    {
-      "id": "quest-dt",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Desert Treasure",
-      "detail": "Unlocks Ancient Magicks spellbook. Required for many late-game routes.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3178,
-          "y": 3043,
-          "plane": 0,
-          "label": "Asgarnia Smith, Bedabin Camp (start)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "talk-to",
-        "target": "asgarnia_smith",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "state": "quest-varbit:??"
-        }
-      },
-      "hints": [
-        {
-          "type": "dialogue",
-          "target": "asgarnia_smith",
-          "value": "1",
-          "note": "start: ask about the treasure rumours"
-        },
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "magic +20000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Desert Treasure I",
-          "slug": "Desert_Treasure_I.s1",
-          "url": "https://oldschool.runescape.wiki/w/Desert_Treasure_I"
-        },
-        {
-          "title": "Desert Treasure I",
-          "slug": "Desert_Treasure_I.s34",
-          "url": "https://oldschool.runescape.wiki/w/Desert_Treasure_I"
-        }
-      ]
-    },
-    {
-      "id": "quest-curse-of-the-empty-lord",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete Curse of the Empty Lord",
-      "detail": "After Valdez, the game randomly assigns one of 3 fixed sequences (told via a location hint -- 'pirates and a shipwreck'=Seq1, 'north-east'=Seq2, 'south-east'=Seq3) and you must follow that sequence's 5 ghosts (Rennard/Kharrim/Lennissa/Dhalak/Viggora) in order at THAT sequence's specific locations only -- the same ghosts exist at all 3 sequences' spots but only respond in your assigned one. Multiple stops are deep/dangerous Wilderness (up to level 56, e.g. Rogues' Castle in Seq1, Edgeville Dungeon in Seq3). Robes are individually reclaimable for free afterward by revisiting your sequence's ghosts.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Curse of the Empty Lord",
-          "url": "https://oldschool.runescape.wiki/w/Curse_of_the_Empty_Lord"
-        }
-      ]
-    },
-    {
-      "id": "quest-the-generals-shadow",
-      "phase": "Toward Quest cape",
-      "instruction": "Complete The General's Shadow",
-      "detail": "Sequel to Fight Arena. Fully equip ghostly robes + ring of visibility + ghostspeak amulet, then talk to General Khazard's ghost south-east of Rellekka. He sends you to pay Sin Seer 40 coins in Seers' Village (upstairs in the spinning-wheel house), then relay word to 4 ghost scouts scattered across the map (south of Shantay Pass, south of the Gnome Stronghold entrance, between Falador and Draynor Manor, east of Tai Bwo Wannai) -- each just needs a conversation, no combat. Report back to Khazard, then enter the Goblin Cave east of the Fishing Guild carrying the severed leg, run to the north-east crack in the southern wall (a no-Prayer zone), and fight the level-160 ghost of Bouncer to 0 hp, which auto-throws the leg to finish. Auto-completes if the Fremennik or Desert league region is unlocked in a Leagues context.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "The General's Shadow",
-          "url": "https://oldschool.runescape.wiki/w/The_General's_Shadow"
-        },
-        {
-          "title": "The General's Shadow/Quick guide",
-          "url": "https://oldschool.runescape.wiki/w/The_General's_Shadow/Quick_guide"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "slayer +2000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -6841,6 +6154,47 @@
           "title": "Stronghold of Security",
           "slug": "Stronghold_of_Security.s3",
           "url": "https://oldschool.runescape.wiki/w/Stronghold_of_Security"
+        }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
+      ]
+    },
+    {
+      "id": "train-ranged-55",
+      "phase": "Toward Quest cape",
+      "instruction": "Train Ranged to 55",
+      "detail": "Seagulls at Port Sarim or Chinchompas. Equips maple shortbow.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RANGED",
+          "level": 55
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "crab",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "ranged": 55
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Ranged training",
+          "slug": "Pay-to-play_Ranged_training.s9",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
         }
       ],
       "passiveOverlays": [
@@ -7013,6 +6367,28 @@
       ]
     },
     {
+      "id": "train-construction-55",
+      "phase": "Toward Quest cape",
+      "instruction": "Train Construction to 55",
+      "detail": "Oak dungeon doors or oak larder. Each action ~56 XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CONSTRUCTION",
+          "level": 55
+        }
+      ],
+      "refs": [
+        {
+          "title": "Construction training",
+          "slug": "Construction_training",
+          "url": "https://oldschool.runescape.wiki/w/Construction_training"
+        }
+      ]
+    },
+    {
       "id": "train-prayer-52",
       "phase": "Toward Quest cape",
       "instruction": "Train Prayer to 52",
@@ -7059,6 +6435,162 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ]
+    },
+    {
+      "id": "train-magic-55",
+      "phase": "Toward Quest cape",
+      "instruction": "Train Magic to 55",
+      "detail": "High Alchemy on stackable items. Core money maker.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 55
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "alchemy_target_item",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "magic": 55
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "batch-size",
+          "target": "high-alch",
+          "value": "1-per-5-ticks",
+          "note": "65xp/cast, up to 78,000xp/h stationary [ref: Pay-to-play Magic training s14]."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s5",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s14",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
+      ]
+    },
+    {
+      "id": "quest-dt",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Desert Treasure",
+      "detail": "Unlocks Ancient Magicks spellbook. Required for many late-game routes.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3178,
+          "y": 3043,
+          "plane": 0,
+          "label": "Asgarnia Smith, Bedabin Camp (start)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "asgarnia_smith",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "asgarnia_smith",
+          "value": "1",
+          "note": "start: ask about the treasure rumours"
+        },
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "magic +20000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Desert Treasure I",
+          "slug": "Desert_Treasure_I.s1",
+          "url": "https://oldschool.runescape.wiki/w/Desert_Treasure_I"
+        },
+        {
+          "title": "Desert Treasure I",
+          "slug": "Desert_Treasure_I.s34",
+          "url": "https://oldschool.runescape.wiki/w/Desert_Treasure_I"
+        }
+      ]
+    },
+    {
+      "id": "quest-curse-of-the-empty-lord",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Curse of the Empty Lord",
+      "detail": "After Valdez, the game randomly assigns one of 3 fixed sequences (told via a location hint -- 'pirates and a shipwreck'=Seq1, 'north-east'=Seq2, 'south-east'=Seq3) and you must follow that sequence's 5 ghosts (Rennard/Kharrim/Lennissa/Dhalak/Viggora) in order at THAT sequence's specific locations only -- the same ghosts exist at all 3 sequences' spots but only respond in your assigned one. Multiple stops are deep/dangerous Wilderness (up to level 56, e.g. Rogues' Castle in Seq1, Edgeville Dungeon in Seq3). Robes are individually reclaimable for free afterward by revisiting your sequence's ghosts.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Curse of the Empty Lord",
+          "url": "https://oldschool.runescape.wiki/w/Curse_of_the_Empty_Lord"
+        }
+      ]
+    },
+    {
+      "id": "quest-the-generals-shadow",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete The General's Shadow",
+      "detail": "Sequel to Fight Arena. Fully equip ghostly robes + ring of visibility + ghostspeak amulet, then talk to General Khazard's ghost south-east of Rellekka. He sends you to pay Sin Seer 40 coins in Seers' Village (upstairs in the spinning-wheel house), then relay word to 4 ghost scouts scattered across the map (south of Shantay Pass, south of the Gnome Stronghold entrance, between Falador and Draynor Manor, east of Tai Bwo Wannai) -- each just needs a conversation, no combat. Report back to Khazard, then enter the Goblin Cave east of the Fishing Guild carrying the severed leg, run to the north-east crack in the southern wall (a no-Prayer zone), and fight the level-160 ghost of Bouncer to 0 hp, which auto-throws the leg to finish. Auto-completes if the Fremennik or Desert league region is unlocked in a Leagues context.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "The General's Shadow",
+          "url": "https://oldschool.runescape.wiki/w/The_General's_Shadow"
+        },
+        {
+          "title": "The General's Shadow/Quick guide",
+          "url": "https://oldschool.runescape.wiki/w/The_General's_Shadow/Quick_guide"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "slayer +2000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
       ]
     },
     {
@@ -7288,6 +6820,40 @@
       ]
     },
     {
+      "id": "train-firemaking-75",
+      "phase": "Toward Quest cape",
+      "instruction": "Train Firemaking to 75",
+      "detail": "Yew or magic logs. Unlocks Wintertodt minigame at 50 FM threshold.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 7374
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 1634,
+          "y": 3948,
+          "plane": 0,
+          "label": "Wintertodt"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FIREMAKING",
+          "level": 75
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Firemaking training",
+          "slug": "Pay-to-play_Firemaking_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+        }
+      ]
+    },
+    {
       "id": "train-agility-60",
       "phase": "Toward Quest cape",
       "instruction": "Train Agility to 60",
@@ -7424,6 +6990,77 @@
       ]
     },
     {
+      "id": "train-crafting-70",
+      "phase": "Toward Quest cape",
+      "instruction": "Train Crafting to 70",
+      "detail": "Blue/red dragonhide bodies for faster XP, higher material cost.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CRAFTING",
+          "level": 70
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Crafting training",
+          "slug": "Pay-to-play_Crafting_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
+        }
+      ]
+    },
+    {
+      "id": "train-ranged-70",
+      "phase": "Toward Quest cape",
+      "instruction": "Train Ranged to 70",
+      "detail": "Cannon tasks for fast Ranged XP. Unlocks black dragonhide.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RANGED",
+          "level": 70
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "crab",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "ranged": 70
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "do-while",
+          "target": "afk",
+          "value": null,
+          "note": "Crabs stay viable to level 70 per the wiki; cannon/chinning are faster but not required."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Ranged training",
+          "slug": "Pay-to-play_Ranged_training.s9",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+        }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
+      ]
+    },
+    {
       "id": "quest-mournings-end-part-i",
       "phase": "Toward Quest cape",
       "instruction": "Complete Mourning's End Part I",
@@ -7500,24 +7137,67 @@
       ]
     },
     {
-      "id": "train-crafting-70",
+      "id": "train-magic-70",
       "phase": "Toward Quest cape",
-      "instruction": "Train Crafting to 70",
-      "detail": "Blue/red dragonhide bodies for faster XP, higher material cost.",
+      "instruction": "Train Magic to 70",
+      "detail": "Alching or Bursting at Crabs. Unlocks Ice Barrage prerequisite path.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
         {
           "type": "SKILL",
-          "skill": "CRAFTING",
+          "skill": "MAGIC",
           "level": 70
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "crab",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "magic": 70
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "burst-spell-tier",
+          "value": "??",
+          "note": "Smoke Burst usable from 62; Ice Burst better from 70 \u2014 exact xp/h not sourced."
         }
       ],
       "refs": [
         {
-          "title": "Pay-to-play Crafting training",
-          "slug": "Pay-to-play_Crafting_training.s3",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s17",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
+      ]
+    },
+    {
+      "id": "quest-mage-arena-i",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Mage Arena I",
+      "detail": "Solo boss-form gauntlet, not a puzzle miniquest: Kolodion shifts through 5 forms (himself -> ogre -> frost spider -> ghost -> level 112 black demon), all magic-only damage after the first form, so Protect from Magic tanks the fight. ~50-100 spell casts (fewer with Iban Blast) clears all forms at 60+ Magic. The 100-cast god-spell unlock afterward is the real time cost, not the boss fight itself. Deep Wilderness (level 53-56) throughout -- PKer risk, and 'PK Skull Prevention' setting plus hidden attack option are recommended before entering.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Mage Arena I",
+          "url": "https://oldschool.runescape.wiki/w/Mage_Arena_I"
         }
       ]
     },
@@ -7549,6 +7229,90 @@
           "target": null,
           "value": "magic +5000, runecraft +5000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "rfd-evil-dave",
+      "phase": "Toward Quest cape",
+      "instruction": "RFD: Evil Dave's Spicy Stew",
+      "detail": "Prepare a special stew using brown/orange/red/yellow spices in the Stronghold of Security dungeon. RNG: rate ??",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Recipe for Disaster/Freeing Evil Dave",
+          "slug": "Recipe_for_Disaster_Freeing_Evil_Dave",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster/Freeing_Evil_Dave"
+        },
+        {
+          "title": "Recipe for Disaster",
+          "slug": "Recipe_for_Disaster.s1",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +1000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "quest-family-crest",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Family Crest",
+      "detail": "Grants Cooking gauntlets (stop burning food) and Goldsmith gauntlets (Smithing XP boost).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Family Crest",
+          "slug": "Family_Crest",
+          "url": "https://oldschool.runescape.wiki/w/Family_Crest"
+        }
+      ]
+    },
+    {
+      "id": "quest-family-pest",
+      "phase": "Toward Quest cape",
+      "instruction": "Complete Family Pest",
+      "detail": "Pure dialogue miniquest, no combat/skilling: visit Dimintheis's three sons in any order (Avan at Al Kharid mine, Caleb in Catherby, Johnathon at the Jolly Boar Inn) who each turn down help with a comic non-problem, then return to Dimintheis, who reveals the family isn't actually rich and asks for 500,000gp instead. Hand over the coins to finish. The real payoff is the gauntlet-duplication unlock, since normally only one gauntlet type can be held/enchanted at a time.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Family Pest",
+          "url": "https://oldschool.runescape.wiki/w/Family_Pest"
         }
       ]
     },
@@ -7632,6 +7396,28 @@
           "title": "Thieving training",
           "slug": "Blackjacking.s1",
           "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+        }
+      ]
+    },
+    {
+      "id": "train-construction-70",
+      "phase": "Toward Quest cape",
+      "instruction": "Train Construction to 70",
+      "detail": "Teak or mahogany furniture. Mahogany tables at 52 for fast AFK XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CONSTRUCTION",
+          "level": 70
+        }
+      ],
+      "refs": [
+        {
+          "title": "Construction training",
+          "slug": "Construction_training",
+          "url": "https://oldschool.runescape.wiki/w/Construction_training"
         }
       ]
     },
@@ -9779,6 +9565,129 @@
       ]
     },
     {
+      "id": "chkpt-prayer-pot-supply-coarse-1",
+      "phase": "Endgame & extras",
+      "instruction": "\u29c6 Ranarr seeds (gather, N+)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Ranarr seeds (gather, N+)",
+      "refs": [
+        {
+          "title": "Herb patch/Seeds",
+          "slug": "Herb_patch_Seeds.s1",
+          "url": "https://oldschool.runescape.wiki/w/Herb_patch/Seeds"
+        }
+      ]
+    },
+    {
+      "id": "pps-02-steal-ranarr-seeds",
+      "phase": "Endgame & extras",
+      "instruction": "Pickpocket Master Farmers until ranarr seeds banked",
+      "detail": "Master Farmer at Draynor market. Keep herb seeds, drop junk seeds. Need one ranarr seed per patch per planned run (patches: Falador, Catherby, Ardougne, Hosidius + Farming Guild if unlocked). Seed rate: ??",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3080,
+          "y": 3250,
+          "plane": 0,
+          "label": "Master Farmer (Draynor Village) -- corrects existing marker (3088,3255), off by ~9 tiles; sourced from Master_Farmer's own {{LocLine|x:3080,y:3250}} pin"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "gather",
+        "target": "ranarr_seed",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "ranarr_seed": "??"
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "ranarr_seed",
+          "value": "??",
+          "note": "Seed table is random; bank each ranarr immediately (HC habit)."
+        },
+        {
+          "type": "keep-drop",
+          "target": null,
+          "value": "keep:herb-seeds;drop:junk-seeds",
+          "note": null
+        },
+        {
+          "type": "rng-variance",
+          "target": "ranarr_seed",
+          "value": "1/268.75 (or 1/555.83 past Farming 85) inside the herb table, and the herb table itself is only 48/1000 of a successful pickpocket",
+          "note": "Master Farmer pickpocket chance table (Master_Farmer.s3): 90/240 (low/high out of 256) at level 1-99 normal, level requirement 38. Ranarr seed rate composite: chance-to-hit-herb-table (48/1000) x chance-of-ranarr-within-table (1/268.75) -- exact seeds-per-hour stays '??', not stated as a rate on this page."
+        }
+      ],
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Ranarr seeds (gather, N+)",
+      "refs": [
+        {
+          "title": "Master Farmer",
+          "slug": "Master_Farmer.s1",
+          "url": "https://oldschool.runescape.wiki/w/Master_Farmer",
+          "kind": "npc"
+        },
+        {
+          "title": "Master Farmer",
+          "slug": "Master_Farmer.s3",
+          "url": "https://oldschool.runescape.wiki/w/Master_Farmer"
+        },
+        {
+          "title": "Master Farmer",
+          "slug": "Master_Farmer.s5",
+          "url": "https://oldschool.runescape.wiki/w/Master_Farmer"
+        },
+        {
+          "title": "Master Farmer",
+          "slug": "Master_Farmer.s12",
+          "url": "https://oldschool.runescape.wiki/w/Master_Farmer"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/a106a8/arrive.png",
+          "url": null,
+          "caption": "Pickpocket the Master Farmer at Draynor market (scenario capture)",
+          "state": {
+            "scenario": "pps_02_master_farmer",
+            "rev": 236,
+            "harness": "spike/scenario/run_scenario.py",
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/1e17b3/observe.gif",
+          "url": null,
+          "caption": "Draynor market scene, animated (scenario capture, oracle PASS)",
+          "state": {
+            "scenario": "pps_02_master_farmer",
+            "rev": 236,
+            "harness": "spike/scenario/run_scenario.py",
+            "oracle": "PASS"
+          }
+        }
+      ]
+    },
+    {
       "id": "chkpt-prayer-pot-supply-coarse-2",
       "phase": "Endgame & extras",
       "instruction": "\u29c6 Herb-run loop (background, RECURRING)",
@@ -10043,6 +9952,220 @@
       ]
     },
     {
+      "id": "chkpt-combat-training-routing-0",
+      "phase": "Endgame & extras",
+      "instruction": "\u29c6 Bootstrap: chickens \u2192 cows (no bank)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3225,
+          "y": 3300,
+          "plane": 0,
+          "label": "Chickens, Lumbridge East Farm"
+        },
+        {
+          "x": 3254,
+          "y": 3267,
+          "plane": 0,
+          "label": "Cows, Lumbridge East Farm"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)",
+      "refs": [
+        {
+          "title": "Chicken",
+          "slug": "Chicken",
+          "url": "https://oldschool.runescape.wiki/w/Chicken"
+        },
+        {
+          "title": "Cow",
+          "slug": "Cow",
+          "url": "https://oldschool.runescape.wiki/w/Cow"
+        }
+      ]
+    },
+    {
+      "id": "ctr-01-kill-chickens",
+      "phase": "Endgame & extras",
+      "instruction": "Kill chickens until Attack 10 (Lumbridge farm)",
+      "detail": "No food needed. Rotate style per level chunk if desired (see toggle hint). Keep feathers (stack), bury every bone on the spot.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1173
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3225,
+          "y": 3300,
+          "plane": 0,
+          "label": "Chickens, Lumbridge East Farm coop"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 10
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "chicken",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 10
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "toggle-state",
+          "target": "attack-style",
+          "value": "accurate",
+          "note": "Set style to match the stat being trained; revisit each checkpoint."
+        },
+        {
+          "type": "keep-drop",
+          "target": null,
+          "value": "keep:feather,bones;drop:raw-chicken",
+          "note": "Bury bones as they drop \u2014 free Prayer toward 22 Protect Item."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)",
+      "refs": [
+        {
+          "title": "Chicken",
+          "slug": "Chicken",
+          "url": "https://oldschool.runescape.wiki/w/Chicken",
+          "kind": "npc"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/67a9f7/arrive.png",
+          "url": null,
+          "caption": "Kill chickens at Lumbridge East farm \u2014 chicken 3316 rendered from the rev-236 cache (scenario capture)",
+          "state": {
+            "scenario": "lumbridge_chickens",
+            "rev": 236,
+            "harness": "spike/scenario/run_scenario.py",
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/e5e457/observe.gif",
+          "url": null,
+          "caption": "Chicken-training scene, animated (scenario capture, oracle PASS)",
+          "state": {
+            "scenario": "lumbridge_chickens",
+            "rev": 236,
+            "harness": "spike/scenario/run_scenario.py",
+            "oracle": "PASS"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ctr-02-kill-cows",
+      "phase": "Endgame & extras",
+      "instruction": "Kill cows until Strength 20 (east Lumbridge)",
+      "detail": "Loot coins from nearby goblins/men opportunistically for the scimitar fund (amount ??). Cowhides optional: bank a stack for early Crafting if passing Al Kharid bank anyway.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3254,
+          "y": 3267,
+          "plane": 0,
+          "label": "Cows, Lumbridge East Farm"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 20
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "cow",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "strength": 20
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "toggle-state",
+          "target": "attack-style",
+          "value": "aggressive",
+          "note": null
+        },
+        {
+          "type": "keep-drop",
+          "target": null,
+          "value": "keep:cowhide,bones;drop:raw-beef",
+          "note": "Cowhide branch is optional \u2014 skip if inventory churn slows kills."
+        }
+      ],
+      "coarse_of": "combat-training-routing",
+      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)",
+      "refs": [
+        {
+          "title": "Cow",
+          "slug": "Cow",
+          "url": "https://oldschool.runescape.wiki/w/Cow"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/15e0fa/arrive.png",
+          "url": null,
+          "caption": "Kill cows east of Lumbridge \u2014 cow + herd + pen rendered from cache",
+          "state": {
+            "scenario": "ctr_02_kill_cows",
+            "rev": 236,
+            "harness": "spike/scenario/run_scenario.py",
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/8a847d/observe.gif",
+          "url": null,
+          "caption": "Cow-field scene, animated (scenario capture, oracle PASS)",
+          "state": {
+            "scenario": "ctr_02_kill_cows",
+            "rev": 236,
+            "harness": "spike/scenario/run_scenario.py",
+            "oracle": "PASS"
+          }
+        }
+      ]
+    },
+    {
       "id": "chkpt-combat-training-routing-1",
       "phase": "Endgame & extras",
       "instruction": "\u29c6 Gear stop: Al Kharid scimitar",
@@ -10199,129 +10322,6 @@
           "title": "Bronze scimitar",
           "slug": "Bronze_scimitar",
           "url": "https://oldschool.runescape.wiki/w/Bronze_scimitar"
-        }
-      ]
-    },
-    {
-      "id": "chkpt-prayer-pot-supply-coarse-1",
-      "phase": "Endgame & extras",
-      "instruction": "\u29c6 Ranarr seeds (gather, N+)",
-      "detail": "",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "checkpoint": "Ranarr seeds (gather, N+)",
-      "refs": [
-        {
-          "title": "Herb patch/Seeds",
-          "slug": "Herb_patch_Seeds.s1",
-          "url": "https://oldschool.runescape.wiki/w/Herb_patch/Seeds"
-        }
-      ]
-    },
-    {
-      "id": "pps-02-steal-ranarr-seeds",
-      "phase": "Endgame & extras",
-      "instruction": "Pickpocket Master Farmers until ranarr seeds banked",
-      "detail": "Master Farmer at Draynor market. Keep herb seeds, drop junk seeds. Need one ranarr seed per patch per planned run (patches: Falador, Catherby, Ardougne, Hosidius + Farming Guild if unlocked). Seed rate: ??",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3080,
-          "y": 3250,
-          "plane": 0,
-          "label": "Master Farmer (Draynor Village) -- corrects existing marker (3088,3255), off by ~9 tiles; sourced from Master_Farmer's own {{LocLine|x:3080,y:3250}} pin"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "gather",
-        "target": "ranarr_seed",
-        "count": null,
-        "cmp": "gte",
-        "until": {
-          "item": {
-            "ranarr_seed": "??"
-          }
-        }
-      },
-      "hints": [
-        {
-          "type": "rng-variance",
-          "target": "ranarr_seed",
-          "value": "??",
-          "note": "Seed table is random; bank each ranarr immediately (HC habit)."
-        },
-        {
-          "type": "keep-drop",
-          "target": null,
-          "value": "keep:herb-seeds;drop:junk-seeds",
-          "note": null
-        },
-        {
-          "type": "rng-variance",
-          "target": "ranarr_seed",
-          "value": "1/268.75 (or 1/555.83 past Farming 85) inside the herb table, and the herb table itself is only 48/1000 of a successful pickpocket",
-          "note": "Master Farmer pickpocket chance table (Master_Farmer.s3): 90/240 (low/high out of 256) at level 1-99 normal, level requirement 38. Ranarr seed rate composite: chance-to-hit-herb-table (48/1000) x chance-of-ranarr-within-table (1/268.75) -- exact seeds-per-hour stays '??', not stated as a rate on this page."
-        }
-      ],
-      "coarse_of": "prayer-pot-supply-coarse",
-      "checkpoint": "Ranarr seeds (gather, N+)",
-      "refs": [
-        {
-          "title": "Master Farmer",
-          "slug": "Master_Farmer.s1",
-          "url": "https://oldschool.runescape.wiki/w/Master_Farmer",
-          "kind": "npc"
-        },
-        {
-          "title": "Master Farmer",
-          "slug": "Master_Farmer.s3",
-          "url": "https://oldschool.runescape.wiki/w/Master_Farmer"
-        },
-        {
-          "title": "Master Farmer",
-          "slug": "Master_Farmer.s5",
-          "url": "https://oldschool.runescape.wiki/w/Master_Farmer"
-        },
-        {
-          "title": "Master Farmer",
-          "slug": "Master_Farmer.s12",
-          "url": "https://oldschool.runescape.wiki/w/Master_Farmer"
-        }
-      ],
-      "media": [
-        {
-          "kind": "png",
-          "path": "media/a106a8/arrive.png",
-          "url": null,
-          "caption": "Pickpocket the Master Farmer at Draynor market (scenario capture)",
-          "state": {
-            "scenario": "pps_02_master_farmer",
-            "rev": 236,
-            "harness": "spike/scenario/run_scenario.py",
-            "oracle": "PASS"
-          }
-        },
-        {
-          "kind": "gif",
-          "path": "media/1e17b3/observe.gif",
-          "url": null,
-          "caption": "Draynor market scene, animated (scenario capture, oracle PASS)",
-          "state": {
-            "scenario": "pps_02_master_farmer",
-            "rev": 236,
-            "harness": "spike/scenario/run_scenario.py",
-            "oracle": "PASS"
-          }
         }
       ]
     },
