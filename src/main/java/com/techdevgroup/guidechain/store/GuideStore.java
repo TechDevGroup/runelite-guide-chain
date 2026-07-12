@@ -86,6 +86,18 @@ public final class GuideStore
         Set<String> manualDone   = new LinkedHashSet<>();
         CharacterSnapshot character;
         SessionMetrics metrics = new SessionMetrics();
+
+        /**
+         * SYNTHESIS §S4 — RECURRING background steps. Keyed by the usual
+         * {@code guideId/stepId}. Mirrors (standalone/store path) what the
+         * RuneLite plugin additionally persists per-account as
+         * {@code guidechain.bg.<stepId>.nextFireEpochMs} / {@code .lifecycleState}
+         * — this map is what makes GuideWebMain work identically without
+         * RuneLite's ConfigManager.
+         */
+        Map<String, Long> bgNextFireEpochMs = new LinkedHashMap<>();
+        /** Live current lifecycle state per recurring step key (§S4). */
+        Map<String, String> bgLifecycleState = new LinkedHashMap<>();
     }
 
     private State state = new State();
@@ -134,6 +146,8 @@ public final class GuideStore
                 if (loaded.manualAcks == null)   loaded.manualAcks   = new LinkedHashSet<>();
                 if (loaded.manualDone == null)   loaded.manualDone   = new LinkedHashSet<>();
                 if (loaded.metrics == null)      loaded.metrics      = new SessionMetrics();
+                if (loaded.bgNextFireEpochMs == null) loaded.bgNextFireEpochMs = new LinkedHashMap<>();
+                if (loaded.bgLifecycleState == null)  loaded.bgLifecycleState  = new LinkedHashMap<>();
                 state = loaded;
             }
         }
@@ -198,6 +212,7 @@ public final class GuideStore
         this.manifest = manifest != null ? manifest : new Manifest();
         this.guides.clear();
         if (loadedGuides != null) this.guides.putAll(loadedGuides);
+        armAllRecurring();
 
         List<ChainEntry> chains = this.manifest.chains();
         if (!chains.isEmpty())
@@ -209,6 +224,7 @@ public final class GuideStore
                 state.stepIndex = 0;
             }
             clampPosition();
+            skipOverlaySlotsAtCurrentPosition();
         }
         save();
         notify("plan");
@@ -311,7 +327,27 @@ public final class GuideStore
         return moved;
     }
 
+    /**
+     * Move forward one *visitable* step. Raw-advances repeatedly past any
+     * overlay-slot step (§1a/§S4: {@code slotType == "background"} or
+     * {@code "passive"} — never a member of the main sequential path,
+     * whether or not it is additionally RECURRING-conditioned), arming any
+     * RECURRING one on first encounter so its loops-lane countdown starts
+     * immediately even if {@link #armAllRecurring()} hasn't reached it yet.
+     */
     private boolean advanceInternal()
+    {
+        boolean moved = stepForwardRaw();
+        while (moved && atOverlaySlotStep())
+        {
+            armFirstTimeIfNeeded(currentGuide(), currentRawStep());
+            moved = stepForwardRaw();
+        }
+        return moved;
+    }
+
+    /** Advance {@code state.stepIndex} by exactly one slot, crossing guide boundaries. */
+    private boolean stepForwardRaw()
     {
         Guide g = currentGuide();
         if (g == null) return false;
@@ -331,14 +367,62 @@ public final class GuideStore
         return true;
     }
 
-    /** Move back one step, crossing guide boundaries. */
+    /** True if the raw pointer currently sits on an overlay-slot (background/passive) step. */
+    private boolean atOverlaySlotStep()
+    {
+        GuideStep s = currentRawStep();
+        return s != null && s.isOverlaySlot();
+    }
+
+    /** The step at the raw pointer position, un-overridden, or null past the end. */
+    private GuideStep currentRawStep()
+    {
+        Guide g = currentGuide();
+        if (g == null) return null;
+        List<GuideStep> steps = g.steps();
+        return state.stepIndex < steps.size() ? steps.get(state.stepIndex) : null;
+    }
+
+    /**
+     * Defensive sweep for positions set directly (not via {@link #advanceInternal()}
+     * / {@link #back()}) — e.g. {@link #setPlan} resetting to {@code (0, 0)} on
+     * first load. Walks the pointer forward off any overlay-slot step it lands on.
+     */
+    private void skipOverlaySlotsAtCurrentPosition()
+    {
+        while (atOverlaySlotStep())
+        {
+            armFirstTimeIfNeeded(currentGuide(), currentRawStep());
+            if (!stepForwardRaw()) break;
+        }
+    }
+
+    /**
+     * Move back one step, crossing guide boundaries. Skips past overlay-slot
+     * (background/passive) steps in reverse too (§1a/§S4 — symmetric with
+     * {@link #advanceInternal()}; they never occupy the main pointer).
+     */
     public synchronized void back()
+    {
+        boolean moved = stepBackRaw();
+        while (moved && atOverlaySlotStep())
+        {
+            moved = stepBackRaw();
+        }
+        if (!moved) return;
+        save();
+        notify("position");
+    }
+
+    /** Move {@code state.stepIndex} back by exactly one slot, crossing guide boundaries. */
+    private boolean stepBackRaw()
     {
         if (state.stepIndex > 0)
         {
             state.stepIndex--;
+            return true;
         }
-        else if (state.guideIndex > 0)
+        if (state.guideIndex > 0)
         {
             ChainEntry chain = activeChain();
             if (chain != null)
@@ -346,14 +430,10 @@ public final class GuideStore
                 state.guideIndex--;
                 Guide g = guides.get(filenameToId(chain.guides().get(state.guideIndex)));
                 state.stepIndex = g != null && !g.steps().isEmpty() ? g.steps().size() - 1 : 0;
+                return true;
             }
         }
-        else
-        {
-            return; // already at the very first step
-        }
-        save();
-        notify("position");
+        return false; // already at the very first step
     }
 
     // ── Marks ─────────────────────────────────────────────────────────────────
@@ -361,10 +441,22 @@ public final class GuideStore
     /**
      * Mark a step done. If it is the current step the position advances;
      * a MANUAL condition on it is recorded as acknowledged.
+     *
+     * <p>§S4: if the step is RECURRING, "done" never touches the main index
+     * or the done/skip sets at all — it re-arms via {@link #completeRecurring}
+     * instead (defensive: {@link #advanceInternal()} already keeps such steps
+     * from ever becoming the current pointer, but this guard covers direct
+     * calls with an explicit key too).
      */
     public synchronized void markDone(String stepKey)
     {
         if (stepKey == null) return;
+        GuideStep step = rawStepByKey(stepKey);
+        if (step != null && step.isRecurring())
+        {
+            completeRecurring(stepKey, step);
+            return;
+        }
         state.doneSteps.add(stepKey);
         state.skippedSteps.remove(stepKey);
         if (hasManualCondition(stepKey)) state.manualAcks.add(stepKey);
@@ -400,6 +492,14 @@ public final class GuideStore
     public synchronized void toggle(String stepKey)
     {
         if (stepKey == null) return;
+        GuideStep recurring = rawStepByKey(stepKey);
+        if (recurring != null && recurring.isRecurring())
+        {
+            // Loops-lane "log now" reuses the same toggle entry point (task
+            // requirement: one action calls GuideStore.toggle() either way).
+            completeRecurring(stepKey, recurring);
+            return;
+        }
         if (state.manualDone.contains(stepKey))
         {
             state.manualDone.remove(stepKey);
@@ -445,6 +545,136 @@ public final class GuideStore
     {
         if (pos[0] < state.guideIndex) return true;
         return pos[0] == state.guideIndex && pos[1] < state.stepIndex;
+    }
+
+    /** Raw (un-overridden) step for a mark key, or null if not found in the active chain. */
+    private GuideStep rawStepByKey(String stepKey)
+    {
+        int[] pos = findStepPosition(stepKey);
+        if (pos == null) return null;
+        ChainEntry chain = activeChain();
+        if (chain == null) return null;
+        List<String> files = chain.guides();
+        if (pos[0] >= files.size()) return null;
+        Guide g = guides.get(filenameToId(files.get(pos[0])));
+        if (g == null) return null;
+        List<GuideStep> steps = g.steps();
+        return pos[1] < steps.size() ? steps.get(pos[1]) : null;
+    }
+
+    // ── Background / RECURRING loops (§S4) ───────────────────────────────────
+
+    /**
+     * "Completes" a RECURRING background step: NEVER advances the main index
+     * (callers must not call {@link #advanceInternal()} around this). Re-arms
+     * at {@code now + cadenceMinutes} and cycles {@link GuideStep#lifecycleState}
+     * through its authored {@code "a->b->c"} template. No-op (still notifies)
+     * if the step has no numeric cadence and/or no lifecycle template — the
+     * loops-lane UI then just shows "no fixed cadence" / no lifecycle badge.
+     */
+    public synchronized void completeRecurring(String stepKey, GuideStep step)
+    {
+        if (stepKey == null || step == null) return;
+        int cadence = step.recurringCadenceMinutes();
+        if (cadence > 0)
+        {
+            state.bgNextFireEpochMs.put(stepKey, System.currentTimeMillis() + cadence * 60_000L);
+        }
+        String next = cycleLifecycle(step.lifecycleState, state.bgLifecycleState.get(stepKey));
+        if (next != null) state.bgLifecycleState.put(stepKey, next);
+        state.metrics.stepsCompleted++;
+        state.metrics.lastActionMs = System.currentTimeMillis();
+        save();
+        notify("bg");
+    }
+
+    /** Epoch ms of this recurring step's next fire, or null if never armed / not recurring. */
+    public synchronized Long nextFireEpochMs(String stepKey)
+    {
+        return state.bgNextFireEpochMs.get(stepKey);
+    }
+
+    /** Current live lifecycle state of a recurring step, or null if unarmed / no template. */
+    public synchronized String liveLifecycleState(String stepKey)
+    {
+        return state.bgLifecycleState.get(stepKey);
+    }
+
+    /**
+     * Hydrate recurring timer/lifecycle state from an external source — the
+     * RuneLite plugin calls this at login with values read from its
+     * per-account {@code guidechain.bg.<stepId>.*} config keys (§S4). Config
+     * is authoritative once the player is logged in, so this overwrites;
+     * null components leave the corresponding field untouched (config had no
+     * value yet — e.g. first-ever login for this account).
+     */
+    public synchronized void seedBackgroundState(String stepKey, Long nextFireEpochMs, String lifecycleState)
+    {
+        if (stepKey == null) return;
+        if (nextFireEpochMs != null) state.bgNextFireEpochMs.put(stepKey, nextFireEpochMs);
+        if (lifecycleState != null) state.bgLifecycleState.put(stepKey, lifecycleState);
+    }
+
+    /**
+     * Arms every RECURRING step across every loaded guide so the loops-lane
+     * UI can show a countdown for all of them regardless of where the main
+     * pointer sits. Idempotent — a step already carrying a timer or a live
+     * lifecycle value is left untouched (real progress, or a login hydration
+     * that already ran, must never be clobbered by a re-load).
+     */
+    private void armAllRecurring()
+    {
+        for (Guide g : guides.values())
+        {
+            for (GuideStep s : g.steps())
+            {
+                armFirstTimeIfNeeded(g, s);
+            }
+        }
+    }
+
+    /** Seeds a fresh timer/lifecycle baseline for one recurring step, unless it already has one. */
+    private void armFirstTimeIfNeeded(Guide g, GuideStep step)
+    {
+        if (g == null || step == null || !step.isRecurring()) return;
+        String k = key(g.id, step.id);
+        boolean hasTimer = state.bgNextFireEpochMs.containsKey(k);
+        boolean hasState = state.bgLifecycleState.containsKey(k);
+        if (hasTimer && hasState) return;
+        if (!hasTimer)
+        {
+            int cadence = step.recurringCadenceMinutes();
+            if (cadence > 0) state.bgNextFireEpochMs.put(k, System.currentTimeMillis() + cadence * 60_000L);
+        }
+        if (!hasState)
+        {
+            String initial = initialLifecycleState(step.lifecycleState);
+            if (initial != null) state.bgLifecycleState.put(k, initial);
+        }
+    }
+
+    /** First state of an author-declared {@code "a->b->c"} lifecycle template, or null. */
+    private static String initialLifecycleState(String template)
+    {
+        if (template == null || template.isEmpty()) return null;
+        String[] states = template.split("->");
+        return states.length > 0 ? states[0].trim() : null;
+    }
+
+    /** Next state after {@code current} in an author-declared {@code "a->b->c"} template (wraps). */
+    private static String cycleLifecycle(String template, String current)
+    {
+        if (template == null || template.isEmpty()) return null;
+        String[] states = template.split("->");
+        if (states.length == 0) return null;
+        for (int i = 0; i < states.length; i++) states[i] = states[i].trim();
+        int idx = -1;
+        for (int i = 0; i < states.length; i++)
+        {
+            if (states[i].equals(current)) { idx = i; break; }
+        }
+        if (idx < 0) idx = 0; // first-ever completion: current == null, cycle from the start
+        return states[(idx + 1) % states.length];
     }
 
     public synchronized boolean isDone(String stepKey)    { return state.doneSteps.contains(stepKey); }
@@ -658,6 +888,12 @@ public final class GuideStore
         root.addProperty("liveUpdatedAtMs", liveUpdatedAtMs);
         root.add("liveConditions",
             gson.toJsonTree(liveConditionsFor(currentStepKey())));
+
+        // §S4 — RECURRING background loops (loops-lane countdown source).
+        JsonObject bg = new JsonObject();
+        bg.add("nextFireEpochMs", gson.toJsonTree(state.bgNextFireEpochMs));
+        bg.add("lifecycleState", gson.toJsonTree(state.bgLifecycleState));
+        root.add("bg", bg);
         return root;
     }
 
@@ -709,7 +945,10 @@ public final class GuideStore
             List<GuideStep> steps = g.steps();
             for (int si = 0; si < steps.size(); si++)
             {
-                String k = key(g.id, steps.get(si).id);
+                GuideStep s = steps.get(si);
+                // §1a/§S4: overlay-slot (background/passive) steps never occupy the main pointer.
+                if (s.isOverlaySlot()) continue;
+                String k = key(g.id, s.id);
                 if (!state.doneSteps.contains(k) && !state.skippedSteps.contains(k))
                 {
                     state.guideIndex = gi;
@@ -750,6 +989,16 @@ public final class GuideStore
         patched.hints                = step.hints;    // additive pass-through; overrides cannot clear hints
         patched.checkpoint           = step.checkpoint;
         patched.refs                 = step.refs;     // additive pass-through; overrides cannot clear refs
+        // §S4/§1e — sequencer+background+steer fields: additive pass-through, same as
+        // hints/checkpoint/refs above. A StepOverride patch can't clear these; if it
+        // could, an override on a background step could silently escape the loops
+        // lane / RECURRING re-arm semantics it's still subject to.
+        patched.slotType             = step.slotType;
+        patched.cadenceMinutes       = step.cadenceMinutes;
+        patched.lifecycleState       = step.lifecycleState;
+        patched.passiveOverlays      = step.passiveOverlays;
+        patched.supplyChain          = step.supplyChain;
+        patched.steerKind            = step.steerKind;
         return patched;
     }
 

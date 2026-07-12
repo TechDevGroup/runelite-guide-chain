@@ -12,6 +12,8 @@ package com.techdevgroup.guidechain.data;
  * ITEM_HELD → itemId, qty (minimum count in inventory)
  * REGION    → regionId
  * MANUAL    → no extra fields; user presses Skip/Done
+ * RECURRING → cadenceMinutes (SYNTHESIS §S4); never itself auto-evaluated —
+ *             a completion-semantics marker, see {@link ConditionType#RECURRING}
  * </pre>
  */
 public class CompletionCondition
@@ -41,4 +43,13 @@ public class CompletionCondition
 
     // ── REGION ─────────────────────────────────────────────────────────────────
     public int regionId;
+
+    // ── RECURRING ──────────────────────────────────────────────────────────────
+    /**
+     * Real-world minutes until the background step re-arms after "completing"
+     * (SYNTHESIS §S4). Zero/unset falls back to the owning {@code GuideStep}'s
+     * own {@code cadenceMinutes}; if that is also null the step is treated as
+     * event-driven (no countdown — manual acknowledgement only).
+     */
+    public int cadenceMinutes;
 }

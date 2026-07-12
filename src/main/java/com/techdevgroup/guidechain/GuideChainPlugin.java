@@ -105,6 +105,10 @@ public class GuideChainPlugin extends Plugin
     private volatile Set<String> trackedQuests = new LinkedHashSet<>();
     private volatile boolean trackedQuestsDirty = true;
 
+    /** §S4: re-run once per login (cleared on LOGIN_SCREEN/HOPPING) so a world
+     *  hop or account switch re-hydrates from this account's config keys. */
+    private volatile boolean recurringHydrated = false;
+
     private final GuideStore.Listener storeListener = (store, what) ->
     {
         if ("plan".equals(what) || "chain".equals(what) || "overrides".equals(what))
@@ -116,11 +120,18 @@ public class GuideChainPlugin extends Plugin
             // Keep the config panel's selected chain in sync with web-view / panel picks.
             configManager.setConfiguration("guidechain", "selectedChain", store.chainIndex());
         }
+        if ("bg".equals(what))
+        {
+            // §S4: mirror a RECURRING re-arm into this account's RuneLite config
+            // keys so it survives relog/world-hop even though GuideStore's own
+            // state.json is one global file, not per-account.
+            persistRecurringToConfig();
+        }
         // Refresh the sidebar panel on structural changes.
         // Skip "character" and liveConditions — they fire every tick.
         if ("plan".equals(what)   || "chain".equals(what)
             || "overrides".equals(what) || "marks".equals(what)
-            || "position".equals(what))
+            || "position".equals(what) || "bg".equals(what))
         {
             SwingUtilities.invokeLater(guidePanel::refresh);
         }
@@ -169,6 +180,7 @@ public class GuideChainPlugin extends Plugin
 
         clientToolbar.removeNavigation(navButton);
         navButton = null;
+        guidePanel.stopTimer();
 
         stopWebServer();
         guideStore.setClientConnected(false);
@@ -275,6 +287,12 @@ public class GuideChainPlugin extends Plugin
             || event.getGameState() == GameState.HOPPING)
         {
             guideStore.setClientConnected(false);
+            recurringHydrated = false; // re-hydrate from config on the next login (S4)
+        }
+        else if (event.getGameState() == GameState.LOGGED_IN && !recurringHydrated)
+        {
+            hydrateRecurringFromConfig();
+            recurringHydrated = true;
         }
     }
 
@@ -387,7 +405,10 @@ public class GuideChainPlugin extends Plugin
 
         for (CompletionCondition c : conditions)
         {
-            if (c.type == ConditionType.MANUAL) continue;
+            // MANUAL and RECURRING are completion-semantics markers, never
+            // themselves live-evaluated (S4) — their sibling VARBIT/ITEM_HELD
+            // conditions (if any) are what actually gate auto-advance/re-arm.
+            if (c.type == ConditionType.MANUAL || c.type == ConditionType.RECURRING) continue;
             hasAutoCondition = true;
             if (!conditionEvaluator.evaluate(c))
             {
@@ -400,6 +421,83 @@ public class GuideChainPlugin extends Plugin
         {
             log.debug("Auto-advancing past step {}", step.id);
             guideStore.markDone(guideStore.currentStepKey());
+        }
+    }
+
+    // ── RECURRING background loops — RuneLite config persistence (§S4) ───────
+
+    /**
+     * Config key prefix is intentionally {@code stepId} only (not
+     * {@code guideId/stepId}) — matches the literal SYNTHESIS §S4 key shape
+     * {@code guidechain.bg.<stepId>.nextFireEpochMs}. Background step ids are
+     * unique across the corpus in practice (they're author-chosen slugs like
+     * {@code bg-farm-allotment-setup}), so this doesn't collide in the guides
+     * this plugin actually ships.
+     */
+    private static String bgConfigKey(String stepId, String field)
+    {
+        return "bg." + stepId + "." + field;
+    }
+
+    /**
+     * Reads this account's persisted RECURRING timers/lifecycle back into the
+     * shared {@link GuideStore} at login. Config is authoritative once a
+     * character is logged in — it overwrites whatever
+     * {@link GuideStore#setPlan} seeded as a fresh default on plugin startup
+     * (that seed only exists so the loops lane has *something* to show before
+     * the player has ever logged in this session).
+     */
+    private void hydrateRecurringFromConfig()
+    {
+        for (PlanRow row : guideStore.plan())
+        {
+            GuideStep step = row.step;
+            if (step == null || step.id == null || !"background".equals(step.slotType)) continue;
+
+            Long nextFire = null;
+            String nextFireStr = configManager.getConfiguration("guidechain", bgConfigKey(step.id, "nextFireEpochMs"));
+            if (nextFireStr != null)
+            {
+                try
+                {
+                    nextFire = Long.parseLong(nextFireStr);
+                }
+                catch (NumberFormatException e)
+                {
+                    log.warn("Guide Chain: bad stored nextFireEpochMs for {}", step.id, e);
+                }
+            }
+            String lifecycle = configManager.getConfiguration("guidechain", bgConfigKey(step.id, "lifecycleState"));
+
+            if (nextFire != null || lifecycle != null)
+            {
+                guideStore.seedBackgroundState(row.key, nextFire, lifecycle);
+            }
+        }
+    }
+
+    /**
+     * Mirrors the shared store's current RECURRING timers/lifecycle out to
+     * this account's RuneLite config keys, called whenever the store fires a
+     * {@code "bg"} change (a loops-lane step just re-armed).
+     */
+    private void persistRecurringToConfig()
+    {
+        for (PlanRow row : guideStore.plan())
+        {
+            GuideStep step = row.step;
+            if (step == null || step.id == null || !"background".equals(step.slotType)) continue;
+
+            Long nextFire = guideStore.nextFireEpochMs(row.key);
+            if (nextFire != null)
+            {
+                configManager.setConfiguration("guidechain", bgConfigKey(step.id, "nextFireEpochMs"), nextFire);
+            }
+            String lifecycle = guideStore.liveLifecycleState(row.key);
+            if (lifecycle != null)
+            {
+                configManager.setConfiguration("guidechain", bgConfigKey(step.id, "lifecycleState"), lifecycle);
+            }
         }
     }
 }

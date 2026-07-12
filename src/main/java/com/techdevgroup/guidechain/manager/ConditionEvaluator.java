@@ -40,6 +40,10 @@ public class ConditionEvaluator
             case ITEM_HELD: return evalItemHeld(c);
             case REGION:    return evalRegion(c);
             case MANUAL:    return false;
+            // RECURRING is a completion-semantics marker (S4), not a live game-state
+            // check — GuideStore.isRecurring()/completeRecurring() own its behavior.
+            // Never auto-satisfied here, same as MANUAL.
+            case RECURRING: return false;
             default:        return false;
         }
     }
@@ -72,6 +76,8 @@ public class ConditionEvaluator
                     return loc != null ? String.valueOf(loc.getRegionID()) : "?";
                 case MANUAL:
                     return "awaiting click";
+                case RECURRING:
+                    return "loops lane";
                 default:
                     return "?";
             }
@@ -96,6 +102,7 @@ public class ConditionEvaluator
             case ITEM_HELD: return ">= " + c.qty;
             case REGION:    return String.valueOf(c.regionId);
             case MANUAL:    return "click Done";
+            case RECURRING: return "every " + c.cadenceMinutes + "m";
             default:        return "?";
         }
     }

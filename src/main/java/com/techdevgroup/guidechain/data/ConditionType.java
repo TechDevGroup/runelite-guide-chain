@@ -17,5 +17,15 @@ public enum ConditionType
      * No automatic check — the step advances only when the player presses
      * the "Done" / "Skip" button in the panel.
      */
-    MANUAL
+    MANUAL,
+    /**
+     * Marks a background/loop step (SYNTHESIS §S4). Like {@link #MANUAL} this
+     * is never itself auto-evaluated — it is a completion-semantics marker:
+     * a step whose conditions include RECURRING never advances the main
+     * guide index. "Completing" it (its VARBIT/ITEM_HELD sibling conditions
+     * firing, or a manual click in the loops-lane) re-arms it at
+     * {@code now + cadenceMinutes} and cycles {@code GuideStep.lifecycleState}
+     * instead. See {@link com.techdevgroup.guidechain.store.GuideStore}.
+     */
+    RECURRING
 }
