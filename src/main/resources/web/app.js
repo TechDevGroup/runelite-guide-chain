@@ -21,22 +21,26 @@
   refreshMetrics();
   setInterval(refreshMetrics, 5000);
 
-  // Scroll to the current step ONLY when it genuinely changes (first sight or
-  // pointer advancement) — never on routine 2s polls or unrelated interactions,
-  // which would yank the user's scroll position mid-read.
-  var lastCurrentKey = null;
-  function currentKeyOf(row) {
-    var check = row.querySelector('.step-check');
-    return (check && check.getAttribute('hx-post')) || row.textContent.slice(0, 80);
-  }
+  // Scroll to the current step EXACTLY ONCE — on the first plan render that has
+  // a current step (page open). Never again: not on the 2s poll, and crucially
+  // not when the user toggles a checkbox or clicks a step label (those re-render
+  // #plan, and re-scrolling on every interaction is the "jumps to the bottom"
+  // annoyance). After the initial orient, the user's scroll position is theirs.
+  var didInitialScroll = false;
   document.body.addEventListener('htmx:afterSwap', function (e) {
-    if (e.target.id !== 'plan') return;
+    if (didInitialScroll || e.target.id !== 'plan') return;
     var cur = document.querySelector('[data-current="1"]');
     if (!cur) return;
-    var key = currentKeyOf(cur);
-    if (key === lastCurrentKey) return;
-    lastCurrentKey = key;
+    didInitialScroll = true;
     cur.scrollIntoView({ block: 'center' });
+  });
+
+  // Kill the native jump from every internal action anchor (href="#"): htmx /
+  // our own handlers do the real work, and letting the browser resolve "#"
+  // scrolls the page (to the top, or to the bottom via scroll-restoration on a
+  // re-rendered list). Bubble-phase, so htmx's element handler has already run.
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('a[href="#"]')) e.preventDefault();
   });
 
   // ── Wiki lightbox ──────────────────────────────────────────────────────────
