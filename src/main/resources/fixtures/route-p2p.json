@@ -11,10 +11,10 @@
       "highlights": [],
       "mapMarkers": [
         {
-          "x": 3218,
-          "y": 3415,
+          "x": 3221,
+          "y": 3473,
           "plane": 0,
-          "label": "Varrock rooftop course"
+          "label": "King Roald, Varrock Palace (start)"
         }
       ],
       "completionConditions": [
@@ -22,12 +22,39 @@
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "king_roald",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "king_roald",
+          "value": "1",
+          "note": "start: ask about the temple to Saradomin"
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "prayer +1406",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Priest in Peril",
+          "slug": "Priest_in_Peril.s1",
+          "url": "https://oldschool.runescape.wiki/w/Priest_in_Peril"
+        },
+        {
+          "title": "Priest in Peril",
+          "slug": "Priest_in_Peril.s7",
+          "url": "https://oldschool.runescape.wiki/w/Priest_in_Peril"
         }
       ]
     },
@@ -56,6 +83,37 @@
           "skill": "COOKING",
           "level": 20
         }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "cooked_fish_early",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "cooking": 20
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "batch-size",
+          "target": "raw-fish",
+          "value": "2.5x-buffer",
+          "note": "Buy ~2.5x more raw fish than needed \u2014 burn rate is high at low levels [ref: Pay-to-play Cooking training s3]."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Cooking training",
+          "slug": "Pay-to-play_Cooking_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+        }
       ]
     },
     {
@@ -78,6 +136,29 @@
           "skill": "FISHING",
           "level": 20
         }
+      ],
+      "atom": {
+        "verb": "gather",
+        "target": "raw_fish_early",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "fishing": 20
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Fishing training",
+          "slug": "Pay-to-play_Fishing_training.s1",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+        }
       ]
     },
     {
@@ -87,7 +168,68 @@
       "instruction": "\u2605 Ardougne Easy Diary",
       "detail": "Cloak 1 teleport to Ardougne; Kandarin efficiency stacks with Fairy Rings + Graceful.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 2683,
+          "y": 3326,
+          "plane": 0,
+          "label": "Task 1: Wizard Cromperty (Rune essence tele)"
+        },
+        {
+          "x": 2667,
+          "y": 3310,
+          "plane": 0,
+          "label": "Task 2: Ardougne market stalls (steal cake, thieving 5)"
+        },
+        {
+          "x": 2656,
+          "y": 3301,
+          "plane": 0,
+          "label": "Task 3: Silk trader (sell silk 60gp each)"
+        },
+        {
+          "x": 2618,
+          "y": 3309,
+          "plane": 0,
+          "label": "Task 4: East Ardougne church altar"
+        },
+        {
+          "x": 2676,
+          "y": 3170,
+          "plane": 0,
+          "label": "Task 5: Fishing Trawler (start only, need not finish)"
+        },
+        {
+          "x": 2516,
+          "y": 3356,
+          "plane": 0,
+          "label": "Task 6: Combat Training Camp N. of W. Ardougne (Biohazard gate)"
+        },
+        {
+          "x": 2678,
+          "y": 3153,
+          "plane": 0,
+          "label": "Task 7: Tindel Marchant (rusty sword ID)"
+        },
+        {
+          "x": 2561,
+          "y": 3311,
+          "plane": 0,
+          "label": "Task 8: Ardougne Lever (Wilderness tele)"
+        },
+        {
+          "x": 2567,
+          "y": 3083,
+          "plane": 0,
+          "label": "Task 9: Aleck's Hunter Emporium, Yanille"
+        },
+        {
+          "x": 2621,
+          "y": 3292,
+          "plane": 0,
+          "label": "Task 10: Probita (pet insurance check)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "SKILL",
@@ -98,6 +240,13 @@
           "type": "SKILL",
           "skill": "COOKING",
           "level": 15
+        }
+      ],
+      "refs": [
+        {
+          "title": "Ardougne Diary",
+          "slug": "Ardougne_Diary.s2",
+          "url": "https://oldschool.runescape.wiki/w/Ardougne_Diary"
         }
       ]
     },
@@ -114,10 +263,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 3235,
-          "y": 3295,
+          "x": 3225,
+          "y": 3300,
           "plane": 0,
-          "label": "Lumbridge chickens"
+          "label": "Chickens, Lumbridge East Farm coop"
         }
       ],
       "completionConditions": [
@@ -125,6 +274,37 @@
           "type": "SKILL",
           "skill": "ATTACK",
           "level": 10
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "chicken",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 10
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "keep-drop",
+          "target": null,
+          "value": "keep:feather,bones;drop:raw-chicken",
+          "note": "Bury bones for free Prayer xp."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Chicken",
+          "slug": "Chicken",
+          "url": "https://oldschool.runescape.wiki/w/Chicken"
+        },
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
         }
       ]
     },
@@ -153,6 +333,37 @@
           "skill": "ATTACK",
           "level": 30
         }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "rock_crab",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 30
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "contested-fallback",
+          "target": "rock-crabs",
+          "value": "hop-worlds",
+          "note": "Aggro stops after 10-15min; crowded spot."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s10",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        }
       ]
     },
     {
@@ -168,10 +379,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 3081,
-          "y": 3420,
+          "x": 3078,
+          "y": 3429,
           "plane": 0,
-          "label": "Barbarian Village"
+          "label": "Barbarian Village (barbarians lvl 9/10/15/17)"
         }
       ],
       "completionConditions": [
@@ -179,6 +390,42 @@
           "type": "SKILL",
           "skill": "ATTACK",
           "level": 40
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "barbarian",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 40
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "toggle-state",
+          "target": "attack-style",
+          "value": "accurate",
+          "note": null
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s10",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        },
+        {
+          "title": "Barbarian",
+          "slug": "Barbarian",
+          "url": "https://oldschool.runescape.wiki/w/Barbarian"
         }
       ]
     },
@@ -195,6 +442,18 @@
           "skill": "ATTACK",
           "level": 43
         }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s10",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        }
       ]
     },
     {
@@ -210,6 +469,18 @@
           "skill": "SLAYER",
           "level": 10
         }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Slayer training",
+          "slug": "Slayer_training.s2",
+          "url": "https://oldschool.runescape.wiki/w/Slayer_training"
+        }
       ]
     },
     {
@@ -218,16 +489,49 @@
       "instruction": "Gather snape grass at Waterbirth Island",
       "detail": "Pick snape grass spawns on Waterbirth Island. No quest gate. JIT batch just before a brewing session.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 2502,
+          "y": 3753,
+          "plane": 0,
+          "label": "Snape grass spawn cluster (Waterbirth Island, one of 26 mapped tiles)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
         }
       ],
-      "checkpoint": "Secondaries + brew (JIT)"
+      "atom": {
+        "verb": "gather",
+        "target": "snape_grass",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "snape_grass": "??"
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "snape_grass",
+          "value": "??",
+          "note": "No respawn-timer or spawns-per-hour figure stated on the item page; treat as a fixed-tile ground-spawn walk loop, not RNG drops."
+        }
+      ],
+      "checkpoint": "Secondaries + brew (JIT)",
+      "refs": [
+        {
+          "title": "Snape grass",
+          "slug": "Snape_grass.s5",
+          "url": "https://oldschool.runescape.wiki/w/Snape_grass"
+        }
+      ]
     },
     {
-      "id": "chkpt-prayer-pot-supply-coarse-0",
+      "id": "chkpt-prayer-pot-supply-coarse-3",
       "phase": "Toward Monkey Madness I",
       "instruction": "\u29c6 Secondaries + brew (JIT)",
       "detail": "",
@@ -238,7 +542,14 @@
           "type": "MANUAL"
         }
       ],
-      "checkpoint": "Secondaries + brew (JIT)"
+      "checkpoint": "Secondaries + brew (JIT)",
+      "refs": [
+        {
+          "title": "Prayer potion",
+          "slug": "Prayer_potion.s2",
+          "url": "https://oldschool.runescape.wiki/w/Prayer_potion"
+        }
+      ]
     },
     {
       "id": "pps-04-source-vials",
@@ -246,7 +557,14 @@
       "instruction": "Stock vials of water (non-GE)",
       "detail": "Buy vial-of-water packs from a herblore shop vendor (vendor ?? \u2014 verify non-GE source) OR blow vials from molten glass (Crafting 33) and fill at a fountain. One vial per potion.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 2899,
+          "y": 3429,
+          "plane": 0,
+          "label": "Jatix's Herblore Shop (Taverley) -- centroid of the shop's {{Map|mtype=polygon}} footprint"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
@@ -263,8 +581,28 @@
           }
         }
       },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "vial_of_water",
+          "value": "stock 750, restock 100s per unit",
+          "note": "Jatix's Herblore Shop Stock table (StoreTableHead sellmultiplier=1000 buymultiplier=700 delta=30): Vial of water stock=750/restock=100s, or buy the Water-filled vial pack (stock=750/restock=50s) for a batched purchase. A single 14-vial brewing run (per pps-05-withdraw-brew's loadout) is far under base stock -- no world-hop needed."
+        }
+      ],
       "coarse_of": "prayer-pot-supply-coarse",
-      "checkpoint": "Secondaries + brew (JIT)"
+      "checkpoint": "Secondaries + brew (JIT)",
+      "refs": [
+        {
+          "title": "Jatix's Herblore Shop.",
+          "slug": "Jatix's_Herblore_Shop.s1",
+          "url": "https://oldschool.runescape.wiki/w/Jatix%27s_Herblore_Shop."
+        },
+        {
+          "title": "Jatix's Herblore Shop.",
+          "slug": "Jatix's_Herblore_Shop",
+          "url": "https://oldschool.runescape.wiki/w/Jatix%27s_Herblore_Shop."
+        }
+      ]
     },
     {
       "id": "pps-05-withdraw-brew",
@@ -300,7 +638,24 @@
         }
       ],
       "coarse_of": "prayer-pot-supply-coarse",
-      "checkpoint": "Secondaries + brew (JIT)"
+      "checkpoint": "Secondaries + brew (JIT)",
+      "refs": [
+        {
+          "title": "Ranarr weed",
+          "slug": "Ranarr_weed.s1",
+          "url": "https://oldschool.runescape.wiki/w/Ranarr_weed"
+        },
+        {
+          "title": "Ranarr potion (unf)",
+          "slug": "Ranarr_potion_(unf).s1",
+          "url": "https://oldschool.runescape.wiki/w/Ranarr_potion_(unf)"
+        },
+        {
+          "title": "Vial of water",
+          "slug": "Vial_of_water.s1",
+          "url": "https://oldschool.runescape.wiki/w/Vial_of_water"
+        }
+      ]
     },
     {
       "id": "pps-06-deposit-potions",
@@ -326,7 +681,19 @@
         }
       },
       "coarse_of": "prayer-pot-supply-coarse",
-      "checkpoint": "Secondaries + brew (JIT)"
+      "checkpoint": "Secondaries + brew (JIT)",
+      "refs": [
+        {
+          "title": "Prayer potion",
+          "slug": "Prayer_potion.s2",
+          "url": "https://oldschool.runescape.wiki/w/Prayer_potion"
+        },
+        {
+          "title": "Prayer potion",
+          "slug": "Prayer_potion.s4",
+          "url": "https://oldschool.runescape.wiki/w/Prayer_potion"
+        }
+      ]
     },
     {
       "id": "quest-nature-spirit",
@@ -334,18 +701,52 @@
       "instruction": "Complete Nature Spirit",
       "detail": "Unlocks the Mort Myre Swamp and nature grotto. Required for Fairytale I - Growing Pains.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3440,
+          "y": 9894,
+          "plane": 0,
+          "label": "Drezel, Paterdomus basement (start)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "drezel",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "drezel",
+          "value": "1",
+          "note": "start: ask about Filliman Tarlock"
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "prayer +3000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Nature Spirit",
+          "slug": "Nature_Spirit.s1",
+          "url": "https://oldschool.runescape.wiki/w/Nature_Spirit"
+        },
+        {
+          "title": "Nature Spirit",
+          "slug": "Nature_Spirit.s7",
+          "url": "https://oldschool.runescape.wiki/w/Nature_Spirit"
         }
       ]
     },
@@ -362,10 +763,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 2925,
-          "y": 3486,
+          "x": 2926,
+          "y": 3484,
           "plane": 0,
-          "label": "Taverley (Druidic Ritual)"
+          "label": "Kaqemeex, stone circle N of Taverley (start)"
         }
       ],
       "completionConditions": [
@@ -373,12 +774,39 @@
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "kaqemeex",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "kaqemeex",
+          "value": "1",
+          "note": "start option"
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "herblore +250",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Druidic Ritual",
+          "slug": "Druidic_Ritual.s1",
+          "url": "https://oldschool.runescape.wiki/w/Druidic_Ritual"
+        },
+        {
+          "title": "Druidic Ritual",
+          "slug": "Druidic_Ritual.s6",
+          "url": "https://oldschool.runescape.wiki/w/Druidic_Ritual"
         }
       ]
     },
@@ -388,10 +816,46 @@
       "instruction": "Complete Bone Voyage",
       "detail": "Unlocks Fossil Island. Required to mine volcanic ash for ultracompost.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3260,
+          "y": 3450,
+          "plane": 0,
+          "label": "Curator Haig Halen, Varrock Museum (start)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "haig_halen",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "haig_halen",
+          "value": "1",
+          "note": "start: offer to help finish the barge"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Bone Voyage",
+          "slug": "Bone_Voyage.s1",
+          "url": "https://oldschool.runescape.wiki/w/Bone_Voyage"
+        },
+        {
+          "title": "Bone Voyage",
+          "slug": "Bone_Voyage.s7",
+          "url": "https://oldschool.runescape.wiki/w/Bone_Voyage"
         }
       ]
     },
@@ -408,6 +872,29 @@
           "skill": "MAGIC",
           "level": 25
         }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "combat_spell_training",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "magic": 25
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s5",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
       ]
     },
     {
@@ -422,6 +909,29 @@
           "type": "SKILL",
           "skill": "FIREMAKING",
           "level": 15
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "ash_from_logs",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "firemaking": 15
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Firemaking training",
+          "slug": "Pay-to-play_Firemaking_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
         }
       ]
     },
@@ -438,10 +948,16 @@
       ],
       "mapMarkers": [
         {
-          "x": 3259,
-          "y": 3266,
+          "x": 3216,
+          "y": 3219,
           "plane": 0,
-          "label": "Lumbridge cows"
+          "label": "Man/Woman spawn cluster (Lumbridge, near the general store)"
+        },
+        {
+          "x": 3097,
+          "y": 3510,
+          "plane": 0,
+          "label": "Man/Woman spawn cluster (Edgeville, near the bank)"
         }
       ],
       "completionConditions": [
@@ -449,6 +965,48 @@
           "type": "SKILL",
           "skill": "THIEVING",
           "level": 20
+        }
+      ],
+      "atom": {
+        "verb": "gather",
+        "target": "man_woman_pickpocket",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "thieving": 20
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "man_woman_pickpocket",
+          "value": "180/256 to 240/256 success, level 1-99",
+          "note": "Man pickpocket chance table (Man.s11): level requirement 1, xp 8 per successful pickpocket, 4.8s stun timer, 1 damage on fail (Man.s12). Women share the same pickpocket mechanics as Men on this wiki."
+        },
+        {
+          "type": "keep-drop",
+          "target": null,
+          "value": "keep:coins,gems;drop:bones,junk",
+          "note": "100% drop is Bones; low-value weapon/armour drops (bronze med helm, iron dagger) are typically not worth keeping inventory space for at this training pace."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Man",
+          "slug": "Man.s1",
+          "url": "https://oldschool.runescape.wiki/w/Man"
+        },
+        {
+          "title": "Man",
+          "slug": "Man.s11",
+          "url": "https://oldschool.runescape.wiki/w/Man"
+        },
+        {
+          "title": "Man",
+          "slug": "Man.s12",
+          "url": "https://oldschool.runescape.wiki/w/Man"
         }
       ]
     },
@@ -460,10 +1018,10 @@
       "highlights": [],
       "mapMarkers": [
         {
-          "x": 1519,
-          "y": 3591,
+          "x": 1542,
+          "y": 3570,
           "plane": 0,
-          "label": "Shayzien"
+          "label": "Phileas Rimor, Shayzien (start)"
         }
       ],
       "completionConditions": [
@@ -471,12 +1029,39 @@
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "phileas_rimor",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "phileas_rimor",
+          "value": "1",
+          "note": "start: ask about the expedition"
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "strength +8000, defence +8000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Tale of the Righteous",
+          "slug": "Tale_of_the_Righteous.s1",
+          "url": "https://oldschool.runescape.wiki/w/Tale_of_the_Righteous"
+        },
+        {
+          "title": "Tale of the Righteous",
+          "slug": "Tale_of_the_Righteous.s7",
+          "url": "https://oldschool.runescape.wiki/w/Tale_of_the_Righteous"
         }
       ]
     },
@@ -493,10 +1078,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 3259,
-          "y": 3266,
+          "x": 3208,
+          "y": 3214,
           "plane": 0,
-          "label": "Lumbridge cows"
+          "label": "The Cook, Lumbridge Castle kitchen (start)"
         }
       ],
       "completionConditions": [
@@ -504,12 +1089,39 @@
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "cook",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "cook",
+          "value": "1",
+          "note": "start: agree to help with the Duke's birthday cake"
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "cooking +300",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Cook's Assistant",
+          "slug": "Cook's_Assistant.s1",
+          "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
+        },
+        {
+          "title": "Cook's Assistant",
+          "slug": "Cook's_Assistant.s9",
+          "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
         }
       ]
     },
@@ -525,6 +1137,29 @@
           "type": "SKILL",
           "skill": "PRAYER",
           "level": 22
+        }
+      ],
+      "atom": {
+        "verb": "consume",
+        "target": "bones",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "prayer": 22
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Prayer training",
+          "slug": "Pay-to-play_Prayer_training.s1",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
         }
       ]
     },
@@ -552,12 +1187,39 @@
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "goblin_generals",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "goblin_generals",
+          "value": "1",
+          "note": "inspect the frozen goblin generals in the Lumbridge Castle dining room to start"
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "cooking +1000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Recipe for Disaster/Freeing the Goblin generals",
+          "slug": "Recipe_for_Disaster_Freeing_the_Goblin_generals.s1",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_the_Goblin_generals"
+        },
+        {
+          "title": "Recipe for Disaster/Freeing the Goblin generals",
+          "slug": "Recipe_for_Disaster_Freeing_the_Goblin_generals.s3",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_the_Goblin_generals"
         }
       ]
     },
@@ -569,10 +1231,10 @@
       "highlights": [],
       "mapMarkers": [
         {
-          "x": 2752,
-          "y": 2782,
+          "x": 1865,
+          "y": 5343,
           "plane": 0,
-          "label": "Ape Atoll"
+          "label": "Awowogei's table, Lumbridge Castle dining room (start, {{Quest details|startmap=}}-sourced)"
         }
       ],
       "completionConditions": [
@@ -580,12 +1242,39 @@
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "awowogei",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "awowogei",
+          "value": "1",
+          "note": "inspect Awowogei in the Lumbridge Castle dining room to start"
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "cooking +4000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Recipe for Disaster/Freeing King Awowogei",
+          "slug": "Recipe_for_Disaster_Freeing_King_Awowogei.s1",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_King_Awowogei"
+        },
+        {
+          "title": "Recipe for Disaster/Freeing King Awowogei",
+          "slug": "Recipe_for_Disaster_Freeing_King_Awowogei.s9",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_King_Awowogei"
         }
       ]
     },
@@ -614,6 +1303,34 @@
           "skill": "WOODCUTTING",
           "level": 15
         }
+      ],
+      "atom": {
+        "verb": "gather",
+        "target": "regular_logs",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "woodcutting": 15
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Woodcutting training",
+          "slug": "Pay-to-play_Woodcutting_training.s4",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+        },
+        {
+          "title": "Pay-to-play Woodcutting training",
+          "slug": "Pay-to-play_Woodcutting_training.s17",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+        }
       ]
     },
     {
@@ -622,12 +1339,60 @@
       "instruction": "Train Crafting to 20",
       "detail": "Leather gloves and boots. Buy hides from GE.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3274,
+          "y": 3192,
+          "plane": 0,
+          "label": "Ellis the tanner, Al Kharid (tans cowhide -> leather for a fee, no members req)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "SKILL",
           "skill": "CRAFTING",
           "level": 20
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "leather_item",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "crafting": 20
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "batch-size",
+          "target": "thread",
+          "value": "1-per-5-items",
+          "note": "Each thread spool is good for ~5 leather items \u2014 bring ~50 thread for the full 1-20 ladder [ref: Pay-to-play Crafting training s3]."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Crafting training",
+          "slug": "Pay-to-play_Crafting_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
+        },
+        {
+          "title": "Cow",
+          "slug": "Cow",
+          "url": "https://oldschool.runescape.wiki/w/Cow"
+        },
+        {
+          "title": "Tanner",
+          "slug": "Tanner",
+          "url": "https://oldschool.runescape.wiki/w/Tanner"
         }
       ]
     },
@@ -656,6 +1421,29 @@
           "skill": "SMITHING",
           "level": 15
         }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "bronze_item",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "smithing": 15
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Smithing training",
+          "slug": "Pay-to-play_Smithing_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+        }
       ]
     },
     {
@@ -671,10 +1459,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 3259,
-          "y": 3266,
+          "x": 3227,
+          "y": 3148,
           "plane": 0,
-          "label": "Lumbridge cows"
+          "label": "East Lumbridge Swamp mine (5 copper + 5 tin rocks, training mine)"
         }
       ],
       "completionConditions": [
@@ -682,6 +1470,39 @@
           "type": "SKILL",
           "skill": "MINING",
           "level": 15
+        }
+      ],
+      "atom": {
+        "verb": "gather",
+        "target": "copper_tin_ore",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "mining": 15
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Mining training",
+          "slug": "Pay-to-play_Mining_training.s8",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+        },
+        {
+          "title": "East Lumbridge Swamp mine",
+          "slug": "East_Lumbridge_Swamp_mine",
+          "url": "https://oldschool.runescape.wiki/w/East_Lumbridge_Swamp_mine"
+        },
+        {
+          "title": "Al Kharid mine",
+          "slug": "Al_Kharid_mine.s1",
+          "url": "https://oldschool.runescape.wiki/w/Al_Kharid_mine"
         }
       ]
     },
@@ -697,6 +1518,34 @@
           "type": "SKILL",
           "skill": "HERBLORE",
           "level": 10
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "clean_guam_leaf",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "herblore": 10
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Herblore training",
+          "slug": "Pay-to-play_Herblore_training.s2",
+          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+        },
+        {
+          "title": "Herblore training",
+          "slug": "Pay-to-play_Herblore_training.s6",
+          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
         }
       ]
     },
@@ -725,6 +1574,42 @@
           "skill": "FARMING",
           "level": 17
         }
+      ],
+      "atom": {
+        "verb": "plant",
+        "target": "allotment_seed",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "farming": 17
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "do-while",
+          "target": "background-loop",
+          "value": null,
+          "note": "Allotment runs are a RECURRING background loop, not a one-shot action \u2014 XREF: bg:bg-farm-allotment-setup."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Farming training",
+          "slug": "Pay-to-play_Farming_training.s5",
+          "url": "https://oldschool.runescape.wiki/w/Farming_training"
+        },
+        {
+          "title": "Farming training",
+          "slug": "Pay-to-play_Farming_training.s4",
+          "url": "https://oldschool.runescape.wiki/w/Farming_training"
+        }
       ]
     },
     {
@@ -737,6 +1622,28 @@
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Prayer potion",
+          "slug": "Prayer_potion.s2",
+          "url": "https://oldschool.runescape.wiki/w/Prayer_potion"
+        },
+        {
+          "title": "Ranarr weed",
+          "slug": "Ranarr_weed.s1",
+          "url": "https://oldschool.runescape.wiki/w/Ranarr_weed"
+        },
+        {
+          "title": "Ranarr potion (unf)",
+          "slug": "Ranarr_potion_(unf).s1",
+          "url": "https://oldschool.runescape.wiki/w/Ranarr_potion_(unf)"
+        },
+        {
+          "title": "Snape grass",
+          "slug": "Snape_grass.s5",
+          "url": "https://oldschool.runescape.wiki/w/Snape_grass"
         }
       ]
     },
@@ -751,6 +1658,18 @@
         {
           "type": "MANUAL"
         }
+      ],
+      "refs": [
+        {
+          "title": "Monkfish",
+          "slug": "Monkfish.s1",
+          "url": "https://oldschool.runescape.wiki/w/Monkfish"
+        },
+        {
+          "title": "Raw monkfish",
+          "slug": "Raw_monkfish.s1",
+          "url": "https://oldschool.runescape.wiki/w/Raw_monkfish"
+        }
       ]
     },
     {
@@ -759,18 +1678,52 @@
       "instruction": "Complete Fairytale I - Growing Pains",
       "detail": "Unlocks herb patches worldwide. Critical prerequisite for the herb farming supply chain.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3077,
+          "y": 3258,
+          "plane": 0,
+          "label": "Martin the Master Gardener, Draynor Village pig pen (start)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "martin_the_master_gardener",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "martin_the_master_gardener",
+          "value": "1",
+          "note": "start: ask about the failing farm patches"
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "farming +3500, magic +1000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Fairytale I - Growing Pains",
+          "slug": "Fairytale_I_-_Growing_Pains.s1",
+          "url": "https://oldschool.runescape.wiki/w/Fairytale_I_-_Growing_Pains"
+        },
+        {
+          "title": "Fairytale I - Growing Pains",
+          "slug": "Fairytale_I_-_Growing_Pains.s9",
+          "url": "https://oldschool.runescape.wiki/w/Fairytale_I_-_Growing_Pains"
         }
       ]
     },
@@ -799,6 +1752,37 @@
           "skill": "RANGED",
           "level": 30
         }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "crab",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "ranged": 30
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "keep-drop",
+          "target": null,
+          "value": "keep:none;drop:all",
+          "note": "Crabs are xp-only; no meaningful loot policy."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Ranged training",
+          "slug": "Pay-to-play_Ranged_training.s9",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+        }
       ]
     },
     {
@@ -813,6 +1797,34 @@
           "type": "SKILL",
           "skill": "FIREMAKING",
           "level": 30
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "ash_from_oak_logs",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "firemaking": 30
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Firemaking training",
+          "slug": "Pay-to-play_Firemaking_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+        },
+        {
+          "title": "Pay-to-play Woodcutting training",
+          "slug": "Pay-to-play_Woodcutting_training.s18",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
         }
       ]
     },
@@ -832,7 +1844,7 @@
           "x": 3149,
           "y": 9624,
           "plane": 0,
-          "label": "H.A.M. hideout"
+          "label": "H.A.M. Hideout (existing marker retained -- no more-precise {{Map}} pin found on H.A.M. Hideout/H.A.M. Member pages in the sections fetched; Transportation section confirms access via charged amulet of glory to Draynor Village then ~33 tiles east)"
         }
       ],
       "completionConditions": [
@@ -840,6 +1852,69 @@
           "type": "SKILL",
           "skill": "THIEVING",
           "level": 38
+        }
+      ],
+      "atom": {
+        "verb": "gather",
+        "target": "ham_member_pickpocket",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "thieving": 38
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "ham_member_pickpocket",
+          "value": "135/256 to 239/256 success, level requirement 15",
+          "note": "H.A.M. Member pickpocket chance table (H.A.M._member.s4): level 15, xp 22.2 per success, 4s stun/1-3 damage on fail (H.A.M._member.s5). Loot confirmed: gems (uncut opal 2/102, uncut jade 2/102), full H.A.M. robe set pieces (1/102 each), plus 'easy clue scrolls' per H.A.M. Hideout's own Notable features text -- the existing detail's 'gems and clue scrolls' claim is confirmed for gems, clue-scroll rate stays '??' (not itemized in the DropsTableHead sections fetched)."
+        },
+        {
+          "type": "safespot",
+          "target": "ham-member-jail",
+          "value": "avoid-3-concussions",
+          "note": "3 failed pickpockets within one hideout visit gets you booted or jailed (H.A.M._member.s1); a high Agility level or a full H.A.M. robe set (~4% reduction per piece, ~28% for all 7) lowers ejection chance but does NOT improve pickpocket success rate itself."
+        },
+        {
+          "type": "contested-fallback",
+          "target": "ham-hideout",
+          "value": "hop-worlds",
+          "note": "Single hideout instance per world; hop if crowded."
+        }
+      ],
+      "refs": [
+        {
+          "title": "H.A.M. Member",
+          "slug": "H.A.M._member.s4",
+          "url": "https://oldschool.runescape.wiki/w/H.A.M._Member"
+        },
+        {
+          "title": "H.A.M. Member",
+          "slug": "H.A.M._member.s5",
+          "url": "https://oldschool.runescape.wiki/w/H.A.M._Member"
+        },
+        {
+          "title": "H.A.M. Member",
+          "slug": "H.A.M._member.s7",
+          "url": "https://oldschool.runescape.wiki/w/H.A.M._Member"
+        },
+        {
+          "title": "H.A.M. Member",
+          "slug": "H.A.M._member.s8",
+          "url": "https://oldschool.runescape.wiki/w/H.A.M._Member"
+        },
+        {
+          "title": "H.A.M. Hideout",
+          "slug": "H.A.M._Hideout.s1",
+          "url": "https://oldschool.runescape.wiki/w/H.A.M._Hideout"
+        },
+        {
+          "title": "H.A.M. Hideout",
+          "slug": "H.A.M._Hideout.s2",
+          "url": "https://oldschool.runescape.wiki/w/H.A.M._Hideout"
         }
       ]
     },
@@ -856,6 +1931,37 @@
           "skill": "MAGIC",
           "level": 43
         }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "bar_via_superheat",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "magic": 43
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "do-while",
+          "target": "smithing",
+          "value": null,
+          "note": "Superheat Item gives passive Smithing xp on the bar produced."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s11",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
       ]
     },
     {
@@ -871,6 +1977,29 @@
           "skill": "FIREMAKING",
           "level": 50
         }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "ash_from_maple_logs",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "firemaking": 50
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Firemaking training",
+          "slug": "Pay-to-play_Firemaking_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+        }
       ]
     },
     {
@@ -882,10 +2011,58 @@
       "instruction": "Set up: Check allotment patches",
       "detail": "Plant potato, onion, or cabbage allotments; collect produce. Check at natural banking breaks \u2014 do not interrupt active training.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3055,
+          "y": 3308,
+          "plane": 0,
+          "label": "Falador allotment patch (south of Falador, gardener Elstan)"
+        },
+        {
+          "x": 2810,
+          "y": 3464,
+          "plane": 0,
+          "label": "Catherby allotment patch (north of Catherby, gardener Dantaera)"
+        },
+        {
+          "x": 2667,
+          "y": 3375,
+          "plane": 0,
+          "label": "Ardougne allotment patch (north of Ardougne, gardener Kragen)"
+        },
+        {
+          "x": 1735,
+          "y": 3555,
+          "plane": 0,
+          "label": "Hosidius allotment patch (SW corner of Hosidius, gardener Marisi)"
+        },
+        {
+          "x": 3602,
+          "y": 3526,
+          "plane": 0,
+          "label": "Port Phasmatys allotment patch (west of Port Phasmatys, gardener Lyra)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Allotment patch",
+          "slug": "Allotment_patch",
+          "url": "https://oldschool.runescape.wiki/w/Allotment_patch"
+        },
+        {
+          "title": "Allotment patch/Patches",
+          "slug": "Allotment_patch_Patches.s1",
+          "url": "https://oldschool.runescape.wiki/w/Allotment_patch/Patches"
+        },
+        {
+          "title": "Allotment patch/Seeds",
+          "slug": "Allotment_patch_Seeds.s1",
+          "url": "https://oldschool.runescape.wiki/w/Allotment_patch/Seeds"
         }
       ]
     },
@@ -902,10 +2079,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 3333,
-          "y": 2952,
+          "x": 3302,
+          "y": 3211,
           "plane": 0,
-          "label": "Pollnivneach"
+          "label": "Ali Morrisane, northern Al Kharid (start)"
         }
       ],
       "completionConditions": [
@@ -913,12 +2090,39 @@
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "ali_morrisane",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "ali_morrisane",
+          "value": "1",
+          "note": "start: ask about his stock problems"
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "thieving +15000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "The Feud",
+          "slug": "The_Feud.s1",
+          "url": "https://oldschool.runescape.wiki/w/The_Feud"
+        },
+        {
+          "title": "The Feud",
+          "slug": "The_Feud.s8",
+          "url": "https://oldschool.runescape.wiki/w/The_Feud"
         }
       ]
     },
@@ -935,6 +2139,23 @@
           "skill": "MAGIC",
           "level": 50
         }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s11",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s14",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
       ]
     },
     {
@@ -950,10 +2171,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 3259,
-          "y": 3266,
+          "x": 3208,
+          "y": 3214,
           "plane": 0,
-          "label": "Lumbridge cows"
+          "label": "The Cook, Lumbridge Castle kitchen (start, same room as Cook's Assistant)"
         }
       ],
       "completionConditions": [
@@ -961,12 +2182,44 @@
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "cook",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "cook",
+          "value": "1",
+          "note": "start: ask what he needs for the centennial feast"
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "cooking +300",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Recipe for Disaster/Another Cook's Quest",
+          "slug": "Recipe_for_Disaster_Another_Cook's_Quest.s1",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Another_Cook's_Quest"
+        },
+        {
+          "title": "Recipe for Disaster/Another Cook's Quest",
+          "slug": "Recipe_for_Disaster_Another_Cook's_Quest.s4",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Another_Cook's_Quest"
+        },
+        {
+          "title": "Cook's Assistant",
+          "slug": "Cook's_Assistant.s1",
+          "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
         }
       ]
     },
@@ -982,6 +2235,42 @@
           "type": "SKILL",
           "skill": "HERBLORE",
           "level": 38
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "strength_potion",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "herblore": 38
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "limpwurt_root_source",
+          "value": "??",
+          "note": "Non-GE gather/vendor source for Limpwurt root not confirmed by a fetched page \u2014 left ?? rather than guessed."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Strength potion",
+          "slug": "Strength_potion.s3",
+          "url": "https://oldschool.runescape.wiki/w/Strength_potion"
+        },
+        {
+          "title": "Herblore training",
+          "slug": "Pay-to-play_Herblore_training.s6",
+          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
         }
       ]
     },
@@ -1005,6 +2294,34 @@
           "skill": "WOODCUTTING",
           "level": 30
         }
+      ],
+      "atom": {
+        "verb": "gather",
+        "target": "oak_logs",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "woodcutting": 30
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Woodcutting training",
+          "slug": "Pay-to-play_Woodcutting_training.s5",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+        },
+        {
+          "title": "Pay-to-play Woodcutting training",
+          "slug": "Pay-to-play_Woodcutting_training.s18",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+        }
       ]
     },
     {
@@ -1015,10 +2332,10 @@
       "highlights": [],
       "mapMarkers": [
         {
-          "x": 3288,
-          "y": 3190,
+          "x": 3298,
+          "y": 3293,
           "plane": 0,
-          "label": "Al Kharid"
+          "label": "Al Kharid mine (iron rocks, lvl 15, 35xp/ore, near bank+furnace)"
         }
       ],
       "completionConditions": [
@@ -1026,6 +2343,39 @@
           "type": "SKILL",
           "skill": "SMITHING",
           "level": 30
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "iron_item",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "smithing": 30
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Smithing training",
+          "slug": "Pay-to-play_Smithing_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+        },
+        {
+          "title": "Al Kharid mine",
+          "slug": "Al_Kharid_mine",
+          "url": "https://oldschool.runescape.wiki/w/Al_Kharid_mine"
+        },
+        {
+          "title": "Al Kharid mine",
+          "slug": "Al_Kharid_mine.s1",
+          "url": "https://oldschool.runescape.wiki/w/Al_Kharid_mine"
         }
       ]
     },
@@ -1035,12 +2385,31 @@
       "instruction": "Train Mining to 22",
       "detail": "Synthetic step \u2014 no matching step found in bank.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3298,
+          "y": 3293,
+          "plane": 0,
+          "label": "Al Kharid mine (iron triangle spot)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "SKILL",
           "skill": "MINING",
           "level": 22
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Mining training",
+          "slug": "Pay-to-play_Mining_training.s9",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
         }
       ]
     },
@@ -1057,6 +2426,18 @@
           "skill": "FARMING",
           "level": 32
         }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Farming training",
+          "slug": "Pay-to-play_Farming_training.s5",
+          "url": "https://oldschool.runescape.wiki/w/Farming_training"
+        }
       ]
     },
     {
@@ -1072,10 +2453,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 3081,
-          "y": 3420,
+          "x": 3078,
+          "y": 3429,
           "plane": 0,
-          "label": "Barbarian Village"
+          "label": "Barbarian Village fishing spot + fire (trout/salmon)"
         }
       ],
       "completionConditions": [
@@ -1083,6 +2464,29 @@
           "type": "SKILL",
           "skill": "COOKING",
           "level": 40
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "cooked_fish_early",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "cooking": 40
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Cooking training",
+          "slug": "Pay-to-play_Cooking_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
         }
       ]
     },
@@ -1099,10 +2503,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 3081,
-          "y": 3420,
+          "x": 3078,
+          "y": 3429,
           "plane": 0,
-          "label": "Barbarian Village"
+          "label": "Barbarian Village fly-fishing spot"
         }
       ],
       "completionConditions": [
@@ -1110,6 +2514,37 @@
           "type": "SKILL",
           "skill": "FISHING",
           "level": 40
+        }
+      ],
+      "atom": {
+        "verb": "gather",
+        "target": "raw_trout_salmon",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "fishing": 40
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "do-while",
+          "target": null,
+          "value": null,
+          "note": "Barbarian Village has a permanent fire nearby for cooking+dropping without banking."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Fishing training",
+          "slug": "Pay-to-play_Fishing_training.s4",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
         }
       ]
     },
@@ -1126,6 +2561,29 @@
           "skill": "CRAFTING",
           "level": 40
         }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "cut_gem",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "crafting": 40
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Crafting training",
+          "slug": "Pay-to-play_Crafting_training.s4",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
+        }
       ]
     },
     {
@@ -1140,6 +2598,29 @@
           "type": "SKILL",
           "skill": "PRAYER",
           "level": 43
+        }
+      ],
+      "atom": {
+        "verb": "consume",
+        "target": "big_bones",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "prayer": 43
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Prayer training",
+          "slug": "Pay-to-play_Prayer_training.s4",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
         }
       ]
     },
@@ -1156,10 +2637,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 3259,
-          "y": 3266,
+          "x": 2865,
+          "y": 9877,
           "plane": 0,
-          "label": "Lumbridge cows"
+          "label": "Rohak, tunnel under White Wolf Mountain ({{Map}}-sourced)"
         }
       ],
       "completionConditions": [
@@ -1167,12 +2648,45 @@
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "frozen_dwarf",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "frozen_dwarf",
+          "value": "1",
+          "note": "inspect the frozen dwarf in the Lumbridge Castle dining room to start"
+        },
+        {
+          "type": "rng-variance",
+          "target": "asgoldian_ale",
+          "value": "??",
+          "note": "Rohak sobers up if fed ales too slowly \u2014 bring 2 extra (6 total) as insurance, per the wiki walkthrough."
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "cooking +1000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Recipe for Disaster/Freeing the Mountain Dwarf",
+          "slug": "Recipe_for_Disaster_Freeing_the_Mountain_Dwarf.s1",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_the_Mountain_Dwarf"
+        },
+        {
+          "title": "Recipe for Disaster/Freeing the Mountain Dwarf",
+          "slug": "Recipe_for_Disaster_Freeing_the_Mountain_Dwarf.s3",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_the_Mountain_Dwarf"
         }
       ]
     },
@@ -1189,6 +2703,37 @@
           "skill": "SMITHING",
           "level": 40
         }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "steel_item",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "smithing": 40
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "do-while",
+          "target": "magic",
+          "value": null,
+          "note": "Superheat Item (Magic 43+) gives passive Smithing xp on the same bars \u2014 XREF: training:train-magic-43."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Smithing training",
+          "slug": "Pay-to-play_Smithing_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+        }
       ]
     },
     {
@@ -1203,6 +2748,18 @@
           "type": "SKILL",
           "skill": "WOODCUTTING",
           "level": 36
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Woodcutting training",
+          "slug": "Pay-to-play_Woodcutting_training.s5",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
         }
       ]
     },
@@ -1219,6 +2776,18 @@
           "skill": "HERBLORE",
           "level": 52
         }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Herblore training",
+          "slug": "Pay-to-play_Herblore_training.s6",
+          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+        }
       ]
     },
     {
@@ -1233,7 +2802,34 @@
           "type": "MANUAL"
         }
       ],
-      "checkpoint": "Secondaries + brew (JIT)"
+      "atom": {
+        "verb": "produce",
+        "target": "prayer_potion_4",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "prayer_potion_4",
+          "value": "5% (amulet of chemistry) / 15% (alchemist's amulet)",
+          "note": "Base recipe output is Prayer potion(3) \u2014 the target stays prayer_potion_4 for chain-slug consistency, but reaching an actual 4-dose potion needs this amulet chance (or combining leftover doses). Ref: Prayer potion Creation section."
+        }
+      ],
+      "checkpoint": "Secondaries + brew (JIT)",
+      "refs": [
+        {
+          "title": "Prayer potion",
+          "slug": "Prayer_potion.s2",
+          "url": "https://oldschool.runescape.wiki/w/Prayer_potion"
+        },
+        {
+          "title": "Ranarr potion (unf)",
+          "slug": "Ranarr_potion_(unf).s1",
+          "url": "https://oldschool.runescape.wiki/w/Ranarr_potion_(unf)"
+        }
+      ]
     },
     {
       "id": "train-attack-60",
@@ -1255,6 +2851,37 @@
           "skill": "ATTACK",
           "level": 60
         }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "moss_giant",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 60
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "keep-drop",
+          "target": null,
+          "value": "keep:big-bones,herbs,seeds;drop:junk",
+          "note": "Big bones always drop \u2014 Prayer xp side-benefit."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s13",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        }
       ]
     },
     {
@@ -1270,10 +2897,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 3259,
-          "y": 3266,
+          "x": 3208,
+          "y": 3214,
           "plane": 0,
-          "label": "Lumbridge cows"
+          "label": "The Cook, Lumbridge Castle kitchen (RFD start)"
         }
       ],
       "completionConditions": [
@@ -1281,12 +2908,44 @@
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "cook",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "cook",
+          "value": "1",
+          "note": "start: agree to help gather feast ingredients"
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "cooking +1000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Recipe for Disaster",
+          "slug": "Recipe_for_Disaster.s1",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
+        },
+        {
+          "title": "Recipe for Disaster",
+          "slug": "Recipe_for_Disaster.s6",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
+        },
+        {
+          "title": "Cook's Assistant",
+          "slug": "Cook's_Assistant.s1",
+          "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
         }
       ]
     },
@@ -1310,6 +2969,37 @@
           "skill": "COOKING",
           "level": 58
         }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "lobster",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "cooking": 58
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "burn-stop",
+          "value": "74/68 with-gauntlets",
+          "note": "Burn-stop table lives on a separate page (Cooking/Burn level) per items-domain gotcha \u2014 not re-verified here, XREF: items:"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Cooking training",
+          "slug": "Pay-to-play_Cooking_training.s4",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+        }
       ]
     },
     {
@@ -1324,6 +3014,29 @@
           "type": "SKILL",
           "skill": "FISHING",
           "level": 58
+        }
+      ],
+      "atom": {
+        "verb": "gather",
+        "target": "raw_lobster",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "fishing": 58
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Fishing training",
+          "slug": "Pay-to-play_Fishing_training.s4",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
         }
       ]
     },
@@ -1340,6 +3053,18 @@
           "skill": "SMITHING",
           "level": 45
         }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Smithing training",
+          "slug": "Pay-to-play_Smithing_training.s7",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+        }
       ]
     },
     {
@@ -1354,6 +3079,42 @@
           "type": "SKILL",
           "skill": "MAGIC",
           "level": 55
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "alchemy_target_item",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "magic": 55
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "batch-size",
+          "target": "high-alch",
+          "value": "1-per-5-ticks",
+          "note": "65xp/cast, up to 78,000xp/h stationary [ref: Pay-to-play Magic training s14]."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s5",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s14",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
         }
       ]
     },
@@ -1370,6 +3131,18 @@
           "skill": "COOKING",
           "level": 62
         }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Cooking training",
+          "slug": "Pay-to-play_Cooking_training.s4",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+        }
       ]
     },
     {
@@ -1385,6 +3158,18 @@
           "skill": "FISHING",
           "level": 62
         }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Fishing training",
+          "slug": "Pay-to-play_Fishing_training.s4",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+        }
       ]
     },
     {
@@ -1395,15 +3180,44 @@
       "highlights": [],
       "mapMarkers": [
         {
-          "x": 3209,
-          "y": 3165,
+          "x": 3150,
+          "y": 3205,
           "plane": 0,
-          "label": "Lumbridge Swamp"
+          "label": "Warrior, NW Lumbridge Swamp (start)"
         }
       ],
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "warrior",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "warrior",
+          "value": "1",
+          "note": "start: ask about Zanaris"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Lost City",
+          "slug": "Lost_City.s1",
+          "url": "https://oldschool.runescape.wiki/w/Lost_City"
+        },
+        {
+          "title": "Lost City",
+          "slug": "Lost_City.s6",
+          "url": "https://oldschool.runescape.wiki/w/Lost_City"
         }
       ]
     },
@@ -1420,6 +3234,29 @@
           "skill": "RANGED",
           "level": 40
         }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "crab",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "ranged": 40
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Ranged training",
+          "slug": "Pay-to-play_Ranged_training.s9",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+        }
       ]
     },
     {
@@ -1434,6 +3271,29 @@
           "type": "SKILL",
           "skill": "RANGED",
           "level": 55
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "crab",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "ranged": 55
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Ranged training",
+          "slug": "Pay-to-play_Ranged_training.s9",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
         }
       ]
     },
@@ -1450,6 +3310,37 @@
           "skill": "PRAYER",
           "level": 52
         }
+      ],
+      "atom": {
+        "verb": "consume",
+        "target": "dragon_bones",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "prayer": 52
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": null,
+          "value": null,
+          "note": null
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Prayer training",
+          "slug": "Pay-to-play_Prayer_training.s4",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
+        }
       ]
     },
     {
@@ -1464,6 +3355,37 @@
           "type": "SKILL",
           "skill": "RANGED",
           "level": 70
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "crab",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "ranged": 70
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "do-while",
+          "target": "afk",
+          "value": null,
+          "note": "Crabs stay viable to level 70 per the wiki; cannon/chinning are faster but not required."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Ranged training",
+          "slug": "Pay-to-play_Ranged_training.s9",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
         }
       ]
     },
@@ -1480,6 +3402,37 @@
           "skill": "MAGIC",
           "level": 70
         }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "crab",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "magic": 70
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "burst-spell-tier",
+          "value": "??",
+          "note": "Smoke Burst usable from 62; Ice Burst better from 70 \u2014 exact xp/h not sourced."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s17",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
       ]
     },
     {
@@ -1494,6 +3447,37 @@
           "type": "SKILL",
           "skill": "ATTACK",
           "level": 70
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "combat_training_target",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "attack": 70
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "contested-fallback",
+          "target": null,
+          "value": "??",
+          "note": "No single wiki-cited monster fetched for this exact band; Nightmare Zone (needs 5 quests, requirement list unverified) is the wiki's documented 50-99 AFK/fastest method."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s6",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
       ]
     },
@@ -1510,6 +3494,23 @@
           "skill": "ATTACK",
           "level": 75
         }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s6",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s7",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        }
       ]
     },
     {
@@ -1524,6 +3525,18 @@
           "type": "SKILL",
           "skill": "RANGED",
           "level": 75
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Ranged training",
+          "slug": "Pay-to-play_Ranged_training.s9",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
         }
       ]
     },
@@ -1540,6 +3553,18 @@
           "skill": "MAGIC",
           "level": 75
         }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s17",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
       ]
     },
     {
@@ -1555,6 +3580,23 @@
           "skill": "MAGIC",
           "level": 66
         }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s14",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s17",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
       ]
     },
     {
@@ -1565,10 +3607,10 @@
       "highlights": [],
       "mapMarkers": [
         {
-          "x": 2344,
-          "y": 3667,
+          "x": 2353,
+          "y": 3680,
           "plane": 0,
-          "label": "Piscatoris Hunter area"
+          "label": "Herman Caranos, Piscatoris Fishing Colony (start)"
         }
       ],
       "completionConditions": [
@@ -1576,12 +3618,39 @@
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "herman_caranos",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "herman_caranos",
+          "value": "1",
+          "note": "start: agree to fight the sea trolls"
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "fishing +10000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Swan Song",
+          "slug": "Swan_Song.s1",
+          "url": "https://oldschool.runescape.wiki/w/Swan_Song"
+        },
+        {
+          "title": "Swan Song",
+          "slug": "Swan_Song.s11",
+          "url": "https://oldschool.runescape.wiki/w/Swan_Song"
         }
       ]
     },
@@ -1591,13 +3660,38 @@
       "instruction": "\u29c6 Bootstrap: chickens \u2192 cows (no bank)",
       "detail": "",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3225,
+          "y": 3300,
+          "plane": 0,
+          "label": "Chickens, Lumbridge East Farm"
+        },
+        {
+          "x": 3254,
+          "y": 3267,
+          "plane": 0,
+          "label": "Cows, Lumbridge East Farm"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
         }
       ],
-      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)"
+      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)",
+      "refs": [
+        {
+          "title": "Chicken",
+          "slug": "Chicken",
+          "url": "https://oldschool.runescape.wiki/w/Chicken"
+        },
+        {
+          "title": "Cow",
+          "slug": "Cow",
+          "url": "https://oldschool.runescape.wiki/w/Cow"
+        }
+      ]
     },
     {
       "id": "ctr-01-kill-chickens",
@@ -1612,10 +3706,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 3235,
-          "y": 3295,
+          "x": 3225,
+          "y": 3300,
           "plane": 0,
-          "label": "Lumbridge chickens"
+          "label": "Chickens, Lumbridge East Farm coop"
         }
       ],
       "completionConditions": [
@@ -1655,6 +3749,7 @@
       "refs": [
         {
           "title": "Chicken",
+          "slug": "Chicken",
           "url": "https://oldschool.runescape.wiki/w/Chicken",
           "kind": "npc"
         }
@@ -1673,10 +3768,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 3259,
-          "y": 3266,
+          "x": 3254,
+          "y": 3267,
           "plane": 0,
-          "label": "Lumbridge cows"
+          "label": "Cows, Lumbridge East Farm"
         }
       ],
       "completionConditions": [
@@ -1712,21 +3807,53 @@
         }
       ],
       "coarse_of": "combat-training-routing",
-      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)"
+      "checkpoint": "Bootstrap: chickens \u2192 cows (no bank)",
+      "refs": [
+        {
+          "title": "Cow",
+          "slug": "Cow",
+          "url": "https://oldschool.runescape.wiki/w/Cow"
+        }
+      ]
     },
     {
-      "id": "chkpt-combat-training-routing-1",
+      "id": "chkpt-combat-training-routing-2",
       "phase": "Toward Monkey Madness I",
       "instruction": "\u29c6 30s \u2192 40s: barbarians + Stronghold",
       "detail": "",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3078,
+          "y": 3429,
+          "plane": 0,
+          "label": "Barbarian Village"
+        },
+        {
+          "x": 1936,
+          "y": 5135,
+          "plane": 0,
+          "label": "Stronghold of Security, Catacomb of Famine"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
         }
       ],
-      "checkpoint": "30s \u2192 40s: barbarians + Stronghold"
+      "checkpoint": "30s \u2192 40s: barbarians + Stronghold",
+      "refs": [
+        {
+          "title": "Barbarian",
+          "slug": "Barbarian",
+          "url": "https://oldschool.runescape.wiki/w/Barbarian"
+        },
+        {
+          "title": "Flesh Crawler",
+          "slug": "Flesh_Crawler",
+          "url": "https://oldschool.runescape.wiki/w/Flesh_Crawler"
+        }
+      ]
     },
     {
       "id": "ctr-05-kill-barbarians",
@@ -1741,10 +3868,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 3081,
-          "y": 3420,
+          "x": 3078,
+          "y": 3429,
           "plane": 0,
-          "label": "Barbarian Village"
+          "label": "Barbarian Village (barbarians lvl 9/10/15/17)"
         }
       ],
       "completionConditions": [
@@ -1792,7 +3919,19 @@
         }
       ],
       "coarse_of": "combat-training-routing",
-      "checkpoint": "30s \u2192 40s: barbarians + Stronghold"
+      "checkpoint": "30s \u2192 40s: barbarians + Stronghold",
+      "refs": [
+        {
+          "title": "Barbarian",
+          "slug": "Barbarian",
+          "url": "https://oldschool.runescape.wiki/w/Barbarian"
+        },
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        }
+      ]
     },
     {
       "id": "ctr-06-stronghold-crawlers",
@@ -1807,10 +3946,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 1988,
-          "y": 5235,
+          "x": 1936,
+          "y": 5135,
           "plane": 0,
-          "label": "Stronghold of Security"
+          "label": "Flesh Crawlers, Stronghold of Security Catacomb of Famine (lvl 2)"
         }
       ],
       "completionConditions": [
@@ -1864,21 +4003,52 @@
         }
       ],
       "coarse_of": "combat-training-routing",
-      "checkpoint": "30s \u2192 40s: barbarians + Stronghold"
+      "checkpoint": "30s \u2192 40s: barbarians + Stronghold",
+      "refs": [
+        {
+          "title": "Flesh Crawler",
+          "slug": "Flesh_Crawler",
+          "url": "https://oldschool.runescape.wiki/w/Flesh_Crawler"
+        },
+        {
+          "title": "Stronghold of Security",
+          "slug": "Stronghold_of_Security.s3",
+          "url": "https://oldschool.runescape.wiki/w/Stronghold_of_Security"
+        },
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        }
+      ]
     },
     {
-      "id": "chkpt-combat-training-routing-2",
+      "id": "chkpt-combat-training-routing-3",
       "phase": "Toward Monkey Madness I",
       "instruction": "\u29c6 Routing branch: crabs vs slayer (pick one)",
       "detail": "",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 1815,
+          "y": 3456,
+          "plane": 0,
+          "label": "Sand Crabs, Hosidius southern coast"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
         }
       ],
-      "checkpoint": "Routing branch: crabs vs slayer (pick one)"
+      "checkpoint": "Routing branch: crabs vs slayer (pick one)",
+      "refs": [
+        {
+          "title": "Sand Crab",
+          "slug": "Sand_Crab",
+          "url": "https://oldschool.runescape.wiki/w/Sand_Crab"
+        }
+      ]
     },
     {
       "id": "ctr-07a-sand-crabs",
@@ -1888,10 +4058,10 @@
       "highlights": [],
       "mapMarkers": [
         {
-          "x": 1744,
-          "y": 3564,
+          "x": 1815,
+          "y": 3456,
           "plane": 0,
-          "label": "Hosidius"
+          "label": "Sand Crabs, Hosidius southern coast"
         }
       ],
       "completionConditions": [
@@ -1939,7 +4109,19 @@
         }
       ],
       "coarse_of": "combat-training-routing",
-      "checkpoint": "Routing branch: crabs vs slayer (pick one)"
+      "checkpoint": "Routing branch: crabs vs slayer (pick one)",
+      "refs": [
+        {
+          "title": "Sand Crab",
+          "slug": "Sand_Crab",
+          "url": "https://oldschool.runescape.wiki/w/Sand_Crab"
+        },
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        }
+      ]
     },
     {
       "id": "milestone-quest-mm",
@@ -1959,21 +4141,52 @@
           "skill": "DEFENCE",
           "level": 43
         }
+      ],
+      "refs": [
+        {
+          "title": "Monkey Madness I",
+          "slug": "Monkey_Madness_I.s1",
+          "url": "https://oldschool.runescape.wiki/w/Monkey_Madness_I"
+        },
+        {
+          "title": "Monkey Madness I",
+          "slug": "Monkey_Madness_I.s20",
+          "url": "https://oldschool.runescape.wiki/w/Monkey_Madness_I"
+        }
       ]
     },
     {
-      "id": "chkpt-combat-training-routing-3",
+      "id": "chkpt-combat-training-routing-1",
       "phase": "Toward Desert Treasure",
       "instruction": "\u29c6 Gear stop: Al Kharid scimitar",
       "detail": "",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3288,
+          "y": 3190,
+          "plane": 0,
+          "label": "Al Kharid gear stop -- Zeke's Superior Scimitars"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
         }
       ],
-      "checkpoint": "Gear stop: Al Kharid scimitar"
+      "checkpoint": "Gear stop: Al Kharid scimitar",
+      "refs": [
+        {
+          "title": "Zeke's Superior Scimitars.",
+          "slug": "Zeke's_Superior_Scimitars.s1",
+          "url": "https://oldschool.runescape.wiki/w/Zeke%27s_Superior_Scimitars."
+        },
+        {
+          "title": "Al Kharid",
+          "slug": "Al_Kharid.s1",
+          "url": "https://oldschool.runescape.wiki/w/Al_Kharid"
+        }
+      ]
     },
     {
       "id": "ctr-03-buy-scimitar",
@@ -1986,7 +4199,7 @@
           "x": 3288,
           "y": 3190,
           "plane": 0,
-          "label": "Al Kharid"
+          "label": "Zeke (Al Kharid) -- confirmed via Zeke's own {{NPC map|x=3288|y=3190|r=3}} pin, matches the existing step marker exactly."
         }
       ],
       "completionConditions": [
@@ -2007,15 +4220,52 @@
           "target": "al-kharid-gate",
           "value": "pay-toll",
           "note": "10-coin toll; Prince Ali Rescue removes it permanently if already done."
+        },
+        {
+          "type": "rng-variance",
+          "target": "scimitar_best_tier",
+          "value": "??",
+          "note": "Zeke's Stock table (StoreTableHead sellmultiplier=1000 buymultiplier=550 delta=20): Bronze stock 5/restock 100s, Iron stock 3/restock 200s, Steel stock 2/restock 600s, Mithril stock 1/restock 4000s (~66.7min). Exact coin price unresolved -- base item value x buymultiplier is the shop-price formula but the wiki does not spell out the post-delta price per unit, staying '??'."
         }
       ],
       "coarse_of": "combat-training-routing",
       "checkpoint": "Gear stop: Al Kharid scimitar",
       "refs": [
         {
-          "title": "Zeke's Superior Scimitars",
-          "url": "https://oldschool.runescape.wiki/w/Zeke%27s_Superior_Scimitars",
+          "title": "Zeke's Superior Scimitars.",
+          "slug": "Zeke's_Superior_Scimitars.s1",
+          "url": "https://oldschool.runescape.wiki/w/Zeke's_Superior_Scimitars.",
           "kind": "npc"
+        },
+        {
+          "title": "Zeke",
+          "slug": "Zeke",
+          "url": "https://oldschool.runescape.wiki/w/Zeke"
+        },
+        {
+          "title": "Al Kharid",
+          "slug": "Al_Kharid.s1",
+          "url": "https://oldschool.runescape.wiki/w/Al_Kharid"
+        },
+        {
+          "title": "Bronze scimitar",
+          "slug": "Bronze_scimitar",
+          "url": "https://oldschool.runescape.wiki/w/Bronze_scimitar"
+        },
+        {
+          "title": "Iron scimitar",
+          "slug": "Iron_scimitar",
+          "url": "https://oldschool.runescape.wiki/w/Iron_scimitar"
+        },
+        {
+          "title": "Steel scimitar",
+          "slug": "Steel_scimitar",
+          "url": "https://oldschool.runescape.wiki/w/Steel_scimitar"
+        },
+        {
+          "title": "Mithril scimitar",
+          "slug": "Mithril_scimitar",
+          "url": "https://oldschool.runescape.wiki/w/Mithril_scimitar"
         }
       ]
     },
@@ -2030,7 +4280,7 @@
           "x": 3288,
           "y": 3190,
           "plane": 0,
-          "label": "Al Kharid"
+          "label": "Zeke (Al Kharid) -- same tile as the purchase, equip immediately after buying."
         }
       ],
       "completionConditions": [
@@ -2046,7 +4296,24 @@
         "until": null
       },
       "coarse_of": "combat-training-routing",
-      "checkpoint": "Gear stop: Al Kharid scimitar"
+      "checkpoint": "Gear stop: Al Kharid scimitar",
+      "refs": [
+        {
+          "title": "Mithril scimitar",
+          "slug": "Mithril_scimitar",
+          "url": "https://oldschool.runescape.wiki/w/Mithril_scimitar"
+        },
+        {
+          "title": "Steel scimitar",
+          "slug": "Steel_scimitar",
+          "url": "https://oldschool.runescape.wiki/w/Steel_scimitar"
+        },
+        {
+          "title": "Bronze scimitar",
+          "slug": "Bronze_scimitar",
+          "url": "https://oldschool.runescape.wiki/w/Bronze_scimitar"
+        }
+      ]
     },
     {
       "id": "train-defence-30",
@@ -2061,10 +4328,10 @@
       ],
       "mapMarkers": [
         {
-          "x": 3259,
-          "y": 3266,
+          "x": 3254,
+          "y": 3267,
           "plane": 0,
-          "label": "Lumbridge cows"
+          "label": "Cows, Lumbridge East Farm"
         }
       ],
       "completionConditions": [
@@ -2072,6 +4339,29 @@
           "type": "SKILL",
           "skill": "DEFENCE",
           "level": 30
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "cow",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "defence": 30
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Cow",
+          "slug": "Cow",
+          "url": "https://oldschool.runescape.wiki/w/Cow"
         }
       ]
     },
@@ -2088,8 +4378,8 @@
       ],
       "mapMarkers": [
         {
-          "x": 3081,
-          "y": 3420,
+          "x": 3078,
+          "y": 3429,
           "plane": 0,
           "label": "Barbarian Village"
         }
@@ -2099,6 +4389,29 @@
           "type": "SKILL",
           "skill": "DEFENCE",
           "level": 40
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "barbarian",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "defence": 40
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s10",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
       ]
     },
@@ -2114,6 +4427,18 @@
           "type": "SKILL",
           "skill": "DEFENCE",
           "level": 43
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s10",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
       ]
     },
@@ -2137,6 +4462,29 @@
           "skill": "STRENGTH",
           "level": 60
         }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "moss_giant",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "strength": 60
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s13",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        }
       ]
     },
     {
@@ -2152,6 +4500,39 @@
           "skill": "DEFENCE",
           "level": 60
         }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "moss_giant",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "defence": 60
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s13",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        },
+        {
+          "title": "Flesh Crawler",
+          "slug": "Flesh_Crawler",
+          "url": "https://oldschool.runescape.wiki/w/Flesh_Crawler"
+        },
+        {
+          "title": "Stronghold of Security",
+          "slug": "Stronghold_of_Security.s3",
+          "url": "https://oldschool.runescape.wiki/w/Stronghold_of_Security"
+        }
       ]
     },
     {
@@ -2162,10 +4543,10 @@
       "highlights": [],
       "mapMarkers": [
         {
-          "x": 2752,
-          "y": 2782,
+          "x": 2466,
+          "y": 3495,
           "plane": 0,
-          "label": "Ape Atoll"
+          "label": "King Narnode Shareen, Grand Tree (start)"
         }
       ],
       "completionConditions": [
@@ -2173,12 +4554,39 @@
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "king_narnode_shareen",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "king_narnode_shareen",
+          "value": "1",
+          "note": "start: ask about the missing 10th squad"
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "attack +35000, defence +35000, strength +35000, hitpoints +35000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Monkey Madness I",
+          "slug": "Monkey_Madness_I.s1",
+          "url": "https://oldschool.runescape.wiki/w/Monkey_Madness_I"
+        },
+        {
+          "title": "Monkey Madness I",
+          "slug": "Monkey_Madness_I.s20",
+          "url": "https://oldschool.runescape.wiki/w/Monkey_Madness_I"
         }
       ]
     },
@@ -2190,15 +4598,47 @@
       "highlights": [],
       "mapMarkers": [
         {
-          "x": 3564,
-          "y": 3288,
+          "x": 3567,
+          "y": 3291,
           "plane": 0,
-          "label": "Barrows mounds"
+          "label": "Barrows entrance (six burial mounds, east of Mort'ton)"
         }
       ],
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "teleport",
+        "target": "barrows",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "teleport-choice",
+          "target": "barrows",
+          "value": "barrows-teleport-arceuus-83magic,mortton-teleport-scroll,morytania-legs-3-4,minigame-teleport-shades-of-mortton,kharyrll-tp-then-swampboaty,fairy-ring-bkr,fairy-ring-bip",
+          "note": "List order = fastest-to-slowest per the wiki's own ranking. Minigame Teleport to Shades of Mort'ton needs the Shades of Mort'ton quest but is free/no inventory slot, 20-min cooldown."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Barrows",
+          "slug": "Barrows.s2",
+          "url": "https://oldschool.runescape.wiki/w/Barrows"
+        },
+        {
+          "title": "Barrows",
+          "slug": "Barrows.s3",
+          "url": "https://oldschool.runescape.wiki/w/Barrows"
+        },
+        {
+          "title": "Barrows",
+          "slug": "Barrows.s0",
+          "url": "https://oldschool.runescape.wiki/w/Barrows"
         }
       ]
     },
@@ -2210,15 +4650,48 @@
       "highlights": [],
       "mapMarkers": [
         {
-          "x": 2897,
-          "y": 5269,
+          "x": 2918,
+          "y": 3745,
           "plane": 0,
-          "label": "God Wars Dungeon"
+          "label": "GWD entrance hole (surface, north of Trollheim)"
         }
       ],
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "walk-to",
+        "target": "god_wars_dungeon",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "teleport-choice",
+          "target": "gwd-entrance",
+          "value": "trollheim-teleport-61magic-eadgars-ruse,burthorpe-games-necklace-then-walk",
+          "note": "With Eadgar's Ruse + Magic 61: Trollheim Teleport lands on the mountain east of Troll Stronghold, then walk down + north (agility shortcuts lvl41-47 shorten it). Without: teleport to Burthorpe, needs climbing boots + rope + start of Troll Stronghold, follow the blue route past Death Plateau (Protect from Range) or via Tenzing's house."
+        },
+        {
+          "type": "safespot",
+          "target": "thrower-trolls",
+          "value": "protect-from-missiles",
+          "note": "North side of the mountain near the entrance has thrower trolls; the chill-effect zone also drains stats/run/special every few seconds unless Fire of Unseasonal Warmth is built (Making Friends with My Arm + Construction 60)."
+        }
+      ],
+      "refs": [
+        {
+          "title": "God Wars Dungeon",
+          "slug": "God_Wars_Dungeon.s1",
+          "url": "https://oldschool.runescape.wiki/w/God_Wars_Dungeon"
+        },
+        {
+          "title": "God Wars Dungeon",
+          "slug": "God_Wars_Dungeon.s0",
+          "url": "https://oldschool.runescape.wiki/w/God_Wars_Dungeon"
         }
       ]
     },
@@ -2235,6 +4708,29 @@
           "skill": "STRENGTH",
           "level": 70
         }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "combat_training_target",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "strength": 70
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s6",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        }
       ]
     },
     {
@@ -2249,6 +4745,29 @@
           "type": "SKILL",
           "skill": "DEFENCE",
           "level": 70
+        }
+      ],
+      "atom": {
+        "verb": "kill",
+        "target": "combat_training_target",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "defence": 70
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s6",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
       ]
     },
@@ -2265,6 +4784,23 @@
           "skill": "STRENGTH",
           "level": 75
         }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s6",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s7",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        }
       ]
     },
     {
@@ -2280,6 +4816,23 @@
           "skill": "DEFENCE",
           "level": 75
         }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s6",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s7",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        }
       ]
     },
     {
@@ -2294,6 +4847,29 @@
           "type": "SKILL",
           "skill": "PRAYER",
           "level": 74
+        }
+      ],
+      "atom": {
+        "verb": "consume",
+        "target": "dragon_bones",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "prayer": 74
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Prayer training",
+          "slug": "Pay-to-play_Prayer_training.s4",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
         }
       ]
     },
@@ -2325,6 +4901,18 @@
           "skill": "FIREMAKING",
           "level": 50
         }
+      ],
+      "refs": [
+        {
+          "title": "Desert Treasure I",
+          "slug": "Desert_Treasure_I.s1",
+          "url": "https://oldschool.runescape.wiki/w/Desert_Treasure_I"
+        },
+        {
+          "title": "Desert Treasure I",
+          "slug": "Desert_Treasure_I.s34",
+          "url": "https://oldschool.runescape.wiki/w/Desert_Treasure_I"
+        }
       ]
     },
     {
@@ -2334,12 +4922,57 @@
       "instruction": "\u2605 Graceful outfit",
       "detail": "~67% run-energy retention at zero weight; compresses all future travel.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3103,
+          "y": 3279,
+          "plane": 0,
+          "label": "Draynor Village Rooftop Course start (lvl 1, Rough Wall N. of bank)"
+        },
+        {
+          "x": 2673,
+          "y": 3298,
+          "plane": 0,
+          "label": "Ardougne Rooftop Course start (lvl 90, SE corner of marketplace)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "SKILL",
           "skill": "AGILITY",
           "level": 60
+        }
+      ],
+      "refs": [
+        {
+          "title": "Graceful outfit",
+          "slug": "Graceful_outfit.s1",
+          "url": "https://oldschool.runescape.wiki/w/Graceful_outfit"
+        },
+        {
+          "title": "Mark of grace",
+          "slug": "Marks_of_grace.s1",
+          "url": "https://oldschool.runescape.wiki/w/Mark_of_grace"
+        },
+        {
+          "title": "Mark of grace",
+          "slug": "Marks_of_grace.s9",
+          "url": "https://oldschool.runescape.wiki/w/Mark_of_grace"
+        },
+        {
+          "title": "Rooftop Agility Courses",
+          "slug": "Rooftop_Agility_Course.s2",
+          "url": "https://oldschool.runescape.wiki/w/Rooftop_Agility_Courses"
+        },
+        {
+          "title": "Draynor Village Rooftop Course",
+          "slug": "Draynor_Village_Rooftop_Course.s0",
+          "url": "https://oldschool.runescape.wiki/w/Draynor_Village_Rooftop_Course"
+        },
+        {
+          "title": "Ardougne Rooftop Course",
+          "slug": "Ardougne_Rooftop_Course.s0",
+          "url": "https://oldschool.runescape.wiki/w/Ardougne_Rooftop_Course"
         }
       ]
     },
@@ -2349,7 +4982,14 @@
       "instruction": "\u2605 God Wars Dungeon",
       "detail": "God Wars Dungeon \u2014 access to the four god bosses and their unique drops.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 2918,
+          "y": 3745,
+          "plane": 0,
+          "label": "GWD entrance hole (surface, north of Trollheim)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "SKILL",
@@ -2361,6 +5001,13 @@
           "skill": "PRAYER",
           "level": 43
         }
+      ],
+      "refs": [
+        {
+          "title": "God Wars Dungeon",
+          "slug": "God_Wars_Dungeon.s1",
+          "url": "https://oldschool.runescape.wiki/w/God_Wars_Dungeon"
+        }
       ]
     },
     {
@@ -2369,10 +5016,29 @@
       "instruction": "Gather guam weed (bootstrap \u2014 one-time)",
       "detail": "One-time low-tier gather before the prayer-pot-supply supply loop is established. Use drops (Hill Giants, slayer tasks) or NPC spawns. No rates known \u2014 \"??\" until measured.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3044,
+          "y": 10313,
+          "plane": 0,
+          "label": "Grimy guam leaf spawn, Deep Wilderness Dungeon (mapID 26)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Grimy guam leaf",
+          "slug": "Grimy_guam_leaf.s3",
+          "url": "https://oldschool.runescape.wiki/w/Grimy_guam_leaf"
+        },
+        {
+          "title": "Grimy guam leaf",
+          "slug": "Grimy_guam_leaf",
+          "url": "https://oldschool.runescape.wiki/w/Grimy_guam_leaf"
         }
       ]
     },
@@ -2384,10 +5050,10 @@
       "highlights": [],
       "mapMarkers": [
         {
-          "x": 2834,
-          "y": 3445,
+          "x": 2796,
+          "y": 3415,
           "plane": 0,
-          "label": "Catherby"
+          "label": "Trader Crewmember (Catherby docks) -- corrects existing marker (2834,3445) 'Catherby', which lands off the actual NPC pin"
         }
       ],
       "completionConditions": [
@@ -2395,7 +5061,38 @@
           "type": "MANUAL"
         }
       ],
-      "checkpoint": "Ultracompost stock (ahead-of-time)"
+      "atom": {
+        "verb": "buy",
+        "target": "pineapple",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "pineapple": 30
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "pineapple",
+          "value": "stock 15, restock 100s per unit",
+          "note": "Trader Crewmember Stock table (Trader_Crewmember.s3): Pineapple stock=15/restock=100s. A 30-pineapple ultracompost batch (per setup-ultracompost's recipe) needs either two visits ~50min apart or a world-hop to refill a second Trader Crewmember's independent stock (16 dock locations total, per Trader_Crewmember.s1)."
+        }
+      ],
+      "checkpoint": "Ultracompost stock (ahead-of-time)",
+      "refs": [
+        {
+          "title": "Trader Crewmember",
+          "slug": "Trader_Crewmember.s1",
+          "url": "https://oldschool.runescape.wiki/w/Trader_Crewmember"
+        },
+        {
+          "title": "Trader Crewmember",
+          "slug": "Trader_Crewmember.s3",
+          "url": "https://oldschool.runescape.wiki/w/Trader_Crewmember"
+        }
+      ]
     },
     {
       "id": "setup-ultracompost",
@@ -2403,16 +5100,81 @@
       "instruction": "Produce ultracompost (pineapples + volcanic ash)",
       "detail": "Fill compost bins with 30 pineapples then add 15 volcanic ash per bin to produce ultracompost. Ahead-of-time stockpile before herb runs.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3660,
+          "y": 3520,
+          "plane": 0,
+          "label": "Ectofuntus (Port Phasmatys) -- for the step's own location.zone label"
+        },
+        {
+          "x": 3610,
+          "y": 3522,
+          "plane": 0,
+          "label": "Nearest real compost bin, west of Port Phasmatys (Compost_bin.s1 map pin)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
         }
       ],
-      "checkpoint": "Ultracompost stock (ahead-of-time)"
+      "atom": {
+        "verb": "produce",
+        "target": "ultracompost",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "ultracompost": "??"
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "batch-size",
+          "target": "ultracompost-direct",
+          "value": "2",
+          "note": "Direct method (no bin needed): use 2 volcanic ash on 1 bucket of already-made supercompost -> 1 bucket ultracompost, 2 ticks, 1.1 farming xp. Fastest per-bucket path if supercompost buckets are already on hand."
+        },
+        {
+          "type": "batch-size",
+          "target": "ultracompost-bin",
+          "value": "15",
+          "note": "Compost-bin method: bin already containing supercompost + 25 volcanic ash (consumed regardless of bin fill level) -> collect 15 buckets of ultracompost via 15 empty buckets, 10 xp/bucket. Big Compost Bin (Farming Guild, 45 Farming) doubles every number: 30 buckets, 50 ash, 30 buckets to collect."
+        }
+      ],
+      "checkpoint": "Ultracompost stock (ahead-of-time)",
+      "refs": [
+        {
+          "title": "Ultracompost",
+          "slug": "Ultracompost.s2",
+          "url": "https://oldschool.runescape.wiki/w/Ultracompost"
+        },
+        {
+          "title": "Ultracompost",
+          "slug": "Ultracompost.s1",
+          "url": "https://oldschool.runescape.wiki/w/Ultracompost"
+        },
+        {
+          "title": "Compost Bin",
+          "slug": "Compost_bin.s3",
+          "url": "https://oldschool.runescape.wiki/w/Compost_Bin"
+        },
+        {
+          "title": "Compost Bin",
+          "slug": "Compost_bin.s1",
+          "url": "https://oldschool.runescape.wiki/w/Compost_Bin"
+        },
+        {
+          "title": "Ectofuntus",
+          "slug": "Ectofuntus",
+          "url": "https://oldschool.runescape.wiki/w/Ectofuntus"
+        }
+      ]
     },
     {
-      "id": "chkpt-prayer-pot-supply-coarse-1",
+      "id": "chkpt-prayer-pot-supply-coarse-0",
       "phase": "Supply: Prayer Potion Supply Chain",
       "instruction": "\u29c6 Ultracompost stock (ahead-of-time)",
       "detail": "",
@@ -2423,7 +5185,14 @@
           "type": "MANUAL"
         }
       ],
-      "checkpoint": "Ultracompost stock (ahead-of-time)"
+      "checkpoint": "Ultracompost stock (ahead-of-time)",
+      "refs": [
+        {
+          "title": "Compost Bin",
+          "slug": "Compost_bin.s1",
+          "url": "https://oldschool.runescape.wiki/w/Compost_Bin"
+        }
+      ]
     },
     {
       "id": "pps-01-withdraw-compost-run",
@@ -2431,7 +5200,14 @@
       "instruction": "Bank: withdraw compost-run loadout",
       "detail": "Withdraw: coins (charter fare + 30 pineapples, total ??), Digsite pendant or Fossil Island transport (??). No other inventory needed \u2014 pineapples and ash fill en route.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3783,
+          "y": 3783,
+          "plane": 0,
+          "label": "Fossil Island Volcano (ash-pile mining site, per gather-volcanic-ash)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
@@ -2450,10 +5226,28 @@
           "target": "fossil-island",
           "value": "digsite-pendant,barge",
           "note": "Keep a charged pendant banked separately for repeat runs."
+        },
+        {
+          "type": "teleport-choice",
+          "target": "fossil-island",
+          "value": "digsite-pendant,digsite-teleport-scroll,gnome-glider",
+          "note": "Fossil_Island s1: digsite pendant is the fastest (teleports near the Digsite barge, speak to the barge guard to fast-travel to Museum Camp; can also be charged on the House on the Hill strange machine for a repeatable house-teleport option). Without a pendant: Digsite teleport scroll (lands SW of the barge) or a gnome glider to Lemanto Andra (SW of the barge, reachable via ring of dueling->Emir's Arena glider, Al Kharid gem-trader glider, or a royal seed pod to the Grand Tree glider after Monkey Madness II)."
         }
       ],
       "coarse_of": "prayer-pot-supply-coarse",
-      "checkpoint": "Ultracompost stock (ahead-of-time)"
+      "checkpoint": "Ultracompost stock (ahead-of-time)",
+      "refs": [
+        {
+          "title": "Fossil Island",
+          "slug": "Fossil_Island.s1",
+          "url": "https://oldschool.runescape.wiki/w/Fossil_Island"
+        },
+        {
+          "title": "Fossil Island Volcano",
+          "slug": "Fossil_Island_Volcano.s1",
+          "url": "https://oldschool.runescape.wiki/w/Fossil_Island_Volcano"
+        }
+      ]
     },
     {
       "id": "gather-volcanic-ash",
@@ -2461,13 +5255,62 @@
       "instruction": "Mine volcanic ash at Fossil Island",
       "detail": "Mine volcanic ash from the ash piles on Fossil Island. Used to make ultracompost. Loop during farm-run downtime.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3783,
+          "y": 3783,
+          "plane": 0,
+          "label": "Fossil Island Volcano (ash-pile mining site, per infobox map marker)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
         }
       ],
-      "checkpoint": "Ultracompost stock (ahead-of-time)"
+      "atom": {
+        "verb": "gather",
+        "target": "volcanic_ash",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "volcanic_ash": "??"
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "volcanic_ash",
+          "value": "1 ash/pile at lvl22, +1 per 15 levels to 6 at lvl97",
+          "note": "Volcanic_ash s3: yield scales with Mining level, 1 ash at 22, +1 every 15 levels (37=2,52=3,67=4,82=5,97=6). Mining enhancers (Varrock armour, mining cape, mining gloves) do NOT affect yield (Mod Ash, cited on-page). 'At high Mining levels, possible to obtain over 6,500 ash per hour.'"
+        },
+        {
+          "type": "do-while",
+          "target": "herb-run-downtime",
+          "value": null,
+          "note": "Step's own detail says 'Loop during farm-run downtime' -- consistent with U7 semi-atomic farm-run pattern."
+        }
+      ],
+      "checkpoint": "Ultracompost stock (ahead-of-time)",
+      "refs": [
+        {
+          "title": "Volcanic ash",
+          "slug": "Volcanic_ash.s1",
+          "url": "https://oldschool.runescape.wiki/w/Volcanic_ash"
+        },
+        {
+          "title": "Volcanic ash",
+          "slug": "Volcanic_ash.s3",
+          "url": "https://oldschool.runescape.wiki/w/Volcanic_ash"
+        },
+        {
+          "title": "Fossil Island Volcano",
+          "slug": "Fossil_Island_Volcano.s1",
+          "url": "https://oldschool.runescape.wiki/w/Fossil_Island_Volcano"
+        }
+      ]
     },
     {
       "id": "chkpt-prayer-pot-supply-coarse-2",
@@ -2481,7 +5324,19 @@
           "type": "MANUAL"
         }
       ],
-      "checkpoint": "Herb-run loop (background, RECURRING)"
+      "checkpoint": "Herb-run loop (background, RECURRING)",
+      "refs": [
+        {
+          "title": "Allotment patch/Patches",
+          "slug": "Allotment_patch_Patches.s1",
+          "url": "https://oldschool.runescape.wiki/w/Allotment_patch/Patches"
+        },
+        {
+          "title": "Herb patch",
+          "slug": "Herb_patch",
+          "url": "https://oldschool.runescape.wiki/w/Herb_patch"
+        }
+      ]
     },
     {
       "id": "pps-03-withdraw-herb-run",
@@ -2489,7 +5344,38 @@
       "instruction": "Bank: withdraw herb-run loadout",
       "detail": "Withdraw: seed dibber, spade, rake, magic secateurs if owned (optional), N ranarr seeds + N ultracompost (N = patch count), run teleports (Explorer's ring \u2192 Falador patch ??, Camelot \u2192 Catherby, Ardougne cloak/tele, Xeric's talisman \u2192 Hosidius ??).",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3055,
+          "y": 3308,
+          "plane": 0,
+          "label": "Falador herb patch (Explorer's ring landing)"
+        },
+        {
+          "x": 2810,
+          "y": 3464,
+          "plane": 0,
+          "label": "Catherby herb patch (Camelot landing, run east)"
+        },
+        {
+          "x": 2667,
+          "y": 3375,
+          "plane": 0,
+          "label": "Ardougne herb patch (Ardougne cloak landing)"
+        },
+        {
+          "x": 1735,
+          "y": 3555,
+          "plane": 0,
+          "label": "Hosidius herb patch (Xeric's talisman landing)"
+        },
+        {
+          "x": 1239,
+          "y": 3727,
+          "plane": 0,
+          "label": "Farming Guild herb patch (optional 5th leg, Farming 65 required)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
@@ -2511,7 +5397,19 @@
         }
       ],
       "coarse_of": "prayer-pot-supply-coarse",
-      "checkpoint": "Herb-run loop (background, RECURRING)"
+      "checkpoint": "Herb-run loop (background, RECURRING)",
+      "refs": [
+        {
+          "title": "Allotment patch/Patches",
+          "slug": "Allotment_patch_Patches.s1",
+          "url": "https://oldschool.runescape.wiki/w/Allotment_patch/Patches"
+        },
+        {
+          "title": "Herb patch",
+          "slug": "Herb_patch",
+          "url": "https://oldschool.runescape.wiki/w/Herb_patch"
+        }
+      ]
     },
     {
       "id": "farm-ranarr-patch",
@@ -2519,16 +5417,89 @@
       "instruction": "Farm ranarr herb patches",
       "detail": "Plant ranarr seeds in herb patches with ultracompost; harvest ranarr weed. ~6.5 ranarr per run at 32 Farming with ultracompost. Loop every ~80 minutes.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3055,
+          "y": 3308,
+          "plane": 0,
+          "label": "Falador herb patch (south of Falador, gardener Elstan)"
+        },
+        {
+          "x": 2810,
+          "y": 3464,
+          "plane": 0,
+          "label": "Catherby herb patch (north of Catherby, gardener Dantaera)"
+        },
+        {
+          "x": 2667,
+          "y": 3375,
+          "plane": 0,
+          "label": "Ardougne herb patch (north of Ardougne, gardener Kragen)"
+        },
+        {
+          "x": 1735,
+          "y": 3555,
+          "plane": 0,
+          "label": "Hosidius herb patch (SW corner of Hosidius, gardener Marisi)"
+        },
+        {
+          "x": 1239,
+          "y": 3727,
+          "plane": 0,
+          "label": "Farming Guild herb patch (Farming 65 required)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
         }
       ],
-      "checkpoint": "Herb-run loop (background, RECURRING)"
+      "atom": {
+        "verb": "harvest",
+        "target": "ranarr_weed",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "ranarr_weed": "??"
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "ranarr_weed",
+          "value": "min 6 w/ ultracompost; ~8.8 avg w/ ultracompost+secateurs+cape",
+          "note": "Herb_patch: 'using ultracompost...increase the minimum yield to 6 herbs per seed' (with 3 base harvest lives +1 per compost tier, max 6 w/ ultracompost, per the same yield mechanic documented on Guam_seed s2). Herb_patch/Seeds footnote: average-profit column 'Assumes average of 8.8 herbs per seed in a standard (non-protected) herb patch' premised on ultracompost+magic secateurs+farming cape (empirical sample)."
+        },
+        {
+          "type": "do-while",
+          "target": "background-loop",
+          "value": null,
+          "note": "RECURRING -- one atom per run, patch route ordered per pps-03-withdraw-herb-run (XREF: bg:pps-03-withdraw-herb-run)."
+        }
+      ],
+      "checkpoint": "Herb-run loop (background, RECURRING)",
+      "refs": [
+        {
+          "title": "Herb patch",
+          "slug": "Herb_patch",
+          "url": "https://oldschool.runescape.wiki/w/Herb_patch"
+        },
+        {
+          "title": "Herb patch/Seeds",
+          "slug": "Herb_patch_Seeds.s1",
+          "url": "https://oldschool.runescape.wiki/w/Herb_patch/Seeds"
+        },
+        {
+          "title": "Allotment patch/Patches",
+          "slug": "Allotment_patch_Patches.s1",
+          "url": "https://oldschool.runescape.wiki/w/Allotment_patch/Patches"
+        }
+      ]
     },
     {
-      "id": "chkpt-prayer-pot-supply-coarse-3",
+      "id": "chkpt-prayer-pot-supply-coarse-1",
       "phase": "Supply: Prayer Potion Supply Chain",
       "instruction": "\u29c6 Ranarr seeds (gather, N+)",
       "detail": "",
@@ -2539,7 +5510,14 @@
           "type": "MANUAL"
         }
       ],
-      "checkpoint": "Ranarr seeds (gather, N+)"
+      "checkpoint": "Ranarr seeds (gather, N+)",
+      "refs": [
+        {
+          "title": "Herb patch/Seeds",
+          "slug": "Herb_patch_Seeds.s1",
+          "url": "https://oldschool.runescape.wiki/w/Herb_patch/Seeds"
+        }
+      ]
     },
     {
       "id": "pps-02-steal-ranarr-seeds",
@@ -2549,10 +5527,10 @@
       "highlights": [],
       "mapMarkers": [
         {
-          "x": 3088,
-          "y": 3255,
+          "x": 3080,
+          "y": 3250,
           "plane": 0,
-          "label": "Draynor Village"
+          "label": "Master Farmer (Draynor Village) -- corrects existing marker (3088,3255), off by ~9 tiles; sourced from Master_Farmer's own {{LocLine|x:3080,y:3250}} pin"
         }
       ],
       "completionConditions": [
@@ -2583,6 +5561,12 @@
           "target": null,
           "value": "keep:herb-seeds;drop:junk-seeds",
           "note": null
+        },
+        {
+          "type": "rng-variance",
+          "target": "ranarr_seed",
+          "value": "1/268.75 (or 1/555.83 past Farming 85) inside the herb table, and the herb table itself is only 48/1000 of a successful pickpocket",
+          "note": "Master Farmer pickpocket chance table (Master_Farmer.s3): 90/240 (low/high out of 256) at level 1-99 normal, level requirement 38. Ranarr seed rate composite: chance-to-hit-herb-table (48/1000) x chance-of-ranarr-within-table (1/268.75) -- exact seeds-per-hour stays '??', not stated as a rate on this page."
         }
       ],
       "coarse_of": "prayer-pot-supply-coarse",
@@ -2590,13 +5574,24 @@
       "refs": [
         {
           "title": "Master Farmer",
+          "slug": "Master_Farmer.s1",
           "url": "https://oldschool.runescape.wiki/w/Master_Farmer",
           "kind": "npc"
         },
         {
-          "title": "Ranarr seed",
-          "url": "https://oldschool.runescape.wiki/w/Ranarr_seed",
-          "kind": "item"
+          "title": "Master Farmer",
+          "slug": "Master_Farmer.s3",
+          "url": "https://oldschool.runescape.wiki/w/Master_Farmer"
+        },
+        {
+          "title": "Master Farmer",
+          "slug": "Master_Farmer.s5",
+          "url": "https://oldschool.runescape.wiki/w/Master_Farmer"
+        },
+        {
+          "title": "Master Farmer",
+          "slug": "Master_Farmer.s12",
+          "url": "https://oldschool.runescape.wiki/w/Master_Farmer"
         }
       ]
     },
@@ -2606,10 +5601,77 @@
       "instruction": "Farm guam herb patches",
       "detail": "Plant guam seeds in herb patches; harvest guam weed. Provides early herblore training materials before ranarr is available. Loop every ~80 minutes.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3055,
+          "y": 3308,
+          "plane": 0,
+          "label": "Falador herb patch"
+        },
+        {
+          "x": 2810,
+          "y": 3464,
+          "plane": 0,
+          "label": "Catherby herb patch"
+        },
+        {
+          "x": 2667,
+          "y": 3375,
+          "plane": 0,
+          "label": "Ardougne herb patch"
+        },
+        {
+          "x": 1735,
+          "y": 3555,
+          "plane": 0,
+          "label": "Hosidius herb patch"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "harvest",
+        "target": "guam_weed",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "guam_weed": "??"
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "guam_weed",
+          "value": "min 3 harvest lives, +1/compost tier, max 6 w/ ultracompost",
+          "note": "Guam_seed s2: 'Guam has a minimum of 3 harvest lives, increasing by 1 for each tier of compost used (for a maximum of 6 when using ultracompost)'; plus a per-harvest chance to not consume a life scaling 10.2% (lvl 1) to 31.6% (lvl 99) Farming, interpolated linearly."
+        },
+        {
+          "type": "do-while",
+          "target": "background-loop",
+          "value": null,
+          "note": "RECURRING, ahead-of-time per the step's own timing field. XREF: bg:bootstrap-gather-guam_weed-prayer-pot-supply for the one-time pre-loop gather that seeds this cycle before the first guam patch is planted."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Herb patch",
+          "slug": "Herb_patch",
+          "url": "https://oldschool.runescape.wiki/w/Herb_patch"
+        },
+        {
+          "title": "Herb patch/Seeds",
+          "slug": "Herb_patch_Seeds.s1",
+          "url": "https://oldschool.runescape.wiki/w/Herb_patch/Seeds"
+        },
+        {
+          "title": "Guam seed",
+          "slug": "Guam_seed.s2",
+          "url": "https://oldschool.runescape.wiki/w/Guam_seed"
         }
       ]
     },
@@ -2631,6 +5693,39 @@
         {
           "type": "MANUAL"
         }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "food_monkfish",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "batch-size",
+          "target": "cooking-range",
+          "value": "1",
+          "note": "1 raw_monkfish -> 1 food_monkfish per action (ticks=1, facilities=Cooking range). Ref: Monkfish Creation."
+        },
+        {
+          "type": "toggle-state",
+          "target": "cooking-gauntlets",
+          "value": "on",
+          "note": "Wearing cooking gauntlets lowers the stop-burning level; see notes for the full table."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Monkfish",
+          "slug": "Monkfish.s1",
+          "url": "https://oldschool.runescape.wiki/w/Monkfish"
+        },
+        {
+          "title": "Cooking/Burn level",
+          "slug": "Burn_level.s2",
+          "url": "https://oldschool.runescape.wiki/w/Cooking/Burn_level"
+        }
       ]
     },
     {
@@ -2641,15 +5736,81 @@
       "highlights": [],
       "mapMarkers": [
         {
-          "x": 2344,
-          "y": 3667,
+          "x": 2310,
+          "y": 3697,
           "plane": 0,
-          "label": "Piscatoris Hunter area"
+          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
+        },
+        {
+          "x": 2311,
+          "y": 3704,
+          "plane": 0,
+          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
+        },
+        {
+          "x": 2326,
+          "y": 3700,
+          "plane": 0,
+          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
+        },
+        {
+          "x": 2343,
+          "y": 3702,
+          "plane": 0,
+          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
+        },
+        {
+          "x": 2349,
+          "y": 3702,
+          "plane": 0,
+          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
         }
       ],
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "gather",
+        "target": "raw_monkfish",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "raw_monkfish": "??"
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "toggle-state",
+          "target": "tool",
+          "value": "small-fishing-net",
+          "note": "Raw_monkfish s1 Fishing info: tool=Small fishing net, bait=No. Fishing_spot page confirms 'Always' rarity (guaranteed catch on success roll, no drop-chance variance beyond the standard skilling success curve)."
+        },
+        {
+          "type": "teleport-choice",
+          "target": "piscatoris",
+          "value": "western-banner,piscatoris-teleport,fairy-ring-akq,necklace-of-passage,kathy-corkat-free-post-swan-song",
+          "note": "Piscatoris_Fishing_Colony s1, ranked shortest-run-to-spot first: Western banner 3/4 (centre of colony) > Piscatoris teleport (entrance) > Fairy ring AKQ (Hunter area, south of entrance) > Necklace of passage (Outpost, well south). Kathy Corkat ferries from west of Tree Gnome Stronghold for free once Swan Song is complete (50gp before); 75 Sailing + full Swan Song also unlocks mooring a boat on the NW side."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Raw monkfish",
+          "slug": "Raw_monkfish.s1",
+          "url": "https://oldschool.runescape.wiki/w/Raw_monkfish"
+        },
+        {
+          "title": "Piscatoris Fishing Colony",
+          "slug": "Piscatoris_Fishing_Colony.s1",
+          "url": "https://oldschool.runescape.wiki/w/Piscatoris_Fishing_Colony"
+        },
+        {
+          "title": "Fishing spot (Piscatoris Fishing Colony)",
+          "slug": "Fishing_spot_(Piscatoris_Fishing_Colony)",
+          "url": "https://oldschool.runescape.wiki/w/Fishing_spot_(Piscatoris_Fishing_Colony)"
         }
       ]
     },
@@ -2659,7 +5820,14 @@
       "instruction": "\u2605 Barrows runs",
       "detail": "Barrows \u2014 a repeatable brothers run for Barrows gear and steady mid-game money.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3567,
+          "y": 3291,
+          "plane": 0,
+          "label": "Barrows entrance (six burial mounds, east of Mort'ton)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "SKILL",
@@ -2736,6 +5904,13 @@
           "skill": "SMITHING",
           "level": 45
         }
+      ],
+      "refs": [
+        {
+          "title": "Barrows",
+          "slug": "Barrows.s3",
+          "url": "https://oldschool.runescape.wiki/w/Barrows"
+        }
       ]
     },
     {
@@ -2744,7 +5919,14 @@
       "instruction": "\u2605 Chambers of Xeric",
       "detail": "Chambers of Xeric \u2014 the first raid; endgame gear like the twisted bow.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 1245,
+          "y": 3557,
+          "plane": 0,
+          "label": "Chambers of Xeric (Mount Quidamortem, Kebos Lowlands)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "SKILL",
@@ -2776,6 +5958,18 @@
           "skill": "PRAYER",
           "level": 74
         }
+      ],
+      "refs": [
+        {
+          "title": "Chambers of Xeric",
+          "slug": "Chambers_of_Xeric.s1",
+          "url": "https://oldschool.runescape.wiki/w/Chambers_of_Xeric"
+        },
+        {
+          "title": "Chambers of Xeric",
+          "slug": "Chambers_of_Xeric.s0",
+          "url": "https://oldschool.runescape.wiki/w/Chambers_of_Xeric"
+        }
       ]
     },
     {
@@ -2791,6 +5985,38 @@
           "skill": "THIEVING",
           "level": 53
         }
+      ],
+      "refs": [
+        {
+          "title": "Thieving training",
+          "slug": "Blackjacking.s11",
+          "url": "https://oldschool.runescape.wiki/w/Blackjacking"
+        },
+        {
+          "title": "Thieving training",
+          "slug": "Blackjacking.s1",
+          "url": "https://oldschool.runescape.wiki/w/Blackjacking"
+        },
+        {
+          "title": "Bandit (Pollnivneach)",
+          "slug": "Pollnivnian_bandit.s1",
+          "url": "https://oldschool.runescape.wiki/w/Pollnivnian_bandit"
+        },
+        {
+          "title": "Bandit (Pollnivneach)",
+          "slug": "Pollnivnian_bandit.s4",
+          "url": "https://oldschool.runescape.wiki/w/Pollnivnian_bandit"
+        },
+        {
+          "title": "Bandit (Pollnivneach)",
+          "slug": "Pollnivnian_bandit.s6",
+          "url": "https://oldschool.runescape.wiki/w/Pollnivnian_bandit"
+        },
+        {
+          "title": "Menaphite Thug",
+          "slug": "Menaphite_thug.s4",
+          "url": "https://oldschool.runescape.wiki/w/Menaphite_thug"
+        }
       ]
     },
     {
@@ -2799,18 +6025,52 @@
       "instruction": "Complete Desert Treasure",
       "detail": "Unlocks Ancient Magicks spellbook. Required for many late-game routes.",
       "highlights": [],
-      "mapMarkers": [],
+      "mapMarkers": [
+        {
+          "x": 3178,
+          "y": 3043,
+          "plane": 0,
+          "label": "Asgarnia Smith, Bedabin Camp (start)"
+        }
+      ],
       "completionConditions": [
         {
           "type": "MANUAL"
         }
       ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "asgarnia_smith",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
       "hints": [
+        {
+          "type": "dialogue",
+          "target": "asgarnia_smith",
+          "value": "1",
+          "note": "start: ask about the treasure rumours"
+        },
         {
           "type": "quest-xp",
           "target": null,
           "value": "magic +20000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Desert Treasure I",
+          "slug": "Desert_Treasure_I.s1",
+          "url": "https://oldschool.runescape.wiki/w/Desert_Treasure_I"
+        },
+        {
+          "title": "Desert Treasure I",
+          "slug": "Desert_Treasure_I.s34",
+          "url": "https://oldschool.runescape.wiki/w/Desert_Treasure_I"
         }
       ]
     }
