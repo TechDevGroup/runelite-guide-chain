@@ -62,7 +62,7 @@
       "id": "train-cooking-20",
       "phase": "Toward Ardougne Easy Diary",
       "instruction": "Train Cooking to 20",
-      "detail": "Cook shrimps and anchovies. Use range to avoid burning.",
+      "detail": "Pick a method: Cook shrimp and anchovies at a bank-adjacent fire or range, keeping extra raw fish on hand to offset burns / Cook the page's current low-tier fish table (sardine, herring, mackerel, trout) at a bank-adjacent fire or range, stocking roughly 2.5x more raw fish than the cooked amount needed since burn rate is high at these levels / 1-tick cook poison karambwan from level 1 to skip straight to level 30 in well under ten minutes.",
       "highlights": [
         {
           "type": "NPC",
@@ -133,7 +133,8 @@
               "slug": "Pay-to-play_Cooking_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
             }
-          ]
+          ],
+          "notes": "Row's own detail names shrimp/anchovies; the current page's Levels 1-30 fish table no longer lists either (it starts at sardine 1-5), so this entry keeps the row's pre-existing ref for continuity rather than inventing content the fetched section doesn't contain."
         },
         {
           "method": "Cook the page's current low-tier fish table (sardine, herring, mackerel, trout) at a bank-adjacent fire or range, stocking roughly 2.5x more raw fish than the cooked amount needed since burn rate is high at these levels",
@@ -152,7 +153,8 @@
               "slug": "Pay-to-play_Cooking_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
             }
-          ]
+          ],
+          "notes": "Table entries: sardine 1-5, herring 5-10, mackerel 10-15, trout 15-20; trout finishes exactly at the row's target level."
         },
         {
           "method": "1-tick cook poison karambwan from level 1 to skip straight to level 30 in well under ten minutes",
@@ -171,7 +173,8 @@
               "slug": "Pay-to-play_Cooking_training.s2",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
             }
-          ]
+          ],
+          "notes": "Page states cooking poison karambwan (unlike cooked karambwan) has no quest/level requirement; costs raw karambwan lost to a high low-level burn rate."
         }
       ]
     },
@@ -179,7 +182,7 @@
       "id": "train-fishing-20",
       "phase": "Toward Ardougne Easy Diary",
       "instruction": "Train Fishing to 20",
-      "detail": "Shrimps and anchovies at Draynor or Lumbridge Swamp.",
+      "detail": "Pick a method: Net fishing shrimp/anchovies / Quest experience (Sea Slug, Fishing Contest, Recipe for Disaster - Freeing Pirate Pete).",
       "highlights": [],
       "mapMarkers": [
         {
@@ -239,7 +242,8 @@
               "slug": "Pay-to-play_Fishing_training.s1",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
             }
-          ]
+          ],
+          "notes": "Traditional very-early netting method (matches the row's own label); the page's own Equipment section lists a small fishing net as the tool but the current Fastest-experience table omits net fishing entirely, so no xp/hr figure is stated for it."
         },
         {
           "method": "Quest experience (Sea Slug, Fishing Contest, Recipe for Disaster - Freeing Pirate Pete)",
@@ -262,7 +266,8 @@
               "slug": "Pay-to-play_Fishing_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
             }
-          ]
+          ],
+          "notes": "Page states these three low-requirement quests grant 10,612 combined Fishing xp, enough alone to skip straight to roughly level 27, and calls this faster than fishing at low levels; Tai Bwo Wannai Trio plus The Fremennik Trials add a further 7,812 xp toward level 33 but carry steeper requirements so were left out of this band's method."
         }
       ]
     },
@@ -359,7 +364,7 @@
       "id": "train-attack-10",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Attack to 10",
-      "detail": "Chickens in Lumbridge. No food needed, fast kills.",
+      "detail": "Pick a method: Chickens / Waterfall Quest.",
       "highlights": [
         {
           "type": "NPC",
@@ -433,7 +438,8 @@
               "slug": "Pay-to-play_Melee_training.s9",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "No food needed; only 3 HP per kill so xp/kill is small but instant and safe."
         },
         {
           "method": "Waterfall Quest",
@@ -451,13 +457,9 @@
               "title": "Pay-to-play Melee training",
               "slug": "Pay-to-play_Melee_training.s1",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
-            },
-            {
-              "title": "Pay-to-play Melee training",
-              "slug": "Pay-to-play_Melee_training.s4",
-              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Completing this quest from level 1 grants enough xp to jump straight to level 30 Attack and Strength; page names it the fastest way through this range."
         }
       ]
     },
@@ -465,7 +467,7 @@
       "id": "train-attack-30",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Attack to 30",
-      "detail": "Cows east of Lumbridge or goblins. Drop bones for Prayer XP.",
+      "detail": "Pick a method: Cows / Rock Crab / Waterfall Quest.",
       "highlights": [
         {
           "type": "NPC",
@@ -539,7 +541,8 @@
               "slug": "Cow.s0",
               "url": "https://oldschool.runescape.wiki/w/Cow"
             }
-          ]
+          ],
+          "notes": "Low-level, non-aggressive, low-defence target; cowhides can be tanned/sold as a side income."
         },
         {
           "method": "Rock Crab",
@@ -560,7 +563,8 @@
               "slug": "Pay-to-play_Melee_training.s10",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Very high Hitpoints with low Defence/Attack so little food is needed; can lose aggro after 10-15 minutes."
         },
         {
           "method": "Waterfall Quest",
@@ -578,13 +582,9 @@
               "title": "Pay-to-play Melee training",
               "slug": "Pay-to-play_Melee_training.s1",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
-            },
-            {
-              "title": "Pay-to-play Melee training",
-              "slug": "Pay-to-play_Melee_training.s4",
-              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Completing this quest from level 1 grants enough xp to jump straight to level 30 Attack and Strength; page names it the fastest way through this range."
         }
       ]
     },
@@ -592,7 +592,7 @@
       "id": "train-attack-40",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Attack to 40",
-      "detail": "Barbarians south of Edgeville. Equips steel weapons.",
+      "detail": "Pick a method: Barbarians / Rock Crab / Chaos druid / Sand Crab.",
       "highlights": [
         {
           "type": "NPC",
@@ -671,7 +671,8 @@
               "slug": "Barbarian.s0",
               "url": "https://oldschool.runescape.wiki/w/Barbarian"
             }
-          ]
+          ],
+          "notes": "Low-Defence, high fan-in monster used for early Attack/Strength/Defence training around Barbarian Village."
         },
         {
           "method": "Rock Crab",
@@ -692,7 +693,8 @@
               "slug": "Pay-to-play_Melee_training.s10",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Very high Hitpoints with low Defence/Attack so little food is needed; can lose aggro after 10-15 minutes."
         },
         {
           "method": "Chaos druid",
@@ -713,7 +715,8 @@
               "slug": "Pay-to-play_Melee_training.s11",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Thieving 46 is only needed for the Chaos Druid Tower variant; the Edgeville Dungeon spot has no requirement but sits in low-level Wilderness."
         },
         {
           "method": "Sand Crab",
@@ -736,7 +739,8 @@
               "slug": "Pay-to-play_Melee_training.s5",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Very high Hitpoints with low Defence/Attack; Hosidius spot is often crowded, Avium Savannah less so."
         }
       ]
     },
@@ -765,6 +769,70 @@
           "slug": "Pay-to-play_Melee_training.s10",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Flesh Crawlers and Zombies (Stronghold of Security, Catacomb of Famine)",
+          "location": "Stronghold of Security, Catacomb of Famine (level 2)",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Stronghold of Security",
+              "slug": "Stronghold_of_Security.s3",
+              "url": "https://oldschool.runescape.wiki/w/Stronghold_of_Security"
+            }
+          ],
+          "notes": "Zombies (levels 30/44/53) and flesh crawlers (levels 28/35/41) share this floor; flesh crawlers also drop herbs and the bottom of the skull sceptre."
+        },
+        {
+          "method": "Moss giant",
+          "location": "Catacombs of Kourend, Varrock Sewers, or west of the Fishing Guild",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ],
+          "notes": "Fair Hitpoints for its level with a chance at a Mossy key (Bryophyta access); hits hard on low-Defence/low-armour players."
+        },
+        {
+          "method": "Chaos druid",
+          "location": "Edgeville Dungeon, or Chaos Druid Tower",
+          "level_band": "30-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 46
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s11",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ],
+          "notes": "Thieving 46 is only needed for the Chaos Druid Tower variant; the Edgeville Dungeon spot has no requirement but sits in low-level Wilderness."
+        }
       ]
     },
     {
@@ -791,6 +859,70 @@
           "title": "Slayer training",
           "slug": "Slayer_training.s2",
           "url": "https://oldschool.runescape.wiki/w/Slayer_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Turael tasks",
+          "location": "Burthorpe",
+          "level_band": "1-20",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Slayer training",
+              "slug": "Slayer_training.s2",
+              "url": "https://oldschool.runescape.wiki/w/Slayer_training"
+            }
+          ],
+          "notes": "Turael/Aya assigns low-level, easy Slayer tasks from Burthorpe with no entry requirement, per the page's Access-to-masters table."
+        },
+        {
+          "method": "Spria tasks",
+          "location": "Draynor Village",
+          "level_band": "1-20",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "A Porcine of Interest"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Slayer training",
+              "slug": "Slayer_training.s2",
+              "url": "https://oldschool.runescape.wiki/w/Slayer_training"
+            }
+          ],
+          "notes": "Spria is the page's other any-level starting master, unlocked via A Porcine of Interest, offering a separate easy-task pool from Draynor Village."
+        },
+        {
+          "method": "Temple Trekking (alt xp source)",
+          "location": "??",
+          "level_band": "1-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Slayer training",
+              "slug": "Slayer_training.s25",
+              "url": "https://oldschool.runescape.wiki/w/Slayer_training"
+            }
+          ],
+          "notes": "Page lists Temple Trekking as a low-hourly-rate side option, roughly 5,800-7,800 Slayer xp/hr per its own reward table, useful for resource-lacking or ironman accounts rather than as a primary leveling method."
         }
       ]
     },
@@ -1234,7 +1366,7 @@
       "id": "train-magic-25",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Magic to 25",
-      "detail": "Air Bolt and low alchemy. Unlocks Camelot Teleport.",
+      "detail": "Pick a method: Air Bolt / elemental-weakness combat spells / Low Level Alchemy / Enchant Crossbow Bolts (Pearl bolts) / Killing Crabs.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -1287,7 +1419,8 @@
               "slug": "Pay-to-play_Magic_training.s8",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "Row label 'Air Bolt' is read as the page's air-elemental spell line (e.g. Wind Bolt) cast on monsters with an elemental weakness for a damage/accuracy bonus over neutral targets; page gives no flat xp/h for this technique."
         },
         {
           "method": "Low Level Alchemy",
@@ -1311,7 +1444,8 @@
               "slug": "Pay-to-play_Magic_training.s5",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "Unlocks at 21, not 1; page's 60,000 xp/h figure is stationary-only. Per project convention, source items to alch via drops/production, not Grand Exchange purchase."
         },
         {
           "method": "Enchant Crossbow Bolts (Pearl bolts)",
@@ -1336,7 +1470,8 @@
               "slug": "Pay-to-play_Magic_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "Fastest early bolt-enchant tier reachable in this band; opal (level 4, 49,500 xp/h) and sapphire (level 7, 93,500 xp/h) are cheaper alternatives from the same table."
         },
         {
           "method": "Killing Crabs",
@@ -1357,7 +1492,8 @@
               "slug": "Pay-to-play_Magic_training.s7",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "Low-attention combat training; page recommends at least 30 Defence to mitigate incoming damage. No flat xp/h figure stated for crabs specifically."
         }
       ]
     },
@@ -1365,7 +1501,7 @@
       "id": "train-firemaking-15",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Firemaking to 15",
-      "detail": "Normal logs from any tree. Light fires in a row.",
+      "detail": "Pick a method: Normal logs, burning in a row / Coloured firelighter logs / Pyre logs, 1-tick creation.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -1418,7 +1554,8 @@
               "slug": "Pay-to-play_Firemaking_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
             }
-          ]
+          ],
+          "notes": "Baseline method matching the row's own label; the page's fastest-xp table for this range instead recommends coloured firelighter logs (listed below)."
         },
         {
           "method": "Coloured firelighter logs",
@@ -1439,7 +1576,8 @@
               "slug": "Pay-to-play_Firemaking_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
             }
-          ]
+          ],
+          "notes": "Page's own table lists coloured firelighter logs (white/red/purple/green/blue) as guaranteed-to-light and the fastest xp/hr for levels 1-30."
         },
         {
           "method": "Pyre logs, 1-tick creation",
@@ -1462,7 +1600,8 @@
               "slug": "Pay-to-play_Firemaking_training.s2",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
             }
-          ]
+          ],
+          "notes": "Tick-manipulated creation of pyre logs by using sacred oil on logs gives the fastest xp to level 30; gated behind Shades of Mort'ton completion."
         }
       ]
     },
@@ -1470,7 +1609,7 @@
       "id": "train-thieving-20",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Thieving to 20",
-      "detail": "Pickpocket men and women in Lumbridge or Edgeville.",
+      "detail": "Pick a method: Pickpocket Men/Women (Lumbridge or Edgeville) / Steal from bakery stalls (East Ardougne market) / Quest xp (Biohazard, Hazeel Cult, Fight Arena, Tower of Life, Tribal Totem).",
       "highlights": [
         {
           "type": "NPC",
@@ -1558,7 +1697,8 @@
               "slug": "Thieving_training.s18",
               "url": "https://oldschool.runescape.wiki/w/Thieving_training"
             }
-          ]
+          ],
+          "notes": "Page states 49 successful pickpockets reaches level 5; no xp/hr figure given. Matches the row's own continuity method."
         },
         {
           "method": "Steal from bakery stalls (East Ardougne market)",
@@ -1579,7 +1719,8 @@
               "slug": "Thieving_training.s19",
               "url": "https://oldschool.runescape.wiki/w/Thieving_training"
             }
-          ]
+          ],
+          "notes": "Page states up to 19,200 xp/hr standing under the baker to dodge guards; sub-scoped here from the page's stated 5-25 band since this row tops out at 20."
         },
         {
           "method": "Quest xp (Biohazard, Hazeel Cult, Fight Arena, Tower of Life, Tribal Totem)",
@@ -1604,7 +1745,8 @@
               "slug": "Thieving_training.s8",
               "url": "https://oldschool.runescape.wiki/w/Thieving_training"
             }
-          ]
+          ],
+          "notes": "Page states this quest set grants 7,200 combined xp, carrying a level-1 player to level 24; a flat completion bonus, not a per-hour rate."
         }
       ]
     },
@@ -1667,7 +1809,7 @@
       "id": "train-prayer-22",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Prayer to 22",
-      "detail": "Bury regular bones. Unlocks Protect Item prayer.",
+      "detail": "Pick a method: Bury regular bones / Complete early Prayer-granting quests.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -1721,7 +1863,8 @@
               "slug": "Pay-to-play_Prayer_training.s1",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
             }
-          ]
+          ],
+          "notes": "Cheapest/simplest starter method; the page's own 'Starting off' section covers quest xp rather than plain burial, so this is prior baseline knowledge, not a page-stated rate."
         },
         {
           "method": "Complete early Prayer-granting quests",
@@ -1746,7 +1889,8 @@
               "slug": "Pay-to-play_Prayer_training.s1",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
             }
-          ]
+          ],
+          "notes": "Page states these quests together grant 14,531 Prayer xp (1->30) plus 8,000 more from Spirits of the Elid, skipping early bone-burying entirely."
         }
       ]
     },
@@ -1754,7 +1898,7 @@
       "id": "train-woodcutting-15",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Woodcutting to 15",
-      "detail": "Regular trees near Lumbridge or Varrock. Use iron axe.",
+      "detail": "Pick a method: Regular trees / Quest experience.",
       "highlights": [
         {
           "type": "NPC",
@@ -1821,13 +1965,9 @@
               "title": "Pay-to-play Woodcutting training",
               "slug": "Pay-to-play_Woodcutting_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
-            },
-            {
-              "title": "Pay-to-play Woodcutting training",
-              "slug": "Pay-to-play_Woodcutting_training.s17",
-              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
             }
-          ]
+          ],
+          "notes": "Single-log regular trees are common everywhere; pick a spot with several trees near a bank since each tree yields only one log."
         },
         {
           "method": "Quest experience",
@@ -1851,7 +1991,8 @@
               "slug": "Pay-to-play_Woodcutting_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
             }
-          ]
+          ],
+          "notes": "Finishing those four quests hands over roughly 9,000 Woodcutting xp, enough alone to carry a fresh account from level 1 to 26."
         }
       ]
     },
@@ -1859,7 +2000,7 @@
       "id": "train-crafting-20",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Crafting to 20",
-      "detail": "Leather gloves and boots. Buy hides from GE.",
+      "detail": "Pick a method: Leather item ladder (gloves through chaps) / Gold jewellery ladder (ring, necklace, bracelet, amulet (u)) / Molten glass items (beer glass, empty candle lantern, empty oil lamp).",
       "highlights": [],
       "mapMarkers": [
         {
@@ -1938,7 +2079,8 @@
               "slug": "Pay-to-play_Crafting_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
             }
-          ]
+          ],
+          "notes": "Page states roughly 50 thread spools (each good for ~5 items) and 215 total leather for the whole 1-20 ladder; only per-item XP is literal, no hourly rate is given."
         },
         {
           "method": "Gold jewellery ladder (ring, necklace, bracelet, amulet (u))",
@@ -1962,7 +2104,8 @@
               "slug": "Pay-to-play_Crafting_training.s9",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
             }
-          ]
+          ],
+          "notes": "Gold ring unlocks at 5, necklace at 6, bracelet at 7, amulet (u) at 8, all inside this band per the page's jewellery table; the page's per-hour figures use a templated assumption rather than one stated number."
         },
         {
           "method": "Molten glass items (beer glass, empty candle lantern, empty oil lamp)",
@@ -1983,7 +2126,8 @@
               "slug": "Pay-to-play_Crafting_training.s8",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
             }
-          ]
+          ],
+          "notes": "Page calls this method very slow and low-attention; literal stated rates bracket the band (beer glass 30,625 xp/hr at level 1, empty oil lamp 43,750 xp/hr at level 12), but the band spans multiple table rows so no single figure applies throughout."
         }
       ]
     },
@@ -1991,7 +2135,7 @@
       "id": "train-smithing-15",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Smithing to 15",
-      "detail": "Bronze bars at Lumbridge furnace. Smelt then smith.",
+      "detail": "Pick a method: Anvil smithing bronze items (dagger, then scimitar, then warhammer).",
       "highlights": [
         {
           "type": "NPC",
@@ -2057,7 +2201,8 @@
               "slug": "Pay-to-play_Smithing_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
             }
-          ]
+          ],
+          "notes": "Wiki tells players to smith the highest-tier bronze item they can afford ore for at the West Varrock anvil (dagger through warhammer covers 1-15); per-item xp/h ranges roughly 13,900-36,200 across that span with no single figure for the whole band, so left ??. The row's existing 'Lumbridge furnace' wording does not match the location this guide names."
         }
       ]
     },
@@ -2065,7 +2210,7 @@
       "id": "train-mining-15",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Mining to 15",
-      "detail": "Copper and tin in Lumbridge mines.",
+      "detail": "Pick a method: Copper/tin ore mining / Skip via quest xp rewards.",
       "highlights": [
         {
           "type": "NPC",
@@ -2138,7 +2283,8 @@
               "slug": "Pay-to-play_Mining_training.s8",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
             }
-          ]
+          ],
+          "notes": "Page names this the level 1-15 baseline; no xp/hr figure is given for it."
         },
         {
           "method": "Skip via quest xp rewards",
@@ -2157,7 +2303,8 @@
               "slug": "Pay-to-play_Mining_training.s7",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
             }
-          ]
+          ],
+          "notes": "These six low-requirement quests together grant 27,525 Mining xp, enough to reach level 37 (covers this whole band); a lump reward, not a rate."
         }
       ]
     },
@@ -2165,7 +2312,7 @@
       "id": "train-herblore-10",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Herblore to 10",
-      "detail": "Clean grimy guam leaves. Requires Druidic Ritual quest.",
+      "detail": "Pick a method: Clean grimy guam leaves / Clean grimy marrentill / Make attack potions / Make antipoison potions.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -2223,7 +2370,8 @@
               "slug": "Herblore_training.s6",
               "url": "https://oldschool.runescape.wiki/w/Herblore_training"
             }
-          ]
+          ],
+          "notes": "Page states 2.5 xp per guam leaf and assumes an average 10,000 herbs cleaned per hour for its rate table, but that combined xp/hour figure is only rendered via a calculator template, not stated as plain text, so left ??; auto-clean yields 30% of the manual-click rate per the page."
         },
         {
           "method": "Clean grimy marrentill",
@@ -2244,7 +2392,8 @@
               "slug": "Herblore_training.s6",
               "url": "https://oldschool.runescape.wiki/w/Herblore_training"
             }
-          ]
+          ],
+          "notes": "Page states 3.8 xp per marrentill leaf under the same 10,000/hour assumption as guam; no plain-text combined hourly figure given."
         },
         {
           "method": "Make attack potions",
@@ -2265,7 +2414,8 @@
               "slug": "Herblore_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Herblore_training"
             }
-          ]
+          ],
+          "notes": "Guam potion (unf) + eye of newt; page's Making potions table states 62,500 xp/hour at 25 xp per potion."
         },
         {
           "method": "Make antipoison potions",
@@ -2286,7 +2436,8 @@
               "slug": "Herblore_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Herblore_training"
             }
-          ]
+          ],
+          "notes": "Marrentill potion (unf) + unicorn horn dust; page states 93,750 xp/hour at 37.5 xp per potion."
         }
       ]
     },
@@ -2294,7 +2445,7 @@
       "id": "train-farming-17",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Farming to 17",
-      "detail": "Plant potato, onion, and cabbage allotments. Use compost.",
+      "detail": "Pick a method: Farming allotments / Bagged plants / Supercompost/ultracompost production.",
       "highlights": [
         {
           "type": "NPC",
@@ -2370,7 +2521,8 @@
               "slug": "Farming_training.s5",
               "url": "https://oldschool.runescape.wiki/w/Farming_training"
             }
-          ]
+          ],
+          "notes": "Plant potato/onion/cabbage seeds in allotment patches and treat with compost; this section of the page is a stub pointing to a separate seed/patch-location page, not fetched here."
         },
         {
           "method": "Bagged plants",
@@ -2389,7 +2541,8 @@
               "slug": "Farming_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Farming_training"
             }
-          ]
+          ],
+          "notes": "Build then immediately remove noted bagged plants in a house garden space for active, no-wait xp; costs coins per plant instead of grow time."
         },
         {
           "method": "Supercompost/ultracompost production",
@@ -2408,7 +2561,8 @@
               "slug": "Farming_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Farming_training"
             }
-          ]
+          ],
+          "notes": "Fill a compost bin with produce (watermelon/pineapple are cited as easiest) for 8.5 xp per supercompost bucket, or 10 xp with volcanic ash for ultracompost."
         }
       ]
     },
@@ -2476,7 +2630,7 @@
       "id": "train-ranged-30",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Ranged to 30",
-      "detail": "Chickens and cows with shortbow. Cheap feathered arrows.",
+      "detail": "Pick a method: Chickens and cows with shortbow / Crabs (sand, rock, swamp, ammonite or gemstone) / Dwarf multicannon on ogres / Quest rewards (Shadow of the Storm, Death to the Dorgeshuun, Horror from the Deep).",
       "highlights": [
         {
           "type": "NPC",
@@ -2555,7 +2709,8 @@
               "slug": "Pay-to-play_Ranged_training.s9",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Route's existing early-level pick; the current wiki guide leads with crabs instead, so this is kept for continuity rather than freshly sourced from the page."
         },
         {
           "method": "Crabs (sand, rock, swamp, ammonite or gemstone)",
@@ -2574,7 +2729,8 @@
               "slug": "Pay-to-play_Ranged_training.s9",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Page's top afk pick for levels 1-45/70: kill until spawns stop being aggressive, then reset by walking off. No hourly xp figure is given on the page."
         },
         {
           "method": "Dwarf multicannon on ogres",
@@ -2597,7 +2753,8 @@
               "slug": "Pay-to-play_Ranged_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Page's fastest-xp pick for levels 1-45: about 40,000 xp/hr from the cannon alone, on top of the player's own kills."
         },
         {
           "method": "Quest rewards (Shadow of the Storm, Death to the Dorgeshuun, Horror from the Deep)",
@@ -2620,7 +2777,8 @@
               "slug": "Pay-to-play_Ranged_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Page states these three quests together grant 16,662.5 Ranged xp if the reward is put on Ranged, enough to skip from level 1 to 32."
         }
       ]
     },
@@ -2628,7 +2786,7 @@
       "id": "train-firemaking-30",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Firemaking to 30",
-      "detail": "Oak logs from GE or Draynor oaks.",
+      "detail": "Pick a method: Oak logs from GE or Draynor oaks / Coloured firelighter logs / Pyre logs, 1-tick creation.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -2691,7 +2849,8 @@
               "slug": "Pay-to-play_Woodcutting_training.s18",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
             }
-          ]
+          ],
+          "notes": "Continuity method matching the row's own label; oak logs are not a distinct entry in the current Firemaking training page's fastest-xp table (it groups 1-30 under coloured firelighter logs), so citing the row's pre-existing refs rather than inventing a fresh citation."
         },
         {
           "method": "Coloured firelighter logs",
@@ -2712,7 +2871,8 @@
               "slug": "Pay-to-play_Firemaking_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
             }
-          ]
+          ],
+          "notes": "Page's own table lists coloured firelighter logs as guaranteed-to-light and the fastest xp/hr through level 30."
         },
         {
           "method": "Pyre logs, 1-tick creation",
@@ -2735,7 +2895,8 @@
               "slug": "Pay-to-play_Firemaking_training.s2",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
             }
-          ]
+          ],
+          "notes": "Tick-manipulated pyre-log creation gives the fastest xp up to level 30; gated behind Shades of Mort'ton completion."
         }
       ]
     },
@@ -2743,7 +2904,7 @@
       "id": "train-thieving-38",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Thieving to 38",
-      "detail": "Pickpocket HAM members in Lumbridge. Gems and clue scrolls.",
+      "detail": "Pick a method: Pickpocket H.A.M. members (H.A.M. Hideout) / Steal from bakery stalls (East Ardougne market) / Steal from fruit stalls (Hosidius, Zeah) / Quest xp (The Queen of Thieves, The Giant Dwarf, Death to the Dorgeshuun, ...).",
       "highlights": [
         {
           "type": "NPC",
@@ -2849,16 +3010,12 @@
               "url": "https://oldschool.runescape.wiki/w/H.A.M._Member"
             },
             {
-              "title": "H.A.M. Member",
-              "slug": "H.A.M._member.s5",
-              "url": "https://oldschool.runescape.wiki/w/H.A.M._Member"
-            },
-            {
               "title": "H.A.M. Hideout",
               "slug": "H.A.M._Hideout.s1",
               "url": "https://oldschool.runescape.wiki/w/H.A.M._Hideout"
             }
-          ]
+          ],
+          "notes": "H.A.M. members are absent from the current Thieving training page entirely (checked all 34 sections, no matching heading) -- sourced instead from the row's own pre-existing, already-cached H.A.M. Member/Hideout refs, same prior-baseline-knowledge pattern as Prayer's bone-burial gap."
         },
         {
           "method": "Steal from bakery stalls (East Ardougne market)",
@@ -2879,7 +3036,8 @@
               "slug": "Thieving_training.s19",
               "url": "https://oldschool.runescape.wiki/w/Thieving_training"
             }
-          ]
+          ],
+          "notes": "Sub-scope of the page's stated 5-25 bakery-stall band; same 19,200 xp/hr rate as cited for the 1-20 row."
         },
         {
           "method": "Steal from fruit stalls (Hosidius, Zeah)",
@@ -2900,7 +3058,8 @@
               "slug": "Thieving_training.s20",
               "url": "https://oldschool.runescape.wiki/w/Thieving_training"
             }
-          ]
+          ],
+          "notes": "Page's fruit-stall band is 25-50 (up to 42,750 xp/hr at the eastern coastal house); sub-scoped to this row's 25-38 slice, single figure not reported since the stated rate covers the whole 25-50 range, not just this slice."
         },
         {
           "method": "Quest xp (The Queen of Thieves, The Giant Dwarf, Death to the Dorgeshuun, ...)",
@@ -2929,7 +3088,8 @@
               "slug": "Thieving_training.s8",
               "url": "https://oldschool.runescape.wiki/w/Thieving_training"
             }
-          ]
+          ],
+          "notes": "Page states this quest set grants 41,500 combined xp, carrying a level-24 player up to level 42; flat completion bonus, not a rate."
         }
       ]
     },
@@ -2937,7 +3097,7 @@
       "id": "train-magic-43",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Magic to 43",
-      "detail": "Superheat or Curse spells. Unlocks Superheat for Smithing XP.",
+      "detail": "Pick a method: Superheat Item / Curse-tier spell splashing / Enchant Crossbow Bolts (Emerald bolts) / Grand Library of Great Kourend (book delivery).",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -3002,7 +3162,8 @@
               "slug": "Pay-to-play_Magic_training.s11",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "Unlocks at 43, the top of this band; also grants passive Smithing xp on the bar produced, matching the row's own detail."
         },
         {
           "method": "Curse-tier spell splashing",
@@ -3024,7 +3185,8 @@
               "slug": "Pay-to-play_Magic_training.s9",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "Matches the row's own 'Curse spells' label via the page's splashing technique: no damage dealt but base cast xp is still granted, needing input roughly once every 20 minutes. Page states a 6,600-75,750 xp/h range depending on spell, not a single figure."
         },
         {
           "method": "Enchant Crossbow Bolts (Emerald bolts)",
@@ -3050,7 +3212,8 @@
               "slug": "Pay-to-play_Magic_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "Continues the bolt-enchant ladder into this band; topaz bolts (level 29, 181,500 xp/h) are a cheaper alternative from the same table."
         },
         {
           "method": "Grand Library of Great Kourend (book delivery)",
@@ -3071,7 +3234,8 @@
               "slug": "Pay-to-play_Magic_training.s10",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "No rune cost; page states each delivered book grants 15x the player's current Magic level in xp, so per-hour totals scale with level rather than being one fixed number. No minimum level to start."
         }
       ]
     },
@@ -3079,7 +3243,7 @@
       "id": "train-firemaking-50",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Firemaking to 50",
-      "detail": "Maple logs \u2014 good balance of XP/cost. Required for Desert Treasure.",
+      "detail": "Pick a method: Maple logs / Willow logs / Teak logs / Arctic pine logs.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -3132,7 +3296,8 @@
               "slug": "Pay-to-play_Firemaking_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
             }
-          ]
+          ],
+          "notes": "Matches the row's own label; covers only the final stretch of this 30-50 band per the page's own bracket table. Also the log type required for Desert Treasure per the row's existing detail (that quest req is unverified here, out of scope for this method mining)."
         },
         {
           "method": "Willow logs",
@@ -3153,7 +3318,8 @@
               "slug": "Pay-to-play_Firemaking_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
             }
-          ]
+          ],
+          "notes": "Page's own bracket table entry for the start of this band."
         },
         {
           "method": "Teak logs",
@@ -3174,7 +3340,8 @@
               "slug": "Pay-to-play_Firemaking_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
             }
-          ]
+          ],
+          "notes": "Page's own bracket table entry for the middle of this band."
         },
         {
           "method": "Arctic pine logs",
@@ -3195,7 +3362,8 @@
               "slug": "Pay-to-play_Firemaking_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
             }
-          ]
+          ],
+          "notes": "Page's own bracket table entry just before maple logs take over."
         }
       ]
     },
@@ -3353,6 +3521,94 @@
           "slug": "Pay-to-play_Magic_training.s14",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "High Level Alchemy",
+          "location": "Anywhere, on noted/bought items",
+          "level_band": "43-55",
+          "members": "??",
+          "xp_hr": 78000,
+          "reqs": {
+            "skills": {
+              "magic": 55
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ],
+          "notes": "Core money-maker from level 55; up to ~78,000 xp/h stationary per the page, matching this row's own hint."
+        },
+        {
+          "method": "Superheat Item (smelt ores into bars)",
+          "location": "Anywhere with ore stock (bank noted ore)",
+          "level_band": "43-55",
+          "members": "??",
+          "xp_hr": 97000,
+          "reqs": {
+            "skills": {
+              "magic": 43
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s11",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ],
+          "notes": "Viable option for the pre-55 portion of this band; also grants passive Smithing xp."
+        },
+        {
+          "method": "Arceuus Library book-delivery minigame",
+          "location": "Arceuus Library, Great Kourend",
+          "level_band": "43-55",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s10",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ],
+          "notes": "No hard minimum level per the page; rune-free xp via delivering requested books, best done with a book-location RuneLite plugin. Page's ~200,000 xp/h figure is quoted at level 75, not this band, so left unsourced here."
+        },
+        {
+          "method": "Enchant Crossbow Bolt (highest affordable gem bolts, e.g. Ruby)",
+          "location": "Anywhere, on owned bolts",
+          "level_band": "43-55",
+          "members": "??",
+          "xp_hr": 324500,
+          "reqs": {
+            "skills": {
+              "magic": 49
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ],
+          "notes": "Highest-speed option for players prioritising xp/h over cost."
+        }
       ]
     },
     {
@@ -3444,7 +3700,7 @@
       "id": "train-herblore-38",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Herblore to 38",
-      "detail": "Make attack, strength, or stat-restore potions. Buy secondaries from GE.",
+      "detail": "Pick a method: Make attack potions / Make strength potions / Make restore potions.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -3510,7 +3766,8 @@
               "slug": "Herblore_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Herblore_training"
             }
-          ]
+          ],
+          "notes": "Guam potion (unf) + eye of newt, 62,500 xp/hour per the page's table; low-level recipe still valid for players already past level 10."
         },
         {
           "method": "Make strength potions",
@@ -3531,7 +3788,8 @@
               "slug": "Herblore_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Herblore_training"
             }
-          ]
+          ],
+          "notes": "Tarromin potion (unf) + limpwurt root, 125,000 xp/hour per the page's table."
         },
         {
           "method": "Make restore potions",
@@ -3552,7 +3810,8 @@
               "slug": "Herblore_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Herblore_training"
             }
-          ]
+          ],
+          "notes": "Harralander potion (unf) + red spiders' eggs (the page's stat-restore option), 156,250 xp/hour per the page's table."
         }
       ]
     },
@@ -3560,7 +3819,7 @@
       "id": "train-woodcutting-30",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Woodcutting to 30",
-      "detail": "Oak trees. Bank in Draynor or drop logs.",
+      "detail": "Pick a method: Oak trees / Quest experience.",
       "highlights": [],
       "mapMarkers": [
         {
@@ -3624,13 +3883,9 @@
               "title": "Pay-to-play Woodcutting training",
               "slug": "Pay-to-play_Woodcutting_training.s5",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
-            },
-            {
-              "title": "Pay-to-play Woodcutting training",
-              "slug": "Pay-to-play_Woodcutting_training.s18",
-              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
             }
-          ]
+          ],
+          "notes": "The page keeps recommending oak past level 30 too, saying oak edges out willow on xp rate all the way to level 35."
         },
         {
           "method": "Quest experience",
@@ -3654,7 +3909,8 @@
               "slug": "Pay-to-play_Woodcutting_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
             }
-          ]
+          ],
+          "notes": "The same quest batch that carries level 1-15 continues to cover this band up to level 26 before oak chopping is needed to close the gap to 30."
         }
       ]
     },
@@ -3662,7 +3918,7 @@
       "id": "train-smithing-30",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Smithing to 30",
-      "detail": "Iron bars. Buy from GE or mine in Al-Kharid mines.",
+      "detail": "Pick a method: Anvil smithing bronze/iron items from mined ore (no GE buying) / Giants' Foundry \u2014 forge Bronze/Iron alloy swords for Kovac / Blast Furnace \u2014 smelt non-gold bars for profit.",
       "highlights": [],
       "mapMarkers": [
         {
@@ -3733,7 +3989,8 @@
               "slug": "Pay-to-play_Smithing_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
             }
-          ]
+          ],
+          "notes": "The row's own GE-buying option is dropped per the gather-not-GE rule; mining the ore yourself is the sourced alternative. Band straddles the bronze platebody (18-24, 52,100 xp/h) and iron warhammer (24-33, 72,300 xp/h) sub-brackets so no single xp/h figure applies."
         },
         {
           "method": "Giants' Foundry \u2014 forge Bronze/Iron alloy swords for Kovac",
@@ -3754,7 +4011,8 @@
               "slug": "Pay-to-play_Smithing_training.s6",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
             }
-          ]
+          ],
+          "notes": "Lower-effort minigame alternative to anvil grinding; requires Sleeping Giants completed. 97,920 xp/h is the guide's stated rate for the bronze/iron alloy tier (unlocks at Smithing 15)."
         },
         {
           "method": "Blast Furnace \u2014 smelt non-gold bars for profit",
@@ -3773,7 +4031,8 @@
               "slug": "Pay-to-play_Smithing_training.s7",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
             }
-          ]
+          ],
+          "notes": "Guide flags this as slower xp than anvil smithing but usually profitable; its rate table is a template that did not expand to literal numbers in the fetched wikitext, so xp_hr is ??."
         }
       ]
     },
@@ -3809,6 +4068,68 @@
           "slug": "Pay-to-play_Mining_training.s9",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Iron ore drop-mining (triangle spots)",
+          "location": "Any of the 16 three-rock iron triangle sites, e.g. Al Kharid Mine or Legends' Guild Mine",
+          "level_band": "15-30",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Mining training",
+              "slug": "Pay-to-play_Mining_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+            }
+          ],
+          "notes": "Page states ~45,000-55,000 xp/hr for iron below level 60 as one combined figure, not broken out per band; Varrock armour 2+ adds a 10% chance of a double ore."
+        },
+        {
+          "method": "Tick-manipulated iron (3-tick)",
+          "location": "Legends' Guild Mine or Isle of Souls mine (4-rock clusters)",
+          "level_band": "15-30",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Mining training",
+              "slug": "Pay-to-play_Mining_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+            }
+          ],
+          "notes": "Faster than plain drop-mining but click-intensive; page recommends it mainly as practice for later granite tick manipulation."
+        },
+        {
+          "method": "Skip via quest xp rewards",
+          "location": "Doric's Quest, The Dig Site, Plague City, The Giant Dwarf, The Lost Tribe, Another Slice of H.A.M.",
+          "level_band": "15-30",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Mining training",
+              "slug": "Pay-to-play_Mining_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+            }
+          ],
+          "notes": "Same six-quest package as the prior band; its 27,525 xp lump carries a player through level 30 on the way to level 37."
+        }
       ]
     },
     {
@@ -3836,13 +4157,77 @@
           "slug": "Pay-to-play_Farming_training.s5",
           "url": "https://oldschool.runescape.wiki/w/Farming_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Tree runs (oak/willow)",
+          "location": "tree patch circuit (Falador, Taverley, Lumbridge, Varrock, etc.)",
+          "level_band": "17-35",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Farming training",
+              "slug": "Farming_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Farming_training"
+            }
+          ],
+          "notes": "Plant oak (lvl15) then willow (lvl30) saplings across tree patches; passive growth, pay the gardener to protect/fell then replant on each check."
+        },
+        {
+          "method": "Fruit tree runs (apple/banana)",
+          "location": "fruit tree patch circuit (Catherby, Brimhaven, Lletya, etc.)",
+          "level_band": "17-35",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "farming": 27
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Farming training",
+              "slug": "Farming_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Farming_training"
+            }
+          ],
+          "notes": "Apple (lvl27) and banana (lvl33) fruit trees give a large single check xp dump on a 16-hour growth cycle, run alongside regular tree runs."
+        },
+        {
+          "method": "Farming allotments",
+          "location": "allotment patch circuit",
+          "level_band": "17-35",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Farming training",
+              "slug": "Farming_training.s5",
+              "url": "https://oldschool.runescape.wiki/w/Farming_training"
+            }
+          ],
+          "notes": "Background allotment/compost loop continues from the prior band while tree saplings grow; stub section, detail lives on a separate seed/patch-location page out of this fetch's scope."
+        }
       ]
     },
     {
       "id": "train-cooking-40",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Cooking to 40",
-      "detail": "Cook trout and salmon from Barbarian Village fishing spots.",
+      "detail": "Pick a method: Cook trout and salmon caught at Barbarian Village fishing spots on a nearby fire or range / Continue with pike (20-25) then salmon (25-30) from the page's current low-tier fish table at a bank-adjacent fire or range / Cook tuna for levels 30-40 at the Hosidius Kitchen (or Myths' Guild/Mor Ul Rek range), from the page's Levels 30-99 fish table / 1-tick cook cooked karambwan from level 30 onward after completing Tai Bwo Wannai Trio, for the fastest cooking xp in the game.",
       "highlights": [
         {
           "type": "NPC",
@@ -3905,7 +4290,8 @@
               "slug": "Pay-to-play_Cooking_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
             }
-          ]
+          ],
+          "notes": "Matches the row's own detail; the current page's Levels 1-30 fish table lists trout 15-20 and salmon 25-30, so this covers the lower part of the band."
         },
         {
           "method": "Continue with pike (20-25) then salmon (25-30) from the page's current low-tier fish table at a bank-adjacent fire or range",
@@ -3924,7 +4310,8 @@
               "slug": "Pay-to-play_Cooking_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
             }
-          ]
+          ],
+          "notes": "Rounds out the table's remaining rows above trout, up to the table's own ceiling of 30."
         },
         {
           "method": "Cook tuna for levels 30-40 at the Hosidius Kitchen (or Myths' Guild/Mor Ul Rek range), from the page's Levels 30-99 fish table",
@@ -3943,7 +4330,8 @@
               "slug": "Pay-to-play_Cooking_training.s8",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
             }
-          ]
+          ],
+          "notes": "Page gives an approximate xp/h range for tuna (85,000-100,000, with a 143,500 theoretical figure) rather than one clean number, so xp_hr is left unknown rather than picking a value from the range."
         },
         {
           "method": "1-tick cook cooked karambwan from level 30 onward after completing Tai Bwo Wannai Trio, for the fastest cooking xp in the game",
@@ -3964,7 +4352,8 @@
               "slug": "Pay-to-play_Cooking_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
             }
-          ]
+          ],
+          "notes": "Page's per-level 1-tick table starts at level 30 (464,000 xp/h 1-tick, 141,000 AFK); left as ?? since it is not an exact band-boundary figure."
         }
       ]
     },
@@ -3972,7 +4361,7 @@
       "id": "train-fishing-40",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Fishing to 40",
-      "detail": "Trout and salmon at Barbarian Village. Bank nearby.",
+      "detail": "Pick a method: AFK fly fishing trout/salmon (bank trips) / 3-tick fly fishing trout/salmon.",
       "highlights": [
         {
           "type": "NPC",
@@ -4046,7 +4435,8 @@
               "slug": "Pay-to-play_Fishing_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
             }
-          ]
+          ],
+          "notes": "Matches the row's own 'bank nearby' framing (no tick manipulation). Page's own AFK table gives 13,000 xp/hr at level 20 rising to 30,000 xp/hr at level 40 (band endpoints), so a single band figure would misrepresent the ramp; left as ?? rather than averaged."
         },
         {
           "method": "3-tick fly fishing trout/salmon",
@@ -4069,7 +4459,8 @@
               "slug": "Pay-to-play_Fishing_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
             }
-          ]
+          ],
+          "notes": "Faster tick-manipulated variant of the same spot/tool; page's own 3-tick table gives 23,000 xp/hr at level 20 rising to 53,000 xp/hr at level 40, again left ?? rather than averaged into one figure."
         }
       ]
     },
@@ -4077,7 +4468,7 @@
       "id": "train-crafting-40",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Crafting to 40",
-      "detail": "Gold amulets (u) or sapphire rings for decent XP.",
+      "detail": "Pick a method: Gold amulet (u) / sapphire ring jewellery / Gem cutting (sapphire, emerald, ruby, diamond).",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -4134,7 +4525,8 @@
               "slug": "Pay-to-play_Crafting_training.s9",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
             }
-          ]
+          ],
+          "notes": "Gold amulet (u) unlocks at 8, sapphire ring at 20, matching the row's continuity method; page's hourly figures are a templated assumption, not one stated number."
         },
         {
           "method": "Gem cutting (sapphire, emerald, ruby, diamond)",
@@ -4157,7 +4549,8 @@
               "slug": "Pay-to-play_Crafting_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
             }
-          ]
+          ],
+          "notes": "Page frames this as the fastest XP path up to level 77 (sapphire 20, emerald 27, ruby 34, diamond 43); per-cut XP is literal (e.g. 50 for sapphire) but the page's per-hour figure is a templated cut-rate assumption, not a flat stated number."
         }
       ]
     },
@@ -4165,7 +4558,7 @@
       "id": "train-prayer-43",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Prayer to 43",
-      "detail": "Bury big bones or use guilded altar. Unlocks Protect from Melee.",
+      "detail": "Pick a method: Bury big bones / Offer bones at a gilded altar / Offer bones at the Chaos Temple altar.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -4219,7 +4612,8 @@
               "slug": "Pay-to-play_Prayer_training.s21",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
             }
-          ]
+          ],
+          "notes": "Big bones give 15 xp per bone when buried (per the page's own Sinister Offering bury-xp table); no page-stated hourly rate for plain burial."
         },
         {
           "method": "Offer bones at a gilded altar",
@@ -4240,7 +4634,8 @@
               "slug": "Pay-to-play_Prayer_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
             }
-          ]
+          ],
+          "notes": "Fastest but priciest method; Construction 75 builds the altar, but a host's altar (or a friend's) waives that requirement \u2014 page only gives the hourly rate for dragon/superior dragon bones, not big bones."
         },
         {
           "method": "Offer bones at the Chaos Temple altar",
@@ -4259,7 +4654,8 @@
               "slug": "Pay-to-play_Prayer_training.s14",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
             }
-          ]
+          ],
+          "notes": "Cheaper alternative to the gilded altar with a 50% chance per offering not to consume the bone, doubling effective xp per inventory; page's stated hourly rates only cover dragon/superior dragon bones."
         }
       ]
     },
@@ -4333,7 +4729,7 @@
       "id": "train-smithing-40",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Smithing to 40",
-      "detail": "Steel bars. Consider Superheat for simultaneous Magic XP.",
+      "detail": "Pick a method: Anvil smithing iron/steel items (iron platebody, then steel warhammer) / Giants' Foundry \u2014 forge Iron/Steel alloy swords for Kovac / Blast Furnace \u2014 smelt non-gold bars for profit.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -4395,7 +4791,8 @@
               "slug": "Pay-to-play_Smithing_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
             }
-          ]
+          ],
+          "notes": "Band spans iron platebody (33-39, 104,200 xp/h) and steel warhammer (39-40, 108,500 xp/h) sub-brackets, no single 30-40 figure, so ??. Row's own Superheat/Magic hint is a separate cross-referenced training row, not modeled as its own method here."
         },
         {
           "method": "Giants' Foundry \u2014 forge Iron/Steel alloy swords for Kovac",
@@ -4416,7 +4813,8 @@
               "slug": "Pay-to-play_Smithing_training.s6",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
             }
-          ]
+          ],
+          "notes": "133,920 xp/h is the guide's stated rate for the iron/steel alloy tier, which unlocks at Smithing 30."
         },
         {
           "method": "Blast Furnace \u2014 smelt non-gold bars for profit",
@@ -4435,7 +4833,8 @@
               "slug": "Pay-to-play_Smithing_training.s7",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
             }
-          ]
+          ],
+          "notes": "Same as lower bands: slower but usually profitable; the rate table did not expand to literal numbers in the fetched wikitext."
         }
       ]
     },
@@ -4464,6 +4863,52 @@
           "slug": "Pay-to-play_Woodcutting_training.s5",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Willow trees",
+          "location": "Woodcutting Guild pond, Draynor Village bank, Seers' Village, or Barbarian Outpost",
+          "level_band": "30-45",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "woodcutting": 30
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Woodcutting training",
+              "slug": "Pay-to-play_Woodcutting_training.s19",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+            }
+          ],
+          "notes": "The page's own fastest-xp path actually keeps players on oak until 35 rather than willow, but willow is the well-known casual pick used here for route continuity."
+        },
+        {
+          "method": "Teak trees",
+          "location": "Teak-tree areas (e.g. Fossil Island patches)",
+          "level_band": "35-45",
+          "members": "??",
+          "xp_hr": 34000,
+          "reqs": {
+            "skills": {
+              "woodcutting": 35
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Woodcutting training",
+              "slug": "Pay-to-play_Woodcutting_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+            }
+          ],
+          "notes": "34,000 xp/hr is the page's plain no-tick-manipulation rate at level 35; the page calls teak the fastest xp in the game once tick manipulation is added."
+        }
       ]
     },
     {
@@ -4490,6 +4935,96 @@
           "title": "Herblore training",
           "slug": "Pay-to-play_Herblore_training.s6",
           "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Make super restore potions",
+          "location": "anywhere with bank access",
+          "level_band": "38-55",
+          "members": true,
+          "xp_hr": 356000,
+          "reqs": {
+            "skills": {
+              "herblore": 63
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ],
+          "notes": "Snapdragon potion (unf) + red spiders' eggs, 356,000 xp/hour per the page's table; page states this recipe needs Herblore 63, above this band's stated top of 55 -- flagging the mismatch rather than re-banding."
+        },
+        {
+          "method": "Make prayer potions",
+          "location": "anywhere with bank access",
+          "level_band": "38-55",
+          "members": true,
+          "xp_hr": 218750,
+          "reqs": {
+            "skills": {
+              "herblore": 38
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ],
+          "notes": "Ranarr potion (unf) + snape grass, 218,750 xp/hour per the page's table; this is the band's own opening recipe (level 38)."
+        },
+        {
+          "method": "Make fishing potions",
+          "location": "anywhere with bank access",
+          "level_band": "38-55",
+          "members": true,
+          "xp_hr": 281250,
+          "reqs": {
+            "skills": {
+              "herblore": 50
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ],
+          "notes": "Avantoe potion (unf) + snape grass, 281,250 xp/hour per the page's table."
+        },
+        {
+          "method": "Make super energy potions",
+          "location": "anywhere with bank access",
+          "level_band": "38-55",
+          "members": true,
+          "xp_hr": 293750,
+          "reqs": {
+            "skills": {
+              "herblore": 52
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ],
+          "notes": "Avantoe potion (unf) + mort myre fungus, 293,750 xp/hour per the page's table."
         }
       ]
     },
@@ -4538,7 +5073,7 @@
       "id": "train-attack-60",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Attack to 60",
-      "detail": "Hill Giants or Flesh Crawlers (Stronghold). Equips dragon weapons.",
+      "detail": "Pick a method: Flesh Crawlers and Zombies (Stronghold of Security, Catacomb of Famine) / Moss giant / Chaos druid.",
       "highlights": [],
       "mapMarkers": [
         {
@@ -4607,7 +5142,8 @@
               "slug": "Stronghold_of_Security.s3",
               "url": "https://oldschool.runescape.wiki/w/Stronghold_of_Security"
             }
-          ]
+          ],
+          "notes": "Zombies (levels 30/44/53) and flesh crawlers (levels 28/35/41) share this floor; flesh crawlers also drop herbs and the bottom of the skull sceptre."
         },
         {
           "method": "Moss giant",
@@ -4626,7 +5162,8 @@
               "slug": "Pay-to-play_Melee_training.s13",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Fair Hitpoints for its level with a chance at a Mossy key (Bryophyta access); hits hard on low-Defence/low-armour players."
         },
         {
           "method": "Chaos druid",
@@ -4647,7 +5184,8 @@
               "slug": "Pay-to-play_Melee_training.s11",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Thieving 46 is only needed for the Chaos Druid Tower variant; the Edgeville Dungeon spot has no requirement but sits in low-level Wilderness."
         }
       ]
     },
@@ -4655,7 +5193,7 @@
       "id": "train-cooking-58",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Cooking to 58",
-      "detail": "Cook lobsters. Stop burning at 74 with cooking gauntlets.",
+      "detail": "Pick a method: Cook lobsters from level 40 onward, wearing cooking gauntlets to reduce the burn rate / Bake pies with the Bake Pie spell after completing Lunar Diplomacy, for fast semi-AFK xp with passive Magic xp as a side effect / Make jugs of wine from level 35 onward, mainly to push through to level 68 rather than as a primary method since a jug of bad wine can fail for 0 xp below 68.",
       "highlights": [],
       "mapMarkers": [
         {
@@ -4721,7 +5259,8 @@
               "slug": "Pay-to-play_Cooking_training.s8",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
             }
-          ]
+          ],
+          "notes": "Row's original ref pointed at s4 (the karambwan section), which does not mention lobster; corrected the citation to s8, which holds the Levels 30-99 fish table with lobster at 40-68. Page's xp/h is a range (120,000-165,000, with a 172,000 figure) rather than a clean single number."
         },
         {
           "method": "Bake pies with the Bake Pie spell after completing Lunar Diplomacy, for fast semi-AFK xp with passive Magic xp as a side effect",
@@ -4742,7 +5281,8 @@
               "slug": "Pay-to-play_Cooking_training.s6",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
             }
-          ]
+          ],
+          "notes": "Page's per-pie xp/h table (e.g. garden pie at 34 = 260,000, fish pie at 47 = 309,000) doesn't land on the row's exact band edges, so left as ??."
         },
         {
           "method": "Make jugs of wine from level 35 onward, mainly to push through to level 68 rather than as a primary method since a jug of bad wine can fail for 0 xp below 68",
@@ -4761,7 +5301,8 @@
               "slug": "Pay-to-play_Cooking_training.s7",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
             }
-          ]
+          ],
+          "notes": "Page states the pre-68 use case is mainly to level up quickly (fail chance scales with level), not for xp rate."
         }
       ]
     },
@@ -4769,7 +5310,7 @@
       "id": "train-fishing-58",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Fishing to 58",
-      "detail": "Lobsters at Karamja or Catherby. Stocking food for combat.",
+      "detail": "Pick a method: Cage fishing lobsters / 3-tick fly fishing trout/salmon (continuing to 58).",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -4822,7 +5363,8 @@
               "slug": "Pay-to-play_Fishing_training.s1",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
             }
-          ]
+          ],
+          "notes": "Matches the row's own label. Confirmed as a real fishing type via the page's Equipment section (lobster pot, non-consumable) but the current Fastest-experience table no longer lists lobster cage fishing as a top method, so no xp/hr figure is stated for it on this page."
         },
         {
           "method": "3-tick fly fishing trout/salmon (continuing to 58)",
@@ -4845,7 +5387,8 @@
               "slug": "Pay-to-play_Fishing_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
             }
-          ]
+          ],
+          "notes": "Page's own section header states fly fishing remains the fastest method up to level 58; nearest stated 3-tick table values are 53,000 xp/hr at level 40 and 61,000 xp/hr at level 50 (no level-58 row exists), left ?? rather than interpolated."
         }
       ]
     },
@@ -4874,13 +5417,104 @@
           "slug": "Pay-to-play_Smithing_training.s7",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Blast Furnace \u2014 gold bars, wearing goldsmith gauntlets",
+          "location": "Blast Furnace, Keldagrim",
+          "level_band": "40-60",
+          "members": true,
+          "xp_hr": 380000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Family Crest (for goldsmith gauntlets)",
+              "The Giant Dwarf (started, for Keldagrim access via the Dwarven Boatman)"
+            ],
+            "items": [
+              "Goldsmith gauntlets"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ],
+          "notes": "380,000 xp/h is the guide's stated rate wearing goldsmith gauntlets (56.2 xp/ore vs 22.5 without). Ice gloves speed up banking further but are an optional accessory, not gated as required."
+        },
+        {
+          "method": "Giants' Foundry \u2014 forge Steel/Mithril alloy swords for Kovac",
+          "location": "Giants' Foundry minigame",
+          "level_band": "40-60",
+          "members": true,
+          "xp_hr": 164640,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Sleeping Giants"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ],
+          "notes": "164,640 xp/h is the guide's stated rate for the steel/mithril alloy tier, which unlocks at Smithing 50."
+        },
+        {
+          "method": "Anvil smithing \u2014 steel platebodies (no goldsmith gauntlets needed)",
+          "location": "Any anvil (not location-specific in this section)",
+          "level_band": "40-60",
+          "members": false,
+          "xp_hr": 144000,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s10",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ],
+          "notes": "Guide frames this as the fallback for accounts that lack goldsmith gauntlets; 144,000 xp/h covers levels 48-68 on steel platebodies, so it only applies to the tail of this band."
+        },
+        {
+          "method": "Smithing steel cannonballs (ammo mould)",
+          "location": "Any furnace with an ammo mould",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": 13824,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "Ammo mould (or double ammo mould for 27,648 xp/h)"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ],
+          "notes": "Low-attention, usually profitable, but much slower xp than the other options; unlocks at Smithing 35. Membership status of the ammo mould source is not stated in this section, left ??."
+        }
       ]
     },
     {
       "id": "train-magic-55",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Magic to 55",
-      "detail": "High Alchemy on stackable items. Core money maker.",
+      "detail": "Pick a method: High Level Alchemy / Superheat Item (smelt ores into bars) / Arceuus Library book-delivery minigame / Enchant Crossbow Bolt (highest affordable gem bolts, e.g. Ruby).",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -4946,7 +5580,8 @@
               "slug": "Pay-to-play_Magic_training.s14",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "Core money-maker from level 55; up to ~78,000 xp/h stationary per the page, matching this row's own hint."
         },
         {
           "method": "Superheat Item (smelt ores into bars)",
@@ -4967,7 +5602,8 @@
               "slug": "Pay-to-play_Magic_training.s11",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "Viable option for the pre-55 portion of this band; also grants passive Smithing xp."
         },
         {
           "method": "Arceuus Library book-delivery minigame",
@@ -4986,7 +5622,8 @@
               "slug": "Pay-to-play_Magic_training.s10",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "No hard minimum level per the page; rune-free xp via delivering requested books, best done with a book-location RuneLite plugin. Page's ~200,000 xp/h figure is quoted at level 75, not this band, so left unsourced here."
         },
         {
           "method": "Enchant Crossbow Bolt (highest affordable gem bolts, e.g. Ruby)",
@@ -5007,7 +5644,8 @@
               "slug": "Pay-to-play_Magic_training.s3",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "Highest-speed option for players prioritising xp/h over cost."
         }
       ]
     },
@@ -5036,6 +5674,92 @@
           "slug": "Pay-to-play_Cooking_training.s4",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Cook swordfish (levels 68-80) then shark (80-84) at the Hosidius Kitchen or Rogues' Den, wearing cooking gauntlets to reduce the burn rate",
+          "location": "Hosidius Kitchen / Rogues' Den",
+          "level_band": "58-74",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s8",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ],
+          "notes": "Row's original ref pointed at s3 (the Levels 1-30 low-tier fish table), which has no swordfish/shark content; corrected the citation to s8, where these fish actually appear."
+        },
+        {
+          "method": "Cook lobster up to level 68 before switching to swordfish, per the page's Levels 30-99 fish table",
+          "location": "Hosidius Kitchen",
+          "level_band": "58-68",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s8",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ],
+          "notes": "Lobster's own table row spans 40-68, overlapping the lower part of this band."
+        },
+        {
+          "method": "1-tick cook cooked karambwan (after completing Tai Bwo Wannai Trio) for the fastest cooking xp through this band",
+          "location": "Rogues' Den / Myths' Guild / Mor Ul Rek",
+          "level_band": "58-74",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Tai Bwo Wannai Trio"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ],
+          "notes": "Page's per-level table gives 742,000 xp/h (1-tick) at level 70, but that isn't an exact band-boundary figure so xp_hr is left ??."
+        },
+        {
+          "method": "Bake pies with the Bake Pie spell (after Lunar Diplomacy) as a lower-attention alternative",
+          "location": "any location with spell access",
+          "level_band": "58-74",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Lunar Diplomacy"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ],
+          "notes": "Admiral pie (70) and dragonfruit pie (73) fall within this band per the page's pie xp table."
+        }
       ]
     },
     {
@@ -5062,6 +5786,78 @@
           "title": "Pay-to-play Fishing training",
           "slug": "Pay-to-play_Fishing_training.s4",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Harpoon fishing swordfish/tuna (banked, no tick manipulation)",
+          "location": "Catherby",
+          "level_band": "58-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "harpoon (or bare hands after Barbarian Training miniquest)"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Fishing training",
+              "slug": "Pay-to-play_Fishing_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+            }
+          ],
+          "notes": "Matches the row's own label. Caveat: the current training page's only harpoon-swordfish/tuna coverage is the advanced 2-tick technique (Port Piscarilius/Fishing Guild PvP world), not a plain banked Catherby variant, so no page-stated xp/hr applies to this simpler version -- left ??."
+        },
+        {
+          "method": "AFK Barbarian Fishing",
+          "location": "Otto's Grotto pond",
+          "level_band": "58-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "agility": 30,
+              "strength": 30
+            },
+            "quests": [],
+            "items": [
+              "barbarian rod",
+              "feathers or fish offcuts/roe/caviar as bait"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Fishing training",
+              "slug": "Pay-to-play_Fishing_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+            }
+          ],
+          "notes": "Page states 30 Agility/Strength needed for leaping salmon and requires partial completion of the Barbarian Training miniquest (not a full quest, so left out of reqs.quests). AFK total xp/hr per page table: 43,800 at level 58 rising to 56,800 at level 70 -- left ?? rather than averaged."
+        },
+        {
+          "method": "2-tick harpoon swordfish/tuna",
+          "location": "Port Piscarilius (or Fishing Guild PvP world)",
+          "level_band": "35-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "harpoon (crystal harpoon recommended for catch rate)"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Fishing training",
+              "slug": "Pay-to-play_Fishing_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+            }
+          ],
+          "notes": "Page says this becomes the fastest method overall but only outpaces other options from level 61 onward. Stated xp/hr at level 61: 69,600 (normal harpoon)/79,900 (dragon harpoon); no crystal-harpoon figure until level 71 (101,800). Left ?? rather than picking one figure for the whole 58-70 band."
         }
       ]
     },
@@ -5148,7 +5944,7 @@
       "id": "train-ranged-40",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Ranged to 40",
-      "detail": "Ogresses or Experiments. Equips green dragonhide.",
+      "detail": "Pick a method: Ogresses or Experiments / Crabs (sand, rock, swamp, ammonite or gemstone) / Dwarf multicannon on ogres / Cannoning while training Slayer.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -5207,7 +6003,8 @@
               "slug": "Pay-to-play_Ranged_training.s9",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Route's existing pick for this band, kept for continuity. Not named on the current wiki page as fetched; the closest sourced equivalent is cannoning ogres below."
         },
         {
           "method": "Crabs (sand, rock, swamp, ammonite or gemstone)",
@@ -5226,7 +6023,8 @@
               "slug": "Pay-to-play_Ranged_training.s9",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Same afk crab spots the page recommends for levels 1-45/70; no hourly xp figure is given."
         },
         {
           "method": "Dwarf multicannon on ogres",
@@ -5249,7 +6047,8 @@
               "slug": "Pay-to-play_Ranged_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Page's fastest-xp pick through level 45: about 40,000 xp/hr from the cannon alone."
         },
         {
           "method": "Cannoning while training Slayer",
@@ -5272,7 +6071,8 @@
               "slug": "Pay-to-play_Ranged_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Page states using the cannon on Slayer tasks gives passive Ranged xp, totalling roughly 2-4 million by level 99 Slayer; no per-band rate is given."
         }
       ]
     },
@@ -5280,7 +6080,7 @@
       "id": "train-ranged-55",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Ranged to 55",
-      "detail": "Seagulls at Port Sarim or Chinchompas. Equips maple shortbow.",
+      "detail": "Pick a method: Seagulls at Port Sarim or Chinchompas / Crabs (sand, rock, swamp, ammonite or gemstone) / Dwarf multicannon on ogres / Chinning maniacal monkeys.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -5339,7 +6139,8 @@
               "slug": "Pay-to-play_Ranged_training.s9",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Route's existing pick for this band, kept for continuity. The chinchompa half overlaps with the maniacal-monkey chinning method sourced below."
         },
         {
           "method": "Crabs (sand, rock, swamp, ammonite or gemstone)",
@@ -5358,7 +6159,8 @@
               "slug": "Pay-to-play_Ranged_training.s9",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Page recommends these afk crab spots through level 45/70; no hourly xp figure is given."
         },
         {
           "method": "Dwarf multicannon on ogres",
@@ -5381,7 +6183,8 @@
               "slug": "Pay-to-play_Ranged_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Page caps the cannon's fastest-xp advantage at level 45, so this only covers the lower part of the band."
         },
         {
           "method": "Chinning maniacal monkeys",
@@ -5404,7 +6207,8 @@
               "slug": "Pay-to-play_Ranged_training.s7",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Page's fastest method from level 45 onward: 290,000 xp/hr with plain chinchompas at level 45, using top gear and Rigour."
         }
       ]
     },
@@ -5412,7 +6216,7 @@
       "id": "train-prayer-52",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Prayer to 52",
-      "detail": "Dragon bones on guilded altar. Unlocks Protect from Missiles.",
+      "detail": "Pick a method: Offer dragon bones at a gilded altar / Offer dragon bones at the Chaos Temple altar / Reanimate ensouled heads near the Dark Altar.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -5476,7 +6280,8 @@
               "slug": "Pay-to-play_Prayer_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
             }
-          ]
+          ],
+          "notes": "Page states 643,000 xp/hr for dragon bones with both incense burners lit; a hosted altar removes the Construction 75 requirement."
         },
         {
           "method": "Offer dragon bones at the Chaos Temple altar",
@@ -5495,7 +6300,8 @@
               "slug": "Pay-to-play_Prayer_training.s14",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
             }
-          ]
+          ],
+          "notes": "Page states up to 860,000 xp/hr bringing noted dragon bones (500,000 xp/hr if suiciding each trip instead); cheaper than the gilded altar but carries PK risk."
         },
         {
           "method": "Reanimate ensouled heads near the Dark Altar",
@@ -5514,7 +6320,8 @@
               "slug": "Pay-to-play_Prayer_training.s19",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
             }
-          ]
+          ],
+          "notes": "Slower, safer alternative fed by ensouled heads gathered as monster drops rather than bought; page only states a concrete hourly rate for the high-Magic ensouled dragon head option."
         }
       ]
     },
@@ -5522,7 +6329,7 @@
       "id": "train-ranged-70",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Ranged to 70",
-      "detail": "Cannon tasks for fast Ranged XP. Unlocks black dragonhide.",
+      "detail": "Pick a method: Cannon tasks for fast Ranged XP / Crabs (sand, rock, swamp, ammonite or gemstone) / Chinning maniacal monkeys / Dwarf multicannon on ogres or ice trolls.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -5588,7 +6395,8 @@
               "slug": "Pay-to-play_Ranged_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Matches the page's 'Cannoning with Slayer' pick: passive Ranged xp from the cannon while training Slayer, totalling roughly 2-4 million by level 99 Slayer; no per-band rate is given."
         },
         {
           "method": "Crabs (sand, rock, swamp, ammonite or gemstone)",
@@ -5607,7 +6415,8 @@
               "slug": "Pay-to-play_Ranged_training.s9",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Page explicitly extends this afk crab method's viability up to level 70; no hourly xp figure is given."
         },
         {
           "method": "Chinning maniacal monkeys",
@@ -5630,7 +6439,8 @@
               "slug": "Pay-to-play_Ranged_training.s7",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Page's fastest method here: 360,000 xp/hr with plain chinchompas at level 55 (430,000 with red chinchompas), using top gear and Rigour."
         },
         {
           "method": "Dwarf multicannon on ogres or ice trolls",
@@ -5653,7 +6463,8 @@
               "slug": "Pay-to-play_Ranged_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
             }
-          ]
+          ],
+          "notes": "Page's active-cannoning pick, about 40,000 xp/hr from the cannon on ogres; the ice troll variant needs The Fremennik Trials and only pays for its cannonballs via drops."
         }
       ]
     },
@@ -5661,7 +6472,7 @@
       "id": "train-magic-70",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Magic to 70",
-      "detail": "Alching or Bursting at Crabs. Unlocks Ice Barrage prerequisite path.",
+      "detail": "Pick a method: Ancient Magicks bursting (Smoke Burst, then Ice Burst) / High Level Alchemy / Exploiting elemental weakness on crabs (Frost Crabs, 100% Fire weakness) / Tele-alching (High Level Alchemy chained with a teleport).",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -5724,7 +6535,8 @@
               "slug": "Pay-to-play_Magic_training.s17",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "Smoke Burst usable from 62, Ice Burst stronger from 70 once Desert Treasure I unlocks Ancient Magicks; the page's own burst-location list (Slayer/Maniacal monkeys/Zombie pirates/Bandits) does not include crabs despite this row's 'at Crabs' label."
         },
         {
           "method": "High Level Alchemy",
@@ -5745,7 +6557,8 @@
               "slug": "Pay-to-play_Magic_training.s14",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "The 'Alching' half of this row's label; up to ~78,000 xp/h stationary."
         },
         {
           "method": "Exploiting elemental weakness on crabs (Frost Crabs, 100% Fire weakness)",
@@ -5766,7 +6579,8 @@
               "slug": "Pay-to-play_Magic_training.s8",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "Closest documented actual crab-killing option matching this row's 'at Crabs' phrasing; Fire spells hit roughly double damage on the 100% weakness."
         },
         {
           "method": "Tele-alching (High Level Alchemy chained with a teleport)",
@@ -5787,7 +6601,8 @@
               "slug": "Pay-to-play_Magic_training.s30",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
             }
-          ]
+          ],
+          "notes": "Cast High Alchemy then a teleport within 3 ticks so both grant xp; Camelot is the cheapest routing at ~144,600 xp/h, Ardougne is faster but pricier per the page."
         }
       ]
     },
@@ -5795,7 +6610,7 @@
       "id": "train-attack-70",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Attack to 70",
-      "detail": "Moss Giants, Blue Dragons, or Slayer tasks. Equips whip.",
+      "detail": "Pick a method: Moss giant / Nightmare Zone (Normal Rumble) / Wilderness Slayer / Ogre.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -5857,7 +6672,8 @@
               "slug": "Pay-to-play_Melee_training.s13",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Fair Hitpoints for its level with a chance at a Mossy key (Bryophyta access); hits hard on low-Defence/low-armour players."
         },
         {
           "method": "Nightmare Zone (Normal Rumble)",
@@ -5882,13 +6698,9 @@
               "title": "Nightmare Zone",
               "slug": "Nightmare_Zone.s3",
               "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
-            },
-            {
-              "title": "Nightmare Zone",
-              "slug": "Nightmare_Zone.s2",
-              "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
             }
-          ]
+          ],
+          "notes": "Instanced and safe (deaths only drop arena loot); absorption/overload potions from points reduce food/potion costs; entry needs a coin fee."
         },
         {
           "method": "Wilderness Slayer",
@@ -5907,7 +6719,8 @@
               "slug": "Pay-to-play_Melee_training.s14",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Slayer helm accuracy/damage bonuses make Wilderness Slayer assignments good melee xp while also banking Slayer points quickly; player-vs-player danger applies."
         },
         {
           "method": "Ogre",
@@ -5926,7 +6739,8 @@
               "slug": "Pay-to-play_Melee_training.s12",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "High-Hitpoints, low-Defence target with automatic aggro; a popular cannon spot so can be crowded."
         }
       ]
     },
@@ -5960,6 +6774,81 @@
           "slug": "Pay-to-play_Melee_training.s7",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Slayer tasks",
+          "location": "Varies by assignment",
+          "level_band": "70-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s15",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ],
+          "notes": "Slayer helm bonuses make task kills solid melee xp while banking Slayer points, though efficient point-blocking Slayer itself needs many quests."
+        },
+        {
+          "method": "Nightmare Zone (Dharok/Obsidian rumble)",
+          "location": "North of Yanille, north-west of the bank",
+          "level_band": "70-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Any 5 of the ~30 quests Nightmare Zone accepts (see Nightmare_Zone.s3 for the full list)"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            },
+            {
+              "title": "Nightmare Zone",
+              "slug": "Nightmare_Zone.s3",
+              "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
+            }
+          ],
+          "notes": "Page calls this the fastest solo Attack/Strength xp/hr in the game once geared with Dharok's (92+ Hitpoints) or Obsidian+Berserker necklace+Toktz-Xil-Ak."
+        },
+        {
+          "method": "Gargoyle",
+          "location": "Slayer Tower",
+          "level_band": "70-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "slayer": 75
+            },
+            "quests": [
+              "Priest in Peril"
+            ],
+            "items": [
+              "Rock hammer"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s15",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ],
+          "notes": "Below-average offence for its level so high-Defence players sustain easily, but above-average Defence caps the xp/hr; drops are consistently valuable rather than rare."
+        }
       ]
     },
     {
@@ -5987,6 +6876,52 @@
           "slug": "Pay-to-play_Ranged_training.s9",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Chinning maniacal monkeys",
+          "location": "Kruk's Dungeon, Ape Atoll",
+          "level_band": "70-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Monkey Madness II (chapter II started)"
+            ],
+            "items": [
+              "Chinchompa"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ],
+          "notes": "Page's fastest Ranged method overall, matching the route's existing pick. Level 70 isn't a table row; the bracketing figures are 470,000-690,000 xp/hr at level 65 and 570,000-830,000 xp/hr at level 75 depending on chinchompa type, rising to 740,000-1,030,000 xp/hr at level 99."
+        },
+        {
+          "method": "Pest Control",
+          "location": "Pest Control minigame (Void Knight Outpost)",
+          "level_band": "70-99",
+          "members": "??",
+          "xp_hr": 76600,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s12",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ],
+          "notes": "Alternate method spending Void Knight commendation points on Ranged xp; page gives 76,600 xp/hr at level 70-73 with no Combat Achievement point bonus, scaling up to 157,100 xp/hr at level 98-99 with the hard-tier bonus. A combat level of 100 is recommended (not required) for the veteran boat."
+        }
       ]
     },
     {
@@ -6013,6 +6948,99 @@
           "title": "Pay-to-play Magic training",
           "slug": "Pay-to-play_Magic_training.s17",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Bursting/Barraging on-task Slayer monsters (dust devils, Greater Nechryael, Warped Jellies, smoke devils)",
+          "location": "Various Slayer task assignment locations",
+          "level_band": "70-94",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Desert Treasure I"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s17",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ],
+          "notes": "Page suggests passive training to 82 then a saturated heart boost to 94 for Ice Barrage, or starting Slayer bursting at 70 with weaker spells."
+        },
+        {
+          "method": "Killing Maniacal monkeys",
+          "location": "Kruk's Dungeon (Monkey Madness II, up to the Kruk's Dungeon point)",
+          "level_band": "70-94",
+          "members": "??",
+          "xp_hr": 400000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Desert Treasure I",
+              "Monkey Madness II"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s17",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ],
+          "notes": "Page calls this the fastest viable real-time method: Ice Burst ~250,000-310,000 xp/h, Ice Barrage ~320,000-400,000 xp/h depending on active vs AFK play."
+        },
+        {
+          "method": "Killing Zombie pirates",
+          "location": "Level 10-11 Wilderness, near the Chaos altar",
+          "level_band": "70-94",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Desert Treasure I"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s17",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ],
+          "notes": "PvP-risk wilderness option; page recommends the Accursed sceptre (a) for bonus NPC damage and the Medium Wilderness Diary for better drop value."
+        },
+        {
+          "method": "Bursting/Barraging bandits at the Bandit Camp",
+          "location": "The Big Heist Lodge, two tiles west of the door",
+          "level_band": "70-94",
+          "members": "??",
+          "xp_hr": 305000,
+          "reqs": {
+            "skills": {
+              "magic": 68
+            },
+            "quests": [
+              "Desert Treasure I"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s17",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ],
+          "notes": "Requires a Saradomin/Zamorak item plus an Ancient Magicks autocast weapon; page states ~150,000-235,000 xp/h bursting, ~230,000-305,000 xp/h barraging."
         }
       ]
     },
@@ -6214,6 +7242,98 @@
           "title": "Pay-to-play Magic training",
           "slug": "Pay-to-play_Magic_training.s17",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Ancient Magicks bursting (Smoke Burst, then Ice Burst)",
+          "location": "Multi-combat spawn (per-monster; page does not list a crab-specific burst spot)",
+          "level_band": "55-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "magic": 62
+            },
+            "quests": [
+              "Desert Treasure I"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s17",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ],
+          "notes": "Smoke Burst usable from 62, Ice Burst stronger from 70 once Desert Treasure I unlocks Ancient Magicks; the page's own burst-location list (Slayer/Maniacal monkeys/Zombie pirates/Bandits) does not include crabs despite this row's 'at Crabs' label."
+        },
+        {
+          "method": "High Level Alchemy",
+          "location": "Anywhere, on noted/bought items",
+          "level_band": "55-70",
+          "members": "??",
+          "xp_hr": 78000,
+          "reqs": {
+            "skills": {
+              "magic": 55
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ],
+          "notes": "The 'Alching' half of this row's label; up to ~78,000 xp/h stationary."
+        },
+        {
+          "method": "Exploiting elemental weakness on crabs (Frost Crabs, 100% Fire weakness)",
+          "location": "Ruins of Tapoyauik, Varlamore",
+          "level_band": "55-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "The Heart of Darkness"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s8",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ],
+          "notes": "Closest documented actual crab-killing option matching this row's 'at Crabs' phrasing; Fire spells hit roughly double damage on the 100% weakness."
+        },
+        {
+          "method": "Tele-alching (High Level Alchemy chained with a teleport)",
+          "location": "Camelot or Ardougne teleport spot",
+          "level_band": "55-70",
+          "members": "??",
+          "xp_hr": 144600,
+          "reqs": {
+            "skills": {
+              "magic": 55
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s30",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ],
+          "notes": "Cast High Alchemy then a teleport within 3 ticks so both grant xp; Camelot is the cheapest routing at ~144,600 xp/h, Ardougne is faster but pricier per the page."
         }
       ]
     },
@@ -7061,7 +8181,7 @@
       "id": "train-defence-30",
       "phase": "Toward Desert Treasure",
       "instruction": "Train Defence to 30",
-      "detail": "Goblins or cows.",
+      "detail": "Pick a method: Cows / Rock Crab.",
       "highlights": [
         {
           "type": "NPC",
@@ -7127,7 +8247,8 @@
               "slug": "Cow.s0",
               "url": "https://oldschool.runescape.wiki/w/Cow"
             }
-          ]
+          ],
+          "notes": "Low-level, non-aggressive, low-defence target; cowhides can be tanned/sold as a side income."
         },
         {
           "method": "Rock Crab",
@@ -7148,7 +8269,8 @@
               "slug": "Pay-to-play_Melee_training.s10",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Very high Hitpoints with low Defence/Attack so little food is needed; can lose aggro after 10-15 minutes."
         }
       ]
     },
@@ -7156,7 +8278,7 @@
       "id": "train-defence-40",
       "phase": "Toward Desert Treasure",
       "instruction": "Train Defence to 40",
-      "detail": "Barbarians or Stronghold. Unlocks rune armour.",
+      "detail": "Pick a method: Barbarians / Flesh Crawlers and Zombies (Stronghold of Security, Catacomb of Famine) / Chaos druid.",
       "highlights": [
         {
           "type": "NPC",
@@ -7222,7 +8344,8 @@
               "slug": "Barbarian.s0",
               "url": "https://oldschool.runescape.wiki/w/Barbarian"
             }
-          ]
+          ],
+          "notes": "Low-Defence, high fan-in monster used for early Attack/Strength/Defence training around Barbarian Village."
         },
         {
           "method": "Flesh Crawlers and Zombies (Stronghold of Security, Catacomb of Famine)",
@@ -7241,7 +8364,8 @@
               "slug": "Stronghold_of_Security.s3",
               "url": "https://oldschool.runescape.wiki/w/Stronghold_of_Security"
             }
-          ]
+          ],
+          "notes": "Zombies (levels 30/44/53) and flesh crawlers (levels 28/35/41) share this floor; flesh crawlers also drop herbs and the bottom of the skull sceptre."
         },
         {
           "method": "Chaos druid",
@@ -7262,7 +8386,8 @@
               "slug": "Pay-to-play_Melee_training.s11",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Thieving 46 is only needed for the Chaos Druid Tower variant; the Edgeville Dungeon spot has no requirement but sits in low-level Wilderness."
         }
       ]
     },
@@ -7291,13 +8416,75 @@
           "slug": "Pay-to-play_Melee_training.s10",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Flesh Crawlers and Zombies (Stronghold of Security, Catacomb of Famine)",
+          "location": "Stronghold of Security, Catacomb of Famine (level 2)",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Stronghold of Security",
+              "slug": "Stronghold_of_Security.s3",
+              "url": "https://oldschool.runescape.wiki/w/Stronghold_of_Security"
+            }
+          ],
+          "notes": "Zombies (levels 30/44/53) and flesh crawlers (levels 28/35/41) share this floor; flesh crawlers also drop herbs and the bottom of the skull sceptre."
+        },
+        {
+          "method": "Moss giant",
+          "location": "Catacombs of Kourend, Varrock Sewers, or west of the Fishing Guild",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ],
+          "notes": "Fair Hitpoints for its level with a chance at a Mossy key (Bryophyta access); hits hard on low-Defence/low-armour players."
+        },
+        {
+          "method": "Wilderness Slayer",
+          "location": "Wilderness",
+          "level_band": "60-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ],
+          "notes": "Slayer helm accuracy/damage bonuses make Wilderness Slayer assignments good melee xp while also banking Slayer points quickly; player-vs-player danger applies."
+        }
       ]
     },
     {
       "id": "train-strength-60",
       "phase": "Toward Desert Treasure",
       "instruction": "Train Strength to 60",
-      "detail": "Hill Giants or Flesh Crawlers. Unlocks rune scimitar use.",
+      "detail": "Pick a method: Flesh Crawlers and Zombies (Stronghold of Security, Catacomb of Famine) / Moss giant / Chaos druid.",
       "highlights": [],
       "mapMarkers": [
         {
@@ -7358,7 +8545,8 @@
               "slug": "Stronghold_of_Security.s3",
               "url": "https://oldschool.runescape.wiki/w/Stronghold_of_Security"
             }
-          ]
+          ],
+          "notes": "Zombies (levels 30/44/53) and flesh crawlers (levels 28/35/41) share this floor; flesh crawlers also drop herbs and the bottom of the skull sceptre."
         },
         {
           "method": "Moss giant",
@@ -7377,7 +8565,8 @@
               "slug": "Pay-to-play_Melee_training.s13",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Fair Hitpoints for its level with a chance at a Mossy key (Bryophyta access); hits hard on low-Defence/low-armour players."
         },
         {
           "method": "Chaos druid",
@@ -7398,7 +8587,8 @@
               "slug": "Pay-to-play_Melee_training.s11",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Thieving 46 is only needed for the Chaos Druid Tower variant; the Edgeville Dungeon spot has no requirement but sits in low-level Wilderness."
         }
       ]
     },
@@ -7406,7 +8596,7 @@
       "id": "train-defence-60",
       "phase": "Toward Desert Treasure",
       "instruction": "Train Defence to 60",
-      "detail": "Flesh Crawlers or Slayer tasks. Unlocks dragon and barrows armour.",
+      "detail": "Pick a method: Flesh Crawlers and Zombies (Stronghold of Security, Catacomb of Famine) / Moss giant / Wilderness Slayer.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -7470,7 +8660,8 @@
               "slug": "Stronghold_of_Security.s3",
               "url": "https://oldschool.runescape.wiki/w/Stronghold_of_Security"
             }
-          ]
+          ],
+          "notes": "Zombies (levels 30/44/53) and flesh crawlers (levels 28/35/41) share this floor; flesh crawlers also drop herbs and the bottom of the skull sceptre."
         },
         {
           "method": "Moss giant",
@@ -7489,7 +8680,8 @@
               "slug": "Pay-to-play_Melee_training.s13",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Fair Hitpoints for its level with a chance at a Mossy key (Bryophyta access); hits hard on low-Defence/low-armour players."
         },
         {
           "method": "Wilderness Slayer",
@@ -7508,7 +8700,8 @@
               "slug": "Pay-to-play_Melee_training.s14",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Slayer helm accuracy/damage bonuses make Wilderness Slayer assignments good melee xp while also banking Slayer points quickly; player-vs-player danger applies."
         }
       ]
     },
@@ -7731,7 +8924,7 @@
       "id": "train-strength-70",
       "phase": "Toward Desert Treasure",
       "instruction": "Train Strength to 70",
-      "detail": "Moss Giants or Slayer. Unlocks barrows equipment access stat-wise.",
+      "detail": "Pick a method: Moss giant / Wilderness Slayer / Nightmare Zone (Normal Rumble).",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -7785,7 +8978,8 @@
               "slug": "Pay-to-play_Melee_training.s13",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Fair Hitpoints for its level with a chance at a Mossy key (Bryophyta access); hits hard on low-Defence/low-armour players."
         },
         {
           "method": "Wilderness Slayer",
@@ -7804,7 +8998,8 @@
               "slug": "Pay-to-play_Melee_training.s14",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Slayer helm accuracy/damage bonuses make Wilderness Slayer assignments good melee xp while also banking Slayer points quickly; player-vs-player danger applies."
         },
         {
           "method": "Nightmare Zone (Normal Rumble)",
@@ -7829,13 +9024,9 @@
               "title": "Nightmare Zone",
               "slug": "Nightmare_Zone.s3",
               "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
-            },
-            {
-              "title": "Nightmare Zone",
-              "slug": "Nightmare_Zone.s2",
-              "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
             }
-          ]
+          ],
+          "notes": "Instanced and safe (deaths only drop arena loot); absorption/overload potions from points reduce food/potion costs; entry needs a coin fee."
         }
       ]
     },
@@ -7843,7 +9034,7 @@
       "id": "train-defence-70",
       "phase": "Toward Desert Treasure",
       "instruction": "Train Defence to 70",
-      "detail": "Slayer or NMZ.",
+      "detail": "Pick a method: Wilderness Slayer / Nightmare Zone (Normal Rumble) / Moss giant.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -7897,7 +9088,8 @@
               "slug": "Pay-to-play_Melee_training.s14",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Slayer helm accuracy/damage bonuses make Wilderness Slayer assignments good melee xp while also banking Slayer points quickly; player-vs-player danger applies."
         },
         {
           "method": "Nightmare Zone (Normal Rumble)",
@@ -7922,13 +9114,9 @@
               "title": "Nightmare Zone",
               "slug": "Nightmare_Zone.s3",
               "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
-            },
-            {
-              "title": "Nightmare Zone",
-              "slug": "Nightmare_Zone.s2",
-              "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
             }
-          ]
+          ],
+          "notes": "Instanced and safe (deaths only drop arena loot); absorption/overload potions from points reduce food/potion costs; entry needs a coin fee."
         },
         {
           "method": "Moss giant",
@@ -7947,7 +9135,8 @@
               "slug": "Pay-to-play_Melee_training.s13",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
             }
-          ]
+          ],
+          "notes": "Fair Hitpoints for its level with a chance at a Mossy key (Bryophyta access); hits hard on low-Defence/low-armour players."
         }
       ]
     },
@@ -7981,6 +9170,81 @@
           "slug": "Pay-to-play_Melee_training.s7",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Nightmare Zone (Dharok/Obsidian rumble)",
+          "location": "North of Yanille, north-west of the bank",
+          "level_band": "70-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Any 5 of the ~30 quests Nightmare Zone accepts (see Nightmare_Zone.s3 for the full list)"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            },
+            {
+              "title": "Nightmare Zone",
+              "slug": "Nightmare_Zone.s3",
+              "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
+            }
+          ],
+          "notes": "Page calls this the fastest solo Attack/Strength xp/hr in the game once geared with Dharok's (92+ Hitpoints) or Obsidian+Berserker necklace+Toktz-Xil-Ak."
+        },
+        {
+          "method": "Slayer tasks",
+          "location": "Varies by assignment",
+          "level_band": "70-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s15",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ],
+          "notes": "Slayer helm bonuses make task kills solid melee xp while banking Slayer points, though efficient point-blocking Slayer itself needs many quests."
+        },
+        {
+          "method": "Gargoyle",
+          "location": "Slayer Tower",
+          "level_band": "70-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "slayer": 75
+            },
+            "quests": [
+              "Priest in Peril"
+            ],
+            "items": [
+              "Rock hammer"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s15",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ],
+          "notes": "Below-average offence for its level so high-Defence players sustain easily, but above-average Defence caps the xp/hr; drops are consistently valuable rather than rare."
+        }
       ]
     },
     {
@@ -8013,13 +9277,88 @@
           "slug": "Pay-to-play_Melee_training.s7",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Nightmare Zone (Dharok/Obsidian rumble)",
+          "location": "North of Yanille, north-west of the bank",
+          "level_band": "70-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Any 5 of the ~30 quests Nightmare Zone accepts (see Nightmare_Zone.s3 for the full list)"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            },
+            {
+              "title": "Nightmare Zone",
+              "slug": "Nightmare_Zone.s3",
+              "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
+            }
+          ],
+          "notes": "Page calls this the fastest solo Attack/Strength xp/hr in the game once geared with Dharok's (92+ Hitpoints) or Obsidian+Berserker necklace+Toktz-Xil-Ak."
+        },
+        {
+          "method": "Slayer tasks",
+          "location": "Varies by assignment",
+          "level_band": "70-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s15",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ],
+          "notes": "Slayer helm bonuses make task kills solid melee xp while banking Slayer points, though efficient point-blocking Slayer itself needs many quests."
+        },
+        {
+          "method": "Gargoyle",
+          "location": "Slayer Tower",
+          "level_band": "70-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "slayer": 75
+            },
+            "quests": [
+              "Priest in Peril"
+            ],
+            "items": [
+              "Rock hammer"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s15",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ],
+          "notes": "Below-average offence for its level so high-Defence players sustain easily, but above-average Defence caps the xp/hr; drops are consistently valuable rather than rare."
+        }
       ]
     },
     {
       "id": "train-prayer-74",
       "phase": "Toward Desert Treasure",
       "instruction": "Train Prayer to 74",
-      "detail": "Wyvern/Dragon bones on altar. Unlocks Piety (requires quests).",
+      "detail": "Pick a method: Offer wyvern/dragon bones at a gilded altar / Offer dragon bones at the Chaos Temple altar / Reanimate ensouled dragon heads near the Dark Altar.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -8075,7 +9414,8 @@
               "slug": "Pay-to-play_Prayer_training.s4",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
             }
-          ]
+          ],
+          "notes": "Page states 643,000 xp/hr for dragon bones with both burners lit; wyvern bones share the same 72-xp-per-bone bury value on the page's own offering table but no page-stated altar hourly rate."
         },
         {
           "method": "Offer dragon bones at the Chaos Temple altar",
@@ -8094,7 +9434,8 @@
               "slug": "Pay-to-play_Prayer_training.s14",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
             }
-          ]
+          ],
+          "notes": "Page states up to 860,000 xp/hr bringing noted dragon bones (500,000 xp/hr suiciding instead); cheaper than the gilded altar but carries PK risk."
         },
         {
           "method": "Reanimate ensouled dragon heads near the Dark Altar",
@@ -8115,7 +9456,8 @@
               "slug": "Pay-to-play_Prayer_training.s19",
               "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
             }
-          ]
+          ],
+          "notes": "Page states ~343,000 xp/hr reanimating and killing ensouled dragon heads (220/hr); heads are gathered as monster drops rather than bought, and this is the only head-tier the page gives a concrete hourly rate for."
         }
       ]
     },
@@ -9343,6 +10685,76 @@
           "title": "Menaphite Thug",
           "slug": "Menaphite_thug.s4",
           "url": "https://oldschool.runescape.wiki/w/Menaphite_thug"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Steal from fruit stalls (Hosidius, Zeah)",
+          "location": "Hosidius market or coastal houses",
+          "level_band": "38-50",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 25
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Thieving training",
+              "slug": "Thieving_training.s20",
+              "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+            }
+          ],
+          "notes": "Matches the row's own 'Fruit stalls on Zeah' continuity method; page states the full band as 25-50 (up to 42,750 xp/hr at the eastern coastal house, or 34,200 xp/hr from a single stall), sub-scoped here to 38-50."
+        },
+        {
+          "method": "Pickpocket Knights of Ardougne",
+          "location": "Ardougne marketplace or south-east bank",
+          "level_band": "55",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 55
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Thieving training",
+              "slug": "Thieving_training.s23",
+              "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+            }
+          ],
+          "notes": "The row's 'Guards in Ardougne' phrasing most closely matches this section, but the page states Knights of Ardougne only becomes a viable method from level 55 onward -- the whole method sits at or above this row's 38-55 top edge rather than spanning it; flagged as a mismatch rather than silently rewritten or dropped."
+        },
+        {
+          "method": "Steal artefacts (Port Piscarilius)",
+          "location": "Port Piscarilius, via guard-lured bridges",
+          "level_band": "49-55",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 49
+            },
+            "quests": [],
+            "items": [
+              "lockpick"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Thieving training",
+              "slug": "Thieving_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+            }
+          ],
+          "notes": "Page states this is the fastest method from level 49-65; sub-scoped to this row's 49-55 slice, table spans multiple levels within that slice so xp_hr stays ??."
         }
       ]
     }

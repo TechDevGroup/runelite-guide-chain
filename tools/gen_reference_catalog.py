@@ -8,7 +8,8 @@ Sources (osrs-wiki repo, read-only — never read at guide-chain runtime):
 
 Output (this repo, committed + loaded from the classpath at construction by
 ReferenceStore): src/main/resources/reference/catalog.jsonl — one JSON object
-per line, uniform shape: {id, kind, name, reqs, rewards, refs, notes}.
+per line, uniform shape (NORMALIZATION §1c): {id, kind, name, reqs, req_items,
+rewards, start, length, summary, facts, refs, notes} (absent values null).
 
 Re-run whenever the source osrs-wiki corpus changes:
   python3 tools/gen_reference_catalog.py
@@ -81,6 +82,11 @@ def load_quest_db():
             "kind": kind,
             "name": name,
             "reqs": row.get("reqs"),
+            # start/length were dropped by earlier builder versions (the audit's
+            # surface-3 failure mode) — carried through verbatim since
+            # NORMALIZATION §1c; minigame/unlock rows have neither (stay null).
+            "start": row.get("start"),
+            "length": row.get("length"),
             "rewards": row.get("rewards"),
             "refs": dedupe_refs(row.get("refs")),
             "notes": row.get("notes"),
@@ -116,17 +122,17 @@ def load_contrib_db():
 def load_card_facts():
     """Structured, prose-free reference blocks minted by the card-facts
     normalizer fan-out (contrib.jsonl kind "card-facts", keyed
-    "cardfacts:<card_kind>:<card_id>"). First-seen wins by card_id — the
-    ledger is append-only + idempotent, so at most one row per key survives
-    a re-run. Returns {card_id: {summary, facts[], req_items[]}}."""
+    "cardfacts:<card_kind>:<card_id>"). First-seen wins per (card_kind,
+    card_id) — kind-scoped because a slug can legitimately exist in two kinds.
+    Returns {(card_kind, card_id): {summary, facts[], req_items[]}}."""
     facts = {}
     for row in read_jsonl(CONTRIB):
         if row.get("kind") != "card-facts":
             continue
-        cid = row.get("card_id")
-        if not cid or cid in facts:
+        key = (row.get("card_kind"), row.get("card_id"))
+        if not all(key) or key in facts:
             continue
-        facts[cid] = {
+        facts[key] = {
             "summary": row.get("summary") or "",
             "facts": row.get("facts") or [],
             "req_items": row.get("req_items") or [],
@@ -134,13 +140,20 @@ def load_card_facts():
     return facts
 
 
+# Uniform catalog row shape (NORMALIZATION §1c): every row carries every key,
+# nullable — ReferenceEntry-side Gson is unknown-field-safe either way, but a
+# fixed shape keeps the resource diffable and the render logic branch-free.
+ROW_SHAPE = ("id", "kind", "name", "reqs", "req_items", "rewards", "start",
+             "length", "summary", "facts", "refs", "notes")
+
+
 def attach_card_facts(rows, facts):
-    """Fold structured blocks onto each catalog row by id. The render prefers
-    facts[]/summary/req_items[] over the prose `notes` blob — notes stays only
-    as a fallback for rows the normalizer never reached (e.g. gear unlocks)."""
+    """Fold structured blocks onto each catalog row by (kind, id). The render
+    prefers facts[]/summary/req_items[] over the prose `notes` blob — notes
+    stays only as a fallback for rows the normalizer never reached."""
     hits = 0
     for row in rows:
-        block = facts.get(row["id"])
+        block = facts.get((row["kind"], row["id"]))
         if not block:
             continue
         row["summary"] = block["summary"]
@@ -150,13 +163,17 @@ def attach_card_facts(rows, facts):
     return hits
 
 
+def shape_row(row):
+    return {k: row.get(k) for k in ROW_SHAPE}
+
+
 def main():
     rows = load_quest_db() + load_contrib_db()
     card_facts = load_card_facts()
     hits = attach_card_facts(rows, card_facts)
     with open(OUT, "w", encoding="utf-8") as f:
         for row in rows:
-            f.write(json.dumps(row, ensure_ascii=False))
+            f.write(json.dumps(shape_row(row), ensure_ascii=False))
             f.write("\n")
 
     counts = {}

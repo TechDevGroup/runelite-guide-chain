@@ -997,6 +997,14 @@
           "url": "https://oldschool.runescape.wiki/w/Sheep_Shearer/Quick_guide"
         }
       ],
+      "req_items": [
+        {
+          "name": "Balls of wool",
+          "qty": 20,
+          "note": "unnoted; shears needed instead if shearing/spinning your own",
+          "optional": false
+        }
+      ],
       "hints": [
         {
           "type": "quest-xp",
@@ -1077,6 +1085,14 @@
         {
           "title": "X Marks the Spot/Quick guide",
           "url": "https://oldschool.runescape.wiki/w/X_Marks_the_Spot/Quick_guide"
+        }
+      ],
+      "req_items": [
+        {
+          "name": "Spade",
+          "qty": "??",
+          "note": "Eastfloor spade does not work for this quest",
+          "optional": false
         }
       ]
     }
