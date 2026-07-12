@@ -17,6 +17,13 @@ public class GuideStep
     public String id;
 
     /**
+     * Optional episode/phase this step belongs to (e.g. "Toward Monkey Madness I").
+     * Steps sharing a phase render under one heading — the guide reads as ordered
+     * milestone episodes rather than a flat list of skill bands. Null = ungrouped.
+     */
+    public String phase;
+
+    /**
      * Short, imperative instruction shown in the panel.
      * Must be written in the author's own words — never copied from the wiki
      * or game dialogue.

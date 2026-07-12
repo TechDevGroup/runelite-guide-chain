@@ -296,3 +296,67 @@ a.step-instruction:hover { color: var(--accent); }
 
 .empty { color: var(--ink-dim); font-style: italic; }
 .chain-complete { color: var(--ok); font-weight: 600; }
+
+/* ── Guide library (reference directory) ── */
+.library { max-width: 960px; }
+.lib-intro h2 { margin: 0 0 0.2rem; }
+.lib-intro p { color: var(--ink-dim); margin: 0 0 1rem; font-size: 0.9rem; }
+.lib-cat { margin-bottom: 1.4rem; }
+.lib-cat > h3 {
+  font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--ink-dim); border-bottom: 1px solid var(--line, #e5e7eb);
+  padding-bottom: 0.3rem; margin: 0 0 0.7rem;
+}
+.lib-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.8rem;
+}
+.lib-card {
+  border: 1px solid var(--line, #e5e7eb); border-radius: 10px; padding: 0.85rem 0.9rem;
+  background: var(--pane, #f8fafc); display: flex; flex-direction: column; gap: 0.4rem;
+  transition: border-color 0.12s, box-shadow 0.12s;
+}
+.lib-card:hover { border-color: var(--accent, #2563eb); box-shadow: 0 2px 10px rgba(37,99,235,0.08); }
+.lib-card h4 { margin: 0; font-size: 0.98rem; }
+.lib-desc { margin: 0; color: var(--ink-dim); font-size: 0.82rem; flex: 1; }
+.lib-meta { font-size: 0.74rem; color: var(--ink-dim); }
+.lib-actions { display: flex; gap: 0.4rem; }
+
+/* ── Phase / episode dividers (milestone-structured route) ── */
+.phase-divider {
+  list-style: none;
+  margin: 0.9rem 0 0.3rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent, #2563eb);
+  border-left: 3px solid var(--accent, #2563eb);
+  background: var(--pane, #f8fafc);
+}
+
+/* ── Coverage index (semantic scoping ledger) ── */
+.plan-cov { margin: 0.3rem 0 0.6rem; font-size: 0.8rem; }
+.plan-cov a { color: var(--accent, #2563eb); text-decoration: none; }
+.cov-summary { font-size: 0.8rem; color: var(--ink-dim); margin: 0.2rem 0 0.7rem; }
+.cov-stat { margin-right: 0.55rem; white-space: nowrap; }
+.tag-stub {
+  font-size: 0.68rem; background: #fee2e2; color: #991b1b;
+  border-radius: 3px; padding: 0 0.3rem; vertical-align: middle;
+}
+table.cov { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+table.cov th { text-align: left; color: var(--ink-dim); font-weight: 600; padding: 0.2rem 0.35rem; border-bottom: 1px solid var(--line, #e5e7eb); }
+table.cov td { padding: 0.2rem 0.35rem; border-bottom: 1px solid var(--line, #f1f5f9); vertical-align: top; }
+table.cov code { font-size: 0.72rem; color: var(--ink-dim); }
+.cov-num { color: var(--ink-dim); text-align: right; }
+.cov-yes { color: var(--ok, #16a34a); text-align: center; font-weight: 700; }
+.cov-no { color: #cbd5e1; text-align: center; }
+.cov-guide td { background: var(--pane, #f8fafc); font-weight: 700; padding-top: 0.5rem; }
+.cov-stub-row { opacity: 0.72; }
+
+/* ── Item icons (lazy blob cache: /icon/item/{id}.png) ── */
+.item-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  image-rendering: pixelated;
+  margin-right: 0.15rem;
+}

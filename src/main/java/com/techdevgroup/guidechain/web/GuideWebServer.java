@@ -3,10 +3,13 @@ package com.techdevgroup.guidechain.web;
 import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
+import com.techdevgroup.guidechain.icons.IconStore;
+import com.techdevgroup.guidechain.icons.RepoIconSource;
 import com.techdevgroup.guidechain.store.GuideStore;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.File;
 import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
@@ -62,6 +65,7 @@ public final class GuideWebServer
     private final Runnable refreshAction;
     private final HttpServer server;
     private final ExecutorService executor;
+    private final IconStore icons;
 
     /**
      * @param refreshAction invoked by POST /actions/refresh-guides; inside the
@@ -74,6 +78,7 @@ public final class GuideWebServer
         this.gson = gson;
         this.refreshAction = refreshAction;
         this.fragments = new WebFragments(store);
+        this.icons = new IconStore(new File(store.stateFile().getParentFile(), "icons"), new RepoIconSource());
         this.executor = Executors.newFixedThreadPool(2, r ->
         {
             Thread t = new Thread(r, "guide-chain-web");
@@ -122,8 +127,11 @@ public final class GuideWebServer
             {
                 if ("/".equals(path))                          { sendHtml(ex, fragments.shell()); return; }
                 if (path.startsWith("/static/"))               { serveStatic(ex, path.substring("/static/".length())); return; }
+                if (path.startsWith("/icon/item/"))            { serveItemIcon(ex, path.substring("/icon/item/".length())); return; }
                 if ("/fragments/chains".equals(path))          { sendHtml(ex, fragments.chainsFragment()); return; }
                 if ("/fragments/plan".equals(path))            { sendHtml(ex, fragments.planFragment()); return; }
+                if ("/fragments/index".equals(path))           { sendHtml(ex, fragments.indexFragment()); return; }
+                if ("/fragments/library".equals(path))         { sendHtml(ex, fragments.libraryFragment()); return; }
                 if (path.startsWith("/fragments/step/"))
                 {
                     String key = decode(path.substring("/fragments/step/".length()));
@@ -216,6 +224,38 @@ public final class GuideWebServer
     }
 
     // ── Static resources (vendored from the jar) ─────────────────────────────
+
+    /** Lazy item icon: disk-cached PNG blob rendered from RuneLite's cache repo. */
+    private void serveItemIcon(HttpExchange ex, String name) throws IOException
+    {
+        byte[] png = icons.item(parseIconId(name));
+        if (png == null)
+        {
+            ex.sendResponseHeaders(404, -1);
+            ex.close();
+            return;
+        }
+        ex.getResponseHeaders().set("Content-Type", "image/png");
+        ex.getResponseHeaders().set("Cache-Control", "public, max-age=31536000, immutable");
+        ex.sendResponseHeaders(200, png.length);
+        try (OutputStream os = ex.getResponseBody())
+        {
+            os.write(png);
+        }
+    }
+
+    private static int parseIconId(String name)
+    {
+        String digits = name.endsWith(".png") ? name.substring(0, name.length() - 4) : name;
+        try
+        {
+            return Integer.parseInt(digits);
+        }
+        catch (NumberFormatException e)
+        {
+            return 0;
+        }
+    }
 
     private void serveStatic(HttpExchange ex, String name) throws IOException
     {

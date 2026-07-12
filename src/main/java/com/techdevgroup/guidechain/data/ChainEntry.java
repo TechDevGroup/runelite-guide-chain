@@ -18,6 +18,9 @@ public class ChainEntry
     /** Short description of the chain's scope. */
     public String description;
 
+    /** Optional grouping for the library directory (e.g. "Progression", "Reference"). */
+    public String category;
+
     /**
      * Ordered guide filenames (without path; resolved from the guides source).
      * Example: {@code ["f2p-early-game.json"]}.

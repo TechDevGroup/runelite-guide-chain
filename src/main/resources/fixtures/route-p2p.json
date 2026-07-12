@@ -1,0 +1,1068 @@
+{
+  "id": "route-p2p",
+  "name": "P2P Progression \u2014 Milestone Route",
+  "description": "Prerequisite route for P2P Progression, segmented into milestone episodes by the progression-router planner. Each phase closes on a quest/unlock capstone rather than an arbitrary skill number.",
+  "steps": [
+    {
+      "id": "quest-priest-in-peril",
+      "phase": "Toward Ardougne Easy Diary",
+      "instruction": "Complete Priest in Peril",
+      "detail": "Unlocks Morytania region access. Required before Barrows and Slayer tasks there.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3218,
+          "y": 3415,
+          "plane": 0,
+          "label": "Varrock rooftop course"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "steer-ardougne-easy-diary",
+      "phase": "Toward Ardougne Easy Diary",
+      "steerKind": "progress_metric",
+      "instruction": "\u2605 Ardougne Easy Diary",
+      "detail": "Cloak 1 teleport to Ardougne; Kandarin efficiency stacks with Fairy Rings + Graceful.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FISHING",
+          "level": 15
+        },
+        {
+          "type": "SKILL",
+          "skill": "COOKING",
+          "level": 15
+        }
+      ]
+    },
+    {
+      "id": "train-attack-10",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "Train Attack to 10",
+      "detail": "Chickens in Lumbridge. No food needed, fast kills.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1173
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3235,
+          "y": 3295,
+          "plane": 0,
+          "label": "Lumbridge chickens"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "id": "train-defence-10",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "Train Defence to 10",
+      "detail": "Chickens or crabs. Passive Defence XP from combat.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1173
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3235,
+          "y": 3295,
+          "plane": 0,
+          "label": "Lumbridge chickens"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "id": "train-attack-30",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "Train Attack to 30",
+      "detail": "Cows east of Lumbridge or goblins. Drop bones for Prayer XP.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "id": "train-defence-30",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "Train Defence to 30",
+      "detail": "Goblins or cows.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "id": "train-attack-40",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "Train Attack to 40",
+      "detail": "Barbarians south of Edgeville. Equips steel weapons.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 3103
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3081,
+          "y": 3420,
+          "plane": 0,
+          "label": "Barbarian Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "train-defence-40",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "Train Defence to 40",
+      "detail": "Barbarians or Stronghold. Unlocks rune armour.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 3103
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3081,
+          "y": 3420,
+          "plane": 0,
+          "label": "Barbarian Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "synth-attack-43-4",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "Train Attack to 43",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 43
+        }
+      ]
+    },
+    {
+      "id": "synth-defence-43-5",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "Train Defence to 43",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 43
+        }
+      ]
+    },
+    {
+      "id": "milestone-quest-mm",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "\u2605 Monkey Madness I",
+      "detail": "Monkey Madness I \u2014 unlocks the dragon scimitar and a major combat step up.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 43
+        },
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 43
+        }
+      ]
+    },
+    {
+      "id": "synth-slayer-10-3",
+      "phase": "Toward Desert Treasure",
+      "instruction": "Train Slayer to 10",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SLAYER",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "id": "train-magic-25",
+      "phase": "Toward Desert Treasure",
+      "instruction": "Train Magic to 25",
+      "detail": "Air Bolt and low alchemy. Unlocks Camelot Teleport.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 25
+        }
+      ]
+    },
+    {
+      "id": "train-firemaking-15",
+      "phase": "Toward Desert Treasure",
+      "instruction": "Train Firemaking to 15",
+      "detail": "Normal logs from any tree. Light fires in a row.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FIREMAKING",
+          "level": 15
+        }
+      ]
+    },
+    {
+      "id": "train-thieving-20",
+      "phase": "Toward Desert Treasure",
+      "instruction": "Train Thieving to 20",
+      "detail": "Pickpocket men and women in Lumbridge or Edgeville.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "THIEVING",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "id": "train-firemaking-30",
+      "phase": "Toward Desert Treasure",
+      "instruction": "Train Firemaking to 30",
+      "detail": "Oak logs from GE or Draynor oaks.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FIREMAKING",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "id": "train-thieving-38",
+      "phase": "Toward Desert Treasure",
+      "instruction": "Train Thieving to 38",
+      "detail": "Pickpocket HAM members in Lumbridge. Gems and clue scrolls.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 2540
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3149,
+          "y": 9624,
+          "plane": 0,
+          "label": "H.A.M. hideout"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "THIEVING",
+          "level": 38
+        }
+      ]
+    },
+    {
+      "id": "train-magic-43",
+      "phase": "Toward Desert Treasure",
+      "instruction": "Train Magic to 43",
+      "detail": "Superheat or Curse spells. Unlocks Superheat for Smithing XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 43
+        }
+      ]
+    },
+    {
+      "id": "train-firemaking-50",
+      "phase": "Toward Desert Treasure",
+      "instruction": "Train Firemaking to 50",
+      "detail": "Maple logs \u2014 good balance of XP/cost. Required for Desert Treasure.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FIREMAKING",
+          "level": 50
+        }
+      ]
+    },
+    {
+      "id": "synth-thieving-53-2",
+      "phase": "Toward Desert Treasure",
+      "instruction": "Train Thieving to 53",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "THIEVING",
+          "level": 53
+        }
+      ]
+    },
+    {
+      "id": "synth-magic-50-1",
+      "phase": "Toward Desert Treasure",
+      "instruction": "Train Magic to 50",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 50
+        }
+      ]
+    },
+    {
+      "id": "milestone-quest-dt",
+      "phase": "Toward Desert Treasure",
+      "instruction": "\u2605 Desert Treasure",
+      "detail": "Desert Treasure \u2014 unlocks the Ancient Magicks spellbook.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 50
+        },
+        {
+          "type": "SKILL",
+          "skill": "THIEVING",
+          "level": 53
+        },
+        {
+          "type": "SKILL",
+          "skill": "SLAYER",
+          "level": 10
+        },
+        {
+          "type": "SKILL",
+          "skill": "FIREMAKING",
+          "level": 50
+        }
+      ]
+    },
+    {
+      "id": "train-strength-10",
+      "phase": "Toward God Wars Dungeon",
+      "instruction": "Train Strength to 10",
+      "detail": "Chickens in Lumbridge.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1173
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3235,
+          "y": 3295,
+          "plane": 0,
+          "label": "Lumbridge chickens"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "id": "train-strength-30",
+      "phase": "Toward God Wars Dungeon",
+      "instruction": "Train Strength to 30",
+      "detail": "Cows or goblins near Lumbridge.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "id": "train-strength-40",
+      "phase": "Toward God Wars Dungeon",
+      "instruction": "Train Strength to 40",
+      "detail": "Barbarians. Significant damage boost.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 3103
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3081,
+          "y": 3420,
+          "plane": 0,
+          "label": "Barbarian Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "train-strength-60",
+      "phase": "Toward God Wars Dungeon",
+      "instruction": "Train Strength to 60",
+      "detail": "Hill Giants or Flesh Crawlers. Unlocks rune scimitar use.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3090,
+          "y": 3494,
+          "plane": 0,
+          "label": "Edgeville"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 60
+        }
+      ]
+    },
+    {
+      "id": "train-prayer-22",
+      "phase": "Toward God Wars Dungeon",
+      "instruction": "Train Prayer to 22",
+      "detail": "Bury regular bones. Unlocks Protect Item prayer.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "PRAYER",
+          "level": 22
+        }
+      ]
+    },
+    {
+      "id": "train-prayer-43",
+      "phase": "Toward God Wars Dungeon",
+      "instruction": "Train Prayer to 43",
+      "detail": "Bury big bones or use guilded altar. Unlocks Protect from Melee.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "PRAYER",
+          "level": 43
+        }
+      ]
+    },
+    {
+      "id": "steer-graceful",
+      "phase": "Toward God Wars Dungeon",
+      "steerKind": "qol_gear",
+      "instruction": "\u2605 Graceful outfit",
+      "detail": "~67% run-energy retention at zero weight; compresses all future travel.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "AGILITY",
+          "level": 60
+        }
+      ]
+    },
+    {
+      "id": "milestone-gwd",
+      "phase": "Toward God Wars Dungeon",
+      "instruction": "\u2605 God Wars Dungeon",
+      "detail": "God Wars Dungeon \u2014 access to the four god bosses and their unique drops.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 60
+        },
+        {
+          "type": "SKILL",
+          "skill": "PRAYER",
+          "level": 43
+        }
+      ]
+    },
+    {
+      "id": "train-attack-60",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Attack to 60",
+      "detail": "Hill Giants or Flesh Crawlers (Stronghold). Equips dragon weapons.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3090,
+          "y": 3494,
+          "plane": 0,
+          "label": "Edgeville"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 60
+        }
+      ]
+    },
+    {
+      "id": "train-defence-60",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Defence to 60",
+      "detail": "Flesh Crawlers or Slayer tasks. Unlocks dragon and barrows armour.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 60
+        }
+      ]
+    },
+    {
+      "id": "milestone-barrows",
+      "phase": "Toward Barrows runs",
+      "instruction": "\u2605 Barrows runs",
+      "detail": "Barrows \u2014 a repeatable brothers run for Barrows gear and steady mid-game money.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 60
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 60
+        },
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 60
+        },
+        {
+          "type": "SKILL",
+          "skill": "PRAYER",
+          "level": 43
+        }
+      ]
+    },
+    {
+      "id": "train-prayer-52",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Prayer to 52",
+      "detail": "Dragon bones on guilded altar. Unlocks Protect from Missiles.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "PRAYER",
+          "level": 52
+        }
+      ]
+    },
+    {
+      "id": "train-strength-70",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Strength to 70",
+      "detail": "Moss Giants or Slayer. Unlocks barrows equipment access stat-wise.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "synth-strength-75-7",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Strength to 75",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "id": "train-ranged-30",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Ranged to 30",
+      "detail": "Chickens and cows with shortbow. Cheap feathered arrows.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1173
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3235,
+          "y": 3295,
+          "plane": 0,
+          "label": "Lumbridge chickens"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RANGED",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "id": "train-ranged-40",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Ranged to 40",
+      "detail": "Ogresses or Experiments. Equips green dragonhide.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RANGED",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "train-ranged-55",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Ranged to 55",
+      "detail": "Seagulls at Port Sarim or Chinchompas. Equips maple shortbow.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RANGED",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "id": "train-magic-55",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Magic to 55",
+      "detail": "High Alchemy on stackable items. Core money maker.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "id": "train-ranged-70",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Ranged to 70",
+      "detail": "Cannon tasks for fast Ranged XP. Unlocks black dragonhide.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RANGED",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "train-magic-70",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Magic to 70",
+      "detail": "Alching or Bursting at Crabs. Unlocks Ice Barrage prerequisite path.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "train-attack-70",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Attack to 70",
+      "detail": "Moss Giants, Blue Dragons, or Slayer tasks. Equips whip.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "train-defence-70",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Defence to 70",
+      "detail": "Slayer or NMZ.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 70
+        }
+      ]
+    },
+    {
+      "id": "synth-attack-75-6",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Attack to 75",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "id": "synth-defence-75-8",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Defence to 75",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "id": "synth-ranged-75-9",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Ranged to 75",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RANGED",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "id": "synth-magic-75-10",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Magic to 75",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "id": "train-prayer-74",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Prayer to 74",
+      "detail": "Wyvern/Dragon bones on altar. Unlocks Piety (requires quests).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "PRAYER",
+          "level": 74
+        }
+      ]
+    },
+    {
+      "id": "milestone-raids-cox",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "\u2605 Chambers of Xeric",
+      "detail": "Chambers of Xeric \u2014 the first raid; endgame gear like the twisted bow.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 75
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 75
+        },
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 75
+        },
+        {
+          "type": "SKILL",
+          "skill": "RANGED",
+          "level": 75
+        },
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 75
+        },
+        {
+          "type": "SKILL",
+          "skill": "PRAYER",
+          "level": 74
+        }
+      ]
+    },
+    {
+      "id": "bg-farm-allotment-setup",
+      "phase": "Endgame & extras",
+      "slotType": "background",
+      "cadenceMinutes": null,
+      "lifecycleState": "idle->active",
+      "instruction": "Set up: Check allotment patches",
+      "detail": "Plant potato, onion, or cabbage allotments; collect produce. Check at natural banking breaks \u2014 do not interrupt active training.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "unlock-gwd",
+      "phase": "Endgame & extras",
+      "instruction": "God Wars Dungeon access",
+      "detail": "Requires 60 Strength to enter. High-tier drops including Godswords.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2897,
+          "y": 5269,
+          "plane": 0,
+          "label": "God Wars Dungeon"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-tale-of-arrav",
+      "phase": "Endgame & extras",
+      "instruction": "Complete Tale of the Righteous (Zeah intro)",
+      "detail": "One of several quests enabling full Zeah access and CoX entry.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 1519,
+          "y": 3591,
+          "plane": 0,
+          "label": "Shayzien"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "unlock-barrows",
+      "phase": "Endgame & extras",
+      "instruction": "Barrows runs (starter)",
+      "detail": "Semi-consistent GP and gear. Entry-level bossing in Morytania.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3564,
+          "y": 3288,
+          "plane": 0,
+          "label": "Barrows mounds"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    }
+  ]
+}
