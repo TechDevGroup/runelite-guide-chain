@@ -2,6 +2,7 @@ package com.techdevgroup.guidechain.web;
 
 import com.techdevgroup.guidechain.data.ChainEntry;
 import com.techdevgroup.guidechain.data.CompletionCondition;
+import com.techdevgroup.guidechain.data.Dedupe;
 import com.techdevgroup.guidechain.data.GuideHint;
 import com.techdevgroup.guidechain.data.GuideMedia;
 import com.techdevgroup.guidechain.data.GuideRef;
@@ -20,9 +21,11 @@ import com.techdevgroup.guidechain.store.SessionMetrics;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import static com.techdevgroup.guidechain.web.Html.esc;
 
@@ -245,16 +248,18 @@ final class WebFragments
             sb.append("<span class=\"step-instruction\">").append(esc(r.step.instruction)).append("</span>\n");
         }
         sb.append("<div class=\"step-conds\">\n");
-        for (CompletionCondition c : r.step.completionConditions())
+        // De-dupe by rendered summary — dirty condition lists must not double a badge.
+        for (CompletionCondition c : Dedupe.by(r.step.completionConditions(), WebFragments::conditionSummary))
         {
             sb.append("<span class=\"cond-badge\">").append(esc(conditionSummary(c))).append("</span>\n");
         }
         sb.append("</div>\n");
         // Hint chips (GRANULARITY §4): rendered below conditions; advisory only.
-        if (!r.step.hints().isEmpty())
+        List<GuideHint> hints = Dedupe.hints(r.step.hints());
+        if (!hints.isEmpty())
         {
             sb.append("<div class=\"hint-chips\">\n");
-            for (GuideHint h : r.step.hints())
+            for (GuideHint h : hints)
             {
                 sb.append("<span class=\"hint-chip\" title=\"")
                   .append(esc(h.note != null ? h.note : ""))
@@ -265,10 +270,11 @@ final class WebFragments
             sb.append("</div>\n");
         }
         // Ref chips: wiki citation links that survive all htmx swaps via delegated handler.
-        if (!r.step.refs().isEmpty())
+        List<GuideRef> refs = Dedupe.refs(r.step.refs());
+        if (!refs.isEmpty())
         {
             sb.append("<div class=\"ref-chips\">\n");
-            for (GuideRef ref : r.step.refs())
+            for (GuideRef ref : refs)
             {
                 if (ref.title == null) continue;
                 sb.append("<a class=\"ref-chip\" href=\"#\"")
@@ -308,7 +314,10 @@ final class WebFragments
         StringBuilder sb = new StringBuilder();
         sb.append("<div class=\"detail-card\" hx-get=\"/fragments/step/")
           .append(esc(followCurrent ? "current" : key))
-          .append("\" hx-trigger=\"every 2s, guide-store-changed from:body\" hx-swap=\"outerHTML\"")
+          // Refresh on real store changes only — the blind every-2s poll re-fetched
+          // unchanging content and left a stuck htmx-request flicker (same root cause
+          // as the removed #plan poll). guide-store-changed still fires on every action.
+          .append("\" hx-trigger=\"guide-store-changed from:body\" hx-swap=\"outerHTML\"")
           // Resolved gid/sid key (even in "current"-follow mode) so app.js can detect
           // a step-focus change and fire the gallery fetch (FRAMES_GALLERY §3).
           .append(" data-step-key=\"").append(esc(row != null ? row.key : "")).append("\">\n");
@@ -411,15 +420,22 @@ final class WebFragments
         StringBuilder sb = new StringBuilder();
         sb.append("<h3 class=\"gallery-title\">Frames</h3>\n<div class=\"gallery-grid\">\n");
         List<GuideMedia> media = row.step.media();
+        // De-dupe by path but keep the ORIGINAL index — the /media/{key}/{n} blob
+        // route resolves n against the unfiltered media[], so re-indexing would 404.
+        Set<String> seenMedia = new HashSet<>();
         for (int i = 0; i < media.size(); i++)
         {
-            sb.append(galleryThumb(row.key, i, media.get(i)));
+            GuideMedia m = media.get(i);
+            String mediaKey = m.path != null ? m.path : m.url;
+            if (mediaKey != null && !seenMedia.add(mediaKey)) continue;
+            sb.append(galleryThumb(row.key, i, m));
         }
         sb.append("</div>\n");
-        if (!row.step.refs().isEmpty())
+        List<GuideRef> refs = Dedupe.refs(row.step.refs());
+        if (!refs.isEmpty())
         {
             sb.append("<div class=\"gallery-refs ref-chips\">\n");
-            for (GuideRef ref : row.step.refs())
+            for (GuideRef ref : refs)
             {
                 if (ref.title == null) continue;
                 sb.append("<a class=\"ref-chip\" href=\"#\"")
@@ -665,10 +681,11 @@ final class WebFragments
         {
             sb.append("<p class=\"lib-desc ref-notes\">").append(esc(truncate(e.notes, 220))).append("</p>\n");
         }
-        if (!e.refs().isEmpty())
+        List<GuideRef> refs = Dedupe.refs(e.refs());
+        if (!refs.isEmpty())
         {
             sb.append("<div class=\"ref-chips\">\n");
-            for (GuideRef ref : e.refs())
+            for (GuideRef ref : refs)
             {
                 if (ref.title == null) continue;
                 sb.append("<a class=\"ref-chip\" href=\"#\"")

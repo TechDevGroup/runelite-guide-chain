@@ -42,6 +42,20 @@ def ref_title(row):
     return refs[0].get("title") if refs and refs[0].get("title") else None
 
 
+def dedupe_refs(refs):
+    """Collapse repeated citations by url (fallback title), keeping first-seen
+    order — a diary row cites its page once per tier, so refs arrive tripled.
+    Belt-and-suspenders with the render-time dedupe in WebFragments/GuidePanel."""
+    out, seen = [], set()
+    for ref in refs or []:
+        key = ref.get("url") or ref.get("title")
+        if key is not None and key in seen:
+            continue
+        seen.add(key)
+        out.append(ref)
+    return out
+
+
 def quest_name(row):
     title = ref_title(row)
     return title if title else humanize(row["id"])
@@ -68,7 +82,7 @@ def load_quest_db():
             "name": name,
             "reqs": row.get("reqs"),
             "rewards": row.get("rewards"),
-            "refs": row.get("refs") or [],
+            "refs": dedupe_refs(row.get("refs")),
             "notes": row.get("notes"),
         })
     return rows
@@ -93,7 +107,7 @@ def load_contrib_db():
             "name": title if title else humanize(slug),
             "reqs": row.get(reqs_field),
             "rewards": row.get(rewards_field),
-            "refs": row.get("refs") or [],
+            "refs": dedupe_refs(row.get("refs")),
             "notes": row.get("notes"),
         })
     return rows

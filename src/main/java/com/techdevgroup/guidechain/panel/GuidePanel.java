@@ -1,6 +1,7 @@
 package com.techdevgroup.guidechain.panel;
 
 import com.techdevgroup.guidechain.data.ConditionType;
+import com.techdevgroup.guidechain.data.Dedupe;
 import com.techdevgroup.guidechain.data.Guide;
 import com.techdevgroup.guidechain.data.GuideHint;
 import com.techdevgroup.guidechain.data.GuideRef;
@@ -611,7 +612,7 @@ public class GuidePanel extends PluginPanel
         JPanel row = new JPanel(new FlowLayout(FlowLayout.LEFT, 4, 1));
         row.setBackground(ColorScheme.DARK_GRAY_COLOR);
         row.setAlignmentX(Component.LEFT_ALIGNMENT);
-        for (String label : step.passiveOverlays())
+        for (String label : Dedupe.strings(step.passiveOverlays()))
         {
             if (label == null) continue;
             row.add(chipLabel("+ " + label, ColorScheme.DARKER_GRAY_COLOR, new Color(180, 220, 180), null));
@@ -626,7 +627,7 @@ public class GuidePanel extends PluginPanel
         JPanel row = new JPanel(new FlowLayout(FlowLayout.LEFT, 4, 1));
         row.setBackground(ColorScheme.DARK_GRAY_COLOR);
         row.setAlignmentX(Component.LEFT_ALIGNMENT);
-        for (GuideHint h : step.hints())
+        for (GuideHint h : Dedupe.hints(step.hints()))
         {
             if (h == null) continue;
             row.add(chipLabel(hintChipLabel(h), ColorScheme.DARKER_GRAY_COLOR, Color.LIGHT_GRAY, h.note));
@@ -654,7 +655,7 @@ public class GuidePanel extends PluginPanel
         JPanel row = new JPanel(new FlowLayout(FlowLayout.LEFT, 4, 1));
         row.setBackground(ColorScheme.DARK_GRAY_COLOR);
         row.setAlignmentX(Component.LEFT_ALIGNMENT);
-        for (GuideRef ref : step.refs())
+        for (GuideRef ref : Dedupe.refs(step.refs()))
         {
             if (ref == null || ref.title == null) continue;
             String url = ref.url;
