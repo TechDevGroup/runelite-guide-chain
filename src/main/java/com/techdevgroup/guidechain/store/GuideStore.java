@@ -77,6 +77,8 @@ public final class GuideStore
     {
         int schemaVersion = SCHEMA_VERSION;
         String activeChainId;
+        /** CHAIN_CONSOLIDATION.md §2 — filters {@code plan()} rendering only; null = {@link Lens#FULL}. */
+        String activeLensId;
         int guideIndex;
         int stepIndex;
         Set<String> doneSteps    = new LinkedHashSet<>();
@@ -281,6 +283,39 @@ public final class GuideStore
         moveToFirstPending();
         save();
         notify("chain");
+    }
+
+    // ── Lens selection (CHAIN_CONSOLIDATION.md §2/§3, additive) ──────────────
+
+    /**
+     * Active lens id, defaulting to {@link Lens#FULL} — never null, so callers
+     * never need their own fallback. Mirrors {@link #activeChainId()}, except
+     * a lens always resolves (no manifest lookup can fail).
+     */
+    public synchronized String activeLensId()
+    {
+        return state.activeLensId != null ? state.activeLensId : Lens.FULL.id;
+    }
+
+    public synchronized Lens activeLens()
+    {
+        return Lens.byId(activeLensId());
+    }
+
+    /**
+     * Switch the active lens. Filters what {@link #plan()}'s rendering shows
+     * (via {@code WebFragments#planFragment()}) — never touches position,
+     * marks, or any other progression state, so toggling lenses can neither
+     * lose nor fork progress. Unknown ids resolve to {@link Lens#FULL}
+     * (same defensive fallback {@link Lens#byId} always applies).
+     */
+    public synchronized void selectLensById(String lensId)
+    {
+        String resolved = Lens.byId(lensId).id;
+        if (resolved.equals(activeLensId())) return; // no-op, avoids listener loops
+        state.activeLensId = resolved;
+        save();
+        notify("lens");
     }
 
     // ── Position / navigation ─────────────────────────────────────────────────

@@ -41,7 +41,7 @@ import java.util.logging.Logger;
  * <pre>
  * GET  /                              app shell
  * GET  /static/{file}                 vendored htmx / css / js / license
- * GET  /fragments/chains              chain picker partial
+ * GET  /fragments/chains              chain picker + lens segmented control partial
  * GET  /fragments/plan                ordered task list partial
  * GET  /fragments/reference           reference catalog partial (quest/diary/minigame/unlock; ?kind=)
  * GET  /fragments/step/current        detail partial following the position
@@ -49,6 +49,7 @@ import java.util.logging.Logger;
  * GET  /fragments/gallery/{gid}/{sid} media gallery partial for one step (FRAMES_GALLERY §3)
  * GET  /media/{gid}/{sid}/{n}         lazy media blob: bytes of step.media[n] (FRAMES_GALLERY §4)
  * POST /actions/select-chain          form: chain=&lt;chainId&gt;
+ * POST /actions/select-lens           form: lens=&lt;lensId&gt; (additive; chain unchanged)
  * POST /actions/step/{gid}/{sid}/done mark done (advances if current)
  * POST /actions/step/{gid}/{sid}/skip mark skipped (advances if current)
  * POST /actions/step/{gid}/{sid}/back move back one step
@@ -147,7 +148,7 @@ public final class GuideWebServer
                 if (path.startsWith("/static/"))               { serveStatic(ex, path.substring("/static/".length())); return; }
                 if (path.startsWith("/icon/item/"))            { serveItemIcon(ex, path.substring("/icon/item/".length())); return; }
                 if (path.startsWith("/media/"))                { serveMedia(ex, decode(path.substring("/media/".length()))); return; }
-                if ("/fragments/chains".equals(path))          { sendHtml(ex, fragments.chainsFragment()); return; }
+                if ("/fragments/chains".equals(path))          { sendHtml(ex, fragments.chainsFragment() + fragments.lensFragment()); return; }
                 if ("/fragments/plan".equals(path))            { sendHtml(ex, fragments.planFragment()); return; }
                 if ("/fragments/index".equals(path))           { sendHtml(ex, fragments.indexFragment()); return; }
                 if ("/fragments/library".equals(path))         { sendHtml(ex, fragments.libraryFragment()); return; }
@@ -191,6 +192,14 @@ public final class GuideWebServer
                     String chain = formParams(ex).get("chain");
                     store.recordWebAction();
                     if (chain != null) store.selectChainById(chain);
+                    sendPlanAfterAction(ex);
+                    return;
+                }
+                if ("/actions/select-lens".equals(path))
+                {
+                    String lens = formParams(ex).get("lens");
+                    store.recordWebAction();
+                    if (lens != null) store.selectLensById(lens);
                     sendPlanAfterAction(ex);
                     return;
                 }

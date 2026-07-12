@@ -15,6 +15,7 @@ import com.techdevgroup.guidechain.reference.ReferenceEntry;
 import com.techdevgroup.guidechain.reference.ReferenceStore;
 import com.techdevgroup.guidechain.store.ConditionStatus;
 import com.techdevgroup.guidechain.store.GuideStore;
+import com.techdevgroup.guidechain.store.Lens;
 import com.techdevgroup.guidechain.store.PlanRow;
 import com.techdevgroup.guidechain.store.SessionMetrics;
 
@@ -143,6 +144,28 @@ final class WebFragments
         return sb.toString();
     }
 
+    // ── Lens segmented control (CHAIN_CONSOLIDATION.md §2/§3, additive) ──────
+    //
+    // The chain dropdown above still selects WHICH spine/corpus is loaded;
+    // this control filters WHAT of the loaded spine's plan renders. Lens IS
+    // the lookup table (no if-ladder) — one button per Lens.values().
+
+    String lensFragment()
+    {
+        StringBuilder sb = new StringBuilder("<nav class=\"lenses\">\n");
+        String active = store.activeLensId();
+        for (Lens l : Lens.values())
+        {
+            boolean on = l.id.equals(active);
+            sb.append("<button class=\"btn lens").append(on ? " lens-on" : "")
+              .append("\" hx-post=\"/actions/select-lens\" hx-vals='{\"lens\":\"")
+              .append(l.id).append("\"}' hx-target=\"#plan\">").append(esc(l.label))
+              .append("</button>\n");
+        }
+        sb.append("</nav>\n");
+        return sb.toString();
+    }
+
     // ── Plan fragment ─────────────────────────────────────────────────────────
 
     String planFragment()
@@ -175,10 +198,17 @@ final class WebFragments
 
         sb.append("<ol class=\"plan-list\">\n");
         String lastGuide = null, lastPhase = null, lastCheckpoint = null;
+        // CHAIN_CONSOLIDATION.md §2/§3: the lens filters ROWS only; phase/checkpoint
+        // dividers below are computed from the full spine as today, so a contiguous
+        // run of lens-elided steps is flushed as one "N woven steps hidden" li right
+        // before whichever comes first — the next divider, or the next visible row.
+        Lens lens = store.activeLens();
+        int hiddenRun = 0;
         for (PlanRow r : rows)
         {
             if (!r.guideId.equals(lastGuide))
             {
+                hiddenRun = flushHiddenRun(sb, hiddenRun);
                 sb.append("<li class=\"guide-divider\">").append(esc(r.guideName)).append("</li>\n");
                 lastGuide = r.guideId;
                 lastPhase = null;
@@ -187,6 +217,7 @@ final class WebFragments
             String phase = r.step.phase;
             if (phase != null && !phase.equals(lastPhase))
             {
+                hiddenRun = flushHiddenRun(sb, hiddenRun);
                 sb.append("<li class=\"phase-divider\">").append(esc(phase)).append("</li>\n");
                 lastPhase = phase;
                 lastCheckpoint = null;  // reset checkpoint context on phase boundary
@@ -196,22 +227,47 @@ final class WebFragments
             String cp = r.step.checkpoint;
             if (cp != null && !cp.equals(lastCheckpoint))
             {
+                hiddenRun = flushHiddenRun(sb, hiddenRun);
                 sb.append("<li class=\"checkpoint-divider\">").append(esc(cp)).append("</li>\n");
                 lastCheckpoint = cp;
             }
-            // Checkpoint header records (id prefix "chkpt-") are rendered as dividers only.
+            // Checkpoint header records (id prefix "chkpt-") are rendered as dividers only —
+            // structural, not lens-filtered content, so they never count toward hiddenRun.
             if (r.step.id != null && r.step.id.startsWith("chkpt-"))
             {
                 continue;  // divider already emitted above; skip the step-row
             }
+            if (!lens.matches(r.step))
+            {
+                hiddenRun++;
+                continue;
+            }
+            hiddenRun = flushHiddenRun(sb, hiddenRun);
             sb.append(stepRow(r, true));
         }
+        flushHiddenRun(sb, hiddenRun);
         sb.append("</ol>\n");
         if (store.isChainComplete())
         {
             sb.append("<p class=\"chain-complete\">Chain complete &#127881;</p>\n");
         }
         return sb.toString();
+    }
+
+    /**
+     * Flushes a pending run of lens-elided steps as one "N woven steps
+     * hidden" divider with a one-click escape back to the Full lens
+     * (CHAIN_CONSOLIDATION.md §3 risk mitigation — filtered-out requisites
+     * stay reachable). No-op (returns 0) when nothing is pending.
+     */
+    private static int flushHiddenRun(StringBuilder sb, int hiddenRun)
+    {
+        if (hiddenRun <= 0) return 0;
+        sb.append("<li class=\"lens-hidden\">&middot; ").append(hiddenRun)
+          .append(hiddenRun == 1 ? " woven step hidden " : " woven steps hidden ").append("&middot; ")
+          .append("<button class=\"btn btn-ghost lens-reveal\" hx-post=\"/actions/select-lens\"")
+          .append(" hx-vals='{\"lens\":\"full\"}' hx-target=\"#plan\">show all &rarr;</button></li>\n");
+        return 0;
     }
 
     // ── Step row partial (REUSED: plan list rows + detail card header) ───────
