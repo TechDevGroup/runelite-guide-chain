@@ -1137,6 +1137,30 @@
           "slug": "Fossil_Island_Volcano.s1",
           "url": "https://oldschool.runescape.wiki/w/Fossil_Island_Volcano"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/452c2c/arrive.png",
+          "url": null,
+          "caption": "Draynor bank: player adjacent to the bank booths (withdraw loadout here)",
+          "state": {
+            "scenario": "draynor_bank",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/5916f3/observe.gif",
+          "url": null,
+          "caption": "Bank booths + bankers; the generic bank-withdraw scene",
+          "state": {
+            "scenario": "draynor_bank",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        }
       ]
     },
     {
@@ -1353,6 +1377,30 @@
           "slug": "Jatix's_Herblore_Shop",
           "url": "https://oldschool.runescape.wiki/w/Jatix%27s_Herblore_Shop."
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/708e12/arrive.png",
+          "url": null,
+          "caption": "Jatix's Herblore Shop, Taverley (pps-04-source-vials)",
+          "state": {
+            "scenario": "pps_04_jatix_taverley",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/9f9e7f/observe.gif",
+          "url": null,
+          "caption": "Jatix at his shop; stock vials of water non-GE",
+          "state": {
+            "scenario": "pps_04_jatix_taverley",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        }
       ]
     },
     {
@@ -1405,6 +1453,30 @@
           "title": "Vial of water",
           "slug": "Vial_of_water.s1",
           "url": "https://oldschool.runescape.wiki/w/Vial_of_water"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/57b8eb/arrive.png",
+          "url": null,
+          "caption": "Lumbridge Castle bank, third floor (pps-05-withdraw-brew)",
+          "state": {
+            "scenario": "lumbridge_bank_booth",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/a7bbf5/observe.gif",
+          "url": null,
+          "caption": "Player at the Lumbridge bank booth; withdraw the brewing loadout",
+          "state": {
+            "scenario": "lumbridge_bank_booth",
+            "rev": 236,
+            "oracle": "PASS"
+          }
         }
       ]
     },
