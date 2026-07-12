@@ -145,6 +145,90 @@ public class GuideStep
         }
     }
 
+    /**
+     * Opportunistic-granularity sub-checklist (GRANULARITY W3 Faux-grain
+     * atoms). ATTACH model, not flat-injection: this step (a quest- or
+     * train- coarse step) stays the routing/grant anchor; its atoms hang underneath
+     * it as an equal-grade granular breakdown. Null/empty = plain step, same
+     * additive-nullable contract as {@link #methods}. Attached only when the
+     * route opts in via {@code goal.granular:true} (enrich.py).
+     */
+    public SubChecklist subChecklist;
+
+    /** A step's granular action list + checkpoint dividers (subChecklist{} on the enrich.py side). */
+    public static final class SubChecklist
+    {
+        public List<SubStep> atoms;
+        public List<Checkpoint> checkpoints;
+
+        public List<SubStep> atoms()
+        {
+            return atoms != null ? atoms : Collections.emptyList();
+        }
+
+        public List<Checkpoint> checkpoints()
+        {
+            return checkpoints != null ? checkpoints : Collections.emptyList();
+        }
+    }
+
+    /**
+     * One granular action within a {@link SubChecklist} (steps_oppgran.jsonl
+     * atom row, projected to its render-relevant fields by enrich.py's
+     * {@code _project_subchecklist_atom}).
+     */
+    public static final class SubStep
+    {
+        public String id;
+        /** Instruction text, in the atom's own words (mirrors {@link GuideStep#instruction}). */
+        public String label;
+        public String detail;
+        public Atom atom;
+        public List<GuideHint> hints;
+        public List<GuideRef> refs;
+        /** Raw {item: qty, ...} maps — kept as Object, shape varies per atom (see reqs elsewhere). */
+        public Object produces;
+        public Object consumes;
+        /** Raw {region, zone, quest_gate, quest_phase} location descriptor. */
+        public Object location;
+        /** access | gather | produce | quest | train | unlock. */
+        public String kind;
+
+        public List<GuideHint> hints()
+        {
+            return hints != null ? hints : Collections.emptyList();
+        }
+
+        public List<GuideRef> refs()
+        {
+            return refs != null ? refs : Collections.emptyList();
+        }
+    }
+
+    /** verb/target/count/cmp/until action descriptor (GRANULARITY atom{}). */
+    public static final class Atom
+    {
+        public String verb;
+        public String target;
+        /** Null for state-only atoms (talk-to, walk-to, equip, ...). */
+        public Integer count;
+        /** eq | gte | null. */
+        public String cmp;
+        /**
+         * Raw completion-state gate — polymorphic ({@code {item:...}} |
+         * {@code {skill:...}} | {@code {state:...}} | {@code {drop:...}}),
+         * kept as Object like {@link TrainMethod#reqs}.
+         */
+        public Object until;
+    }
+
+    /** One checkpoint divider within a {@link SubChecklist}; {@code start} is its first member atom's id. */
+    public static final class Checkpoint
+    {
+        public String label;
+        public String start;
+    }
+
     // ── Convenience helpers ────────────────────────────────────────────────────
 
     public List<HighlightTarget> highlights()

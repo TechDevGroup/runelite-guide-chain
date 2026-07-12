@@ -416,6 +416,14 @@ final class WebFragments
             sb.append("<p class=\"detail-text\">").append(esc(step.detail)).append("</p>\n");
         }
 
+        // Granular sub-checklist (GRANULARITY W3 Faux-grain atoms, ATTACH
+        // model): additive to the method-picker/detail-text above — this
+        // step's own granular breakdown, not a replacement for it.
+        if (step.subChecklist != null && !step.subChecklist.atoms().isEmpty())
+        {
+            appendSubChecklist(sb, step.subChecklist);
+        }
+
         // Conditions with live values
         List<CompletionCondition> conds = step.completionConditions();
         if (!conds.isEmpty())
@@ -967,6 +975,75 @@ final class WebFragments
         if (members instanceof Boolean) return ((Boolean) members) ? "members" : "F2P";
         String s = members.toString().trim();
         return s.isEmpty() ? "" : "members " + s; // "??"
+    }
+
+    /**
+     * Renders a step's opportunistic-granularity sub-checklist (GRANULARITY
+     * W3 Faux-grain atoms, ATTACH model) as an ordered, equal-grade action
+     * list beneath the coarse step's own detail/method-picker — the coarse
+     * step stays the routing/grant anchor; this is its granular breakdown.
+     * Checkpoint dividers ({@code checkpoint.start} = first member atom id)
+     * split the list into named sub-groups, mirroring the main plan list's
+     * {@code .checkpoint-divider}.
+     */
+    private void appendSubChecklist(StringBuilder sb, GuideStep.SubChecklist sc)
+    {
+        List<GuideStep.SubStep> atoms = sc.atoms();
+        if (atoms.isEmpty()) return;
+        Map<String, String> checkpointAt = new LinkedHashMap<>();
+        for (GuideStep.Checkpoint cp : sc.checkpoints())
+        {
+            if (cp != null && cp.start != null && cp.label != null) checkpointAt.put(cp.start, cp.label);
+        }
+        sb.append("<h3>Sub-checklist <span class=\"pick-hint\">— granular steps</span></h3>\n");
+        sb.append("<ol class=\"subchecklist\">\n");
+        for (GuideStep.SubStep a : atoms)
+        {
+            if (a == null) continue;
+            String cpLabel = a.id != null ? checkpointAt.get(a.id) : null;
+            if (cpLabel != null)
+            {
+                sb.append("<li class=\"checkpoint-divider\">").append(esc(cpLabel)).append("</li>\n");
+            }
+            sb.append("<li class=\"substep\">\n");
+            sb.append("<div class=\"substep-instruction\">").append(esc(a.label != null ? a.label : "")).append("</div>\n");
+            String line = atomLine(a.atom);
+            if (!line.isEmpty())
+            {
+                sb.append("<div class=\"substep-atom\">").append(esc(line)).append("</div>\n");
+            }
+            if (a.detail != null && !a.detail.isEmpty())
+            {
+                sb.append("<div class=\"substep-detail\">").append(esc(a.detail)).append("</div>\n");
+            }
+            List<GuideHint> hints = Dedupe.hints(a.hints());
+            if (!hints.isEmpty())
+            {
+                sb.append("<div class=\"hint-chips\">\n");
+                for (GuideHint h : hints)
+                {
+                    sb.append("<span class=\"hint-chip\" title=\"")
+                      .append(esc(h.note != null ? h.note : ""))
+                      .append("\">")
+                      .append(esc(hintChipLabel(h)))
+                      .append("</span>\n");
+                }
+                sb.append("</div>\n");
+            }
+            appendRefChips(sb, Dedupe.refs(a.refs()));
+            sb.append("</li>\n");
+        }
+        sb.append("</ol>\n");
+    }
+
+    /** Compact "verb target ×count" line from an atom{} descriptor; empty when verb is absent. */
+    private static String atomLine(GuideStep.Atom atom)
+    {
+        if (atom == null || atom.verb == null || atom.verb.isEmpty()) return "";
+        StringBuilder sb = new StringBuilder(atom.verb);
+        if (atom.target != null && !atom.target.isEmpty()) sb.append(' ').append(atom.target);
+        if (atom.count != null) sb.append(" ×").append(atom.count);
+        return sb.toString();
     }
 
     /** Shared wiki ref-chip render (step detail + method picker). */
