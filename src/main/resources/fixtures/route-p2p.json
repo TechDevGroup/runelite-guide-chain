@@ -24,6 +24,55 @@
       ]
     },
     {
+      "id": "train-cooking-20",
+      "phase": "Toward Ardougne Easy Diary",
+      "instruction": "Train Cooking to 20",
+      "detail": "Cook shrimps and anchovies. Use range to avoid burning.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "COOKING",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "id": "train-fishing-20",
+      "phase": "Toward Ardougne Easy Diary",
+      "instruction": "Train Fishing to 20",
+      "detail": "Shrimps and anchovies at Draynor or Lumbridge Swamp.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3088,
+          "y": 3255,
+          "plane": 0,
+          "label": "Draynor Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FISHING",
+          "level": 20
+        }
+      ]
+    },
+    {
       "id": "steer-ardougne-easy-diary",
       "phase": "Toward Ardougne Easy Diary",
       "steerKind": "progress_metric",
@@ -488,6 +537,21 @@
       ]
     },
     {
+      "id": "train-prayer-22",
+      "phase": "Toward God Wars Dungeon",
+      "instruction": "Train Prayer to 22",
+      "detail": "Bury regular bones. Unlocks Protect Item prayer.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "PRAYER",
+          "level": 22
+        }
+      ]
+    },
+    {
       "id": "train-strength-30",
       "phase": "Toward God Wars Dungeon",
       "instruction": "Train Strength to 30",
@@ -511,6 +575,21 @@
           "type": "SKILL",
           "skill": "STRENGTH",
           "level": 30
+        }
+      ]
+    },
+    {
+      "id": "train-prayer-43",
+      "phase": "Toward God Wars Dungeon",
+      "instruction": "Train Prayer to 43",
+      "detail": "Bury big bones or use guilded altar. Unlocks Protect from Melee.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "PRAYER",
+          "level": 43
         }
       ]
     },
@@ -564,36 +643,6 @@
       ]
     },
     {
-      "id": "train-prayer-22",
-      "phase": "Toward God Wars Dungeon",
-      "instruction": "Train Prayer to 22",
-      "detail": "Bury regular bones. Unlocks Protect Item prayer.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "PRAYER",
-          "level": 22
-        }
-      ]
-    },
-    {
-      "id": "train-prayer-43",
-      "phase": "Toward God Wars Dungeon",
-      "instruction": "Train Prayer to 43",
-      "detail": "Bury big bones or use guilded altar. Unlocks Protect from Melee.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "PRAYER",
-          "level": 43
-        }
-      ]
-    },
-    {
       "id": "steer-graceful",
       "phase": "Toward God Wars Dungeon",
       "steerKind": "qol_gear",
@@ -626,6 +675,501 @@
           "type": "SKILL",
           "skill": "PRAYER",
           "level": 43
+        }
+      ]
+    },
+    {
+      "id": "bootstrap-gather-guam_weed-prayer-pot-supply",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Gather guam weed (bootstrap \u2014 one-time)",
+      "detail": "One-time low-tier gather before the prayer-pot-supply supply loop is established. Use drops (Hill Giants, slayer tasks) or NPC spawns. No rates known \u2014 \"??\" until measured.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "source-pineapples-charter",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Buy pineapples from Catherby charter ship",
+      "detail": "Purchase pineapples from the charter ship NPC at Catherby docks. Non-GE source. ~100 per visit depending on stock.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2834,
+          "y": 3445,
+          "plane": 0,
+          "label": "Catherby"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "setup-ultracompost",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Produce ultracompost (pineapples + volcanic ash)",
+      "detail": "Fill compost bins with 30 pineapples then add 15 volcanic ash per bin to produce ultracompost. Ahead-of-time stockpile before herb runs.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "gather-volcanic-ash",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Mine volcanic ash at Fossil Island",
+      "detail": "Mine volcanic ash from the ash piles on Fossil Island. Used to make ultracompost. Loop during farm-run downtime.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "farm-ranarr-patch",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Farm ranarr herb patches",
+      "detail": "Plant ranarr seeds in herb patches with ultracompost; harvest ranarr weed. ~6.5 ranarr per run at 32 Farming with ultracompost. Loop every ~80 minutes.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "farm-herb-patch-guam",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Farm guam herb patches",
+      "detail": "Plant guam seeds in herb patches; harvest guam weed. Provides early herblore training materials before ranarr is available. Loop every ~80 minutes.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "gather-snape-grass",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Gather snape grass at Waterbirth Island",
+      "detail": "Pick snape grass spawns on Waterbirth Island. No quest gate. JIT batch just before a brewing session.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "cook-monkfish",
+      "phase": "Supply: Monkfish Food Supply Chain",
+      "instruction": "Cook monkfish (Cooking 62)",
+      "detail": "Cook raw monkfish on a range. Stop burning at 92 (68 with cooking gauntlets). Terminal step of the monkfish food supply chain.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2834,
+          "y": 3445,
+          "plane": 0,
+          "label": "Catherby"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "gather-monkfish",
+      "phase": "Supply: Monkfish Food Supply Chain",
+      "instruction": "Fish monkfish at Piscatoris",
+      "detail": "Fish monkfish at the Piscatoris Fishing Colony. Requires Swan Song and Fishing 62. Cook for Barrows food supply.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2344,
+          "y": 3667,
+          "plane": 0,
+          "label": "Piscatoris Hunter area"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "bg-farm-allotment-setup",
+      "phase": "Toward Barrows runs",
+      "slotType": "background",
+      "cadenceMinutes": null,
+      "lifecycleState": "idle->active",
+      "instruction": "Set up: Check allotment patches",
+      "detail": "Plant potato, onion, or cabbage allotments; collect produce. Check at natural banking breaks \u2014 do not interrupt active training.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "train-woodcutting-15",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Woodcutting to 15",
+      "detail": "Regular trees near Lumbridge or Varrock. Use iron axe.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "WOODCUTTING",
+          "level": 15
+        }
+      ]
+    },
+    {
+      "id": "train-crafting-20",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Crafting to 20",
+      "detail": "Leather gloves and boots. Buy hides from GE.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CRAFTING",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "id": "train-smithing-15",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Smithing to 15",
+      "detail": "Bronze bars at Lumbridge furnace. Smelt then smith.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SMITHING",
+          "level": 15
+        }
+      ]
+    },
+    {
+      "id": "train-mining-15",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Mining to 15",
+      "detail": "Copper and tin in Lumbridge mines.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MINING",
+          "level": 15
+        }
+      ]
+    },
+    {
+      "id": "train-herblore-10",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Herblore to 10",
+      "detail": "Clean grimy guam leaves. Requires Druidic Ritual quest.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HERBLORE",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "id": "train-farming-17",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Farming to 17",
+      "detail": "Plant potato, onion, and cabbage allotments. Use compost.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1173
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3235,
+          "y": 3295,
+          "plane": 0,
+          "label": "Lumbridge chickens"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FARMING",
+          "level": 17
+        }
+      ]
+    },
+    {
+      "id": "train-herblore-38",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Herblore to 38",
+      "detail": "Make attack, strength, or stat-restore potions. Buy secondaries from GE.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HERBLORE",
+          "level": 38
+        }
+      ]
+    },
+    {
+      "id": "train-woodcutting-30",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Woodcutting to 30",
+      "detail": "Oak trees. Bank in Draynor or drop logs.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3088,
+          "y": 3255,
+          "plane": 0,
+          "label": "Draynor Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "WOODCUTTING",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "id": "train-smithing-30",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Smithing to 30",
+      "detail": "Iron bars. Buy from GE or mine in Al-Kharid mines.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3288,
+          "y": 3190,
+          "plane": 0,
+          "label": "Al Kharid"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SMITHING",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "id": "synth-mining-22-8",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Mining to 22",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MINING",
+          "level": 22
+        }
+      ]
+    },
+    {
+      "id": "synth-farming-32-7",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Farming to 32",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FARMING",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "id": "train-cooking-40",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Cooking to 40",
+      "detail": "Cook trout and salmon from Barbarian Village fishing spots.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 3103
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3081,
+          "y": 3420,
+          "plane": 0,
+          "label": "Barbarian Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "COOKING",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "train-fishing-40",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Fishing to 40",
+      "detail": "Trout and salmon at Barbarian Village. Bank nearby.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 3103
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3081,
+          "y": 3420,
+          "plane": 0,
+          "label": "Barbarian Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FISHING",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "train-crafting-40",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Crafting to 40",
+      "detail": "Gold amulets (u) or sapphire rings for decent XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "CRAFTING",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "train-smithing-40",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Smithing to 40",
+      "detail": "Steel bars. Consider Superheat for simultaneous Magic XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SMITHING",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "id": "synth-woodcutting-36-6",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Woodcutting to 36",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "WOODCUTTING",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "id": "synth-herblore-52-9",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Herblore to 52",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HERBLORE",
+          "level": 52
         }
       ]
     },
@@ -667,6 +1211,118 @@
       ]
     },
     {
+      "id": "train-cooking-58",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Cooking to 58",
+      "detail": "Cook lobsters. Stop burning at 74 with cooking gauntlets.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2834,
+          "y": 3445,
+          "plane": 0,
+          "label": "Catherby"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "COOKING",
+          "level": 58
+        }
+      ]
+    },
+    {
+      "id": "train-fishing-58",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Fishing to 58",
+      "detail": "Lobsters at Karamja or Catherby. Stocking food for combat.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FISHING",
+          "level": 58
+        }
+      ]
+    },
+    {
+      "id": "synth-smithing-45-13",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Smithing to 45",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SMITHING",
+          "level": 45
+        }
+      ]
+    },
+    {
+      "id": "train-magic-55",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Magic to 55",
+      "detail": "High Alchemy on stackable items. Core money maker.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "id": "synth-magic-66-10",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Magic to 66",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 66
+        }
+      ]
+    },
+    {
+      "id": "synth-cooking-62-11",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Cooking to 62",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "COOKING",
+          "level": 62
+        }
+      ]
+    },
+    {
+      "id": "synth-fishing-62-12",
+      "phase": "Toward Barrows runs",
+      "instruction": "Train Fishing to 62",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FISHING",
+          "level": 62
+        }
+      ]
+    },
+    {
       "id": "milestone-barrows",
       "phase": "Toward Barrows runs",
       "instruction": "\u2605 Barrows runs",
@@ -693,51 +1349,56 @@
           "type": "SKILL",
           "skill": "PRAYER",
           "level": 43
-        }
-      ]
-    },
-    {
-      "id": "train-prayer-52",
-      "phase": "Toward Chambers of Xeric",
-      "instruction": "Train Prayer to 52",
-      "detail": "Dragon bones on guilded altar. Unlocks Protect from Missiles.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
+        },
         {
           "type": "SKILL",
-          "skill": "PRAYER",
+          "skill": "CRAFTING",
+          "level": 40
+        },
+        {
+          "type": "SKILL",
+          "skill": "WOODCUTTING",
+          "level": 36
+        },
+        {
+          "type": "SKILL",
+          "skill": "FARMING",
+          "level": 32
+        },
+        {
+          "type": "SKILL",
+          "skill": "MINING",
+          "level": 22
+        },
+        {
+          "type": "SKILL",
+          "skill": "HERBLORE",
           "level": 52
-        }
-      ]
-    },
-    {
-      "id": "train-strength-70",
-      "phase": "Toward Chambers of Xeric",
-      "instruction": "Train Strength to 70",
-      "detail": "Moss Giants or Slayer. Unlocks barrows equipment access stat-wise.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
+        },
         {
           "type": "SKILL",
-          "skill": "STRENGTH",
-          "level": 70
-        }
-      ]
-    },
-    {
-      "id": "synth-strength-75-7",
-      "phase": "Toward Chambers of Xeric",
-      "instruction": "Train Strength to 75",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
+          "skill": "MAGIC",
+          "level": 66
+        },
         {
           "type": "SKILL",
-          "skill": "STRENGTH",
-          "level": 75
+          "skill": "COOKING",
+          "level": 62
+        },
+        {
+          "type": "SKILL",
+          "skill": "FISHING",
+          "level": 62
+        },
+        {
+          "type": "SKILL",
+          "skill": "FIREMAKING",
+          "level": 42
+        },
+        {
+          "type": "SKILL",
+          "skill": "SMITHING",
+          "level": 45
         }
       ]
     },
@@ -799,17 +1460,17 @@
       ]
     },
     {
-      "id": "train-magic-55",
+      "id": "train-prayer-52",
       "phase": "Toward Chambers of Xeric",
-      "instruction": "Train Magic to 55",
-      "detail": "High Alchemy on stackable items. Core money maker.",
+      "instruction": "Train Prayer to 52",
+      "detail": "Dragon bones on guilded altar. Unlocks Protect from Missiles.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
         {
           "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 55
+          "skill": "PRAYER",
+          "level": 52
         }
       ]
     },
@@ -859,6 +1520,21 @@
       ]
     },
     {
+      "id": "train-strength-70",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Strength to 70",
+      "detail": "Moss Giants or Slayer. Unlocks barrows equipment access stat-wise.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 70
+        }
+      ]
+    },
+    {
       "id": "train-defence-70",
       "phase": "Toward Chambers of Xeric",
       "instruction": "Train Defence to 70",
@@ -874,7 +1550,7 @@
       ]
     },
     {
-      "id": "synth-attack-75-6",
+      "id": "synth-attack-75-16",
       "phase": "Toward Chambers of Xeric",
       "instruction": "Train Attack to 75",
       "detail": "Synthetic step \u2014 no matching step found in bank.",
@@ -889,7 +1565,22 @@
       ]
     },
     {
-      "id": "synth-defence-75-8",
+      "id": "synth-strength-75-17",
+      "phase": "Toward Chambers of Xeric",
+      "instruction": "Train Strength to 75",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "id": "synth-defence-75-18",
       "phase": "Toward Chambers of Xeric",
       "instruction": "Train Defence to 75",
       "detail": "Synthetic step \u2014 no matching step found in bank.",
@@ -904,7 +1595,7 @@
       ]
     },
     {
-      "id": "synth-ranged-75-9",
+      "id": "synth-ranged-75-19",
       "phase": "Toward Chambers of Xeric",
       "instruction": "Train Ranged to 75",
       "detail": "Synthetic step \u2014 no matching step found in bank.",
@@ -919,7 +1610,7 @@
       ]
     },
     {
-      "id": "synth-magic-75-10",
+      "id": "synth-magic-75-20",
       "phase": "Toward Chambers of Xeric",
       "instruction": "Train Magic to 75",
       "detail": "Synthetic step \u2014 no matching step found in bank.",
@@ -989,13 +1680,10 @@
       ]
     },
     {
-      "id": "bg-farm-allotment-setup",
+      "id": "quest-bone-voyage",
       "phase": "Endgame & extras",
-      "slotType": "background",
-      "cadenceMinutes": null,
-      "lifecycleState": "idle->active",
-      "instruction": "Set up: Check allotment patches",
-      "detail": "Plant potato, onion, or cabbage allotments; collect produce. Check at natural banking breaks \u2014 do not interrupt active training.",
+      "instruction": "Complete Bone Voyage",
+      "detail": "Unlocks Fossil Island. Required to mine volcanic ash for ultracompost.",
       "highlights": [],
       "mapMarkers": [],
       "completionConditions": [
@@ -1005,19 +1693,76 @@
       ]
     },
     {
-      "id": "unlock-gwd",
+      "id": "quest-nature-spirit",
       "phase": "Endgame & extras",
-      "instruction": "God Wars Dungeon access",
-      "detail": "Requires 60 Strength to enter. High-tier drops including Godswords.",
+      "instruction": "Complete Nature Spirit",
+      "detail": "Unlocks the Mort Myre Swamp and nature grotto. Required for Fairytale I - Growing Pains.",
       "highlights": [],
-      "mapMarkers": [
+      "mapMarkers": [],
+      "completionConditions": [
         {
-          "x": 2897,
-          "y": 5269,
-          "plane": 0,
-          "label": "God Wars Dungeon"
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-druidic-ritual",
+      "phase": "Endgame & extras",
+      "instruction": "Complete Druidic Ritual",
+      "detail": "Required to train Herblore. Short quest, no stat requirements.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 5045
         }
       ],
+      "mapMarkers": [
+        {
+          "x": 2925,
+          "y": 3486,
+          "plane": 0,
+          "label": "Taverley (Druidic Ritual)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "synth-tag-supply-prayer-pot-supply-14",
+      "phase": "Endgame & extras",
+      "instruction": "Obtain supply-prayer-pot-supply",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "synth-tag-supply-food-monkfish-supply-15",
+      "phase": "Endgame & extras",
+      "instruction": "Obtain supply-food-monkfish-supply",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-fairytale-1",
+      "phase": "Endgame & extras",
+      "instruction": "Complete Fairytale I - Growing Pains",
+      "detail": "Unlocks herb patches worldwide. Critical prerequisite for the herb farming supply chain.",
+      "highlights": [],
+      "mapMarkers": [],
       "completionConditions": [
         {
           "type": "MANUAL"
@@ -1056,6 +1801,79 @@
           "y": 3288,
           "plane": 0,
           "label": "Barrows mounds"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "brew-prayer-potion",
+      "phase": "Endgame & extras",
+      "instruction": "Brew prayer potions (Herblore 52)",
+      "detail": "Combine ranarr weed + snape grass \u2192 prayer potion (4). Requires Druidic Ritual and Herblore 52. Terminal step of the prayer-pot supply chain.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-lost-city",
+      "phase": "Endgame & extras",
+      "instruction": "Complete Lost City",
+      "detail": "Unlocks Zanaris and cosmic rune altar. Grants access to dragon weaponry.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3209,
+          "y": 3165,
+          "plane": 0,
+          "label": "Lumbridge Swamp"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "quest-swan-song",
+      "phase": "Endgame & extras",
+      "instruction": "Complete Swan Song",
+      "detail": "Unlocks Piscatoris Fishing Colony monkfish spot. Required for the monkfish food supply chain.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2344,
+          "y": 3667,
+          "plane": 0,
+          "label": "Piscatoris Hunter area"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ]
+    },
+    {
+      "id": "unlock-gwd",
+      "phase": "Endgame & extras",
+      "instruction": "God Wars Dungeon access",
+      "detail": "Requires 60 Strength to enter. High-tier drops including Godswords.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2897,
+          "y": 5269,
+          "plane": 0,
+          "label": "God Wars Dungeon"
         }
       ],
       "completionConditions": [
