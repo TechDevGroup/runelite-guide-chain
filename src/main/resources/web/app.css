@@ -516,3 +516,129 @@ table.cov code { font-size: 0.72rem; color: var(--ink-dim); }
     border-left: none;
   }
 }
+
+/* ── Media gallery pane (FRAMES_GALLERY §3) ──────────────────────────────── */
+/* Sibling of #detail, outside the htmx swap zones — refreshed by app.js only
+   on step-focus-changed / guide-store-changed, never the 2s poll. */
+.gallery-pane[hidden] { display: none; }
+
+@media (min-width: 900px) {
+  #gallery { grid-column: 2; } /* stacks under #detail, same column */
+}
+
+.gallery-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-dim);
+  margin: 0 0 0.5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 0.5rem;
+}
+
+.gallery-thumb {
+  position: relative;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--pane-2);
+  cursor: pointer;
+  text-decoration: none;
+}
+.gallery-thumb:hover { border-color: var(--accent); }
+
+.gallery-thumb img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.media-rev-chip {
+  position: absolute;
+  right: 0.2rem;
+  bottom: 0.2rem;
+  font-size: 0.62rem;
+  color: var(--ink);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  padding: 0.02rem 0.3rem;
+}
+
+.gallery-refs { margin-top: 0.6rem; }
+
+/* ── Media lightbox — structural twin of the router editor's loadout-lightbox ── */
+.media-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.media-lightbox[hidden] { display: none; }
+
+.media-lightbox-modal {
+  background: var(--pane);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: min(90vw, 60rem);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.media-lightbox-hd {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.media-lightbox-caption {
+  font-weight: 600;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.media-lightbox-close { flex: 0 0 auto; }
+
+.media-lightbox-media { min-width: 0; }
+.media-lightbox-media img {
+  display: block;
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+.media-lightbox-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.media-chip {
+  font-size: 0.72rem;
+  color: var(--ink-dim);
+  background: var(--pane-2);
+  border-radius: 4px;
+  padding: 0.05rem 0.4rem;
+  overflow-wrap: anywhere;
+}
+
+.media-lightbox-refs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}

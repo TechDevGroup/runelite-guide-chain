@@ -67,6 +67,14 @@ public class GuideStep
      */
     public List<GuideRef> refs;
 
+    /**
+     * Optional captured frames/gifs (FRAMES_GALLERY §1). Null/empty = no
+     * gallery pane rendered for this step. Additive-nullable: plugin-safe,
+     * same pattern as {@link #refs}. Order is display order; entry 0 is the
+     * step's thumbnail wherever a single image is wanted.
+     */
+    public List<GuideMedia> media;
+
     // ── SYNTHESIS §1e — sequencer + background + steer (Lane 4 owns the Java side) ──
 
     /**
@@ -132,6 +140,11 @@ public class GuideStep
     public List<GuideRef> refs()
     {
         return refs != null ? refs : Collections.emptyList();
+    }
+
+    public List<GuideMedia> media()
+    {
+        return media != null ? media : Collections.emptyList();
     }
 
     public List<String> passiveOverlays()

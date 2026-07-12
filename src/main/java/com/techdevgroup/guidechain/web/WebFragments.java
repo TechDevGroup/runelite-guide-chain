@@ -3,6 +3,7 @@ package com.techdevgroup.guidechain.web;
 import com.techdevgroup.guidechain.data.ChainEntry;
 import com.techdevgroup.guidechain.data.CompletionCondition;
 import com.techdevgroup.guidechain.data.GuideHint;
+import com.techdevgroup.guidechain.data.GuideMedia;
 import com.techdevgroup.guidechain.data.GuideRef;
 import com.techdevgroup.guidechain.data.GuideStep;
 import com.techdevgroup.guidechain.data.ConditionType;
@@ -63,6 +64,11 @@ final class WebFragments
             + " hx-trigger=\"load, every 2s, guide-store-changed from:body\"></section>\n"
             + "  <aside id=\"detail\" class=\"pane\" hx-get=\"/fragments/step/current\""
             + " hx-trigger=\"load\"></aside>\n"
+            // FRAMES_GALLERY §3: gallery pane is a sibling OUTSIDE the #plan/#detail
+            // swap zones — #detail is replaced (hx-swap=outerHTML) on every 2s poll,
+            // so anything stateful inside it is destroyed. This pane is refreshed only
+            // by plain JS on step-focus-changed / guide-store-changed (see app.js).
+            + "  <aside id=\"gallery\" class=\"pane gallery-pane\" hidden></aside>\n"
             + "</main>\n"
             + "<aside id=\"wikibox\" class=\"wikibox\" hidden>\n"
             + "  <header class=\"wikibox-header\">\n"
@@ -72,6 +78,20 @@ final class WebFragments
             + "  </header>\n"
             + "  <iframe id=\"wikibox-frame\" src=\"about:blank\" title=\"Wiki article\"></iframe>\n"
             + "</aside>\n"
+            // FRAMES_GALLERY §3: media lightbox — structural twin of the router editor's
+            // loadout-lightbox (full-screen overlay, click-outside or close-button to
+            // dismiss). Outside the swap zones, so it survives #plan/#detail polling.
+            + "<div id=\"media-lightbox\" class=\"media-lightbox\" hidden>\n"
+            + "  <div class=\"media-lightbox-modal\">\n"
+            + "    <div class=\"media-lightbox-hd\">\n"
+            + "      <span id=\"media-lightbox-caption\" class=\"media-lightbox-caption\"></span>\n"
+            + "      <button id=\"media-lightbox-close\" class=\"btn btn-ghost media-lightbox-close\">&#x2715;</button>\n"
+            + "    </div>\n"
+            + "    <div id=\"media-lightbox-media\" class=\"media-lightbox-media\"></div>\n"
+            + "    <div id=\"media-lightbox-chips\" class=\"media-lightbox-chips\"></div>\n"
+            + "    <div id=\"media-lightbox-refs\" class=\"media-lightbox-refs\"></div>\n"
+            + "  </div>\n"
+            + "</div>\n"
             + "<footer class=\"foot\">\n"
             + "  <span id=\"metrics\"></span>\n"
             + "  <span class=\"foot-links\"><a href=\"/api/state.json\">state.json</a>"
@@ -273,7 +293,10 @@ final class WebFragments
         StringBuilder sb = new StringBuilder();
         sb.append("<div class=\"detail-card\" hx-get=\"/fragments/step/")
           .append(esc(followCurrent ? "current" : key))
-          .append("\" hx-trigger=\"every 2s, guide-store-changed from:body\" hx-swap=\"outerHTML\">\n");
+          .append("\" hx-trigger=\"every 2s, guide-store-changed from:body\" hx-swap=\"outerHTML\"")
+          // Resolved gid/sid key (even in "current"-follow mode) so app.js can detect
+          // a step-focus change and fire the gallery fetch (FRAMES_GALLERY §3).
+          .append(" data-step-key=\"").append(esc(row != null ? row.key : "")).append("\">\n");
 
         sb.append("<div class=\"detail-head\">\n<h2>")
           .append(followCurrent ? "Current step" : "Step detail").append("</h2>\n");
@@ -355,6 +378,100 @@ final class WebFragments
 
         sb.append("</div>\n");
         return sb.toString();
+    }
+
+    // ── Media gallery fragment (FRAMES_GALLERY §3) ────────────────────────────
+
+    /**
+     * Thumbnail grid + wiki-ref chips for one step's {@code media[]}, or the
+     * empty string when the step carries no media — the caller (app.js)
+     * collapses the {@code #gallery} pane to nothing in that case. {@code key}
+     * is the same {@code guideId/stepId} key every other step route uses.
+     */
+    String galleryFragment(String key)
+    {
+        PlanRow row = key != null && !key.isEmpty() ? store.planRow(key) : null;
+        if (row == null || row.step.media().isEmpty()) return "";
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("<h3 class=\"gallery-title\">Frames</h3>\n<div class=\"gallery-grid\">\n");
+        List<GuideMedia> media = row.step.media();
+        for (int i = 0; i < media.size(); i++)
+        {
+            sb.append(galleryThumb(row.key, i, media.get(i)));
+        }
+        sb.append("</div>\n");
+        if (!row.step.refs().isEmpty())
+        {
+            sb.append("<div class=\"gallery-refs ref-chips\">\n");
+            for (GuideRef ref : row.step.refs())
+            {
+                if (ref.title == null) continue;
+                sb.append("<a class=\"ref-chip\" href=\"#\"")
+                  .append(" data-wiki-title=\"").append(esc(ref.title)).append("\"")
+                  .append(" data-wiki-url=\"").append(esc(ref.url != null ? ref.url : "")).append("\"")
+                  .append(">&#128214; ").append(esc(ref.title)).append("</a>\n");
+            }
+            sb.append("</div>\n");
+        }
+        return sb.toString();
+    }
+
+    private String galleryThumb(String stepKey, int index, GuideMedia m)
+    {
+        String src = "/media/" + stepKey + "/" + index;
+        Object rev = m.state().get("rev");
+        Object scenario = m.state().get("scenario");
+        Object tile = m.state().get("tile");
+        Object captured = m.state().get("captured");
+        String revStr = rev != null ? stateValueStr(rev) : null;
+        String caption = m.caption != null ? m.caption : "";
+        StringBuilder sb = new StringBuilder();
+        sb.append("<a class=\"gallery-thumb\" href=\"#\"")
+          .append(" data-media-src=\"").append(esc(src)).append("\"")
+          .append(" data-media-kind=\"").append(esc(m.kind != null ? m.kind : "png")).append("\"")
+          .append(" data-caption=\"").append(esc(caption)).append("\"")
+          .append(" data-rev=\"").append(revStr != null ? esc(revStr) : "").append("\"")
+          .append(" data-scenario=\"").append(scenario != null ? esc(stateValueStr(scenario)) : "").append("\"")
+          .append(" data-tile=\"").append(tile != null ? esc(stateValueStr(tile)) : "").append("\"")
+          .append(" data-captured=\"").append(captured != null ? esc(stateValueStr(captured)) : "").append("\"")
+          .append(" title=\"").append(esc(caption)).append("\">\n")
+          .append("<img src=\"").append(esc(src)).append("\" alt=\"").append(esc(caption))
+          .append("\" loading=\"lazy\">\n");
+        if (revStr != null)
+        {
+            sb.append("<span class=\"media-rev-chip\">r").append(esc(revStr)).append("</span>\n");
+        }
+        sb.append("</a>\n");
+        return sb.toString();
+    }
+
+    /**
+     * Renders a Gson-parsed {@code state{}} value for display. Gson decodes
+     * bare JSON numbers inside {@code Map<String,Object>} as {@code Double}
+     * (there is no static type to guide it), so a whole number like
+     * {@code rev: 236} round-trips as {@code 236.0} — strip the trailing
+     * {@code .0} rather than surface Gson's internal representation.
+     */
+    private static String stateValueStr(Object v)
+    {
+        if (v instanceof Double)
+        {
+            double d = (Double) v;
+            return d == Math.rint(d) && !Double.isInfinite(d) ? String.valueOf((long) d) : String.valueOf(d);
+        }
+        if (v instanceof List)
+        {
+            List<?> list = (List<?>) v;
+            StringBuilder sb = new StringBuilder("[");
+            for (int i = 0; i < list.size(); i++)
+            {
+                if (i > 0) sb.append(", ");
+                sb.append(stateValueStr(list.get(i)));
+            }
+            return sb.append(']').toString();
+        }
+        return String.valueOf(v);
     }
 
     // ── Guide library (reference directory, grouped by category) ─────────────

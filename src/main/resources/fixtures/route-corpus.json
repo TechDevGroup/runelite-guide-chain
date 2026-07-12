@@ -687,40 +687,6 @@
       ]
     },
     {
-      "id": "train-defence-80",
-      "phase": "Region: Kandarin",
-      "instruction": "Train Defence to 80",
-      "detail": "NMZ AFK.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 1120
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 2608,
-          "y": 3116,
-          "plane": 0,
-          "label": "Nightmare Zone (Yanille)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "DEFENCE",
-          "level": 80
-        }
-      ],
-      "refs": [
-        {
-          "title": "Pay-to-play Melee training",
-          "slug": "Pay-to-play_Melee_training.s1",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
-        }
-      ]
-    },
-    {
       "id": "train-hitpoints-20",
       "phase": "Region: Global",
       "instruction": "Hitpoints 1\u219220 (passive)",
@@ -940,40 +906,6 @@
         {
           "title": "Pay-to-play Ranged training",
           "slug": "Pay-to-play_Ranged_training.s9",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
-        }
-      ]
-    },
-    {
-      "id": "train-ranged-99",
-      "phase": "Region: Ape Atoll",
-      "instruction": "Train Ranged to 99",
-      "detail": "Chinchompas at Ape Atoll or MM2 tunnels for best XP rate.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 7118
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 2629,
-          "y": 9252,
-          "plane": 0,
-          "label": "Ape Atoll (Maniacal Monkeys)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "RANGED",
-          "level": 99
-        }
-      ],
-      "refs": [
-        {
-          "title": "Pay-to-play Ranged training",
-          "slug": "Pay-to-play_Ranged_training.s4",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
         }
       ]
@@ -1320,28 +1252,6 @@
       ]
     },
     {
-      "id": "train-magic-94",
-      "phase": "Region: Global",
-      "instruction": "Train Magic to 94",
-      "detail": "Ancient Magicks Bursting/Barraging. Requires Desert Treasure.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 94
-        }
-      ],
-      "refs": [
-        {
-          "title": "Pay-to-play Magic training",
-          "slug": "Pay-to-play_Magic_training.s11",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
-        }
-      ]
-    },
-    {
       "id": "train-cooking-20",
       "phase": "Region: Misthalin",
       "instruction": "Train Cooking to 20",
@@ -1498,57 +1408,6 @@
         {
           "title": "Pay-to-play Cooking training",
           "slug": "Pay-to-play_Cooking_training.s4",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
-        }
-      ]
-    },
-    {
-      "id": "train-cooking-74",
-      "phase": "Region: Kandarin",
-      "instruction": "Train Cooking to 74",
-      "detail": "Swordfish or sharks. Use cooking gauntlets for faster success rate.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 2834,
-          "y": 3445,
-          "plane": 0,
-          "label": "Catherby"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "COOKING",
-          "level": 74
-        }
-      ],
-      "refs": [
-        {
-          "title": "Pay-to-play Cooking training",
-          "slug": "Pay-to-play_Cooking_training.s3",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
-        }
-      ]
-    },
-    {
-      "id": "train-cooking-99",
-      "phase": "Region: Karamja",
-      "instruction": "Train Cooking to 99",
-      "detail": "Karambwans (1-tick) or wines for fastest XP. Karambwans require Tai Bwo Wannai Trio.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "COOKING",
-          "level": 99
-        }
-      ],
-      "refs": [
-        {
-          "title": "Pay-to-play Cooking training",
-          "slug": "Pay-to-play_Cooking_training.s3",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
         }
       ]
@@ -1852,28 +1711,6 @@
           "type": "SKILL",
           "skill": "FLETCHING",
           "level": 70
-        }
-      ],
-      "refs": [
-        {
-          "title": "Fletching training",
-          "slug": "Fletching_training",
-          "url": "https://oldschool.runescape.wiki/w/Fletching_training"
-        }
-      ]
-    },
-    {
-      "id": "train-fletching-99",
-      "phase": "Region: Global",
-      "instruction": "Train Fletching to 99",
-      "detail": "Dragon darts or Magic longbow strings for fast XP. Dragon darts require RFD subquest.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "FLETCHING",
-          "level": 99
         }
       ],
       "refs": [
@@ -2560,72 +2397,6 @@
       ]
     },
     {
-      "id": "train-smithing-60",
-      "phase": "Region: Global",
-      "instruction": "Train Smithing to 60",
-      "detail": "Gold bars with Goldsmith gauntlets (Family Crest quest) for fast XP.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "SMITHING",
-          "level": 60
-        }
-      ],
-      "refs": [
-        {
-          "title": "Pay-to-play Smithing training",
-          "slug": "Pay-to-play_Smithing_training.s3",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
-        }
-      ]
-    },
-    {
-      "id": "train-smithing-70",
-      "phase": "Region: Kandarin",
-      "instruction": "Train Smithing to 70",
-      "detail": "Blast Furnace mithril/adamant for best XP/gp ratio.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "SMITHING",
-          "level": 70
-        }
-      ],
-      "refs": [
-        {
-          "title": "Pay-to-play Smithing training",
-          "slug": "Pay-to-play_Smithing_training.s3",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
-        }
-      ]
-    },
-    {
-      "id": "train-smithing-99",
-      "phase": "Region: Kandarin",
-      "instruction": "Train Smithing to 99",
-      "detail": "Blast Furnace rune bars \u2014 profit while training. Best GP/hr smithing method.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "SMITHING",
-          "level": 99
-        }
-      ],
-      "refs": [
-        {
-          "title": "Pay-to-play Smithing training",
-          "slug": "Pay-to-play_Smithing_training.s3",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
-        }
-      ]
-    },
-    {
       "id": "train-mining-15",
       "phase": "Region: Misthalin",
       "instruction": "Train Mining to 15",
@@ -2824,166 +2595,6 @@
       ]
     },
     {
-      "id": "train-herblore-10",
-      "phase": "Region: Kandarin",
-      "instruction": "Train Herblore to 10",
-      "detail": "Clean grimy guam leaves. Requires Druidic Ritual quest.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "HERBLORE",
-          "level": 10
-        }
-      ],
-      "atom": {
-        "verb": "produce",
-        "target": "clean_guam_leaf",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "skill": {
-            "herblore": 10
-          }
-        }
-      },
-      "refs": [
-        {
-          "title": "Experience",
-          "slug": "Experience_table.s2",
-          "url": "https://oldschool.runescape.wiki/w/Experience"
-        },
-        {
-          "title": "Herblore training",
-          "slug": "Pay-to-play_Herblore_training.s2",
-          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
-        },
-        {
-          "title": "Herblore training",
-          "slug": "Pay-to-play_Herblore_training.s6",
-          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
-        }
-      ]
-    },
-    {
-      "id": "train-herblore-38",
-      "phase": "Region: Global",
-      "instruction": "Train Herblore to 38",
-      "detail": "Make attack, strength, or stat-restore potions. Buy secondaries from GE.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "HERBLORE",
-          "level": 38
-        }
-      ],
-      "atom": {
-        "verb": "produce",
-        "target": "strength_potion",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "skill": {
-            "herblore": 38
-          }
-        }
-      },
-      "hints": [
-        {
-          "type": "rng-variance",
-          "target": "limpwurt_root_source",
-          "value": "??",
-          "note": "Non-GE gather/vendor source for Limpwurt root not confirmed by a fetched page \u2014 left ?? rather than guessed."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Experience",
-          "slug": "Experience_table.s2",
-          "url": "https://oldschool.runescape.wiki/w/Experience"
-        },
-        {
-          "title": "Strength potion",
-          "slug": "Strength_potion.s3",
-          "url": "https://oldschool.runescape.wiki/w/Strength_potion"
-        },
-        {
-          "title": "Herblore training",
-          "slug": "Pay-to-play_Herblore_training.s6",
-          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
-        }
-      ]
-    },
-    {
-      "id": "train-herblore-55",
-      "phase": "Region: Global",
-      "instruction": "Train Herblore to 55",
-      "detail": "Super restore or prayer potions. Used heavily in bossing.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "HERBLORE",
-          "level": 55
-        }
-      ],
-      "refs": [
-        {
-          "title": "Herblore training",
-          "slug": "Pay-to-play_Herblore_training.s2",
-          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
-        }
-      ]
-    },
-    {
-      "id": "train-herblore-70",
-      "phase": "Region: Global",
-      "instruction": "Train Herblore to 70",
-      "detail": "Super combat potions at 90 or anti-fire potions at 69.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "HERBLORE",
-          "level": 70
-        }
-      ],
-      "refs": [
-        {
-          "title": "Herblore training",
-          "slug": "Pay-to-play_Herblore_training.s2",
-          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
-        }
-      ]
-    },
-    {
-      "id": "train-herblore-99",
-      "phase": "Region: Global",
-      "instruction": "Train Herblore to 99",
-      "detail": "Stamina potions, ranging potions, or divine potions for end-game. GP intensive.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "HERBLORE",
-          "level": 99
-        }
-      ],
-      "refs": [
-        {
-          "title": "Herblore training",
-          "slug": "Pay-to-play_Herblore_training.s2",
-          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
-        }
-      ]
-    },
-    {
       "id": "train-agility-10",
       "phase": "Region: Kandarin",
       "instruction": "Train Agility to 10",
@@ -3060,122 +2671,6 @@
           "type": "SKILL",
           "skill": "AGILITY",
           "level": 40
-        }
-      ],
-      "refs": [
-        {
-          "title": "Agility training",
-          "slug": "Agility_training",
-          "url": "https://oldschool.runescape.wiki/w/Agility_training"
-        }
-      ]
-    },
-    {
-      "id": "train-agility-52",
-      "phase": "Region: Morytania",
-      "instruction": "Train Agility to 52",
-      "detail": "Canifis Rooftop Course. Highest marks/hr early-mid game.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3493,
-          "y": 3471,
-          "plane": 0,
-          "label": "Canifis rooftop course"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "AGILITY",
-          "level": 52
-        }
-      ],
-      "refs": [
-        {
-          "title": "Agility training",
-          "slug": "Agility_training",
-          "url": "https://oldschool.runescape.wiki/w/Agility_training"
-        }
-      ]
-    },
-    {
-      "id": "train-agility-60",
-      "phase": "Region: Asgarnia",
-      "instruction": "Train Agility to 60",
-      "detail": "Falador or Seers' Rooftop. Unlock shortcut network for efficient traversal.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3045,
-          "y": 3339,
-          "plane": 0,
-          "label": "Falador rooftop course"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "AGILITY",
-          "level": 60
-        }
-      ],
-      "refs": [
-        {
-          "title": "Agility training",
-          "slug": "Agility_training",
-          "url": "https://oldschool.runescape.wiki/w/Agility_training"
-        }
-      ]
-    },
-    {
-      "id": "train-agility-90",
-      "phase": "Region: Kandarin",
-      "instruction": "Train Agility to 90",
-      "detail": "Ardougne Rooftop (best marks) or Werewolf Course. Graceful recolor at 260 marks.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 2669,
-          "y": 3298,
-          "plane": 0,
-          "label": "Ardougne rooftop course"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "AGILITY",
-          "level": 90
-        }
-      ],
-      "refs": [
-        {
-          "title": "Agility training",
-          "slug": "Agility_training",
-          "url": "https://oldschool.runescape.wiki/w/Agility_training"
-        }
-      ]
-    },
-    {
-      "id": "train-agility-99",
-      "phase": "Region: Kandarin",
-      "instruction": "Train Agility to 99",
-      "detail": "Ardougne Rooftop or Hallowed Sepulchre for best XP and loot.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 2669,
-          "y": 3298,
-          "plane": 0,
-          "label": "Ardougne rooftop course"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "AGILITY",
-          "level": 99
         }
       ],
       "refs": [
@@ -3381,74 +2876,6 @@
       ]
     },
     {
-      "id": "train-thieving-65",
-      "phase": "Region: Kharidian Desert",
-      "instruction": "Train Thieving to 65",
-      "detail": "Blackjack Menaphite thugs in Pollnivneach. Best XP/hr method, requires Desert Treasure area access.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 6138
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3333,
-          "y": 2952,
-          "plane": 0,
-          "label": "Pollnivneach"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "THIEVING",
-          "level": 65
-        }
-      ],
-      "refs": [
-        {
-          "title": "Thieving training",
-          "slug": "Blackjacking.s1",
-          "url": "https://oldschool.runescape.wiki/w/Thieving_training"
-        }
-      ]
-    },
-    {
-      "id": "train-thieving-99",
-      "phase": "Region: Kharidian Desert",
-      "instruction": "Train Thieving to 99",
-      "detail": "Blackjack Menaphite thugs or Master Farmers at 38+ for seeds.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 6138
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3333,
-          "y": 2952,
-          "plane": 0,
-          "label": "Pollnivneach"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "THIEVING",
-          "level": 99
-        }
-      ],
-      "refs": [
-        {
-          "title": "Thieving training",
-          "slug": "Blackjacking.s1",
-          "url": "https://oldschool.runescape.wiki/w/Thieving_training"
-        }
-      ]
-    },
-    {
       "id": "train-slayer-20",
       "phase": "Region: Asgarnia",
       "instruction": "Train Slayer to 20",
@@ -3545,28 +2972,6 @@
           "type": "SKILL",
           "skill": "SLAYER",
           "level": 75
-        }
-      ],
-      "refs": [
-        {
-          "title": "Slayer training",
-          "slug": "Slayer_training.s2",
-          "url": "https://oldschool.runescape.wiki/w/Slayer_training"
-        }
-      ]
-    },
-    {
-      "id": "train-slayer-task-morytania",
-      "phase": "Region: Morytania",
-      "instruction": "Slayer tasks in Morytania",
-      "detail": "Bloodvelds, gargoyles, abyssal demons. Excellent GP + XP combination.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "SLAYER",
-          "level": 85
         }
       ],
       "refs": [
@@ -3769,108 +3174,6 @@
           "type": "SKILL",
           "skill": "RUNECRAFT",
           "level": 27
-        }
-      ],
-      "refs": [
-        {
-          "title": "Pay-to-play Runecraft training",
-          "slug": "Runecraft_training",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
-        }
-      ]
-    },
-    {
-      "id": "train-runecraft-44",
-      "phase": "Region: Zanaris",
-      "instruction": "Train Runecraft to 44",
-      "detail": "Cosmic runes on Zanaris (requires Lost City quest). Unlocks double cosmic runes.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "RUNECRAFT",
-          "level": 44
-        }
-      ],
-      "refs": [
-        {
-          "title": "Pay-to-play Runecraft training",
-          "slug": "Runecraft_training",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
-        }
-      ]
-    },
-    {
-      "id": "train-runecraft-59",
-      "phase": "Region: Karamja",
-      "instruction": "Train Runecraft to 59",
-      "detail": "Nature runes on Karamja. Unlocks double nats at 91.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 2868,
-          "y": 3017,
-          "plane": 0,
-          "label": "Nature altar"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "RUNECRAFT",
-          "level": 59
-        }
-      ],
-      "refs": [
-        {
-          "title": "Pay-to-play Runecraft training",
-          "slug": "Runecraft_training",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
-        }
-      ]
-    },
-    {
-      "id": "train-runecraft-75",
-      "phase": "Region: Asgarnia",
-      "instruction": "Train Runecraft to 75",
-      "detail": "Lava runes with Ring of Dueling. Best XP/hr for Runecraft, low profit.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3319,
-          "y": 3250,
-          "plane": 0,
-          "label": "Fire altar"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "RUNECRAFT",
-          "level": 75
-        }
-      ],
-      "refs": [
-        {
-          "title": "Pay-to-play Runecraft training",
-          "slug": "Runecraft_training",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
-        }
-      ]
-    },
-    {
-      "id": "train-runecraft-99",
-      "phase": "Region: Global",
-      "instruction": "Train Runecraft to 99",
-      "detail": "Wrath runes (90+) or Lava runes with lunar spell. Raiments of the Eye for bonus output.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "RUNECRAFT",
-          "level": 99
         }
       ],
       "refs": [
@@ -4160,99 +3463,6 @@
       ]
     },
     {
-      "id": "train-mm-tunnels",
-      "phase": "Region: Ape Atoll",
-      "instruction": "Train at Ape Atoll (Maniacal Monkeys)",
-      "detail": "Best melee XP in the game until very high levels. Requires Monkey Madness I completion.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 7118
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 2629,
-          "y": 9252,
-          "plane": 0,
-          "label": "Ape Atoll (Maniacal Monkeys)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "ATTACK",
-          "level": 99
-        },
-        {
-          "type": "SKILL",
-          "skill": "STRENGTH",
-          "level": 99
-        }
-      ],
-      "refs": [
-        {
-          "title": "Maniacal monkey",
-          "slug": "Maniacal_monkey",
-          "url": "https://oldschool.runescape.wiki/w/Maniacal_monkey"
-        },
-        {
-          "title": "Pay-to-play Melee training",
-          "slug": "Pay-to-play_Melee_training.s1",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
-        }
-      ]
-    },
-    {
-      "id": "train-nmz",
-      "phase": "Region: Kandarin",
-      "instruction": "Train at Nightmare Zone",
-      "detail": "AFK melee training using quest bosses. Requires several quests completed.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 1120
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 2608,
-          "y": 3116,
-          "plane": 0,
-          "label": "Nightmare Zone (Yanille)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "ATTACK",
-          "level": 80
-        },
-        {
-          "type": "SKILL",
-          "skill": "STRENGTH",
-          "level": 80
-        },
-        {
-          "type": "SKILL",
-          "skill": "DEFENCE",
-          "level": 80
-        }
-      ],
-      "refs": [
-        {
-          "title": "Nightmare Zone",
-          "slug": "Nightmare_Zone",
-          "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
-        },
-        {
-          "title": "Pay-to-play Melee training",
-          "slug": "Pay-to-play_Melee_training.s1",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
-        }
-      ]
-    },
-    {
       "id": "quest-rfd-start",
       "phase": "Region: Misthalin",
       "instruction": "Complete Recipe for Disaster (partial)",
@@ -4313,6 +3523,164 @@
         {
           "title": "Cook's Assistant",
           "slug": "Cook's_Assistant.s1",
+          "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
+        }
+      ]
+    },
+    {
+      "id": "quest-lost-city",
+      "phase": "Region: Misthalin",
+      "instruction": "Complete Lost City",
+      "detail": "Unlocks Zanaris and cosmic rune altar. Grants access to dragon weaponry.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3150,
+          "y": 3205,
+          "plane": 0,
+          "label": "Warrior, NW Lumbridge Swamp (start)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "warrior",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "warrior",
+          "value": "1",
+          "note": "start: ask about Zanaris"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Lost City",
+          "slug": "Lost_City.s1",
+          "url": "https://oldschool.runescape.wiki/w/Lost_City"
+        },
+        {
+          "title": "Lost City",
+          "slug": "Lost_City.s6",
+          "url": "https://oldschool.runescape.wiki/w/Lost_City"
+        }
+      ]
+    },
+    {
+      "id": "quest-bone-voyage",
+      "phase": "Region: Misthalin",
+      "instruction": "Complete Bone Voyage",
+      "detail": "Unlocks Fossil Island. Required to mine volcanic ash for ultracompost.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3260,
+          "y": 3450,
+          "plane": 0,
+          "label": "Curator Haig Halen, Varrock Museum (start)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "haig_halen",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "haig_halen",
+          "value": "1",
+          "note": "start: offer to help finish the barge"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Bone Voyage",
+          "slug": "Bone_Voyage.s1",
+          "url": "https://oldschool.runescape.wiki/w/Bone_Voyage"
+        },
+        {
+          "title": "Bone Voyage",
+          "slug": "Bone_Voyage.s7",
+          "url": "https://oldschool.runescape.wiki/w/Bone_Voyage"
+        }
+      ]
+    },
+    {
+      "id": "quest-cooks-assistant",
+      "phase": "Region: Misthalin",
+      "instruction": "Complete Cook's Assistant",
+      "detail": "Lumbridge Cook needs ingredients for the Duke's birthday party. Starter quest, no reqs.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3208,
+          "y": 3214,
+          "plane": 0,
+          "label": "The Cook, Lumbridge Castle kitchen (start)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "cook",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "cook",
+          "value": "1",
+          "note": "start: agree to help with the Duke's birthday cake"
+        },
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +300",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Cook's Assistant",
+          "slug": "Cook's_Assistant.s1",
+          "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
+        },
+        {
+          "title": "Cook's Assistant",
+          "slug": "Cook's_Assistant.s9",
           "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
         }
       ]
@@ -4428,17 +3796,22 @@
       ]
     },
     {
-      "id": "unlock-barrows",
-      "phase": "Region: Morytania",
-      "instruction": "Barrows runs (starter)",
-      "detail": "Semi-consistent GP and gear. Entry-level bossing in Morytania.",
-      "highlights": [],
+      "id": "quest-the-feud",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Complete The Feud",
+      "detail": "Unlocks blackjacking in Pollnivneach for fast Thieving XP.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 6138
+        }
+      ],
       "mapMarkers": [
         {
-          "x": 3567,
-          "y": 3291,
+          "x": 3302,
+          "y": 3211,
           "plane": 0,
-          "label": "Barrows entrance (six burial mounds, east of Mort'ton)"
+          "label": "Ali Morrisane, northern Al Kharid (start)"
         }
       ],
       "completionConditions": [
@@ -4447,35 +3820,66 @@
         }
       ],
       "atom": {
-        "verb": "teleport",
-        "target": "barrows",
+        "verb": "talk-to",
+        "target": "ali_morrisane",
         "count": null,
         "cmp": "eq",
-        "until": null
+        "until": {
+          "state": "quest-varbit:??"
+        }
       },
       "hints": [
         {
-          "type": "teleport-choice",
-          "target": "barrows",
-          "value": "barrows-teleport-arceuus-83magic,mortton-teleport-scroll,morytania-legs-3-4,minigame-teleport-shades-of-mortton,kharyrll-tp-then-swampboaty,fairy-ring-bkr,fairy-ring-bip",
-          "note": "List order = fastest-to-slowest per the wiki's own ranking. Minigame Teleport to Shades of Mort'ton needs the Shades of Mort'ton quest but is free/no inventory slot, 20-min cooldown."
+          "type": "dialogue",
+          "target": "ali_morrisane",
+          "value": "1",
+          "note": "start: ask about his stock problems"
+        },
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "thieving +15000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ],
       "refs": [
         {
-          "title": "Barrows",
-          "slug": "Barrows.s2",
-          "url": "https://oldschool.runescape.wiki/w/Barrows"
+          "title": "The Feud",
+          "slug": "The_Feud.s1",
+          "url": "https://oldschool.runescape.wiki/w/The_Feud"
         },
         {
-          "title": "Barrows",
-          "slug": "Barrows.s3",
-          "url": "https://oldschool.runescape.wiki/w/Barrows"
-        },
+          "title": "The Feud",
+          "slug": "The_Feud.s8",
+          "url": "https://oldschool.runescape.wiki/w/The_Feud"
+        }
+      ]
+    },
+    {
+      "id": "quest-shadow-storm",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Complete Shadow of the Storm",
+      "detail": "Required for RFD Evil Dave. Requires Demon Slayer and The Golem.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
         {
-          "title": "Barrows",
-          "slug": "Barrows.s0",
-          "url": "https://oldschool.runescape.wiki/w/Barrows"
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Shadow of the Storm",
+          "slug": "Shadow_of_the_Storm",
+          "url": "https://oldschool.runescape.wiki/w/Shadow_of_the_Storm"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "slayer +10000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -4535,6 +3939,89 @@
       ]
     },
     {
+      "id": "quest-nature-spirit",
+      "phase": "Region: Morytania",
+      "instruction": "Complete Nature Spirit",
+      "detail": "Unlocks the Mort Myre Swamp and nature grotto. Required for Fairytale I - Growing Pains.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3440,
+          "y": 9894,
+          "plane": 0,
+          "label": "Drezel, Paterdomus basement (start)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "drezel",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "drezel",
+          "value": "1",
+          "note": "start: ask about Filliman Tarlock"
+        },
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "prayer +3000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Nature Spirit",
+          "slug": "Nature_Spirit.s1",
+          "url": "https://oldschool.runescape.wiki/w/Nature_Spirit"
+        },
+        {
+          "title": "Nature Spirit",
+          "slug": "Nature_Spirit.s7",
+          "url": "https://oldschool.runescape.wiki/w/Nature_Spirit"
+        }
+      ]
+    },
+    {
+      "id": "quest-rum-deal",
+      "phase": "Region: Morytania",
+      "instruction": "Complete Rum Deal",
+      "detail": "Required for RFD Pirate Pete. Moderate quest on Braindeath Island.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Rum Deal",
+          "slug": "Rum_Deal",
+          "url": "https://oldschool.runescape.wiki/w/Rum_Deal"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "farming +7000, slayer +7000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
       "id": "unlock-gwd",
       "phase": "Region: Troll Country",
       "instruction": "God Wars Dungeon access",
@@ -4584,33 +4071,6 @@
           "title": "God Wars Dungeon",
           "slug": "God_Wars_Dungeon.s0",
           "url": "https://oldschool.runescape.wiki/w/God_Wars_Dungeon"
-        }
-      ]
-    },
-    {
-      "id": "unlock-cox",
-      "phase": "Region: Zeah",
-      "instruction": "Chambers of Xeric (entry)",
-      "detail": "Requires strong all-round stats. Most valuable loot table in the game.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 1234,
-          "y": 3568,
-          "plane": 0,
-          "label": "Chambers of Xeric"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Chambers of Xeric",
-          "slug": "Chambers_of_Xeric.s0",
-          "url": "https://oldschool.runescape.wiki/w/Chambers_of_Xeric"
         }
       ]
     },
@@ -4750,115 +4210,6 @@
       ]
     },
     {
-      "id": "quest-lost-city",
-      "phase": "Region: Misthalin",
-      "instruction": "Complete Lost City",
-      "detail": "Unlocks Zanaris and cosmic rune altar. Grants access to dragon weaponry.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3150,
-          "y": 3205,
-          "plane": 0,
-          "label": "Warrior, NW Lumbridge Swamp (start)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "talk-to",
-        "target": "warrior",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "state": "quest-varbit:??"
-        }
-      },
-      "hints": [
-        {
-          "type": "dialogue",
-          "target": "warrior",
-          "value": "1",
-          "note": "start: ask about Zanaris"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Lost City",
-          "slug": "Lost_City.s1",
-          "url": "https://oldschool.runescape.wiki/w/Lost_City"
-        },
-        {
-          "title": "Lost City",
-          "slug": "Lost_City.s6",
-          "url": "https://oldschool.runescape.wiki/w/Lost_City"
-        }
-      ]
-    },
-    {
-      "id": "quest-the-feud",
-      "phase": "Region: Kharidian Desert",
-      "instruction": "Complete The Feud",
-      "detail": "Unlocks blackjacking in Pollnivneach for fast Thieving XP.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 6138
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3302,
-          "y": 3211,
-          "plane": 0,
-          "label": "Ali Morrisane, northern Al Kharid (start)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "talk-to",
-        "target": "ali_morrisane",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "state": "quest-varbit:??"
-        }
-      },
-      "hints": [
-        {
-          "type": "dialogue",
-          "target": "ali_morrisane",
-          "value": "1",
-          "note": "start: ask about his stock problems"
-        },
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "thieving +15000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ],
-      "refs": [
-        {
-          "title": "The Feud",
-          "slug": "The_Feud.s1",
-          "url": "https://oldschool.runescape.wiki/w/The_Feud"
-        },
-        {
-          "title": "The Feud",
-          "slug": "The_Feud.s8",
-          "url": "https://oldschool.runescape.wiki/w/The_Feud"
-        }
-      ]
-    },
-    {
       "id": "quest-tai-bwo",
       "phase": "Region: Karamja",
       "instruction": "Complete Tai Bwo Wannai Trio",
@@ -4914,110 +4265,6 @@
       ]
     },
     {
-      "id": "quest-nature-spirit",
-      "phase": "Region: Morytania",
-      "instruction": "Complete Nature Spirit",
-      "detail": "Unlocks the Mort Myre Swamp and nature grotto. Required for Fairytale I - Growing Pains.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3440,
-          "y": 9894,
-          "plane": 0,
-          "label": "Drezel, Paterdomus basement (start)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "talk-to",
-        "target": "drezel",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "state": "quest-varbit:??"
-        }
-      },
-      "hints": [
-        {
-          "type": "dialogue",
-          "target": "drezel",
-          "value": "1",
-          "note": "start: ask about Filliman Tarlock"
-        },
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "prayer +3000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Nature Spirit",
-          "slug": "Nature_Spirit.s1",
-          "url": "https://oldschool.runescape.wiki/w/Nature_Spirit"
-        },
-        {
-          "title": "Nature Spirit",
-          "slug": "Nature_Spirit.s7",
-          "url": "https://oldschool.runescape.wiki/w/Nature_Spirit"
-        }
-      ]
-    },
-    {
-      "id": "quest-bone-voyage",
-      "phase": "Region: Misthalin",
-      "instruction": "Complete Bone Voyage",
-      "detail": "Unlocks Fossil Island. Required to mine volcanic ash for ultracompost.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3260,
-          "y": 3450,
-          "plane": 0,
-          "label": "Curator Haig Halen, Varrock Museum (start)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "talk-to",
-        "target": "haig_halen",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "state": "quest-varbit:??"
-        }
-      },
-      "hints": [
-        {
-          "type": "dialogue",
-          "target": "haig_halen",
-          "value": "1",
-          "note": "start: offer to help finish the barge"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Bone Voyage",
-          "slug": "Bone_Voyage.s1",
-          "url": "https://oldschool.runescape.wiki/w/Bone_Voyage"
-        },
-        {
-          "title": "Bone Voyage",
-          "slug": "Bone_Voyage.s7",
-          "url": "https://oldschool.runescape.wiki/w/Bone_Voyage"
-        }
-      ]
-    },
-    {
       "id": "quest-fairytale-1",
       "phase": "Region: Zanaris",
       "instruction": "Complete Fairytale I - Growing Pains",
@@ -5069,61 +4316,6 @@
           "title": "Fairytale I - Growing Pains",
           "slug": "Fairytale_I_-_Growing_Pains.s9",
           "url": "https://oldschool.runescape.wiki/w/Fairytale_I_-_Growing_Pains"
-        }
-      ]
-    },
-    {
-      "id": "quest-swan-song",
-      "phase": "Region: Kandarin",
-      "instruction": "Complete Swan Song",
-      "detail": "Unlocks Piscatoris Fishing Colony monkfish spot. Required for the monkfish food supply chain.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 2353,
-          "y": 3680,
-          "plane": 0,
-          "label": "Herman Caranos, Piscatoris Fishing Colony (start)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "talk-to",
-        "target": "herman_caranos",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "state": "quest-varbit:??"
-        }
-      },
-      "hints": [
-        {
-          "type": "dialogue",
-          "target": "herman_caranos",
-          "value": "1",
-          "note": "start: agree to fight the sea trolls"
-        },
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "fishing +10000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Swan Song",
-          "slug": "Swan_Song.s1",
-          "url": "https://oldschool.runescape.wiki/w/Swan_Song"
-        },
-        {
-          "title": "Swan Song",
-          "slug": "Swan_Song.s11",
-          "url": "https://oldschool.runescape.wiki/w/Swan_Song"
         }
       ]
     },
@@ -5631,47 +4823,6 @@
       ]
     },
     {
-      "id": "brew-prayer-potion",
-      "phase": "Region: Global",
-      "instruction": "Brew prayer potions (Herblore 52)",
-      "detail": "Combine ranarr weed + snape grass \u2192 prayer potion (4). Requires Druidic Ritual and Herblore 52. Terminal step of the prayer-pot supply chain.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "produce",
-        "target": "prayer_potion_4",
-        "count": null,
-        "cmp": "eq",
-        "until": null
-      },
-      "hints": [
-        {
-          "type": "rng-variance",
-          "target": "prayer_potion_4",
-          "value": "5% (amulet of chemistry) / 15% (alchemist's amulet)",
-          "note": "Base recipe output is Prayer potion(3) \u2014 the target stays prayer_potion_4 for chain-slug consistency, but reaching an actual 4-dose potion needs this amulet chance (or combining leftover doses). Ref: Prayer potion Creation section."
-        }
-      ],
-      "checkpoint": "Secondaries + brew (JIT)",
-      "refs": [
-        {
-          "title": "Prayer potion",
-          "slug": "Prayer_potion.s2",
-          "url": "https://oldschool.runescape.wiki/w/Prayer_potion"
-        },
-        {
-          "title": "Ranarr potion (unf)",
-          "slug": "Ranarr_potion_(unf).s1",
-          "url": "https://oldschool.runescape.wiki/w/Ranarr_potion_(unf)"
-        }
-      ]
-    },
-    {
       "id": "chkpt-prayer-pot-supply-coarse-3",
       "phase": "Region: Global",
       "instruction": "\u29c6 Secondaries + brew (JIT)",
@@ -5837,105 +4988,12 @@
       ]
     },
     {
-      "id": "gather-monkfish",
-      "phase": "Region: Kandarin",
-      "instruction": "Fish monkfish at Piscatoris",
-      "detail": "Fish monkfish at the Piscatoris Fishing Colony. Requires Swan Song and Fishing 62. Cook for Barrows food supply.",
+      "id": "brew-prayer-potion",
+      "phase": "Region: Global",
+      "instruction": "Brew prayer potions (Herblore 52)",
+      "detail": "Combine ranarr weed + snape grass \u2192 prayer potion (4). Requires Druidic Ritual and Herblore 52. Terminal step of the prayer-pot supply chain.",
       "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 2310,
-          "y": 3697,
-          "plane": 0,
-          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
-        },
-        {
-          "x": 2311,
-          "y": 3704,
-          "plane": 0,
-          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
-        },
-        {
-          "x": 2326,
-          "y": 3700,
-          "plane": 0,
-          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
-        },
-        {
-          "x": 2343,
-          "y": 3702,
-          "plane": 0,
-          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
-        },
-        {
-          "x": 2349,
-          "y": 3702,
-          "plane": 0,
-          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "gather",
-        "target": "raw_monkfish",
-        "count": null,
-        "cmp": "gte",
-        "until": {
-          "item": {
-            "raw_monkfish": "??"
-          }
-        }
-      },
-      "hints": [
-        {
-          "type": "toggle-state",
-          "target": "tool",
-          "value": "small-fishing-net",
-          "note": "Raw_monkfish s1 Fishing info: tool=Small fishing net, bait=No. Fishing_spot page confirms 'Always' rarity (guaranteed catch on success roll, no drop-chance variance beyond the standard skilling success curve)."
-        },
-        {
-          "type": "teleport-choice",
-          "target": "piscatoris",
-          "value": "western-banner,piscatoris-teleport,fairy-ring-akq,necklace-of-passage,kathy-corkat-free-post-swan-song",
-          "note": "Piscatoris_Fishing_Colony s1, ranked shortest-run-to-spot first: Western banner 3/4 (centre of colony) > Piscatoris teleport (entrance) > Fairy ring AKQ (Hunter area, south of entrance) > Necklace of passage (Outpost, well south). Kathy Corkat ferries from west of Tree Gnome Stronghold for free once Swan Song is complete (50gp before); 75 Sailing + full Swan Song also unlocks mooring a boat on the NW side."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Raw monkfish",
-          "slug": "Raw_monkfish.s1",
-          "url": "https://oldschool.runescape.wiki/w/Raw_monkfish"
-        },
-        {
-          "title": "Piscatoris Fishing Colony",
-          "slug": "Piscatoris_Fishing_Colony.s1",
-          "url": "https://oldschool.runescape.wiki/w/Piscatoris_Fishing_Colony"
-        },
-        {
-          "title": "Fishing spot (Piscatoris Fishing Colony)",
-          "slug": "Fishing_spot_(Piscatoris_Fishing_Colony)",
-          "url": "https://oldschool.runescape.wiki/w/Fishing_spot_(Piscatoris_Fishing_Colony)"
-        }
-      ]
-    },
-    {
-      "id": "cook-monkfish",
-      "phase": "Region: Kandarin",
-      "instruction": "Cook monkfish (Cooking 62)",
-      "detail": "Cook raw monkfish on a range. Stop burning at 92 (68 with cooking gauntlets). Terminal step of the monkfish food supply chain.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 2834,
-          "y": 3445,
-          "plane": 0,
-          "label": "Catherby"
-        }
-      ],
+      "mapMarkers": [],
       "completionConditions": [
         {
           "type": "MANUAL"
@@ -5943,35 +5001,30 @@
       ],
       "atom": {
         "verb": "produce",
-        "target": "food_monkfish",
+        "target": "prayer_potion_4",
         "count": null,
         "cmp": "eq",
         "until": null
       },
       "hints": [
         {
-          "type": "batch-size",
-          "target": "cooking-range",
-          "value": "1",
-          "note": "1 raw_monkfish -> 1 food_monkfish per action (ticks=1, facilities=Cooking range). Ref: Monkfish Creation."
-        },
-        {
-          "type": "toggle-state",
-          "target": "cooking-gauntlets",
-          "value": "on",
-          "note": "Wearing cooking gauntlets lowers the stop-burning level; see notes for the full table."
+          "type": "rng-variance",
+          "target": "prayer_potion_4",
+          "value": "5% (amulet of chemistry) / 15% (alchemist's amulet)",
+          "note": "Base recipe output is Prayer potion(3) \u2014 the target stays prayer_potion_4 for chain-slug consistency, but reaching an actual 4-dose potion needs this amulet chance (or combining leftover doses). Ref: Prayer potion Creation section."
         }
       ],
+      "checkpoint": "Secondaries + brew (JIT)",
       "refs": [
         {
-          "title": "Monkfish",
-          "slug": "Monkfish.s1",
-          "url": "https://oldschool.runescape.wiki/w/Monkfish"
+          "title": "Prayer potion",
+          "slug": "Prayer_potion.s2",
+          "url": "https://oldschool.runescape.wiki/w/Prayer_potion"
         },
         {
-          "title": "Cooking/Burn level",
-          "slug": "Burn_level.s2",
-          "url": "https://oldschool.runescape.wiki/w/Cooking/Burn_level"
+          "title": "Ranarr potion (unf)",
+          "slug": "Ranarr_potion_(unf).s1",
+          "url": "https://oldschool.runescape.wiki/w/Ranarr_potion_(unf)"
         }
       ]
     },
@@ -6036,66 +5089,6 @@
         {
           "title": "Cook's Assistant",
           "slug": "Cook's_Assistant.s1",
-          "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
-        }
-      ]
-    },
-    {
-      "id": "quest-cooks-assistant",
-      "phase": "Region: Misthalin",
-      "instruction": "Complete Cook's Assistant",
-      "detail": "Lumbridge Cook needs ingredients for the Duke's birthday party. Starter quest, no reqs.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 397
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3208,
-          "y": 3214,
-          "plane": 0,
-          "label": "The Cook, Lumbridge Castle kitchen (start)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "talk-to",
-        "target": "cook",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "state": "quest-varbit:??"
-        }
-      },
-      "hints": [
-        {
-          "type": "dialogue",
-          "target": "cook",
-          "value": "1",
-          "note": "start: agree to help with the Duke's birthday cake"
-        },
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "cooking +300",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Cook's Assistant",
-          "slug": "Cook's_Assistant.s1",
-          "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
-        },
-        {
-          "title": "Cook's Assistant",
-          "slug": "Cook's_Assistant.s9",
           "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
         }
       ]
@@ -6272,34 +5265,6 @@
       ]
     },
     {
-      "id": "quest-rum-deal",
-      "phase": "Region: Morytania",
-      "instruction": "Complete Rum Deal",
-      "detail": "Required for RFD Pirate Pete. Moderate quest on Braindeath Island.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Rum Deal",
-          "slug": "Rum_Deal",
-          "url": "https://oldschool.runescape.wiki/w/Rum_Deal"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "farming +7000, slayer +7000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
       "id": "rfd-evil-dave",
       "phase": "Region: Misthalin",
       "instruction": "RFD: Evil Dave's Spicy Stew",
@@ -6345,67 +5310,6 @@
       ]
     },
     {
-      "id": "quest-shadow-storm",
-      "phase": "Region: Kharidian Desert",
-      "instruction": "Complete Shadow of the Storm",
-      "detail": "Required for RFD Evil Dave. Requires Demon Slayer and The Golem.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Shadow of the Storm",
-          "slug": "Shadow_of_the_Storm",
-          "url": "https://oldschool.runescape.wiki/w/Shadow_of_the_Storm"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "slayer +10000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "rfd-skrach",
-      "phase": "Region: Feldip Hills",
-      "instruction": "RFD: Skrach Uglogwee (Jubbly Bird)",
-      "detail": "Hunt and cook a jubbly bird near Rantz in Feldip Hills. Hunter 41 + Cooking 41 required.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Recipe for Disaster/Freeing Skrach Uglogwee",
-          "slug": "Recipe_for_Disaster_Freeing_Skrach_Uglogwee",
-          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster/Freeing_Skrach_Uglogwee"
-        },
-        {
-          "title": "Recipe for Disaster",
-          "slug": "Recipe_for_Disaster.s1",
-          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "cooking +1500",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
       "id": "quest-big-chompy",
       "phase": "Region: Feldip Hills",
       "instruction": "Complete Big Chompy Bird Hunting",
@@ -6429,51 +5333,6 @@
           "type": "quest-xp",
           "target": null,
           "value": "cooking +1470, fletching +262, ranged +735",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ]
-    },
-    {
-      "id": "rfd-sir-amik",
-      "phase": "Region: Misthalin",
-      "instruction": "RFD: Sir Amik Varze (Creme Brulee)",
-      "detail": "Prepare a creme brulee supreme. Requires Cooking 70. Ice gloves needed during boss fight (from Ice Queen).",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 397
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3259,
-          "y": 3266,
-          "plane": 0,
-          "label": "Lumbridge cows"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Recipe for Disaster/Freeing Sir Amik Varze",
-          "slug": "Recipe_for_Disaster_Freeing_Sir_Amik_Varze",
-          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster/Freeing_Sir_Amik_Varze"
-        },
-        {
-          "title": "Recipe for Disaster",
-          "slug": "Recipe_for_Disaster.s1",
-          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "cooking +4000",
           "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
@@ -6530,51 +5389,6 @@
           "title": "Recipe for Disaster/Freeing King Awowogei",
           "slug": "Recipe_for_Disaster_Freeing_King_Awowogei.s9",
           "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_King_Awowogei"
-        }
-      ]
-    },
-    {
-      "id": "rfd-finale",
-      "phase": "Region: Misthalin",
-      "instruction": "RFD: Free the Cook (Finale)",
-      "detail": "Defeat 6 Culinaromancer minions with boosted combat stats. Rewards: Barrows gloves (best-in-slot). Attack/Strength/Defence 65 required.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 397
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3259,
-          "y": 3266,
-          "plane": 0,
-          "label": "Lumbridge cows"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "refs": [
-        {
-          "title": "Recipe for Disaster/Defeating the Culinaromancer",
-          "slug": "Recipe_for_Disaster_Defeating_the_Culinaromancer",
-          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster/Defeating_the_Culinaromancer"
-        },
-        {
-          "title": "Recipe for Disaster",
-          "slug": "Recipe_for_Disaster.s1",
-          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
-        }
-      ],
-      "hints": [
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "cooking +10000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -6773,6 +5587,44 @@
           "slug": "Chicken",
           "url": "https://oldschool.runescape.wiki/w/Chicken",
           "kind": "npc"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/44ac0e/frame_login.png",
+          "url": null,
+          "caption": "Login screen \u2014 capture-harness demo wiring (FRAMES_GALLERY F1); P6 in-world chicken-training frames pending",
+          "state": {
+            "harness": "spike/run.sh",
+            "rev": 236,
+            "scenario": "login-fresh",
+            "tile": [
+              3232,
+              3296,
+              0
+            ],
+            "varbits": {},
+            "captured": "2026-07-12T07:52:19Z"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/53283a/login.gif",
+          "url": null,
+          "caption": "Login sequence, assembled GIF \u2014 same capture-harness demo wiring",
+          "state": {
+            "harness": "spike/run.sh",
+            "rev": 236,
+            "scenario": "login-fresh",
+            "tile": [
+              3232,
+              3296,
+              0
+            ],
+            "varbits": {},
+            "captured": "2026-07-12T07:52:33Z"
+          }
         }
       ]
     },
@@ -7305,6 +6157,46 @@
       ]
     },
     {
+      "id": "embed-bury-bones",
+      "phase": "Region: Global",
+      "instruction": "Bury bones for Prayer XP",
+      "detail": "Bury every bone drop during combat training instead of dropping it \u2014 zero extra time, steady Prayer XP on the side. Never its own step; badges onto whichever combat step is active.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Prayer training",
+          "slug": "Pay-to-play_Prayer_training.s1",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
+        }
+      ]
+    },
+    {
+      "id": "embed-alch-smithing",
+      "phase": "Region: Global",
+      "instruction": "High Alch smithed items",
+      "detail": "Cast High Level Alchemy on the bars/items produced while training Smithing instead of banking them raw \u2014 zero extra time, converts the smithed output to GP while banking Magic XP on the side. Never its own step; badges onto whichever smithing step is active.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "High Level Alchemy",
+          "slug": "High_Level_Alchemy",
+          "url": "https://oldschool.runescape.wiki/w/High_Level_Alchemy"
+        }
+      ]
+    },
+    {
       "id": "train-attack-80",
       "phase": "Region: Kandarin",
       "instruction": "Train Attack to 80",
@@ -7429,6 +6321,169 @@
       ]
     },
     {
+      "id": "train-defence-80",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Defence to 80",
+      "detail": "NMZ AFK.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1120
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 2608,
+          "y": 3116,
+          "plane": 0,
+          "label": "Nightmare Zone (Yanille)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 80
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s1",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        }
+      ]
+    },
+    {
+      "id": "train-ranged-99",
+      "phase": "Region: Ape Atoll",
+      "instruction": "Train Ranged to 99",
+      "detail": "Chinchompas at Ape Atoll or MM2 tunnels for best XP rate.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 7118
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 2629,
+          "y": 9252,
+          "plane": 0,
+          "label": "Ape Atoll (Maniacal Monkeys)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RANGED",
+          "level": 99
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Ranged training",
+          "slug": "Pay-to-play_Ranged_training.s4",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+        }
+      ]
+    },
+    {
+      "id": "train-magic-94",
+      "phase": "Region: Global",
+      "instruction": "Train Magic to 94",
+      "detail": "Ancient Magicks Bursting/Barraging. Requires Desert Treasure.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 94
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s11",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
+      ]
+    },
+    {
+      "id": "train-cooking-74",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Cooking to 74",
+      "detail": "Swordfish or sharks. Use cooking gauntlets for faster success rate.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2834,
+          "y": 3445,
+          "plane": 0,
+          "label": "Catherby"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "COOKING",
+          "level": 74
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Cooking training",
+          "slug": "Pay-to-play_Cooking_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+        }
+      ]
+    },
+    {
+      "id": "train-cooking-99",
+      "phase": "Region: Karamja",
+      "instruction": "Train Cooking to 99",
+      "detail": "Karambwans (1-tick) or wines for fastest XP. Karambwans require Tai Bwo Wannai Trio.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "COOKING",
+          "level": 99
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Cooking training",
+          "slug": "Pay-to-play_Cooking_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+        }
+      ]
+    },
+    {
+      "id": "train-fletching-99",
+      "phase": "Region: Global",
+      "instruction": "Train Fletching to 99",
+      "detail": "Dragon darts or Magic longbow strings for fast XP. Dragon darts require RFD subquest.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "FLETCHING",
+          "level": 99
+        }
+      ],
+      "refs": [
+        {
+          "title": "Fletching training",
+          "slug": "Fletching_training",
+          "url": "https://oldschool.runescape.wiki/w/Fletching_training"
+        }
+      ]
+    },
+    {
       "id": "train-fishing-99",
       "phase": "Region: Kandarin",
       "instruction": "Train Fishing to 99",
@@ -7459,6 +6514,1029 @@
           "title": "Pay-to-play Fishing training",
           "slug": "Pay-to-play_Fishing_training.s1",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+        }
+      ]
+    },
+    {
+      "id": "train-smithing-60",
+      "phase": "Region: Global",
+      "instruction": "Train Smithing to 60",
+      "detail": "Gold bars with Goldsmith gauntlets (Family Crest quest) for fast XP.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SMITHING",
+          "level": 60
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Smithing training",
+          "slug": "Pay-to-play_Smithing_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+        }
+      ]
+    },
+    {
+      "id": "train-smithing-70",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Smithing to 70",
+      "detail": "Blast Furnace mithril/adamant for best XP/gp ratio.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SMITHING",
+          "level": 70
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Smithing training",
+          "slug": "Pay-to-play_Smithing_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+        }
+      ]
+    },
+    {
+      "id": "train-smithing-99",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Smithing to 99",
+      "detail": "Blast Furnace rune bars \u2014 profit while training. Best GP/hr smithing method.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SMITHING",
+          "level": 99
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Smithing training",
+          "slug": "Pay-to-play_Smithing_training.s3",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+        }
+      ]
+    },
+    {
+      "id": "train-herblore-10",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Herblore to 10",
+      "detail": "Clean grimy guam leaves. Requires Druidic Ritual quest.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HERBLORE",
+          "level": 10
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "clean_guam_leaf",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "herblore": 10
+          }
+        }
+      },
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Herblore training",
+          "slug": "Pay-to-play_Herblore_training.s2",
+          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+        },
+        {
+          "title": "Herblore training",
+          "slug": "Pay-to-play_Herblore_training.s6",
+          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+        }
+      ]
+    },
+    {
+      "id": "train-herblore-38",
+      "phase": "Region: Global",
+      "instruction": "Train Herblore to 38",
+      "detail": "Make attack, strength, or stat-restore potions. Buy secondaries from GE.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HERBLORE",
+          "level": 38
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "strength_potion",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "skill": {
+            "herblore": 38
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "limpwurt_root_source",
+          "value": "??",
+          "note": "Non-GE gather/vendor source for Limpwurt root not confirmed by a fetched page \u2014 left ?? rather than guessed."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Strength potion",
+          "slug": "Strength_potion.s3",
+          "url": "https://oldschool.runescape.wiki/w/Strength_potion"
+        },
+        {
+          "title": "Herblore training",
+          "slug": "Pay-to-play_Herblore_training.s6",
+          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+        }
+      ]
+    },
+    {
+      "id": "train-herblore-55",
+      "phase": "Region: Global",
+      "instruction": "Train Herblore to 55",
+      "detail": "Super restore or prayer potions. Used heavily in bossing.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HERBLORE",
+          "level": 55
+        }
+      ],
+      "refs": [
+        {
+          "title": "Herblore training",
+          "slug": "Pay-to-play_Herblore_training.s2",
+          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+        }
+      ]
+    },
+    {
+      "id": "train-herblore-70",
+      "phase": "Region: Global",
+      "instruction": "Train Herblore to 70",
+      "detail": "Super combat potions at 90 or anti-fire potions at 69.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HERBLORE",
+          "level": 70
+        }
+      ],
+      "refs": [
+        {
+          "title": "Herblore training",
+          "slug": "Pay-to-play_Herblore_training.s2",
+          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+        }
+      ]
+    },
+    {
+      "id": "train-herblore-99",
+      "phase": "Region: Global",
+      "instruction": "Train Herblore to 99",
+      "detail": "Stamina potions, ranging potions, or divine potions for end-game. GP intensive.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "HERBLORE",
+          "level": 99
+        }
+      ],
+      "refs": [
+        {
+          "title": "Herblore training",
+          "slug": "Pay-to-play_Herblore_training.s2",
+          "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+        }
+      ]
+    },
+    {
+      "id": "train-agility-52",
+      "phase": "Region: Morytania",
+      "instruction": "Train Agility to 52",
+      "detail": "Canifis Rooftop Course. Highest marks/hr early-mid game.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3493,
+          "y": 3471,
+          "plane": 0,
+          "label": "Canifis rooftop course"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "AGILITY",
+          "level": 52
+        }
+      ],
+      "refs": [
+        {
+          "title": "Agility training",
+          "slug": "Agility_training",
+          "url": "https://oldschool.runescape.wiki/w/Agility_training"
+        }
+      ]
+    },
+    {
+      "id": "train-agility-60",
+      "phase": "Region: Asgarnia",
+      "instruction": "Train Agility to 60",
+      "detail": "Falador or Seers' Rooftop. Unlock shortcut network for efficient traversal.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3045,
+          "y": 3339,
+          "plane": 0,
+          "label": "Falador rooftop course"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "AGILITY",
+          "level": 60
+        }
+      ],
+      "refs": [
+        {
+          "title": "Agility training",
+          "slug": "Agility_training",
+          "url": "https://oldschool.runescape.wiki/w/Agility_training"
+        }
+      ]
+    },
+    {
+      "id": "train-agility-90",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Agility to 90",
+      "detail": "Ardougne Rooftop (best marks) or Werewolf Course. Graceful recolor at 260 marks.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2669,
+          "y": 3298,
+          "plane": 0,
+          "label": "Ardougne rooftop course"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "AGILITY",
+          "level": 90
+        }
+      ],
+      "refs": [
+        {
+          "title": "Agility training",
+          "slug": "Agility_training",
+          "url": "https://oldschool.runescape.wiki/w/Agility_training"
+        }
+      ]
+    },
+    {
+      "id": "train-agility-99",
+      "phase": "Region: Kandarin",
+      "instruction": "Train Agility to 99",
+      "detail": "Ardougne Rooftop or Hallowed Sepulchre for best XP and loot.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2669,
+          "y": 3298,
+          "plane": 0,
+          "label": "Ardougne rooftop course"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "AGILITY",
+          "level": 99
+        }
+      ],
+      "refs": [
+        {
+          "title": "Agility training",
+          "slug": "Agility_training",
+          "url": "https://oldschool.runescape.wiki/w/Agility_training"
+        }
+      ]
+    },
+    {
+      "id": "train-thieving-65",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Train Thieving to 65",
+      "detail": "Blackjack Menaphite thugs in Pollnivneach. Best XP/hr method, requires Desert Treasure area access.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 6138
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3333,
+          "y": 2952,
+          "plane": 0,
+          "label": "Pollnivneach"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "THIEVING",
+          "level": 65
+        }
+      ],
+      "refs": [
+        {
+          "title": "Thieving training",
+          "slug": "Blackjacking.s1",
+          "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+        }
+      ]
+    },
+    {
+      "id": "train-thieving-99",
+      "phase": "Region: Kharidian Desert",
+      "instruction": "Train Thieving to 99",
+      "detail": "Blackjack Menaphite thugs or Master Farmers at 38+ for seeds.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 6138
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3333,
+          "y": 2952,
+          "plane": 0,
+          "label": "Pollnivneach"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "THIEVING",
+          "level": 99
+        }
+      ],
+      "refs": [
+        {
+          "title": "Thieving training",
+          "slug": "Blackjacking.s1",
+          "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+        }
+      ]
+    },
+    {
+      "id": "train-slayer-task-morytania",
+      "phase": "Region: Morytania",
+      "instruction": "Slayer tasks in Morytania",
+      "detail": "Bloodvelds, gargoyles, abyssal demons. Excellent GP + XP combination.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "SLAYER",
+          "level": 85
+        }
+      ],
+      "refs": [
+        {
+          "title": "Slayer training",
+          "slug": "Slayer_training.s2",
+          "url": "https://oldschool.runescape.wiki/w/Slayer_training"
+        }
+      ]
+    },
+    {
+      "id": "train-runecraft-44",
+      "phase": "Region: Zanaris",
+      "instruction": "Train Runecraft to 44",
+      "detail": "Cosmic runes on Zanaris (requires Lost City quest). Unlocks double cosmic runes.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RUNECRAFT",
+          "level": 44
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Runecraft training",
+          "slug": "Runecraft_training",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+        }
+      ]
+    },
+    {
+      "id": "train-runecraft-59",
+      "phase": "Region: Karamja",
+      "instruction": "Train Runecraft to 59",
+      "detail": "Nature runes on Karamja. Unlocks double nats at 91.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2868,
+          "y": 3017,
+          "plane": 0,
+          "label": "Nature altar"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RUNECRAFT",
+          "level": 59
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Runecraft training",
+          "slug": "Runecraft_training",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+        }
+      ]
+    },
+    {
+      "id": "train-runecraft-75",
+      "phase": "Region: Asgarnia",
+      "instruction": "Train Runecraft to 75",
+      "detail": "Lava runes with Ring of Dueling. Best XP/hr for Runecraft, low profit.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3319,
+          "y": 3250,
+          "plane": 0,
+          "label": "Fire altar"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RUNECRAFT",
+          "level": 75
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Runecraft training",
+          "slug": "Runecraft_training",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+        }
+      ]
+    },
+    {
+      "id": "train-runecraft-99",
+      "phase": "Region: Global",
+      "instruction": "Train Runecraft to 99",
+      "detail": "Wrath runes (90+) or Lava runes with lunar spell. Raiments of the Eye for bonus output.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "RUNECRAFT",
+          "level": 99
+        }
+      ],
+      "refs": [
+        {
+          "title": "Pay-to-play Runecraft training",
+          "slug": "Runecraft_training",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+        }
+      ]
+    },
+    {
+      "id": "train-mm-tunnels",
+      "phase": "Region: Ape Atoll",
+      "instruction": "Train at Ape Atoll (Maniacal Monkeys)",
+      "detail": "Best melee XP in the game until very high levels. Requires Monkey Madness I completion.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 7118
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 2629,
+          "y": 9252,
+          "plane": 0,
+          "label": "Ape Atoll (Maniacal Monkeys)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 99
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 99
+        }
+      ],
+      "refs": [
+        {
+          "title": "Maniacal monkey",
+          "slug": "Maniacal_monkey",
+          "url": "https://oldschool.runescape.wiki/w/Maniacal_monkey"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s1",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        }
+      ]
+    },
+    {
+      "id": "train-nmz",
+      "phase": "Region: Kandarin",
+      "instruction": "Train at Nightmare Zone",
+      "detail": "AFK melee training using quest bosses. Requires several quests completed.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 1120
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 2608,
+          "y": 3116,
+          "plane": 0,
+          "label": "Nightmare Zone (Yanille)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "ATTACK",
+          "level": 80
+        },
+        {
+          "type": "SKILL",
+          "skill": "STRENGTH",
+          "level": 80
+        },
+        {
+          "type": "SKILL",
+          "skill": "DEFENCE",
+          "level": 80
+        }
+      ],
+      "refs": [
+        {
+          "title": "Nightmare Zone",
+          "slug": "Nightmare_Zone",
+          "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
+        },
+        {
+          "title": "Pay-to-play Melee training",
+          "slug": "Pay-to-play_Melee_training.s1",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        }
+      ]
+    },
+    {
+      "id": "unlock-barrows",
+      "phase": "Region: Morytania",
+      "instruction": "Barrows runs (starter)",
+      "detail": "Semi-consistent GP and gear. Entry-level bossing in Morytania.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3567,
+          "y": 3291,
+          "plane": 0,
+          "label": "Barrows entrance (six burial mounds, east of Mort'ton)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "teleport",
+        "target": "barrows",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "teleport-choice",
+          "target": "barrows",
+          "value": "barrows-teleport-arceuus-83magic,mortton-teleport-scroll,morytania-legs-3-4,minigame-teleport-shades-of-mortton,kharyrll-tp-then-swampboaty,fairy-ring-bkr,fairy-ring-bip",
+          "note": "List order = fastest-to-slowest per the wiki's own ranking. Minigame Teleport to Shades of Mort'ton needs the Shades of Mort'ton quest but is free/no inventory slot, 20-min cooldown."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Barrows",
+          "slug": "Barrows.s2",
+          "url": "https://oldschool.runescape.wiki/w/Barrows"
+        },
+        {
+          "title": "Barrows",
+          "slug": "Barrows.s3",
+          "url": "https://oldschool.runescape.wiki/w/Barrows"
+        },
+        {
+          "title": "Barrows",
+          "slug": "Barrows.s0",
+          "url": "https://oldschool.runescape.wiki/w/Barrows"
+        }
+      ]
+    },
+    {
+      "id": "unlock-cox",
+      "phase": "Region: Zeah",
+      "instruction": "Chambers of Xeric (entry)",
+      "detail": "Requires strong all-round stats. Most valuable loot table in the game.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 1234,
+          "y": 3568,
+          "plane": 0,
+          "label": "Chambers of Xeric"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Chambers of Xeric",
+          "slug": "Chambers_of_Xeric.s0",
+          "url": "https://oldschool.runescape.wiki/w/Chambers_of_Xeric"
+        }
+      ]
+    },
+    {
+      "id": "quest-swan-song",
+      "phase": "Region: Kandarin",
+      "instruction": "Complete Swan Song",
+      "detail": "Unlocks Piscatoris Fishing Colony monkfish spot. Required for the monkfish food supply chain.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2353,
+          "y": 3680,
+          "plane": 0,
+          "label": "Herman Caranos, Piscatoris Fishing Colony (start)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "herman_caranos",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "herman_caranos",
+          "value": "1",
+          "note": "start: agree to fight the sea trolls"
+        },
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "fishing +10000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Swan Song",
+          "slug": "Swan_Song.s1",
+          "url": "https://oldschool.runescape.wiki/w/Swan_Song"
+        },
+        {
+          "title": "Swan Song",
+          "slug": "Swan_Song.s11",
+          "url": "https://oldschool.runescape.wiki/w/Swan_Song"
+        }
+      ]
+    },
+    {
+      "id": "gather-monkfish",
+      "phase": "Region: Kandarin",
+      "instruction": "Fish monkfish at Piscatoris",
+      "detail": "Fish monkfish at the Piscatoris Fishing Colony. Requires Swan Song and Fishing 62. Cook for Barrows food supply.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2310,
+          "y": 3697,
+          "plane": 0,
+          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
+        },
+        {
+          "x": 2311,
+          "y": 3704,
+          "plane": 0,
+          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
+        },
+        {
+          "x": 2326,
+          "y": 3700,
+          "plane": 0,
+          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
+        },
+        {
+          "x": 2343,
+          "y": 3702,
+          "plane": 0,
+          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
+        },
+        {
+          "x": 2349,
+          "y": 3702,
+          "plane": 0,
+          "label": "Fishing spot (Piscatoris Fishing Colony, north coast)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "gather",
+        "target": "raw_monkfish",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "raw_monkfish": "??"
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "toggle-state",
+          "target": "tool",
+          "value": "small-fishing-net",
+          "note": "Raw_monkfish s1 Fishing info: tool=Small fishing net, bait=No. Fishing_spot page confirms 'Always' rarity (guaranteed catch on success roll, no drop-chance variance beyond the standard skilling success curve)."
+        },
+        {
+          "type": "teleport-choice",
+          "target": "piscatoris",
+          "value": "western-banner,piscatoris-teleport,fairy-ring-akq,necklace-of-passage,kathy-corkat-free-post-swan-song",
+          "note": "Piscatoris_Fishing_Colony s1, ranked shortest-run-to-spot first: Western banner 3/4 (centre of colony) > Piscatoris teleport (entrance) > Fairy ring AKQ (Hunter area, south of entrance) > Necklace of passage (Outpost, well south). Kathy Corkat ferries from west of Tree Gnome Stronghold for free once Swan Song is complete (50gp before); 75 Sailing + full Swan Song also unlocks mooring a boat on the NW side."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Raw monkfish",
+          "slug": "Raw_monkfish.s1",
+          "url": "https://oldschool.runescape.wiki/w/Raw_monkfish"
+        },
+        {
+          "title": "Piscatoris Fishing Colony",
+          "slug": "Piscatoris_Fishing_Colony.s1",
+          "url": "https://oldschool.runescape.wiki/w/Piscatoris_Fishing_Colony"
+        },
+        {
+          "title": "Fishing spot (Piscatoris Fishing Colony)",
+          "slug": "Fishing_spot_(Piscatoris_Fishing_Colony)",
+          "url": "https://oldschool.runescape.wiki/w/Fishing_spot_(Piscatoris_Fishing_Colony)"
+        }
+      ]
+    },
+    {
+      "id": "cook-monkfish",
+      "phase": "Region: Kandarin",
+      "instruction": "Cook monkfish (Cooking 62)",
+      "detail": "Cook raw monkfish on a range. Stop burning at 92 (68 with cooking gauntlets). Terminal step of the monkfish food supply chain.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2834,
+          "y": 3445,
+          "plane": 0,
+          "label": "Catherby"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "food_monkfish",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "batch-size",
+          "target": "cooking-range",
+          "value": "1",
+          "note": "1 raw_monkfish -> 1 food_monkfish per action (ticks=1, facilities=Cooking range). Ref: Monkfish Creation."
+        },
+        {
+          "type": "toggle-state",
+          "target": "cooking-gauntlets",
+          "value": "on",
+          "note": "Wearing cooking gauntlets lowers the stop-burning level; see notes for the full table."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Monkfish",
+          "slug": "Monkfish.s1",
+          "url": "https://oldschool.runescape.wiki/w/Monkfish"
+        },
+        {
+          "title": "Cooking/Burn level",
+          "slug": "Burn_level.s2",
+          "url": "https://oldschool.runescape.wiki/w/Cooking/Burn_level"
+        }
+      ]
+    },
+    {
+      "id": "rfd-skrach",
+      "phase": "Region: Feldip Hills",
+      "instruction": "RFD: Skrach Uglogwee (Jubbly Bird)",
+      "detail": "Hunt and cook a jubbly bird near Rantz in Feldip Hills. Hunter 41 + Cooking 41 required.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Recipe for Disaster/Freeing Skrach Uglogwee",
+          "slug": "Recipe_for_Disaster_Freeing_Skrach_Uglogwee",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster/Freeing_Skrach_Uglogwee"
+        },
+        {
+          "title": "Recipe for Disaster",
+          "slug": "Recipe_for_Disaster.s1",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +1500",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "rfd-sir-amik",
+      "phase": "Region: Misthalin",
+      "instruction": "RFD: Sir Amik Varze (Creme Brulee)",
+      "detail": "Prepare a creme brulee supreme. Requires Cooking 70. Ice gloves needed during boss fight (from Ice Queen).",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Recipe for Disaster/Freeing Sir Amik Varze",
+          "slug": "Recipe_for_Disaster_Freeing_Sir_Amik_Varze",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster/Freeing_Sir_Amik_Varze"
+        },
+        {
+          "title": "Recipe for Disaster",
+          "slug": "Recipe_for_Disaster.s1",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +4000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ]
+    },
+    {
+      "id": "rfd-finale",
+      "phase": "Region: Misthalin",
+      "instruction": "RFD: Free the Cook (Finale)",
+      "detail": "Defeat 6 Culinaromancer minions with boosted combat stats. Rewards: Barrows gloves (best-in-slot). Attack/Strength/Defence 65 required.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3259,
+          "y": 3266,
+          "plane": 0,
+          "label": "Lumbridge cows"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Recipe for Disaster/Defeating the Culinaromancer",
+          "slug": "Recipe_for_Disaster_Defeating_the_Culinaromancer",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster/Defeating_the_Culinaromancer"
+        },
+        {
+          "title": "Recipe for Disaster",
+          "slug": "Recipe_for_Disaster.s1",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +10000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },

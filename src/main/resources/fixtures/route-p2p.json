@@ -306,6 +306,9 @@
           "slug": "Experience_table.s2",
           "url": "https://oldschool.runescape.wiki/w/Experience"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -364,6 +367,9 @@
           "slug": "Pay-to-play_Melee_training.s10",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -427,6 +433,9 @@
           "slug": "Barbarian",
           "url": "https://oldschool.runescape.wiki/w/Barbarian"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -860,6 +869,66 @@
       ]
     },
     {
+      "id": "quest-cooks-assistant",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "Complete Cook's Assistant",
+      "detail": "Lumbridge Cook needs ingredients for the Duke's birthday party. Starter quest, no reqs.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3208,
+          "y": 3214,
+          "plane": 0,
+          "label": "The Cook, Lumbridge Castle kitchen (start)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "cook",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "cook",
+          "value": "1",
+          "note": "start: agree to help with the Duke's birthday cake"
+        },
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +300",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Cook's Assistant",
+          "slug": "Cook's_Assistant.s1",
+          "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
+        },
+        {
+          "title": "Cook's Assistant",
+          "slug": "Cook's_Assistant.s9",
+          "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
+        }
+      ]
+    },
+    {
       "id": "train-magic-25",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Magic to 25",
@@ -1066,66 +1135,6 @@
       ]
     },
     {
-      "id": "quest-cooks-assistant",
-      "phase": "Toward Monkey Madness I",
-      "instruction": "Complete Cook's Assistant",
-      "detail": "Lumbridge Cook needs ingredients for the Duke's birthday party. Starter quest, no reqs.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 397
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 3208,
-          "y": 3214,
-          "plane": 0,
-          "label": "The Cook, Lumbridge Castle kitchen (start)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "talk-to",
-        "target": "cook",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "state": "quest-varbit:??"
-        }
-      },
-      "hints": [
-        {
-          "type": "dialogue",
-          "target": "cook",
-          "value": "1",
-          "note": "start: agree to help with the Duke's birthday cake"
-        },
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "cooking +300",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Cook's Assistant",
-          "slug": "Cook's_Assistant.s1",
-          "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
-        },
-        {
-          "title": "Cook's Assistant",
-          "slug": "Cook's_Assistant.s9",
-          "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
-        }
-      ]
-    },
-    {
       "id": "train-prayer-22",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Prayer to 22",
@@ -1161,121 +1170,9 @@
           "slug": "Pay-to-play_Prayer_training.s1",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
         }
-      ]
-    },
-    {
-      "id": "rfd-goblins",
-      "phase": "Toward Monkey Madness I",
-      "instruction": "RFD: Wartface and Bentnoze (Goblins)",
-      "detail": "Obtain orange and blue goblin mail armour for the goblin generals. Craft dyes from berries/onions via Aggie in Draynor.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 397
-        }
       ],
-      "mapMarkers": [
-        {
-          "x": 3259,
-          "y": 3266,
-          "plane": 0,
-          "label": "Lumbridge cows"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "talk-to",
-        "target": "goblin_generals",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "state": "quest-varbit:??"
-        }
-      },
-      "hints": [
-        {
-          "type": "dialogue",
-          "target": "goblin_generals",
-          "value": "1",
-          "note": "inspect the frozen goblin generals in the Lumbridge Castle dining room to start"
-        },
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "cooking +1000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Recipe for Disaster/Freeing the Goblin generals",
-          "slug": "Recipe_for_Disaster_Freeing_the_Goblin_generals.s1",
-          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_the_Goblin_generals"
-        },
-        {
-          "title": "Recipe for Disaster/Freeing the Goblin generals",
-          "slug": "Recipe_for_Disaster_Freeing_the_Goblin_generals.s3",
-          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_the_Goblin_generals"
-        }
-      ]
-    },
-    {
-      "id": "rfd-awowogei",
-      "phase": "Toward Monkey Madness I",
-      "instruction": "RFD: Awowogei (Snake on a Plinth)",
-      "detail": "Cook a snake on a plinth for Awowogei on Ape Atoll. Requires Monkey Madness I completion.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 1865,
-          "y": 5343,
-          "plane": 0,
-          "label": "Awowogei's table, Lumbridge Castle dining room (start, {{Quest details|startmap=}}-sourced)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "talk-to",
-        "target": "awowogei",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "state": "quest-varbit:??"
-        }
-      },
-      "hints": [
-        {
-          "type": "dialogue",
-          "target": "awowogei",
-          "value": "1",
-          "note": "inspect Awowogei in the Lumbridge Castle dining room to start"
-        },
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "cooking +4000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Recipe for Disaster/Freeing King Awowogei",
-          "slug": "Recipe_for_Disaster_Freeing_King_Awowogei.s1",
-          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_King_Awowogei"
-        },
-        {
-          "title": "Recipe for Disaster/Freeing King Awowogei",
-          "slug": "Recipe_for_Disaster_Freeing_King_Awowogei.s9",
-          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_King_Awowogei"
-        }
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -1444,6 +1341,9 @@
           "slug": "Pay-to-play_Smithing_training.s3",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
         }
+      ],
+      "passiveOverlays": [
+        "High Alch smithed items"
       ]
     },
     {
@@ -1673,61 +1573,6 @@
       ]
     },
     {
-      "id": "quest-fairytale-1",
-      "phase": "Toward Monkey Madness I",
-      "instruction": "Complete Fairytale I - Growing Pains",
-      "detail": "Unlocks herb patches worldwide. Critical prerequisite for the herb farming supply chain.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3077,
-          "y": 3258,
-          "plane": 0,
-          "label": "Martin the Master Gardener, Draynor Village pig pen (start)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "talk-to",
-        "target": "martin_the_master_gardener",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "state": "quest-varbit:??"
-        }
-      },
-      "hints": [
-        {
-          "type": "dialogue",
-          "target": "martin_the_master_gardener",
-          "value": "1",
-          "note": "start: ask about the failing farm patches"
-        },
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "farming +3500, magic +1000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Fairytale I - Growing Pains",
-          "slug": "Fairytale_I_-_Growing_Pains.s1",
-          "url": "https://oldschool.runescape.wiki/w/Fairytale_I_-_Growing_Pains"
-        },
-        {
-          "title": "Fairytale I - Growing Pains",
-          "slug": "Fairytale_I_-_Growing_Pains.s9",
-          "url": "https://oldschool.runescape.wiki/w/Fairytale_I_-_Growing_Pains"
-        }
-      ]
-    },
-    {
       "id": "train-ranged-30",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Ranged to 30",
@@ -1783,6 +1628,9 @@
           "slug": "Pay-to-play_Ranged_training.s9",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -2007,7 +1855,7 @@
       "phase": "Toward Monkey Madness I",
       "slotType": "background",
       "cadenceMinutes": null,
-      "lifecycleState": "idle->active",
+      "lifecycleState": "idle->seeds_planted",
       "instruction": "Set up: Check allotment patches",
       "detail": "Plant potato, onion, or cabbage allotments; collect produce. Check at natural banking breaks \u2014 do not interrupt active training.",
       "highlights": [],
@@ -2156,6 +2004,26 @@
           "slug": "Pay-to-play_Magic_training.s14",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
         }
+      ]
+    },
+    {
+      "id": "alternation-train-attack-30",
+      "phase": "Toward Monkey Madness I",
+      "slotType": "alternation",
+      "instruction": "\u21c4 Rotate: misthalin",
+      "detail": "These steps are all in the same area \u2014 any order works.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "alternationMembers": [
+        "train-attack-30",
+        "train-defence-30",
+        "train-attack-40",
+        "train-defence-40"
       ]
     },
     {
@@ -2377,6 +2245,9 @@
           "slug": "Al_Kharid_mine.s1",
           "url": "https://oldschool.runescape.wiki/w/Al_Kharid_mine"
         }
+      ],
+      "passiveOverlays": [
+        "High Alch smithed items"
       ]
     },
     {
@@ -2622,6 +2493,9 @@
           "slug": "Pay-to-play_Prayer_training.s4",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -2734,6 +2608,9 @@
           "slug": "Pay-to-play_Smithing_training.s3",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
         }
+      ],
+      "passiveOverlays": [
+        "High Alch smithed items"
       ]
     },
     {
@@ -2882,71 +2759,9 @@
           "slug": "Pay-to-play_Melee_training.s13",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
-      ]
-    },
-    {
-      "id": "quest-rfd-start",
-      "phase": "Toward Monkey Madness I",
-      "instruction": "Complete Recipe for Disaster (partial)",
-      "detail": "Sub-quest completion grants access to Barrows gloves and NMZ bosses.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 397
-        }
       ],
-      "mapMarkers": [
-        {
-          "x": 3208,
-          "y": 3214,
-          "plane": 0,
-          "label": "The Cook, Lumbridge Castle kitchen (RFD start)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "talk-to",
-        "target": "cook",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "state": "quest-varbit:??"
-        }
-      },
-      "hints": [
-        {
-          "type": "dialogue",
-          "target": "cook",
-          "value": "1",
-          "note": "start: agree to help gather feast ingredients"
-        },
-        {
-          "type": "quest-xp",
-          "target": null,
-          "value": "cooking +1000",
-          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Recipe for Disaster",
-          "slug": "Recipe_for_Disaster.s1",
-          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
-        },
-        {
-          "title": "Recipe for Disaster",
-          "slug": "Recipe_for_Disaster.s6",
-          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
-        },
-        {
-          "title": "Cook's Assistant",
-          "slug": "Cook's_Assistant.s1",
-          "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
-        }
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -3173,17 +2988,22 @@
       ]
     },
     {
-      "id": "quest-lost-city",
+      "id": "rfd-goblins",
       "phase": "Toward Monkey Madness I",
-      "instruction": "Complete Lost City",
-      "detail": "Unlocks Zanaris and cosmic rune altar. Grants access to dragon weaponry.",
-      "highlights": [],
+      "instruction": "RFD: Wartface and Bentnoze (Goblins)",
+      "detail": "Obtain orange and blue goblin mail armour for the goblin generals. Craft dyes from berries/onions via Aggie in Draynor.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
       "mapMarkers": [
         {
-          "x": 3150,
-          "y": 3205,
+          "x": 3259,
+          "y": 3266,
           "plane": 0,
-          "label": "Warrior, NW Lumbridge Swamp (start)"
+          "label": "Lumbridge cows"
         }
       ],
       "completionConditions": [
@@ -3193,7 +3013,7 @@
       ],
       "atom": {
         "verb": "talk-to",
-        "target": "warrior",
+        "target": "goblin_generals",
         "count": null,
         "cmp": "eq",
         "until": {
@@ -3203,22 +3023,47 @@
       "hints": [
         {
           "type": "dialogue",
-          "target": "warrior",
+          "target": "goblin_generals",
           "value": "1",
-          "note": "start: ask about Zanaris"
+          "note": "inspect the frozen goblin generals in the Lumbridge Castle dining room to start"
+        },
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +1000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ],
       "refs": [
         {
-          "title": "Lost City",
-          "slug": "Lost_City.s1",
-          "url": "https://oldschool.runescape.wiki/w/Lost_City"
+          "title": "Recipe for Disaster/Freeing the Goblin generals",
+          "slug": "Recipe_for_Disaster_Freeing_the_Goblin_generals.s1",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_the_Goblin_generals"
         },
         {
-          "title": "Lost City",
-          "slug": "Lost_City.s6",
-          "url": "https://oldschool.runescape.wiki/w/Lost_City"
+          "title": "Recipe for Disaster/Freeing the Goblin generals",
+          "slug": "Recipe_for_Disaster_Freeing_the_Goblin_generals.s3",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_the_Goblin_generals"
         }
+      ]
+    },
+    {
+      "id": "alternation-cook-monkfish",
+      "phase": "Toward Monkey Madness I",
+      "slotType": "alternation",
+      "instruction": "\u21c4 Rotate: kandarin",
+      "detail": "These steps are all in the same area \u2014 any order works.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "alternationMembers": [
+        "cook-monkfish",
+        "quest-swan-song",
+        "gather-monkfish"
       ]
     },
     {
@@ -3257,6 +3102,9 @@
           "slug": "Pay-to-play_Ranged_training.s9",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -3295,6 +3143,9 @@
           "slug": "Pay-to-play_Ranged_training.s9",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -3341,6 +3192,9 @@
           "slug": "Pay-to-play_Prayer_training.s4",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -3387,6 +3241,9 @@
           "slug": "Pay-to-play_Ranged_training.s9",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -3479,6 +3336,9 @@
           "slug": "Pay-to-play_Melee_training.s6",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -3568,38 +3428,6 @@
       ]
     },
     {
-      "id": "synth-magic-66-10",
-      "phase": "Toward Monkey Madness I",
-      "instruction": "Train Magic to 66",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "MAGIC",
-          "level": 66
-        }
-      ],
-      "refs": [
-        {
-          "title": "Experience",
-          "slug": "Experience_table.s2",
-          "url": "https://oldschool.runescape.wiki/w/Experience"
-        },
-        {
-          "title": "Pay-to-play Magic training",
-          "slug": "Pay-to-play_Magic_training.s14",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
-        },
-        {
-          "title": "Pay-to-play Magic training",
-          "slug": "Pay-to-play_Magic_training.s17",
-          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
-        }
-      ]
-    },
-    {
       "id": "quest-swan-song",
       "phase": "Toward Monkey Madness I",
       "instruction": "Complete Swan Song",
@@ -3651,6 +3479,207 @@
           "title": "Swan Song",
           "slug": "Swan_Song.s11",
           "url": "https://oldschool.runescape.wiki/w/Swan_Song"
+        }
+      ]
+    },
+    {
+      "id": "quest-rfd-start",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "Complete Recipe for Disaster (partial)",
+      "detail": "Sub-quest completion grants access to Barrows gloves and NMZ bosses.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 397
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3208,
+          "y": 3214,
+          "plane": 0,
+          "label": "The Cook, Lumbridge Castle kitchen (RFD start)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "cook",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "cook",
+          "value": "1",
+          "note": "start: agree to help gather feast ingredients"
+        },
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +1000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Recipe for Disaster",
+          "slug": "Recipe_for_Disaster.s1",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
+        },
+        {
+          "title": "Recipe for Disaster",
+          "slug": "Recipe_for_Disaster.s6",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
+        },
+        {
+          "title": "Cook's Assistant",
+          "slug": "Cook's_Assistant.s1",
+          "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
+        }
+      ]
+    },
+    {
+      "id": "quest-lost-city",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "Complete Lost City",
+      "detail": "Unlocks Zanaris and cosmic rune altar. Grants access to dragon weaponry.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3150,
+          "y": 3205,
+          "plane": 0,
+          "label": "Warrior, NW Lumbridge Swamp (start)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "warrior",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "warrior",
+          "value": "1",
+          "note": "start: ask about Zanaris"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Lost City",
+          "slug": "Lost_City.s1",
+          "url": "https://oldschool.runescape.wiki/w/Lost_City"
+        },
+        {
+          "title": "Lost City",
+          "slug": "Lost_City.s6",
+          "url": "https://oldschool.runescape.wiki/w/Lost_City"
+        }
+      ]
+    },
+    {
+      "id": "synth-magic-66-10",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "Train Magic to 66",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "MAGIC",
+          "level": 66
+        }
+      ],
+      "refs": [
+        {
+          "title": "Experience",
+          "slug": "Experience_table.s2",
+          "url": "https://oldschool.runescape.wiki/w/Experience"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s14",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        },
+        {
+          "title": "Pay-to-play Magic training",
+          "slug": "Pay-to-play_Magic_training.s17",
+          "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
+      ]
+    },
+    {
+      "id": "quest-fairytale-1",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "Complete Fairytale I - Growing Pains",
+      "detail": "Unlocks herb patches worldwide. Critical prerequisite for the herb farming supply chain.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3077,
+          "y": 3258,
+          "plane": 0,
+          "label": "Martin the Master Gardener, Draynor Village pig pen (start)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "martin_the_master_gardener",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "martin_the_master_gardener",
+          "value": "1",
+          "note": "start: ask about the failing farm patches"
+        },
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "farming +3500, magic +1000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Fairytale I - Growing Pains",
+          "slug": "Fairytale_I_-_Growing_Pains.s1",
+          "url": "https://oldschool.runescape.wiki/w/Fairytale_I_-_Growing_Pains"
+        },
+        {
+          "title": "Fairytale I - Growing Pains",
+          "slug": "Fairytale_I_-_Growing_Pains.s9",
+          "url": "https://oldschool.runescape.wiki/w/Fairytale_I_-_Growing_Pains"
         }
       ]
     },
@@ -3752,6 +3781,44 @@
           "slug": "Chicken",
           "url": "https://oldschool.runescape.wiki/w/Chicken",
           "kind": "npc"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/44ac0e/frame_login.png",
+          "url": null,
+          "caption": "Login screen \u2014 capture-harness demo wiring (FRAMES_GALLERY F1); P6 in-world chicken-training frames pending",
+          "state": {
+            "harness": "spike/run.sh",
+            "rev": 236,
+            "scenario": "login-fresh",
+            "tile": [
+              3232,
+              3296,
+              0
+            ],
+            "varbits": {},
+            "captured": "2026-07-12T07:52:19Z"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/53283a/login.gif",
+          "url": null,
+          "caption": "Login sequence, assembled GIF \u2014 same capture-harness demo wiring",
+          "state": {
+            "harness": "spike/run.sh",
+            "rev": 236,
+            "scenario": "login-fresh",
+            "tile": [
+              3232,
+              3296,
+              0
+            ],
+            "varbits": {},
+            "captured": "2026-07-12T07:52:33Z"
+          }
         }
       ]
     },
@@ -4363,6 +4430,9 @@
           "slug": "Cow",
           "url": "https://oldschool.runescape.wiki/w/Cow"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -4413,6 +4483,9 @@
           "slug": "Pay-to-play_Melee_training.s10",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -4485,6 +4558,9 @@
           "slug": "Pay-to-play_Melee_training.s13",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -4533,6 +4609,9 @@
           "slug": "Stronghold_of_Security.s3",
           "url": "https://oldschool.runescape.wiki/w/Stronghold_of_Security"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -4643,6 +4722,61 @@
       ]
     },
     {
+      "id": "rfd-awowogei",
+      "phase": "Toward Desert Treasure",
+      "instruction": "RFD: Awowogei (Snake on a Plinth)",
+      "detail": "Cook a snake on a plinth for Awowogei on Ape Atoll. Requires Monkey Madness I completion.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 1865,
+          "y": 5343,
+          "plane": 0,
+          "label": "Awowogei's table, Lumbridge Castle dining room (start, {{Quest details|startmap=}}-sourced)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "talk-to",
+        "target": "awowogei",
+        "count": null,
+        "cmp": "eq",
+        "until": {
+          "state": "quest-varbit:??"
+        }
+      },
+      "hints": [
+        {
+          "type": "dialogue",
+          "target": "awowogei",
+          "value": "1",
+          "note": "inspect Awowogei in the Lumbridge Castle dining room to start"
+        },
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +4000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Recipe for Disaster/Freeing King Awowogei",
+          "slug": "Recipe_for_Disaster_Freeing_King_Awowogei.s1",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_King_Awowogei"
+        },
+        {
+          "title": "Recipe for Disaster/Freeing King Awowogei",
+          "slug": "Recipe_for_Disaster_Freeing_King_Awowogei.s9",
+          "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_King_Awowogei"
+        }
+      ]
+    },
+    {
       "id": "unlock-gwd",
       "phase": "Toward Desert Treasure",
       "instruction": "God Wars Dungeon access",
@@ -4731,6 +4865,9 @@
           "slug": "Pay-to-play_Melee_training.s6",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -4769,6 +4906,9 @@
           "slug": "Pay-to-play_Melee_training.s6",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -4871,6 +5011,9 @@
           "slug": "Pay-to-play_Prayer_training.s4",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
         }
+      ],
+      "passiveOverlays": [
+        "Bury bones for Prayer XP"
       ]
     },
     {
@@ -5973,53 +6116,6 @@
       ]
     },
     {
-      "id": "synth-thieving-53-2",
-      "phase": "Endgame & extras",
-      "instruction": "Train Thieving to 53",
-      "detail": "Synthetic step \u2014 no matching step found in bank.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "THIEVING",
-          "level": 53
-        }
-      ],
-      "refs": [
-        {
-          "title": "Thieving training",
-          "slug": "Blackjacking.s11",
-          "url": "https://oldschool.runescape.wiki/w/Blackjacking"
-        },
-        {
-          "title": "Thieving training",
-          "slug": "Blackjacking.s1",
-          "url": "https://oldschool.runescape.wiki/w/Blackjacking"
-        },
-        {
-          "title": "Bandit (Pollnivneach)",
-          "slug": "Pollnivnian_bandit.s1",
-          "url": "https://oldschool.runescape.wiki/w/Pollnivnian_bandit"
-        },
-        {
-          "title": "Bandit (Pollnivneach)",
-          "slug": "Pollnivnian_bandit.s4",
-          "url": "https://oldschool.runescape.wiki/w/Pollnivnian_bandit"
-        },
-        {
-          "title": "Bandit (Pollnivneach)",
-          "slug": "Pollnivnian_bandit.s6",
-          "url": "https://oldschool.runescape.wiki/w/Pollnivnian_bandit"
-        },
-        {
-          "title": "Menaphite Thug",
-          "slug": "Menaphite_thug.s4",
-          "url": "https://oldschool.runescape.wiki/w/Menaphite_thug"
-        }
-      ]
-    },
-    {
       "id": "quest-dt",
       "phase": "Endgame & extras",
       "instruction": "Complete Desert Treasure",
@@ -6071,6 +6167,53 @@
           "title": "Desert Treasure I",
           "slug": "Desert_Treasure_I.s34",
           "url": "https://oldschool.runescape.wiki/w/Desert_Treasure_I"
+        }
+      ]
+    },
+    {
+      "id": "synth-thieving-53-2",
+      "phase": "Endgame & extras",
+      "instruction": "Train Thieving to 53",
+      "detail": "Synthetic step \u2014 no matching step found in bank.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "SKILL",
+          "skill": "THIEVING",
+          "level": 53
+        }
+      ],
+      "refs": [
+        {
+          "title": "Thieving training",
+          "slug": "Blackjacking.s11",
+          "url": "https://oldschool.runescape.wiki/w/Blackjacking"
+        },
+        {
+          "title": "Thieving training",
+          "slug": "Blackjacking.s1",
+          "url": "https://oldschool.runescape.wiki/w/Blackjacking"
+        },
+        {
+          "title": "Bandit (Pollnivneach)",
+          "slug": "Pollnivnian_bandit.s1",
+          "url": "https://oldschool.runescape.wiki/w/Pollnivnian_bandit"
+        },
+        {
+          "title": "Bandit (Pollnivneach)",
+          "slug": "Pollnivnian_bandit.s4",
+          "url": "https://oldschool.runescape.wiki/w/Pollnivnian_bandit"
+        },
+        {
+          "title": "Bandit (Pollnivneach)",
+          "slug": "Pollnivnian_bandit.s6",
+          "url": "https://oldschool.runescape.wiki/w/Pollnivnian_bandit"
+        },
+        {
+          "title": "Menaphite Thug",
+          "slug": "Menaphite_thug.s4",
+          "url": "https://oldschool.runescape.wiki/w/Menaphite_thug"
         }
       ]
     }

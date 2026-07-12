@@ -21,15 +21,22 @@
   refreshMetrics();
   setInterval(refreshMetrics, 5000);
 
-  // Scroll the current step into view once the plan first renders.
-  var scrolled = false;
+  // Scroll to the current step ONLY when it genuinely changes (first sight or
+  // pointer advancement) — never on routine 2s polls or unrelated interactions,
+  // which would yank the user's scroll position mid-read.
+  var lastCurrentKey = null;
+  function currentKeyOf(row) {
+    var check = row.querySelector('.step-check');
+    return (check && check.getAttribute('hx-post')) || row.textContent.slice(0, 80);
+  }
   document.body.addEventListener('htmx:afterSwap', function (e) {
-    if (scrolled || e.target.id !== 'plan') return;
+    if (e.target.id !== 'plan') return;
     var cur = document.querySelector('[data-current="1"]');
-    if (cur) {
-      cur.scrollIntoView({ block: 'center' });
-      scrolled = true;
-    }
+    if (!cur) return;
+    var key = currentKeyOf(cur);
+    if (key === lastCurrentKey) return;
+    lastCurrentKey = key;
+    cur.scrollIntoView({ block: 'center' });
   });
 
   // ── Wiki lightbox ──────────────────────────────────────────────────────────
@@ -64,6 +71,94 @@
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeWikibox();
+    if (e.key === 'Escape') { closeWikibox(); closeMediaLightbox(); }
+  });
+
+  // ── Media gallery + lightbox (FRAMES_GALLERY §3) ─────────────────────────
+  // The #gallery pane lives OUTSIDE the #plan/#detail swap zones, so it is
+  // refreshed here in plain JS — never via an htmx poll — on exactly two
+  // triggers: the detail pane's step key changing, and guide-store-changed
+  // (an htmx-dispatched DOM event from any action's HX-Trigger response
+  // header). This is also what buys the poll-safety invariant: the gallery's
+  // scroll position and an open lightbox are untouched by every #plan/#detail
+  // 2s re-poll, since neither ever targets #gallery or #media-lightbox.
+  var galleryKey = null;
+
+  function loadGallery(key) {
+    var pane = document.getElementById('gallery');
+    if (!pane) return;
+    if (!key) { pane.innerHTML = ''; pane.hidden = true; return; }
+    fetch('/fragments/gallery/' + key.split('/').map(encodeURIComponent).join('/'))
+      .then(function (r) { return r.text(); })
+      .then(function (html) {
+        pane.innerHTML = html;
+        pane.hidden = html.trim() === ''; // steps without media collapse to nothing
+      })
+      .catch(function () { /* server going away; next trigger will retry */ });
+  }
+
+  document.body.addEventListener('htmx:afterSwap', function (e) {
+    if (e.target.id !== 'detail') return;
+    var card = e.target.querySelector('.detail-card');
+    var key = card ? card.dataset.stepKey : '';
+    if (key === galleryKey) return;
+    galleryKey = key;
+    document.body.dispatchEvent(new CustomEvent('step-focus-changed', { detail: { key: key } }));
+  });
+
+  document.body.addEventListener('step-focus-changed', function (e) {
+    loadGallery(e.detail && e.detail.key);
+  });
+
+  document.body.addEventListener('guide-store-changed', function () {
+    loadGallery(galleryKey);
+  });
+
+  function mediaChip(label, value) {
+    if (!value) return '';
+    return '<span class="media-chip">' + label + ': ' + value + '</span>';
+  }
+
+  function openMediaLightbox(thumb) {
+    var box = document.getElementById('media-lightbox');
+    if (!box) return;
+    var mediaSlot = document.getElementById('media-lightbox-media');
+    var caption = document.getElementById('media-lightbox-caption');
+    var chips = document.getElementById('media-lightbox-chips');
+    var refsSlot = document.getElementById('media-lightbox-refs');
+    if (!mediaSlot || !caption || !chips || !refsSlot) return;
+
+    var src = thumb.dataset.mediaSrc || '';
+    var kind = thumb.dataset.mediaKind || 'png';
+    var cap = thumb.dataset.caption || '';
+
+    mediaSlot.innerHTML = kind === 'gif'
+      ? '<img src="' + src + '" alt="' + cap + '">'
+      : '<img src="' + src + '" alt="' + cap + '">';
+    caption.textContent = cap;
+    chips.innerHTML =
+      mediaChip('rev', thumb.dataset.rev ? 'r' + thumb.dataset.rev : '') +
+      mediaChip('scenario', thumb.dataset.scenario) +
+      mediaChip('tile', thumb.dataset.tile) +
+      mediaChip('captured', thumb.dataset.captured);
+
+    // Frames render alongside wiki refs in one lightbox family (FRAMES_GALLERY §3):
+    // the gallery pane already rendered this step's ref chips — mirror them in.
+    var galleryRefs = document.querySelector('#gallery .gallery-refs');
+    refsSlot.innerHTML = galleryRefs ? galleryRefs.innerHTML : '';
+
+    box.hidden = false;
+  }
+
+  function closeMediaLightbox() {
+    var box = document.getElementById('media-lightbox');
+    if (box) box.hidden = true;
+  }
+
+  document.addEventListener('click', function (e) {
+    var thumb = e.target.closest('.gallery-thumb');
+    if (thumb) { e.preventDefault(); openMediaLightbox(thumb); return; }
+    if (e.target.id === 'media-lightbox-close') { closeMediaLightbox(); return; }
+    if (e.target.id === 'media-lightbox') { closeMediaLightbox(); } // click-outside
   });
 })();

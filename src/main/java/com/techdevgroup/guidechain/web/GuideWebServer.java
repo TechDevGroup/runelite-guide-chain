@@ -3,9 +3,12 @@ package com.techdevgroup.guidechain.web;
 import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
+import com.techdevgroup.guidechain.data.GuideMedia;
 import com.techdevgroup.guidechain.icons.IconStore;
 import com.techdevgroup.guidechain.icons.RepoIconSource;
+import com.techdevgroup.guidechain.media.MediaStore;
 import com.techdevgroup.guidechain.store.GuideStore;
+import com.techdevgroup.guidechain.store.PlanRow;
 import com.techdevgroup.guidechain.wiki.WikiPageStore;
 
 import java.io.IOException;
@@ -17,6 +20,7 @@ import java.net.InetSocketAddress;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -40,6 +44,8 @@ import java.util.logging.Logger;
  * GET  /fragments/plan                ordered task list partial
  * GET  /fragments/step/current        detail partial following the position
  * GET  /fragments/step/{gid}/{sid}    detail partial for one step
+ * GET  /fragments/gallery/{gid}/{sid} media gallery partial for one step (FRAMES_GALLERY §3)
+ * GET  /media/{gid}/{sid}/{n}         lazy media blob: bytes of step.media[n] (FRAMES_GALLERY §4)
  * POST /actions/select-chain          form: chain=&lt;chainId&gt;
  * POST /actions/step/{gid}/{sid}/done mark done (advances if current)
  * POST /actions/step/{gid}/{sid}/skip mark skipped (advances if current)
@@ -68,6 +74,7 @@ public final class GuideWebServer
     private final ExecutorService executor;
     private final IconStore icons;
     private final WikiPageStore wikiPages;
+    private final MediaStore media;
 
     /**
      * @param refreshAction invoked by POST /actions/refresh-guides; inside the
@@ -82,6 +89,10 @@ public final class GuideWebServer
         this.fragments = new WebFragments(store);
         this.icons = new IconStore(new File(store.stateFile().getParentFile(), "icons"), new RepoIconSource());
         this.wikiPages = new WikiPageStore(new File(store.stateFile().getParentFile(), "wiki"));
+        // "guides" mirrors GuideManager.GUIDES_DIR on the plugin side (stateFile's
+        // parent IS the plugin's GC_DIR there) — the guide source's local checkout
+        // (FRAMES_GALLERY §4). Falls back to the bundled fixture on the classpath.
+        this.media = new MediaStore(new File(store.stateFile().getParentFile(), "guides"));
         this.executor = Executors.newFixedThreadPool(2, r ->
         {
             Thread t = new Thread(r, "guide-chain-web");
@@ -131,6 +142,7 @@ public final class GuideWebServer
                 if ("/".equals(path))                          { sendHtml(ex, fragments.shell()); return; }
                 if (path.startsWith("/static/"))               { serveStatic(ex, path.substring("/static/".length())); return; }
                 if (path.startsWith("/icon/item/"))            { serveItemIcon(ex, path.substring("/icon/item/".length())); return; }
+                if (path.startsWith("/media/"))                { serveMedia(ex, decode(path.substring("/media/".length()))); return; }
                 if ("/fragments/chains".equals(path))          { sendHtml(ex, fragments.chainsFragment()); return; }
                 if ("/fragments/plan".equals(path))            { sendHtml(ex, fragments.planFragment()); return; }
                 if ("/fragments/index".equals(path))           { sendHtml(ex, fragments.indexFragment()); return; }
@@ -139,6 +151,12 @@ public final class GuideWebServer
                 {
                     String key = decode(path.substring("/fragments/step/".length()));
                     sendHtml(ex, fragments.stepFragment(key));
+                    return;
+                }
+                if (path.startsWith("/fragments/gallery/"))
+                {
+                    String key = decode(path.substring("/fragments/gallery/".length()));
+                    sendHtml(ex, fragments.galleryFragment(key));
                     return;
                 }
                 if ("/wiki/page".equals(path))
@@ -274,6 +292,54 @@ public final class GuideWebServer
         try (OutputStream os = ex.getResponseBody())
         {
             os.write(png);
+        }
+    }
+
+    /**
+     * Lazy media blob: {@code GET /media/{guideId}/{stepId}/{n}} → bytes of
+     * {@code step.media[n]} (FRAMES_GALLERY §4). Manifest-driven resolution —
+     * {@code rest} is {@code "{key}/{n}"} where {@code key} is the same
+     * {@code guideId/stepId} PlanRow key every other step route uses; arbitrary
+     * paths are unreachable, only indices into the loaded step's own media[].
+     */
+    private void serveMedia(HttpExchange ex, String rest) throws IOException
+    {
+        int lastSlash = rest.lastIndexOf('/');
+        int n = -1;
+        if (lastSlash > 0)
+        {
+            try
+            {
+                n = Integer.parseInt(rest.substring(lastSlash + 1));
+            }
+            catch (NumberFormatException ignored)
+            {
+                n = -1;
+            }
+        }
+        String key = lastSlash > 0 ? rest.substring(0, lastSlash) : null;
+        PlanRow row = key != null ? store.planRow(key) : null;
+        List<GuideMedia> items = row != null ? row.step.media() : null;
+        if (items == null || n < 0 || n >= items.size())
+        {
+            ex.sendResponseHeaders(404, -1);
+            ex.close();
+            return;
+        }
+        GuideMedia m = items.get(n);
+        byte[] bytes = m.path != null ? media.read(m.path) : null;
+        if (bytes == null)
+        {
+            ex.sendResponseHeaders(404, -1);
+            ex.close();
+            return;
+        }
+        ex.getResponseHeaders().set("Content-Type", "gif".equals(m.kind) ? "image/gif" : "image/png");
+        ex.getResponseHeaders().set("Cache-Control", "public, max-age=31536000, immutable");
+        ex.sendResponseHeaders(200, bytes.length);
+        try (OutputStream os = ex.getResponseBody())
+        {
+            os.write(bytes);
         }
     }
 

@@ -989,6 +989,7 @@ public final class GuideStore
         patched.hints                = step.hints;    // additive pass-through; overrides cannot clear hints
         patched.checkpoint           = step.checkpoint;
         patched.refs                 = step.refs;     // additive pass-through; overrides cannot clear refs
+        patched.media                = step.media;    // additive pass-through; overrides cannot clear media (FRAMES_GALLERY §1)
         // §S4/§1e — sequencer+background+steer fields: additive pass-through, same as
         // hints/checkpoint/refs above. A StepOverride patch can't clear these; if it
         // could, an override on a background step could silently escape the loops
