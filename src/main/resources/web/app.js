@@ -147,8 +147,29 @@
     document.body.dispatchEvent(new CustomEvent('step-focus-changed', { detail: { key: key } }));
   });
 
+  // Ring the plan-list row whose detail is currently open. The row and the
+  // detail-card share the same data-step-key, so we can match exactly. Kept in
+  // sync on two triggers: the detail focus changing, and the plan list
+  // re-rendering (an htmx #plan swap replaces the rows, dropping the class).
+  function highlightFocusedRow(key) {
+    document.querySelectorAll('.step-row.step-focused').forEach(function (li) {
+      li.classList.remove('step-focused');
+    });
+    if (!key) return;
+    var sel = '.step-row[data-step-key="' + (window.CSS && CSS.escape ? CSS.escape(key) : key) + '"]';
+    var li = document.querySelector(sel);
+    if (li) li.classList.add('step-focused');
+  }
+
   document.body.addEventListener('step-focus-changed', function (e) {
     loadGallery(e.detail && e.detail.key);
+    highlightFocusedRow(e.detail && e.detail.key);
+  });
+
+  // Plan list just re-rendered — its rows are fresh, so re-apply the ring for
+  // whatever detail is currently open (galleryKey tracks it).
+  document.body.addEventListener('htmx:afterSwap', function (e) {
+    if (e.target.id === 'plan') highlightFocusedRow(galleryKey);
   });
 
   document.body.addEventListener('guide-store-changed', function () {

@@ -236,6 +236,15 @@ a.step-instruction:hover { color: var(--accent); }
 .st-skipped .step-instruction { color: var(--ink-dim); font-style: italic; }
 .st-skipped .step-num { color: var(--warn); }
 
+/* Row whose detail is currently open in the #detail pane — an inset ring so it
+   reads as "you are viewing this", distinct from st-current's left-border. The
+   two can stack (the open detail is also the current step) without clashing. */
+.step-row.step-focused {
+  background: rgba(53, 181, 255, 0.14);
+  box-shadow: inset 0 0 0 2px var(--accent);
+  border-radius: 6px;
+}
+
 /* ── Buttons ── */
 
 .btn {

@@ -283,6 +283,10 @@ final class WebFragments
         StringBuilder sb = new StringBuilder();
         sb.append("<li class=\"step-row st-").append(status).append("\"");
         if (r.status == PlanRow.Status.CURRENT) sb.append(" data-current=\"1\"");
+        // Match key for the plan↔detail focus highlight: the same r.key the
+        // detail-card carries as data-step-key, so app.js can ring the row whose
+        // detail is currently open.
+        sb.append(" data-step-key=\"").append(esc(r.key)).append("\"");
         sb.append(">\n");
         boolean checked = r.status == PlanRow.Status.DONE || r.status == PlanRow.Status.SKIPPED;
         sb.append("<input type=\"checkbox\" class=\"step-check\"")
