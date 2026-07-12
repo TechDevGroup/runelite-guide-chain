@@ -4599,6 +4599,30 @@
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
         }
       ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/6a77a4/arrive.png",
+          "url": null,
+          "caption": "Draynor Village fishing spots (train-fishing-20: net shrimp/anchovies 1\u219220)",
+          "state": {
+            "scenario": "train_fishing_draynor",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/8e09d7/observe.gif",
+          "url": null,
+          "caption": "Player beside the net fishing spots; use a small net to train Fishing",
+          "state": {
+            "scenario": "train_fishing_draynor",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        }
+      ],
       "methods": [
         {
           "method": "Net fishing shrimp/anchovies",

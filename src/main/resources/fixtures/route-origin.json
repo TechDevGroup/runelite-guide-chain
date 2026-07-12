@@ -439,6 +439,30 @@
           "slug": "Tutorial_Island.s7",
           "url": "https://oldschool.runescape.wiki/w/Tutorial_Island"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/9592c9/arrive.png",
+          "url": null,
+          "caption": "Tutorial Island quest house: the Quest Guide (ori-t-13-talk-to-quest-guide)",
+          "state": {
+            "scenario": "ori_t13_quest_guide",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/46851d/observe.gif",
+          "url": null,
+          "caption": "Player beside the Quest Guide; he explains the quest-journal colour code before the dungeon ladder",
+          "state": {
+            "scenario": "ori_t13_quest_guide",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        }
       ]
     },
     {
@@ -637,6 +661,30 @@
           "title": "Tutorial Island",
           "slug": "Tutorial_Island.s16",
           "url": "https://oldschool.runescape.wiki/w/Tutorial_Island"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/0a8ea9/arrive.png",
+          "url": null,
+          "caption": "Tutorial Island chapel: Brother Brace, the Prayer instructor (ori-t-19-talk-to-prayer-instructor)",
+          "state": {
+            "scenario": "ori_t19_prayer_instructor",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/16c099/observe.gif",
+          "url": null,
+          "caption": "Player beside Brother Brace; talk to him for the Prayer list and points explanation",
+          "state": {
+            "scenario": "ori_t19_prayer_instructor",
+            "rev": 236,
+            "oracle": "PASS"
+          }
         }
       ]
     },
@@ -884,6 +932,30 @@
           "title": "Lumbridge",
           "slug": "Lumbridge.s12",
           "url": "https://oldschool.runescape.wiki/w/Lumbridge"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/0c20dd/arrive.png",
+          "url": null,
+          "caption": "Lumbridge General Store, castle courtyard (ori-m-02-buy-spade)",
+          "state": {
+            "scenario": "lumbridge_general_store",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/08b657/observe.gif",
+          "url": null,
+          "caption": "Shop keeper at his stall; buy a spade here first (mandatory for X Marks the Spot)",
+          "state": {
+            "scenario": "lumbridge_general_store",
+            "rev": 236,
+            "oracle": "PASS"
+          }
         }
       ]
     },
