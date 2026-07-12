@@ -3465,6 +3465,97 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Chickens and cows with shortbow",
+          "location": "Lumbridge farm (misthalin)",
+          "level_band": "1-30",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Experience",
+              "slug": "Experience_table.s2",
+              "url": "https://oldschool.runescape.wiki/w/Experience"
+            },
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        },
+        {
+          "method": "Crabs (sand, rock, swamp, ammonite or gemstone)",
+          "location": "Various crab spots (Hosidius, Rellekka, Port Phasmatys, Fossil Island, Varlamore)",
+          "level_band": "1-30",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        },
+        {
+          "method": "Dwarf multicannon on ogres",
+          "location": "Ogres east of Castle Wars",
+          "level_band": "1-30",
+          "members": "??",
+          "xp_hr": 40000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Dwarf Cannon"
+            ],
+            "items": [
+              "Dwarf multicannon"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        },
+        {
+          "method": "Quest rewards (Shadow of the Storm, Death to the Dorgeshuun, Horror from the Deep)",
+          "location": "Quest completion, no fixed training spot",
+          "level_band": "1-30",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Shadow of the Storm",
+              "Death to the Dorgeshuun",
+              "Horror from the Deep"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -3553,6 +3644,99 @@
           "slug": "Pay-to-play_Magic_training.s5",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Air Bolt / elemental-weakness combat spells",
+          "location": "Ice Giants (White Wolf Mountain / Asgarnian Ice Dungeon) or Ghosts (Stronghold of Security, air-weak)",
+          "level_band": "1-25",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "elemental staff (e.g. staff of air)"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s8",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "Low Level Alchemy",
+          "location": "Anywhere with bank access; can be run alongside questing or Agility",
+          "level_band": "1-25",
+          "members": true,
+          "xp_hr": 60000,
+          "reqs": {
+            "skills": {
+              "magic": 21
+            },
+            "quests": [],
+            "items": [
+              "nature rune",
+              "item to alch"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s5",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "Enchant Crossbow Bolts (Pearl bolts)",
+          "location": "Bank with unenchanted pearl bolts + cosmic/water runes",
+          "level_band": "1-25",
+          "members": true,
+          "xp_hr": 159500,
+          "reqs": {
+            "skills": {
+              "magic": 24
+            },
+            "quests": [],
+            "items": [
+              "unenchanted pearl bolts",
+              "cosmic rune",
+              "water rune"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "Killing Crabs",
+          "location": "Rock Crabs (Rellekka) or Sand Crabs (Hosidius) \u2014 no quest requirement",
+          "level_band": "1-25",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "elemental staff"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -3618,6 +3802,73 @@
           "title": "Pay-to-play Firemaking training",
           "slug": "Pay-to-play_Firemaking_training.s3",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Normal logs, burning in a row",
+          "location": "Grand Exchange (east side) or Varrock west bank",
+          "level_band": "1-15",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "tinderbox"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Firemaking training",
+              "slug": "Pay-to-play_Firemaking_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+            }
+          ]
+        },
+        {
+          "method": "Coloured firelighter logs",
+          "location": "Grand Exchange (east side) or Varrock west bank",
+          "level_band": "1-30",
+          "members": "??",
+          "xp_hr": 74250,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "tinderbox"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Firemaking training",
+              "slug": "Pay-to-play_Firemaking_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+            }
+          ]
+        },
+        {
+          "method": "Pyre logs, 1-tick creation",
+          "location": "Bank with sacred oil and logs in inventory",
+          "level_band": "1-30",
+          "members": true,
+          "xp_hr": 92000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Shades of Mort'ton"
+            ],
+            "items": [
+              "sacred oil"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Firemaking training",
+              "slug": "Pay-to-play_Firemaking_training.s2",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+            }
+          ]
         }
       ]
     },
@@ -3713,6 +3964,65 @@
           "slug": "Pay-to-play_Farming_training.s4",
           "url": "https://oldschool.runescape.wiki/w/Farming_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Farming allotments",
+          "location": "allotment patch circuit (Falador, Catherby, Ardougne, etc.)",
+          "level_band": "1-17",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Farming training",
+              "slug": "Farming_training.s5",
+              "url": "https://oldschool.runescape.wiki/w/Farming_training"
+            }
+          ]
+        },
+        {
+          "method": "Bagged plants",
+          "location": "player-owned house garden (e.g. Rimmington)",
+          "level_band": "1-17",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Farming training",
+              "slug": "Farming_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Farming_training"
+            }
+          ]
+        },
+        {
+          "method": "Supercompost/ultracompost production",
+          "location": "compost bin (e.g. player-owned house garden)",
+          "level_band": "1-17",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Farming training",
+              "slug": "Farming_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Farming_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -3741,6 +4051,76 @@
           "title": "Pay-to-play Runecraft training",
           "slug": "Runecraft_training",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Air runes via Lumbridge Swamp altar",
+          "location": "Lumbridge Swamp",
+          "level_band": "1-27",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Runecraft training",
+              "slug": "Runecraft_training",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+            }
+          ]
+        },
+        {
+          "method": "Questing (Client of Kourend, The Ascent of Arceuus, Enter the Abyss, Temple of the Eye, The Eyes of Glouphrie, The Slug Menace)",
+          "location": "various",
+          "level_band": "1-32",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Client of Kourend",
+              "The Ascent of Arceuus",
+              "Enter the Abyss",
+              "Temple of the Eye",
+              "The Eyes of Glouphrie",
+              "The Slug Menace"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Runecraft training",
+              "slug": "Pay-to-play_Runecraft_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+            }
+          ]
+        },
+        {
+          "method": "Making talisman tiaras",
+          "location": "elemental rune altars",
+          "level_band": "1-50",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "Elemental tiaras",
+              "Ring of the elements",
+              "Amulet of glory"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Runecraft training",
+              "slug": "Pay-to-play_Runecraft_training.s8",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+            }
+          ]
         }
       ]
     },
@@ -3794,6 +4174,90 @@
           "title": "Construction training",
           "slug": "Construction_training",
           "url": "https://oldschool.runescape.wiki/w/Construction_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Crude wooden chair",
+          "location": "Player-owned house, Parlour",
+          "level_band": "1-4",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s12",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            }
+          ]
+        },
+        {
+          "method": "Wooden bookcase",
+          "location": "Player-owned house, Parlour",
+          "level_band": "4-9",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "construction": 4
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s12",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            }
+          ]
+        },
+        {
+          "method": "Wooden larder",
+          "location": "Player-owned house, Kitchen",
+          "level_band": "9-15",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "construction": 9
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s12",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            }
+          ]
+        },
+        {
+          "method": "Repair bench",
+          "location": "Player-owned house, Workshop",
+          "level_band": "15-16",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "construction": 15
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s12",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            }
+          ]
         }
       ]
     },
@@ -3974,6 +4438,111 @@
           "slug": "Hunter_training",
           "url": "https://oldschool.runescape.wiki/w/Hunter_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Tropical Wagtails (bird snares, two traps at level 20)",
+          "location": "Feldip Hills",
+          "level_band": "9-29",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "hunter": 9
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        },
+        {
+          "method": "Bird house trapping",
+          "location": "Fossil Island",
+          "level_band": "9-29",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Bone Voyage"
+            ],
+            "items": [
+              "digsite pendant",
+              "hammer",
+              "chisel",
+              "clockwork",
+              "logs",
+              "seeds"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training.s5",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        },
+        {
+          "method": "Feldip weasels",
+          "location": "Feldip Hunter area",
+          "level_band": "9-15",
+          "members": "??",
+          "xp_hr": 13000,
+          "reqs": {
+            "skills": {
+              "hunter": 9
+            },
+            "quests": [],
+            "items": [
+              "noose wand",
+              "ring of pursuit"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training.s10",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        },
+        {
+          "method": "Red crabs",
+          "location": "The Pandemonium",
+          "level_band": "21-39",
+          "members": "??",
+          "xp_hr": 31000,
+          "reqs": {
+            "skills": {
+              "hunter": 21,
+              "construction": 10
+            },
+            "quests": [
+              "Pandemonium (partial)"
+            ],
+            "items": [
+              "hammer",
+              "saw",
+              "planks",
+              "nails",
+              "buckets"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training.s12",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -4083,6 +4652,71 @@
           "slug": "Pay-to-play_Herblore_training.s6",
           "url": "https://oldschool.runescape.wiki/w/Herblore_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Make attack potions",
+          "location": "anywhere with bank access",
+          "level_band": "10-38",
+          "members": true,
+          "xp_hr": 62500,
+          "reqs": {
+            "skills": {
+              "herblore": 3
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ]
+        },
+        {
+          "method": "Make strength potions",
+          "location": "anywhere with bank access",
+          "level_band": "10-38",
+          "members": true,
+          "xp_hr": 125000,
+          "reqs": {
+            "skills": {
+              "herblore": 12
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ]
+        },
+        {
+          "method": "Make restore potions",
+          "location": "anywhere with bank access",
+          "level_band": "10-38",
+          "members": true,
+          "xp_hr": 156250,
+          "reqs": {
+            "skills": {
+              "herblore": 22
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -4170,6 +4804,58 @@
           "title": "Pay-to-play Woodcutting training",
           "slug": "Pay-to-play_Woodcutting_training.s18",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Oak trees",
+          "location": "Draynor Village, Seers' Village, Varrock, Falador, or Hosidius, near a bank",
+          "level_band": "15-30",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "woodcutting": 15
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Woodcutting training",
+              "slug": "Pay-to-play_Woodcutting_training.s5",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+            },
+            {
+              "title": "Pay-to-play Woodcutting training",
+              "slug": "Pay-to-play_Woodcutting_training.s18",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+            }
+          ]
+        },
+        {
+          "method": "Quest experience",
+          "location": "Monk's Friend, Enlightened Journey, Icthlarin's Little Helper, Recipe for Disaster (Skrach Uglogwee)",
+          "level_band": "15-26",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Monk's Friend",
+              "Enlightened Journey",
+              "Icthlarin's Little Helper",
+              "Recipe for Disaster"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Woodcutting training",
+              "slug": "Pay-to-play_Woodcutting_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+            }
+          ]
         }
       ]
     },
@@ -4438,6 +5124,78 @@
           "slug": "Pay-to-play_Woodcutting_training.s18",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Oak logs from GE or Draynor oaks",
+          "location": "Grand Exchange or Draynor Village oak trees",
+          "level_band": "15-30",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "tinderbox"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Experience",
+              "slug": "Experience_table.s2",
+              "url": "https://oldschool.runescape.wiki/w/Experience"
+            },
+            {
+              "title": "Pay-to-play Woodcutting training",
+              "slug": "Pay-to-play_Woodcutting_training.s18",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+            }
+          ]
+        },
+        {
+          "method": "Coloured firelighter logs",
+          "location": "Grand Exchange (east side) or Varrock west bank",
+          "level_band": "1-30",
+          "members": "??",
+          "xp_hr": 74250,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "tinderbox"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Firemaking training",
+              "slug": "Pay-to-play_Firemaking_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+            }
+          ]
+        },
+        {
+          "method": "Pyre logs, 1-tick creation",
+          "location": "Bank with sacred oil and logs in inventory",
+          "level_band": "1-30",
+          "members": true,
+          "xp_hr": 92000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Shades of Mort'ton"
+            ],
+            "items": [
+              "sacred oil"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Firemaking training",
+              "slug": "Pay-to-play_Firemaking_training.s2",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -4552,6 +5310,77 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Passive Hitpoints xp while training Attack/Strength/Defence on Rock Crabs/Chaos druids/Moss giants",
+          "location": "Varies (Waterbirth Island / Edgeville Dungeon / Kourend Catacombs)",
+          "level_band": "20-50",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s10",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            },
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s11",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            },
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        },
+        {
+          "method": "Chaos druid",
+          "location": "Edgeville Dungeon, or Chaos Druid Tower",
+          "level_band": "30-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 46
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s11",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        },
+        {
+          "method": "Moss giant",
+          "location": "Catacombs of Kourend, Varrock Sewers, or west of the Fishing Guild",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -4601,6 +5430,86 @@
           "title": "Pay-to-play Cooking training",
           "slug": "Pay-to-play_Cooking_training.s3",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Cook trout and salmon caught at Barbarian Village fishing spots on a nearby fire or range",
+          "location": "Barbarian Village fishing spots",
+          "level_band": "20-40",
+          "members": false,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ]
+        },
+        {
+          "method": "Continue with pike (20-25) then salmon (25-30) from the page's current low-tier fish table at a bank-adjacent fire or range",
+          "location": "any bank-adjacent fire or range",
+          "level_band": "20-30",
+          "members": false,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ]
+        },
+        {
+          "method": "Cook tuna for levels 30-40 at the Hosidius Kitchen (or Myths' Guild/Mor Ul Rek range), from the page's Levels 30-99 fish table",
+          "location": "Hosidius Kitchen",
+          "level_band": "30-40",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s8",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ]
+        },
+        {
+          "method": "1-tick cook cooked karambwan from level 30 onward after completing Tai Bwo Wannai Trio, for the fastest cooking xp in the game",
+          "location": "Rogues' Den / Myths' Guild / Mor Ul Rek",
+          "level_band": "30-40",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Tai Bwo Wannai Trio"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ]
         }
       ]
     },
@@ -5024,6 +5933,53 @@
           "slug": "Pay-to-play_Fishing_training.s4",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "AFK fly fishing trout/salmon (bank trips)",
+          "location": "Barbarian Village (or Prifddinas/Shilo Village spots)",
+          "level_band": "20-58",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "fly fishing rod",
+              "feathers"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Fishing training",
+              "slug": "Pay-to-play_Fishing_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+            }
+          ]
+        },
+        {
+          "method": "3-tick fly fishing trout/salmon",
+          "location": "Barbarian Village (or Prifddinas/Shilo Village spots)",
+          "level_band": "20-58",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "fly fishing rod",
+              "feathers",
+              "swamp tar and a suitable herb for tick manipulation"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Fishing training",
+              "slug": "Pay-to-play_Fishing_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -5062,6 +6018,56 @@
           "slug": "Pay-to-play_Crafting_training.s4",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Gold amulet (u) / sapphire ring jewellery",
+          "location": "Craft gold bars (with a sapphire for the ring) using the matching mould at a furnace (e.g. Prifddinas or Edgeville).",
+          "level_band": "20-40",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "crafting": 8
+            },
+            "quests": [],
+            "items": [
+              "gold bar",
+              "sapphire",
+              "mould"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Crafting training",
+              "slug": "Pay-to-play_Crafting_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
+            }
+          ]
+        },
+        {
+          "method": "Gem cutting (sapphire, emerald, ruby, diamond)",
+          "location": "Cut uncut gems with a chisel to sell or use in jewellery.",
+          "level_band": "20-40",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "crafting": 20
+            },
+            "quests": [],
+            "items": [
+              "uncut gem"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Crafting training",
+              "slug": "Pay-to-play_Crafting_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -5083,6 +6089,92 @@
           "title": "Construction training",
           "slug": "Construction_training",
           "url": "https://oldschool.runescape.wiki/w/Construction_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Oak dining table",
+          "location": "Player-owned house, Dining room",
+          "level_band": "22-31",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "construction": 22
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s12",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            }
+          ]
+        },
+        {
+          "method": "Carved oak table",
+          "location": "Player-owned house, Dining room",
+          "level_band": "31-33",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "construction": 31
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s12",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            }
+          ]
+        },
+        {
+          "method": "Oak larder",
+          "location": "Player-owned house, Kitchen",
+          "level_band": "33-40",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "construction": 33
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            }
+          ]
+        },
+        {
+          "method": "Mahogany Homes (Novice contract)",
+          "location": "Falador / Varrock / East Ardougne / Hosidius",
+          "level_band": "20-40",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "construction": 20
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            }
+          ]
         }
       ]
     },
@@ -5179,6 +6271,67 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Bury big bones",
+          "location": "anywhere (right-click bury, no altar needed)",
+          "level_band": "22-43",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Prayer training",
+              "slug": "Pay-to-play_Prayer_training.s21",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
+            }
+          ]
+        },
+        {
+          "method": "Offer bones at a gilded altar",
+          "location": "player-owned house gilded altar (or a hosted altar, e.g. worlds 330/465/512 at Rimmington)",
+          "level_band": "22-43",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "construction": 75
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Prayer training",
+              "slug": "Pay-to-play_Prayer_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
+            }
+          ]
+        },
+        {
+          "method": "Offer bones at the Chaos Temple altar",
+          "location": "Chaos Temple, level 38 Wilderness (multi-combat, player-killer risk)",
+          "level_band": "22-43",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Prayer training",
+              "slug": "Pay-to-play_Prayer_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -5225,6 +6378,102 @@
           "slug": "Pay-to-play_Magic_training.s11",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Superheat Item",
+          "location": "Any bank with ores nearby (e.g. Falador east, Edgeville)",
+          "level_band": "25-43",
+          "members": true,
+          "xp_hr": 97000,
+          "reqs": {
+            "skills": {
+              "magic": 43
+            },
+            "quests": [],
+            "items": [
+              "ore + coal per bar (as needed)",
+              "nature rune",
+              "fire rune"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s11",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "Curse-tier spell splashing",
+          "location": "Any safe weak monster with Auto Retaliate on",
+          "level_band": "25-43",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "gear with -64 or lower Magic attack bonus",
+              "autocast-capable staff"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "Enchant Crossbow Bolts (Emerald bolts)",
+          "location": "Bank with unenchanted emerald bolts + cosmic/air/nature runes",
+          "level_band": "25-43",
+          "members": true,
+          "xp_hr": 203500,
+          "reqs": {
+            "skills": {
+              "magic": 27
+            },
+            "quests": [],
+            "items": [
+              "unenchanted emerald bolts",
+              "cosmic rune",
+              "air rune",
+              "nature rune"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "Grand Library of Great Kourend (book delivery)",
+          "location": "Arceuus Library, Great Kourend",
+          "level_band": "25-43",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "Kourend Library RuneLite plugin recommended"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s10",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -5253,6 +6502,101 @@
           "title": "Hunter training",
           "slug": "Hunter_training",
           "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Swamp Lizards or Barb-tailed Kebbits (box traps)",
+          "location": "Lumbridge Swamp",
+          "level_band": "29-43",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "hunter": 29
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        },
+        {
+          "method": "Swamp lizards",
+          "location": "north-west of Slepe",
+          "level_band": "29-43",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "hunter": 29
+            },
+            "quests": [],
+            "items": [
+              "rope",
+              "small fishing net"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training.s19",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        },
+        {
+          "method": "Sapphire glacialis (butterfly net)",
+          "location": "Rellekka hunter area / Farming Guild / Mons Gratia",
+          "level_band": "25-39",
+          "members": "??",
+          "xp_hr": 28500,
+          "reqs": {
+            "skills": {
+              "hunter": 25
+            },
+            "quests": [],
+            "items": [
+              "butterfly net"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training.s19",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        },
+        {
+          "method": "Embertailed jerboas",
+          "location": "Locus Oasis",
+          "level_band": "39-43",
+          "members": "??",
+          "xp_hr": 50000,
+          "reqs": {
+            "skills": {
+              "hunter": 39
+            },
+            "quests": [
+              "Eagles' Peak (partial)"
+            ],
+            "items": [
+              "box traps"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
         }
       ]
     },
@@ -5340,6 +6684,67 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Barbarians",
+          "location": "Barbarian Village, south of Edgeville",
+          "level_band": "30-40",
+          "members": false,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Barbarian",
+              "slug": "Barbarian.s0",
+              "url": "https://oldschool.runescape.wiki/w/Barbarian"
+            }
+          ]
+        },
+        {
+          "method": "Flesh Crawlers and Zombies (Stronghold of Security, Catacomb of Famine)",
+          "location": "Stronghold of Security, Catacomb of Famine (level 2)",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Stronghold of Security",
+              "slug": "Stronghold_of_Security.s3",
+              "url": "https://oldschool.runescape.wiki/w/Stronghold_of_Security"
+            }
+          ]
+        },
+        {
+          "method": "Chaos druid",
+          "location": "Edgeville Dungeon, or Chaos Druid Tower",
+          "level_band": "30-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 46
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s11",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -5491,6 +6896,97 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Ogresses or Experiments",
+          "location": "??",
+          "level_band": "30-40",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Experience",
+              "slug": "Experience_table.s2",
+              "url": "https://oldschool.runescape.wiki/w/Experience"
+            },
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        },
+        {
+          "method": "Crabs (sand, rock, swamp, ammonite or gemstone)",
+          "location": "Various crab spots (Hosidius, Rellekka, Port Phasmatys, Fossil Island, Varlamore)",
+          "level_band": "30-40",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        },
+        {
+          "method": "Dwarf multicannon on ogres",
+          "location": "Ogres east of Castle Wars",
+          "level_band": "30-40",
+          "members": "??",
+          "xp_hr": 40000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Dwarf Cannon"
+            ],
+            "items": [
+              "Dwarf multicannon"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        },
+        {
+          "method": "Cannoning while training Slayer",
+          "location": "Wherever the current Slayer task sends the player",
+          "level_band": "30-40",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Dwarf Cannon"
+            ],
+            "items": [
+              "Dwarf multicannon"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -5582,6 +7078,50 @@
           "slug": "Pay-to-play_Woodcutting_training.s17",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Willow trees",
+          "location": "Woodcutting Guild pond, Draynor Village bank, Seers' Village, or Barbarian Outpost",
+          "level_band": "30-45",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "woodcutting": 30
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Woodcutting training",
+              "slug": "Pay-to-play_Woodcutting_training.s19",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+            }
+          ]
+        },
+        {
+          "method": "Teak trees",
+          "location": "Teak-tree areas (e.g. Fossil Island patches)",
+          "level_band": "35-45",
+          "members": "??",
+          "xp_hr": 34000,
+          "reqs": {
+            "skills": {
+              "woodcutting": 35
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Woodcutting training",
+              "slug": "Pay-to-play_Woodcutting_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -5619,6 +7159,92 @@
           "title": "Pay-to-play Firemaking training",
           "slug": "Pay-to-play_Firemaking_training.s3",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Maple logs",
+          "location": "Grand Exchange (east side) or Varrock west bank",
+          "level_band": "45-50",
+          "members": "??",
+          "xp_hr": 200475,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "tinderbox"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Firemaking training",
+              "slug": "Pay-to-play_Firemaking_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+            }
+          ]
+        },
+        {
+          "method": "Willow logs",
+          "location": "Grand Exchange (east side) or Varrock west bank",
+          "level_band": "30-35",
+          "members": "??",
+          "xp_hr": 107000,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "tinderbox"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Firemaking training",
+              "slug": "Pay-to-play_Firemaking_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+            }
+          ]
+        },
+        {
+          "method": "Teak logs",
+          "location": "Grand Exchange (east side) or Varrock west bank",
+          "level_band": "35-42",
+          "members": "??",
+          "xp_hr": 138000,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "tinderbox"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Firemaking training",
+              "slug": "Pay-to-play_Firemaking_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+            }
+          ]
+        },
+        {
+          "method": "Arctic pine logs",
+          "location": "Grand Exchange (east side) or Varrock west bank",
+          "level_band": "42-45",
+          "members": "??",
+          "xp_hr": 185625,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "tinderbox"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Firemaking training",
+              "slug": "Pay-to-play_Firemaking_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+            }
+          ]
         }
       ]
     },
@@ -5820,6 +7446,67 @@
       ],
       "passiveOverlays": [
         "High Alch smithed items"
+      ],
+      "methods": [
+        {
+          "method": "Anvil smithing iron/steel items (iron platebody, then steel warhammer)",
+          "location": "West Varrock anvil",
+          "level_band": "30-40",
+          "members": false,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        },
+        {
+          "method": "Giants' Foundry \u2014 forge Iron/Steel alloy swords for Kovac",
+          "location": "Giants' Foundry minigame",
+          "level_band": "30-40",
+          "members": true,
+          "xp_hr": 133920,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Sleeping Giants"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        },
+        {
+          "method": "Blast Furnace \u2014 smelt non-gold bars for profit",
+          "location": "Blast Furnace, Keldagrim",
+          "level_band": "30-40",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -5841,6 +7528,69 @@
           "title": "Pay-to-play Mining training",
           "slug": "Pay-to-play_Mining_training.s8",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Iron ore drop-mining (triangle spots)",
+          "location": "Any of the 16 three-rock iron triangle sites",
+          "level_band": "30-45",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Mining training",
+              "slug": "Pay-to-play_Mining_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+            }
+          ]
+        },
+        {
+          "method": "Granite 3-tick mining",
+          "location": "Bandit Camp Quarry or Cape Conch mine",
+          "level_band": "30-45",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "mining": 45
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Mining training",
+              "slug": "Pay-to-play_Mining_training.s10",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+            }
+          ]
+        },
+        {
+          "method": "Motherlode Mine",
+          "location": "Motherlode Mine, near the Mining Guild in Falador",
+          "level_band": "30-45",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "mining": 30
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Mining training",
+              "slug": "Pay-to-play_Mining_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+            }
+          ]
         }
       ]
     },
@@ -5921,6 +7671,67 @@
           "slug": "Agility_training",
           "url": "https://oldschool.runescape.wiki/w/Agility_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Varrock Rooftop Course",
+          "location": "Varrock",
+          "level_band": "30-40",
+          "members": "??",
+          "xp_hr": "11000-14000",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Agility training",
+              "slug": "Agility_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Agility_training"
+            }
+          ]
+        },
+        {
+          "method": "Brimhaven Agility Arena",
+          "location": "Brimhaven Agility Arena",
+          "level_band": "20-47",
+          "members": "??",
+          "xp_hr": "45000-50000",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "200 coins entry fee"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Agility training",
+              "slug": "Agility_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Agility_training"
+            }
+          ]
+        },
+        {
+          "method": "Quest XP shortcut (Tourist Trap etc.)",
+          "location": "various quest start points",
+          "level_band": "1-33",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Agility training",
+              "slug": "Agility_training.s2",
+              "url": "https://oldschool.runescape.wiki/w/Agility_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -5942,6 +7753,92 @@
           "title": "Herblore training",
           "slug": "Pay-to-play_Herblore_training.s2",
           "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Make super restore potions",
+          "location": "anywhere with bank access",
+          "level_band": "38-55",
+          "members": true,
+          "xp_hr": 356000,
+          "reqs": {
+            "skills": {
+              "herblore": 63
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ]
+        },
+        {
+          "method": "Make prayer potions",
+          "location": "anywhere with bank access",
+          "level_band": "38-55",
+          "members": true,
+          "xp_hr": 218750,
+          "reqs": {
+            "skills": {
+              "herblore": 38
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ]
+        },
+        {
+          "method": "Make fishing potions",
+          "location": "anywhere with bank access",
+          "level_band": "38-55",
+          "members": true,
+          "xp_hr": 281250,
+          "reqs": {
+            "skills": {
+              "herblore": 50
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ]
+        },
+        {
+          "method": "Make super energy potions",
+          "location": "anywhere with bank access",
+          "level_band": "38-55",
+          "members": true,
+          "xp_hr": 293750,
+          "reqs": {
+            "skills": {
+              "herblore": 52
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ]
         }
       ]
     },
@@ -6003,6 +7900,73 @@
           "slug": "Blackjacking.s1",
           "url": "https://oldschool.runescape.wiki/w/Thieving_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Steal from fruit stalls (Hosidius, Zeah)",
+          "location": "Hosidius market or coastal houses",
+          "level_band": "38-50",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 25
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Thieving training",
+              "slug": "Thieving_training.s20",
+              "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+            }
+          ]
+        },
+        {
+          "method": "Pickpocket Knights of Ardougne",
+          "location": "Ardougne marketplace or south-east bank",
+          "level_band": "55",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 55
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Thieving training",
+              "slug": "Thieving_training.s23",
+              "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+            }
+          ]
+        },
+        {
+          "method": "Steal artefacts (Port Piscarilius)",
+          "location": "Port Piscarilius, via guard-lured bridges",
+          "level_band": "49-55",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 49
+            },
+            "quests": [],
+            "items": [
+              "lockpick"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Thieving training",
+              "slug": "Thieving_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6059,6 +8023,67 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Flesh Crawlers and Zombies (Stronghold of Security, Catacomb of Famine)",
+          "location": "Stronghold of Security, Catacomb of Famine (level 2)",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Stronghold of Security",
+              "slug": "Stronghold_of_Security.s3",
+              "url": "https://oldschool.runescape.wiki/w/Stronghold_of_Security"
+            }
+          ]
+        },
+        {
+          "method": "Moss giant",
+          "location": "Catacombs of Kourend, Varrock Sewers, or west of the Fishing Guild",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        },
+        {
+          "method": "Chaos druid",
+          "location": "Edgeville Dungeon, or Chaos Druid Tower",
+          "level_band": "30-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 46
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s11",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6107,6 +8132,67 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Flesh Crawlers and Zombies (Stronghold of Security, Catacomb of Famine)",
+          "location": "Stronghold of Security, Catacomb of Famine (level 2)",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Stronghold of Security",
+              "slug": "Stronghold_of_Security.s3",
+              "url": "https://oldschool.runescape.wiki/w/Stronghold_of_Security"
+            }
+          ]
+        },
+        {
+          "method": "Moss giant",
+          "location": "Catacombs of Kourend, Varrock Sewers, or west of the Fishing Guild",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        },
+        {
+          "method": "Chaos druid",
+          "location": "Edgeville Dungeon, or Chaos Druid Tower",
+          "level_band": "30-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 46
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s11",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6158,6 +8244,65 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Flesh Crawlers and Zombies (Stronghold of Security, Catacomb of Famine)",
+          "location": "Stronghold of Security, Catacomb of Famine (level 2)",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Stronghold of Security",
+              "slug": "Stronghold_of_Security.s3",
+              "url": "https://oldschool.runescape.wiki/w/Stronghold_of_Security"
+            }
+          ]
+        },
+        {
+          "method": "Moss giant",
+          "location": "Catacombs of Kourend, Varrock Sewers, or west of the Fishing Guild",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        },
+        {
+          "method": "Wilderness Slayer",
+          "location": "Wilderness",
+          "level_band": "60-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6199,6 +8344,97 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Seagulls at Port Sarim or Chinchompas",
+          "location": "Port Sarim",
+          "level_band": "40-55",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Experience",
+              "slug": "Experience_table.s2",
+              "url": "https://oldschool.runescape.wiki/w/Experience"
+            },
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        },
+        {
+          "method": "Crabs (sand, rock, swamp, ammonite or gemstone)",
+          "location": "Various crab spots (Hosidius, Rellekka, Port Phasmatys, Fossil Island, Varlamore)",
+          "level_band": "40-55",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        },
+        {
+          "method": "Dwarf multicannon on ogres",
+          "location": "Ogres east of Castle Wars",
+          "level_band": "40-55",
+          "members": "??",
+          "xp_hr": 40000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Dwarf Cannon"
+            ],
+            "items": [
+              "Dwarf multicannon"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        },
+        {
+          "method": "Chinning maniacal monkeys",
+          "location": "Kruk's Dungeon, Ape Atoll",
+          "level_band": "40-55",
+          "members": "??",
+          "xp_hr": 290000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Monkey Madness II (chapter II started)"
+            ],
+            "items": [
+              "Chinchompa"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6252,6 +8488,67 @@
           "slug": "Pay-to-play_Cooking_training.s4",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Cook lobsters from level 40 onward, wearing cooking gauntlets to reduce the burn rate",
+          "location": "Hosidius Kitchen (levels 40-61), then Rogues' Den (61-68)",
+          "level_band": "40-58",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s8",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ]
+        },
+        {
+          "method": "Bake pies with the Bake Pie spell after completing Lunar Diplomacy, for fast semi-AFK xp with passive Magic xp as a side effect",
+          "location": "any location with spell access and an astral rune supply",
+          "level_band": "40-58",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Lunar Diplomacy"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ]
+        },
+        {
+          "method": "Make jugs of wine from level 35 onward, mainly to push through to level 68 rather than as a primary method since a jug of bad wine can fail for 0 xp below 68",
+          "location": "a bank near grapes and jugs of water, e.g. Catherby",
+          "level_band": "35-58",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6289,6 +8586,52 @@
           "title": "Pay-to-play Fishing training",
           "slug": "Pay-to-play_Fishing_training.s4",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Cage fishing lobsters",
+          "location": "Karamja or Catherby",
+          "level_band": "40-58",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "lobster pot"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Fishing training",
+              "slug": "Pay-to-play_Fishing_training.s1",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+            }
+          ]
+        },
+        {
+          "method": "3-tick fly fishing trout/salmon (continuing to 58)",
+          "location": "Barbarian Village (or Prifddinas/Shilo Village spots)",
+          "level_band": "20-58",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "fly fishing rod",
+              "feathers",
+              "swamp tar and a suitable herb for tick manipulation"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Fishing training",
+              "slug": "Pay-to-play_Fishing_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+            }
+          ]
         }
       ]
     },
@@ -6335,6 +8678,77 @@
           "slug": "Pay-to-play_Crafting_training.s3",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Green dragonhide body",
+          "location": "Craft tanned green dragon leather into bodies with a needle and thread (or costume needle) at a bank.",
+          "level_band": "40-54",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "crafting": 63
+            },
+            "quests": [],
+            "items": [
+              "green dragon leather",
+              "needle",
+              "thread"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Crafting training",
+              "slug": "Pay-to-play_Crafting_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
+            }
+          ]
+        },
+        {
+          "method": "Diamond ring / gem cutting continuation",
+          "location": "Continue cutting uncut gems (ruby, then diamond) to sell or use in jewellery.",
+          "level_band": "40-54",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "crafting": 34
+            },
+            "quests": [],
+            "items": [
+              "uncut gem"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Crafting training",
+              "slug": "Pay-to-play_Crafting_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
+            }
+          ]
+        },
+        {
+          "method": "Water battlestaff",
+          "location": "Craft water battlestaves per the page's battlestaff table.",
+          "level_band": "40-54",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "crafting": 54
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Crafting training",
+              "slug": "Pay-to-play_Crafting_training.s5",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6364,6 +8778,73 @@
           "slug": "Agility_training",
           "url": "https://oldschool.runescape.wiki/w/Agility_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Canifis Rooftop Course",
+          "location": "Canifis",
+          "level_band": "40-50",
+          "members": "??",
+          "xp_hr": "14000-17000",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "quest-priest-in-peril"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Agility training",
+              "slug": "Agility_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Agility_training"
+            }
+          ]
+        },
+        {
+          "method": "Brimhaven Agility Arena",
+          "location": "Brimhaven Agility Arena",
+          "level_band": "20-47",
+          "members": "??",
+          "xp_hr": "45000-50000",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "200 coins entry fee"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Agility training",
+              "slug": "Agility_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Agility_training"
+            }
+          ]
+        },
+        {
+          "method": "Wilderness Agility Course",
+          "location": "Deep Wilderness (near Ice Plateau)",
+          "level_band": "47-62",
+          "members": "??",
+          "xp_hr": "50000-60000",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "stamina potions",
+              "summer pies",
+              "knife or Wilderness sword"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Agility training",
+              "slug": "Agility_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Agility_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6385,6 +8866,76 @@
           "title": "Construction training",
           "slug": "Construction_training",
           "url": "https://oldschool.runescape.wiki/w/Construction_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Oak (dungeon) door",
+          "location": "Player-owned house, Dungeon",
+          "level_band": "74-99",
+          "members": true,
+          "xp_hr": 550000,
+          "reqs": {
+            "skills": {
+              "construction": 74
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            },
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s22",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            }
+          ]
+        },
+        {
+          "method": "Oak larder",
+          "location": "Player-owned house, Kitchen",
+          "level_band": "40-52",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "construction": 40
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            }
+          ]
+        },
+        {
+          "method": "Mahogany Homes (Adept contract)",
+          "location": "Falador / Varrock / East Ardougne / Hosidius",
+          "level_band": "50-70",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "construction": 50
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            }
+          ]
         }
       ]
     },
@@ -6435,6 +8986,67 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Offer dragon bones at a gilded altar",
+          "location": "player-owned house gilded altar (or a hosted altar, e.g. worlds 330/465/512 at Rimmington)",
+          "level_band": "43-52",
+          "members": true,
+          "xp_hr": 643000,
+          "reqs": {
+            "skills": {
+              "construction": 75
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Prayer training",
+              "slug": "Pay-to-play_Prayer_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
+            }
+          ]
+        },
+        {
+          "method": "Offer dragon bones at the Chaos Temple altar",
+          "location": "Chaos Temple, level 38 Wilderness (multi-combat, player-killer risk)",
+          "level_band": "43-52",
+          "members": "??",
+          "xp_hr": 860000,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Prayer training",
+              "slug": "Pay-to-play_Prayer_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
+            }
+          ]
+        },
+        {
+          "method": "Reanimate ensouled heads near the Dark Altar",
+          "location": "Arceuus, Dark Altar (fairy ring code CIS)",
+          "level_band": "43-52",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Prayer training",
+              "slug": "Pay-to-play_Prayer_training.s19",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6485,6 +9097,90 @@
           "title": "Pay-to-play Magic training",
           "slug": "Pay-to-play_Magic_training.s14",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "High Level Alchemy",
+          "location": "Anywhere, on noted/bought items",
+          "level_band": "43-55",
+          "members": "??",
+          "xp_hr": 78000,
+          "reqs": {
+            "skills": {
+              "magic": 55
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "Superheat Item (smelt ores into bars)",
+          "location": "Anywhere with ore stock (bank noted ore)",
+          "level_band": "43-55",
+          "members": "??",
+          "xp_hr": 97000,
+          "reqs": {
+            "skills": {
+              "magic": 43
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s11",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "Arceuus Library book-delivery minigame",
+          "location": "Arceuus Library, Great Kourend",
+          "level_band": "43-55",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s10",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "Enchant Crossbow Bolt (highest affordable gem bolts, e.g. Ruby)",
+          "location": "Anywhere, on owned bolts",
+          "level_band": "43-55",
+          "members": "??",
+          "xp_hr": 324500,
+          "reqs": {
+            "skills": {
+              "magic": 49
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
         }
       ]
     },
@@ -6620,6 +9316,102 @@
           "slug": "Hunter_training",
           "url": "https://oldschool.runescape.wiki/w/Hunter_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Chinchompas (Piscatoris Hunter Area)",
+          "location": "Piscatoris Hunter Area",
+          "level_band": "43-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "hunter": 43
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        },
+        {
+          "method": "Falconry (spotted kebbits, dark kebbits from 57)",
+          "location": "Piscatoris falconry area",
+          "level_band": "43-49",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "hunter": 43
+            },
+            "quests": [],
+            "items": [
+              "gyr falcon rental (500gp)"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        },
+        {
+          "method": "Razor-backed kebbits",
+          "location": "Piscatoris hunter area",
+          "level_band": "49-73",
+          "members": "??",
+          "xp_hr": 130000,
+          "reqs": {
+            "skills": {
+              "hunter": 49
+            },
+            "quests": [],
+            "items": [
+              "noose wand",
+              "ring of pursuit"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training.s15",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        },
+        {
+          "method": "Orange salamanders",
+          "location": "Uzer hunter area / Necropolis hunter area",
+          "level_band": "47-59",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "hunter": 47
+            },
+            "quests": [],
+            "items": [
+              "small fishing net",
+              "rope",
+              "waterskins",
+              "Desert clothing"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training.s19",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6679,6 +9471,50 @@
           "title": "Pay-to-play Woodcutting training",
           "slug": "Pay-to-play_Woodcutting_training.s17",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Maple trees",
+          "location": "Woodcutting Guild, Seers' Village, Corsair Cove, or Hosidius",
+          "level_band": "45-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "woodcutting": 45
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Woodcutting training",
+              "slug": "Pay-to-play_Woodcutting_training.s21",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+            }
+          ]
+        },
+        {
+          "method": "Teak trees",
+          "location": "Teak-tree areas (e.g. Fossil Island patches)",
+          "level_band": "45-60",
+          "members": "??",
+          "xp_hr": 46000,
+          "reqs": {
+            "skills": {
+              "woodcutting": 45
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Woodcutting training",
+              "slug": "Pay-to-play_Woodcutting_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+            }
+          ]
         }
       ]
     },
@@ -6762,6 +9598,69 @@
           "title": "Pay-to-play Mining training",
           "slug": "Pay-to-play_Mining_training.s8",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Granite 3-tick mining",
+          "location": "Bandit Camp Quarry (needs desert-heat protection) or Cape Conch mine (needs partial Troubled Tortugans)",
+          "level_band": "45-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Mining training",
+              "slug": "Pay-to-play_Mining_training.s10",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+            }
+          ]
+        },
+        {
+          "method": "Motherlode Mine",
+          "location": "Motherlode Mine, near the Mining Guild in Falador",
+          "level_band": "45-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "mining": 30
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Mining training",
+              "slug": "Pay-to-play_Mining_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+            }
+          ]
+        },
+        {
+          "method": "Iron ore (pay-to-play Mining Guild)",
+          "location": "Pay-to-play area of the Mining Guild",
+          "level_band": "45-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "mining": 60
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Mining training",
+              "slug": "Pay-to-play_Mining_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+            }
+          ]
         }
       ]
     },
@@ -6851,6 +9750,71 @@
           "slug": "Pay-to-play_Firemaking_training.s3",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Yew logs",
+          "location": "Grand Exchange (east side) or Varrock west bank",
+          "level_band": "60-75",
+          "members": "??",
+          "xp_hr": 300712,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "tinderbox"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Firemaking training",
+              "slug": "Pay-to-play_Firemaking_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+            }
+          ]
+        },
+        {
+          "method": "Mahogany logs",
+          "location": "Grand Exchange (east side) or Varrock west bank",
+          "level_band": "50-60",
+          "members": "??",
+          "xp_hr": 233887,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "tinderbox"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Firemaking training",
+              "slug": "Pay-to-play_Firemaking_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+            }
+          ]
+        },
+        {
+          "method": "Wintertodt",
+          "location": "Zeah, Wintertodt (official worlds 307/309/311/389 for fastest rounds)",
+          "level_band": "50-75",
+          "members": true,
+          "xp_hr": 161000,
+          "reqs": {
+            "skills": {
+              "firemaking": 50
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Firemaking training",
+              "slug": "Pay-to-play_Firemaking_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Firemaking_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6879,6 +9843,69 @@
           "title": "Agility training",
           "slug": "Agility_training",
           "url": "https://oldschool.runescape.wiki/w/Agility_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Falador Rooftop Course",
+          "location": "Falador",
+          "level_band": "50-60",
+          "members": "??",
+          "xp_hr": "29000-34000",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Agility training",
+              "slug": "Agility_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Agility_training"
+            }
+          ]
+        },
+        {
+          "method": "Seers' Village Rooftop Course",
+          "location": "Seers' Village",
+          "level_band": "60-70",
+          "members": "??",
+          "xp_hr": "40000-56000",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Agility training",
+              "slug": "Agility_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Agility_training"
+            }
+          ]
+        },
+        {
+          "method": "Wilderness Agility Course",
+          "location": "Deep Wilderness (near Ice Plateau)",
+          "level_band": "47-62",
+          "members": "??",
+          "xp_hr": "50000-60000",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "stamina potions",
+              "summer pies",
+              "knife or Wilderness sword"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Agility training",
+              "slug": "Agility_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Agility_training"
+            }
+          ]
         }
       ]
     },
@@ -7009,6 +10036,102 @@
           "slug": "Pay-to-play_Crafting_training.s3",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Blue / red dragonhide bodies",
+          "location": "Craft tanned blue or red dragon leather into bodies with a needle and thread (or costume needle) at a bank.",
+          "level_band": "54-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "crafting": 71
+            },
+            "quests": [],
+            "items": [
+              "dragon leather",
+              "needle",
+              "thread"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Crafting training",
+              "slug": "Pay-to-play_Crafting_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
+            }
+          ]
+        },
+        {
+          "method": "Battlestaff ladder (water, earth, fire, air)",
+          "location": "Craft battlestaves per the page's battlestaff table.",
+          "level_band": "54-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "crafting": 54
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Crafting training",
+              "slug": "Pay-to-play_Crafting_training.s5",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
+            }
+          ]
+        },
+        {
+          "method": "Green dragonhide body",
+          "location": "Craft tanned green dragon leather into bodies with a needle and thread (or costume needle) at a bank.",
+          "level_band": "54-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "crafting": 63
+            },
+            "quests": [],
+            "items": [
+              "green dragon leather",
+              "needle",
+              "thread"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Crafting training",
+              "slug": "Pay-to-play_Crafting_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
+            }
+          ]
+        },
+        {
+          "method": "Dragonstone ring / gem cutting continuation",
+          "location": "Continue cutting uncut gems (dragonstone) to sell or use in jewellery.",
+          "level_band": "54-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "crafting": 55
+            },
+            "quests": [],
+            "items": [
+              "uncut gem"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Crafting training",
+              "slug": "Pay-to-play_Crafting_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Crafting_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -7058,6 +10181,96 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Cannon tasks for fast Ranged XP",
+          "location": "Wherever the current Slayer task sends the player",
+          "level_band": "55-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Dwarf Cannon"
+            ],
+            "items": [
+              "Dwarf multicannon"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        },
+        {
+          "method": "Crabs (sand, rock, swamp, ammonite or gemstone)",
+          "location": "Various crab spots (Hosidius, Rellekka, Port Phasmatys, Fossil Island, Varlamore)",
+          "level_band": "55-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        },
+        {
+          "method": "Chinning maniacal monkeys",
+          "location": "Kruk's Dungeon, Ape Atoll",
+          "level_band": "55-70",
+          "members": "??",
+          "xp_hr": 360000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Monkey Madness II (chapter II started)"
+            ],
+            "items": [
+              "Chinchompa"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        },
+        {
+          "method": "Dwarf multicannon on ogres or ice trolls",
+          "location": "Ogres east of Castle Wars, or ice trolls north of Jatizso",
+          "level_band": "55-70",
+          "members": "??",
+          "xp_hr": 40000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Dwarf Cannon"
+            ],
+            "items": [
+              "Dwarf multicannon"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Ranged training",
+              "slug": "Pay-to-play_Ranged_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Ranged_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -7179,6 +10392,94 @@
           "title": "Pay-to-play Magic training",
           "slug": "Pay-to-play_Magic_training.s17",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Ancient Magicks bursting (Smoke Burst, then Ice Burst)",
+          "location": "Multi-combat spawn (per-monster; page does not list a crab-specific burst spot)",
+          "level_band": "55-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "magic": 62
+            },
+            "quests": [
+              "Desert Treasure I"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s17",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "High Level Alchemy",
+          "location": "Anywhere, on noted/bought items",
+          "level_band": "55-70",
+          "members": "??",
+          "xp_hr": 78000,
+          "reqs": {
+            "skills": {
+              "magic": 55
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "Exploiting elemental weakness on crabs (Frost Crabs, 100% Fire weakness)",
+          "location": "Ruins of Tapoyauik, Varlamore",
+          "level_band": "55-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "The Heart of Darkness"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s8",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "Tele-alching (High Level Alchemy chained with a teleport)",
+          "location": "Camelot or Ardougne teleport spot",
+          "level_band": "55-70",
+          "members": "??",
+          "xp_hr": 144600,
+          "reqs": {
+            "skills": {
+              "magic": 55
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s30",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
         }
       ]
     },
@@ -7363,6 +10664,92 @@
           "slug": "Pay-to-play_Herblore_training.s2",
           "url": "https://oldschool.runescape.wiki/w/Herblore_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Make super combat potions",
+          "location": "anywhere with bank access",
+          "level_band": "55-70",
+          "members": true,
+          "xp_hr": 324900,
+          "reqs": {
+            "skills": {
+              "herblore": 90
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ]
+        },
+        {
+          "method": "Make antifire potions",
+          "location": "anywhere with bank access",
+          "level_band": "55-70",
+          "members": true,
+          "xp_hr": 393750,
+          "reqs": {
+            "skills": {
+              "herblore": 69
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ]
+        },
+        {
+          "method": "Make super strength potions",
+          "location": "anywhere with bank access",
+          "level_band": "55-70",
+          "members": true,
+          "xp_hr": 312500,
+          "reqs": {
+            "skills": {
+              "herblore": 55
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ]
+        },
+        {
+          "method": "Make super defence potions",
+          "location": "anywhere with bank access",
+          "level_band": "55-70",
+          "members": true,
+          "xp_hr": 375000,
+          "reqs": {
+            "skills": {
+              "herblore": 66
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Herblore training",
+              "slug": "Herblore_training.s3",
+              "url": "https://oldschool.runescape.wiki/w/Herblore_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -7397,6 +10784,77 @@
           "slug": "Blackjacking.s1",
           "url": "https://oldschool.runescape.wiki/w/Thieving_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Blackjack Pollnivnian bandits (regular, scimitar-wielding)",
+          "location": "Ali the Dyer's house, northern Pollnivneach",
+          "level_band": "55-65",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 45
+            },
+            "quests": [
+              "The Feud (partial completion)"
+            ],
+            "items": [
+              "blackjack (any kind)"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Thieving training",
+              "slug": "Thieving_training.s11",
+              "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+            }
+          ]
+        },
+        {
+          "method": "Steal artefacts (Port Piscarilius)",
+          "location": "Port Piscarilius, via guard-lured bridges",
+          "level_band": "55-65",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 55
+            },
+            "quests": [],
+            "items": [
+              "lockpick"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Thieving training",
+              "slug": "Thieving_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+            }
+          ]
+        },
+        {
+          "method": "Pickpocket Knights of Ardougne",
+          "location": "Ardougne marketplace or south-east bank",
+          "level_band": "55-65",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 55
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Thieving training",
+              "slug": "Thieving_training.s23",
+              "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -7418,6 +10876,71 @@
           "title": "Construction training",
           "slug": "Construction_training",
           "url": "https://oldschool.runescape.wiki/w/Construction_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Mahogany table (build-and-remove tick manipulation)",
+          "location": "Player-owned house, Dining room",
+          "level_band": "55-70",
+          "members": true,
+          "xp_hr": 900000,
+          "reqs": {
+            "skills": {
+              "construction": 52
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            }
+          ]
+        },
+        {
+          "method": "Teak garden bench",
+          "location": "Player-owned house, Garden",
+          "level_band": "66-70",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "construction": 66
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s21",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            }
+          ]
+        },
+        {
+          "method": "Mahogany Homes (Adept contract)",
+          "location": "Falador / Varrock / East Ardougne / Hosidius",
+          "level_band": "55-70",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "construction": 50
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Construction training",
+              "slug": "Construction_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Construction_training"
+            }
+          ]
         }
       ]
     },
@@ -7447,6 +10970,75 @@
           "title": "Pay-to-play Fishing training",
           "slug": "Pay-to-play_Fishing_training.s1",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Harpoon fishing swordfish/tuna (banked, no tick manipulation)",
+          "location": "Catherby",
+          "level_band": "58-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "harpoon (or bare hands after Barbarian Training miniquest)"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Fishing training",
+              "slug": "Pay-to-play_Fishing_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+            }
+          ]
+        },
+        {
+          "method": "AFK Barbarian Fishing",
+          "location": "Otto's Grotto pond",
+          "level_band": "58-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "agility": 30,
+              "strength": 30
+            },
+            "quests": [],
+            "items": [
+              "barbarian rod",
+              "feathers or fish offcuts/roe/caviar as bait"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Fishing training",
+              "slug": "Pay-to-play_Fishing_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+            }
+          ]
+        },
+        {
+          "method": "2-tick harpoon swordfish/tuna",
+          "location": "Port Piscarilius (or Fishing Guild PvP world)",
+          "level_band": "35-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "harpoon (crystal harpoon recommended for catch rate)"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Fishing training",
+              "slug": "Pay-to-play_Fishing_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Fishing_training"
+            }
+          ]
         }
       ]
     },
@@ -7497,6 +11089,96 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Moss giant",
+          "location": "Catacombs of Kourend, Varrock Sewers, or west of the Fishing Guild",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        },
+        {
+          "method": "Nightmare Zone (Normal Rumble)",
+          "location": "North of Yanille, north-west of the bank",
+          "level_band": "50-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Any 5 of the ~30 quests Nightmare Zone accepts (see Nightmare_Zone.s3 for the full list)"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            },
+            {
+              "title": "Nightmare Zone",
+              "slug": "Nightmare_Zone.s3",
+              "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
+            },
+            {
+              "title": "Nightmare Zone",
+              "slug": "Nightmare_Zone.s2",
+              "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
+            }
+          ]
+        },
+        {
+          "method": "Wilderness Slayer",
+          "location": "Wilderness",
+          "level_band": "60-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        },
+        {
+          "method": "Ogre",
+          "location": "East of Castle Wars, west of Yanille",
+          "level_band": "30-81",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s12",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -7538,6 +11220,77 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Moss giant",
+          "location": "Catacombs of Kourend, Varrock Sewers, or west of the Fishing Guild",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        },
+        {
+          "method": "Wilderness Slayer",
+          "location": "Wilderness",
+          "level_band": "60-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        },
+        {
+          "method": "Nightmare Zone (Normal Rumble)",
+          "location": "North of Yanille, north-west of the bank",
+          "level_band": "50-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Any 5 of the ~30 quests Nightmare Zone accepts (see Nightmare_Zone.s3 for the full list)"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            },
+            {
+              "title": "Nightmare Zone",
+              "slug": "Nightmare_Zone.s3",
+              "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
+            },
+            {
+              "title": "Nightmare Zone",
+              "slug": "Nightmare_Zone.s2",
+              "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
+            }
+          ]
+        }
       ]
     },
     {
@@ -7579,6 +11332,77 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Wilderness Slayer",
+          "location": "Wilderness",
+          "level_band": "60-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        },
+        {
+          "method": "Nightmare Zone (Normal Rumble)",
+          "location": "North of Yanille, north-west of the bank",
+          "level_band": "50-70",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Any 5 of the ~30 quests Nightmare Zone accepts (see Nightmare_Zone.s3 for the full list)"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            },
+            {
+              "title": "Nightmare Zone",
+              "slug": "Nightmare_Zone.s3",
+              "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
+            },
+            {
+              "title": "Nightmare Zone",
+              "slug": "Nightmare_Zone.s2",
+              "url": "https://oldschool.runescape.wiki/w/Nightmare_Zone"
+            }
+          ]
+        },
+        {
+          "method": "Moss giant",
+          "location": "Catacombs of Kourend, Varrock Sewers, or west of the Fishing Guild",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Melee training",
+              "slug": "Pay-to-play_Melee_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -7670,6 +11494,50 @@
           "slug": "Pay-to-play_Woodcutting_training.s17",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Yew trees",
+          "location": "Woodcutting Guild, Edgeville, Seers' Village/Catherby, or Tree Gnome Stronghold",
+          "level_band": "60-75",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "woodcutting": 60
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Woodcutting training",
+              "slug": "Pay-to-play_Woodcutting_training.s23",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+            }
+          ]
+        },
+        {
+          "method": "Teak trees",
+          "location": "Teak-tree areas (e.g. Fossil Island patches)",
+          "level_band": "60-65",
+          "members": "??",
+          "xp_hr": 65000,
+          "reqs": {
+            "skills": {
+              "woodcutting": 60
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Woodcutting training",
+              "slug": "Pay-to-play_Woodcutting_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -7699,6 +11567,73 @@
           "slug": "Pay-to-play_Mining_training.s8",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Motherlode Mine",
+          "location": "Motherlode Mine, near the Mining Guild in Falador",
+          "level_band": "60-75",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "mining": 30
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Mining training",
+              "slug": "Pay-to-play_Mining_training.s13",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+            }
+          ]
+        },
+        {
+          "method": "Granite 3-tick mining",
+          "location": "Bandit Camp Quarry or Cape Conch mine",
+          "level_band": "60-75",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Mining training",
+              "slug": "Pay-to-play_Mining_training.s10",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+            }
+          ]
+        },
+        {
+          "method": "Blast Mine",
+          "location": "Blast Mine minigame",
+          "level_band": "60-75",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "mining": 75
+            },
+            "quests": [],
+            "items": [
+              "dynamite",
+              "chisel",
+              "tinderbox"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Mining training",
+              "slug": "Pay-to-play_Mining_training.s20",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -7727,6 +11662,88 @@
           "title": "Agility training",
           "slug": "Agility_training",
           "url": "https://oldschool.runescape.wiki/w/Agility_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Ardougne Rooftop Course",
+          "location": "Ardougne",
+          "level_band": "60-90",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Agility training",
+              "slug": "Agility_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Agility_training"
+            }
+          ]
+        },
+        {
+          "method": "Werewolf Agility Course",
+          "location": "near Canifis/Slepe",
+          "level_band": "60-80/90",
+          "members": "??",
+          "xp_hr": "50000-68000",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "quest-creature-of-fenkenstrain"
+            ],
+            "items": [
+              "ring of charos"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Agility training",
+              "slug": "Agility_training.s15",
+              "url": "https://oldschool.runescape.wiki/w/Agility_training"
+            }
+          ]
+        },
+        {
+          "method": "Seers' Village Rooftop Course",
+          "location": "Seers' Village",
+          "level_band": "60-70",
+          "members": "??",
+          "xp_hr": "40000-56000",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Agility training",
+              "slug": "Agility_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Agility_training"
+            }
+          ]
+        },
+        {
+          "method": "Rellekka Rooftop Course",
+          "location": "Rellekka",
+          "level_band": "80-90",
+          "members": "??",
+          "xp_hr": "50000-63000",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Agility training",
+              "slug": "Agility_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Agility_training"
+            }
+          ]
         }
       ]
     },
@@ -7769,6 +11786,105 @@
           "slug": "Hunter_training",
           "url": "https://oldschool.runescape.wiki/w/Hunter_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Red chinchompas (Feldip Hills)",
+          "location": "Feldip Hills",
+          "level_band": "60-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "hunter": 60
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        },
+        {
+          "method": "Maniacal monkeys",
+          "location": "Glough's Laboratory, Kruk's Dungeon (via Ape Atoll)",
+          "level_band": "60-99",
+          "members": "??",
+          "xp_hr": 110000,
+          "reqs": {
+            "skills": {
+              "hunter": 60
+            },
+            "quests": [
+              "Monkey Madness II"
+            ],
+            "items": [
+              "Kruk monkey greegree",
+              "bananas"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training.s19",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        },
+        {
+          "method": "Black chinchompas",
+          "location": "level 32-36 Wilderness",
+          "level_band": "73-99",
+          "members": "??",
+          "xp_hr": 265000,
+          "reqs": {
+            "skills": {
+              "hunter": 73
+            },
+            "quests": [
+              "Eagles' Peak (partial)"
+            ],
+            "items": [
+              "box traps"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training.s17",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        },
+        {
+          "method": "Carnivorous chinchompas",
+          "location": "Tlati Rainforest, Varlamore",
+          "level_band": "63/80-99",
+          "members": "??",
+          "xp_hr": 220000,
+          "reqs": {
+            "skills": {
+              "hunter": 63
+            },
+            "quests": [
+              "Children of the Sun"
+            ],
+            "items": [
+              "box traps"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Hunter training",
+              "slug": "Hunter_training.s19",
+              "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -7803,6 +11919,78 @@
           "slug": "Blackjacking.s1",
           "url": "https://oldschool.runescape.wiki/w/Thieving_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Blackjack Menaphite Thugs (Pollnivneach)",
+          "location": "Southern Pollnivneach, thug lured into a house near the bar",
+          "level_band": "65-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 45
+            },
+            "quests": [
+              "The Feud (partial completion)"
+            ],
+            "items": [
+              "blackjack (any kind)"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Thieving training",
+              "slug": "Thieving_training.s11",
+              "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+            }
+          ]
+        },
+        {
+          "method": "Pickpocket Master Farmers",
+          "location": "House east of the Outer Fortis General Store, south-east of Civitas illa Fortis",
+          "level_band": "94-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "thieving": 94,
+              "farming": 75
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Thieving training",
+              "slug": "Thieving_training.s32",
+              "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+            }
+          ]
+        },
+        {
+          "method": "Pyramid Plunder (minigame)",
+          "location": "Sophanem pyramid",
+          "level_band": "91-99",
+          "members": "??",
+          "xp_hr": 270000,
+          "reqs": {
+            "skills": {
+              "thieving": 91
+            },
+            "quests": [
+              "Icthlarin's Little Helper (started, for Sophanem access)"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Thieving training",
+              "slug": "Thieving_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Thieving_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -7824,6 +12012,65 @@
           "title": "Fletching training",
           "slug": "Fletching_training",
           "url": "https://oldschool.runescape.wiki/w/Fletching_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Fletch oak shortbow (u)",
+          "location": "anywhere with a knife and own-cut oak logs",
+          "level_band": "20-25",
+          "members": "??",
+          "xp_hr": 44550,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Fletching training",
+              "slug": "Fletching_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Fletching_training"
+            }
+          ]
+        },
+        {
+          "method": "Fletch oak longbow (u)",
+          "location": "anywhere with a knife and own-cut oak logs",
+          "level_band": "25-35",
+          "members": "??",
+          "xp_hr": 67500,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Fletching training",
+              "slug": "Fletching_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Fletching_training"
+            }
+          ]
+        },
+        {
+          "method": "Fletch willow shortbow (u)",
+          "location": "anywhere with a knife and own-cut willow logs",
+          "level_band": "35-40",
+          "members": "??",
+          "xp_hr": 89910,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Fletching training",
+              "slug": "Fletching_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Fletching_training"
+            }
+          ]
         }
       ]
     },
@@ -7857,6 +12104,48 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Mazchna tasks",
+          "location": "Canifis",
+          "level_band": "20-50",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Priest in Peril"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Slayer training",
+              "slug": "Slayer_training.s2",
+              "url": "https://oldschool.runescape.wiki/w/Slayer_training"
+            }
+          ]
+        },
+        {
+          "method": "Vannaka tasks",
+          "location": "Edgeville Dungeon",
+          "level_band": "20-50",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Slayer training",
+              "slug": "Slayer_training.s2",
+              "url": "https://oldschool.runescape.wiki/w/Slayer_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -8168,6 +12457,98 @@
           "slug": "Runecraft_training",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Cosmic runes on Zanaris",
+          "location": "Zanaris",
+          "level_band": "27-44",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Lost City"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Runecraft training",
+              "slug": "Runecraft_training",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+            }
+          ]
+        },
+        {
+          "method": "Making talisman tiaras",
+          "location": "elemental rune altars",
+          "level_band": "27-44",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "Elemental tiaras",
+              "Ring of the elements",
+              "Amulet of glory"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Runecraft training",
+              "slug": "Pay-to-play_Runecraft_training.s8",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+            }
+          ]
+        },
+        {
+          "method": "Crafting lava runes",
+          "location": "Fire Altar, Asgarnia",
+          "level_band": "27-44",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "Earth runes",
+              "Pure essence",
+              "Essence pouches"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Runecraft training",
+              "slug": "Pay-to-play_Runecraft_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+            }
+          ]
+        },
+        {
+          "method": "Guardians of the Rift",
+          "location": "Guardians' Portal (Temple of the Eye)",
+          "level_band": "27-44",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Temple of the Eye"
+            ],
+            "items": [
+              "Pickaxe"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Runecraft training",
+              "slug": "Pay-to-play_Runecraft_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -8189,6 +12570,67 @@
           "title": "Farming training",
           "slug": "Pay-to-play_Farming_training.s4",
           "url": "https://oldschool.runescape.wiki/w/Farming_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Tree runs (maple)",
+          "location": "tree patch circuit",
+          "level_band": "35-50",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Farming training",
+              "slug": "Farming_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Farming_training"
+            }
+          ]
+        },
+        {
+          "method": "Herb runs",
+          "location": "herb patch circuit (3 patches free by default; Morytania/Harmony Island/Hosidius/Farming Guild/Troll Stronghold/Weiss/Civitas illa Fortis add more via quests/diary)",
+          "level_band": "35-50",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Farming training",
+              "slug": "Farming_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Farming_training"
+            }
+          ]
+        },
+        {
+          "method": "Allotment runs (watermelon)",
+          "location": "allotment patch circuit, run alongside herb runs",
+          "level_band": "35-50",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "farming": 47
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Farming training",
+              "slug": "Farming_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Farming_training"
+            }
+          ]
         }
       ]
     },
@@ -8366,6 +12808,86 @@
           "slug": "Fletching_training",
           "url": "https://oldschool.runescape.wiki/w/Fletching_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Fletch maple longbow (u), string for extra xp/profit",
+          "location": "anywhere with a knife and own-cut maple logs",
+          "level_band": "55-65",
+          "members": "??",
+          "xp_hr": 157410,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Fletching training",
+              "slug": "Fletching_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Fletching_training"
+            }
+          ]
+        },
+        {
+          "method": "Fletch willow longbow (u)",
+          "location": "anywhere with a knife and own-cut willow logs",
+          "level_band": "40-50",
+          "members": "??",
+          "xp_hr": 112050,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Fletching training",
+              "slug": "Fletching_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Fletching_training"
+            }
+          ]
+        },
+        {
+          "method": "Fletch maple shortbow (u)",
+          "location": "anywhere with a knife and own-cut maple logs",
+          "level_band": "50-55",
+          "members": "??",
+          "xp_hr": 135000,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Fletching training",
+              "slug": "Fletching_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Fletching_training"
+            }
+          ]
+        },
+        {
+          "method": "Fletch battlestaves from celastrus bark",
+          "location": "anywhere with a knife and gathered celastrus bark",
+          "level_band": "40-80",
+          "members": "??",
+          "xp_hr": 143000,
+          "reqs": {
+            "skills": {
+              "fletching": 40
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Fletching training",
+              "slug": "Fletching_training.s17",
+              "url": "https://oldschool.runescape.wiki/w/Fletching_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -8391,6 +12913,93 @@
       ],
       "passiveOverlays": [
         "High Alch smithed items"
+      ],
+      "methods": [
+        {
+          "method": "Blast Furnace \u2014 gold bars, wearing goldsmith gauntlets",
+          "location": "Blast Furnace, Keldagrim",
+          "level_band": "40-60",
+          "members": true,
+          "xp_hr": 380000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Family Crest (for goldsmith gauntlets)",
+              "The Giant Dwarf (started, for Keldagrim access via the Dwarven Boatman)"
+            ],
+            "items": [
+              "Goldsmith gauntlets"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        },
+        {
+          "method": "Giants' Foundry \u2014 forge Steel/Mithril alloy swords for Kovac",
+          "location": "Giants' Foundry minigame",
+          "level_band": "40-60",
+          "members": true,
+          "xp_hr": 164640,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Sleeping Giants"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        },
+        {
+          "method": "Anvil smithing \u2014 steel platebodies (no goldsmith gauntlets needed)",
+          "location": "Any anvil (not location-specific in this section)",
+          "level_band": "40-60",
+          "members": false,
+          "xp_hr": 144000,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s10",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        },
+        {
+          "method": "Smithing steel cannonballs (ammo mould)",
+          "location": "Any furnace with an ammo mould",
+          "level_band": "40-60",
+          "members": "??",
+          "xp_hr": 13824,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "Ammo mould (or double ammo mould for 27,648 xp/h)"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -8628,6 +13237,96 @@
           "slug": "Runecraft_training",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Nature runes on Karamja",
+          "location": "Karamja, nature altar",
+          "level_band": "44-59",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Runecraft training",
+              "slug": "Runecraft_training",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+            }
+          ]
+        },
+        {
+          "method": "Crafting lava runes",
+          "location": "Fire Altar, Asgarnia",
+          "level_band": "44-59",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": [
+              "Earth runes",
+              "Pure essence",
+              "Essence pouches"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Runecraft training",
+              "slug": "Pay-to-play_Runecraft_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+            }
+          ]
+        },
+        {
+          "method": "Guardians of the Rift",
+          "location": "Guardians' Portal (Temple of the Eye)",
+          "level_band": "44-59",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Temple of the Eye"
+            ],
+            "items": [
+              "Pickaxe"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Runecraft training",
+              "slug": "Pay-to-play_Runecraft_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+            }
+          ]
+        },
+        {
+          "method": "Ourania Altar (ZMI)",
+          "location": "Ourania Cave",
+          "level_band": "44-59",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Lunar Diplomacy"
+            ],
+            "items": [
+              "Rune pouch"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Runecraft training",
+              "slug": "Pay-to-play_Runecraft_training.s15",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -8680,6 +13379,88 @@
       ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
+      ],
+      "methods": [
+        {
+          "method": "Duradel tasks",
+          "location": "Shilo Village",
+          "level_band": "50-75",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Shilo Village"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Slayer training",
+              "slug": "Slayer_training.s2",
+              "url": "https://oldschool.runescape.wiki/w/Slayer_training"
+            }
+          ]
+        },
+        {
+          "method": "Abyssal demons",
+          "location": "??",
+          "level_band": "85-99",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "slayer": 85
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Slayer training",
+              "slug": "Slayer_training.s22",
+              "url": "https://oldschool.runescape.wiki/w/Slayer_training"
+            }
+          ]
+        },
+        {
+          "method": "Blue dragons",
+          "location": "??",
+          "level_band": "50-75",
+          "members": "??",
+          "xp_hr": 25000,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Slayer training",
+              "slug": "Slayer_training.s22",
+              "url": "https://oldschool.runescape.wiki/w/Slayer_training"
+            }
+          ]
+        },
+        {
+          "method": "Fire giants",
+          "location": "??",
+          "level_band": "50-75",
+          "members": "??",
+          "xp_hr": 40000,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Slayer training",
+              "slug": "Slayer_training.s22",
+              "url": "https://oldschool.runescape.wiki/w/Slayer_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -8764,6 +13545,67 @@
           "slug": "Pay-to-play_Farming_training.s4",
           "url": "https://oldschool.runescape.wiki/w/Farming_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Tree runs (yew)",
+          "location": "tree patch circuit",
+          "level_band": "50-70",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Farming training",
+              "slug": "Farming_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Farming_training"
+            }
+          ]
+        },
+        {
+          "method": "Herb runs (ranarr/snapdragon)",
+          "location": "herb patch circuit",
+          "level_band": "50-70",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Farming training",
+              "slug": "Farming_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Farming_training"
+            }
+          ]
+        },
+        {
+          "method": "Hardwood tree runs (mahogany/camphor)",
+          "location": "hardwood patches (Fossil Island via Bone Voyage, Anglers' Retreat, etc.)",
+          "level_band": "50-70",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "farming": 55
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Farming training",
+              "slug": "Farming_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Farming_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -8817,6 +13659,67 @@
           "slug": "Fletching_training",
           "url": "https://oldschool.runescape.wiki/w/Fletching_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Fletch yew shortbow (u)",
+          "location": "anywhere with a knife and own-cut yew logs",
+          "level_band": "65-70",
+          "members": "??",
+          "xp_hr": 182250,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Fletching training",
+              "slug": "Fletching_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Fletching_training"
+            }
+          ]
+        },
+        {
+          "method": "Fletch maple longbow (u), string for extra xp/profit",
+          "location": "anywhere with a knife and own-cut maple logs",
+          "level_band": "55-65",
+          "members": "??",
+          "xp_hr": 157410,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Fletching training",
+              "slug": "Fletching_training.s16",
+              "url": "https://oldschool.runescape.wiki/w/Fletching_training"
+            }
+          ]
+        },
+        {
+          "method": "Fletch battlestaves from celastrus bark",
+          "location": "anywhere with a knife and gathered celastrus bark",
+          "level_band": "40-80",
+          "members": "??",
+          "xp_hr": 143000,
+          "reqs": {
+            "skills": {
+              "fletching": 40
+            },
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Fletching training",
+              "slug": "Fletching_training.s17",
+              "url": "https://oldschool.runescape.wiki/w/Fletching_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -8868,6 +13771,88 @@
           "title": "Pay-to-play Cooking training",
           "slug": "Pay-to-play_Cooking_training.s3",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Cook swordfish (levels 68-80) then shark (80-84) at the Hosidius Kitchen or Rogues' Den, wearing cooking gauntlets to reduce the burn rate",
+          "location": "Hosidius Kitchen / Rogues' Den",
+          "level_band": "58-74",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s8",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ]
+        },
+        {
+          "method": "Cook lobster up to level 68 before switching to swordfish, per the page's Levels 30-99 fish table",
+          "location": "Hosidius Kitchen",
+          "level_band": "58-68",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s8",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ]
+        },
+        {
+          "method": "1-tick cook cooked karambwan (after completing Tai Bwo Wannai Trio) for the fastest cooking xp through this band",
+          "location": "Rogues' Den / Myths' Guild / Mor Ul Rek",
+          "level_band": "58-74",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Tai Bwo Wannai Trio"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ]
+        },
+        {
+          "method": "Bake pies with the Bake Pie spell (after Lunar Diplomacy) as a lower-attention alternative",
+          "location": "any location with spell access",
+          "level_band": "58-74",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Lunar Diplomacy"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Cooking training",
+              "slug": "Pay-to-play_Cooking_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
+            }
+          ]
         }
       ]
     },
@@ -9070,6 +14055,91 @@
       ],
       "passiveOverlays": [
         "High Alch smithed items"
+      ],
+      "methods": [
+        {
+          "method": "Blast Furnace \u2014 smelt non-gold bars (mithril/adamant)",
+          "location": "Blast Furnace, Keldagrim",
+          "level_band": "60-70",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        },
+        {
+          "method": "Giants' Foundry \u2014 forge Mithril/Adamantite alloy swords for Kovac",
+          "location": "Giants' Foundry minigame",
+          "level_band": "60-70",
+          "members": true,
+          "xp_hr": 198000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Sleeping Giants"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        },
+        {
+          "method": "Blast Furnace \u2014 gold bars, wearing goldsmith gauntlets",
+          "location": "Blast Furnace, Keldagrim",
+          "level_band": "60-70",
+          "members": true,
+          "xp_hr": 380000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Family Crest (for goldsmith gauntlets)",
+              "The Giant Dwarf (started, for Keldagrim access)"
+            ],
+            "items": [
+              "Goldsmith gauntlets"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        },
+        {
+          "method": "Anvil smithing \u2014 mithril platelegs/plateskirt",
+          "location": "Any anvil (not location-specific in this section)",
+          "level_band": "60-70",
+          "members": true,
+          "xp_hr": 140000,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s10",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -9196,6 +14266,95 @@
           "slug": "Pay-to-play_Magic_training.s11",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
         }
+      ],
+      "methods": [
+        {
+          "method": "Bursting/Barraging on-task Slayer monsters (dust devils, Greater Nechryael, Warped Jellies, smoke devils)",
+          "location": "Various Slayer task assignment locations",
+          "level_band": "70-94",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Desert Treasure I"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s17",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "Killing Maniacal monkeys",
+          "location": "Kruk's Dungeon (Monkey Madness II, up to the Kruk's Dungeon point)",
+          "level_band": "70-94",
+          "members": "??",
+          "xp_hr": 400000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Desert Treasure I",
+              "Monkey Madness II"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s17",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "Killing Zombie pirates",
+          "location": "Level 10-11 Wilderness, near the Chaos altar",
+          "level_band": "70-94",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Desert Treasure I"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s17",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        },
+        {
+          "method": "Bursting/Barraging bandits at the Bandit Camp",
+          "location": "The Big Heist Lodge, two tiles west of the door",
+          "level_band": "70-94",
+          "members": "??",
+          "xp_hr": 305000,
+          "reqs": {
+            "skills": {
+              "magic": 68
+            },
+            "quests": [
+              "Desert Treasure I"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Magic training",
+              "slug": "Pay-to-play_Magic_training.s17",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Magic_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -9313,6 +14472,94 @@
       ],
       "passiveOverlays": [
         "High Alch smithed items"
+      ],
+      "methods": [
+        {
+          "method": "Blast Furnace \u2014 smelt non-gold bars (rune)",
+          "location": "Blast Furnace, Keldagrim",
+          "level_band": "70-99",
+          "members": true,
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s7",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        },
+        {
+          "method": "Giants' Foundry \u2014 forge Adamantite/Runite alloy swords for Kovac",
+          "location": "Giants' Foundry minigame",
+          "level_band": "70-99",
+          "members": true,
+          "xp_hr": 253110,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Sleeping Giants"
+            ],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s6",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        },
+        {
+          "method": "Blast Furnace \u2014 gold bars with goldsmith gauntlets and a smithing cape",
+          "location": "Blast Furnace, Keldagrim",
+          "level_band": "70-99",
+          "members": true,
+          "xp_hr": 410000,
+          "reqs": {
+            "skills": {
+              "smithing": 99
+            },
+            "quests": [
+              "Family Crest (for goldsmith gauntlets)",
+              "The Giant Dwarf (started, for Keldagrim access)"
+            ],
+            "items": [
+              "Goldsmith gauntlets",
+              "Smithing cape"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s4",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        },
+        {
+          "method": "Anvil smithing \u2014 adamant platebodies",
+          "location": "Any anvil (not location-specific in this section)",
+          "level_band": "88-99",
+          "members": true,
+          "xp_hr": 240000,
+          "reqs": {
+            "skills": {},
+            "quests": [],
+            "items": []
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Smithing training",
+              "slug": "Pay-to-play_Smithing_training.s10",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
+            }
+          ]
+        }
       ]
     },
     {
@@ -9341,6 +14588,80 @@
           "title": "Pay-to-play Runecraft training",
           "slug": "Runecraft_training",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+        }
+      ],
+      "methods": [
+        {
+          "method": "Crafting lava runes with Ring of Dueling",
+          "location": "Fire Altar, Asgarnia",
+          "level_band": "59-75",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {
+              "magic": 43
+            },
+            "quests": [],
+            "items": [
+              "Ring of dueling",
+              "Earth runes",
+              "Pure essence",
+              "Essence pouches"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Runecraft training",
+              "slug": "Pay-to-play_Runecraft_training.s9",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+            }
+          ]
+        },
+        {
+          "method": "Guardians of the Rift",
+          "location": "Guardians' Portal (Temple of the Eye)",
+          "level_band": "59-75",
+          "members": "??",
+          "xp_hr": 40000,
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Temple of the Eye"
+            ],
+            "items": [
+              "Pickaxe"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Runecraft training",
+              "slug": "Pay-to-play_Runecraft_training.s14",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+            }
+          ]
+        },
+        {
+          "method": "Ourania Altar (ZMI)",
+          "location": "Ourania Cave",
+          "level_band": "59-75",
+          "members": "??",
+          "xp_hr": "??",
+          "reqs": {
+            "skills": {},
+            "quests": [
+              "Lunar Diplomacy"
+            ],
+            "items": [
+              "Rune pouch"
+            ]
+          },
+          "refs": [
+            {
+              "title": "Pay-to-play Runecraft training",
+              "slug": "Pay-to-play_Runecraft_training.s15",
+              "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Runecraft_training"
+            }
+          ]
         }
       ]
     },
