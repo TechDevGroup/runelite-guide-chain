@@ -20,6 +20,13 @@
       "category": "Progression routes",
       "description": "215 of 216 routable quests and miniquests (only The Frozen Door's unboostable Hitpoints 70 requirement is out of reach of the current training bank), prereq-ordered by the progression-router planner and interleaved with the skill training each quest actually needs. Wiki-cited throughout.",
       "guides": ["route-quests.json"]
+    },
+    {
+      "id": "origin-early",
+      "name": "Step 0 → Early Game",
+      "category": "Progression routes",
+      "description": "Character creation through Tutorial Island to your first Lumbridge quests, at action grain — every instructor, click, and item. Wiki-cited.",
+      "guides": ["route-origin.json"]
     }
   ]
 }
