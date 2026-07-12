@@ -1140,6 +1140,37 @@
       ]
     },
     {
+      "id": "gather-compost-falador",
+      "phase": "Toward God Wars Dungeon",
+      "instruction": "Fill a compost bin at the Falador allotment",
+      "detail": "Put 15 weeds (or other suitable produce) plus 15 empty buckets into the compost bin beside the Falador cabbage patch and wait ~60 minutes for it to rot into 15 buckets of compost -- the wiki's own ironman-focused note names this exact patch as a free, no-purchase compost source, matching the gather/produce-not-buy convention used across this pipeline.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3055,
+          "y": 3308,
+          "plane": 0,
+          "label": "Falador herb patch (compost bin sits at the adjacent cabbage allotment, exact bin tile not pinned on the page)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Compost",
+          "slug": "Compost",
+          "url": "https://oldschool.runescape.wiki/w/Compost"
+        }
+      ],
+      "paysOff": {
+        "at": "farm-herb-patch-guam",
+        "item": "compost"
+      }
+    },
+    {
       "id": "bg-farm-allotment-setup",
       "phase": "Toward God Wars Dungeon",
       "slotType": "background",
@@ -3534,7 +3565,11 @@
             "oracle": "PASS"
           }
         }
-      ]
+      ],
+      "paysOff": {
+        "at": "ctr-03-buy-scimitar",
+        "item": "coins"
+      }
     },
     {
       "id": "quest-dorics-quest",
@@ -21562,6 +21597,42 @@
       }
     },
     {
+      "id": "gather-food-barbarian-village",
+      "phase": "Toward Barrows runs",
+      "instruction": "Fish trout/salmon at Barbarian Village",
+      "detail": "Bait- or lure-fish the spots east of Barbarian Village for a light, self-caught food supply to feed the barbarian melee-training loop -- earliest-in-position of the 3 food consumers in this route window, so this grounds the cheapest gather rather than an unspecified restock.",
+      "highlights": [
+        {
+          "type": "NPC",
+          "id": 3103
+        }
+      ],
+      "mapMarkers": [
+        {
+          "x": 3080,
+          "y": 3427,
+          "plane": 0,
+          "label": "Barbarian Village centre -- fishing spots sit east of here, exact tile not pinned on the page"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "refs": [
+        {
+          "title": "Barbarian Village",
+          "slug": "Barbarian_Village",
+          "url": "https://oldschool.runescape.wiki/w/Barbarian_Village"
+        }
+      ],
+      "paysOff": {
+        "at": "ctr-05-kill-barbarians",
+        "item": "food"
+      }
+    },
+    {
       "id": "quest-elemental-workshop-i",
       "phase": "Toward Barrows runs",
       "instruction": "Complete Elemental Workshop I",
@@ -33643,6 +33714,50 @@
       ]
     },
     {
+      "id": "gather-guam-seed-draynor",
+      "phase": "Toward Barrows runs",
+      "instruction": "Pickpocket Master Farmer at Draynor Village for guam seed",
+      "detail": "Pickpocket the Draynor Village Master Farmer until the herb-seed drop table rolls a guam seed -- the item's own page names monsters/seed-packs/master-farmers as its non-GE sources, and Master Farmer is the only one of those that's a repeatable, player-controlled action rather than a random drop.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3080,
+          "y": 3250,
+          "plane": 0,
+          "label": "Master Farmer, Draynor Village"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "guam_seed",
+          "value": "485/1000 chance to roll the Allotment table is NOT this table -- guam is on the separate 48/1000 Herbs table, then 1/58.36 (or 1/67.2 below Farming 85) within it",
+          "note": "Master_Farmer Loot section, Herbs subtable; low overall hit rate, this is a background/opportunistic pickpocket target, not a dedicated farming loop."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Master Farmer",
+          "slug": "Master_Farmer",
+          "url": "https://oldschool.runescape.wiki/w/Master_Farmer"
+        },
+        {
+          "title": "Guam seed",
+          "slug": "Guam_seed",
+          "url": "https://oldschool.runescape.wiki/w/Guam_seed"
+        }
+      ],
+      "paysOff": {
+        "at": "farm-herb-patch-guam",
+        "item": "guam_seed"
+      }
+    },
+    {
       "id": "quest-enakhras-lament",
       "phase": "Toward Barrows runs",
       "instruction": "Complete Enakhra's Lament",
@@ -34341,7 +34456,11 @@
           "slug": "Burn_level.s2",
           "url": "https://oldschool.runescape.wiki/w/Cooking/Burn_level"
         }
-      ]
+      ],
+      "paysOff": {
+        "at": "barrows",
+        "item": "food_monkfish"
+      }
     },
     {
       "id": "rfd-sir-amik",
@@ -40296,6 +40415,24 @@
       }
     },
     {
+      "id": "opp-stub-coins-ctr-03-buy-scimitar",
+      "phase": "Toward Quest spine (existing P2P-chain load-bearing quests)",
+      "instruction": "Skip if already gathered: coins",
+      "detail": "Already gathered while at \"Kill cows until Strength 20 (east Lumbridge)\" earlier in the route \u2014 nothing further to do here.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "branch": {
+        "alt_group": "opp-coins-ctr-03-buy-scimitar",
+        "when": {},
+        "optional": true
+      }
+    },
+    {
       "id": "chkpt-combat-training-routing-1",
       "phase": "Toward Quest spine (existing P2P-chain load-bearing quests)",
       "instruction": "\u29c6 Gear stop: Al Kharid scimitar",
@@ -40480,6 +40617,42 @@
       ]
     },
     {
+      "id": "opp-stub-food-ctr-05-kill-barbarians",
+      "phase": "Toward Quest spine (existing P2P-chain load-bearing quests)",
+      "instruction": "Skip if already gathered: food",
+      "detail": "Already gathered while at \"Fish trout/salmon at Barbarian Village\" earlier in the route \u2014 nothing further to do here.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "branch": {
+        "alt_group": "opp-food-ctr-05-kill-barbarians",
+        "when": {},
+        "optional": true
+      }
+    },
+    {
+      "id": "opp-stub-food-ctr-07a-sand-crabs",
+      "phase": "Toward Quest spine (existing P2P-chain load-bearing quests)",
+      "instruction": "Skip if already gathered: food",
+      "detail": "Already gathered while at \"Fish trout/salmon at Barbarian Village\" earlier in the route \u2014 nothing further to do here.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "branch": {
+        "alt_group": "opp-food-ctr-07a-sand-crabs",
+        "when": {},
+        "optional": true
+      }
+    },
+    {
       "id": "chkpt-combat-training-routing-3",
       "phase": "Toward Quest spine (existing P2P-chain load-bearing quests)",
       "instruction": "\u29c6 Routing branch: crabs vs slayer (pick one)",
@@ -40579,6 +40752,42 @@
           "url": "https://oldschool.runescape.wiki/w/Experience"
         }
       ]
+    },
+    {
+      "id": "opp-stub-guam_seed-farm-herb-patch-guam",
+      "phase": "Toward Quest spine (existing P2P-chain load-bearing quests)",
+      "instruction": "Skip if already gathered: guam seed",
+      "detail": "Already gathered while at \"Pickpocket Master Farmer at Draynor Village for guam seed\" earlier in the route \u2014 nothing further to do here.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "branch": {
+        "alt_group": "opp-guam_seed-farm-herb-patch-guam",
+        "when": {},
+        "optional": true
+      }
+    },
+    {
+      "id": "opp-stub-compost-farm-herb-patch-guam",
+      "phase": "Toward Quest spine (existing P2P-chain load-bearing quests)",
+      "instruction": "Skip if already gathered: compost",
+      "detail": "Already gathered while at \"Fill a compost bin at the Falador allotment\" earlier in the route \u2014 nothing further to do here.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "branch": {
+        "alt_group": "opp-compost-farm-herb-patch-guam",
+        "when": {},
+        "optional": true
+      }
     },
     {
       "id": "farm-herb-patch-guam",

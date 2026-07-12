@@ -75,6 +75,25 @@ public class GuideStep
      */
     public List<GuideMedia> media;
 
+    /**
+     * Opportunistic-lookahead breadcrumb (OPPORTUNISTIC_GRANULARITY §2a.3):
+     * present only on a step the planner re-pinned to an earlier
+     * already-in-position node so its output is ready before some later
+     * consumer needs it ("↷ pays off at: {@link GuidePayoff#at}"). Renders
+     * as a small badge under the card; purely informational — removing it
+     * leaves the step exactly as completable. Null on every ordinary step.
+     */
+    public GuidePayoff paysOff;
+
+    /** {@code at}/{@code item} breadcrumb payload for {@link #paysOff}. */
+    public static final class GuidePayoff
+    {
+        /** Consumer step id or milestone/goal label this step's output feeds. */
+        public String at;
+        /** Item slug being paid forward. */
+        public String item;
+    }
+
     // ── SYNTHESIS §1e — sequencer + background + steer (Lane 4 owns the Java side) ──
 
     /**
