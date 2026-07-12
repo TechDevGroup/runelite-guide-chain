@@ -27,6 +27,13 @@
       "category": "Progression routes",
       "description": "Character creation through Tutorial Island to your first Lumbridge quests, at action grain — every instructor, click, and item. Wiki-cited.",
       "guides": ["route-origin.json"]
+    },
+    {
+      "id": "full-progression",
+      "name": "Full Progression (Step 0 → Endgame)",
+      "category": "Progression routes",
+      "description": "One continuous checklist from character creation through Tutorial Island, the load-bearing quest-progression spine, and into Barrows / God Wars / Chambers of Xeric. Wiki-cited, action-grain where authored.",
+      "guides": ["route-grand.json"]
     }
   ]
 }
