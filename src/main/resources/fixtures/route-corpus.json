@@ -5487,6 +5487,32 @@
           "slug": "Master_Farmer.s12",
           "url": "https://oldschool.runescape.wiki/w/Master_Farmer"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/a106a8/arrive.png",
+          "url": null,
+          "caption": "Pickpocket the Master Farmer at Draynor market (scenario capture)",
+          "state": {
+            "scenario": "pps_02_master_farmer",
+            "rev": 236,
+            "harness": "spike/scenario/run_scenario.py",
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/1e17b3/observe.gif",
+          "url": null,
+          "caption": "Draynor market scene, animated (scenario capture, oracle PASS)",
+          "state": {
+            "scenario": "pps_02_master_farmer",
+            "rev": 236,
+            "harness": "spike/scenario/run_scenario.py",
+            "oracle": "PASS"
+          }
+        }
       ]
     },
     {
@@ -5592,38 +5618,26 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/44ac0e/frame_login.png",
+          "path": "media/67a9f7/arrive.png",
           "url": null,
-          "caption": "Login screen \u2014 capture-harness demo wiring (FRAMES_GALLERY F1); P6 in-world chicken-training frames pending",
+          "caption": "Kill chickens at Lumbridge East farm \u2014 chicken 3316 rendered from the rev-236 cache (scenario capture)",
           "state": {
-            "harness": "spike/run.sh",
+            "scenario": "lumbridge_chickens",
             "rev": 236,
-            "scenario": "login-fresh",
-            "tile": [
-              3232,
-              3296,
-              0
-            ],
-            "varbits": {},
-            "captured": "2026-07-12T07:52:19Z"
+            "harness": "spike/scenario/run_scenario.py",
+            "oracle": "PASS"
           }
         },
         {
           "kind": "gif",
-          "path": "media/53283a/login.gif",
+          "path": "media/e5e457/observe.gif",
           "url": null,
-          "caption": "Login sequence, assembled GIF \u2014 same capture-harness demo wiring",
+          "caption": "Chicken-training scene, animated (scenario capture, oracle PASS)",
           "state": {
-            "harness": "spike/run.sh",
+            "scenario": "lumbridge_chickens",
             "rev": 236,
-            "scenario": "login-fresh",
-            "tile": [
-              3232,
-              3296,
-              0
-            ],
-            "varbits": {},
-            "captured": "2026-07-12T07:52:33Z"
+            "harness": "spike/scenario/run_scenario.py",
+            "oracle": "PASS"
           }
         }
       ]
@@ -5686,6 +5700,32 @@
           "title": "Cow",
           "slug": "Cow",
           "url": "https://oldschool.runescape.wiki/w/Cow"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/15e0fa/arrive.png",
+          "url": null,
+          "caption": "Kill cows east of Lumbridge \u2014 cow + herd + pen rendered from cache",
+          "state": {
+            "scenario": "ctr_02_kill_cows",
+            "rev": 236,
+            "harness": "spike/scenario/run_scenario.py",
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/8a847d/observe.gif",
+          "url": null,
+          "caption": "Cow-field scene, animated (scenario capture, oracle PASS)",
+          "state": {
+            "scenario": "ctr_02_kill_cows",
+            "rev": 236,
+            "harness": "spike/scenario/run_scenario.py",
+            "oracle": "PASS"
+          }
         }
       ]
     },
