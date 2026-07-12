@@ -2404,6 +2404,14 @@
         {
           "type": "MANUAL"
         }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +1000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
       ]
     },
     {
@@ -2424,6 +2432,14 @@
         {
           "type": "MANUAL"
         }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "attack +35000, defence +35000, strength +35000, hitpoints +35000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
       ]
     },
     {
@@ -2436,6 +2452,14 @@
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "magic +20000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -2476,6 +2500,14 @@
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "prayer +1406",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -2537,6 +2569,14 @@
         {
           "type": "MANUAL"
         }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "strength +8000, defence +8000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
       ]
     },
     {
@@ -2574,6 +2614,14 @@
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "herblore +250",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -2620,6 +2668,14 @@
         {
           "type": "MANUAL"
         }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "thieving +15000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
       ]
     },
     {
@@ -2632,6 +2688,14 @@
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +5000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -2661,6 +2725,14 @@
         {
           "type": "MANUAL"
         }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "prayer +3000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
       ]
     },
     {
@@ -2687,6 +2759,14 @@
         {
           "type": "MANUAL"
         }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "farming +3500, magic +1000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
       ]
     },
     {
@@ -2706,6 +2786,14 @@
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "fishing +10000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -2863,6 +2951,14 @@
         {
           "type": "MANUAL"
         }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +300",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
       ]
     },
     {
@@ -2887,6 +2983,14 @@
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +300",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -2913,6 +3017,14 @@
         {
           "type": "MANUAL"
         }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +1000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
       ]
     },
     {
@@ -2937,6 +3049,14 @@
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +1000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -2963,6 +3083,14 @@
         {
           "type": "MANUAL"
         }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +1000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
       ]
     },
     {
@@ -2975,6 +3103,14 @@
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "farming +7000, slayer +7000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -3001,6 +3137,14 @@
         {
           "type": "MANUAL"
         }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +1000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
       ]
     },
     {
@@ -3013,6 +3157,14 @@
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "slayer +10000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -3027,6 +3179,14 @@
         {
           "type": "MANUAL"
         }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +1500",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
       ]
     },
     {
@@ -3039,6 +3199,14 @@
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +1470, fletching +262, ranged +735",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -3065,6 +3233,14 @@
         {
           "type": "MANUAL"
         }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +4000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
+        }
       ]
     },
     {
@@ -3084,6 +3260,14 @@
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +4000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
@@ -3109,6 +3293,14 @@
       "completionConditions": [
         {
           "type": "MANUAL"
+        }
+      ],
+      "hints": [
+        {
+          "type": "quest-xp",
+          "target": null,
+          "value": "cooking +10000",
+          "note": "Quest reward XP \u2014 counts toward your skills, replacing that much training."
         }
       ]
     },
