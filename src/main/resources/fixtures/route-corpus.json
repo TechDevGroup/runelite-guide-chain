@@ -3726,6 +3726,19 @@
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
         }
       ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/18e9e7/arrive.png",
+          "url": null,
+          "caption": "Regular tree (Chop down) at Lumbridge \u2014 train-woodcutting-15",
+          "state": {
+            "scenario": "train_woodcutting_lumbridge",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        }
+      ],
       "methods": [
         {
           "method": "Regular trees",
