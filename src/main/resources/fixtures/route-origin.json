@@ -44,6 +44,30 @@
           "slug": "Tutorial_Island.s1",
           "url": "https://oldschool.runescape.wiki/w/Tutorial_Island"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/c5e634/arrive.png",
+          "url": null,
+          "caption": "Character creation / Tutorial Island (scenario capture)",
+          "state": {
+            "scenario": "origin_tutorial_island",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/47ce4b/observe.gif",
+          "url": null,
+          "caption": "Tutorial Island scene (scenario capture, oracle PASS)",
+          "state": {
+            "scenario": "origin_tutorial_island",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        }
       ]
     },
     {
@@ -797,6 +821,30 @@
           "title": "Tutorial Island",
           "slug": "Tutorial_Island.s21",
           "url": "https://oldschool.runescape.wiki/w/Tutorial_Island"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/9b7e08/arrive.png",
+          "url": null,
+          "caption": "Arrive in Lumbridge after Tutorial Island (scenario capture)",
+          "state": {
+            "scenario": "origin_mainland_lumbridge",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/3b7a10/observe.gif",
+          "url": null,
+          "caption": "Lumbridge arrival scene (scenario capture, oracle PASS)",
+          "state": {
+            "scenario": "origin_mainland_lumbridge",
+            "rev": 236,
+            "oracle": "PASS"
+          }
         }
       ]
     },

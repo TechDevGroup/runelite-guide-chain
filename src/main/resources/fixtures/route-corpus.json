@@ -5841,6 +5841,30 @@
           "slug": "Mithril_scimitar",
           "url": "https://oldschool.runescape.wiki/w/Mithril_scimitar"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/0dc65e/arrive.png",
+          "url": null,
+          "caption": "Buy the best scimitar at Zeke's, Al Kharid (scenario capture)",
+          "state": {
+            "scenario": "ctr_03_buy_scimitar",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/04ceac/observe.gif",
+          "url": null,
+          "caption": "Al Kharid scene (scenario capture, oracle PASS)",
+          "state": {
+            "scenario": "ctr_03_buy_scimitar",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        }
       ]
     },
     {
@@ -6004,6 +6028,30 @@
           "slug": "Experience_table.s2",
           "url": "https://oldschool.runescape.wiki/w/Experience"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/fcae1a/arrive.png",
+          "url": null,
+          "caption": "Train on barbarians at Barbarian Village (scenario capture)",
+          "state": {
+            "scenario": "ctr_05_kill_barbarians",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/49973b/observe.gif",
+          "url": null,
+          "caption": "Barbarian Village scene (scenario capture, oracle PASS)",
+          "state": {
+            "scenario": "ctr_05_kill_barbarians",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        }
       ]
     },
     {
@@ -6092,6 +6140,30 @@
           "title": "Experience",
           "slug": "Experience_table.s2",
           "url": "https://oldschool.runescape.wiki/w/Experience"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/13b9ce/arrive.png",
+          "url": null,
+          "caption": "Flesh Crawlers, Stronghold of Security lvl 2 (scenario capture)",
+          "state": {
+            "scenario": "ctr_06_stronghold_crawlers",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/ba7bd5/observe.gif",
+          "url": null,
+          "caption": "Stronghold scene (scenario capture, oracle PASS)",
+          "state": {
+            "scenario": "ctr_06_stronghold_crawlers",
+            "rev": 236,
+            "oracle": "PASS"
+          }
         }
       ]
     },
