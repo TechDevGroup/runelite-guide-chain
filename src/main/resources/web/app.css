@@ -396,6 +396,21 @@ a.step-instruction:hover { color: var(--accent); }
 .ref-facts { display: flex; flex-direction: column; gap: 0.2rem; margin-top: 0.15rem; }
 .ref-fact { font-size: 0.78rem; }
 
+/* ── Reference card START/LENGTH (D9, gap-reqblocks-01) — length mirrors
+   .ref-item-opt's pill; start reuses .ref-line as-is. ── */
+.ref-length-chip {
+  font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--ink-dim); border: 1px solid var(--line);
+  border-radius: 0.5rem; padding: 0 0.3rem; margin-left: 0.4rem;
+  vertical-align: middle; font-variant-numeric: tabular-nums;
+}
+
+/* ── Step-detail REQUISITES / REWARDS blocks (D10, gap-reqblocks-01) —
+   reuse .ref-block/.ref-items/.ref-item-* from reference cards verbatim;
+   .step-block only adds the breathing room a detail-pane block wants. ── */
+.step-block { margin: 0.6rem 0; }
+.step-needs { color: var(--ink-dim); font-style: italic; }
+
 /* ── Training-method picker (1:many skill→methods, no cited detail line) ── */
 .pick-hint { font-weight: 400; color: var(--ink-dim); font-size: 0.8rem; }
 .train-methods { list-style: none; margin: 0.3rem 0; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
@@ -443,6 +458,22 @@ a.step-instruction:hover { color: var(--accent); }
 }
 .payoff-item { font-weight: 600; }
 .payoff-at { color: var(--ink-dim); font-variant-numeric: tabular-nums; }
+
+/* ── Skippable-alternative breadcrumb (branch{}, D10) — same shape as
+   .payoff-chip above, neutral color since it's not an incentive to act. ── */
+.branch-chip {
+  font-size: 0.72rem; margin-top: 0.25rem;
+  color: var(--ink-dim);
+  border-left: 2px solid var(--line);
+  padding: 0.1rem 0.4rem;
+  border-radius: 0 4px 4px 0;
+}
+.branch-alt { font-weight: 600; color: var(--ink); }
+.branch-optional {
+  font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--ok); border: 1px solid var(--ok); border-radius: 0.5rem;
+  padding: 0 0.3rem; margin-left: 0.3rem;
+}
 
 /* ── Phase / episode dividers (milestone-structured route) ── */
 .phase-divider {

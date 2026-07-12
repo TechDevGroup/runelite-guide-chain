@@ -45,6 +45,18 @@ public final class ReferenceEntry
     public List<Fact> facts;
     public List<ReqItem> req_items;
 
+    /**
+     * Where the quest/diary/activity begins. Heterogeneous like {@link #reqs}
+     * / {@link #rewards} — an {@code {npc, location}} object on most rows
+     * (quest_db.jsonl), potentially a plain string on others — kept as raw
+     * Gson-decoded {@code Object} and rendered defensively (see
+     * {@code WebFragments#summarizeStart}). Null on minigame/unlock rows.
+     */
+    public Object start;
+
+    /** Estimated completion length/time (e.g. "Short", "2-3 hours"), or "??" when the source never stated one. Null on rows with no length data. */
+    public String length;
+
     /** One objective, checkable statement decomposed from the source prose. */
     public static final class Fact
     {

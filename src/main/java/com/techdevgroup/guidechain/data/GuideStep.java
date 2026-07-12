@@ -94,6 +94,50 @@ public class GuideStep
         public String item;
     }
 
+    /**
+     * Structured requisite items for this step (NORMALIZATION.md §1d —
+     * gap-reqblocks-01), mirroring {@link com.techdevgroup.guidechain.reference.ReferenceEntry.ReqItem}
+     * field-for-field. route-grand carries this on 55 steps, route-quests on
+     * 160. Null/empty = no items block rendered (falls back to a
+     * completionConditions-derived requisite summary — see WebFragments).
+     */
+    public List<ReqItem> req_items;
+
+    /** One required/consumed item for this step; same shape as the reference-card ReqItem. */
+    public static final class ReqItem
+    {
+        public String name;
+        /** Integer count, or the string "??" when the source never stated one. */
+        public Object qty;
+        public String note;
+        public boolean optional;
+    }
+
+    public List<ReqItem> reqItems()
+    {
+        return req_items != null ? req_items : Collections.emptyList();
+    }
+
+    /**
+     * Skippable-alternative marker (OPPORTUNISTIC_GRANULARITY §2a.3
+     * branch{}): present only on an opp-stub step offering a "skip if
+     * already gathered/done via a different route" alternative. Renders as a
+     * small "alt: ‹alt_group›" chip, "skippable" when {@code optional}. Null
+     * on every ordinary step (5 route-grand steps carry it today).
+     */
+    public Branch branch;
+
+    /** {@code alt_group}/{@code when}/{@code optional} payload for {@link #branch}. */
+    public static final class Branch
+    {
+        /** Groups this step with its sibling alternatives under one alt choice. */
+        public String alt_group;
+        /** Raw gate the branch is chosen on; polymorphic like {@link Atom#until}, kept as Object. */
+        public Object when;
+        /** True when the player may freely skip this alternative (already satisfied elsewhere). */
+        public boolean optional;
+    }
+
     // ── SYNTHESIS §1e — sequencer + background + steer (Lane 4 owns the Java side) ──
 
     /**

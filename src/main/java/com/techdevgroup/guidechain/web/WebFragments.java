@@ -314,6 +314,9 @@ final class WebFragments
         // its output is ready before a later consumer needs it — surface WHY the
         // player is collecting it now (OPPORTUNISTIC_GRANULARITY §2a.3).
         appendPayoff(sb, r.step.paysOff);
+        // Skippable-alternative breadcrumb (branch{}, D10): this step is one
+        // option of an alt_group re-pin — surface it the same place paysOff does.
+        appendBranch(sb, r.step.branch);
         // Hint chips (GRANULARITY §4): rendered below conditions; advisory only.
         List<GuideHint> hints = Dedupe.hints(r.step.hints());
         if (!hints.isEmpty())
@@ -427,6 +430,12 @@ final class WebFragments
         {
             appendSubChecklist(sb, step.subChecklist);
         }
+
+        // REQUISITES / REWARDS blocks (NORMALIZATION.md §1d, gap-reqblocks-01):
+        // structured info blocks, primary over the cond-badge row rendered
+        // above in stepRow() — that row demotes to a supplement, never deleted.
+        appendRequisites(sb, step);
+        appendRewards(sb, step);
 
         // Conditions with live values
         List<CompletionCondition> conds = step.completionConditions();
@@ -746,14 +755,26 @@ final class WebFragments
         boolean structured = !e.facts().isEmpty() || (e.summary != null && !e.summary.isEmpty());
         String search = (name + " " + (e.summary != null ? e.summary : "")
             + " " + factSearchBlob(e) + " " + (structured ? "" : notesOrEmpty(e))
-            + " " + reqsStr + " " + rewardsStr).toLowerCase();
+            + " " + reqsStr + " " + rewardsStr + " " + summarizeStart(e.start)
+            + " " + (e.length != null ? e.length : "")).toLowerCase();
 
+        String startStr = summarizeStart(e.start);
         StringBuilder sb = new StringBuilder();
         sb.append("<article class=\"lib-card ref-card\" data-search=\"").append(esc(search)).append("\">\n");
-        sb.append("<h4>").append(esc(name)).append("</h4>\n");
+        sb.append("<h4>").append(esc(name));
+        if (e.length != null && !e.length.isEmpty())
+        {
+            sb.append(" <span class=\"ref-length-chip\">").append(esc(e.length)).append("</span>");
+        }
+        sb.append("</h4>\n");
         if (e.summary != null && !e.summary.isEmpty())
         {
             sb.append("<p class=\"ref-summary\">").append(esc(e.summary)).append("</p>\n");
+        }
+        if (!startStr.isEmpty())
+        {
+            sb.append("<p class=\"ref-line\"><span class=\"ref-line-label\">start</span> ")
+              .append(esc(startStr)).append("</p>\n");
         }
         if (!reqsStr.isEmpty())
         {
@@ -819,6 +840,25 @@ final class WebFragments
     }
 
     /**
+     * Renders {@link ReferenceEntry#start} defensively: an {@code {npc,
+     * location}} object on most rows (quest_db.jsonl) as "npc, location", a
+     * plain string verbatim, or — for any other shape a future source might
+     * carry — falls back to {@link #summarizeRefJson} rather than assuming.
+     */
+    private static String summarizeStart(Object start)
+    {
+        if (start == null) return "";
+        if (!(start instanceof Map)) return stateValueStr(start);
+        Map<?, ?> m = (Map<?, ?>) start;
+        List<String> parts = new ArrayList<>();
+        String npc = stateValueStr(m.get("npc"));
+        String location = stateValueStr(m.get("location"));
+        if (!npc.isEmpty() && !"null".equals(npc)) parts.add(npc);
+        if (!location.isEmpty() && !"null".equals(location)) parts.add(location);
+        return !parts.isEmpty() ? String.join(", ", parts) : summarizeRefJson(start);
+    }
+
+    /**
      * Renders card-facts as grouped information blocks — one block per fact
      * label (overview, mechanics, combat, …), values listed under it in
      * {@link #FACT_ORDER}. This is the structured replacement for the prose
@@ -866,17 +906,29 @@ final class WebFragments
         for (ReferenceEntry.ReqItem it : items)
         {
             if (it == null || it.name == null || it.name.isEmpty()) continue;
-            sb.append("<li>").append(esc(it.name));
-            String qty = reqItemQty(it.qty);
-            if (!qty.isEmpty()) sb.append(" <span class=\"ref-item-qty\">×").append(esc(qty)).append("</span>");
-            if (it.note != null && !it.note.isEmpty())
-            {
-                sb.append(" <span class=\"ref-item-note\">(").append(esc(it.note)).append(")</span>");
-            }
-            if (it.optional) sb.append(" <span class=\"ref-item-opt\">optional</span>");
-            sb.append("</li>\n");
+            appendReqItemLi(sb, it.name, it.qty, it.note, it.optional);
         }
         sb.append("</ul></div>\n");
+    }
+
+    /**
+     * One requisite-item {@code <li>}: name × qty, parenthetical note, and an
+     * "optional" badge — the shared primitive behind {@link #appendReqItems}
+     * (reference cards) and {@link #appendRequisites} (step detail), since
+     * {@link ReferenceEntry.ReqItem} and {@link GuideStep.ReqItem} are the
+     * same shape but distinct Java types (no common interface to dispatch on).
+     */
+    private static void appendReqItemLi(StringBuilder sb, String name, Object qty, String note, boolean optional)
+    {
+        sb.append("<li>").append(esc(name));
+        String qtyStr = reqItemQty(qty);
+        if (!qtyStr.isEmpty()) sb.append(" <span class=\"ref-item-qty\">×").append(esc(qtyStr)).append("</span>");
+        if (note != null && !note.isEmpty())
+        {
+            sb.append(" <span class=\"ref-item-note\">(").append(esc(note)).append(")</span>");
+        }
+        if (optional) sb.append(" <span class=\"ref-item-opt\">optional</span>");
+        sb.append("</li>\n");
     }
 
     private static String reqItemQty(Object qty)
@@ -955,6 +1007,22 @@ final class WebFragments
           .append("&#9193; grab now — <span class=\"payoff-item\">").append(esc(item))
           .append("</span> pays off at <span class=\"payoff-at\">").append(esc(payoff.at))
           .append("</span></div>\n");
+    }
+
+    /**
+     * "alt: ‹alt_group›" chip for a {@code branch{}} skippable-alternative
+     * step (opp-stub re-pins, GRANULARITY branch{}); {@code optional:true}
+     * additionally renders a "skippable" badge. Same reused-in-both-contexts
+     * placement as {@link #appendPayoff} — visible in the plan list row and
+     * the detail header alike.
+     */
+    private void appendBranch(StringBuilder sb, GuideStep.Branch branch)
+    {
+        if (branch == null || branch.alt_group == null || branch.alt_group.isEmpty()) return;
+        sb.append("<div class=\"branch-chip\" title=\"Part of a skippable alternative — done via a different route counts too.\">")
+          .append("alt: <span class=\"branch-alt\">").append(esc(branch.alt_group)).append("</span>");
+        if (branch.optional) sb.append(" <span class=\"branch-optional\">skippable</span>");
+        sb.append("</div>\n");
     }
 
     /** location · xp/hr · members chips for one training method. */
@@ -1050,6 +1118,89 @@ final class WebFragments
             sb.append("</li>\n");
         }
         sb.append("</ol>\n");
+    }
+
+    /**
+     * Structured REQUISITES block for the step detail pane (NORMALIZATION.md
+     * §1d, gap-reqblocks-01): the step's own {@code req_items} where present,
+     * else a summary line per QUEST/SKILL completionCondition (the same
+     * structured-vs-summary precedence {@link #referenceCard} uses for
+     * facts vs notes). A "‹atom› — needs: …" line per sub-checklist atom
+     * with non-empty {@code consumes} is always appended underneath, when
+     * the step carries one. Renders nothing when all three are empty.
+     */
+    private void appendRequisites(StringBuilder sb, GuideStep step)
+    {
+        List<GuideStep.ReqItem> items = step.reqItems();
+        List<String> prereqs = prereqSummaries(step.completionConditions());
+        List<String> needs = subChecklistNeeds(step.subChecklist);
+        if (items.isEmpty() && prereqs.isEmpty() && needs.isEmpty()) return;
+
+        sb.append("<div class=\"ref-block step-block\"><span class=\"ref-block-label\">requisites</span>\n")
+          .append("<ul class=\"ref-items\">\n");
+        if (!items.isEmpty())
+        {
+            for (GuideStep.ReqItem it : items)
+            {
+                if (it == null || it.name == null || it.name.isEmpty()) continue;
+                appendReqItemLi(sb, it.name, it.qty, it.note, it.optional);
+            }
+        }
+        else
+        {
+            for (String r : prereqs) sb.append("<li>").append(esc(r)).append("</li>\n");
+        }
+        for (String n : needs) sb.append("<li class=\"step-needs\">").append(esc(n)).append("</li>\n");
+        sb.append("</ul></div>\n");
+    }
+
+    /** QUEST/SKILL completionConditions summarized as plain requisite lines — the true "gate" conditions, as opposed to VARBIT/ITEM_HELD/REGION triggers already covered by the cond-badge row. */
+    private static List<String> prereqSummaries(List<CompletionCondition> conds)
+    {
+        List<String> out = new ArrayList<>();
+        for (CompletionCondition c : conds)
+        {
+            if (c != null && (c.type == ConditionType.QUEST || c.type == ConditionType.SKILL))
+            {
+                out.add(conditionSummary(c));
+            }
+        }
+        return out;
+    }
+
+    /** "‹atom label› — needs: item×qty, …" per sub-checklist atom carrying a non-empty {@code consumes} map. */
+    private static List<String> subChecklistNeeds(GuideStep.SubChecklist sc)
+    {
+        List<String> out = new ArrayList<>();
+        if (sc == null) return out;
+        for (GuideStep.SubStep a : sc.atoms())
+        {
+            if (a == null) continue;
+            String needs = summarizeRefJson(a.consumes);
+            if (needs.isEmpty()) continue;
+            out.add((a.label != null && !a.label.isEmpty() ? a.label : a.id) + " — needs: " + needs);
+        }
+        return out;
+    }
+
+    /**
+     * Structured REWARDS block for the step detail pane: the only
+     * reward-shaped data a {@link GuideStep} carries today is its
+     * {@code quest-xp} hints (reward-xp grants) — surfaced here as a typed
+     * block additive to the existing hint-chip row. Renders nothing absent.
+     */
+    private void appendRewards(StringBuilder sb, GuideStep step)
+    {
+        List<String> rewards = new ArrayList<>();
+        for (GuideHint h : step.hints())
+        {
+            if (h == null || !"quest-xp".equals(h.type) || h.value == null || h.value.isEmpty()) continue;
+            rewards.add(h.value);
+        }
+        if (rewards.isEmpty()) return;
+        sb.append("<div class=\"ref-block step-block\"><span class=\"ref-block-label\">rewards</span>\n<ul class=\"ref-items\">\n");
+        for (String r : rewards) sb.append("<li>").append(esc(r)).append("</li>\n");
+        sb.append("</ul></div>\n");
     }
 
     /** Compact "verb target ×count" line from an atom{} descriptor; empty when verb is absent. */
