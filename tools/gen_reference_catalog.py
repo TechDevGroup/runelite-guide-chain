@@ -113,8 +113,47 @@ def load_contrib_db():
     return rows
 
 
+def load_card_facts():
+    """Structured, prose-free reference blocks minted by the card-facts
+    normalizer fan-out (contrib.jsonl kind "card-facts", keyed
+    "cardfacts:<card_kind>:<card_id>"). First-seen wins by card_id — the
+    ledger is append-only + idempotent, so at most one row per key survives
+    a re-run. Returns {card_id: {summary, facts[], req_items[]}}."""
+    facts = {}
+    for row in read_jsonl(CONTRIB):
+        if row.get("kind") != "card-facts":
+            continue
+        cid = row.get("card_id")
+        if not cid or cid in facts:
+            continue
+        facts[cid] = {
+            "summary": row.get("summary") or "",
+            "facts": row.get("facts") or [],
+            "req_items": row.get("req_items") or [],
+        }
+    return facts
+
+
+def attach_card_facts(rows, facts):
+    """Fold structured blocks onto each catalog row by id. The render prefers
+    facts[]/summary/req_items[] over the prose `notes` blob — notes stays only
+    as a fallback for rows the normalizer never reached (e.g. gear unlocks)."""
+    hits = 0
+    for row in rows:
+        block = facts.get(row["id"])
+        if not block:
+            continue
+        row["summary"] = block["summary"]
+        row["facts"] = block["facts"]
+        row["req_items"] = block["req_items"]
+        hits += 1
+    return hits
+
+
 def main():
     rows = load_quest_db() + load_contrib_db()
+    card_facts = load_card_facts()
+    hits = attach_card_facts(rows, card_facts)
     with open(OUT, "w", encoding="utf-8") as f:
         for row in rows:
             f.write(json.dumps(row, ensure_ascii=False))
@@ -126,6 +165,7 @@ def main():
     print(f"wrote {len(rows)} rows -> {OUT}")
     for kind in ("quest", "diary", "minigame", "unlock"):
         print(f"  {kind}: {counts.get(kind, 0)}")
+    print(f"  card-facts attached: {hits}/{len(rows)} rows structured")
 
 
 if __name__ == "__main__":

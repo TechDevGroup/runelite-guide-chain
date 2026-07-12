@@ -656,28 +656,45 @@ final class WebFragments
         }
     }
 
+    /** Fact-label render order — the "information blocks" the card groups by. */
+    private static final List<String> FACT_ORDER = Arrays.asList(
+        "overview", "difficulty", "length", "start", "boss", "kills", "combat",
+        "mechanics", "hazard", "unlock", "required-for", "xp-note", "items-note",
+        "caveat", "removed");
+
     private String referenceCard(ReferenceEntry e)
     {
         String name = e.name != null && !e.name.isEmpty() ? e.name : (e.id != null ? e.id : "?");
         String reqsStr = summarizeRefJson(e.reqs);
         String rewardsStr = summarizeRefJson(e.rewards);
-        String search = (name + " " + (e.notes != null ? e.notes : "") + " " + reqsStr + " " + rewardsStr)
-            .toLowerCase();
+        boolean structured = !e.facts().isEmpty() || (e.summary != null && !e.summary.isEmpty());
+        String search = (name + " " + (e.summary != null ? e.summary : "")
+            + " " + factSearchBlob(e) + " " + (structured ? "" : notesOrEmpty(e))
+            + " " + reqsStr + " " + rewardsStr).toLowerCase();
 
         StringBuilder sb = new StringBuilder();
         sb.append("<article class=\"lib-card ref-card\" data-search=\"").append(esc(search)).append("\">\n");
         sb.append("<h4>").append(esc(name)).append("</h4>\n");
+        if (e.summary != null && !e.summary.isEmpty())
+        {
+            sb.append("<p class=\"ref-summary\">").append(esc(e.summary)).append("</p>\n");
+        }
         if (!reqsStr.isEmpty())
         {
             sb.append("<p class=\"ref-line\"><span class=\"ref-line-label\">reqs</span> ")
               .append(esc(reqsStr)).append("</p>\n");
         }
+        appendReqItems(sb, e.reqItems());
         if (!rewardsStr.isEmpty())
         {
             sb.append("<p class=\"ref-line\"><span class=\"ref-line-label\">rewards</span> ")
               .append(esc(rewardsStr)).append("</p>\n");
         }
-        if (e.notes != null && !e.notes.isEmpty())
+        appendFactBlocks(sb, e.facts());
+        // Prose notes are the fallback ONLY when no structured facts exist
+        // (a few gear unlocks the normalizer never reached) — otherwise the
+        // typed blocks above replace the blob entirely.
+        if (!structured && e.notes != null && !e.notes.isEmpty())
         {
             sb.append("<p class=\"lib-desc ref-notes\">").append(esc(truncate(e.notes, 220))).append("</p>\n");
         }
@@ -736,6 +753,98 @@ final class WebFragments
             return sb.toString();
         }
         return stateValueStr(v);
+    }
+
+    /**
+     * Renders card-facts as grouped information blocks — one block per fact
+     * label (overview, mechanics, combat, …), values listed under it in
+     * {@link #FACT_ORDER}. This is the structured replacement for the prose
+     * {@code notes} blob: every line is an objective, checkable statement.
+     */
+    private void appendFactBlocks(StringBuilder sb, List<ReferenceEntry.Fact> facts)
+    {
+        if (facts.isEmpty()) return;
+        Map<String, List<String>> byLabel = new LinkedHashMap<>();
+        for (ReferenceEntry.Fact f : facts)
+        {
+            if (f == null || f.value == null || f.value.isEmpty()) continue;
+            String label = f.label != null && !f.label.isEmpty() ? f.label : "note";
+            byLabel.computeIfAbsent(label, k -> new ArrayList<>()).add(f.value);
+        }
+        if (byLabel.isEmpty()) return;
+        sb.append("<div class=\"ref-facts\">\n");
+        for (String label : FACT_ORDER) appendFactGroup(sb, label, byLabel.remove(label));
+        for (Map.Entry<String, List<String>> extra : byLabel.entrySet())
+        {
+            appendFactGroup(sb, extra.getKey(), extra.getValue());
+        }
+        sb.append("</div>\n");
+    }
+
+    private void appendFactGroup(StringBuilder sb, String label, List<String> values)
+    {
+        if (values == null || values.isEmpty()) return;
+        sb.append("<div class=\"ref-fact\"><span class=\"ref-fact-label\">")
+          .append(esc(label)).append("</span><ul class=\"ref-fact-vals\">\n");
+        for (String v : values) sb.append("<li>").append(esc(v)).append("</li>\n");
+        sb.append("</ul></div>\n");
+    }
+
+    /**
+     * Renders the parsed requisite items as a checkable block: name × qty,
+     * with parenthetical context and an "optional" badge where the source
+     * flagged one. "??" quantities are shown verbatim — never guessed.
+     */
+    private void appendReqItems(StringBuilder sb, List<ReferenceEntry.ReqItem> items)
+    {
+        if (items.isEmpty()) return;
+        sb.append("<div class=\"ref-block ref-reqitems\"><span class=\"ref-block-label\">items</span>")
+          .append("<ul class=\"ref-items\">\n");
+        for (ReferenceEntry.ReqItem it : items)
+        {
+            if (it == null || it.name == null || it.name.isEmpty()) continue;
+            sb.append("<li>").append(esc(it.name));
+            String qty = reqItemQty(it.qty);
+            if (!qty.isEmpty()) sb.append(" <span class=\"ref-item-qty\">×").append(esc(qty)).append("</span>");
+            if (it.note != null && !it.note.isEmpty())
+            {
+                sb.append(" <span class=\"ref-item-note\">(").append(esc(it.note)).append(")</span>");
+            }
+            if (it.optional) sb.append(" <span class=\"ref-item-opt\">optional</span>");
+            sb.append("</li>\n");
+        }
+        sb.append("</ul></div>\n");
+    }
+
+    private static String reqItemQty(Object qty)
+    {
+        if (qty == null) return "";
+        if (qty instanceof Double)
+        {
+            double d = (Double) qty;
+            return d == Math.floor(d) ? Long.toString((long) d) : Double.toString(d);
+        }
+        String s = qty.toString().trim();
+        return "1".equals(s) ? "" : s; // ×1 is noise
+    }
+
+    private static String factSearchBlob(ReferenceEntry e)
+    {
+        StringBuilder sb = new StringBuilder();
+        for (ReferenceEntry.Fact f : e.facts())
+        {
+            if (f != null && f.value != null) sb.append(f.value).append(' ');
+        }
+        for (ReferenceEntry.ReqItem it : e.reqItems())
+        {
+            if (it != null && it.name != null) sb.append(it.name).append(' ');
+        }
+        return sb.toString();
+    }
+
+    private static String notesOrEmpty(ReferenceEntry e)
+    {
+        return e.notes != null ? e.notes : "";
     }
 
     private static String truncate(String s, int max)
