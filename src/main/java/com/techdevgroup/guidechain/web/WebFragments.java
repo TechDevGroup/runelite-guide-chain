@@ -59,6 +59,8 @@ final class WebFragments
             + "</head>\n<body>\n"
             + "<header class=\"topbar\">\n"
             + "  <h1>Guide Chain</h1>\n"
+            + "  <a class=\"btn btn-ghost\" hx-get=\"/fragments/plan\" hx-target=\"#plan\""
+            + " href=\"#\" title=\"Back to the active checklist\">&#10003; Checklist</a>\n"
             + "  <a class=\"btn btn-ghost\" hx-get=\"/fragments/library\" hx-target=\"#plan\""
             + " href=\"#\" title=\"Browse all routes and reference guides\">&#9776; Library</a>\n"
             + "  <a class=\"btn btn-ghost\" hx-get=\"/fragments/reference\" hx-target=\"#plan\""
@@ -69,8 +71,12 @@ final class WebFragments
             + " hx-target=\"#plan\" title=\"Re-fetch guides from the configured source\">&#8635; Refresh guides</button>\n"
             + "</header>\n"
             + "<main class=\"layout\">\n"
+            // Only the initial load is htmx-driven; the live refresh runs from
+            // app.js so it can PAUSE while a browse view (Library/Reference, which
+            // also render into #plan) is open — otherwise the 2s poll flips the
+            // browse content back to the checklist.
             + "  <section id=\"plan\" class=\"pane\" hx-get=\"/fragments/plan\""
-            + " hx-trigger=\"load, every 2s, guide-store-changed from:body\"></section>\n"
+            + " hx-trigger=\"load\"></section>\n"
             + "  <aside id=\"detail\" class=\"pane\" hx-get=\"/fragments/step/current\""
             + " hx-trigger=\"load\"></aside>\n"
             // FRAMES_GALLERY §3: gallery pane is a sibling OUTSIDE the #plan/#detail

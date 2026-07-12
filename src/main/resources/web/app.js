@@ -35,6 +35,23 @@
     cur.scrollIntoView({ block: 'center' });
   });
 
+  // Live plan refresh — driven here, not by an htmx `every 2s` on #plan, so it
+  // can PAUSE while a browse view is open. Library/Reference render into #plan
+  // with a `.library` root; the old poll re-fetched /fragments/plan every 2s and
+  // flipped the browse content back to the checklist. Skip the refresh whenever
+  // #plan is not currently showing the plan.
+  function planIsShowing() {
+    var plan = document.getElementById('plan');
+    return !!(plan && !plan.querySelector('.library') &&
+              plan.querySelector('.plan-head, .plan-list, .empty'));
+  }
+  function refreshPlan() {
+    if (!planIsShowing() || typeof htmx === 'undefined') return;
+    htmx.ajax('GET', '/fragments/plan', { target: '#plan', swap: 'innerHTML' });
+  }
+  setInterval(refreshPlan, 2000);
+  document.body.addEventListener('guide-store-changed', refreshPlan);
+
   // Kill the native jump from every internal action anchor (href="#"): htmx /
   // our own handlers do the real work, and letting the browser resolve "#"
   // scrolls the page (to the top, or to the bottom via scroll-restoration on a
