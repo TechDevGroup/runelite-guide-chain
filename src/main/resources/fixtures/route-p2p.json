@@ -1222,6 +1222,20 @@
       ]
     },
     {
+      "id": "brew-prayer-potion",
+      "phase": "Toward Monkey Madness I",
+      "instruction": "Brew prayer potions (Herblore 52)",
+      "detail": "Combine ranarr weed + snape grass \u2192 prayer potion (4). Requires Druidic Ritual and Herblore 52. Terminal step of the prayer-pot supply chain.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
       "id": "train-attack-60",
       "phase": "Toward Monkey Madness I",
       "instruction": "Train Attack to 60",
@@ -1372,20 +1386,6 @@
           "level": 62
         }
       ]
-    },
-    {
-      "id": "brew-prayer-potion",
-      "phase": "Toward Monkey Madness I",
-      "instruction": "Brew prayer potions (Herblore 52)",
-      "detail": "Combine ranarr weed + snape grass \u2192 prayer potion (4). Requires Druidic Ritual and Herblore 52. Terminal step of the prayer-pot supply chain.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "checkpoint": "Secondaries + brew (JIT)"
     },
     {
       "id": "quest-lost-city",
@@ -2035,71 +2035,6 @@
       "checkpoint": "Gear stop: Al Kharid scimitar"
     },
     {
-      "id": "ctr-07b-early-slayer",
-      "phase": "Toward Desert Treasure",
-      "instruction": "Slayer tasks until 50/50/50 (Turael \u2192 Mazchna)",
-      "detail": "Routing branch B (pick when you want Slayer progress banked with the same hours): tasks from Turael at Burthorpe, graduate to Mazchna at combat 20. Same melee endpoint as branch A, plus Slayer levels toward later gear/tasks.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 401
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 2931,
-          "y": 3536,
-          "plane": 0,
-          "label": "Burthorpe (Turael)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "ATTACK",
-          "level": 50
-        },
-        {
-          "type": "SKILL",
-          "skill": "STRENGTH",
-          "level": 50
-        },
-        {
-          "type": "SKILL",
-          "skill": "DEFENCE",
-          "level": 50
-        },
-        {
-          "type": "SKILL",
-          "skill": "SLAYER",
-          "level": 20
-        }
-      ],
-      "atom": {
-        "verb": "kill",
-        "target": "slayer_task",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "skill": {
-            "attack": 50,
-            "strength": 50,
-            "defence": 50
-          }
-        }
-      },
-      "hints": [
-        {
-          "type": "rng-variance",
-          "target": "task-assignment",
-          "value": "??",
-          "note": "Task rolls vary; skip-cost is zero at Turael tier \u2014 reroll bad tasks by re-asking."
-        }
-      ],
-      "coarse_of": "combat-training-routing",
-      "checkpoint": "Routing branch: crabs vs slayer (pick one)"
-    },
-    {
       "id": "train-defence-30",
       "phase": "Toward Desert Treasure",
       "instruction": "Train Defence to 30",
@@ -2507,6 +2442,20 @@
       "checkpoint": "Ultracompost stock (ahead-of-time)"
     },
     {
+      "id": "gather-volcanic-ash",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Mine volcanic ash at Fossil Island",
+      "detail": "Mine volcanic ash from the ash piles on Fossil Island. Used to make ultracompost. Loop during farm-run downtime.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Ultracompost stock (ahead-of-time)"
+    },
+    {
       "id": "chkpt-prayer-pot-supply-coarse-2",
       "phase": "Supply: Prayer Potion Supply Chain",
       "instruction": "\u29c6 Herb-run loop (background, RECURRING)",
@@ -2548,6 +2497,20 @@
         }
       ],
       "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Herb-run loop (background, RECURRING)"
+    },
+    {
+      "id": "farm-ranarr-patch",
+      "phase": "Supply: Prayer Potion Supply Chain",
+      "instruction": "Farm ranarr herb patches",
+      "detail": "Plant ranarr seeds in herb patches with ultracompost; harvest ranarr weed. ~6.5 ranarr per run at 32 Farming with ultracompost. Loop every ~80 minutes.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
       "checkpoint": "Herb-run loop (background, RECURRING)"
     },
     {
@@ -2610,34 +2573,6 @@
       ],
       "coarse_of": "prayer-pot-supply-coarse",
       "checkpoint": "Ranarr seeds (gather, N+)"
-    },
-    {
-      "id": "gather-volcanic-ash",
-      "phase": "Supply: Prayer Potion Supply Chain",
-      "instruction": "Mine volcanic ash at Fossil Island",
-      "detail": "Mine volcanic ash from the ash piles on Fossil Island. Used to make ultracompost. Loop during farm-run downtime.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "checkpoint": "Ultracompost stock (ahead-of-time)"
-    },
-    {
-      "id": "farm-ranarr-patch",
-      "phase": "Supply: Prayer Potion Supply Chain",
-      "instruction": "Farm ranarr herb patches",
-      "detail": "Plant ranarr seeds in herb patches with ultracompost; harvest ranarr weed. ~6.5 ranarr per run at 32 Farming with ultracompost. Loop every ~80 minutes.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "checkpoint": "Herb-run loop (background, RECURRING)"
     },
     {
       "id": "farm-herb-patch-guam",

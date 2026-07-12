@@ -2847,6 +2847,50 @@
       "checkpoint": "Ultracompost stock (ahead-of-time)"
     },
     {
+      "id": "chkpt-prayer-pot-supply-coarse-0",
+      "phase": "Region: Global",
+      "instruction": "\u29c6 Ultracompost stock (ahead-of-time)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Ultracompost stock (ahead-of-time)"
+    },
+    {
+      "id": "pps-01-withdraw-compost-run",
+      "phase": "Region: Global",
+      "instruction": "Bank: withdraw compost-run loadout",
+      "detail": "Withdraw: coins (charter fare + 30 pineapples, total ??), Digsite pendant or Fossil Island transport (??). No other inventory needed \u2014 pineapples and ash fill en route.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "withdraw",
+        "target": "compost-run-loadout",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "teleport-choice",
+          "target": "fossil-island",
+          "value": "digsite-pendant,barge",
+          "note": "Keep a charged pendant banked separately for repeat runs."
+        }
+      ],
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Ultracompost stock (ahead-of-time)"
+    },
+    {
       "id": "farm-ranarr-patch",
       "phase": "Region: Global",
       "instruction": "Farm ranarr herb patches",
@@ -2858,6 +2902,50 @@
           "type": "MANUAL"
         }
       ],
+      "checkpoint": "Herb-run loop (background, RECURRING)"
+    },
+    {
+      "id": "chkpt-prayer-pot-supply-coarse-1",
+      "phase": "Region: Global",
+      "instruction": "\u29c6 Herb-run loop (background, RECURRING)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Herb-run loop (background, RECURRING)"
+    },
+    {
+      "id": "pps-03-withdraw-herb-run",
+      "phase": "Region: Global",
+      "instruction": "Bank: withdraw herb-run loadout",
+      "detail": "Withdraw: seed dibber, spade, rake, magic secateurs if owned (optional), N ranarr seeds + N ultracompost (N = patch count), run teleports (Explorer's ring \u2192 Falador patch ??, Camelot \u2192 Catherby, Ardougne cloak/tele, Xeric's talisman \u2192 Hosidius ??).",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "withdraw",
+        "target": "herb-run-loadout",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "teleport-choice",
+          "target": "herb-patches",
+          "value": "explorers-ring,camelot,ardougne-cloak,xerics-talisman",
+          "note": "Route order = list order; skip any patch whose teleport is locked."
+        }
+      ],
+      "coarse_of": "prayer-pot-supply-coarse",
       "checkpoint": "Herb-run loop (background, RECURRING)"
     },
     {
@@ -2886,6 +2974,108 @@
           "type": "MANUAL"
         }
       ],
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
+      "id": "chkpt-prayer-pot-supply-coarse-2",
+      "phase": "Region: Global",
+      "instruction": "\u29c6 Secondaries + brew (JIT)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
+      "id": "pps-04-source-vials",
+      "phase": "Region: Global",
+      "instruction": "Stock vials of water (non-GE)",
+      "detail": "Buy vial-of-water packs from a herblore shop vendor (vendor ?? \u2014 verify non-GE source) OR blow vials from molten glass (Crafting 33) and fill at a fountain. One vial per potion.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "buy",
+        "target": "vial_of_water",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "vial_of_water": "??"
+          }
+        }
+      },
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
+      "id": "pps-05-withdraw-brew",
+      "phase": "Region: Global",
+      "instruction": "Bank: withdraw brewing loadout",
+      "detail": "Withdraw: 14 grimy ranarr + 14 vials of water (clean-then-unf in one sitting; two half-inventories per load). Snape grass stays banked until the unf potions are made.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "withdraw",
+        "target": "brew-loadout",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "batch-size",
+          "target": "herb-cleaning",
+          "value": "14",
+          "note": "Clean while walking to the bank \u2014 zero-time embed."
+        },
+        {
+          "type": "do-while",
+          "target": "walking",
+          "value": null,
+          "note": "Herb cleaning and unf-mixing are click-paced; pair with bank-adjacent idle."
+        }
+      ],
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Secondaries + brew (JIT)"
+    },
+    {
+      "id": "pps-06-deposit-potions",
+      "phase": "Region: Global",
+      "instruction": "Bank: deposit prayer potions (stock check)",
+      "detail": "Deposit all prayer potions. Chain is 'done' for now when banked stock meets the active goal's demand (e.g., barrows: 20\u00d7 prayer_potion_4 per SYNTHESIS goals example); otherwise the RECURRING herb-run loop keeps firing.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "deposit",
+        "target": "prayer_potion_4",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "prayer_potion_4": "??"
+          }
+        }
+      },
+      "coarse_of": "prayer-pot-supply-coarse",
       "checkpoint": "Secondaries + brew (JIT)"
     },
     {
@@ -3305,51 +3495,7 @@
       ]
     },
     {
-      "id": "chkpt-prayer-pot-supply-coarse-0",
-      "phase": "Region: Global",
-      "instruction": "\u29c6 Ultracompost stock (ahead-of-time)",
-      "detail": "",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "checkpoint": "Ultracompost stock (ahead-of-time)"
-    },
-    {
-      "id": "pps-01-withdraw-compost-run",
-      "phase": "Region: Global",
-      "instruction": "Bank: withdraw compost-run loadout",
-      "detail": "Withdraw: coins (charter fare + 30 pineapples, total ??), Digsite pendant or Fossil Island transport (??). No other inventory needed \u2014 pineapples and ash fill en route.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "withdraw",
-        "target": "compost-run-loadout",
-        "count": null,
-        "cmp": "eq",
-        "until": null
-      },
-      "hints": [
-        {
-          "type": "teleport-choice",
-          "target": "fossil-island",
-          "value": "digsite-pendant,barge",
-          "note": "Keep a charged pendant banked separately for repeat runs."
-        }
-      ],
-      "coarse_of": "prayer-pot-supply-coarse",
-      "checkpoint": "Ultracompost stock (ahead-of-time)"
-    },
-    {
-      "id": "chkpt-prayer-pot-supply-coarse-1",
+      "id": "chkpt-prayer-pot-supply-coarse-3",
       "phase": "Region: Misthalin",
       "instruction": "\u29c6 Ranarr seeds (gather, N+)",
       "detail": "",
@@ -3408,152 +3554,6 @@
       ],
       "coarse_of": "prayer-pot-supply-coarse",
       "checkpoint": "Ranarr seeds (gather, N+)"
-    },
-    {
-      "id": "chkpt-prayer-pot-supply-coarse-2",
-      "phase": "Region: Global",
-      "instruction": "\u29c6 Herb-run loop (background, RECURRING)",
-      "detail": "",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "checkpoint": "Herb-run loop (background, RECURRING)"
-    },
-    {
-      "id": "pps-03-withdraw-herb-run",
-      "phase": "Region: Global",
-      "instruction": "Bank: withdraw herb-run loadout",
-      "detail": "Withdraw: seed dibber, spade, rake, magic secateurs if owned (optional), N ranarr seeds + N ultracompost (N = patch count), run teleports (Explorer's ring \u2192 Falador patch ??, Camelot \u2192 Catherby, Ardougne cloak/tele, Xeric's talisman \u2192 Hosidius ??).",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "withdraw",
-        "target": "herb-run-loadout",
-        "count": null,
-        "cmp": "eq",
-        "until": null
-      },
-      "hints": [
-        {
-          "type": "teleport-choice",
-          "target": "herb-patches",
-          "value": "explorers-ring,camelot,ardougne-cloak,xerics-talisman",
-          "note": "Route order = list order; skip any patch whose teleport is locked."
-        }
-      ],
-      "coarse_of": "prayer-pot-supply-coarse",
-      "checkpoint": "Herb-run loop (background, RECURRING)"
-    },
-    {
-      "id": "chkpt-prayer-pot-supply-coarse-3",
-      "phase": "Region: Global",
-      "instruction": "\u29c6 Secondaries + brew (JIT)",
-      "detail": "",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "checkpoint": "Secondaries + brew (JIT)"
-    },
-    {
-      "id": "pps-04-source-vials",
-      "phase": "Region: Global",
-      "instruction": "Stock vials of water (non-GE)",
-      "detail": "Buy vial-of-water packs from a herblore shop vendor (vendor ?? \u2014 verify non-GE source) OR blow vials from molten glass (Crafting 33) and fill at a fountain. One vial per potion.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "buy",
-        "target": "vial_of_water",
-        "count": null,
-        "cmp": "gte",
-        "until": {
-          "item": {
-            "vial_of_water": "??"
-          }
-        }
-      },
-      "coarse_of": "prayer-pot-supply-coarse",
-      "checkpoint": "Secondaries + brew (JIT)"
-    },
-    {
-      "id": "pps-05-withdraw-brew",
-      "phase": "Region: Global",
-      "instruction": "Bank: withdraw brewing loadout",
-      "detail": "Withdraw: 14 grimy ranarr + 14 vials of water (clean-then-unf in one sitting; two half-inventories per load). Snape grass stays banked until the unf potions are made.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "withdraw",
-        "target": "brew-loadout",
-        "count": null,
-        "cmp": "eq",
-        "until": null
-      },
-      "hints": [
-        {
-          "type": "batch-size",
-          "target": "herb-cleaning",
-          "value": "14",
-          "note": "Clean while walking to the bank \u2014 zero-time embed."
-        },
-        {
-          "type": "do-while",
-          "target": "walking",
-          "value": null,
-          "note": "Herb cleaning and unf-mixing are click-paced; pair with bank-adjacent idle."
-        }
-      ],
-      "coarse_of": "prayer-pot-supply-coarse",
-      "checkpoint": "Secondaries + brew (JIT)"
-    },
-    {
-      "id": "pps-06-deposit-potions",
-      "phase": "Region: Global",
-      "instruction": "Bank: deposit prayer potions (stock check)",
-      "detail": "Deposit all prayer potions. Chain is 'done' for now when banked stock meets the active goal's demand (e.g., barrows: 20\u00d7 prayer_potion_4 per SYNTHESIS goals example); otherwise the RECURRING herb-run loop keeps firing.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "deposit",
-        "target": "prayer_potion_4",
-        "count": null,
-        "cmp": "gte",
-        "until": {
-          "item": {
-            "prayer_potion_4": "??"
-          }
-        }
-      },
-      "coarse_of": "prayer-pot-supply-coarse",
-      "checkpoint": "Secondaries + brew (JIT)"
     },
     {
       "id": "chkpt-combat-training-routing-0",
@@ -3979,71 +3979,6 @@
           "target": "afk",
           "value": null,
           "note": "Aggro window ~10 min then reset run \u2014 pair with low-attention tasks."
-        }
-      ],
-      "coarse_of": "combat-training-routing",
-      "checkpoint": "Routing branch: crabs vs slayer (pick one)"
-    },
-    {
-      "id": "ctr-07b-early-slayer",
-      "phase": "Region: Asgarnia",
-      "instruction": "Slayer tasks until 50/50/50 (Turael \u2192 Mazchna)",
-      "detail": "Routing branch B (pick when you want Slayer progress banked with the same hours): tasks from Turael at Burthorpe, graduate to Mazchna at combat 20. Same melee endpoint as branch A, plus Slayer levels toward later gear/tasks.",
-      "highlights": [
-        {
-          "type": "NPC",
-          "id": 401
-        }
-      ],
-      "mapMarkers": [
-        {
-          "x": 2931,
-          "y": 3536,
-          "plane": 0,
-          "label": "Burthorpe (Turael)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "SKILL",
-          "skill": "ATTACK",
-          "level": 50
-        },
-        {
-          "type": "SKILL",
-          "skill": "STRENGTH",
-          "level": 50
-        },
-        {
-          "type": "SKILL",
-          "skill": "DEFENCE",
-          "level": 50
-        },
-        {
-          "type": "SKILL",
-          "skill": "SLAYER",
-          "level": 20
-        }
-      ],
-      "atom": {
-        "verb": "kill",
-        "target": "slayer_task",
-        "count": null,
-        "cmp": "eq",
-        "until": {
-          "skill": {
-            "attack": 50,
-            "strength": 50,
-            "defence": 50
-          }
-        }
-      },
-      "hints": [
-        {
-          "type": "rng-variance",
-          "target": "task-assignment",
-          "value": "??",
-          "note": "Task rolls vary; skip-cost is zero at Turael tier \u2014 reroll bad tasks by re-asking."
         }
       ],
       "coarse_of": "combat-training-routing",
