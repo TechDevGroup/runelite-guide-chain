@@ -310,6 +310,10 @@ final class WebFragments
             sb.append("<span class=\"cond-badge\">").append(esc(conditionSummary(c))).append("</span>\n");
         }
         sb.append("</div>\n");
+        // Opportunistic-lookahead breadcrumb: this step was re-pinned earlier so
+        // its output is ready before a later consumer needs it — surface WHY the
+        // player is collecting it now (OPPORTUNISTIC_GRANULARITY §2a.3).
+        appendPayoff(sb, r.step.paysOff);
         // Hint chips (GRANULARITY §4): rendered below conditions; advisory only.
         List<GuideHint> hints = Dedupe.hints(r.step.hints());
         if (!hints.isEmpty())
@@ -939,6 +943,18 @@ final class WebFragments
             sb.append("</li>\n");
         }
         sb.append("</ul>\n");
+    }
+
+    /** "⏩ grab now — pays off at ‹consumer›" breadcrumb for a re-pinned opportunistic step. */
+    private void appendPayoff(StringBuilder sb, GuideStep.GuidePayoff payoff)
+    {
+        if (payoff == null || payoff.at == null || payoff.at.isEmpty()) return;
+        String item = payoff.item != null && !payoff.item.isEmpty()
+            ? payoff.item.replace('_', ' ') : "this";
+        sb.append("<div class=\"payoff-chip\" title=\"Collected early while you're in position — saves a return trip.\">")
+          .append("&#9193; grab now — <span class=\"payoff-item\">").append(esc(item))
+          .append("</span> pays off at <span class=\"payoff-at\">").append(esc(payoff.at))
+          .append("</span></div>\n");
     }
 
     /** location · xp/hr · members chips for one training method. */

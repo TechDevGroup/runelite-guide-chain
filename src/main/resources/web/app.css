@@ -432,6 +432,18 @@ a.step-instruction:hover { color: var(--accent); }
 .substep-detail { font-size: 0.76rem; color: var(--ink-dim); margin-top: 0.15rem; }
 .substep .ref-chips, .substep .hint-chips { margin-top: 0.25rem; }
 
+/* ── Opportunistic-lookahead breadcrumb (grab-now, pays off later) ── */
+.payoff-chip {
+  font-size: 0.72rem; margin-top: 0.25rem;
+  color: var(--accent);
+  border-left: 2px solid var(--accent);
+  padding: 0.1rem 0.4rem;
+  background: rgba(53, 181, 255, 0.07);
+  border-radius: 0 4px 4px 0;
+}
+.payoff-item { font-weight: 600; }
+.payoff-at { color: var(--ink-dim); font-variant-numeric: tabular-nums; }
+
 /* ── Phase / episode dividers (milestone-structured route) ── */
 .phase-divider {
   list-style: none;
