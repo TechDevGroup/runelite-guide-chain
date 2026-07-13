@@ -1750,7 +1750,7 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/eeaec8/arrive.png",
+          "path": "media/62ff87/arrive.png",
           "url": null,
           "caption": "Varrock Palace: King Roald (quest-priest-in-peril start)",
           "state": {
@@ -1762,7 +1762,7 @@
         },
         {
           "kind": "gif",
-          "path": "media/ab4fb1/observe.gif",
+          "path": "media/2798a9/observe.gif",
           "url": null,
           "caption": "Player beside King Roald; ask about the temple to Saradomin to start the quest",
           "state": {
@@ -18118,7 +18118,7 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/87d106/arrive.png",
+          "path": "media/c4aeb7/arrive.png",
           "url": null,
           "caption": "Iron rocks (Mine) at the Al Kharid mine \u2014 train-mining-30",
           "state": {
@@ -27972,7 +27972,7 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/28588b/arrive.png",
+          "path": "media/7b4b63/arrive.png",
           "url": null,
           "caption": "Willow tree (Chop down) at Draynor Village \u2014 train-woodcutting-30",
           "state": {
@@ -38872,7 +38872,7 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/5e2257/arrive.png",
+          "path": "media/32ad8f/arrive.png",
           "url": null,
           "caption": "Permanent fire (Cook) at Barbarian Village \u2014 train-cooking-40",
           "state": {
@@ -41288,7 +41288,7 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/3bedb7/arrive.png",
+          "path": "media/bfaf5d/arrive.png",
           "url": null,
           "caption": "NW Lumbridge Swamp: the Warrior (quest-lost-city start)",
           "state": {
@@ -41300,7 +41300,7 @@
         },
         {
           "kind": "gif",
-          "path": "media/da3130/observe.gif",
+          "path": "media/6571fc/observe.gif",
           "url": null,
           "caption": "Player beside the Warrior; ask about Zanaris to start the quest",
           "state": {
