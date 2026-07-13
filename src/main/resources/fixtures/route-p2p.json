@@ -481,6 +481,32 @@
           "url": "https://oldschool.runescape.wiki/w/Experience"
         }
       ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/c806f5/arrive.png",
+          "url": null,
+          "caption": "Arrive at Lumbridge East chicken farm (train-attack-10)",
+          "state": {
+            "scenario": "lumbridge_chickens",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/fdc3bf/observe.gif",
+          "url": null,
+          "caption": "Player at the coop; chickens are the kill target",
+          "state": {
+            "scenario": "lumbridge_chickens",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        }
+      ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
       ],
@@ -712,6 +738,32 @@
           "title": "Barbarian",
           "slug": "Barbarian",
           "url": "https://oldschool.runescape.wiki/w/Barbarian"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/6bd03c/arrive.png",
+          "url": null,
+          "caption": "Arrive at Barbarian Village (train-attack-40)",
+          "state": {
+            "scenario": "ctr_05_kill_barbarians",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/0bc3ad/observe.gif",
+          "url": null,
+          "caption": "Barbarians around the player; these are the kill target",
+          "state": {
+            "scenario": "ctr_05_kill_barbarians",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ],
       "passiveOverlays": [
@@ -5112,6 +5164,20 @@
           "slug": "Recipe_for_Disaster_Freeing_the_Mountain_Dwarf.s3",
           "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_the_Mountain_Dwarf"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/280054/arrive.png",
+          "url": null,
+          "caption": "Lumbridge Castle dining room: the frozen Mountain Dwarf's plinth (rfd-mountain-dwarf / Rohak, Kelda stew)",
+          "state": {
+            "scenario": "rfd_mountain_dwarf_plinth",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        }
       ]
     },
     {
@@ -6307,6 +6373,20 @@
           "title": "Recipe for Disaster/Freeing the Goblin generals",
           "slug": "Recipe_for_Disaster_Freeing_the_Goblin_generals.s3",
           "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_the_Goblin_generals"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/777c90/arrive.png",
+          "url": null,
+          "caption": "Lumbridge Castle dining room: General Wartface's plinth, General Bentnoze alongside (rfd-goblins / goblin generals)",
+          "state": {
+            "scenario": "rfd_goblins_plinth",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ]
     },
@@ -8735,6 +8815,32 @@
           "url": "https://oldschool.runescape.wiki/w/Cow"
         }
       ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/a01fb9/arrive.png",
+          "url": null,
+          "caption": "Arrive at the Lumbridge East cow field (train-defence-30)",
+          "state": {
+            "scenario": "ctr_02_kill_cows",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/a68f03/observe.gif",
+          "url": null,
+          "caption": "Cows in the pen around the player; these are the kill target",
+          "state": {
+            "scenario": "ctr_02_kill_cows",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        }
+      ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
       ],
@@ -8830,6 +8936,32 @@
           "title": "Pay-to-play Melee training",
           "slug": "Pay-to-play_Melee_training.s10",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Melee_training"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/6bd03c/arrive.png",
+          "url": null,
+          "caption": "Arrive at Barbarian Village (train-defence-40)",
+          "state": {
+            "scenario": "ctr_05_kill_barbarians",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/0bc3ad/observe.gif",
+          "url": null,
+          "caption": "Barbarians around the player; these are the kill target",
+          "state": {
+            "scenario": "ctr_05_kill_barbarians",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ],
       "passiveOverlays": [
