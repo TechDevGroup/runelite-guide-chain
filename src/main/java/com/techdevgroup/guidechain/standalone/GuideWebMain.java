@@ -101,6 +101,15 @@ public final class GuideWebMain
         store.setClientConnected(false);
     }
 
+    /**
+     * Defense in depth: a malformed/unparseable guide (bad JSON shape, a
+     * type Gson can't coerce) must not take down the whole standalone
+     * server — log and skip that one guide, keep serving the rest of the
+     * manifest. {@code RuntimeException} also catches Gson's
+     * JsonSyntaxException/JsonParseException, which are unchecked and would
+     * otherwise propagate out of {@code main()} and crash the JVM before
+     * {@code HttpServer.start()} ever runs.
+     */
     private static <T> T readResource(Gson gson, String path, Class<T> type)
     {
         try (InputStream in = GuideWebMain.class.getResourceAsStream(path))
@@ -108,7 +117,7 @@ public final class GuideWebMain
             if (in == null) return null;
             return gson.fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), type);
         }
-        catch (IOException e)
+        catch (IOException | RuntimeException e)
         {
             System.err.println("Failed to read fixture " + path + ": " + e);
             return null;

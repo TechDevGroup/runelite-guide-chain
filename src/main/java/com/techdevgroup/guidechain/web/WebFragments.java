@@ -1213,8 +1213,27 @@ final class WebFragments
         if (atom == null || atom.verb == null || atom.verb.isEmpty()) return "";
         StringBuilder sb = new StringBuilder(atom.verb);
         if (atom.target != null && !atom.target.isEmpty()) sb.append(' ').append(atom.target);
-        if (atom.count != null) sb.append(" ×").append(atom.count);
+        String countStr = atomCountStr(atom.count);
+        if (!countStr.isEmpty()) sb.append(" ×").append(countStr);
         return sb.toString();
+    }
+
+    /**
+     * Renders {@link GuideStep.Atom#count}: numeric (Gson deserializes a
+     * JSON number into this {@code Object} field as {@code Double}) or the
+     * literal "??" tuning placeholder — same polymorphic handling as {@link
+     * #reqItemQty}, minus its "×1 is noise" suppression (an atom count of 1
+     * is still meaningful, unlike a requisite-item quantity).
+     */
+    private static String atomCountStr(Object count)
+    {
+        if (count == null) return "";
+        if (count instanceof Double)
+        {
+            double d = (Double) count;
+            return d == Math.floor(d) ? Long.toString((long) d) : Double.toString(d);
+        }
+        return count.toString().trim();
     }
 
     /** Shared wiki ref-chip render (step detail + method picker). */

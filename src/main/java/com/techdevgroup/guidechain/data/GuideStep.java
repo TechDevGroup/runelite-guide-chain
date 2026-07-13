@@ -273,8 +273,15 @@ public class GuideStep
     {
         public String verb;
         public String target;
-        /** Null for state-only atoms (talk-to, walk-to, equip, ...). */
-        public Integer count;
+        /**
+         * Null for state-only atoms (talk-to, walk-to, equip, ...). Integer
+         * count, or the string "??" when the source never stated one — same
+         * polymorphic-Object contract as {@link ReqItem#qty}, required
+         * because Gson's Integer adapter throws NumberFormatException on the
+         * "??" placeholder (route-quests.json carries it on 2 atoms today;
+         * route-grand.json will once Lane A2 absorbs quest atoms into it).
+         */
+        public Object count;
         /** eq | gte | null. */
         public String cmp;
         /**
