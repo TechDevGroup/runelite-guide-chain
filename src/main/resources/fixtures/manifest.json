@@ -8,20 +8,6 @@
       "guides": ["route-grand.json"]
     },
     {
-      "id": "quest-progression",
-      "name": "Quest Reference (all routable quests)",
-      "category": "Reference",
-      "description": "The exhaustive quest + miniquest list (215 of 216 routable; only The Frozen Door's unboostable Hitpoints 70 is out of reach), prereq-ordered and interleaved with the training each quest needs. The Full Progression's Quests lens covers the load-bearing spine; this is the complete reference until the spine absorbs the remaining quests. Wiki-cited.",
-      "guides": ["route-quests.json"]
-    },
-    {
-      "id": "p2p-progression",
-      "name": "P2P Bossing Focus",
-      "category": "Reference",
-      "description": "A focused prerequisite path to the members bossing milestones (Desert Treasure, Monkey Madness I, Barrows, God Wars Dungeon, Chambers of Xeric). Its Desert-Treasure / Monkey-Madness routing is the piece the Full Progression spine still absorbs; kept as a focused reference until then.",
-      "guides": ["route-p2p.json"]
-    },
-    {
       "id": "full-corpus",
       "name": "Full Corpus (appendix)",
       "category": "Reference",

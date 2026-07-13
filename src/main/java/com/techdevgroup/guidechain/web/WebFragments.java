@@ -120,35 +120,43 @@ final class WebFragments
             + "</body>\n</html>\n";
     }
 
-    // ── Chain picker fragment ─────────────────────────────────────────────────
+    // ── Corpus link fragment (CONSOLIDATION.md §6 — the chain <select> is
+    // retired: manifest.json holds exactly 2 entries post-absorption
+    // (full-progression, full-corpus) and Corpus is a different axis
+    // (topo/coverage index, not a sibling progression), so a combo box is no
+    // longer the right control. This renders a single link that opens Corpus
+    // via the same POST /actions/select-chain route the Library page's cards
+    // already use (libraryFragment/appendLibraryCategories, unchanged). ──
 
-    String chainsFragment()
+    private static final String CORPUS_CHAIN_ID = "full-corpus";
+
+    String corpusLinkFragment()
     {
-        List<ChainEntry> chains = store.chains();
-        StringBuilder sb = new StringBuilder();
-        sb.append("<label class=\"chain-label\">Chain\n");
-        sb.append("<select name=\"chain\" hx-post=\"/actions/select-chain\"")
-          .append(" hx-trigger=\"change\" hx-target=\"#plan\">\n");
-        String active = store.activeChainId();
-        if (chains.isEmpty())
-        {
-            sb.append("<option disabled selected>no chains loaded</option>\n");
-        }
-        for (ChainEntry c : chains)
-        {
-            sb.append("<option value=\"").append(esc(c.id)).append('"');
-            if (c.id != null && c.id.equals(active)) sb.append(" selected");
-            sb.append('>').append(esc(c.name != null ? c.name : c.id)).append("</option>\n");
-        }
-        sb.append("</select>\n</label>\n");
+        if (findChain(CORPUS_CHAIN_ID) == null) return "";
+        boolean active = CORPUS_CHAIN_ID.equals(store.activeChainId());
+        StringBuilder sb = new StringBuilder("<div class=\"corpus-link\">\n");
+        sb.append("<button class=\"btn btn-ghost\"").append(active ? " disabled" : "")
+          .append(" hx-post=\"/actions/select-chain\" hx-vals='{\"chain\":\"")
+          .append(CORPUS_CHAIN_ID).append("\"}' hx-target=\"#plan\">")
+          .append("Full Corpus (reference) &rarr;</button>\n");
+        sb.append("</div>\n");
         return sb.toString();
     }
 
-    // ── Lens segmented control (CHAIN_CONSOLIDATION.md §2/§3, additive) ──────
-    //
-    // The chain dropdown above still selects WHICH spine/corpus is loaded;
-    // this control filters WHAT of the loaded spine's plan renders. Lens IS
-    // the lookup table (no if-ladder) — one button per Lens.values().
+    private ChainEntry findChain(String id)
+    {
+        for (ChainEntry c : store.chains())
+        {
+            if (id.equals(c.id)) return c;
+        }
+        return null;
+    }
+
+    // ── Lens segmented control (CHAIN_CONSOLIDATION.md §2/§3; PRIMARY
+    // navigation as of CONSOLIDATION.md §6 — the chain <select> it used to
+    // sit under is gone, so this is now the top-level way to shape the one
+    // spine's plan). Lens IS the lookup table (no if-ladder) — one button
+    // per Lens.values().
 
     String lensFragment()
     {

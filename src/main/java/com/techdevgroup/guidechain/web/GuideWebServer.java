@@ -41,7 +41,7 @@ import java.util.logging.Logger;
  * <pre>
  * GET  /                              app shell
  * GET  /static/{file}                 vendored htmx / css / js / license
- * GET  /fragments/chains              chain picker + lens segmented control partial
+ * GET  /fragments/chains              lens segmented control (primary nav) + Corpus link partial
  * GET  /fragments/plan                ordered task list partial
  * GET  /fragments/reference           reference catalog partial (quest/diary/minigame/unlock; ?kind=)
  * GET  /fragments/step/current        detail partial following the position
@@ -148,7 +148,7 @@ public final class GuideWebServer
                 if (path.startsWith("/static/"))               { serveStatic(ex, path.substring("/static/".length())); return; }
                 if (path.startsWith("/icon/item/"))            { serveItemIcon(ex, path.substring("/icon/item/".length())); return; }
                 if (path.startsWith("/media/"))                { serveMedia(ex, decode(path.substring("/media/".length()))); return; }
-                if ("/fragments/chains".equals(path))          { sendHtml(ex, fragments.chainsFragment() + fragments.lensFragment()); return; }
+                if ("/fragments/chains".equals(path))          { sendHtml(ex, fragments.lensFragment() + fragments.corpusLinkFragment()); return; }
                 if ("/fragments/plan".equals(path))            { sendHtml(ex, fragments.planFragment()); return; }
                 if ("/fragments/index".equals(path))           { sendHtml(ex, fragments.indexFragment()); return; }
                 if ("/fragments/library".equals(path))         { sendHtml(ex, fragments.libraryFragment()); return; }
