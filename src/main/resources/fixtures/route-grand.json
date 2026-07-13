@@ -61,24 +61,26 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/c5e634/arrive.png",
+          "path": "media/740544/arrive.png",
           "url": null,
-          "caption": "Character creation / Tutorial Island (scenario capture)",
+          "caption": "Tutorial Island start - Gielinor Guide's house (origin:tutorial:01)",
           "state": {
             "scenario": "origin_tutorial_island",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         },
         {
           "kind": "gif",
-          "path": "media/47ce4b/observe.gif",
+          "path": "media/c2d38f/observe.gif",
           "url": null,
-          "caption": "Tutorial Island scene (scenario capture, oracle PASS)",
+          "caption": "Gielinor Guide at the starting house; the tutorial begins here",
           "state": {
             "scenario": "origin_tutorial_island",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         }
       ]
@@ -1213,24 +1215,26 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/452c2c/arrive.png",
+          "path": "media/0b9bdc/arrive.png",
           "url": null,
           "caption": "Draynor bank: player adjacent to the bank booths (withdraw loadout here)",
           "state": {
             "scenario": "draynor_bank",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         },
         {
           "kind": "gif",
-          "path": "media/5916f3/observe.gif",
+          "path": "media/c378ae/observe.gif",
           "url": null,
           "caption": "Bank booths + bankers; the generic bank-withdraw scene",
           "state": {
             "scenario": "draynor_bank",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         }
       ]
@@ -5373,24 +5377,26 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/e5162b/arrive.png",
+          "path": "media/46a41b/arrive.png",
           "url": null,
           "caption": "Lumbridge church: Father Aereck (quest-the-restless-ghost start)",
           "state": {
             "scenario": "quest_restless_ghost",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         },
         {
           "kind": "gif",
-          "path": "media/2cd208/observe.gif",
+          "path": "media/8af22a/observe.gif",
           "url": null,
           "caption": "Player beside Father Aereck; ask him about the haunted graveyard to start the quest",
           "state": {
             "scenario": "quest_restless_ghost",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         }
       ],
@@ -7646,26 +7652,26 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/15e0fa/arrive.png",
+          "path": "media/a01fb9/arrive.png",
           "url": null,
-          "caption": "Kill cows east of Lumbridge \u2014 cow + herd + pen rendered from cache",
+          "caption": "Arrive at the Lumbridge East cow field (ctr-02-kill-cows)",
           "state": {
             "scenario": "ctr_02_kill_cows",
             "rev": 236,
-            "harness": "spike/scenario/run_scenario.py",
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         },
         {
           "kind": "gif",
-          "path": "media/8a847d/observe.gif",
+          "path": "media/a68f03/observe.gif",
           "url": null,
-          "caption": "Cow-field scene, animated (scenario capture, oracle PASS)",
+          "caption": "Cows in the pen around the player; these are the kill target",
           "state": {
             "scenario": "ctr_02_kill_cows",
             "rev": 236,
-            "harness": "spike/scenario/run_scenario.py",
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         }
       ],
@@ -9794,24 +9800,26 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/fcae1a/arrive.png",
+          "path": "media/6bd03c/arrive.png",
           "url": null,
-          "caption": "Train on barbarians at Barbarian Village (scenario capture)",
+          "caption": "Arrive at Barbarian Village (ctr-05-kill-barbarians)",
           "state": {
             "scenario": "ctr_05_kill_barbarians",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         },
         {
           "kind": "gif",
-          "path": "media/49973b/observe.gif",
+          "path": "media/0bc3ad/observe.gif",
           "url": null,
-          "caption": "Barbarian Village scene (scenario capture, oracle PASS)",
+          "caption": "Barbarians around the player; rotate styles to 30/30/30",
           "state": {
             "scenario": "ctr_05_kill_barbarians",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         }
       ]
@@ -13252,26 +13260,26 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/67a9f7/arrive.png",
+          "path": "media/c806f5/arrive.png",
           "url": null,
-          "caption": "Kill chickens at Lumbridge East farm \u2014 chicken 3316 rendered from the rev-236 cache (scenario capture)",
+          "caption": "Arrive at Lumbridge East chicken farm (train-attack-10)",
           "state": {
             "scenario": "lumbridge_chickens",
             "rev": 236,
-            "harness": "spike/scenario/run_scenario.py",
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         },
         {
           "kind": "gif",
-          "path": "media/e5e457/observe.gif",
+          "path": "media/fdc3bf/observe.gif",
           "url": null,
-          "caption": "Chicken-training scene, animated (scenario capture, oracle PASS)",
+          "caption": "Player at the coop; chickens are the kill target",
           "state": {
             "scenario": "lumbridge_chickens",
             "rev": 236,
-            "harness": "spike/scenario/run_scenario.py",
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         }
       ]

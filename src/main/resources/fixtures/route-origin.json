@@ -48,24 +48,26 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/c5e634/arrive.png",
+          "path": "media/740544/arrive.png",
           "url": null,
-          "caption": "Character creation / Tutorial Island (scenario capture)",
+          "caption": "Tutorial Island start - Gielinor Guide's house (origin:tutorial:01)",
           "state": {
             "scenario": "origin_tutorial_island",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         },
         {
           "kind": "gif",
-          "path": "media/47ce4b/observe.gif",
+          "path": "media/c2d38f/observe.gif",
           "url": null,
-          "caption": "Tutorial Island scene (scenario capture, oracle PASS)",
+          "caption": "Gielinor Guide at the starting house; the tutorial begins here",
           "state": {
             "scenario": "origin_tutorial_island",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         }
       ]
@@ -1145,24 +1147,26 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/e5162b/arrive.png",
+          "path": "media/46a41b/arrive.png",
           "url": null,
           "caption": "Lumbridge church: Father Aereck (quest-the-restless-ghost start)",
           "state": {
             "scenario": "quest_restless_ghost",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         },
         {
           "kind": "gif",
-          "path": "media/2cd208/observe.gif",
+          "path": "media/8af22a/observe.gif",
           "url": null,
           "caption": "Player beside Father Aereck; ask him about the haunted graveyard to start the quest",
           "state": {
             "scenario": "quest_restless_ghost",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         }
       ],
