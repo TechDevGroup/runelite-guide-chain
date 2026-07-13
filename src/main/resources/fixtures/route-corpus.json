@@ -3497,6 +3497,20 @@
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
         }
       ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/5e2257/arrive.png",
+          "url": null,
+          "caption": "Permanent fire (Cook) at Barbarian Village \u2014 train-cooking-40",
+          "state": {
+            "scenario": "train_cooking_barbarian_fire",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        }
+      ],
       "methods": [
         {
           "method": "Cook trout and salmon caught at Barbarian Village fishing spots on a nearby fire or range",
@@ -3862,6 +3876,20 @@
           "title": "Pay-to-play Woodcutting training",
           "slug": "Pay-to-play_Woodcutting_training.s18",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Woodcutting_training"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/28588b/arrive.png",
+          "url": null,
+          "caption": "Willow tree (Chop down) at Draynor Village \u2014 train-woodcutting-30",
+          "state": {
+            "scenario": "train_woodcutting_draynor_willow",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ],
       "methods": [
@@ -5649,6 +5677,20 @@
           "url": "https://oldschool.runescape.wiki/w/Tanner"
         }
       ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/86b8e4/arrive.png",
+          "url": null,
+          "caption": "Ellis the tanner, Al Kharid (Tan cowhide -> leather) \u2014 train-crafting-20",
+          "state": {
+            "scenario": "train_crafting_20_al_kharid",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        }
+      ],
       "methods": [
         {
           "method": "Leather item ladder (gloves through chaps)",
@@ -6179,6 +6221,20 @@
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Smithing_training"
         }
       ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/bf6293/arrive.png",
+          "url": null,
+          "caption": "Anvil (Smith) in western Varrock \u2014 train-smithing-15",
+          "state": {
+            "scenario": "train_smithing_varrock_anvil",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        }
+      ],
       "methods": [
         {
           "method": "Anvil smithing bronze items (dagger, then scimitar, then warhammer)",
@@ -6254,6 +6310,20 @@
           "title": "Al Kharid mine",
           "slug": "Al_Kharid_mine.s1",
           "url": "https://oldschool.runescape.wiki/w/Al_Kharid_mine"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/516f8f/arrive.png",
+          "url": null,
+          "caption": "Anvil (Smith) in western Varrock \u2014 smith bronze/iron items from mined ore (train-smithing-30)",
+          "state": {
+            "scenario": "train_smithing_30_varrock_anvil",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ],
       "methods": [
@@ -6573,6 +6643,20 @@
           "title": "Pay-to-play Mining training",
           "slug": "Pay-to-play_Mining_training.s8",
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/87d106/arrive.png",
+          "url": null,
+          "caption": "Iron rocks (Mine) at the Al Kharid mine \u2014 train-mining-30",
+          "state": {
+            "scenario": "train_mining_alkharid",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ],
       "methods": [
@@ -7045,6 +7129,20 @@
           "title": "Agility training",
           "slug": "Agility_training",
           "url": "https://oldschool.runescape.wiki/w/Agility_training"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/6a92e3/arrive.png",
+          "url": null,
+          "caption": "Rough wall (Climb) \u2014 Draynor Rooftop Course start, train-agility-10",
+          "state": {
+            "scenario": "train_agility_draynor_rooftop",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ],
       "methods": [
@@ -7554,6 +7652,20 @@
           "title": "H.A.M. Hideout",
           "slug": "H.A.M._Hideout.s2",
           "url": "https://oldschool.runescape.wiki/w/H.A.M._Hideout"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/0f3fd5/arrive.png",
+          "url": null,
+          "caption": "H.A.M. Hideout beneath Lumbridge: H.A.M. Member (Pickpocket) \u2014 train-thieving-38",
+          "state": {
+            "scenario": "train_thieving_38_ham_hideout",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ],
       "methods": [
@@ -8798,6 +8910,32 @@
           "title": "Hunter training",
           "slug": "Hunter_training",
           "url": "https://oldschool.runescape.wiki/w/Hunter_training"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/42fb5a/arrive.png",
+          "url": null,
+          "caption": "Varrock Museum basement: Orlando Smith (train-hunter-9, Natural History Quiz)",
+          "state": {
+            "scenario": "train_hunter_varrock_museum",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/3b248c/observe.gif",
+          "url": null,
+          "caption": "Player beside Orlando Smith; the quiz's one-off 1,000xp reward covers level 1->9",
+          "state": {
+            "scenario": "train_hunter_varrock_museum",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ],
       "methods": [
@@ -10045,6 +10183,32 @@
           "slug": "Cook's_Assistant.s1",
           "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/3da355/arrive.png",
+          "url": null,
+          "caption": "Lumbridge Castle kitchen: the Cook (Recipe for Disaster start / RFD sub-quest assignment)",
+          "state": {
+            "scenario": "rfd_the_cook_kitchen",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/8e8c89/observe.gif",
+          "url": null,
+          "caption": "Player beside the Cook; talk to him to start RFD or pick up the next sub-quest",
+          "state": {
+            "scenario": "rfd_the_cook_kitchen",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        }
       ]
     },
     {
@@ -10094,6 +10258,32 @@
           "slug": "Lost_City.s6",
           "url": "https://oldschool.runescape.wiki/w/Lost_City"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/3bedb7/arrive.png",
+          "url": null,
+          "caption": "NW Lumbridge Swamp: the Warrior (quest-lost-city start)",
+          "state": {
+            "scenario": "quest_lost_city",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/da3130/observe.gif",
+          "url": null,
+          "caption": "Player beside the Warrior; ask about Zanaris to start the quest",
+          "state": {
+            "scenario": "quest_lost_city",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        }
       ]
     },
     {
@@ -10142,6 +10332,32 @@
           "title": "Bone Voyage",
           "slug": "Bone_Voyage.s7",
           "url": "https://oldschool.runescape.wiki/w/Bone_Voyage"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/5635c6/arrive.png",
+          "url": null,
+          "caption": "Varrock Museum: Curator Haig Halen (quest-bone-voyage start)",
+          "state": {
+            "scenario": "quest_bone_voyage",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/8069dd/observe.gif",
+          "url": null,
+          "caption": "Player beside the Curator; sign up for the fossil-hunting barge voyage",
+          "state": {
+            "scenario": "quest_bone_voyage",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ]
     },
@@ -10397,6 +10613,32 @@
           "slug": "The_Feud.s8",
           "url": "https://oldschool.runescape.wiki/w/The_Feud"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/527f80/arrive.png",
+          "url": null,
+          "caption": "Northern Al Kharid: Ali Morrisane (quest-the-feud start)",
+          "state": {
+            "scenario": "quest_the_feud_al_kharid",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/43df2b/observe.gif",
+          "url": null,
+          "caption": "Player beside Ali Morrisane; ask about work to start The Feud",
+          "state": {
+            "scenario": "quest_the_feud_al_kharid",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        }
       ]
     },
     {
@@ -10479,6 +10721,32 @@
           "title": "Priest in Peril",
           "slug": "Priest_in_Peril.s7",
           "url": "https://oldschool.runescape.wiki/w/Priest_in_Peril"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/eeaec8/arrive.png",
+          "url": null,
+          "caption": "Varrock Palace: King Roald (quest-priest-in-peril start)",
+          "state": {
+            "scenario": "quest_priest_in_peril",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/ab4fb1/observe.gif",
+          "url": null,
+          "caption": "Player beside King Roald; ask about the temple to Saradomin to start the quest",
+          "state": {
+            "scenario": "quest_priest_in_peril",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ]
     },
@@ -10616,6 +10884,20 @@
           "slug": "God_Wars_Dungeon.s0",
           "url": "https://oldschool.runescape.wiki/w/God_Wars_Dungeon"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/9fa24b/arrive.png",
+          "url": null,
+          "caption": "Abandoned siege battlefield above the God Wars Dungeon entrance, north of Trollheim \u2014 unlock-gwd",
+          "state": {
+            "scenario": "unlock_gwd_battlefield",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        }
       ]
     },
     {
@@ -10690,6 +10972,32 @@
           "title": "Family Crest",
           "slug": "Family_Crest",
           "url": "https://oldschool.runescape.wiki/w/Family_Crest"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/7709f9/arrive.png",
+          "url": null,
+          "caption": "Varrock, south of the east bank: Dimintheis (quest-family-crest start)",
+          "state": {
+            "scenario": "quest_family_crest",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/a7b3f5/observe.gif",
+          "url": null,
+          "caption": "Player beside Dimintheis; he sends you after his three sons' crest pieces",
+          "state": {
+            "scenario": "quest_family_crest",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ]
     },
@@ -10885,6 +11193,32 @@
           "slug": "Fairytale_I_-_Growing_Pains.s9",
           "url": "https://oldschool.runescape.wiki/w/Fairytale_I_-_Growing_Pains"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/7d3800/arrive.png",
+          "url": null,
+          "caption": "Draynor Village pig pen: Martin the Master Gardener (quest-fairytale-1 start)",
+          "state": {
+            "scenario": "quest_fairytale1_draynor",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/7fa1ec/observe.gif",
+          "url": null,
+          "caption": "Player beside Martin the Master Gardener; ask him about his missing seeds to start Fairytale I",
+          "state": {
+            "scenario": "quest_fairytale1_draynor",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        }
       ]
     },
     {
@@ -10999,6 +11333,20 @@
           "title": "Fossil Island Volcano",
           "slug": "Fossil_Island_Volcano.s1",
           "url": "https://oldschool.runescape.wiki/w/Fossil_Island_Volcano"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/8cc38e/arrive.png",
+          "url": null,
+          "caption": "Ash pile (Mine) on the Fossil Island volcano rim \u2014 gather-volcanic-ash",
+          "state": {
+            "scenario": "gather_volcanic_ash_fossil_island",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ]
     },
@@ -11733,6 +12081,32 @@
           "slug": "Cook's_Assistant.s1",
           "url": "https://oldschool.runescape.wiki/w/Cook's_Assistant"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/3da355/arrive.png",
+          "url": null,
+          "caption": "Lumbridge Castle kitchen: the Cook (Recipe for Disaster start / RFD sub-quest assignment)",
+          "state": {
+            "scenario": "rfd_the_cook_kitchen",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/8e8c89/observe.gif",
+          "url": null,
+          "caption": "Player beside the Cook; talk to him to start RFD or pick up the next sub-quest",
+          "state": {
+            "scenario": "rfd_the_cook_kitchen",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        }
       ]
     },
     {
@@ -11942,6 +12316,20 @@
           "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
         }
       ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/ef28f5/arrive.png",
+          "url": null,
+          "caption": "Lumbridge Castle dining room: Evil Dave's plinth (rfd-evil-dave / Spicy Stew)",
+          "state": {
+            "scenario": "rfd_evil_dave_plinth",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        }
+      ],
       "hints": [
         {
           "type": "quest-xp",
@@ -12031,6 +12419,20 @@
           "title": "Recipe for Disaster/Freeing King Awowogei",
           "slug": "Recipe_for_Disaster_Freeing_King_Awowogei.s9",
           "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster_Freeing_King_Awowogei"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/eb5e49/arrive.png",
+          "url": null,
+          "caption": "Lumbridge Castle dining room: Awowogei's plinth (rfd-awowogei / Snake on a Plinth)",
+          "state": {
+            "scenario": "rfd_awowogei_plinth",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ]
     },
@@ -12552,6 +12954,20 @@
           "title": "Bronze scimitar",
           "slug": "Bronze_scimitar",
           "url": "https://oldschool.runescape.wiki/w/Bronze_scimitar"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/4a76dd/arrive.png",
+          "url": null,
+          "caption": "Zeke's Superior Scimitars, Al Kharid \u2014 equip the scimitar right after buying it (ctr-04-equip-scimitar)",
+          "state": {
+            "scenario": "ctr_04_equip_scimitar",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ]
     },
@@ -16588,6 +17004,32 @@
           "slug": "Swan_Song.s11",
           "url": "https://oldschool.runescape.wiki/w/Swan_Song"
         }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/2a63ce/arrive.png",
+          "url": null,
+          "caption": "Piscatoris Fishing Colony: Herman Caranos (quest-swan-song start)",
+          "state": {
+            "scenario": "quest_swan_song_piscatoris",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/0dc716/observe.gif",
+          "url": null,
+          "caption": "Player beside Herman Caranos; ask him for work to start Swan Song",
+          "state": {
+            "scenario": "quest_swan_song_piscatoris",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
+        }
       ]
     },
     {
@@ -16796,6 +17238,20 @@
           "title": "Recipe for Disaster",
           "slug": "Recipe_for_Disaster.s1",
           "url": "https://oldschool.runescape.wiki/w/Recipe_for_Disaster"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/eb1905/arrive.png",
+          "url": null,
+          "caption": "Lumbridge Castle dining room: Sir Amik Varze's plinth (rfd-sir-amik / Creme Brulee)",
+          "state": {
+            "scenario": "rfd_sir_amik_plinth",
+            "rev": 236,
+            "oracle": "PASS",
+            "engine": "native"
+          }
         }
       ],
       "hints": [
