@@ -11533,85 +11533,6 @@
       ]
     },
     {
-      "id": "setup-ultracompost",
-      "phase": "Region: Morytania",
-      "instruction": "Produce ultracompost (pineapples + volcanic ash)",
-      "detail": "Fill compost bins with 30 pineapples then add 15 volcanic ash per bin to produce ultracompost. Ahead-of-time stockpile before herb runs.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3660,
-          "y": 3520,
-          "plane": 0,
-          "label": "Ectofuntus (Port Phasmatys) -- for the step's own location.zone label"
-        },
-        {
-          "x": 3610,
-          "y": 3522,
-          "plane": 0,
-          "label": "Nearest real compost bin, west of Port Phasmatys (Compost_bin.s1 map pin)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "produce",
-        "target": "ultracompost",
-        "count": null,
-        "cmp": "gte",
-        "until": {
-          "item": {
-            "ultracompost": "??"
-          }
-        }
-      },
-      "hints": [
-        {
-          "type": "batch-size",
-          "target": "ultracompost-direct",
-          "value": "2",
-          "note": "Direct method (no bin needed): use 2 volcanic ash on 1 bucket of already-made supercompost -> 1 bucket ultracompost, 2 ticks, 1.1 farming xp. Fastest per-bucket path if supercompost buckets are already on hand."
-        },
-        {
-          "type": "batch-size",
-          "target": "ultracompost-bin",
-          "value": "15",
-          "note": "Compost-bin method: bin already containing supercompost + 25 volcanic ash (consumed regardless of bin fill level) -> collect 15 buckets of ultracompost via 15 empty buckets, 10 xp/bucket. Big Compost Bin (Farming Guild, 45 Farming) doubles every number: 30 buckets, 50 ash, 30 buckets to collect."
-        }
-      ],
-      "checkpoint": "Ultracompost stock (ahead-of-time)",
-      "refs": [
-        {
-          "title": "Ultracompost",
-          "slug": "Ultracompost.s2",
-          "url": "https://oldschool.runescape.wiki/w/Ultracompost"
-        },
-        {
-          "title": "Ultracompost",
-          "slug": "Ultracompost.s1",
-          "url": "https://oldschool.runescape.wiki/w/Ultracompost"
-        },
-        {
-          "title": "Compost Bin",
-          "slug": "Compost_bin.s3",
-          "url": "https://oldschool.runescape.wiki/w/Compost_Bin"
-        },
-        {
-          "title": "Compost Bin",
-          "slug": "Compost_bin.s1",
-          "url": "https://oldschool.runescape.wiki/w/Compost_Bin"
-        },
-        {
-          "title": "Ectofuntus",
-          "slug": "Ectofuntus",
-          "url": "https://oldschool.runescape.wiki/w/Ectofuntus"
-        }
-      ]
-    },
-    {
       "id": "chkpt-prayer-pot-supply-coarse-0",
       "phase": "Region: Global",
       "instruction": "\u29c6 Ultracompost stock (ahead-of-time)",
@@ -11714,192 +11635,6 @@
       ]
     },
     {
-      "id": "farm-ranarr-patch",
-      "phase": "Region: Global",
-      "instruction": "Farm ranarr herb patches",
-      "detail": "Plant ranarr seeds in herb patches with ultracompost; harvest ranarr weed. ~6.5 ranarr per run at 32 Farming with ultracompost. Loop every ~80 minutes.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3055,
-          "y": 3308,
-          "plane": 0,
-          "label": "Falador herb patch (south of Falador, gardener Elstan)"
-        },
-        {
-          "x": 2810,
-          "y": 3464,
-          "plane": 0,
-          "label": "Catherby herb patch (north of Catherby, gardener Dantaera)"
-        },
-        {
-          "x": 2667,
-          "y": 3375,
-          "plane": 0,
-          "label": "Ardougne herb patch (north of Ardougne, gardener Kragen)"
-        },
-        {
-          "x": 1735,
-          "y": 3555,
-          "plane": 0,
-          "label": "Hosidius herb patch (SW corner of Hosidius, gardener Marisi)"
-        },
-        {
-          "x": 1239,
-          "y": 3727,
-          "plane": 0,
-          "label": "Farming Guild herb patch (Farming 65 required)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "harvest",
-        "target": "ranarr_weed",
-        "count": null,
-        "cmp": "gte",
-        "until": {
-          "item": {
-            "ranarr_weed": "??"
-          }
-        }
-      },
-      "hints": [
-        {
-          "type": "rng-variance",
-          "target": "ranarr_weed",
-          "value": "min 6 w/ ultracompost; ~8.8 avg w/ ultracompost+secateurs+cape",
-          "note": "Herb_patch: 'using ultracompost...increase the minimum yield to 6 herbs per seed' (with 3 base harvest lives +1 per compost tier, max 6 w/ ultracompost, per the same yield mechanic documented on Guam_seed s2). Herb_patch/Seeds footnote: average-profit column 'Assumes average of 8.8 herbs per seed in a standard (non-protected) herb patch' premised on ultracompost+magic secateurs+farming cape (empirical sample)."
-        },
-        {
-          "type": "do-while",
-          "target": "background-loop",
-          "value": null,
-          "note": "RECURRING -- one atom per run, patch route ordered per pps-03-withdraw-herb-run (XREF: bg:pps-03-withdraw-herb-run)."
-        }
-      ],
-      "checkpoint": "Herb-run loop (background, RECURRING)",
-      "refs": [
-        {
-          "title": "Herb patch",
-          "slug": "Herb_patch",
-          "url": "https://oldschool.runescape.wiki/w/Herb_patch"
-        },
-        {
-          "title": "Herb patch/Seeds",
-          "slug": "Herb_patch_Seeds.s1",
-          "url": "https://oldschool.runescape.wiki/w/Herb_patch/Seeds"
-        },
-        {
-          "title": "Allotment patch/Patches",
-          "slug": "Allotment_patch_Patches.s1",
-          "url": "https://oldschool.runescape.wiki/w/Allotment_patch/Patches"
-        }
-      ]
-    },
-    {
-      "id": "chkpt-prayer-pot-supply-coarse-2",
-      "phase": "Region: Global",
-      "instruction": "\u29c6 Herb-run loop (background, RECURRING)",
-      "detail": "",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "checkpoint": "Herb-run loop (background, RECURRING)",
-      "refs": [
-        {
-          "title": "Allotment patch/Patches",
-          "slug": "Allotment_patch_Patches.s1",
-          "url": "https://oldschool.runescape.wiki/w/Allotment_patch/Patches"
-        },
-        {
-          "title": "Herb patch",
-          "slug": "Herb_patch",
-          "url": "https://oldschool.runescape.wiki/w/Herb_patch"
-        }
-      ]
-    },
-    {
-      "id": "pps-03-withdraw-herb-run",
-      "phase": "Region: Global",
-      "instruction": "Bank: withdraw herb-run loadout",
-      "detail": "Withdraw: seed dibber, spade, rake, magic secateurs if owned (optional), N ranarr seeds + N ultracompost (N = patch count), run teleports (Explorer's ring \u2192 Falador patch ??, Camelot \u2192 Catherby, Ardougne cloak/tele, Xeric's talisman \u2192 Hosidius ??).",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 3055,
-          "y": 3308,
-          "plane": 0,
-          "label": "Falador herb patch (Explorer's ring landing)"
-        },
-        {
-          "x": 2810,
-          "y": 3464,
-          "plane": 0,
-          "label": "Catherby herb patch (Camelot landing, run east)"
-        },
-        {
-          "x": 2667,
-          "y": 3375,
-          "plane": 0,
-          "label": "Ardougne herb patch (Ardougne cloak landing)"
-        },
-        {
-          "x": 1735,
-          "y": 3555,
-          "plane": 0,
-          "label": "Hosidius herb patch (Xeric's talisman landing)"
-        },
-        {
-          "x": 1239,
-          "y": 3727,
-          "plane": 0,
-          "label": "Farming Guild herb patch (optional 5th leg, Farming 65 required)"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "withdraw",
-        "target": "herb-run-loadout",
-        "count": null,
-        "cmp": "eq",
-        "until": null
-      },
-      "hints": [
-        {
-          "type": "teleport-choice",
-          "target": "herb-patches",
-          "value": "explorers-ring,camelot,ardougne-cloak,xerics-talisman",
-          "note": "Route order = list order; skip any patch whose teleport is locked."
-        }
-      ],
-      "coarse_of": "prayer-pot-supply-coarse",
-      "checkpoint": "Herb-run loop (background, RECURRING)",
-      "refs": [
-        {
-          "title": "Allotment patch/Patches",
-          "slug": "Allotment_patch_Patches.s1",
-          "url": "https://oldschool.runescape.wiki/w/Allotment_patch/Patches"
-        },
-        {
-          "title": "Herb patch",
-          "slug": "Herb_patch",
-          "url": "https://oldschool.runescape.wiki/w/Herb_patch"
-        }
-      ]
-    },
-    {
       "id": "gather-snape-grass",
       "phase": "Region: Fremennik",
       "instruction": "Gather snape grass at Waterbirth Island",
@@ -11943,104 +11678,6 @@
           "title": "Snape grass",
           "slug": "Snape_grass.s5",
           "url": "https://oldschool.runescape.wiki/w/Snape_grass"
-        }
-      ]
-    },
-    {
-      "id": "chkpt-prayer-pot-supply-coarse-3",
-      "phase": "Region: Global",
-      "instruction": "\u29c6 Secondaries + brew (JIT)",
-      "detail": "",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "checkpoint": "Secondaries + brew (JIT)",
-      "refs": [
-        {
-          "title": "Prayer potion",
-          "slug": "Prayer_potion.s2",
-          "url": "https://oldschool.runescape.wiki/w/Prayer_potion"
-        }
-      ]
-    },
-    {
-      "id": "pps-04-source-vials",
-      "phase": "Region: Global",
-      "instruction": "Stock vials of water (non-GE)",
-      "detail": "Buy vial-of-water packs from a herblore shop vendor (vendor ?? \u2014 verify non-GE source) OR blow vials from molten glass (Crafting 33) and fill at a fountain. One vial per potion.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 2899,
-          "y": 3429,
-          "plane": 0,
-          "label": "Jatix's Herblore Shop (Taverley) -- centroid of the shop's {{Map|mtype=polygon}} footprint"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "buy",
-        "target": "vial_of_water",
-        "count": null,
-        "cmp": "gte",
-        "until": {
-          "item": {
-            "vial_of_water": "??"
-          }
-        }
-      },
-      "hints": [
-        {
-          "type": "rng-variance",
-          "target": "vial_of_water",
-          "value": "stock 750, restock 100s per unit",
-          "note": "Jatix's Herblore Shop Stock table (StoreTableHead sellmultiplier=1000 buymultiplier=700 delta=30): Vial of water stock=750/restock=100s, or buy the Water-filled vial pack (stock=750/restock=50s) for a batched purchase. A single 14-vial brewing run (per pps-05-withdraw-brew's loadout) is far under base stock -- no world-hop needed."
-        }
-      ],
-      "coarse_of": "prayer-pot-supply-coarse",
-      "checkpoint": "Secondaries + brew (JIT)",
-      "refs": [
-        {
-          "title": "Jatix's Herblore Shop.",
-          "slug": "Jatix's_Herblore_Shop.s1",
-          "url": "https://oldschool.runescape.wiki/w/Jatix%27s_Herblore_Shop."
-        },
-        {
-          "title": "Jatix's Herblore Shop.",
-          "slug": "Jatix's_Herblore_Shop",
-          "url": "https://oldschool.runescape.wiki/w/Jatix%27s_Herblore_Shop."
-        }
-      ],
-      "media": [
-        {
-          "kind": "png",
-          "path": "media/708e12/arrive.png",
-          "url": null,
-          "caption": "Jatix's Herblore Shop, Taverley (pps-04-source-vials)",
-          "state": {
-            "scenario": "pps_04_jatix_taverley",
-            "rev": 236,
-            "oracle": "PASS"
-          }
-        },
-        {
-          "kind": "gif",
-          "path": "media/9f9e7f/observe.gif",
-          "url": null,
-          "caption": "Jatix at his shop; stock vials of water non-GE",
-          "state": {
-            "scenario": "pps_04_jatix_taverley",
-            "rev": 236,
-            "oracle": "PASS"
-          }
         }
       ]
     },
@@ -12156,47 +11793,6 @@
           "title": "Prayer potion",
           "slug": "Prayer_potion.s4",
           "url": "https://oldschool.runescape.wiki/w/Prayer_potion"
-        }
-      ]
-    },
-    {
-      "id": "brew-prayer-potion",
-      "phase": "Region: Global",
-      "instruction": "Brew prayer potions (Herblore 52)",
-      "detail": "Combine ranarr weed + snape grass \u2192 prayer potion (4). Requires Druidic Ritual and Herblore 52. Terminal step of the prayer-pot supply chain.",
-      "highlights": [],
-      "mapMarkers": [],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "produce",
-        "target": "prayer_potion_4",
-        "count": null,
-        "cmp": "eq",
-        "until": null
-      },
-      "hints": [
-        {
-          "type": "rng-variance",
-          "target": "prayer_potion_4",
-          "value": "5% (amulet of chemistry) / 15% (alchemist's amulet)",
-          "note": "Base recipe output is Prayer potion(3) \u2014 the target stays prayer_potion_4 for chain-slug consistency, but reaching an actual 4-dose potion needs this amulet chance (or combining leftover doses). Ref: Prayer potion Creation section."
-        }
-      ],
-      "checkpoint": "Secondaries + brew (JIT)",
-      "refs": [
-        {
-          "title": "Prayer potion",
-          "slug": "Prayer_potion.s2",
-          "url": "https://oldschool.runescape.wiki/w/Prayer_potion"
-        },
-        {
-          "title": "Ranarr potion (unf)",
-          "slug": "Ranarr_potion_(unf).s1",
-          "url": "https://oldschool.runescape.wiki/w/Ranarr_potion_(unf)"
         }
       ]
     },
@@ -12780,6 +12376,105 @@
             "harness": "spike/scenario/run_scenario.py",
             "oracle": "PASS"
           }
+        }
+      ]
+    },
+    {
+      "id": "chkpt-prayer-pot-supply-coarse-2",
+      "phase": "Region: Global",
+      "instruction": "\u29c6 Herb-run loop (background, RECURRING)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Herb-run loop (background, RECURRING)",
+      "refs": [
+        {
+          "title": "Allotment patch/Patches",
+          "slug": "Allotment_patch_Patches.s1",
+          "url": "https://oldschool.runescape.wiki/w/Allotment_patch/Patches"
+        },
+        {
+          "title": "Herb patch",
+          "slug": "Herb_patch",
+          "url": "https://oldschool.runescape.wiki/w/Herb_patch"
+        }
+      ]
+    },
+    {
+      "id": "pps-03-withdraw-herb-run",
+      "phase": "Region: Global",
+      "instruction": "Bank: withdraw herb-run loadout",
+      "detail": "Withdraw: seed dibber, spade, rake, magic secateurs if owned (optional), N ranarr seeds + N ultracompost (N = patch count), run teleports (Explorer's ring \u2192 Falador patch ??, Camelot \u2192 Catherby, Ardougne cloak/tele, Xeric's talisman \u2192 Hosidius ??).",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3055,
+          "y": 3308,
+          "plane": 0,
+          "label": "Falador herb patch (Explorer's ring landing)"
+        },
+        {
+          "x": 2810,
+          "y": 3464,
+          "plane": 0,
+          "label": "Catherby herb patch (Camelot landing, run east)"
+        },
+        {
+          "x": 2667,
+          "y": 3375,
+          "plane": 0,
+          "label": "Ardougne herb patch (Ardougne cloak landing)"
+        },
+        {
+          "x": 1735,
+          "y": 3555,
+          "plane": 0,
+          "label": "Hosidius herb patch (Xeric's talisman landing)"
+        },
+        {
+          "x": 1239,
+          "y": 3727,
+          "plane": 0,
+          "label": "Farming Guild herb patch (optional 5th leg, Farming 65 required)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "withdraw",
+        "target": "herb-run-loadout",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "teleport-choice",
+          "target": "herb-patches",
+          "value": "explorers-ring,camelot,ardougne-cloak,xerics-talisman",
+          "note": "Route order = list order; skip any patch whose teleport is locked."
+        }
+      ],
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Herb-run loop (background, RECURRING)",
+      "refs": [
+        {
+          "title": "Allotment patch/Patches",
+          "slug": "Allotment_patch_Patches.s1",
+          "url": "https://oldschool.runescape.wiki/w/Allotment_patch/Patches"
+        },
+        {
+          "title": "Herb patch",
+          "slug": "Herb_patch",
+          "url": "https://oldschool.runescape.wiki/w/Herb_patch"
         }
       ]
     },
@@ -17100,7 +16795,7 @@
       "id": "unlock-barrows",
       "phase": "Region: Morytania",
       "instruction": "Barrows runs (starter)",
-      "detail": "Semi-consistent GP and gear. Entry-level bossing in Morytania.",
+      "detail": "Semi-consistent GP and gear. Entry-level bossing in Morytania. Bank barrows loot, spare runes, and other trip clutter afterward before your next bossing trip.",
       "highlights": [],
       "mapMarkers": [
         {
@@ -17339,59 +17034,6 @@
           "title": "Fishing spot (Piscatoris Fishing Colony)",
           "slug": "Fishing_spot_(Piscatoris_Fishing_Colony)",
           "url": "https://oldschool.runescape.wiki/w/Fishing_spot_(Piscatoris_Fishing_Colony)"
-        }
-      ]
-    },
-    {
-      "id": "cook-monkfish",
-      "phase": "Region: Kandarin",
-      "instruction": "Cook monkfish (Cooking 62)",
-      "detail": "Cook raw monkfish on a range. Stop burning at 92 (68 with cooking gauntlets). Terminal step of the monkfish food supply chain.",
-      "highlights": [],
-      "mapMarkers": [
-        {
-          "x": 2834,
-          "y": 3445,
-          "plane": 0,
-          "label": "Catherby"
-        }
-      ],
-      "completionConditions": [
-        {
-          "type": "MANUAL"
-        }
-      ],
-      "atom": {
-        "verb": "produce",
-        "target": "food_monkfish",
-        "count": null,
-        "cmp": "eq",
-        "until": null
-      },
-      "hints": [
-        {
-          "type": "batch-size",
-          "target": "cooking-range",
-          "value": "1",
-          "note": "1 raw_monkfish -> 1 food_monkfish per action (ticks=1, facilities=Cooking range). Ref: Monkfish Creation."
-        },
-        {
-          "type": "toggle-state",
-          "target": "cooking-gauntlets",
-          "value": "on",
-          "note": "Wearing cooking gauntlets lowers the stop-burning level; see notes for the full table."
-        }
-      ],
-      "refs": [
-        {
-          "title": "Monkfish",
-          "slug": "Monkfish.s1",
-          "url": "https://oldschool.runescape.wiki/w/Monkfish"
-        },
-        {
-          "title": "Cooking/Burn level",
-          "slug": "Burn_level.s2",
-          "url": "https://oldschool.runescape.wiki/w/Cooking/Burn_level"
         }
       ]
     },
@@ -17637,6 +17279,364 @@
           "title": "Guam seed",
           "slug": "Guam_seed.s2",
           "url": "https://oldschool.runescape.wiki/w/Guam_seed"
+        }
+      ]
+    },
+    {
+      "id": "setup-ultracompost",
+      "phase": "Region: Morytania",
+      "instruction": "Produce ultracompost (pineapples + volcanic ash)",
+      "detail": "Fill compost bins with 30 pineapples then add 15 volcanic ash per bin to produce ultracompost. Ahead-of-time stockpile before herb runs.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3660,
+          "y": 3520,
+          "plane": 0,
+          "label": "Ectofuntus (Port Phasmatys) -- for the step's own location.zone label"
+        },
+        {
+          "x": 3610,
+          "y": 3522,
+          "plane": 0,
+          "label": "Nearest real compost bin, west of Port Phasmatys (Compost_bin.s1 map pin)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "ultracompost",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "ultracompost": "??"
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "batch-size",
+          "target": "ultracompost-direct",
+          "value": "2",
+          "note": "Direct method (no bin needed): use 2 volcanic ash on 1 bucket of already-made supercompost -> 1 bucket ultracompost, 2 ticks, 1.1 farming xp. Fastest per-bucket path if supercompost buckets are already on hand."
+        },
+        {
+          "type": "batch-size",
+          "target": "ultracompost-bin",
+          "value": "15",
+          "note": "Compost-bin method: bin already containing supercompost + 25 volcanic ash (consumed regardless of bin fill level) -> collect 15 buckets of ultracompost via 15 empty buckets, 10 xp/bucket. Big Compost Bin (Farming Guild, 45 Farming) doubles every number: 30 buckets, 50 ash, 30 buckets to collect."
+        }
+      ],
+      "checkpoint": "Ultracompost stock (ahead-of-time)",
+      "refs": [
+        {
+          "title": "Ultracompost",
+          "slug": "Ultracompost.s2",
+          "url": "https://oldschool.runescape.wiki/w/Ultracompost"
+        },
+        {
+          "title": "Ultracompost",
+          "slug": "Ultracompost.s1",
+          "url": "https://oldschool.runescape.wiki/w/Ultracompost"
+        },
+        {
+          "title": "Compost Bin",
+          "slug": "Compost_bin.s3",
+          "url": "https://oldschool.runescape.wiki/w/Compost_Bin"
+        },
+        {
+          "title": "Compost Bin",
+          "slug": "Compost_bin.s1",
+          "url": "https://oldschool.runescape.wiki/w/Compost_Bin"
+        },
+        {
+          "title": "Ectofuntus",
+          "slug": "Ectofuntus",
+          "url": "https://oldschool.runescape.wiki/w/Ectofuntus"
+        }
+      ]
+    },
+    {
+      "id": "farm-ranarr-patch",
+      "phase": "Region: Global",
+      "instruction": "Farm ranarr herb patches",
+      "detail": "Plant ranarr seeds in herb patches with ultracompost; harvest ranarr weed. ~6.5 ranarr per run at 32 Farming with ultracompost. Loop every ~80 minutes.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 3055,
+          "y": 3308,
+          "plane": 0,
+          "label": "Falador herb patch (south of Falador, gardener Elstan)"
+        },
+        {
+          "x": 2810,
+          "y": 3464,
+          "plane": 0,
+          "label": "Catherby herb patch (north of Catherby, gardener Dantaera)"
+        },
+        {
+          "x": 2667,
+          "y": 3375,
+          "plane": 0,
+          "label": "Ardougne herb patch (north of Ardougne, gardener Kragen)"
+        },
+        {
+          "x": 1735,
+          "y": 3555,
+          "plane": 0,
+          "label": "Hosidius herb patch (SW corner of Hosidius, gardener Marisi)"
+        },
+        {
+          "x": 1239,
+          "y": 3727,
+          "plane": 0,
+          "label": "Farming Guild herb patch (Farming 65 required)"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "harvest",
+        "target": "ranarr_weed",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "ranarr_weed": "??"
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "ranarr_weed",
+          "value": "min 6 w/ ultracompost; ~8.8 avg w/ ultracompost+secateurs+cape",
+          "note": "Herb_patch: 'using ultracompost...increase the minimum yield to 6 herbs per seed' (with 3 base harvest lives +1 per compost tier, max 6 w/ ultracompost, per the same yield mechanic documented on Guam_seed s2). Herb_patch/Seeds footnote: average-profit column 'Assumes average of 8.8 herbs per seed in a standard (non-protected) herb patch' premised on ultracompost+magic secateurs+farming cape (empirical sample)."
+        },
+        {
+          "type": "do-while",
+          "target": "background-loop",
+          "value": null,
+          "note": "RECURRING -- one atom per run, patch route ordered per pps-03-withdraw-herb-run (XREF: bg:pps-03-withdraw-herb-run)."
+        }
+      ],
+      "checkpoint": "Herb-run loop (background, RECURRING)",
+      "refs": [
+        {
+          "title": "Herb patch",
+          "slug": "Herb_patch",
+          "url": "https://oldschool.runescape.wiki/w/Herb_patch"
+        },
+        {
+          "title": "Herb patch/Seeds",
+          "slug": "Herb_patch_Seeds.s1",
+          "url": "https://oldschool.runescape.wiki/w/Herb_patch/Seeds"
+        },
+        {
+          "title": "Allotment patch/Patches",
+          "slug": "Allotment_patch_Patches.s1",
+          "url": "https://oldschool.runescape.wiki/w/Allotment_patch/Patches"
+        }
+      ]
+    },
+    {
+      "id": "brew-prayer-potion",
+      "phase": "Region: Global",
+      "instruction": "Brew prayer potions (Herblore 52)",
+      "detail": "Combine ranarr weed + snape grass \u2192 prayer potion (4). Requires Druidic Ritual and Herblore 52. Terminal step of the prayer-pot supply chain.",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "prayer_potion_4",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "prayer_potion_4",
+          "value": "5% (amulet of chemistry) / 15% (alchemist's amulet)",
+          "note": "Base recipe output is Prayer potion(3) \u2014 the target stays prayer_potion_4 for chain-slug consistency, but reaching an actual 4-dose potion needs this amulet chance (or combining leftover doses). Ref: Prayer potion Creation section."
+        }
+      ],
+      "checkpoint": "Secondaries + brew (JIT)",
+      "refs": [
+        {
+          "title": "Prayer potion",
+          "slug": "Prayer_potion.s2",
+          "url": "https://oldschool.runescape.wiki/w/Prayer_potion"
+        },
+        {
+          "title": "Ranarr potion (unf)",
+          "slug": "Ranarr_potion_(unf).s1",
+          "url": "https://oldschool.runescape.wiki/w/Ranarr_potion_(unf)"
+        }
+      ]
+    },
+    {
+      "id": "cook-monkfish",
+      "phase": "Region: Kandarin",
+      "instruction": "Cook monkfish (Cooking 62)",
+      "detail": "Cook raw monkfish on a range. Stop burning at 92 (68 with cooking gauntlets). Terminal step of the monkfish food supply chain.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2834,
+          "y": 3445,
+          "plane": 0,
+          "label": "Catherby"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "produce",
+        "target": "food_monkfish",
+        "count": null,
+        "cmp": "eq",
+        "until": null
+      },
+      "hints": [
+        {
+          "type": "batch-size",
+          "target": "cooking-range",
+          "value": "1",
+          "note": "1 raw_monkfish -> 1 food_monkfish per action (ticks=1, facilities=Cooking range). Ref: Monkfish Creation."
+        },
+        {
+          "type": "toggle-state",
+          "target": "cooking-gauntlets",
+          "value": "on",
+          "note": "Wearing cooking gauntlets lowers the stop-burning level; see notes for the full table."
+        }
+      ],
+      "refs": [
+        {
+          "title": "Monkfish",
+          "slug": "Monkfish.s1",
+          "url": "https://oldschool.runescape.wiki/w/Monkfish"
+        },
+        {
+          "title": "Cooking/Burn level",
+          "slug": "Burn_level.s2",
+          "url": "https://oldschool.runescape.wiki/w/Cooking/Burn_level"
+        }
+      ]
+    },
+    {
+      "id": "chkpt-prayer-pot-supply-coarse-3",
+      "phase": "Region: Global",
+      "instruction": "\u29c6 Secondaries + brew (JIT)",
+      "detail": "",
+      "highlights": [],
+      "mapMarkers": [],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "checkpoint": "Secondaries + brew (JIT)",
+      "refs": [
+        {
+          "title": "Prayer potion",
+          "slug": "Prayer_potion.s2",
+          "url": "https://oldschool.runescape.wiki/w/Prayer_potion"
+        }
+      ]
+    },
+    {
+      "id": "pps-04-source-vials",
+      "phase": "Region: Global",
+      "instruction": "Stock vials of water (non-GE)",
+      "detail": "Buy vial-of-water packs from a herblore shop vendor (vendor ?? \u2014 verify non-GE source) OR blow vials from molten glass (Crafting 33) and fill at a fountain. One vial per potion.",
+      "highlights": [],
+      "mapMarkers": [
+        {
+          "x": 2899,
+          "y": 3429,
+          "plane": 0,
+          "label": "Jatix's Herblore Shop (Taverley) -- centroid of the shop's {{Map|mtype=polygon}} footprint"
+        }
+      ],
+      "completionConditions": [
+        {
+          "type": "MANUAL"
+        }
+      ],
+      "atom": {
+        "verb": "buy",
+        "target": "vial_of_water",
+        "count": null,
+        "cmp": "gte",
+        "until": {
+          "item": {
+            "vial_of_water": "??"
+          }
+        }
+      },
+      "hints": [
+        {
+          "type": "rng-variance",
+          "target": "vial_of_water",
+          "value": "stock 750, restock 100s per unit",
+          "note": "Jatix's Herblore Shop Stock table (StoreTableHead sellmultiplier=1000 buymultiplier=700 delta=30): Vial of water stock=750/restock=100s, or buy the Water-filled vial pack (stock=750/restock=50s) for a batched purchase. A single 14-vial brewing run (per pps-05-withdraw-brew's loadout) is far under base stock -- no world-hop needed."
+        }
+      ],
+      "coarse_of": "prayer-pot-supply-coarse",
+      "checkpoint": "Secondaries + brew (JIT)",
+      "refs": [
+        {
+          "title": "Jatix's Herblore Shop.",
+          "slug": "Jatix's_Herblore_Shop.s1",
+          "url": "https://oldschool.runescape.wiki/w/Jatix%27s_Herblore_Shop."
+        },
+        {
+          "title": "Jatix's Herblore Shop.",
+          "slug": "Jatix's_Herblore_Shop",
+          "url": "https://oldschool.runescape.wiki/w/Jatix%27s_Herblore_Shop."
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/708e12/arrive.png",
+          "url": null,
+          "caption": "Jatix's Herblore Shop, Taverley (pps-04-source-vials)",
+          "state": {
+            "scenario": "pps_04_jatix_taverley",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        },
+        {
+          "kind": "gif",
+          "path": "media/9f9e7f/observe.gif",
+          "url": null,
+          "caption": "Jatix at his shop; stock vials of water non-GE",
+          "state": {
+            "scenario": "pps_04_jatix_taverley",
+            "rev": 236,
+            "oracle": "PASS"
+          }
         }
       ]
     }
