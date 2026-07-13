@@ -115,6 +115,19 @@
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Cooking_training"
         }
       ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/ddc0ae/arrive.png",
+          "url": null,
+          "caption": "Cooking range (Cook) at the Al Kharid furnace yard \u2014 train-cooking-20",
+          "state": {
+            "scenario": "train_cooking_lumbridge",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        }
+      ],
       "methods": [
         {
           "method": "Cook shrimp and anchovies at a bank-adjacent fire or range, keeping extra raw fish on hand to offset burns",
@@ -1986,6 +1999,19 @@
           "url": "https://oldschool.runescape.wiki/w/Pay-to-play_Prayer_training"
         }
       ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/dbf200/arrive.png",
+          "url": null,
+          "caption": "Altar (Pray-at) between Rimmington, Port Sarim and Thurgo \u2014 train-prayer-22",
+          "state": {
+            "scenario": "train_prayer_lumbridge",
+            "rev": 236,
+            "oracle": "PASS"
+          }
+        }
+      ],
       "passiveOverlays": [
         "Bury bones for Prayer XP"
       ],
@@ -2420,6 +2446,19 @@
           "title": "Al Kharid mine",
           "slug": "Al_Kharid_mine.s1",
           "url": "https://oldschool.runescape.wiki/w/Al_Kharid_mine"
+        }
+      ],
+      "media": [
+        {
+          "kind": "png",
+          "path": "media/72fe8a/arrive.png",
+          "url": null,
+          "caption": "Copper rocks (Mine) at East Lumbridge Swamp mine \u2014 train-mining-15",
+          "state": {
+            "scenario": "train_mining_lumbridge",
+            "rev": 236,
+            "oracle": "PASS"
+          }
         }
       ],
       "methods": [
