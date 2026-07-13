@@ -97,9 +97,12 @@ public class GuideStep
     /**
      * Structured requisite items for this step (NORMALIZATION.md §1d —
      * gap-reqblocks-01), mirroring {@link com.techdevgroup.guidechain.reference.ReferenceEntry.ReqItem}
-     * field-for-field. route-grand carries this on 55 steps, route-quests on
-     * 160. Null/empty = no items block rendered (falls back to a
-     * completionConditions-derived requisite summary — see WebFragments).
+     * field-for-field. route-grand carries this on ~160 steps — Lane A2
+     * absorbed the quest-cape atoms' req_items straight into route-grand
+     * (plan-grand.mjs regenerates that residue self-contained; there is no
+     * separate route-quests.json fixture anymore). Null/empty = no items
+     * block rendered (falls back to a completionConditions-derived
+     * requisite summary — see WebFragments).
      */
     public List<ReqItem> req_items;
 
@@ -278,8 +281,10 @@ public class GuideStep
          * count, or the string "??" when the source never stated one — same
          * polymorphic-Object contract as {@link ReqItem#qty}, required
          * because Gson's Integer adapter throws NumberFormatException on the
-         * "??" placeholder (route-quests.json carries it on 2 atoms today;
-         * route-grand.json will once Lane A2 absorbs quest atoms into it).
+         * "??" placeholder. 0 atoms carry the placeholder today (route-grand
+         * fully absorbed the quest-cape atoms via Lane A2's self-contained
+         * plan-grand.mjs regen), but the type stays polymorphic-Object since
+         * any future wiki-sourced atom without a stated count resurrects it.
          */
         public Object count;
         /** eq | gte | null. */

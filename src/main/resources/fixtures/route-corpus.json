@@ -12355,26 +12355,28 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/a106a8/arrive.png",
+          "path": "media/1f8d76/arrive.png",
           "url": null,
           "caption": "Pickpocket the Master Farmer at Draynor market (scenario capture)",
           "state": {
             "scenario": "pps_02_master_farmer",
             "rev": 236,
             "harness": "spike/scenario/run_scenario.py",
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         },
         {
           "kind": "gif",
-          "path": "media/1e17b3/observe.gif",
+          "path": "media/a19a13/observe.gif",
           "url": null,
           "caption": "Draynor market scene, animated (scenario capture, oracle PASS)",
           "state": {
             "scenario": "pps_02_master_farmer",
             "rev": 236,
             "harness": "spike/scenario/run_scenario.py",
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         }
       ]
@@ -12808,24 +12810,26 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/0dc65e/arrive.png",
+          "path": "media/d4da59/arrive.png",
           "url": null,
           "caption": "Buy the best scimitar at Zeke's, Al Kharid (scenario capture)",
           "state": {
             "scenario": "ctr_03_buy_scimitar",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         },
         {
           "kind": "gif",
-          "path": "media/04ceac/observe.gif",
+          "path": "media/5bc58a/observe.gif",
           "url": null,
           "caption": "Al Kharid scene (scenario capture, oracle PASS)",
           "state": {
             "scenario": "ctr_03_buy_scimitar",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         }
       ]
@@ -13124,24 +13128,26 @@
       "media": [
         {
           "kind": "png",
-          "path": "media/13b9ce/arrive.png",
+          "path": "media/a41350/arrive.png",
           "url": null,
           "caption": "Flesh Crawlers, Stronghold of Security lvl 2 (scenario capture)",
           "state": {
             "scenario": "ctr_06_stronghold_crawlers",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         },
         {
           "kind": "gif",
-          "path": "media/ba7bd5/observe.gif",
+          "path": "media/eecec8/observe.gif",
           "url": null,
           "caption": "Stronghold scene (scenario capture, oracle PASS)",
           "state": {
             "scenario": "ctr_06_stronghold_crawlers",
             "rev": 236,
-            "oracle": "PASS"
+            "oracle": "PASS",
+            "engine": "native"
           }
         }
       ]
