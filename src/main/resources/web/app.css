@@ -424,6 +424,27 @@ a.step-instruction:hover { color: var(--accent); }
 .tm-reqs { font-size: 0.76rem; margin-top: 0.15rem; }
 .train-method .ref-chips { margin-top: 0.25rem; }
 
+/* ── Inline (plan-list) training render (tenrich render fix): the methods
+   summary + granular actions surface IN the checklist row, so scrolling
+   shows the actual actions, not just "Train X to N". Reuses .train-methods/
+   .tm-name/.tm-meta and .subchecklist/.substep with compact variants. ── */
+.tm-inline {
+  flex-direction: row; flex-wrap: wrap; align-items: baseline;
+  gap: 0.35rem; margin: 0.25rem 0 0; font-size: 0.8rem;
+}
+.tm-inline .tm-meta { margin-top: 0; }
+.tm-more { font-size: 0.72rem; color: var(--ink-dim); font-style: italic; }
+.substeps-inline { margin: 0.25rem 0 0; }
+.substeps-inline > summary {
+  cursor: pointer; font-size: 0.74rem; color: var(--ink-dim);
+  user-select: none; width: fit-content;
+}
+.subchecklist-inline { gap: 0.15rem; margin: 0.2rem 0 0.1rem; }
+.subchecklist-inline .substep { padding: 0.18rem 0.45rem; }
+.subchecklist-inline .substep-instruction { font-weight: 500; font-size: 0.8rem; }
+.subchecklist-inline .substep-atom { display: inline; margin: 0 0 0 0.35rem; }
+.subchecklist-inline .checkpoint-divider { margin-left: 0; font-size: 0.72rem; }
+
 /* ── Granular sub-checklist (GRANULARITY W3 Faux-grain atoms, ATTACH model —
    mirrors .train-methods styling above; hangs beneath a coarse quest-*/
    train-* step as its own granular breakdown) ── */

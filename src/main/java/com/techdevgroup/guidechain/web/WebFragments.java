@@ -359,12 +359,33 @@ final class WebFragments
             }
             sb.append("</div>\n");
         }
+        // tenrich render fix: a training band's granular content must be
+        // VISIBLE while scrolling the plan checklist — "Train X to N" alone
+        // hides the whole enrichment behind a click. Compact methods summary
+        // (methods[0] = the continuity pick) + the atom sub-checklist render
+        // inline for train-*/synth-* rows in the LIST context only; the
+        // detail pane keeps the full picker/sub-checklist render
+        // ({@link #appendMethodPicker}/{@link #appendSubChecklist}).
+        if (compact && isTrainingRow(r.step))
+        {
+            appendInlineMethods(sb, r.step.methods);
+            if (r.step.subChecklist != null)
+            {
+                appendInlineSubChecklist(sb, r.step.subChecklist, checked);
+            }
+        }
         sb.append("</div>\n");
         sb.append("<div class=\"step-actions\">\n");
         sb.append(actionButton(r.key, "done", "Done"));
         sb.append(actionButton(r.key, "skip", "Skip"));
         sb.append("</div>\n</li>\n");
         return sb.toString();
+    }
+
+    /** Training rows ("train-" / "synth-" id prefixes) carry the methods picker + granular atoms. */
+    private static boolean isTrainingRow(GuideStep step)
+    {
+        return step.id != null && (step.id.startsWith("train-") || step.id.startsWith("synth-"));
     }
 
     private String actionButton(String key, String action, String label)
@@ -1007,6 +1028,76 @@ final class WebFragments
             sb.append("</li>\n");
         }
         sb.append("</ul>\n");
+    }
+
+    /**
+     * One-line methods summary for the PLAN LIST context (tenrich render
+     * fix): the continuity pick (methods[0]) with its meta chips plus an
+     * "+N alternatives" pointer at the detail pane's full picker. Reuses the
+     * .train-methods/.tm-name/.tm-meta classes with a .tm-inline row variant.
+     */
+    private void appendInlineMethods(StringBuilder sb, List<GuideStep.TrainMethod> methods)
+    {
+        if (methods == null) return;
+        List<GuideStep.TrainMethod> valid = new ArrayList<>();
+        for (GuideStep.TrainMethod m : methods)
+        {
+            if (m != null && m.method != null && !m.method.isEmpty()) valid.add(m);
+        }
+        if (valid.isEmpty()) return;
+        GuideStep.TrainMethod first = valid.get(0);
+        sb.append("<div class=\"train-methods tm-inline\">");
+        sb.append("<span class=\"tm-name\">").append(esc(first.method)).append("</span>");
+        String meta = methodMeta(first);
+        if (!meta.isEmpty()) sb.append(" <span class=\"tm-meta\">").append(meta).append("</span>");
+        int more = valid.size() - 1;
+        if (more > 0)
+        {
+            sb.append(" <span class=\"tm-more\">+").append(more)
+              .append(more == 1 ? " alternative" : " alternatives")
+              .append(" in step detail</span>");
+        }
+        sb.append("</div>\n");
+    }
+
+    /**
+     * Expandable granular-actions list for the PLAN LIST context (tenrich
+     * render fix): atom labels + compact "verb target" lines, split by the
+     * same checkpoint dividers the detail render uses — open by default so a
+     * scrolling user SEES the actions, collapsed once the row is done/skipped.
+     */
+    private void appendInlineSubChecklist(StringBuilder sb, GuideStep.SubChecklist sc, boolean collapsed)
+    {
+        List<GuideStep.SubStep> atoms = sc.atoms();
+        if (atoms.isEmpty()) return;
+        Map<String, String> checkpointAt = new LinkedHashMap<>();
+        for (GuideStep.Checkpoint cp : sc.checkpoints())
+        {
+            if (cp != null && cp.start != null && cp.label != null) checkpointAt.put(cp.start, cp.label);
+        }
+        sb.append("<details class=\"substeps-inline\"").append(collapsed ? "" : " open").append(">\n");
+        sb.append("<summary>").append(atoms.size())
+          .append(atoms.size() == 1 ? " granular action" : " granular actions")
+          .append("</summary>\n");
+        sb.append("<ol class=\"subchecklist subchecklist-inline\">\n");
+        for (GuideStep.SubStep a : atoms)
+        {
+            if (a == null) continue;
+            String cpLabel = a.id != null ? checkpointAt.get(a.id) : null;
+            if (cpLabel != null)
+            {
+                sb.append("<li class=\"checkpoint-divider\">").append(esc(cpLabel)).append("</li>\n");
+            }
+            sb.append("<li class=\"substep\"><span class=\"substep-instruction\">")
+              .append(esc(a.label != null ? a.label : "")).append("</span>");
+            String line = atomLine(a.atom);
+            if (!line.isEmpty())
+            {
+                sb.append(" <span class=\"substep-atom\">").append(esc(line)).append("</span>");
+            }
+            sb.append("</li>\n");
+        }
+        sb.append("</ol>\n</details>\n");
     }
 
     /** "⏩ grab now — pays off at ‹consumer›" breadcrumb for a re-pinned opportunistic step. */
