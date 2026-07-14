@@ -374,7 +374,7 @@ final class WebFragments
             appendInlineMethods(sb, r.step.methods);
             if (r.step.subChecklist != null)
             {
-                appendInlineSubChecklist(sb, r.step.subChecklist, checked);
+                appendInlineSubChecklist(sb, r.key, r.step.subChecklist, checked);
             }
         }
         sb.append("</div>\n");
@@ -464,7 +464,7 @@ final class WebFragments
         // step's own granular breakdown, not a replacement for it.
         if (step.subChecklist != null && !step.subChecklist.atoms().isEmpty())
         {
-            appendSubChecklist(sb, step.subChecklist);
+            appendSubChecklist(sb, row.key, step.subChecklist);
         }
 
         // REQUISITES / REWARDS blocks (NORMALIZATION.md §1d, gap-reqblocks-01):
@@ -1069,7 +1069,7 @@ final class WebFragments
      * same checkpoint dividers the detail render uses — open by default so a
      * scrolling user SEES the actions, collapsed once the row is done/skipped.
      */
-    private void appendInlineSubChecklist(StringBuilder sb, GuideStep.SubChecklist sc, boolean collapsed)
+    private void appendInlineSubChecklist(StringBuilder sb, String stepKey, GuideStep.SubChecklist sc, boolean collapsed)
     {
         List<GuideStep.SubStep> atoms = sc.atoms();
         if (atoms.isEmpty()) return;
@@ -1078,9 +1078,10 @@ final class WebFragments
         {
             if (cp != null && cp.start != null && cp.label != null) checkpointAt.put(cp.start, cp.label);
         }
+        int done = countSubstepsDone(stepKey, atoms);
         sb.append("<details class=\"substeps-inline\"").append(collapsed ? "" : " open").append(">\n");
-        sb.append("<summary>").append(atoms.size())
-          .append(atoms.size() == 1 ? " granular action" : " granular actions")
+        sb.append("<summary>").append(done).append('/').append(atoms.size()).append(" done &middot; ")
+          .append(atoms.size()).append(atoms.size() == 1 ? " granular action" : " granular actions")
           .append("</summary>\n");
         sb.append("<ol class=\"subchecklist subchecklist-inline\">\n");
         for (GuideStep.SubStep a : atoms)
@@ -1091,7 +1092,10 @@ final class WebFragments
             {
                 sb.append("<li class=\"checkpoint-divider\">").append(esc(cpLabel)).append("</li>\n");
             }
-            sb.append("<li class=\"substep\"><span class=\"substep-instruction\">")
+            boolean checked = a.id != null && store.isSubstepDone(stepKey, a.id);
+            sb.append("<li class=\"substep").append(checked ? " substep-done" : "").append("\">\n");
+            sb.append(substepCheckbox(stepKey, a.id, checked));
+            sb.append("<span class=\"substep-instruction\">")
               .append(esc(a.label != null ? a.label : "")).append("</span>");
             String line = atomLine(a.atom);
             if (!line.isEmpty())
@@ -1101,6 +1105,38 @@ final class WebFragments
             sb.append("</li>\n");
         }
         sb.append("</ol>\n</details>\n");
+    }
+
+    /** Count of checked atoms in a sub-checklist — the "N/M done" sub-progress readout. */
+    private int countSubstepsDone(String stepKey, List<GuideStep.SubStep> atoms)
+    {
+        int n = 0;
+        for (GuideStep.SubStep a : atoms)
+        {
+            if (a != null && a.id != null && store.isSubstepDone(stepKey, a.id)) n++;
+        }
+        return n;
+    }
+
+    /**
+     * Checkbox for one sub-checklist atom leaf (STATE_CONSOLIDATION.md §7):
+     * posts to {@code /actions/toggle-substep} with the parent step key +
+     * atom id, targets {@code #plan} the same way the main step's {@code
+     * .step-check} does — {@code sendPlanAfterAction} fires {@code
+     * guide-store-changed}, which also re-pulls the open detail card, so
+     * both the plan-list inline render and the detail-pane render pick up
+     * the new checked state together. A blank atom id (should not occur —
+     * every sidecar atom carries one) renders no checkbox rather than a
+     * broken toggle target.
+     */
+    private static String substepCheckbox(String stepKey, String atomId, boolean checked)
+    {
+        if (atomId == null || atomId.isEmpty()) return "";
+        return "<input type=\"checkbox\" class=\"substep-check\""
+            + " hx-post=\"/actions/toggle-substep\""
+            + " hx-vals='{\"key\":\"" + esc(stepKey) + "\",\"atom\":\"" + esc(atomId) + "\"}'"
+            + " hx-target=\"#plan\""
+            + (checked ? " checked" : "") + ">\n";
     }
 
     /** "⏩ grab now — pays off at ‹consumer›" breadcrumb for a re-pinned opportunistic step. */
@@ -1232,7 +1268,7 @@ final class WebFragments
      * split the list into named sub-groups, mirroring the main plan list's
      * {@code .checkpoint-divider}.
      */
-    private void appendSubChecklist(StringBuilder sb, GuideStep.SubChecklist sc)
+    private void appendSubChecklist(StringBuilder sb, String stepKey, GuideStep.SubChecklist sc)
     {
         List<GuideStep.SubStep> atoms = sc.atoms();
         if (atoms.isEmpty()) return;
@@ -1241,7 +1277,10 @@ final class WebFragments
         {
             if (cp != null && cp.start != null && cp.label != null) checkpointAt.put(cp.start, cp.label);
         }
-        sb.append("<h3>Sub-checklist <span class=\"pick-hint\">— granular steps</span></h3>\n");
+        int done = countSubstepsDone(stepKey, atoms);
+        sb.append("<h3>Sub-checklist <span class=\"pick-hint\">— granular steps</span>")
+          .append(" <span class=\"substep-progress\">").append(done).append('/').append(atoms.size())
+          .append(" done</span></h3>\n");
         sb.append("<ol class=\"subchecklist\">\n");
         for (GuideStep.SubStep a : atoms)
         {
@@ -1251,7 +1290,10 @@ final class WebFragments
             {
                 sb.append("<li class=\"checkpoint-divider\">").append(esc(cpLabel)).append("</li>\n");
             }
-            sb.append("<li class=\"substep\">\n");
+            boolean checked = a.id != null && store.isSubstepDone(stepKey, a.id);
+            sb.append("<li class=\"substep").append(checked ? " substep-done" : "").append("\">\n");
+            sb.append(substepCheckbox(stepKey, a.id, checked));
+            sb.append("<div class=\"substep-body\">\n");
             sb.append("<div class=\"substep-instruction\">").append(esc(a.label != null ? a.label : "")).append("</div>\n");
             String line = atomLine(a.atom);
             if (!line.isEmpty())
@@ -1277,7 +1319,7 @@ final class WebFragments
                 sb.append("</div>\n");
             }
             appendRefChips(sb, Dedupe.refs(a.refs()));
-            sb.append("</li>\n");
+            sb.append("</div>\n</li>\n");
         }
         sb.append("</ol>\n");
     }

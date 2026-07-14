@@ -444,14 +444,25 @@ a.step-instruction:hover { color: var(--accent); }
 .subchecklist-inline .substep-instruction { font-weight: 500; font-size: 0.8rem; }
 .subchecklist-inline .substep-atom { display: inline; margin: 0 0 0 0.35rem; }
 .subchecklist-inline .checkpoint-divider { margin-left: 0; font-size: 0.72rem; }
+.subchecklist-inline .substep-check { margin-top: 0.05rem; }
 
 /* ── Granular sub-checklist (GRANULARITY W3 Faux-grain atoms, ATTACH model —
    mirrors .train-methods styling above; hangs beneath a coarse quest-*/
-   train-* step as its own granular breakdown) ── */
+   train-* step as its own granular breakdown). STATE_CONSOLIDATION.md §7:
+   each atom is a CHECKABLE leaf — .substep is a flex row (checkbox +
+   .substep-body), mirroring the main .step-row/.step-check idiom. ── */
 .subchecklist { list-style: none; margin: 0.3rem 0; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
 .substep {
+  display: flex; align-items: flex-start; gap: 0.45rem;
   border: 1px solid var(--line); border-radius: 0.4rem;
   padding: 0.4rem 0.55rem; background: var(--bg);
+}
+.substep-body { flex: 1 1 auto; min-width: 0; }
+.substep-check {
+  flex: 0 0 auto;
+  accent-color: var(--accent);
+  cursor: pointer;
+  margin-top: 0.2rem;
 }
 .substep-instruction { font-weight: 600; }
 .substep-atom {
@@ -460,6 +471,9 @@ a.step-instruction:hover { color: var(--accent); }
 }
 .substep-detail { font-size: 0.76rem; color: var(--ink-dim); margin-top: 0.15rem; }
 .substep .ref-chips, .substep .hint-chips { margin-top: 0.25rem; }
+.substep-done { opacity: 0.68; }
+.substep-done .substep-instruction { text-decoration: line-through; color: var(--ink-dim); }
+.substep-progress { font-weight: 400; font-size: 0.76rem; color: var(--ink-dim); }
 
 /* ── Opportunistic-lookahead breadcrumb (grab-now, pays off later) ── */
 .payoff-chip {

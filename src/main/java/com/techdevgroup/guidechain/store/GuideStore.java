@@ -86,6 +86,15 @@ public final class GuideStore
         Set<String> manualAcks   = new LinkedHashSet<>();
         /** Manually checked steps that are not pointer-done (persist across restarts). */
         Set<String> manualDone   = new LinkedHashSet<>();
+        /**
+         * Checked leaves within a step's granular sub-checklist
+         * (STATE_CONSOLIDATION.md §7). Keyed {@code "<stepKey>::<atomId>"} —
+         * a compound key since one step hosts many atoms. Purely a
+         * player-tracked micro-progress mark; never touches the main
+         * index/done-set, mirroring how {@code manualDone} tracks the
+         * step-level checkbox without moving the pointer.
+         */
+        Set<String> substepDone  = new LinkedHashSet<>();
         CharacterSnapshot character;
         SessionMetrics metrics = new SessionMetrics();
 
@@ -147,6 +156,7 @@ public final class GuideStore
                 if (loaded.skippedSteps == null) loaded.skippedSteps = new LinkedHashSet<>();
                 if (loaded.manualAcks == null)   loaded.manualAcks   = new LinkedHashSet<>();
                 if (loaded.manualDone == null)   loaded.manualDone   = new LinkedHashSet<>();
+                if (loaded.substepDone == null)  loaded.substepDone  = new LinkedHashSet<>();
                 if (loaded.metrics == null)      loaded.metrics      = new SessionMetrics();
                 if (loaded.bgNextFireEpochMs == null) loaded.bgNextFireEpochMs = new LinkedHashMap<>();
                 if (loaded.bgLifecycleState == null)  loaded.bgLifecycleState  = new LinkedHashMap<>();
@@ -555,6 +565,40 @@ public final class GuideStore
         state.manualDone.add(stepKey);
         save();
         notify("marks");
+    }
+
+    // ── Sub-checklist atom marks (STATE_CONSOLIDATION.md §7 — granular
+    // leaves beneath a coarse quest-*/train-* step get their own checkbox,
+    // mirroring the main step's done/skip persistence path but never moving
+    // the main pointer or the done/skip sets.) ──────────────────────────────
+
+    private static String substepKey(String stepKey, String atomId)
+    {
+        return stepKey + "::" + atomId;
+    }
+
+    /** True if this granular sub-checklist atom is checked. */
+    public synchronized boolean isSubstepDone(String stepKey, String atomId)
+    {
+        if (stepKey == null || atomId == null) return false;
+        return state.substepDone.contains(substepKey(stepKey, atomId));
+    }
+
+    /**
+     * Two-way checkbox toggle for one sub-checklist atom (the {@code
+     * /actions/toggle-substep} route). Purely a player-tracked micro-progress
+     * mark within a step's granular breakdown — it never advances the main
+     * pointer or touches {@code doneSteps}/{@code skippedSteps}, unlike
+     * {@link #toggle(String)} on the main step.
+     */
+    public synchronized void toggleSubstep(String stepKey, String atomId)
+    {
+        if (stepKey == null || atomId == null) return;
+        String k = substepKey(stepKey, atomId);
+        if (!state.substepDone.remove(k)) state.substepDone.add(k);
+        state.metrics.lastActionMs = System.currentTimeMillis();
+        save();
+        notify("substep");
     }
 
     /** Find [guideIndex, stepIndex] of a step by key, or null if not found. */

@@ -53,6 +53,7 @@ import java.util.logging.Logger;
  * POST /actions/step/{gid}/{sid}/done mark done (advances if current)
  * POST /actions/step/{gid}/{sid}/skip mark skipped (advances if current)
  * POST /actions/step/{gid}/{sid}/back move back one step
+ * POST /actions/toggle-substep        form: key=&lt;gid/sid&gt;&amp;atom=&lt;atomId&gt; — sub-checklist leaf checkbox (STATE_CONSOLIDATION §7)
  * POST /actions/refresh-guides        re-fetch guide content
  * GET  /api/state.json                full machine-readable state
  * </pre>
@@ -217,6 +218,16 @@ public final class GuideWebServer
                             LOG.log(Level.WARNING, "refresh-guides action failed", e);
                         }
                     }
+                    sendPlanAfterAction(ex);
+                    return;
+                }
+                if ("/actions/toggle-substep".equals(path))
+                {
+                    Map<String, String> form = formParams(ex);
+                    String key = form.get("key");
+                    String atom = form.get("atom");
+                    store.recordWebAction();
+                    if (key != null && atom != null) store.toggleSubstep(key, atom);
                     sendPlanAfterAction(ex);
                     return;
                 }
