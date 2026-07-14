@@ -550,6 +550,51 @@ a.step-instruction:hover { color: var(--accent); }
   overflow-wrap: anywhere;
 }
 
+/* ── State-after line (STATE_CONSOLIDATION.md §5 — "After this →" simulated
+   account-state summary: skill deltas · new unlocks · inv loadout · bank
+   stock). Overlay-only, same chip idiom as .hint-chip/.ref-chip above. ── */
+.state-after {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.3rem;
+  font-size: 0.72rem;
+}
+.state-after-label {
+  color: var(--ink-dim);
+  font-weight: 600;
+  margin-right: 0.1rem;
+}
+.state-chip {
+  border-radius: 3px;
+  padding: 0.03rem 0.35rem;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--line, #e5e7eb);
+}
+.state-chip-skill {
+  color: var(--ok, #4caf7d);
+  background: rgba(76, 175, 125, 0.09);
+  border-color: rgba(76, 175, 125, 0.35);
+  font-weight: 600;
+}
+.state-chip-unlock {
+  color: var(--accent);
+  background: rgba(53, 181, 255, 0.08);
+  border-color: rgba(53, 181, 255, 0.3);
+}
+.state-chip-inv, .state-chip-bank {
+  color: var(--ink-dim);
+  background: var(--pane, #f8fafc);
+}
+.state-chip-overflow {
+  color: #991b1b;
+  background: #fee2e2;
+  border-color: #f5b5b5;
+  font-weight: 600;
+}
+
 /* ── Coverage index (semantic scoping ledger) ── */
 .plan-cov { margin: 0.3rem 0 0.6rem; font-size: 0.8rem; }
 .plan-cov a { color: var(--accent, #2563eb); text-decoration: none; }

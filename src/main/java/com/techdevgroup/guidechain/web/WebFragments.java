@@ -359,6 +359,9 @@ final class WebFragments
             }
             sb.append("</div>\n");
         }
+        // STATE_CONSOLIDATION.md §5 — compact "After this →" state line, same
+        // reused-in-both-contexts placement as paysOff/branch above.
+        appendStateAfter(sb, r.step.state_after);
         // tenrich render fix: a training band's granular content must be
         // VISIBLE while scrolling the plan checklist — "Train X to N" alone
         // hides the whole enrichment behind a click. Compact methods summary
@@ -1126,6 +1129,62 @@ final class WebFragments
           .append("alt: <span class=\"branch-alt\">").append(esc(branch.alt_group)).append("</span>");
         if (branch.optional) sb.append(" <span class=\"branch-optional\">skippable</span>");
         sb.append("</div>\n");
+    }
+
+    /**
+     * "After this →" compact state line (STATE_CONSOLIDATION.md §5): key skill-level
+     * deltas · inv loadout · bank stock, in that order — only non-empty parts render, so
+     * a step with no tracked change (most talk-to/walk-to atoms) emits nothing. Overlay
+     * text only, never input-driving; scannable at a glance, full detail lives in the
+     * raw JSON for anyone who wants it.
+     */
+    private void appendStateAfter(StringBuilder sb, GuideStep.StateAfter sa)
+    {
+        if (sa == null) return;
+        List<String> parts = new ArrayList<>();
+        for (java.util.Map.Entry<String, Integer> e : sa.skillsDelta().entrySet())
+        {
+            parts.add(capitalize(e.getKey()) + " " + e.getValue());
+        }
+        if (sa.quest_done != null && !sa.quest_done.isEmpty())
+        {
+            parts.add("quest done: " + sa.quest_done);
+        }
+        if (parts.isEmpty() && sa.inv().isEmpty() && sa.bank().isEmpty() && sa.unlocksNew().isEmpty())
+        {
+            return;
+        }
+        sb.append("<div class=\"state-after\" title=\"Simulated account state after this step — state_scan.mjs, not authored\">");
+        sb.append("<span class=\"state-after-label\">After this →</span>");
+        for (String p : parts)
+        {
+            sb.append(" <span class=\"state-chip state-chip-skill\">").append(esc(p)).append("</span>");
+        }
+        for (String u : sa.unlocksNew())
+        {
+            sb.append(" <span class=\"state-chip state-chip-unlock\">+").append(esc(u.replace('_', ' '))).append("</span>");
+        }
+        if (!sa.inv().isEmpty())
+        {
+            sb.append(" <span class=\"state-chip state-chip-inv\">inv: ")
+              .append(esc(String.join(", ", sa.inv()))).append("</span>");
+        }
+        if (!sa.bank().isEmpty())
+        {
+            sb.append(" <span class=\"state-chip state-chip-bank\">bank: ")
+              .append(esc(String.join(", ", sa.bank()))).append("</span>");
+        }
+        if (Boolean.TRUE.equals(sa.overflow))
+        {
+            sb.append(" <span class=\"state-chip state-chip-overflow\" title=\"Simulated inventory exceeds the 28-slot budget here — bank/deposit sooner.\">⚠ over 28 slots</span>");
+        }
+        sb.append("</div>\n");
+    }
+
+    private static String capitalize(String s)
+    {
+        if (s == null || s.isEmpty()) return s;
+        return Character.toUpperCase(s.charAt(0)) + s.substring(1);
     }
 
     /** location · xp/hr · members chips for one training method. */

@@ -141,6 +141,49 @@ public class GuideStep
         public boolean optional;
     }
 
+    /**
+     * STATE_CONSOLIDATION.md §2/§5 — the account state this step LEAVES the
+     * player in, minted by {@code state_scan.mjs} (a simulator over the
+     * requisite bank, not authored content) and attached via the
+     * {@code state_after.jsonl} sidecar (same ATTACH model as {@link #hints}/
+     * {@link #refs}). Null on every route that doesn't opt in
+     * ({@code goal.state_after:true}, route-grand only today). Renders as a
+     * compact "After this →" line — see WebFragments#appendStateAfter.
+     */
+    public StateAfter state_after;
+
+    /** Per-step state snapshot payload for {@link #state_after}. */
+    public static final class StateAfter
+    {
+        /** Skills that CHANGED at this step: skill -> new effective level (quest-XP folded). */
+        public java.util.Map<String, Integer> skills_delta;
+        /** Compact 28-slot loadout: "27x willow_logs" (exact) or "ranarr_seed" (qty unknown — "??" upstream, never fabricated). */
+        public List<String> inv;
+        /** Equipped gear (does not consume an inventory slot). */
+        public List<String> worn;
+        /** Staged/produced bank stock, same compact format as {@link #inv}. */
+        public List<String> bank;
+        /** Tags/access newly unlocked at this exact step. */
+        public List<String> unlocks_new;
+        /** Set when this step completes a quest (its coarse_of/id). */
+        public String quest_done;
+        /** Distinct inv item count — a LOWER BOUND when a bank-loadout placeholder is present (see {@link #inv}). */
+        public Integer inv_slots;
+        /** True when inv_slots exceeds the 28-slot budget. */
+        public Boolean overflow;
+        /** True when this step has no requisite-bank row (milestone/checkpoint marker) — only skill grants are tracked. */
+        public Boolean synthetic;
+
+        public java.util.Map<String, Integer> skillsDelta()
+        {
+            return skills_delta != null ? skills_delta : Collections.emptyMap();
+        }
+        public List<String> inv() { return inv != null ? inv : Collections.emptyList(); }
+        public List<String> worn() { return worn != null ? worn : Collections.emptyList(); }
+        public List<String> bank() { return bank != null ? bank : Collections.emptyList(); }
+        public List<String> unlocksNew() { return unlocks_new != null ? unlocks_new : Collections.emptyList(); }
+    }
+
     // ── SYNTHESIS §1e — sequencer + background + steer (Lane 4 owns the Java side) ──
 
     /**
